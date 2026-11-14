@@ -2,26 +2,26 @@
 import { eModuloIII, leggiModuloIII } from './modulo3.js';
 
 export const TIPI = [
-  { id: 'modulo1', nome: 'Modulo I — Istanza', sezioni: ['V'] },
-  { id: 'modulo2', nome: 'Modulo II — Scheda di produzione', sezioni: ['A', 'B', 'V'] },
-  { id: 'modulo3', nome: 'Modulo III — Dati di produzione', sezioni: ['B', 'D', 'V'] },
-  { id: 'sceneggiatura', nome: 'Sceneggiatura o trattamento', sezioni: ['A'] },
-  { id: 'cv_societa', nome: 'CV della società proponente', sezioni: ['B'] },
-  { id: 'cv_regista', nome: 'CV regista', sezioni: ['B'] },
-  { id: 'cv_autori', nome: 'CV sceneggiatore / autore / consulente', sezioni: ['B'] },
-  { id: 'cv_artistico', nome: 'CV componente artistica (fotografia, musiche, interpreti)', sezioni: ['B'] },
-  { id: 'cv_tecnico', nome: 'CV cast tecnico', sezioni: ['B'] },
-  { id: 'accordi_cast', nome: 'Contratti / lettere di intento con artisti e tecnici', sezioni: ['B'] },
-  { id: 'coproduzione', nome: 'Coproduzione: CV, deal memo, contratti', sezioni: ['D'] },
-  { id: 'distribuzione', nome: 'Distribuzione: deal memo, contratti', sezioni: ['D'] },
-  { id: 'finanziamenti', nome: 'Altri finanziamenti pubblici (decreti, delibere)', sezioni: ['D'] },
-  { id: 'referenze_bancarie', nome: 'Referenze bancarie', sezioni: ['D'] },
-  { id: 'finanziatori_esterni', nome: 'Finanziatori esterni (tax credit esterno, product placement)', sezioni: ['D'] },
-  { id: 'produttore_esecutivo', nome: 'Produttore esecutivo: CV, accordi', sezioni: ['B', 'D'] },
-  { id: 'green_film', nome: 'Certificazione Green Film', sezioni: ['V'] },
-  { id: 'piano_lavorazione', nome: 'Piano di lavorazione', sezioni: ['A', 'V'] },
-  { id: 'identita', nome: 'Documento d’identità', sezioni: [] },
-  { id: 'altro', nome: 'Altro', sezioni: [] },
+  { id: 'modulo1', nome: 'Modulo I — Istanza', sezioni: ['V'], famiglie: [] },
+  { id: 'modulo2', nome: 'Modulo II — Scheda di produzione', sezioni: ['A', 'B', 'V'], famiglie: ['scrittura', 'visione', 'territorio_contenuto', 'societa', 'artistica', 'tecnica'] },
+  { id: 'modulo3', nome: 'Modulo III — Dati di produzione', sezioni: ['B', 'D', 'V'], famiglie: ['artistica', 'tecnica', 'ricaduta_lavoro', 'ricaduta_spesa', 'piano_finanziario', 'distribuzione', 'internazionale'] },
+  { id: 'sceneggiatura', nome: 'Sceneggiatura o trattamento', sezioni: ['A'], famiglie: ['scrittura', 'visione', 'territorio_contenuto'] },
+  { id: 'cv_societa', nome: 'CV della società proponente', sezioni: ['B'], famiglie: ['societa'] },
+  { id: 'cv_regista', nome: 'CV regista', sezioni: ['B'], famiglie: ['artistica'] },
+  { id: 'cv_autori', nome: 'CV sceneggiatore / autore / consulente', sezioni: ['B'], famiglie: ['artistica'] },
+  { id: 'cv_artistico', nome: 'CV componente artistica (fotografia, musiche, interpreti)', sezioni: ['B'], famiglie: ['artistica'] },
+  { id: 'cv_tecnico', nome: 'CV cast tecnico', sezioni: ['B'], famiglie: ['tecnica'] },
+  { id: 'accordi_cast', nome: 'Contratti / lettere di intento con artisti e tecnici', sezioni: ['B'], famiglie: ['artistica', 'tecnica'] },
+  { id: 'coproduzione', nome: 'Coproduzione: CV, deal memo, contratti', sezioni: ['D'], famiglie: ['piano_finanziario', 'internazionale'] },
+  { id: 'distribuzione', nome: 'Distribuzione: deal memo, contratti', sezioni: ['D'], famiglie: ['piano_finanziario', 'distribuzione', 'internazionale'] },
+  { id: 'finanziamenti', nome: 'Altri finanziamenti pubblici (decreti, delibere)', sezioni: ['D'], famiglie: ['piano_finanziario'] },
+  { id: 'referenze_bancarie', nome: 'Referenze bancarie', sezioni: ['D'], famiglie: ['piano_finanziario'] },
+  { id: 'finanziatori_esterni', nome: 'Finanziatori esterni (tax credit esterno, product placement)', sezioni: ['D'], famiglie: ['piano_finanziario'] },
+  { id: 'produttore_esecutivo', nome: 'Produttore esecutivo: CV, accordi', sezioni: ['B', 'D'], famiglie: ['societa', 'piano_finanziario'] },
+  { id: 'green_film', nome: 'Certificazione Green Film', sezioni: ['V'], famiglie: ['sostenibilita'] },
+  { id: 'piano_lavorazione', nome: 'Piano di lavorazione', sezioni: ['A', 'V'], famiglie: ['territorio_contenuto', 'ricaduta_lavoro', 'ricaduta_spesa'] },
+  { id: 'identita', nome: 'Documento d’identità', sezioni: [], famiglie: [] },
+  { id: 'altro', nome: 'Altro', sezioni: [], famiglie: ['altro', 'sostenibilita', 'formazione'] },
 ];
 export const tipoPerId = (id) => TIPI.find((t) => t.id === id) || TIPI[TIPI.length - 1];
 
@@ -215,11 +215,19 @@ export async function apriFoglio(file) {
 
 export const byteLen = (s) => new TextEncoder().encode(s).length;
 
+// Famiglie di criteri presenti in una sezione della griglia (vedi core/bandi/schema.js).
+export const famiglieSezione = (sezione) => [...new Set((sezione?.criteri || []).filter((c) => c.tipo !== 'fasce' || c.giudizio).map((c) => c.famiglia).filter(Boolean))];
+
 // Documenti che una sezione di valutazione deve leggere, nell'ordine dei tipi.
+// «sezione» è la sezione della griglia (oggetto): i documenti si scelgono dalle famiglie dei suoi criteri, così la regola
+// vale per qualunque bando. Con una stringa ('V' = verifica formale, oppure la lettera di una sezione) vale l'elenco fisso.
 export function documentiPerSezione(documenti, sezione) {
   const ordine = TIPI.map((t) => t.id);
+  const famiglie = typeof sezione === 'object' ? famiglieSezione(sezione) : [];
+  const id = typeof sezione === 'object' ? sezione?.id : sezione;
+  const serve = (tipo) => (famiglie.length ? tipo.famiglie.some((f) => famiglie.includes(f)) : tipo.sezioni.includes(id));
   return documenti
-    .filter((d) => d.testo && tipoPerId(d.tipo).sezioni.includes(sezione))
+    .filter((d) => d.testo && serve(tipoPerId(d.tipo)))
     .sort((a, b) => ordine.indexOf(a.tipo) - ordine.indexOf(b.tipo));
 }
 

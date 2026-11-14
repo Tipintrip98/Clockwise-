@@ -1,7 +1,9 @@
 // Stato dell'applicazione, barra superiore e navigazione tra le viste.
 import { h, metti, s, svuota } from './dom.js';
 import { rilevaAmbiente, creaLlm, MODELLI } from '../core/llm.js';
-import { BANDI_PREDEFINITI } from '../core/bando-sicilia.js';
+import { BANDI_PREDEFINITI, SCHEDE_BANDI } from '../core/bandi/indice.js';
+import { applicaAggiornamenti } from '../core/aggiornamenti.js';
+import { controlloSilenzioso } from './aggiornamenti.js';
 import * as store from '../core/store.js';
 import { datiVuoti, componiRisultato, getCategoria } from '../core/scoring.js';
 import { valutazioniPerCriterio } from '../core/engine.js';
@@ -14,8 +16,8 @@ import { avviaTutorial, tutorialAttivo } from './tutorial.js';
 
 export const S = {
   ambiente: { ambiente: 'attesa' },
-  imp: { collegamento: null, modello: 'claude-fable-5-2', impegno: 'high', commissari: 3 },
-  bandi: [], progetti: [], progetto: null, scheda: 'cruscotto', corsa: null, bandoAperto: null,
+  imp: { collegamento: null, modello: 'claude-fable-5-2', impegno: 'high', commissari: 3, bandoPreferito: null, aggiornaBandi: true, leggiNuoviAvvisi: true },
+  bandi: [], schede: [], progetti: [], progetto: null, scheda: 'cruscotto', corsa: null, bandoAperto: null,
   sotto: { produzione: 'spoglio', legale: 'chiedi' },
   guida: { tutorialVisto: false, dritte: {} },
 };
@@ -25,10 +27,15 @@ export const bandoDi = (p) => S.bandi.find((b) => b.id === p.bandoId) || S.bandi
 export const risultatoDi = (p) => componiRisultato(bandoDi(p), p.categoriaId, p.dati, valutazioniPerCriterio(p.valutazione));
 export const nomeModello = (id) => MODELLI.find((m) => m.id === id)?.nome || id;
 
+// Bandi in uso: quelli del programma, con sopra gli aggiornamenti arrivati dal canale automatico, più quelli
+// aggiunti dall'utente. S.schede elenca i fondi noti che non si possono simulare (senza griglia a punti).
 export async function caricaBandi() {
-  const predefiniti = await Promise.all(BANDI_PREDEFINITI.map(async (b) => ({ ...b, conoscenza: await store.conoscenzaBando(b.id) })));
+  const { bandi, schede } = applicaAggiornamenti(BANDI_PREDEFINITI, SCHEDE_BANDI, (await store.aggiornamentiBandi()).bandi);
+  const predefiniti = await Promise.all(bandi.map(async (b) => ({ ...b, conoscenza: await store.conoscenzaBando(b.id) })));
   S.bandi = [...predefiniti, ...(await store.bandiPersonali())];
+  S.schede = schede;
 }
+export const bandoPreferito = () => S.bandi.find((b) => b.id === S.imp.bandoPreferito) || S.bandi[0];
 
 export function annoPredefinito(bando) {
   const oggi = new Date().toISOString().slice(0, 10);
@@ -36,10 +43,11 @@ export function annoPredefinito(bando) {
   return prossima?.anno || bando.finestre?.at(-1)?.anno || new Date().getFullYear();
 }
 
-export function nuovoProgetto(nome = 'Nuovo dossier') {
-  const bando = S.bandi[0];
+export function nuovoProgetto(nome = 'Nuovo dossier', scelta = {}) {
+  const bando = S.bandi.find((b) => b.id === scelta.bandoId) || bandoPreferito();
+  const categoria = bando.categorie.find((c) => c.id === scelta.categoriaId) || bando.categorie[0];
   return {
-    id: store.nuovoId(), nome, bandoId: bando.id, categoriaId: bando.categorie[0].id, anno: annoPredefinito(bando),
+    id: store.nuovoId(), nome, bandoId: bando.id, categoriaId: categoria.id, anno: Number(scelta.anno) || annoPredefinito(bando),
     creato: new Date().toISOString(), documenti: [], dati: datiVuoti(), origineDati: null, valutazione: null, punteggioPrimo: null, reale: {},
   };
 }
@@ -119,7 +127,7 @@ function logo() {
 
 // Dossier dimostrativo: numeri d'invenzione, per mostrare subito come lavora il simulatore.
 function progettoEsempio() {
-  const p = nuovoProgetto('Esempio — L’ultima tonnara');
+  const p = nuovoProgetto('Esempio — L’ultima tonnara', { bandoId: 'sicilia-2025-2027', categoriaId: 'film' });
   p.esempio = true;
   p.dati = {
     ...datiVuoti(), titolo: 'L’ultima tonnara', tipologiaOpera: 'Film di produzione cinematografica', durataMin: 100,
@@ -163,6 +171,8 @@ export async function avvia(el) {
   if (rotta() !== 'progetto' || S.scheda !== 'dati' || S.ambiente.server?.eseguibile) render(); else aggiornaPillola();
   // la guida parte solo dall'elenco dei dossier: chi ha già aperto un dossier non viene riportato indietro
   if (!S.guida.tutorialVisto && rotta() === 'dossier') guidaIniziale();
+  // controllo silenzioso degli aggiornamenti dei bandi: non blocca e non disturba se non c'è nulla di nuovo
+  controlloSilenzioso().catch(() => {});
 }
 
 /* ------------------------------------------------------------------ guida al primo utilizzo */

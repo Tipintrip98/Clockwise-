@@ -1,6 +1,7 @@
 // Istruzioni per Claude: commissari simulati, verifica formale, estrazione dati, lettura di un nuovo bando.
 import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati, statisticheFinanziati } from './scoring.js';
-import { blocchiDocumenti, tipoPerId } from './docs.js';
+import { blocchiDocumenti, tipoPerId, famiglieSezione } from './docs.js';
+import { FAMIGLIE, METRICHE } from './bandi/schema.js';
 
 const { fmt, euro } = formati;
 
@@ -19,7 +20,7 @@ function descriviCriterio(c) {
   if (c.tipo === 'discreto') {
     righe.push(`Punteggi ammessi (nessun valore intermedio): ${c.valori.map((v) => `${fmt(v.punti)} = ${v.etichetta}`).join('; ')}.`);
   } else if (c.tipo === 'fasce') {
-    righe.push(`Criterio a fasce. In «valore» scrivi la percentuale (0-100) di copertura che la Commissione riconoscerebbe secondo la prassi osservata (fonti dichiarate nel Modulo III per le quali nel dossier c'è un documento della controparte, rapportate al costo di produzione al netto del contributo richiesto), e lascia «punteggio» a 0: il sistema applica le fasce del bando (${c.fasce.map((f) => `${f.etichetta} → ${fmt(f.punti * c.peso)}`).join('; ')}). In «rigoroso» scrivi invece i punti della fascia che risulterebbe contando solo le fonti che reggono a una lettura severa del principio qui sopra.`);
+    righe.push(`Criterio a fasce. In «valore» scrivi la percentuale (0-100) di copertura che la Commissione riconoscerebbe secondo la prassi osservata (fonti dichiarate nel piano finanziario per le quali nel dossier c'è un documento della controparte, rapportate al costo di produzione al netto del contributo richiesto), e lascia «punteggio» a 0: il sistema applica le fasce del bando (${c.fasce.map((f) => `${f.etichetta} → ${fmt(f.punti * c.peso)}`).join('; ')}). In «rigoroso» scrivi invece i punti della fascia che risulterebbe contando solo le fonti che reggono a una lettura severa del principio qui sopra.`);
   } else {
     righe.push('Giudizio qualitativo: punteggio con un decimale, da 0 al massimo.');
   }
@@ -79,10 +80,12 @@ Questa distribuzione è la scala da usare per il punteggio atteso: la somma dei 
 
 const SCALA = 'Per ripartire il punteggio della sezione tra i criteri qualitativi: 90-100% del massimo solo per l’eccellenza rara, che reggerebbe il confronto con i migliori progetti nazionali; 75-89% lavoro solido e professionale; 60-74% discreto, con limiti chiari; sotto il 60% solo per ciò che è debole o non documentato affatto.';
 
-function sistemaCommissione(bando, categoriaId, sezione) {
+function sistemaCommissione(bando, categoriaId, sezione, ancore = '') {
   const cat = getCategoria(bando, categoriaId);
   const griglia = getGriglia(bando, categoriaId);
-  const soglie = griglia.sezioni.map((s) => `sezione ${s.id} almeno ${cat.soglie?.[s.id] ?? '—'} su ${s.max}`).join('; ');
+  const massimo = bando.punteggioMassimo || 100;
+  const minimi = griglia.sezioni.filter((s) => cat.soglie?.[s.id] != null).map((s) => `sezione ${s.id} almeno ${fmt(cat.soglie[s.id])} su ${fmt(s.max)}`).join('; ');
+  const regolaSoglie = [bando.sogliaTotale ? `almeno ${fmt(bando.sogliaTotale)}/${fmt(massimo)} complessivi` : '', minimi ? `i minimi di sezione (${minimi})` : ''].filter(Boolean).join(' e ');
   return `Sei un componente della Commissione di Valutazione dell'avviso «${bando.nome}» (${bando.ente}).
 
 Questa è una simulazione per un controllo qualità prima dell'invio dell'istanza. Il produttore vuole sapere quale punteggio darebbe la Commissione vera al dossier così com'è e che cosa lo limita. Serve una previsione fedele: una stima generosa lo porterebbe a contare su un contributo che non arriverà, una stima più severa della Commissione gli farebbe scartare o riscrivere un dossier che sarebbe stato finanziato. Per questo dai due letture distinte di ogni criterio.
@@ -93,22 +96,36 @@ Le due letture
 
 Come lavora la Commissione
 - ${bando.commissione?.descrizione || 'Ogni componente attribuisce un punteggio per ogni voce della griglia; il punteggio finale è la media.'}
-- Valuta il dossier per ciò che dichiarano i moduli e mostrano gli allegati. Non svolge un'istruttoria legale sui contratti: nella lettura attesa un accordo allegato e sottoscritto viene riconosciuto anche se la forma è migliorabile, e una figura dichiarata nei moduli con un curriculum conta anche senza lettera di intento. Le mancanze documentali vanno nella lettura rigorosa, nelle criticità e nei miglioramenti.
+- Valuta il dossier per ciò che dichiarano i moduli di domanda e mostrano gli allegati. Non svolge un'istruttoria legale sui contratti: nella lettura attesa un accordo allegato e sottoscritto viene riconosciuto anche se la forma è migliorabile, e una figura dichiarata nei moduli con un curriculum conta anche senza lettera di intento. Le mancanze documentali vanno nella lettura rigorosa, nelle criticità e nei miglioramenti.
 - I punteggi reali sono compressi in una fascia stretta della scala: usa il metro reale riportato sotto, non la scala teorica da zero al massimo.
 - ${SCALA}
 - Motiva ogni punteggio con riferimenti puntuali ai documenti: titolo del file, scena, pagina o voce.
 
-Opera in valutazione: categoria «${cat.nome}». Per essere ammessi a cofinanziamento servono almeno ${bando.sogliaTotale}/100 complessivi e i minimi di sezione (${soglie}). Le soglie sono un'informazione di contesto: non avvicinare i punteggi alla soglia per far passare o bocciare il progetto.
+Opera in valutazione: categoria «${cat.nome}». ${regolaSoglie ? `Per essere ammessi al contributo servono ${regolaSoglie}. Le soglie sono un'informazione di contesto: non avvicinare i punteggi alla soglia per far passare o bocciare il progetto.` : `Il bando non fissa un punteggio minimo: conta la posizione in graduatoria su ${fmt(massimo)} punti.`}
 
 Sezione ${sezione.id} — ${sezione.nome} (massimo ${sezione.max} punti)
-${sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio).map(descriviCriterio).join('\n\n')}${taratura(bando, categoriaId, sezione)}${testiUfficiali(bando, sezione.id)}${blocchiConoscenza(bando)}`;
+${sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio).map(descriviCriterio).join('\n\n')}${taratura(bando, categoriaId, sezione)}${ancore || ''}${testiUfficiali(bando, sezione.id)}${blocchiConoscenza(bando)}`;
 }
 
-const GUIDA_SEZIONE = {
-  A: 'Leggi per intero il testo dell’opera prima di assegnare i punteggi. Giudica ciò che è scritto sulla pagina, non le intenzioni dichiarate nelle note di regia.',
-  B: 'Per i criteri sulle persone verifica, figura per figura: è indicata nei Moduli II e III? Che cosa dice il curriculum o il profilo riportato? C’è un contratto, deal memo o lettera di intento sottoscritto? Nella lettura attesa valuta il livello professionale di società, componente artistica e troupe così come emergono da moduli e allegati; nella lettura rigorosa conta solo le figure con un accordo sottoscritto. Ogni accordo o curriculum mancante va tra le criticità, con l’intervento per rimediare.',
-  D: 'Ricostruisci il piano finanziario fonte per fonte. Lettura attesa: sono coperte le fonti dichiarate nel Modulo III per le quali nel dossier c’è un documento proveniente dalla controparte (contratto, deal memo, lettera di impegno, atto di concessione, referenza bancaria), rapportate al costo di produzione al netto del contributo richiesto; un contratto di distribuzione firmato è riconosciuto come tale. Lettura rigorosa: solo documenti firmati da tutte le parti, con importi determinati e controparte la cui qualifica è provata nel dossier; risorse proprie solo con referenze bancarie, contributi pubblici solo se già concessi. Segnala tra le criticità ogni fonte che regge alla prima lettura ma non alla seconda.',
+// Come leggere i documenti, per famiglia di criteri: vale per qualunque bando.
+const GUIDE = {
+  testo: 'Leggi per intero il testo dell’opera prima di assegnare i punteggi. Giudica ciò che è scritto sulla pagina, non le intenzioni dichiarate nelle note di regia.',
+  persone: 'Per i criteri sulle persone verifica, figura per figura: è indicata nei moduli di domanda? Che cosa dice il curriculum o il profilo riportato? C’è un contratto, deal memo o lettera di intento sottoscritto? Nella lettura attesa valuta il livello professionale di società, componente artistica e troupe così come emergono da moduli e allegati; nella lettura rigorosa conta solo le figure con un accordo sottoscritto. Ogni accordo o curriculum mancante va tra le criticità, con l’intervento per rimediare.',
+  finanza: 'Ricostruisci il piano finanziario fonte per fonte. Lettura attesa: sono coperte le fonti dichiarate nel piano per le quali nel dossier c’è un documento proveniente dalla controparte (contratto, deal memo, lettera di impegno, atto di concessione, referenza bancaria), rapportate al costo di produzione al netto del contributo richiesto; un contratto di distribuzione firmato è riconosciuto come tale. Lettura rigorosa: solo documenti firmati da tutte le parti, con importi determinati e controparte la cui qualifica è provata nel dossier; risorse proprie solo con referenze bancarie, contributi pubblici solo se già concessi. Segnala tra le criticità ogni fonte che regge alla prima lettura ma non alla seconda.',
+  ricadute: 'Per i criteri sulle ricadute verifica che i numeri dichiarati (giorni, spesa, professionisti del territorio) siano coerenti tra moduli, piano di lavorazione e budget: la Commissione premia impegni credibili e verificabili a consuntivo.',
 };
+const GUIDA_PER_FAMIGLIA = {
+  scrittura: 'testo', visione: 'testo', territorio_contenuto: 'testo',
+  societa: 'persone', artistica: 'persone', tecnica: 'persone', formazione: 'persone',
+  piano_finanziario: 'finanza', distribuzione: 'finanza', internazionale: 'finanza',
+  ricaduta_lavoro: 'ricadute', ricaduta_spesa: 'ricadute', sostenibilita: 'ricadute',
+};
+const GUIDA_STORICA = { A: 'testo', B: 'persone', D: 'finanza' };
+export function guidaSezione(sezione) {
+  const famiglie = famiglieSezione(sezione);
+  const chiavi = famiglie.length ? [...new Set(famiglie.map((f) => GUIDA_PER_FAMIGLIA[f]).filter(Boolean))] : [GUIDA_STORICA[sezione.id]].filter(Boolean);
+  return chiavi.map((k) => GUIDE[k]).join('\n\n');
+}
 
 export const SCHEMA_SEZIONE = {
   type: 'object', additionalProperties: false, required: ['criteri', 'sintesi'],
@@ -141,14 +158,14 @@ const FORMATO_SEZIONE = `Rispondi soltanto con un oggetto JSON, senza testo prim
 {"criteri":[{"id":"<codice criterio>","punteggio":<punteggio atteso>,"rigoroso":<punti nella lettura rigorosa>,"valore":<numero o null>,"motivazione":"<3-6 frasi: che cosa giustifica il punteggio atteso e che cosa lo separa dalla lettura rigorosa>","evidenze":["<riferimento puntuale a un documento>"],"criticita":["<che cosa abbassa il punteggio>"],"miglioramenti":[{"azione":"<intervento concreto fattibile prima dell'invio>","punti":<punti che potrebbe far guadagnare su questo criterio>}]}],"sintesi":"<2-3 frasi sul giudizio complessivo della sezione>"}
 «valore» serve solo per i criteri a fasce, altrimenti null. Al massimo tre evidenze, tre criticità e tre miglioramenti per criterio; se non c'è nulla di utile da dire lascia l'elenco vuoto.`;
 
-export function promptSezione({ bando, categoriaId, anno, sezione, documenti, dati, commissario }) {
+export function promptSezione({ bando, categoriaId, anno, sezione, documenti, dati, commissario, ancore = '' }) {
   const criteri = sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio);
   return {
-    system: sistemaCommissione(bando, categoriaId, sezione),
+    system: sistemaCommissione(bando, categoriaId, sezione, ancore),
     documenti: `DATI DICHIARATI NEL DOSSIER\n${riepilogoDati(bando, categoriaId, anno, dati)}\n\nDOCUMENTI DEL DOSSIER RILEVANTI PER LA SEZIONE ${sezione.id}\n${blocchiDocumenti(documenti) || '(nessun documento leggibile)'}`,
     compito: `Il tuo profilo in Commissione: ${commissario.nome} — ${commissario.descrizione}
 
-${GUIDA_SEZIONE[sezione.id] || ''}
+${guidaSezione(sezione)}
 
 Valuta i criteri ${criteri.map((c) => c.id).join(', ')} della sezione ${sezione.id}, uno per uno, con la sensibilità del tuo profilo.
 
@@ -186,7 +203,7 @@ export function promptVerifica({ bando, categoriaId, anno, documenti, tutti, dat
 Questa è una verifica preventiva chiesta dal produttore: vuole trovare adesso, prima dell'invio, tutto ciò che causerebbe esclusione, richieste di chiarimento o perdita di punteggio. Il soccorso istruttorio non sana moduli incompleti né documenti mancanti, quindi ogni lacuna conta.
 
 Regole di riferimento
-- Categoria: «${cat.nome}». Contributo massimo: ${cat.contributo.percentuale}% del costo di produzione${cat.contributo.massimali?.[anno] ? `, fino a ${euro(cat.contributo.massimali[anno])}` : ''}. Spesa ammissibile sul territorio: almeno ${bando.spesaTerritorioMinPct || 150}% del contributo richiesto.${cat.durataMin ? ` Durata minima ${cat.durataMin} minuti.` : ''}${cat.durataMaxEsclusa ? ` Durata inferiore a ${cat.durataMaxEsclusa} minuti.` : ''}
+- Categoria: «${cat.nome}». Contributo massimo: ${cat.contributo.percentuale}% del costo di produzione${cat.contributo.massimali?.[anno] ? `, fino a ${euro(cat.contributo.massimali[anno])}` : ''}. ${bando.spesaTerritorioMinPct ? `Spesa ammissibile sul territorio: almeno ${bando.spesaTerritorioMinPct}% del contributo richiesto.` : ''}${cat.durataMin ? ` Durata minima ${cat.durataMin} minuti.` : ''}${cat.durataMaxEsclusa ? ` Durata inferiore a ${cat.durataMaxEsclusa} minuti.` : ''}
 ${finestra ? `- Finestra di presentazione ${anno}: dal ${finestra.dal} al ${finestra.al}.` : ''}
 ${bando.invio ? `- Invio: ${bando.invio.canale} a ${bando.invio.indirizzo}, in un unico invio.` : ''}
 - Allegati previsti dal bando:
@@ -197,7 +214,7 @@ ${(bando.note || []).map((n) => `- ${n}`).join('\n')}${bando.moduli ? `\n\nSTRUT
     documenti: `DATI CHIAVE GIÀ ESTRATTI\n${riepilogoDati(bando, categoriaId, anno, dati)}\n\nINVENTARIO DEI FILE CARICATI\n${inventario || '(nessun file)'}\n\nMODULI DEL DOSSIER\n${blocchiDocumenti(documenti) || '(nessun modulo leggibile)'}`,
     compito: `Controlla il dossier come farebbe l'istruttore e segnala soltanto ciò che trovi davvero nei documenti:
 - campi obbligatori dei moduli vuoti o compilati a metà, dichiarazioni non spuntate, firme o date mancanti;
-- incoerenze tra Modulo I, II e III e con gli altri documenti: titolo, durata, costi, contributo richiesto, date, nomi, numeri di professionisti, giorni di lavorazione;
+- incoerenze tra i moduli di domanda e con gli altri documenti: titolo, durata, costi, contributo richiesto, date, nomi, numeri di professionisti, giorni di lavorazione;
 - accordi o fonti dichiarati nei moduli senza il documento corrispondente tra i file caricati, e viceversa;
 - violazioni di limiti e requisiti del bando;
 - errori materiali che darebbero una cattiva impressione alla Commissione.
@@ -264,15 +281,8 @@ Scrivi soltanto la scheda.`,
   };
 }
 
-export const METRICHE_DISPONIBILI = {
-  lavorazioneSicilia: 'giorni di pre-produzione e riprese nel territorio ÷ totale giorni di pre-produzione e riprese (%)',
-  postSicilia: 'giorni di post-produzione nel territorio ÷ totale giorni di post-produzione (%)',
-  artisticiSiciliani: 'professionisti della componente artistica nati/residenti nel territorio ÷ totale (%)',
-  tecniciSiciliani: 'professionisti del cast tecnico nati/residenti nel territorio ÷ totale (%)',
-  professionistiSiciliani: 'professionisti artistici e tecnici nati/residenti nel territorio ÷ totale (%)',
-  spesaSicilia: 'spesa ammissibile nel territorio ÷ contributo richiesto (%)',
-  copertura: 'fonti finanziarie documentate ÷ costo di produzione (%)',
-};
+export const METRICHE_DISPONIBILI = Object.fromEntries(Object.entries(METRICHE).map(([k, v]) => [k, v.descrizione]));
+export { FAMIGLIE };
 
 export function promptBando({ testo, nomeFile }) {
   return {
@@ -301,12 +311,14 @@ Rispondi soltanto con un oggetto JSON con questa struttura:
 }
 
 Ogni <criterio> ha una di queste tre forme:
-- qualitativo: {"id": "1.1", "nome": "", "max": <punti>, "tipo": "qualitativo", "descrizione": "<testo del bando>", "principio": "<eventuali regole di attribuzione>"}
+- qualitativo: {"id": "1.1", "nome": "", "max": <punti>, "tipo": "qualitativo", "famiglia": "<vedi sotto>", "descrizione": "<testo del bando>", "principio": "<eventuali regole di attribuzione>"}
 - discreto, quando il bando prevede solo punteggi fissi: {"id": "", "nome": "", "max": <punti>, "tipo": "discreto", "descrizione": "", "valori": [{"punti": <n>, "etichetta": "<condizione>"}]}
 - a fasce, quando il punteggio dipende da una percentuale calcolabile: {"id": "", "nome": "", "max": <punti>, "tipo": "fasce", "metrica": "<una delle metriche sotto>", "peso": <moltiplicatore>, "descrizione": "", "fasce": [{"oltre": <soglia % esclusa> oppure "da": <soglia % inclusa>, "punti": <punti prima del peso>, "etichetta": "<testo della fascia>"}]}
   Le fasce vanno dalla migliore alla peggiore; l'ultima ha "da": 0. Il punteggio del criterio è punti × peso (se il bando indica direttamente i punti finali usa peso 1). Aggiungi "giudizio": true se la percentuale richiede una valutazione dei documenti (per esempio la copertura finanziaria).
   Metriche disponibili: ${Object.entries(METRICHE_DISPONIBILI).map(([k, v]) => `${k} = ${v}`).join('; ')}.
+  Le soglie delle fasce sono nella stessa unità della metrica (percentuale, giorni, numero o euro).
   Se un criterio numerico non corrisponde a nessuna di queste metriche, trattalo come qualitativo e scrivi la regola di calcolo in "principio".
+Ogni criterio, di qualunque forma, ha anche "famiglia": una tra ${Object.entries(FAMIGLIE).map(([k, v]) => `${k} (${v})`).join('; ')}.
 
 Se il bando ha griglie diverse per tipologie di opera, crea una griglia per ciascuna. La somma dei massimi dei criteri deve coincidere con il massimo della sezione.`,
     schema: null,
@@ -338,7 +350,7 @@ export function normalizzaBando(grezzo, nomeFile) {
   for (const [gid, g] of Object.entries(grezzo.griglie)) {
     const sezioni = (g.sezioni || []).map((s) => {
       const criteri = (s.criteri || []).map((c) => {
-        const out = { id: String(c.id), nome: c.nome || String(c.id), max: Number(c.max) || 0, tipo: c.tipo, descrizione: c.descrizione || '', principio: c.principio || undefined };
+        const out = { id: String(c.id), nome: c.nome || String(c.id), max: Number(c.max) || 0, tipo: c.tipo, famiglia: FAMIGLIE[c.famiglia] ? c.famiglia : 'altro', descrizione: c.descrizione || '', principio: [c.principio, c.calcolo && `Regola di calcolo: ${c.calcolo}`].filter(Boolean).join(' ') || undefined };
         if (c.tipo === 'fasce' && METRICHE_DISPONIBILI[c.metrica] && Array.isArray(c.fasce) && c.fasce.length) {
           out.metrica = c.metrica; out.peso = Number(c.peso) || 1; out.giudizio = !!c.giudizio;
           out.fasce = c.fasce.map((f) => ({ ...(f.oltre != null ? { oltre: Number(f.oltre) } : { da: Number(f.da) || 0 }), punti: Number(f.punti) || 0, etichetta: f.etichetta || '' }));

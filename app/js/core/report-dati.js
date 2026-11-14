@@ -72,7 +72,7 @@ export function raccogliReport(bando, p, oggi = new Date()) {
     posizione: ris.completo && ris.esito !== 'sotto_soglia' ? posizioneEsiti(bando, p.categoriaId, ris.totale) : null,
     previsione: previsioneStatistica(bando, p.categoriaId, ris),
     reale: confrontoConReale(ris, p.reale),
-    contributo: { richiesto: richiesto ?? null, primo, stima: stimaContributo(richiesto, ris.totale, primo) },
-    metriche: calcolaMetriche(p.dati), copertura: coperturaPiano(p.dati),
+    contributo: { richiesto: richiesto ?? null, primo, stima: stimaContributo(richiesto, ris.totale, primo, bando.regolaContributo || 'pieno') },
+    metriche: calcolaMetriche(p.dati, bando), copertura: coperturaPiano(p.dati),
   };
 }

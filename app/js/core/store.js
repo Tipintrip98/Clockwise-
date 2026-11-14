@@ -75,3 +75,7 @@ export async function salvaConoscenza(id, lista) { await scrivi(`conoscenza:${id
 
 export async function impostazioni() { return (await leggi('impostazioni')) || {}; }
 export async function salvaImpostazioni(patch) { const v = { ...(await impostazioni()), ...patch }; await scrivi('impostazioni', v); return v; }
+
+// Aggiornamenti dei bandi arrivati dal canale automatico: { bandi: { [id]: bando }, registro: [...], ultimoControllo, sorgenti: {...}, proposte: {...} }
+export async function aggiornamentiBandi() { return { bandi: {}, registro: [], sorgenti: {}, proposte: {}, ultimoControllo: null, ...((await leggi('aggiornamenti')) || {}) }; }
+export async function salvaAggiornamentiBandi(patch) { const v = { ...(await aggiornamentiBandi()), ...patch }; await scrivi('aggiornamenti', v); return v; }

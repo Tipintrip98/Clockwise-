@@ -10,6 +10,8 @@ import { nuovoId } from '../core/store.js';
 import { schedaReport } from './report.js';
 import { schedaProduzione } from './produzione.js';
 import { schedaLegale } from './legale.js';
+import { schedaFinanza } from './finanza.js';
+import { schedaGestione } from './gestione.js';
 import { schedaCruscotto } from './cruscotto.js';
 import { suggerimento } from './tutorial.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
@@ -17,8 +19,8 @@ import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 // Il cruscotto riassume lo stato; le quattro schede numerate sono i passi della valutazione;
 // Produzione e Legale sono strumenti di lavoro sul dossier.
 const SCHEDE = [['documenti', 'Documenti'], ['dati', 'Dati chiave'], ['valutazione', 'Valutazione'], ['report', 'Report']];
-const STRUMENTI = [['produzione', 'Produzione'], ['legale', 'Legale']];
-const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, legale: schedaLegale };
+const STRUMENTI = [['produzione', 'Produzione'], ['finanza', 'Finanza'], ['gestione', 'Gestione bando'], ['legale', 'Legale']];
+const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, finanza: schedaFinanza, gestione: schedaGestione, legale: schedaLegale };
 // Suggerimenti mostrati la prima volta che si apre una scheda.
 const DRITTE = {
   documenti: ['Trascina tutti i file insieme.', 'Il tipo di ciascun documento viene riconosciuto dal nome e puoi correggerlo nella tabella. Il Modulo III in Excel compila da solo i Dati chiave.'],
@@ -26,6 +28,8 @@ const DRITTE = {
   valutazione: ['Per una prima prova basta un commissario.', 'Costa una frazione delle letture. Per la stima da usare prima dell’invio scegli tre commissari: il punteggio è la media, come nella Commissione vera.'],
   report: ['Apri un criterio per leggere le motivazioni.', 'In fondo alla pagina puoi inserire il punteggio reale di un dossier già presentato: serve a misurare quanto la stima è vicina e a tararla.'],
   produzione: ['Si parte dallo spoglio.', 'Piano di lavorazione, ordine del giorno, storyboard e adempimenti si riempiono dalle scene lette nella sceneggiatura. Il preventivo è indipendente: puoi importarlo subito.'],
+  finanza: ['I numeri partono dai Dati chiave.', 'Piano finanziario, limite degli aiuti pubblici, tax credit, piano di cassa e recupero si calcolano dal costo e dalle fonti già inseriti: qui provi le alternative senza toccare il dossier.'],
+  gestione: ['Serve dopo la concessione.', 'Tappe e scadenze, quote di erogazione, registro delle spese e rendiconto: tieni sotto controllo gli impegni che hanno generato il punteggio, perché a consuntivo vengono verificati.'],
   legale: ['Ogni risposta cita l’articolo dell’avviso.', 'Apri il testo ufficiale e controlla il punto indicato prima di decidere: è un supporto, non un parere legale.'],
 };
 
@@ -221,7 +225,7 @@ function pannelloLive(p, bando) {
   for (const sez of griglia.sezioni) {
     const quant = sez.criteri.filter((c) => c.tipo === 'fasce');
     if (!quant.length) continue;
-    const ris = quant.map((c) => ({ c, r: valutaQuantitativo(c, p.dati) }));
+    const ris = quant.map((c) => ({ c, r: valutaQuantitativo(c, p.dati, bando) }));
     const tot = ris.reduce((a, x) => a + x.r.punti, 0), max = quant.reduce((a, c) => a + c.max, 0);
     blocchi.push(h('div',
       h('div.spread', h('h3', `Sezione ${sez.id}`), h('span.num', h('strong', fmt(tot)), ` / ${fmt(max)}`)),

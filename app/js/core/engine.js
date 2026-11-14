@@ -20,7 +20,7 @@ export function pianoValutazione(bando, progetto, nCommissari) {
   const commissari = sceltaCommissari(nCommissari);
   const passi = [], saltate = [];
   for (const sez of sezioniConGiudizio(griglia)) {
-    const docs = documentiPerSezione(progetto.documenti, sez.id);
+    const docs = documentiPerSezione(progetto.documenti, sez);
     if (!docs.length) { saltate.push(sez); continue; }
     for (const c of commissari) passi.push({ id: `${sez.id}:${c.id}`, tipo: 'sezione', sezione: sez.id, commissario: c, etichetta: `Sezione ${sez.id} · ${c.nome}` });
   }
@@ -137,7 +137,7 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
     for (const p of passiSez) if (!daFare.includes(p)) onEvento({ passo: p.id, stato: 'fatto' });
     if (!daFare.length) continue;
     lavori.push((async () => {
-      let docs = documentiPerSezione(progetto.documenti, sez.id);
+      let docs = documentiPerSezione(progetto.documenti, sez);
       const costruisci = (d, commissario = daFare[0].commissario) => promptSezione({ bando, categoriaId: progetto.categoriaId, anno: progetto.anno, sezione: sez, documenti: d, dati: progetto.dati, commissario });
       try {
         docs = await limita(() => rientraNelLimite({ costruisci, documenti: docs, llm, opzioni, signal, onNota: (n) => { val.note.push(n); onEvento({ nota: n }); } }));

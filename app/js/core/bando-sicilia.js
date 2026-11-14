@@ -75,17 +75,17 @@ const GRIGLIA_A = {
       obiettivo: 'Promuovere opere originali e di qualità; potenziare l’immagine della Sicilia.',
       criteri: [
         {
-          id: '1.1', nome: 'Originalità della sceneggiatura', max: 7, tipo: 'qualitativo',
+          id: '1.1', nome: 'Originalità della sceneggiatura', max: 7, tipo: 'qualitativo', famiglia: 'scrittura',
           descrizione: 'Originalità della scrittura, dei personaggi e della loro rappresentazione, solidità, tono e ritmo della struttura narrativa.',
           documenti: ['sceneggiatura', 'modulo2'],
         },
         {
-          id: '1.2', nome: 'Qualità della sceneggiatura', max: 12, tipo: 'qualitativo',
+          id: '1.2', nome: 'Qualità della sceneggiatura', max: 12, tipo: 'qualitativo', famiglia: 'scrittura',
           descrizione: 'Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, grado di innovazione linguistica in relazione all’audiovisivo proposto.',
           documenti: ['sceneggiatura', 'modulo2'],
         },
         {
-          id: '2.1', nome: 'Valorizzazione di storia, paesaggio, cultura e identità della Sicilia', max: 6, tipo: 'qualitativo',
+          id: '2.1', nome: 'Valorizzazione di storia, paesaggio, cultura e identità della Sicilia', max: 6, tipo: 'qualitativo', famiglia: 'territorio_contenuto',
           descrizione: 'Capacità della sceneggiatura di offrire uno sguardo inedito (struttura, ambientazione, genere, personaggi, idee, linguaggi) e di valorizzare fatti, eventi, dialoghi, relazioni tra personaggi e luoghi con riferimento al contesto siciliano (paesaggio, tradizioni, cultura, attualità, enogastronomia, identità), anche ai fini del cineturismo e del turismo delle radici.',
           documenti: ['sceneggiatura', 'modulo2', 'piano_lavorazione'],
         },
@@ -96,19 +96,19 @@ const GRIGLIA_A = {
       obiettivo: 'Promuovere e sostenere il settore audiovisivo.',
       criteri: [
         {
-          id: '3.1', nome: 'Società di produzione e opere prodotte', max: 6, tipo: 'qualitativo',
+          id: '3.1', nome: 'Società di produzione e opere prodotte', max: 6, tipo: 'qualitativo', famiglia: 'societa',
           descrizione: 'Rilevanza della società di produzione in base al curriculum degli ultimi cinque anni. Film cinematografici e cortometraggi: numero di produzioni realizzate, partecipazione a festival, premi e riconoscimenti, coproduzioni nazionali e internazionali. Film TV e serie TV: numero di produzioni, canali di distribuzione, coproduzioni nazionali e internazionali.',
           documenti: ['cv_societa', 'modulo2'],
         },
         {
-          id: '3.2', nome: 'Componente artistica', max: 10, tipo: 'qualitativo',
+          id: '3.2', nome: 'Componente artistica', max: 10, tipo: 'qualitativo', famiglia: 'artistica',
           descrizione: 'CV dei singoli professionisti coinvolti (regista, sceneggiatore, direttore della fotografia, autore della colonna sonora originale) in relazione a numero e qualità delle opere a cui hanno partecipato e ai premi e riconoscimenti ottenuti.',
           principio: PRINCIPIO_CAST,
           documenti: ['cv_regista', 'cv_autori', 'cv_artistico', 'accordi_cast', 'modulo2', 'modulo3'],
           richiede: ['accordi_cast'],
         },
         {
-          id: '3.3', nome: 'Cast tecnico (crew)', max: 4, tipo: 'qualitativo',
+          id: '3.3', nome: 'Cast tecnico (crew)', max: 4, tipo: 'qualitativo', famiglia: 'tecnica',
           descrizione: 'CV dei singoli professionisti coinvolti in relazione a numero e qualità delle opere audiovisive a cui hanno partecipato.',
           principio: PRINCIPIO_CAST,
           documenti: ['cv_tecnico', 'accordi_cast', 'modulo2', 'modulo3'],
@@ -121,12 +121,12 @@ const GRIGLIA_A = {
       obiettivo: 'Promuovere impatti economici e occupazionali sul territorio siciliano.',
       criteri: [
         {
-          id: '4.1', nome: 'Incidenza della lavorazione in Sicilia', max: 8, tipo: 'fasce', metrica: 'lavorazioneSicilia', peso: 0.8,
+          id: '4.1', nome: 'Incidenza della lavorazione in Sicilia', max: 8, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'lavorazioneSicilia', peso: 0.8,
           descrizione: 'Giorni di lavorazione in Sicilia (pre-produzione e riprese) rispetto al totale dei giorni di lavorazione.',
           fasce: FASCE_LAVORAZIONE,
         },
         {
-          id: '4.2', nome: 'Professionisti siciliani della componente artistica', max: 5, tipo: 'fasce', metrica: 'artisticiSiciliani', peso: 0.5,
+          id: '4.2', nome: 'Professionisti siciliani della componente artistica', max: 5, tipo: 'fasce', famiglia: 'ricaduta_lavoro', metrica: 'artisticiSiciliani', peso: 0.5,
           descrizione: 'Professionisti nati e/o residenti in Sicilia da almeno sei mesi coinvolti nel cast artistico (esclusi figuranti e comparse).',
           principio: PRINCIPIO_SICILIANI,
           fasce: [
@@ -137,7 +137,7 @@ const GRIGLIA_A = {
           ],
         },
         {
-          id: '4.3', nome: 'Professionisti siciliani del cast tecnico', max: 5, tipo: 'fasce', metrica: 'tecniciSiciliani', peso: 0.5,
+          id: '4.3', nome: 'Professionisti siciliani del cast tecnico', max: 5, tipo: 'fasce', famiglia: 'ricaduta_lavoro', metrica: 'tecniciSiciliani', peso: 0.5,
           descrizione: 'Professionisti nati e/o residenti in Sicilia da almeno sei mesi coinvolti nel cast tecnico (crew).',
           principio: PRINCIPIO_SICILIANI,
           fasce: [
@@ -148,12 +148,12 @@ const GRIGLIA_A = {
           ],
         },
         {
-          id: '4.4', nome: 'Incidenza della post-produzione in Sicilia', max: 2, tipo: 'fasce', metrica: 'postSicilia', peso: 0.2,
+          id: '4.4', nome: 'Incidenza della post-produzione in Sicilia', max: 2, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'postSicilia', peso: 0.2,
           descrizione: 'Giorni di lavorazione in Sicilia (post-produzione) rispetto al totale dei giorni di lavorazione.',
           fasce: FASCE_POST,
         },
         {
-          id: '4.5', nome: 'Spesa sul territorio siciliano', max: 10, tipo: 'fasce', metrica: 'spesaSicilia', peso: 1,
+          id: '4.5', nome: 'Spesa sul territorio siciliano', max: 10, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'spesaSicilia', peso: 1,
           descrizione: 'Percentuale delle spese ammissibili sul territorio rispetto al contributo richiesto.',
           fasce: FASCE_SPESA,
         },
@@ -164,14 +164,14 @@ const GRIGLIA_A = {
       obiettivo: 'Sostenere opere con alto grado di fattibilità realizzativa e potenzialità distributiva.',
       criteri: [
         {
-          id: '5.1', nome: 'Solidità del piano finanziario', max: 16, tipo: 'fasce', metrica: 'copertura', peso: 1.6, giudizio: true,
+          id: '5.1', nome: 'Solidità del piano finanziario', max: 16, tipo: 'fasce', famiglia: 'piano_finanziario', metrica: 'copertura', peso: 1.6, giudizio: true,
           descrizione: 'Copertura delle fonti e stato di avanzamento della produzione (eventuale inizio delle riprese in Sicilia) sulla base di deal memo e/o contratti sottoscritti: pre-acquisto, coproduzioni, produzioni associate, distribuzione, vendite, finanziatori esterni alla filiera (tax credit esterno, product placement).',
           principio: PRINCIPIO_PIANO,
           fasce: FASCE_COPERTURA,
           documenti: ['modulo3', 'coproduzione', 'distribuzione', 'finanziamenti', 'referenze_bancarie', 'finanziatori_esterni'],
         },
         {
-          id: '5.2', nome: 'Solidità del piano di distribuzione', max: 5, tipo: 'discreto',
+          id: '5.2', nome: 'Solidità del piano di distribuzione', max: 5, tipo: 'discreto', famiglia: 'distribuzione',
           descrizione: 'Presenza di contratti di distribuzione cinematografica e/o televisiva: 5 punti. Presenza di soli deal memo di distribuzione: 2 punti. Nessun accordo valido: 0 punti.',
           valori: [
             { punti: 5, etichetta: 'Contratto di distribuzione con controparte qualificata' },
@@ -182,7 +182,7 @@ const GRIGLIA_A = {
           documenti: ['distribuzione'],
         },
         {
-          id: '5.3', nome: 'Internazionalizzazione', max: 4, tipo: 'qualitativo',
+          id: '5.3', nome: 'Internazionalizzazione', max: 4, tipo: 'qualitativo', famiglia: 'internazionale',
           descrizione: 'Presenza di un coproduttore e/o di contratti di distribuzione internazionale.',
           principio: PRINCIPIO_INTERNAZIONALE,
           documenti: ['coproduzione', 'distribuzione'],
@@ -202,17 +202,17 @@ const GRIGLIA_B = {
       obiettivo: 'Promuovere opere originali e di qualità; potenziare l’immagine della Sicilia.',
       criteri: [
         {
-          id: '1.1', nome: 'Originalità del soggetto/trattamento', max: 9, tipo: 'qualitativo',
+          id: '1.1', nome: 'Originalità del soggetto/trattamento', max: 9, tipo: 'qualitativo', famiglia: 'scrittura',
           descrizione: 'Originalità della scrittura, dei personaggi e della loro rappresentazione, solidità, tono e ritmo della struttura narrativa anche rispetto al contesto paesaggistico, naturalistico, storico e alla tematica individuata.',
           documenti: ['sceneggiatura', 'modulo2'],
         },
         {
-          id: '1.2', nome: 'Qualità del soggetto/trattamento', max: 12, tipo: 'qualitativo',
+          id: '1.2', nome: 'Qualità del soggetto/trattamento', max: 12, tipo: 'qualitativo', famiglia: 'scrittura',
           descrizione: 'Qualità della scrittura, capacità di elaborazione drammaturgica e di restituzione dei personaggi, grado di innovazione linguistica in relazione all’audiovisivo proposto.',
           documenti: ['sceneggiatura', 'modulo2'],
         },
         {
-          id: '2.1', nome: 'Valorizzazione di storia, paesaggio, cultura e identità della Sicilia', max: 9, tipo: 'qualitativo',
+          id: '2.1', nome: 'Valorizzazione di storia, paesaggio, cultura e identità della Sicilia', max: 9, tipo: 'qualitativo', famiglia: 'territorio_contenuto',
           descrizione: 'Capacità del soggetto/trattamento di offrire uno sguardo inedito e di valorizzare fatti, eventi, dialoghi, relazioni tra personaggi e luoghi con riferimento al contesto siciliano (paesaggio, tradizioni, cultura, attualità, enogastronomia, identità), anche ai fini del cineturismo e del turismo delle radici.',
           documenti: ['sceneggiatura', 'modulo2', 'piano_lavorazione'],
         },
@@ -223,19 +223,19 @@ const GRIGLIA_B = {
       obiettivo: 'Promuovere e sostenere professionisti del settore audiovisivo.',
       criteri: [
         {
-          id: '3.1', nome: 'Società di produzione e opere prodotte', max: 4, tipo: 'qualitativo',
+          id: '3.1', nome: 'Società di produzione e opere prodotte', max: 4, tipo: 'qualitativo', famiglia: 'societa',
           descrizione: 'Società di produzione e capacità di collocare il prodotto sul mercato. Ultimi cinque anni: numero di produzioni realizzate, partecipazione a festival, premi e riconoscimenti, coproduzioni nazionali e internazionali.',
           documenti: ['cv_societa', 'modulo2'],
         },
         {
-          id: '3.2', nome: 'Componente artistica', max: 8, tipo: 'qualitativo',
+          id: '3.2', nome: 'Componente artistica', max: 8, tipo: 'qualitativo', famiglia: 'artistica',
           descrizione: 'CV dei professionisti coinvolti (regista, autore del soggetto/trattamento, direttore della fotografia, consulente scientifico, autore della colonna sonora originale) in relazione a numero e qualità delle opere e ai premi e riconoscimenti ottenuti.',
           principio: PRINCIPIO_CAST,
           documenti: ['cv_regista', 'cv_autori', 'cv_artistico', 'accordi_cast', 'modulo2', 'modulo3'],
           richiede: ['accordi_cast'],
         },
         {
-          id: '3.3', nome: 'Cast tecnico (crew)', max: 3, tipo: 'qualitativo',
+          id: '3.3', nome: 'Cast tecnico (crew)', max: 3, tipo: 'qualitativo', famiglia: 'tecnica',
           descrizione: 'CV dei singoli professionisti coinvolti in relazione a numero e qualità delle opere audiovisive a cui hanno partecipato.',
           principio: PRINCIPIO_CAST,
           documenti: ['cv_tecnico', 'accordi_cast', 'modulo2', 'modulo3'],
@@ -248,12 +248,12 @@ const GRIGLIA_B = {
       obiettivo: 'Promuovere impatti economici e occupazionali sul territorio siciliano.',
       criteri: [
         {
-          id: '4.1', nome: 'Incidenza della lavorazione in Sicilia', max: 10, tipo: 'fasce', metrica: 'lavorazioneSicilia', peso: 1,
+          id: '4.1', nome: 'Incidenza della lavorazione in Sicilia', max: 10, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'lavorazioneSicilia', peso: 1,
           descrizione: 'Giorni di lavorazione in Sicilia (pre-produzione e riprese) rispetto al totale dei giorni di lavorazione.',
           fasce: FASCE_LAVORAZIONE,
         },
         {
-          id: '4.2', nome: 'Professionisti siciliani tra componente artistica e cast tecnico', max: 7, tipo: 'fasce', metrica: 'professionistiSiciliani', peso: 0.7,
+          id: '4.2', nome: 'Professionisti siciliani tra componente artistica e cast tecnico', max: 7, tipo: 'fasce', famiglia: 'ricaduta_lavoro', metrica: 'professionistiSiciliani', peso: 0.7,
           descrizione: 'Professionisti nati e/o residenti in Sicilia da almeno sei mesi coinvolti nella componente artistica e nel cast tecnico.',
           principio: PRINCIPIO_SICILIANI,
           fasce: [
@@ -264,12 +264,12 @@ const GRIGLIA_B = {
           ],
         },
         {
-          id: '4.3', nome: 'Incidenza della post-produzione in Sicilia', max: 3, tipo: 'fasce', metrica: 'postSicilia', peso: 0.3,
+          id: '4.3', nome: 'Incidenza della post-produzione in Sicilia', max: 3, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'postSicilia', peso: 0.3,
           descrizione: 'Giorni di lavorazione in Sicilia (post-produzione) rispetto al totale dei giorni di lavorazione.',
           fasce: FASCE_POST,
         },
         {
-          id: '4.4', nome: 'Spesa sul territorio siciliano', max: 10, tipo: 'fasce', metrica: 'spesaSicilia', peso: 1,
+          id: '4.4', nome: 'Spesa sul territorio siciliano', max: 10, tipo: 'fasce', famiglia: 'ricaduta_spesa', metrica: 'spesaSicilia', peso: 1,
           descrizione: 'Percentuale della spesa ammissibile sul territorio rispetto al contributo richiesto.',
           fasce: FASCE_SPESA,
         },
@@ -280,14 +280,14 @@ const GRIGLIA_B = {
       obiettivo: 'Sostenere opere con alto grado di fattibilità realizzativa e potenzialità distributiva.',
       criteri: [
         {
-          id: '5.1', nome: 'Solidità del piano finanziario', max: 16, tipo: 'fasce', metrica: 'copertura', peso: 1.6, giudizio: true,
+          id: '5.1', nome: 'Solidità del piano finanziario', max: 16, tipo: 'fasce', famiglia: 'piano_finanziario', metrica: 'copertura', peso: 1.6, giudizio: true,
           descrizione: 'Copertura delle fonti e stato di avanzamento della produzione (eventuale inizio delle riprese in Sicilia) sulla base di deal memo e/o contratti sottoscritti: pre-acquisto, coproduzioni, produzioni associate, distribuzione, vendite, finanziatori esterni alla filiera.',
           principio: PRINCIPIO_PIANO,
           fasce: FASCE_COPERTURA,
           documenti: ['modulo3', 'coproduzione', 'distribuzione', 'finanziamenti', 'referenze_bancarie', 'finanziatori_esterni'],
         },
         {
-          id: '5.2', nome: 'Solidità del piano di distribuzione', max: 6, tipo: 'discreto',
+          id: '5.2', nome: 'Solidità del piano di distribuzione', max: 6, tipo: 'discreto', famiglia: 'distribuzione',
           descrizione: 'Presenza di contratti di distribuzione cinematografica e/o televisiva: 6 punti. Presenza di soli deal memo di distribuzione: 3 punti. Nessun accordo valido: 0 punti.',
           valori: [
             { punti: 6, etichetta: 'Contratto di distribuzione con controparte qualificata' },
@@ -298,7 +298,7 @@ const GRIGLIA_B = {
           documenti: ['distribuzione'],
         },
         {
-          id: '5.3', nome: 'Internazionalizzazione', max: 3, tipo: 'discreto',
+          id: '5.3', nome: 'Internazionalizzazione', max: 3, tipo: 'discreto', famiglia: 'internazionale',
           descrizione: 'Presenza di un coproduttore e/o di contratti di distribuzione internazionale: 3 punti.',
           valori: [
             { punti: 3, etichetta: 'Coproduttore e/o contratto di distribuzione internazionale' },
@@ -322,6 +322,8 @@ export const BANDO_SICILIA = {
   fonte: 'Avviso pubblico anni 2025-2027, testo coordinato con D.D.G. n. 4788 del 22/12/2025',
   verificato: true,
   predefinito: true,
+  simulabile: true,
+  revisione: '2026-11-14',
   sogliaTotale: 65,
   punteggioMassimo: 100,
   commissione: {
@@ -346,6 +348,13 @@ export const BANDO_SICILIA = {
     oggetto: 'SICILIA FILM COMMISSION – ISTANZA PER LA CONCESSIONE DI CONTRIBUTI A SOSTEGNO DELLA PRODUZIONE CINEMATOGRAFICA E AUDIOVISIVA 2025-2027',
   },
   spesaTerritorioMinPct: 150,
+  producerFeeMaxPct: 7.5,
+  regolaContributo: 'proporzionale_al_primo',
+  gentilizio: 'siciliani',
+  stato: 'aperto',
+  tipoValutazione: 'punteggio',
+  paginaUfficiale: 'https://www.siciliafilmcommission.org/',
+  descrizione: 'Contributo a fondo perduto della Regione Siciliana per film, serie, documentari e cortometraggi girati in Sicilia. Una finestra l’anno; la Commissione assegna fino a 100 punti su qualità, soggetti coinvolti, ricadute sul territorio e solidità finanziaria.',
   categorie: [
     {
       id: 'film',
@@ -434,6 +443,18 @@ export const BANDO_SICILIA = {
     { sezioni: ['D'], testo: 'Sezione D: la copertura del piano finanziario è stata riconosciuta sulle fonti dichiarate nel Modulo III con un documento allegato della controparte, rapportate al costo al netto del contributo richiesto. In un caso reale un accordo di coproduzione firmato, una lettera di un finanziatore esterno e un contratto di distribuzione firmato con una società indipendente, senza referenze bancarie e senza prova dei titoli distribuiti, hanno portato la sezione oltre il 90% del massimo.' },
     { sezioni: ['D'], testo: 'Sezione D: quando invece le fonti non hanno alcun documento allegato la Commissione scende molto. Nel 2026 più di due film su tre sono rimasti sotto il minimo di 15, molti tra 0 e 6: è la sezione che decide l’ammissibilità.' },
   ],
+  // Come è stata verificata la griglia: trascritta dal testo ufficiale e ricontrollata sui punteggi delle graduatorie.
+  affidabilita: {
+    griglia: 'testo_ufficiale',
+    // Estratti letterali dal testo coordinato dell'avviso; le tabelle dei criteri (art. 10.2) sono trascritte per intero nelle griglie qui sopra.
+    citazioni: [
+      { riferimento: 'Avviso, art. 10.1 — punteggio massimo e griglie', testo: 'fino a un massimo di 100/100, secondo le griglie di cui al successivo paragrafo 10.2., determinando le graduatorie finali di ciascuna categoria di cui all’art. 4.' },
+      { riferimento: 'Avviso, art. 10.1 — soglia complessiva e minimi di sezione', testo: 'Fermo restando che il punteggio complessivo per accedere alle agevolazioni dovrà essere di almeno 65/100, in ogni caso saranno ritenuti inammissibili a cofinanziamento i progetti audiovisivi che non avranno conseguito i punteggi minimi, per ciascuna delle Sezioni A, B, C e D delle griglie di valutazione' },
+      { riferimento: 'Avviso, art. 10.2 — principi di attribuzione (componente artistica e cast tecnico)', testo: 'i punteggi saranno attribuiti solo per le figure indicate nel MODULO III – Sez. III.2 del Dossier di Candidatura ed unicamente nell’ipotesi in cui vengano allegati contratti, deal memo e lettere di intento sottoscritti con gli artisti e gli operatori coinvolti' },
+    ],
+    dubbi: [],
+  },
+  verifica: { esito: 'confermata', data: '2026-11-14', correzioni: [], dubbi: [] },
   // Conoscenza fissa: fa parte del programma e accompagna ogni lettura di Claude.
   testi: TESTO_AVVISO_SICILIA,
   moduli: MODULI_SICILIA,

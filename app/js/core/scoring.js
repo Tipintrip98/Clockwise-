@@ -1,6 +1,8 @@
 // Motore di calcolo deterministico: metriche, fasce di punteggio, soglie, esito.
 // Non usa l'AI: tutto ciò che il bando definisce con numeri si calcola qui.
 
+import { METRICHE } from './bandi/schema.js';
+
 export const r1 = (n) => Math.round((n + Number.EPSILON) * 10) / 10;
 const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 const pct = (a, b) => (num(a) != null && num(b) != null && b > 0 ? (a / b) * 100 : null);
@@ -56,48 +58,92 @@ export function coperturaPiano(dati) {
   };
 }
 
+// Unità di misura delle metriche: quasi tutte sono percentuali, alcune valori assoluti.
+export const unitaMetrica = (id) => METRICHE[id]?.unita || 'pct';
+export function testoValore(v, unita = 'pct') {
+  if (v == null) return '—';
+  if (unita === 'euro') return v.toLocaleString('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+  if (unita === 'giorni') return `${v.toLocaleString('it-IT')} ${v === 1 ? 'giorno' : 'giorni'}`;
+  if (unita === 'numero') return v.toLocaleString('it-IT');
+  return `${(Math.round(v * 10) / 10).toLocaleString('it-IT')}%`;
+}
+
 // Ogni metrica ha un valore principale e, dove il testo del bando è ambiguo, una lettura alternativa.
-export function calcolaMetriche(dati) {
+// I campi con il suffisso «Sicilia» indicano, per ragioni storiche, il territorio del bando in uso.
+export function calcolaMetriche(dati, bando = null) {
   const g = dati.giorni || {}, p = dati.professionisti || {}, e = dati.economici || {};
+  const t = bando?.territorio || 'territorio';
+  const nel = bando?.territorio ? `in ${t}` : 'sul territorio';
   const lavSic = somma(g.prepSicilia, g.ripreseSicilia);
   const lavTot = somma(g.prepTot, g.ripreseTot);
   const totGiorni = somma(g.prepTot, g.ripreseTot, g.postTot);
+  const locali = somma(p.artSicilia, p.crewSicilia), tuttiProf = somma(p.artTot, p.crewTot);
   const cop = coperturaPiano(dati);
   return {
     lavorazioneSicilia: {
       valore: pct(lavSic, lavTot),
       alternativa: pct(lavSic, totGiorni),
-      formula: 'giorni in Sicilia di pre-produzione e riprese ÷ giorni totali di pre-produzione e riprese',
-      formulaAlternativa: 'stessi giorni in Sicilia ÷ giorni totali comprensivi di post-produzione',
+      formula: `giorni ${nel} di pre-produzione e riprese ÷ giorni totali di pre-produzione e riprese`,
+      formulaAlternativa: `stessi giorni ${nel} ÷ giorni totali comprensivi di post-produzione`,
       dettaglio: lavSic != null && lavTot != null ? `${lavSic} giorni su ${lavTot}` : null,
+    },
+    ripreseTerritorioPct: {
+      valore: pct(g.ripreseSicilia, g.ripreseTot),
+      formula: `giorni di riprese ${nel} ÷ giorni di riprese totali`,
+      dettaglio: num(g.ripreseSicilia) != null && num(g.ripreseTot) != null ? `${g.ripreseSicilia} giorni su ${g.ripreseTot}` : null,
+    },
+    giorniRipreseTerritorio: {
+      valore: num(g.ripreseSicilia), unita: 'giorni',
+      formula: `giorni di riprese ${nel}`, dettaglio: null,
     },
     postSicilia: {
       valore: pct(g.postSicilia, g.postTot),
       alternativa: pct(g.postSicilia, totGiorni),
-      formula: 'giorni di post-produzione in Sicilia ÷ giorni totali di post-produzione',
-      formulaAlternativa: 'giorni di post-produzione in Sicilia ÷ giorni totali di lavorazione',
+      formula: `giorni di post-produzione ${nel} ÷ giorni totali di post-produzione`,
+      formulaAlternativa: `giorni di post-produzione ${nel} ÷ giorni totali di lavorazione`,
       dettaglio: num(g.postSicilia) != null && num(g.postTot) != null ? `${g.postSicilia} giorni su ${g.postTot}` : null,
     },
     artisticiSiciliani: {
       valore: pct(p.artSicilia, p.artTot),
-      formula: 'professionisti siciliani della componente artistica ÷ totale componente artistica',
+      formula: `professionisti del territorio (${t}) nella componente artistica ÷ totale componente artistica`,
       dettaglio: num(p.artSicilia) != null && num(p.artTot) != null ? `${p.artSicilia} su ${p.artTot}` : null,
     },
     tecniciSiciliani: {
       valore: pct(p.crewSicilia, p.crewTot),
-      formula: 'professionisti siciliani del cast tecnico ÷ totale cast tecnico',
+      formula: `professionisti del territorio (${t}) nel cast tecnico ÷ totale cast tecnico`,
       dettaglio: num(p.crewSicilia) != null && num(p.crewTot) != null ? `${p.crewSicilia} su ${p.crewTot}` : null,
     },
     professionistiSiciliani: {
-      valore: pct(somma(p.artSicilia, p.crewSicilia), somma(p.artTot, p.crewTot)),
-      formula: 'professionisti siciliani (artistici e tecnici) ÷ totale professionisti',
-      dettaglio: somma(p.artSicilia, p.crewSicilia) != null && somma(p.artTot, p.crewTot) != null
-        ? `${p.artSicilia + p.crewSicilia} su ${p.artTot + p.crewTot}` : null,
+      valore: pct(locali, tuttiProf),
+      formula: `professionisti del territorio (${t}), artistici e tecnici ÷ totale professionisti`,
+      dettaglio: locali != null && tuttiProf != null ? `${locali} su ${tuttiProf}` : null,
+    },
+    professionistiTerritorio: {
+      valore: locali, unita: 'numero',
+      formula: `numero di professionisti del territorio (${t}), artistici e tecnici`, dettaglio: null,
     },
     spesaSicilia: {
       valore: pct(e.spesaSicilia, e.contributoRichiesto),
-      formula: 'spesa ammissibile sostenuta in Sicilia ÷ contributo richiesto',
+      formula: `spesa ammissibile sostenuta ${nel} ÷ contributo richiesto`,
       dettaglio: null,
+    },
+    spesaTerritorioSuCosto: {
+      valore: pct(e.spesaSicilia, e.costoProduzione),
+      formula: `spesa sostenuta ${nel} ÷ costo di produzione`,
+      dettaglio: null,
+    },
+    spesaTerritorioEuro: {
+      valore: num(e.spesaSicilia), unita: 'euro',
+      formula: `spesa sostenuta ${nel}`, dettaglio: null,
+    },
+    contributoSuCosto: {
+      valore: pct(e.contributoRichiesto, e.costoProduzione),
+      formula: 'contributo richiesto ÷ costo di produzione',
+      dettaglio: null,
+    },
+    costoProduzione: {
+      valore: num(e.costoProduzione), unita: 'euro',
+      formula: 'costo di produzione', dettaglio: null,
     },
     // Lettura principale: sul fabbisogno al netto del contributo richiesto. In un dossier reale di cui si conoscono
     // documenti e punteggi il punteggio della sezione D è compatibile solo con questa lettura.
@@ -122,7 +168,7 @@ function indiceFascia(fasce, valore, flags) {
 }
 
 // Punteggio di un criterio a fasce per un dato valore percentuale.
-export function puntiFascia(criterio, valore, flags) {
+export function puntiFascia(criterio, valore, flags, unita = 'pct') {
   const i = indiceFascia(criterio.fasce, valore, flags);
   if (i < 0) return { punti: 0, mancante: true, fascia: null, indice: -1, prossima: null, vicinoSoglia: false };
   const f = criterio.fasce[i];
@@ -140,36 +186,38 @@ export function puntiFascia(criterio, valore, flags) {
     };
     break;
   }
-  const vicinoSoglia = !f.flag && prossima != null && valore != null && prossima.soglia - valore <= 1.5;
+  const scarto = prossima != null && valore != null ? prossima.soglia - valore : null;
+  const vicinoSoglia = !f.flag && scarto != null && (unita === 'pct' ? scarto <= 1.5 : unita === 'euro' ? scarto <= prossima.soglia * 0.03 : scarto <= 1);
   return { punti, mancante: false, fascia: f.etichetta, indice: i, prossima, vicinoSoglia };
 }
 
-const fmtPct = (v) => (v == null ? '—' : `${(Math.round(v * 10) / 10).toLocaleString('it-IT')}%`);
+const fmtPct = (v) => testoValore(v, 'pct');
 
 // Risultato dei criteri quantitativi sulla base dei dati dichiarati.
-export function valutaQuantitativo(criterio, dati) {
-  const m = calcolaMetriche(dati)[criterio.metrica];
+export function valutaQuantitativo(criterio, dati, bando = null) {
+  const m = calcolaMetriche(dati, bando)[criterio.metrica];
+  const unita = m?.unita || criterio.unita || 'pct';
   const flags = { ripreseIniziate: !!dati.ripreseIniziate };
-  const base = puntiFascia(criterio, m?.valore ?? null, flags);
+  const base = puntiFascia(criterio, m?.valore ?? null, flags, unita);
   const avvisi = [];
   let min = base.punti, max = base.punti;
   if (base.mancante) {
     avvisi.push('Dato mancante: inserisci i valori nei Dati chiave.');
   } else {
     if (m.alternativa != null && !(criterio.fasce[base.indice] || {}).flag) {
-      const alt = puntiFascia(criterio, m.alternativa, flags);
+      const alt = puntiFascia(criterio, m.alternativa, flags, unita);
       if (alt.punti !== base.punti) {
         min = Math.min(min, alt.punti); max = Math.max(max, alt.punti);
-        avvisi.push(`Lettura alternativa del bando (${m.formulaAlternativa}): ${fmtPct(m.alternativa)} → ${alt.punti.toLocaleString('it-IT')} punti.`);
+        avvisi.push(`Lettura alternativa del bando (${m.formulaAlternativa}): ${testoValore(m.alternativa, unita)} → ${alt.punti.toLocaleString('it-IT')} punti.`);
       }
     }
     if (base.vicinoSoglia) {
-      avvisi.push(`Valore a ridosso della soglia: serve ${base.prossima.stretta ? 'più del' : 'almeno il'} ${base.prossima.soglia}% per la fascia “${base.prossima.etichetta}” (+${base.prossima.guadagno.toLocaleString('it-IT')}).`);
+      avvisi.push(`Valore a ridosso della soglia: serve ${base.prossima.stretta ? 'più di' : 'almeno'} ${testoValore(base.prossima.soglia, unita)} per la fascia “${base.prossima.etichetta}” (+${base.prossima.guadagno.toLocaleString('it-IT')}).`);
     }
   }
   return {
-    id: criterio.id, punti: base.punti, min, max, mancante: base.mancante,
-    valore: m?.valore ?? null, valoreTesto: fmtPct(m?.valore ?? null), dettaglio: m?.dettaglio || null,
+    id: criterio.id, punti: base.punti, min, max, mancante: base.mancante, unita,
+    valore: m?.valore ?? null, valoreTesto: testoValore(m?.valore ?? null, unita), dettaglio: m?.dettaglio || null,
     fascia: base.fascia, prossima: base.prossima, formula: m?.formula, avvisi, fonte: 'calcolo',
   };
 }
@@ -208,7 +256,7 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
       const giudizi = (valutazioni[c.id] || []).map((g) => ({ ...g, punti: puntiCommissario(c, g, dati) })).filter((g) => g.punti != null);
       let r;
       if (c.tipo === 'fasce' && !c.giudizio) {
-        r = valutaQuantitativo(c, dati);
+        r = valutaQuantitativo(c, dati, bando);
       } else if (giudizi.length) {
         const pts = giudizi.map((g) => g.punti);
         r = { id: c.id, punti: r1(media(pts)), min: Math.min(...pts), max: Math.max(...pts), fonte: 'commissione', avvisi: [], mancante: false };
@@ -216,7 +264,7 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
         const rig = giudizi.map((g) => num(g.rigoroso)).filter((v) => v != null).map((v) => clamp(v, 0, c.max));
         if (rig.length) r.rigoroso = r1(Math.min(media(rig), r.punti));
         if (c.tipo === 'fasce') {
-          const dich = valutaQuantitativo(c, dati);
+          const dich = valutaQuantitativo(c, dati, bando);
           r.dichiarato = dich;
           const vals = giudizi.map((g) => num(g.valore)).filter((v) => v != null);
           if (vals.length) r.valoreTesto = fmtPct(media(vals));
@@ -225,7 +273,7 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
           }
         }
       } else if (c.tipo === 'fasce') {
-        r = { ...valutaQuantitativo(c, dati), fonte: 'dichiarato' };
+        r = { ...valutaQuantitativo(c, dati, bando), fonte: 'dichiarato' };
         if (!r.mancante) r.avvisi.push('Punteggio provvisorio dai dati dichiarati: la commissione verifica quali fonti sono davvero documentate.');
       } else {
         r = { id: c.id, punti: null, min: null, max: null, fonte: 'non_valutato', avvisi: [], mancante: true };
@@ -298,14 +346,25 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
     else add('contributo', 'ok', 'Contributo richiesto', `${euro(rich)}, pari al ${fmt((rich / costo) * 100)}% del costo di produzione (massimo ${cat.contributo.percentuale}%${massimale ? `, tetto ${euro(massimale)}` : ''}).`);
   }
 
-  // spesa sul territorio
-  const spesa = num(e.spesaSicilia), minPct = bando.spesaTerritorioMinPct || 150;
-  if (spesa == null || rich == null) add('spesa', 'da_verificare', `Spesa in ${bando.territorio || 'regione'}`, 'Indica la spesa ammissibile sul territorio.');
-  else {
-    const p = (spesa / rich) * 100;
-    if (p < minPct) add('spesa', 'critico', `Spesa in ${bando.territorio || 'regione'}`, `${fmt(p)}% del contributo: il minimo di ammissibilità è ${minPct}% (servono almeno ${euro((rich * minPct) / 100)}).`);
-    else if (p < minPct + 1) add('spesa', 'attenzione', `Spesa in ${bando.territorio || 'regione'}`, `${fmt(p)}% del contributo: ammissibile, ma al minimo esatto il criterio di spesa vale 0 punti e ogni scostamento a consuntivo porta alla revoca.`);
-    else add('spesa', 'ok', `Spesa in ${bando.territorio || 'regione'}`, `${fmt(p)}% del contributo richiesto (minimo ${minPct}%).`);
+  // spesa sul territorio (solo se il bando fissa un minimo in rapporto al contributo)
+  const spesa = num(e.spesaSicilia), minPct = bando.spesaTerritorioMinPct || 0;
+  const dove = `Spesa in ${bando.territorio || 'regione'}`;
+  if (minPct > 0) {
+    if (spesa == null || rich == null) add('spesa', 'da_verificare', dove, 'Indica la spesa ammissibile sul territorio.');
+    else {
+      const p = (spesa / rich) * 100;
+      if (p < minPct) add('spesa', 'critico', dove, `${fmt(p)}% del contributo: il minimo di ammissibilità è ${minPct}% (servono almeno ${euro((rich * minPct) / 100)}).`);
+      else if (p < minPct + 1) add('spesa', 'attenzione', dove, `${fmt(p)}% del contributo: ammissibile, ma al minimo esatto ogni scostamento a consuntivo espone alla revoca.`);
+      else add('spesa', 'ok', dove, `${fmt(p)}% del contributo richiesto (minimo ${minPct}%).`);
+    }
+  } else if (bando.spesaTerritorioMinSuCostoPct > 0) {
+    const minC = bando.spesaTerritorioMinSuCostoPct;
+    if (spesa == null || costo == null) add('spesa', 'da_verificare', dove, 'Indica la spesa sul territorio e il costo di produzione.');
+    else {
+      const p = (spesa / costo) * 100;
+      if (p < minC) add('spesa', 'critico', dove, `${fmt(p)}% del costo di produzione: il minimo richiesto è ${minC}% (servono almeno ${euro((costo * minC) / 100)}).`);
+      else add('spesa', 'ok', dove, `${fmt(p)}% del costo di produzione (minimo ${minC}%).`);
+    }
   }
 
   // quadratura budget / piano finanziario
@@ -316,16 +375,23 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
     else add('quadratura', 'ok', 'Quadratura budget e piano finanziario', 'Il piano finanziario copre esattamente il costo di produzione.');
   } else add('quadratura', 'da_verificare', 'Quadratura budget e piano finanziario', 'Inserisci le fonti del piano finanziario per verificare la quadratura.');
 
-  // producer fee
-  if (num(e.producerFee) != null && costo) {
+  // producer fee (solo se il bando fissa un tetto)
+  const tettoFee = num(bando.producerFeeMaxPct);
+  if (tettoFee != null && num(e.producerFee) != null && costo) {
     const p = (e.producerFee / costo) * 100;
-    if (p > 7.5 + 0.01) add('fee', 'attenzione', 'Producer fee', `${fmt(p)}% del costo: la quota oltre il 7,5% non è ammissibile.`);
-    else add('fee', 'ok', 'Producer fee', `${fmt(p)}% del costo di produzione (ammissibile fino al 7,5%).`);
+    if (p > tettoFee + 0.01) add('fee', 'attenzione', 'Producer fee', `${fmt(p)}% del costo: la quota oltre il ${fmt(tettoFee)}% non è ammissibile.`);
+    else add('fee', 'ok', 'Producer fee', `${fmt(p)}% del costo di produzione (ammissibile fino al ${fmt(tettoFee)}%).`);
   }
 
-  // fattibilità sezione D
-  if (cop.righe && costo != null && !dati.ripreseIniziate && cop.sulCosto != null && cop.sulCosto <= 50 && (cop.sulFabbisogno ?? 0) <= 50) {
-    add('copertura', 'critico', 'Copertura finanziaria documentata', `Solo il ${fmt(cop.sulCosto)}% del costo ha un documento a supporto: fino al 50% il criterio 5.1 vale 0 punti e la sezione D non può raggiungere il minimo.`);
+  // fattibilità: un criterio sulla copertura finanziaria che vale zero può rendere irraggiungibile il minimo della sua sezione
+  const criterioCopertura = elencoCriteri(getGriglia(bando, categoriaId)).find((c) => c.tipo === 'fasce' && c.metrica === 'copertura');
+  if (criterioCopertura && cop.righe && costo != null && !dati.ripreseIniziate) {
+    const rc = valutaQuantitativo(criterioCopertura, dati, bando);
+    const sez = getGriglia(bando, categoriaId).sezioni.find((x) => x.id === criterioCopertura.sezione);
+    const minimo = cat.soglie?.[criterioCopertura.sezione];
+    if (!rc.mancante && rc.max === 0 && minimo != null && sez.max - criterioCopertura.max < minimo) {
+      add('copertura', 'critico', 'Copertura finanziaria documentata', `Solo il ${fmt(cop.sulCosto)}% del costo ha un documento a supporto: il criterio ${criterioCopertura.id} vale 0 punti e la sezione ${sez.id} non può raggiungere il minimo di ${fmt(minimo)}.`);
+    }
   }
 
   // allegati
@@ -365,29 +431,43 @@ export function suggerimentiQuantitativi(bando, categoriaId, dati) {
   const g = dati.giorni || {}, p = dati.professionisti || {}, e = dati.economici || {};
   const out = [];
   const serve = (tot, soglia, stretta) => (stretta ? Math.floor((tot * soglia) / 100) + 1 : Math.ceil((tot * soglia) / 100));
+  const nel = bando.territorio ? `in ${bando.territorio}` : 'sul territorio';
+  const locali = bando.gentilizio || 'del territorio';
   for (const c of elencoCriteri(griglia).filter((x) => x.tipo === 'fasce')) {
-    const r = valutaQuantitativo(c, dati);
+    const r = valutaQuantitativo(c, dati, bando);
     if (r.mancante || !r.prossima || r.prossima.guadagno <= 0) continue;
     const { soglia, stretta, guadagno, etichetta } = r.prossima;
     let azione = null;
+    const quanto = (v) => testoValore(v, r.unita);
     if (c.metrica === 'tecniciSiciliani' && num(p.crewTot)) {
       const n = serve(p.crewTot, soglia, stretta);
-      if (n <= p.crewTot) azione = `Porta i tecnici siciliani da ${p.crewSicilia} a ${n} su ${p.crewTot}.`;
+      if (n <= p.crewTot) azione = `Porta i tecnici ${locali} da ${p.crewSicilia} a ${n} su ${p.crewTot}.`;
     } else if (c.metrica === 'artisticiSiciliani' && num(p.artTot)) {
       const n = serve(p.artTot, soglia, stretta);
-      if (n <= p.artTot) azione = `Porta i professionisti siciliani della componente artistica da ${p.artSicilia} a ${n} su ${p.artTot}.`;
+      if (n <= p.artTot) azione = `Porta i professionisti ${locali} della componente artistica da ${p.artSicilia} a ${n} su ${p.artTot}.`;
     } else if (c.metrica === 'professionistiSiciliani' && num(p.artTot) != null && num(p.crewTot) != null) {
       const tot = p.artTot + p.crewTot, n = serve(tot, soglia, stretta);
-      if (n <= tot) azione = `Porta i professionisti siciliani da ${p.artSicilia + p.crewSicilia} a ${n} su ${tot}.`;
+      if (n <= tot) azione = `Porta i professionisti ${locali} da ${p.artSicilia + p.crewSicilia} a ${n} su ${tot}.`;
+    } else if (c.metrica === 'professionistiTerritorio') {
+      azione = `Porta i professionisti ${locali} da ${quanto(r.valore)} a ${stretta ? 'più di' : 'almeno'} ${quanto(soglia)}.`;
     } else if (c.metrica === 'lavorazioneSicilia' && num(g.prepTot) != null && num(g.ripreseTot) != null) {
       const tot = g.prepTot + g.ripreseTot, n = serve(tot, soglia, stretta);
-      if (n <= tot) azione = `Porta i giorni in Sicilia di pre-produzione e riprese da ${g.prepSicilia + g.ripreseSicilia} a ${n} su ${tot}.`;
+      if (n <= tot) azione = `Porta i giorni ${nel} di pre-produzione e riprese da ${g.prepSicilia + g.ripreseSicilia} a ${n} su ${tot}.`;
+    } else if (c.metrica === 'ripreseTerritorioPct' && num(g.ripreseTot)) {
+      const n = serve(g.ripreseTot, soglia, stretta);
+      if (n <= g.ripreseTot) azione = `Porta i giorni di riprese ${nel} da ${g.ripreseSicilia} a ${n} su ${g.ripreseTot}.`;
+    } else if (c.metrica === 'giorniRipreseTerritorio') {
+      azione = `Porta i giorni di riprese ${nel} da ${quanto(r.valore)} a ${stretta ? 'più di' : 'almeno'} ${quanto(soglia)}.`;
     } else if (c.metrica === 'postSicilia' && num(g.postTot)) {
       const n = serve(g.postTot, soglia, stretta);
-      if (n <= g.postTot) azione = `Porta i giorni di post-produzione in Sicilia da ${g.postSicilia} a ${n} su ${g.postTot}.`;
+      if (n <= g.postTot) azione = `Porta i giorni di post-produzione ${nel} da ${g.postSicilia} a ${n} su ${g.postTot}.`;
     } else if (c.metrica === 'spesaSicilia' && num(e.contributoRichiesto)) {
       const target = (e.contributoRichiesto * soglia) / 100;
-      azione = `Porta la spesa ammissibile in Sicilia da ${euro(e.spesaSicilia)} a ${stretta ? 'oltre' : 'almeno'} ${euro(target)}, oppure riduci il contributo richiesto sotto ${euro((e.spesaSicilia / soglia) * 100)}.`;
+      azione = `Porta la spesa ammissibile ${nel} da ${euro(e.spesaSicilia)} a ${stretta ? 'oltre' : 'almeno'} ${euro(target)}, oppure riduci il contributo richiesto sotto ${euro((e.spesaSicilia / soglia) * 100)}.`;
+    } else if (c.metrica === 'spesaTerritorioSuCosto' && num(e.costoProduzione)) {
+      azione = `Porta la spesa ${nel} da ${euro(e.spesaSicilia)} a ${stretta ? 'oltre' : 'almeno'} ${euro((e.costoProduzione * soglia) / 100)} (${soglia}% del costo di produzione).`;
+    } else if (c.metrica === 'spesaTerritorioEuro') {
+      azione = `Porta la spesa ${nel} da ${euro(e.spesaSicilia)} a ${stretta ? 'oltre' : 'almeno'} ${euro(soglia)}.`;
     } else if (c.metrica === 'copertura' && num(e.costoProduzione)) {
       const target = ((e.costoProduzione - (num(e.contributoRichiesto) || 0)) * soglia) / 100;
       azione = `Documenta fonti per ${stretta ? 'più di' : 'almeno'} ${euro(target)} (${stretta ? 'oltre il' : ''} ${soglia}% del costo al netto del contributo richiesto): contratti, deal memo, delibere o referenze bancarie.`;
@@ -397,9 +477,12 @@ export function suggerimentiQuantitativi(bando, categoriaId, dati) {
   return out.sort((a, b) => b.guadagno - a.guadagno);
 }
 
-// Art. 11.1: il primo in graduatoria ottiene il 100% del richiesto, gli altri in proporzione al punteggio.
-export function stimaContributo(richiesto, punteggio, punteggioPrimo) {
-  if (num(richiesto) == null || num(punteggio) == null || !punteggioPrimo) return null;
+// Contributo atteso. Regola «proporzionale_al_primo» (Sicilia, art. 11.1): il primo in graduatoria ottiene il 100% del
+// richiesto, gli altri in proporzione al punteggio. Senza regola il contributo concedibile coincide con il richiesto.
+export function stimaContributo(richiesto, punteggio, punteggioPrimo, regola = 'proporzionale_al_primo') {
+  if (num(richiesto) == null) return null;
+  if (regola !== 'proporzionale_al_primo') return richiesto;
+  if (num(punteggio) == null || !punteggioPrimo) return null;
   return Math.min(richiesto, (richiesto * punteggio) / Math.max(punteggio, punteggioPrimo));
 }
 

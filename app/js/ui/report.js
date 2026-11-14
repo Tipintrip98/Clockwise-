@@ -76,10 +76,11 @@ export function schedaReport(corpo, p, bando) {
   const st = statisticheEsiti(bando, p.categoriaId);
   const primo = () => p.punteggioPrimo || st?.primo || 85;
   const disegnaStima = () => {
-    const stima = stimaContributo(richiesto, ris.totale, primo());
+    const proporzionale = (bando.regolaContributo || 'pieno') === 'proporzionale_al_primo';
+    const stima = stimaContributo(richiesto, ris.totale, primo(), bando.regolaContributo || 'pieno');
     metti(svuota(stimaEl), richiesto == null ? h('p.muted', 'Indica il contributo richiesto nei Dati chiave.')
       : h('div.row', h('div', h('div.label', 'Contributo stimato'), h('div.num', { style: { fontSize: '1.5rem', fontWeight: 600 } }, euro(stima))),
-        h('div.muted.small', { style: { maxWidth: '46ch' } }, `${fmt(ris.totale)} ÷ ${fmt(Math.max(ris.totale, primo()))} × ${euro(richiesto)} richiesti. Vale solo se il dossier supera le soglie e la dotazione della categoria non è esaurita.`)));
+        h('div.muted.small', { style: { maxWidth: '46ch' } }, proporzionale ? `${fmt(ris.totale)} ÷ ${fmt(Math.max(ris.totale, primo()))} × ${euro(richiesto)} richiesti. Vale solo se il dossier supera le soglie e la dotazione della categoria non è esaurita.` : 'Questo bando non riduce il contributo in proporzione al punteggio: se il dossier è finanziato, il concedibile coincide con il richiesto entro i limiti del bando e della dotazione.')));
   };
 
   const report = h('div.stack', { id: 'report' },

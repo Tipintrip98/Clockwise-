@@ -11,7 +11,13 @@ const out = await build({
   bundle: true, format: 'iife', minify: true, target: 'es2022', write: false, legalComments: 'none',
 });
 const js = out.outputFiles[0].text;
-const css = fs.readFileSync(path.join(radice, 'app/css/app.css'), 'utf8');
+// Fogli di stile: quello principale più i moduli (app/css/moduli/*.css), nello stesso ordine di index.html.
+// I caratteri locali (blocco tra i marcatori @caratteri-locali) servono solo all'eseguibile: qui arrivano da Google Fonts.
+const cartellaModuli = path.join(radice, 'app/css/moduli');
+const moduliCss = fs.existsSync(cartellaModuli) ? fs.readdirSync(cartellaModuli).filter((f) => f.endsWith('.css')).sort() : [];
+const css = [fs.readFileSync(path.join(radice, 'app/css/app.css'), 'utf8'), ...moduliCss.map((f) => fs.readFileSync(path.join(cartellaModuli, f), 'utf8'))]
+  .join('\n')
+  .replace(/\/\* @caratteri-locali:inizio \*\/[\s\S]*?\/\* @caratteri-locali:fine \*\//g, '');
 const CDN = 'https://cdnjs.cloudflare.com/ajax/libs';
 const pagina = `<title>Clockwise Bandi Cinema</title>
 <meta name="claude:viewport-fit-sides" content="cover">
