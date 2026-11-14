@@ -1,0 +1,20 @@
+{
+  "name": "clockwise",
+  "version": "0.1.0",
+  "description": "Clockwise — simulatore di punteggio per bandi regionali cinema e audiovisivo (controllo qualità pre-invio)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js",
+    "build:artifact": "node scripts/build-artifact.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "xlsx": "0.18.5"
+  }
+}
