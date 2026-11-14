@@ -16,9 +16,11 @@ const GUIDA = [
     ['Previsione', 'Prima ancora della lettura di Claude, il dossier viene completato con i punteggi che la Commissione ha dato davvero ai progetti dell’ultima finestra: vedi in quanti casi saresti ammissibile.'],
   ]],
   ['Strumenti', [
+    ['Finanza', 'Piano finanziario e scenari, limite degli aiuti pubblici, tax credit, piano di cassa, recupero dei ricavi e indicatori, a partire dai Dati chiave.'],
+    ['Gestione bando', 'Dopo la concessione: scadenze, quote di erogazione, registro delle spese, rendiconto e parametri di punteggio da mantenere a consuntivo.'],
     ['Produzione', 'Dalla sceneggiatura: spoglio scena per scena, piano di lavorazione, calendario, ordine del giorno, stralci, storyboard, preventivo sulle voci del Modulo III e adempimenti.'],
     ['Legale', 'Domande sul bando con gli articoli citati, analisi di contratti e deal memo, bozze di documenti, fascicolo con parti e date, scadenze dopo la concessione.'],
-    ['Bandi', 'Il testo dell’avviso, le griglie e le graduatorie reali fanno parte del programma. Puoi aggiungere altri bandi da PDF e altra conoscenza (FAQ, casi reali).'],
+    ['Bandi', 'Catalogo dei fondi italiani ed europei con stato, finestre e griglie verificate sui testi ufficiali, aggiornato in automatico. Puoi aggiungere altri bandi da PDF e altra conoscenza (FAQ, casi reali).'],
   ]],
   ['Dati e riservatezza', [
     ['Dove stanno i dossier', 'Su questo dispositivo, nel browser. Non vengono caricati su nessun server del programma.'],
@@ -63,7 +65,7 @@ export function apriAiuto(azioni = {}, scheda = 'guida') {
         h('dt', 'Intelligenza artificiale'), h('dd', `${APP.motore}: letture dei documenti, commissione simulata, spoglio, storyboard e area legale.`),
         h('dt', 'Conoscenza inclusa'), h('dd', S.bandi.filter((b) => b.predefinito).map((b) => h('div', h('strong', b.nomeBreve || b.nome), (b.fonti || []).map((f) => h('div.muted.small', f.nome))))),
         h('dt', 'Questa installazione'), h('dd', `${collegamento}${server?.versione ? ` · servizio ${server.versione}` : ''}`),
-        h('dt', 'Librerie'), h('dd.muted.small', 'PDF.js (Mozilla), SheetJS, Mammoth: lettura di PDF, Excel e Word sul dispositivo. Caratteri Archivo e IBM Plex.')),
+        h('dt', 'Librerie'), h('dd.muted.small', 'PDF.js (Mozilla), SheetJS, Mammoth: lettura di PDF, Excel e Word sul dispositivo. Carattere Inter (licenza SIL OFL).')),
       h('p.muted.small', { style: { maxWidth: '62ch' } }, `© ${APP.rilascio.slice(0, 4)} ${APP.autore}. Le stime sono uno strumento di controllo qualità e non sostituiscono il giudizio della Commissione né il parere di un professionista.`),
       server?.eseguibile ? h('div', bottoneConferma('Chiudi Clockwise', 'Conferma: arresta il programma', async () => {
         try { await fetch('api/esci', { method: 'POST' }); } catch { /* il servizio si chiude mentre risponde */ }

@@ -2,16 +2,26 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '1.3.0',
+  versione: '2.0.0',
   rilascio: '2026-11-14',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
   sito: 'https://www.davidetipaldi.it',
   motore: 'Claude (Anthropic)',
-  descrizione: 'Controllo qualità dei dossier per i bandi regionali di cinema e audiovisivo: stima del punteggio della Commissione, verifiche di ammissibilità, strumenti di produzione e area legale.',
+  descrizione: 'Controllo qualità dei dossier per i bandi di cinema e audiovisivo (regionali, nazionali, europei): stima del punteggio della Commissione, verifiche di ammissibilità, strumenti di produzione, finanza, gestione del bando dopo la concessione e area legale.',
 };
 
 export const NOVITA = [
+  { versione: '2.0.0', data: '2026-11-14', voci: [
+    'Catalogo dei bandi italiani ed europei per la produzione: per ogni fondo stato, finestre, edizioni successive attese, categorie e metodo di valutazione. Le griglie a punti sono trascritte dai testi ufficiali e ricontrollate da una verifica indipendente; i fondi senza griglia (automatici, a sportello, non attivi) restano come schede informative.',
+    '«Quale bando vuoi simulare?»: scelta guidata di bando, categoria e anno, anche nella guida del primo avvio; confronto dello stesso progetto su più bandi.',
+    'Aggiornamento automatico e silenzioso dei bandi: catalogo controllato e integrato da solo, controllo periodico delle pagine ufficiali degli enti con segnalazione dei documenti nuovi e lettura dei nuovi avvisi come proposta da verificare.',
+    'Motore di ragionamento: le regole ricavate dalla prova sul dossier reale sono codice, con fasce attese e rigorose per ogni criterio, segnalazione degli scostamenti dei commissari simulati e stima senza Claude.',
+    'Motore multi-bando: metriche per qualunque territorio (percentuali, giorni, numero, euro), soglie su gruppi di sezioni o di criteri, penalità, regola del contributo propria di ogni bando.',
+    'Scheda Finanza: piano finanziario con scenari, limite degli aiuti pubblici, calcolatore del tax credit (norme 2026), piano di cassa, piano di recupero, indicatori.',
+    'Scheda Gestione bando: tappe e scadenze, quote di erogazione, registro delle spese con importazione, rendiconto, parametri di punteggio da mantenere, cronoprogramma.',
+    'Nuova interfaccia: carattere Inter incluso nel programma, colori per area e per sezione, temi chiaro e scuro rifiniti.',
+  ] },
   { versione: '1.3.0', data: '2026-11-14', voci: [
     'Metro della Commissione corretto dopo la prova alla cieca su un dossier reale già finanziato: la stima era molto più severa del punteggio vero nelle sezioni B e D; con il metro corretto lo scarto sullo stesso caso è sotto i 4 punti su 100.',
     'Due letture per ogni criterio di giudizio: punteggio atteso e lettura rigorosa. La differenza è il rischio documentale; un dossier sopra le soglie solo nella lettura attesa è segnato «a rischio».',

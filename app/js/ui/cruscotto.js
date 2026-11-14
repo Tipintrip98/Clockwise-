@@ -1,6 +1,7 @@
 // Cruscotto del dossier: a che punto è l'invio, che cosa manca, che cosa fare adesso.
 import { h, metti, svuota, fmt, dimensione, copiaTesto, segno } from './dom.js';
-import { risultatoDi } from './app.js';
+import { S, risultatoDi, salva, apriProgetto } from './app.js';
+import { pannelloConfronto } from './confronto.js';
 import { statoInvio } from '../core/invio.js';
 import { previsioneStatistica, storicoFinanziamento, posizioneEsiti } from '../core/scoring.js';
 import { quadrante } from './grafici.js';
@@ -145,6 +146,7 @@ export function schedaCruscotto(corpo, p, bando, mostra) {
     problemi,
     pannelloTaratura(tar, prev, mostra),
     pannelloPrevisione(prev, ris, bando, p),
+    pannelloConfronto(p, S.bandi, { compatto: true, suDuplica: async (copia) => { await salva(copia); await apriProgetto(copia.id, 'dati'); } }),
     pannelloInvio(st, p),
     h('div.panel.stack',
       h('h2', 'Strumenti del dossier'),

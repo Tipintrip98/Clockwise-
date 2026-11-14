@@ -1,7 +1,8 @@
 // Bandi: il catalogo dei fondi (stato, scadenze, regole), il dettaglio di ciascuno con griglia, fonti e
 // conoscenza, gli aggiornamenti e la lettura di un nuovo bando da PDF.
 import { h, metti, svuota, fmt, euro, toast, bottoneConferma } from './dom.js';
-import { S, caricaBandi, llmAttivo, impostazione } from './app.js';
+import { S, caricaBandi, llmAttivo, impostazione, salva, apriProgetto } from './app.js';
+import { pannelloConfronto } from './confronto.js';
 import * as store from '../core/store.js';
 import { estraiTesto } from '../core/docs.js';
 import { leggiBando } from '../core/engine.js';
@@ -352,6 +353,8 @@ export function vistaBandi(main) {
       h('div', h('h1', 'Bandi'),
         h('p', 'Il catalogo dei fondi per il cinema e l’audiovisivo: stato, scadenze, categorie e griglie di valutazione, la regola con cui Clockwise calcola i punteggi. Se un bando manca, carica l’avviso: Claude ne ricava criteri, fasce e soglie.')),
       h('div', ingresso, h('button.btn.primary', { type: 'button', id: 'btn-aggiungi-bando', disabled: !llm, title: llm ? '' : 'Collega Claude per leggere un nuovo bando', onclick: () => ingresso.click() }, '+ Aggiungi un bando da PDF'))),
-    stato, zona);
+    stato,
+    pannelloConfronto(S.progetto, S.bandi, { suDuplica: async (copia) => { await salva(copia); await apriProgetto(copia.id, 'dati'); } }),
+    zona);
   ridisegna();
 }

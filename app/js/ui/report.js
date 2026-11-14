@@ -207,9 +207,9 @@ export function schedaReport(corpo, p, bando) {
     h('section',
       h('div.sec-h', h('h3', 'Quanto potresti ottenere')),
       h('div.panel.stack',
-        h('p.muted.small', { style: { maxWidth: '75ch' } }, 'Il primo in graduatoria riceve il 100% del contributo richiesto; gli altri una quota pari al rapporto tra il proprio punteggio e quello del primo.'),
-        h('label.field.no-print', { for: 'punteggio-primo', style: { maxWidth: '300px' } }, h('span', st ? `Punteggio del primo in graduatoria (nel ${st.anno}: ${fmt(st.primo)})` : 'Punteggio ipotizzato del primo in graduatoria'),
-          h('input', { id: 'punteggio-primo', type: 'number', min: '1', max: '100', step: '0.1', value: primo(), oninput: (e) => { p.punteggioPrimo = Number(e.target.value) || null; salvaPresto(); disegnaStima(); } })),
+        (bando.regolaContributo || 'pieno') === 'proporzionale_al_primo' && h('p.muted.small', { style: { maxWidth: '75ch' } }, 'Il primo in graduatoria riceve il 100% del contributo richiesto; gli altri una quota pari al rapporto tra il proprio punteggio e quello del primo.'),
+        (bando.regolaContributo || 'pieno') === 'proporzionale_al_primo' && h('label.field.no-print', { for: 'punteggio-primo', style: { maxWidth: '300px' } }, h('span', st ? `Punteggio del primo in graduatoria (nel ${st.anno}: ${fmt(st.primo)})` : 'Punteggio ipotizzato del primo in graduatoria'),
+          h('input', { id: 'punteggio-primo', type: 'number', min: '1', max: String(ris.massimo || 100), step: '0.1', value: primo(), oninput: (e) => { p.punteggioPrimo = Number(e.target.value) || null; salvaPresto(); disegnaStima(); } })),
         stimaEl)),
 
     h('p.muted.small', { style: { maxWidth: '85ch' } },

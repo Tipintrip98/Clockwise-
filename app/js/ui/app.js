@@ -56,7 +56,7 @@ export function nuovoProgetto(nome = 'Nuovo dossier', scelta = {}) {
 function riepilogo(p) {
   try {
     const r = risultatoDi(p);
-    return { totale: r.totale, esito: r.esito, completo: r.completo, categoria: getCategoria(bandoDi(p), p.categoriaId).nome, bando: bandoDi(p).nomeBreve || bandoDi(p).nome };
+    return { totale: r.totale, massimo: r.massimo, esito: r.esito, completo: r.completo, categoria: getCategoria(bandoDi(p), p.categoriaId).nome, bando: bandoDi(p).nomeBreve || bandoDi(p).nome };
   } catch { return {}; }
 }
 export async function salva(p = S.progetto) {

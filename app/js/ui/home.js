@@ -42,7 +42,7 @@ export function vistaHome(main) {
           h('div', bando.regione && h('div.label.cat-regione', bando.regione), h('h3', p.nome)),
           h('div.muted.small', [bando.nome, p.categoria, bando.edizione].filter(Boolean).join(' · ')),
           h('div.spread.cat-fondo',
-            h('div.score', p.totale != null ? fmt(p.totale) : '—', h('small', p.completo ? ' / 100' : ' / 100 parziale')),
+            h('div.score', p.totale != null ? fmt(p.totale) : '—', h('small', ` / ${fmt(p.massimo || S.bandi.find((b) => b.id === p.bandoId)?.punteggioMassimo || 100)}${p.completo ? '' : ' parziale'}`)),
             h('div.muted.small', `${p.documenti || 0} file · ${dataBreve(p.aggiornato)}`)),
           h('div', { onclick: (e) => e.stopPropagation(), onkeydown: (e) => e.stopPropagation() },
             bottoneConferma('Elimina', 'Conferma eliminazione', async () => {
