@@ -28,7 +28,7 @@ export function controlliFormato(bando, documenti) {
       const est = estensione(d.nome);
       if (a.formati && est && !a.formati.includes(est)) {
         const vicino = a.formati.includes('xls') && est === 'xlsx';
-        out.push({ id: `fmt_${d.id || d.nome}`, esito: 'attenzione', titolo: `Formato di «${d.nome}»`, dettaglio: `Il file è .${est}; per “${a.nome}” l’avviso prescrive ${a.formati.map((f) => `.${f}`).join(' o ')}${vicino ? ': prima dell’invio salvalo da Excel come “Cartella di lavoro di Excel 97-2003 (.xls)”' : ''}. Un formato diverso è una difformità dalle modalità di presentazione (art. 8.1 lett. b).` });
+        out.push({ id: `fmt_${d.id || d.nome}`, esito: 'attenzione', titolo: `Formato di «${d.nome}»`, dettaglio: `Il file è .${est}; per “${a.nome}” l’avviso prescrive ${a.formati.map((f) => `.${f}`).join(' o ')}${vicino ? ': prima dell’invio salvalo da Excel come “Cartella di lavoro di Excel 97-2003 (.xls)”' : ''}. Un formato diverso è una difformità dalle modalità di presentazione${bando.regione === 'Sicilia' ? ' (art. 8.1 lett. b)' : ' previste dall’avviso'}.` });
       }
     }
   }

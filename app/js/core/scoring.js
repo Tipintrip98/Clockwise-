@@ -267,7 +267,7 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
           const dich = valutaQuantitativo(c, dati, bando);
           r.dichiarato = dich;
           const vals = giudizi.map((g) => num(g.valore)).filter((v) => v != null);
-          if (vals.length) r.valoreTesto = fmtPct(media(vals));
+          if (vals.length) r.valoreTesto = testoValore(media(vals), dich.unita);
           if (!dich.mancante && Math.abs(dich.punti - r.punti) >= 0.1) {
             r.avvisi.push(`Dal piano finanziario dichiarato risulterebbero ${dich.punti.toLocaleString('it-IT')} punti (${dich.valoreTesto}); la commissione simulata riconosce una copertura diversa.`);
           }
@@ -316,10 +316,11 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
   const tuttiCriteri = sezioni.flatMap((s) => s.criteri);
   const combinate = (categoria.soglieCombinate || bando.soglieCombinate || []).map((sc) => {
     const parti = [...sc.criteri.map((id) => tuttiCriteri.find((c) => c.id === id)), ...sc.sezioni.map((id) => sezioni.find((s) => s.id === id))].filter(Boolean);
+    if (!parti.length) return null; // soglia scritta per un'altra griglia del bando: non riguarda questa categoria
     const somma = (k) => r1(parti.reduce((a, x) => a + (x[k] ?? x.punti ?? 0), 0));
     const nome = sc.etichetta || [...sc.criteri.map((c) => `criterio ${c}`), ...sc.sezioni.map((x) => `sezione ${x}`)].join(' + ');
     return { ...sc, nome, punti: somma('punti'), min: somma('min'), rigoroso: somma('rigoroso'), completa: parti.every((x) => x.punti != null), superata: somma('punti') >= sc.minimo };
-  });
+  }).filter(Boolean);
   if (completo) for (const sc of combinate) if (!sc.superata) motivi.push(`${sc.nome}: ${fmt(sc.punti)}, minimo richiesto ${fmt(sc.minimo)}.`);
   let esito = 'parziale';
   // «a rischio»: sopra le soglie nella lettura attesa, sotto nella più severa tra i commissari o in quella rigorosa
@@ -354,7 +355,7 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
   // contributo richiesto
   const costo = num(e.costoProduzione), rich = num(e.contributoRichiesto);
   const massimale = cat.contributo?.massimali?.[anno];
-  if (costo == null || rich == null) add('contributo', 'da_verificare', 'Contributo richiesto', 'Indica costo di produzione e contributo richiesto.');
+  if (costo == null || rich == null || costo <= 0) add('contributo', 'da_verificare', 'Contributo richiesto', 'Indica costo di produzione e contributo richiesto.');
   else {
     const tetto = Math.min((costo * cat.contributo.percentuale) / 100, massimale ?? Infinity);
     if (rich > tetto + 0.5) add('contributo', 'attenzione', 'Contributo richiesto', `${euro(rich)} supera il massimo concedibile di ${euro(tetto)} (${cat.contributo.percentuale}% del costo di produzione${massimale ? `, tetto ${euro(massimale)}` : ''}). Riduci la richiesta: oltre il tetto non viene concesso nulla e una richiesta più alta abbassa il rapporto tra spesa sul territorio e contributo.`);
@@ -365,7 +366,7 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
   const spesa = num(e.spesaSicilia), minPct = bando.spesaTerritorioMinPct || 0;
   const dove = `Spesa in ${bando.territorio || 'regione'}`;
   if (minPct > 0) {
-    if (spesa == null || rich == null) add('spesa', 'da_verificare', dove, 'Indica la spesa ammissibile sul territorio.');
+    if (spesa == null || rich == null || rich <= 0) add('spesa', 'da_verificare', dove, 'Indica la spesa ammissibile sul territorio e il contributo richiesto.');
     else {
       const p = (spesa / rich) * 100;
       if (p < minPct) add('spesa', 'critico', dove, `${fmt(p)}% del contributo: il minimo di ammissibilità è ${minPct}% (servono almeno ${euro((rich * minPct) / 100)}).`);
@@ -374,7 +375,7 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
     }
   } else if (bando.spesaTerritorioMinSuCostoPct > 0) {
     const minC = bando.spesaTerritorioMinSuCostoPct;
-    if (spesa == null || costo == null) add('spesa', 'da_verificare', dove, 'Indica la spesa sul territorio e il costo di produzione.');
+    if (spesa == null || costo == null || costo <= 0) add('spesa', 'da_verificare', dove, 'Indica la spesa sul territorio e il costo di produzione.');
     else {
       const p = (spesa / costo) * 100;
       if (p < minC) add('spesa', 'critico', dove, `${fmt(p)}% del costo di produzione: il minimo richiesto è ${minC}% (servono almeno ${euro((costo * minC) / 100)}).`);
@@ -423,7 +424,7 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
     else if (a.obbligo === 'green') {
       if (cat.greenFilm && !dati.animazione) add(`all_${a.tipo}`, presente ? 'ok' : 'critico', a.nome, presente ? 'Presente nel dossier.' : 'Requisito di ammissibilità per film e serie TV non in animazione.');
     } else if (a.obbligo === 'punteggio') {
-      if (!presente) add(`all_${a.tipo}`, 'attenzione', a.nome, `Non caricato: senza questi documenti ${a.criteri?.length > 1 ? 'i criteri' : 'il criterio'} ${a.criteri?.join(' e ')} non ${a.criteri?.length > 1 ? 'ricevono' : 'riceve'} punteggio pieno.`);
+      if (!presente) add(`all_${a.tipo}`, 'attenzione', a.nome, a.criteri?.length ? `Non caricato: senza questi documenti ${a.criteri.length > 1 ? 'i criteri' : 'il criterio'} ${a.criteri.join(' e ')} non ${a.criteri.length > 1 ? 'ricevono' : 'riceve'} punteggio pieno.` : 'Non caricato: senza questi documenti i criteri che li considerano non ricevono punteggio pieno.');
       else add(`all_${a.tipo}`, 'ok', a.nome, 'Presente nel dossier.');
     } else if (a.obbligo === 'se_dichiarato') {
       if (dichiarati[a.tipo] && !presente) add(`all_${a.tipo}`, 'critico', a.nome, 'Il piano finanziario dichiara queste fonti ma i documenti non sono nel dossier.');
@@ -507,9 +508,13 @@ const distribuzione = (valori) => {
   const o = [...valori].sort((a, b) => a - b);
   return { min: o[0], q1: r1(quantile(o, 0.25)), mediana: r1(quantile(o, 0.5)), q3: r1(quantile(o, 0.75)), max: o[o.length - 1] };
 };
+// Edizione di riferimento: la più recente (anno più alto) che ha righe per la categoria. Le altre edizioni complete
+// restano casi reali in più, letti da statisticheFinanziati e storicoFinanziamento.
+const ultimaEdizione = (bando, categoriaId) => (bando.esiti || []).filter((e) => e.categorie?.[categoriaId]?.length)
+  .reduce((a, e) => (!a || e.anno > a.anno ? e : a), null);
 
 export function statisticheEsiti(bando, categoriaId) {
-  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const edizione = ultimaEdizione(bando, categoriaId);
   const righe = edizione?.categorie?.[categoriaId];
   if (!righe?.length) return null;
   const cat = getCategoria(bando, categoriaId);
@@ -530,7 +535,7 @@ export function statisticheEsiti(bando, categoriaId) {
 
 // Dove si sarebbe collocato un punteggio tra i progetti ammissibili dell'ultima finestra nota.
 export function posizioneEsiti(bando, categoriaId, punteggio) {
-  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const edizione = ultimaEdizione(bando, categoriaId);
   const righe = edizione?.categorie?.[categoriaId];
   if (!righe?.length || num(punteggio) == null) return null;
   const ammissibili = righe.filter((r) => r.stato !== 'X');
@@ -554,13 +559,15 @@ export function statisticheFinanziati(bando, categoriaId) {
   return { progetti: righe.length, anni: [...new Set(edizioni.filter((e) => (e.categorie?.[categoriaId] || []).some((r) => r.stato === 'F')).map((e) => e.anno))].sort(), sezioni, totale: distribuzione(righe.map((r) => r.totale)) };
 }
 
-// Storico della soglia di finanziamento: per ogni finestra nota, primo e ultimo progetto finanziato.
+// Storico della soglia di finanziamento: per ogni finestra nota, primo e ultimo progetto finanziato (a consuntivo).
 export function storicoFinanziamento(bando, categoriaId) {
   return [...(bando.esitiFinanziati || []), ...(bando.esiti || [])].map((e) => {
     const fin = (e.categorie?.[categoriaId] || []).filter((r) => r.stato === 'F');
     if (!fin.length) return null;
     const tot = fin.map((r) => r.totale);
-    return { anno: e.anno, fonte: e.fonte, url: e.url, finanziati: fin.length, primo: Math.max(...tot), ultimoFinanziato: Math.min(...tot), soloFinanziati: !!e.soloFinanziati };
+    return { anno: e.anno, fonte: e.fonte, url: e.url, finanziati: fin.length, primo: Math.max(...tot), ultimoFinanziato: Math.min(...tot), soloFinanziati: !!e.soloFinanziati,
+      // prima graduatoria (prima di rinunce e scorrimenti) e quanti sono entrati dopo, per scorrimento
+      ultimoInCapienza: e.ultimoInCapienza?.[categoriaId] ?? null, perScorrimento: fin.filter((r) => r.scorrimento).length };
   }).filter(Boolean).sort((a, b) => a.anno - b.anno);
 }
 
@@ -573,7 +580,7 @@ export function storicoFinanziamento(bando, categoriaId) {
  * Ogni valore è riportato entro i limiti possibili per il dossier (punti già certi ÷ massimo ancora ottenibile).
  */
 export function previsioneStatistica(bando, categoriaId, ris) {
-  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const edizione = ultimaEdizione(bando, categoriaId);
   const righe = edizione?.categorie?.[categoriaId];
   const st = statisticheEsiti(bando, categoriaId);
   if (!righe?.length || !st) return null;

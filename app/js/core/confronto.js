@@ -353,6 +353,7 @@ function stimaRiproiettata(base, bando, categoria, griglia, numeri, dati) {
   const perId = new Map(numeri.criteri.map((c) => [c.id, c]));
   const perFamiglia = new Map();
   let senzaRiscontro = 0, datiMancanti = 0;
+  const puntiCriterio = new Map();
   const sezioni = (griglia.sezioni || []).map((s) => {
     let punti = 0;
     for (const c of s.criteri || []) {
@@ -372,6 +373,7 @@ function stimaRiproiettata(base, bando, categoria, griglia, numeri, dati) {
         if (dichiarato != null) { p = dichiarato; origine = 'numeri'; } else { p = c.max * base.media; origine = 'media'; senzaRiscontro += c.max; }
       }
       punti += p;
+      puntiCriterio.set(c.id, p);
       const v = perFamiglia.get(fam) || { id: fam, nome: NOMI_FAMIGLIA[fam] || fam, massimo: 0, punti: 0, origini: new Set() };
       v.massimo += c.max; v.punti += p; v.origini.add(origine); perFamiglia.set(fam, v);
     }
@@ -381,10 +383,17 @@ function stimaRiproiettata(base, bando, categoria, griglia, numeri, dati) {
   const totale = r1(sezioni.reduce((a, s) => a + s.punti, 0));
   const soglia = num(bando.sogliaTotale) || 0;
   const sotto = sezioni.filter((s) => !s.sopra).map((s) => s.id);
+  // come nel motore: soglia complessiva solo sulle sezioni indicate dal bando e minimi su somme di criteri o sezioni
+  const suSezioni = Array.isArray(bando.sogliaSuSezioni) && bando.sogliaSuSezioni.length ? new Set(bando.sogliaSuSezioni) : null;
+  const totaleSoglia = suSezioni ? r1(sezioni.filter((s) => suSezioni.has(s.id)).reduce((a, s) => a + s.punti, 0)) : totale;
+  const combinateMancate = (categoria.soglieCombinate || bando.soglieCombinate || []).filter((sc) => {
+    const parti = [...(sc.criteri || []).filter((id) => puntiCriterio.has(id)).map((id) => puntiCriterio.get(id)), ...(sc.sezioni || []).map((id) => sezioni.find((x) => x.id === id)?.punti).filter((v) => v != null)];
+    return parti.length > 0 && r1(parti.reduce((a, v) => a + v, 0)) < sc.minimo;
+  }).map((sc) => sc.etichetta || [...(sc.criteri || []), ...(sc.sezioni || [])].join(' + '));
   return {
     indicativa: true, reale: false, completa: true,
-    totale, massimo: num(bando.punteggioMassimo) || r1(sezioni.reduce((a, s) => a + s.massimo, 0)), sogliaTotale: soglia,
-    sopraSoglia: totale >= soglia && !sotto.length, sezioniSotto: sotto, sezioni,
+    totale, massimo: num(bando.punteggioMassimo) || r1(sezioni.reduce((a, s) => a + s.massimo, 0)), sogliaTotale: soglia, totaleSoglia, combinateMancate,
+    sopraSoglia: totaleSoglia >= soglia && !sotto.length && !combinateMancate.length, sezioniSotto: sotto, sezioni,
     famiglie: [...perFamiglia.values()].map((v) => ({
       id: v.id, nome: v.nome, massimo: r1(v.massimo), punti: r1(v.punti), frazione: v.massimo > 0 ? r1((v.punti / v.massimo) * 100) : 0,
       origine: v.origini.has('media') ? 'media' : v.origini.has('valutazione') ? 'valutazione' : 'numeri',
@@ -488,7 +497,7 @@ export function confrontaBandi(progetto, bandi, oggi = new Date()) {
     if (numeri.mancanti.length) avvertenze.push(`${numeri.mancanti.length === 1 ? 'Manca un dato' : `Mancano ${numeri.mancanti.length} dati`} nei Dati chiave per ${numeri.mancanti.length === 1 ? 'il criterio' : 'i criteri'} ${numeri.mancanti.join(', ')}: i punti dai numeri sono parziali.`);
     for (const s of soglie.sezioni.filter((x) => !x.raggiungibile)) avvertenze.push(`Sezione ${s.id}: con questi numeri il minimo di ${fmt(s.minimo)} non si raggiunge nemmeno con il massimo nei criteri a giudizio.`);
     if (soglie.dalGiudizio && !soglie.dalGiudizio.possibile) avvertenze.push(`Soglia complessiva di ${fmt(soglie.totale)}: con questi numeri non si raggiunge nemmeno con il massimo nei criteri a giudizio.`);
-    if (scelta.compatibile && stima && !stima.reale && !stima.sopraSoglia) avvertenze.push(stima.sezioniSotto.length ? `La stima indicativa resta sotto il minimo ${stima.sezioniSotto.length === 1 ? 'della sezione' : 'delle sezioni'} ${stima.sezioniSotto.join(', ')}.` : `La stima indicativa (${fmt(stima.totale)}) resta sotto la soglia di ${fmt(stima.sogliaTotale)}.`);
+    if (scelta.compatibile && stima && !stima.reale && !stima.sopraSoglia) avvertenze.push(stima.sezioniSotto.length ? `La stima indicativa resta sotto il minimo ${stima.sezioniSotto.length === 1 ? 'della sezione' : 'delle sezioni'} ${stima.sezioniSotto.join(', ')}.` : stima.combinateMancate?.length ? `La stima indicativa resta sotto il minimo richiesto: ${stima.combinateMancate.join('; ')}.` : `La stima indicativa (${fmt(stima.totaleSoglia ?? stima.totale)}${stima.totaleSoglia != null && stima.totaleSoglia !== stima.totale ? ' sulle sezioni che contano per la soglia' : ''}) resta sotto la soglia di ${fmt(stima.sogliaTotale)}.`);
 
     return {
       bandoId: bando.id, nome: bando.nome, nomeBreve: bando.nomeBreve || bando.nome, regione: bando.regione || '', territorio: bando.territorio || bando.regione || '',

@@ -53,16 +53,20 @@ const FASCE_COPERTURA = [
   { da: 0, punti: 0, etichetta: 'Copertura fino al 50%' },
 ];
 
+// Le FAQ del 02/02/2026 (Sicilia Film Commission, finestra 2026) sono dichiarate «vincolanti per la verifica di
+// ammissibilità delle istanze, nonché per l'attribuzione dei singoli punteggi»: le loro regole sono integrate qui sotto.
+const BROADCASTER_FAQ =
+  'Con i broadcaster televisivi, oltre al contratto firmato, vale come deal memo anche un documento con data certa in cui il fornitore di servizi televisivi attesta l’accordo di coproduzione o distribuzione con la società di produzione (FAQ 02/02/2026).';
 const PRINCIPIO_CAST =
-  'Il punteggio è attribuito solo per le figure indicate nel Modulo III – Sez. III.2 e unicamente se sono allegati contratti, deal memo o lettere di intento sottoscritti con gli artisti e gli operatori coinvolti; è graduato sulla base dei rispettivi curriculum.';
+  'Il punteggio è attribuito solo per le figure indicate nel Modulo III – Sez. III.2 e unicamente se sono allegati contratti, deal memo o lettere di intento sottoscritti con gli artisti e gli operatori coinvolti; è graduato sulla base dei rispettivi curriculum. Nel Modulo II vanno riportati tutti i professionisti della prima tabella della Sez. III.2 (sez. II.6) e tutti quelli della seconda (sez. II.7), non solo attori e capi reparto; i criteri richiamati a pag. 24 dell’Avviso si leggono 3.2 (componente artistica) e 3.3 (cast tecnico) (FAQ 02/02/2026).';
 const PRINCIPIO_SICILIANI =
-  'Conta il numero di soggetti nati in Sicilia o ivi residenti da almeno 6 mesi tra le figure indicate nel Modulo III – Sez. III.2, a prescindere dall’indicazione nominativa. Il numero dichiarato sarà asseverato in rendicontazione.';
+  'Conta il numero di soggetti nati in Sicilia o ivi residenti da almeno 6 mesi tra le figure indicate nel Modulo III – Sez. III.2, a prescindere dall’indicazione nominativa. Basta uno dei due requisiti: nascita in Sicilia oppure residenza in Sicilia da almeno 6 mesi alla data di presentazione dell’istanza; figuranti e comparse esclusi (FAQ 02/02/2026). Il numero dichiarato sarà asseverato in rendicontazione.';
 const PRINCIPIO_PIANO =
-  'I documenti contrattuali e pre-contrattuali allegati sono valutati in base alla rilevanza aziendale e commerciale delle controparti (curriculum degli ultimi 5 anni: produzioni realizzate, festival, premi, coproduzioni). Conta anche lo stato di attuazione del progetto, in particolare l’effettiva data di inizio delle riprese in Sicilia. Le risorse proprie del proponente valgono solo se sostenute da referenze bancarie riferite allo specifico budget. I cofinanziamenti pubblici valgono solo se già giuridicamente attribuiti con provvedimento amministrativo.';
+  'I documenti contrattuali e pre-contrattuali allegati sono valutati in base alla rilevanza aziendale e commerciale delle controparti (curriculum degli ultimi 5 anni: produzioni realizzate, festival, premi, coproduzioni). Conta anche lo stato di attuazione del progetto, in particolare l’effettiva data di inizio delle riprese in Sicilia: all’invio le riprese in Sicilia non devono essere iniziate (effetto di incentivazione), ma se iniziano prima della valutazione la Commissione ne tiene conto in questo criterio (FAQ 02/02/2026). Le risorse proprie del proponente valgono solo se sostenute da referenze bancarie riferite allo specifico budget. I cofinanziamenti pubblici valgono solo se già giuridicamente attribuiti con provvedimento amministrativo. Il tax credit non è documentato dalla sola ricevuta DGCOL della domanda: serve il provvedimento della DG Cinema e Audiovisivo che ne riconosce l’eleggibilità (FAQ 02/02/2026). ' + BROADCASTER_FAQ;
 const PRINCIPIO_DISTRIBUZIONE_FILM =
-  'Contratti e deal memo contano solo se sottoscritti con: (a) società di distribuzione cinematografica con almeno 3 film distribuiti nelle sale italiane negli ultimi cinque anni; (b) broadcaster o piattaforme VOD/SVOD con diffusione minima sull’intero territorio nazionale.';
+  'Contratti e deal memo contano solo se sottoscritti con: (a) società di distribuzione cinematografica con almeno 3 film distribuiti nelle sale italiane negli ultimi cinque anni; (b) broadcaster o piattaforme VOD/SVOD con diffusione minima sull’intero territorio nazionale. ' + BROADCASTER_FAQ + ' Senza contratto firmato quel documento vale 2 punti, come un deal memo.';
 const PRINCIPIO_DISTRIBUZIONE_DOC =
-  'Contratti e deal memo contano solo se sottoscritti con: (a) società di distribuzione cinematografica con almeno 3 film/documentari distribuiti nelle sale italiane negli ultimi cinque anni; (b) broadcaster o piattaforme VOD/SVOD con diffusione minima sull’intero territorio nazionale.';
+  'Contratti e deal memo contano solo se sottoscritti con: (a) società di distribuzione cinematografica con almeno 3 film/documentari distribuiti nelle sale italiane negli ultimi cinque anni; (b) broadcaster o piattaforme VOD/SVOD con diffusione minima sull’intero territorio nazionale. ' + BROADCASTER_FAQ + ' Senza contratto firmato quel documento vale 3 punti, come un deal memo.';
 const PRINCIPIO_INTERNAZIONALE =
   'Il punteggio dipende dal numero e dalla rilevanza aziendale e commerciale delle controparti firmatarie di contratti di coproduzione. Per la distribuzione internazionale contano solo i contratti stipulati con società che abbiano distribuito all’estero almeno 3 film negli ultimi cinque anni.';
 
@@ -355,7 +359,7 @@ export const BANDO_SICILIA = {
   gentilizio: 'siciliani',
   stato: 'aperto',
   tipoValutazione: 'punteggio',
-  paginaUfficiale: 'https://www.siciliafilmcommission.org/',
+  paginaUfficiale: 'https://www.siciliafilmcommission.org/bandi-produzione/concessione-di-contributi-a-sostegno-delle-produzioni-cinematografiche-e-audiovisive-anni-2024-2025/',
   descrizione: 'Contributo a fondo perduto della Regione Siciliana per film, serie, documentari e cortometraggi girati in Sicilia. Una finestra l’anno; la Commissione assegna fino a 100 punti su qualità, soggetti coinvolti, ricadute sul territorio e solidità finanziaria.',
   categorie: [
     {
@@ -399,7 +403,7 @@ export const BANDO_SICILIA = {
     { tipo: 'modulo2', nome: 'Modulo II — Scheda di produzione (PDF, unico file)', obbligo: 'sempre', formati: ['pdf'], unico: true },
     { tipo: 'modulo3', nome: 'Modulo III — Dati di produzione (.xls, unico file)', obbligo: 'sempre', formati: ['xls'], unico: true },
     { tipo: 'identita', nome: 'Documento d’identità del legale rappresentante', obbligo: 'sempre', formati: ['pdf'] },
-    { tipo: 'sceneggiatura', nome: 'Sceneggiatura (trattamento per documentari)', obbligo: 'sempre', formati: ['pdf'] },
+    { tipo: 'sceneggiatura', nome: 'Sceneggiatura in italiano (per le serie TV le sceneggiature di tutte le puntate; trattamento per i documentari) — FAQ 02/02/2026', obbligo: 'sempre', formati: ['pdf'] },
     { tipo: 'cv_societa', nome: 'Curriculum del soggetto proponente', obbligo: 'sempre', formati: ['pdf'] },
     { tipo: 'cv_regista', nome: 'Curriculum regista/i', obbligo: 'sempre', formati: ['pdf'] },
     { tipo: 'cv_autori', nome: 'Curriculum sceneggiatore/i (autore o consulente scientifico per i documentari)', obbligo: 'sempre', formati: ['pdf'] },
@@ -434,7 +438,8 @@ export const BANDO_SICILIA = {
   ],
   scadenzeNote: [
     'Uscita in sala o messa in onda (fruizione pubblica per documentari e cortometraggi): da documentare entro 6 mesi dalla liquidazione della seconda quota (art. 12 lett. q).',
-    'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16).',
+    'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16), e pagato nei limiti dell’impegno contabile dell’esercizio fissato nel decreto di concessione in base al cronoprogramma di spesa: se l’impegno dell’anno è più basso, la differenza slitta all’esercizio successivo (nel 2026 un anticipo chiesto per € 34.246,88 è stato pagato per € 28.000, il resto rinviato al 2027: D.D.S. n. 3950 del 04/11/2026).',
+    'Prima della concessione: entro 15 giorni dalla notifica della graduatoria, a pena di decadenza, accettazione incondizionata del contributo, Patto di Integrità firmato e cronoprogramma di spesa (nel 2026 un beneficiario è decaduto così: D.D.G. n. 3304 del 30/09/2026).',
   ],
   // Modalità di erogazione (art. 16). L'avviso fissa due tetti cumulati: anticipo fino al 60%, seconda quota «fino alla
   // concorrenza del 90%»; il saldo è ciò che resta. Le percentuali qui sotto sono quelle del caso con anticipo pieno:
@@ -445,13 +450,15 @@ export const BANDO_SICILIA = {
     { quota: 'Saldo finale', percentuale: 10, condizione: 'Art. 16, punto 3: con il decreto di concessione definitiva, dopo che il beneficiario ha documentato, entro 6 mesi dalla liquidazione della seconda quota, l’uscita in sala o la messa in onda (per documentari e cortometraggi la fruizione pubblica, anche SVOD).' },
   ],
   // Prassi osservata: come la Commissione ha applicato la griglia nei casi reali di cui si conoscono sia i documenti
-  // sia i punteggi. Ricavata dalla prova su un dossier reale già finanziato e dalle graduatorie 2024-2026.
+  // sia i punteggi. Ricavata dalla prova su un dossier reale già finanziato e dalle graduatorie 2024-2026 (complete 2025 e 2026).
   // Accompagna la taratura delle sezioni indicate; va aggiornata a ogni nuovo caso reale. Senza dati che identifichino il progetto.
   prassi: [
-    { sezioni: ['A'], testo: 'Sezione A: i punteggi reali stanno in una fascia stretta (circa dal 64% all’87% del massimo). Refusi, impaginazione o lunghezza della sceneggiatura non hanno portato sotto il minimo di sezione un progetto con un soggetto forte e un legame autentico con il territorio: pesano sulla posizione dentro la fascia, non fuori.' },
-    { sezioni: ['B'], testo: 'Sezione B: nessun film valutato nel 2026 è sceso sotto 13 su 20 e i finanziati stanno tra 13,7 e 18,7. Un film con una società giovane, un regista con poca esperienza nel lungometraggio, cast e troupe elencati nei moduli e pochi accordi sottoscritti allegati ha ottenuto oltre l’80% del massimo: la Commissione valuta i profili dichiarati e non azzera i criteri per le lettere di intento mancanti.' },
+    { sezioni: ['A'], testo: 'Sezione A: i punteggi reali stanno in una fascia stretta (film: dal 64% all’87% del massimo nel 2026, dal 66% all’88% nel 2025; mediana 78% e 76%). Refusi, impaginazione o lunghezza della sceneggiatura non hanno portato sotto il minimo di sezione un progetto con un soggetto forte e un legame autentico con il territorio: pesano sulla posizione dentro la fascia, non fuori.' },
+    { sezioni: ['B'], testo: 'Sezione B: nessun film valutato nel 2026 è sceso sotto 13 su 20 e i finanziati stanno tra 13,7 e 18,4; nel 2025 tre film su 47 sono scesi sotto 13 (minimo 12,3), sempre insieme a un’altra carenza, e i finanziati stavano tra 13,2 e 17,8. Un film con una società giovane, un regista con poca esperienza nel lungometraggio, cast e troupe elencati nei moduli e pochi accordi sottoscritti allegati ha ottenuto oltre l’80% del massimo: la Commissione valuta i profili dichiarati e non azzera i criteri per le lettere di intento mancanti.' },
     { sezioni: ['D'], testo: 'Sezione D: la copertura del piano finanziario è stata riconosciuta sulle fonti dichiarate nel Modulo III con un documento allegato della controparte, rapportate al costo al netto del contributo richiesto. In un caso reale un accordo di coproduzione firmato, una lettera di un finanziatore esterno e un contratto di distribuzione firmato con una società indipendente, senza referenze bancarie e senza prova dei titoli distribuiti, hanno portato la sezione oltre il 90% del massimo.' },
-    { sezioni: ['D'], testo: 'Sezione D: quando invece le fonti non hanno alcun documento allegato la Commissione scende molto. Nel 2026 più di due film su tre sono rimasti sotto il minimo di 15, molti tra 0 e 6: è la sezione che decide l’ammissibilità.' },
+    { sezioni: ['D'], testo: 'Sezione D: quando invece le fonti non hanno alcun documento allegato la Commissione scende molto. Nel 2026 più di due film su tre sono rimasti sotto il minimo di 15 (26 su 38), molti tra 0 e 6: è la sezione che decide l’ammissibilità. Nel 2025, con l’Avviso precedente al D.D.G. 4788, i film sotto 15 erano 22 su 47 ma nessuno scendeva sotto 9,6.' },
+    { sezioni: ['A', 'B', 'D'], testo: 'Stesso progetto ripresentato: in cinque film non ammissibili nel 2025 per la sola sezione D e finanziati nel 2026 (uno con un proponente diverso) le sezioni A e B si sono mosse di non più di 1,6 punti, mentre la D è salita di 5-10 punti (da 10,2-12,8 a 16,2-20,4). Il giudizio sulla scrittura e sui soggetti è stabile; ciò che cambia l’esito è la documentazione delle fonti.' },
+    { sezioni: ['C', 'D'], testo: 'Documentari: nel 2026 (tabella rettificata dal D.D.G. 2469) 10 su 25 sono rimasti sotto il minimo di 10 nella sezione D, sei a zero, e 8 sotto il minimo di 25 nella sezione C; nel 2025 la sezione C ne aveva esclusi 8 su 23 e la D 5. Per i documentari le ricadute sul territorio pesano quanto il piano finanziario.' },
   ],
   // Come è stata verificata la griglia: trascritta dal testo ufficiale e ricontrollata sui punteggi delle graduatorie.
   affidabilita: {
@@ -469,13 +476,18 @@ export const BANDO_SICILIA = {
   testi: TESTO_AVVISO_SICILIA,
   moduli: MODULI_SICILIA,
   esiti: ESITI_SICILIA,
-  // Edizioni di cui sono pubblici solo i punteggi dei finanziati: storico della soglia di finanziamento.
+  // Edizioni di cui sono pubblici solo i punteggi dei finanziati (2024, avviso precedente): storico della soglia di finanziamento.
   esitiFinanziati: FINANZIATI_SICILIA,
   fonti: [
     { nome: 'Avviso pubblico 2025-2027, testo coordinato con il D.D.G. n. 4788 del 22/12/2025', dettaglio: 'testo integrale degli articoli 3-18 e griglie di valutazione (Tabelle A e B)' },
     { nome: 'Dossier di candidatura: Modulo I (Istanza), Modulo II (Scheda di produzione), Modulo III (Dati di produzione)', dettaglio: 'struttura dei campi; il Modulo III .xls viene letto in automatico' },
+    { nome: 'FAQ della Sicilia Film Commission del 02/02/2026 sulla finestra 2026', dettaglio: 'undici risposte dichiarate vincolanti per l’ammissibilità e per i punteggi: integrate nei principi dei criteri 3.2, 3.3, 4.2-4.3, 5.1 e 5.2, negli allegati e nelle note' },
     { nome: 'D.D.G. n. 2384 del 28/07/2026 — graduatorie della finestra 2026', dettaglio: 'punteggi reali per sezione di 75 progetti valutati (38 film e serie, 25 documentari, 12 cortometraggi)' },
-    { nome: 'D.D.G. n. 2698 del 06/08/2025 — beneficiari della finestra 2025', dettaglio: 'punteggi reali per sezione dei 14 progetti finanziati (7 film e serie, 5 documentari, 2 cortometraggi)' },
+    { nome: 'D.D.G. n. 2469 del 04/08/2026 — rettifica dei documentari non ammissibili 2026', dettaglio: 'sostituisce per errore materiale i punteggi dei 13 documentari non ammissibili pubblicati il 28/07/2026' },
+    { nome: 'D.D.G. n. 3304 del 30/09/2026 — beneficiari consolidati 2026 dopo lo scorrimento', dettaglio: '11 film e serie, 8 documentari, 2 cortometraggi; dotazione dei documentari salita a € 498.995,42' },
+    { nome: 'D.D.S. n. 3006 del 15/09/2026 e n. 3950 del 04/11/2026 — concessione provvisoria e prima anticipazione 2026', dettaglio: 'obblighi dopo la concessione e pagamento dell’anticipo nei limiti dell’impegno annuo' },
+    { nome: 'D.D.G. n. 2230 del 02/07/2025 — graduatorie della finestra 2025', dettaglio: 'punteggi reali per sezione di 77 progetti valutati (47 film e serie, 23 documentari, 7 cortometraggi), con l’Avviso precedente al D.D.G. n. 4788' },
+    { nome: 'D.D.G. n. 2698 del 06/08/2025 e n. 3542 del 21/10/2025 — beneficiari 2025 consolidati e scorrimento dei film', dettaglio: 'dopo lo scorrimento con fondi regionali aggiuntivi finanziati tutti i 22 film ammissibili; 5 documentari e 2 cortometraggi' },
     { nome: 'D.D.G. n. 2003 del 11/07/2024 — beneficiari della finestra 2024 (avviso precedente)', dettaglio: 'punteggi reali per sezione dei 17 progetti finanziati (9 film e serie, 7 documentari, 1 cortometraggio)' },
   ],
   note: [
@@ -484,6 +496,12 @@ export const BANDO_SICILIA = {
     'Le spese ammissibili sostenute in Sicilia devono essere almeno il 150% del contributo (requisito di ammissibilità e causa di revoca).',
     'Il soccorso istruttorio non sana moduli incompleti o documenti mancanti: un allegato obbligatorio assente comporta l’esclusione.',
     'A consuntivo il costo di produzione non può scendere sotto l’80% di quello dichiarato e i parametri che hanno generato punteggio devono essere rispettati.',
+    'Dopo l’istanza sono ammessi nuovi accordi di coproduzione purché la quota del beneficiario non scenda sotto il 20%; fino al saldo, a pena di revoca, non si possono cedere a terzi tutti i diritti di sfruttamento dell’opera (FAQ 02/02/2026).',
+    'I requisiti soggettivi riguardano solo la società che presenta l’istanza, non i coproduttori o i produttori associati (FAQ 02/02/2026).',
+    'Il soggetto non si allega: sta nel Modulo II, sez. II.1. La sceneggiatura sì, e tutto va in italiano (FAQ 02/02/2026).',
+    'Modulo III, sez. III.3: le altre spese del reparto scenografia vanno alla voce A.4.4, quelle del reparto costumi alla voce A.4.10 (FAQ 02/02/2026).',
+    'Le FAQ del 02/02/2026 sono vincolanti per la finestra 2026; non è scritto che valgano per il 2027, ma interpretano lo stesso testo dell’Avviso.',
+    'L’ultimo finanziato dipende dalle risorse e dalle rinunce: nel 2025 i film erano finanziati in prima graduatoria fino a 83,1 punti e, dopo lo scorrimento con fondi regionali aggiuntivi (D.D.G. 3542), fino a 69,6, cioè tutti gli ammissibili; nel 2026 i documentari sono scesi da 80,2 a 79 dopo una decadenza e una rinuncia. La posizione in graduatoria si stima sull’ultimo finanziato a consuntivo della finestra 2026; l’ultimo finanziato in capienza alla prima graduatoria, riportato a parte nello storico, è il riferimento prudente.',
   ],
 };
 

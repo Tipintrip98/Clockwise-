@@ -680,7 +680,7 @@ function vistaPunteggio(area, ctx, apri) {
         esito.sezioni.some((x) => x.prima != null) ? h('div.stack-s',
           h('div.label', esito.origine === 'commissione' ? 'Soglie minime, sui punteggi della Commissione inseriti nel Report' : 'Soglie minime, sulla stima di Clockwise (i punteggi della Commissione non sono stati inseriti)'),
           h('ul.gst-note', [...esito.sezioni.filter((x) => x.prima != null).map((x) => h('li.small', { class: x.sotto ? 'gst-rosso' : '' }, `Sezione ${x.id}: ${fmt(x.prima)} → ${fmt(x.dopo)}${x.soglia != null ? ` (minimo ${fmt(x.soglia)})` : ''}`)),
-            esito.totale.prima != null ? h('li.small', { class: esito.totale.sotto ? 'gst-rosso' : '' }, `Totale: ${fmt(esito.totale.prima)} → ${fmt(esito.totale.dopo)}${esito.totale.soglia != null ? ` (minimo ${fmt(esito.totale.soglia)})` : ''}`) : null])) : null,
+            esito.totale.prima != null ? h('li.small', { class: esito.totale.sotto ? 'gst-rosso' : '' }, `${esito.totale.sezioni ? `Sezioni ${esito.totale.sezioni.join(', ')}` : 'Totale'}: ${fmt(esito.totale.prima)} → ${fmt(esito.totale.dopo)}${esito.totale.soglia != null ? ` (minimo ${fmt(esito.totale.soglia)})` : ''}`) : null])) : null,
         h('p.muted.small.gst-intro', 'Il ricalcolo riguarda i soli criteri che il bando calcola dai numeri; gli altri dipendono dal giudizio della Commissione.')));
   }
   disegna();

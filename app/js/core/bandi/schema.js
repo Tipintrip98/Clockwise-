@@ -47,7 +47,9 @@ const OBBLIGHI = ['sempre', 'se_dichiarato', 'punteggio', 'consigliato', 'green'
 /* ------------------------------------------------------------------ pulizia */
 
 const testo = (v, max = 4000) => (typeof v === 'string' ? v.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '').trim().slice(0, max) : typeof v === 'number' ? String(v) : '');
-const numero = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : (typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(v)) ? Number(v) : null));
+// Numeri scritti come testo: anche all'italiana («300.000», «12,5», «1.500.000,50»): «300.000» non deve diventare 300.
+const testoNumero = (v) => { const t = v.trim().replace(/\s+/g, ''); return /^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(t) ? t.replace(/\./g, '').replace(',', '.') : /^-?\d+,\d+$/.test(t) ? t.replace(',', '.') : t; };
+const numero = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : (typeof v === 'string' && v.trim() !== '' && Number.isFinite(Number(testoNumero(v))) ? Number(testoNumero(v)) : null));
 const elenco = (v, max = 200) => (Array.isArray(v) ? v.slice(0, max) : []);
 const slug = (v, max = 64) => testo(v, 200).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.]+/g, '-').replace(/^-+|-+$/g, '').slice(0, max);
 const data = (v) => (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null);

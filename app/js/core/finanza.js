@@ -1046,8 +1046,11 @@ export function indicatori({ dati = {}, bando = null, preventivo = null, limiteA
 
   const spesa = num(e.spesaSicilia), minimo = num(bando?.spesaTerritorioMinPct) || null;
   const tettoBilancio = A.territorializzazioneMaxPctDelBilancio;
-  metti({ id: 'spesa_territorio', gruppo: 'Territorio', nome: `Spesa in ${terr} sul costo`, unita: 'pct', valore: pct(spesa, costo), formula: `Spesa ammissibile in ${terr} ÷ costo di produzione`, conti: frazione(spesa, costo, '', ' €'), manca: `Servono spesa in ${terr} e costo di produzione.`,
-    riferimento: { etichetta: `Regola europea: un bando non può imporre spesa sul territorio oltre l’${tettoBilancio.valore}% del bilancio di produzione`, valore: tettoBilancio.valore, regola: tettoBilancio } });
+  // minimo di spesa in rapporto al costo (es. Puglia): va controllato qui, come il minimo sul contributo più sotto
+  const minimoSuCosto = num(bando?.spesaTerritorioMinSuCostoPct) || null, suCosto = pct(spesa, costo);
+  metti({ id: 'spesa_territorio', gruppo: 'Territorio', nome: `Spesa in ${terr} sul costo`, unita: 'pct', valore: suCosto, formula: `Spesa ammissibile in ${terr} ÷ costo di produzione`, conti: frazione(spesa, costo, '', ' €'), manca: `Servono spesa in ${terr} e costo di produzione.`,
+    esito: suCosto == null || !minimoSuCosto ? 'info' : suCosto + 0.005 >= minimoSuCosto ? 'ok' : 'critico',
+    riferimento: minimoSuCosto ? { etichetta: `Minimo del bando: ${String(minimoSuCosto).replace('.', ',')}% del costo di produzione`, valore: minimoSuCosto, regola: null } : { etichetta: `Regola europea: un bando non può imporre spesa sul territorio oltre l’${tettoBilancio.valore}% del bilancio di produzione`, valore: tettoBilancio.valore, regola: tettoBilancio } });
   const suContributo = pct(spesa, num(e.contributoRichiesto));
   metti({ id: 'spesa_contributo', gruppo: 'Territorio', nome: `Spesa in ${terr} sul contributo`, unita: 'pct', valore: suContributo, formula: `Spesa ammissibile in ${terr} ÷ contributo richiesto`, conti: frazione(spesa, e.contributoRichiesto, '', ' €'), manca: `Servono spesa in ${terr} e contributo richiesto.`,
     esito: suContributo == null || !minimo ? 'info' : suContributo + 0.005 >= minimo ? 'ok' : 'critico',

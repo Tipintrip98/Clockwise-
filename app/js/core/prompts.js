@@ -1,7 +1,7 @@
 // Istruzioni per Claude: commissari simulati, verifica formale, estrazione dati, lettura di un nuovo bando.
 import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati, statisticheFinanziati } from './scoring.js';
 import { blocchiDocumenti, tipoPerId, famiglieSezione } from './docs.js';
-import { FAMIGLIE, METRICHE } from './bandi/schema.js';
+import { FAMIGLIE, METRICHE, sanificaBando } from './bandi/schema.js';
 
 const { fmt, euro } = formati;
 
@@ -385,5 +385,10 @@ export function normalizzaBando(grezzo, nomeFile) {
     const tot = g.sezioni.reduce((a, s) => a + s.max, 0);
     if (Math.abs(tot - b.punteggioMassimo) > 0.05) avvisi.push(`Griglia ${g.id}: le sezioni sommano a ${fmt(tot)} su ${b.punteggioMassimo}.`);
   }
+  // La risposta di Claude (anche su un avviso scaricato in automatico) passa dalla stessa pulizia dei bandi del catalogo:
+  // date vere, numeri veri (un massimale «300.000» scritto come testo non diventa 300 €), testi brevi, tipi di allegato noti.
+  const pulito = sanificaBando(b);
+  for (const k of ['nome', 'nomeBreve', 'ente', 'regione', 'territorio', 'fonte', 'finestre', 'invio', 'categorie', 'allegati', 'requisiti', 'note', 'griglie']) b[k] = pulito[k];
+  b.commissione = { descrizione: pulito.commissione.descrizione };
   return { bando: b, avvisi };
 }

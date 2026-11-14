@@ -702,20 +702,33 @@ export function stimaDaRegole(bando, categoriaId, progetto, ancorePronte = null)
     s.fragile = soglia != null && s.superata && s.rigoroso < soglia;
     return s;
   });
-  const somma = (k) => r1(sezioni.reduce((s, x) => s + x[k], 0));
+  // come in componiRisultato: penalità confermate nel dossier, soglia complessiva su alcune sezioni, soglie combinate
+  const meno = (bando.penalita || []).filter((x) => dati.penalita?.[x.id]).reduce((s, x) => s + x.punti, 0);
+  const somma = (k) => r1(sezioni.reduce((s, x) => s + x[k], 0) + meno);
   const totale = somma('punti'), min = somma('min'), max = somma('max'), rigoroso = somma('rigoroso');
+  const suSezioni = bando.sogliaSuSezioni?.length ? new Set(bando.sogliaSuSezioni) : null;
+  const perSoglia = (k) => (suSezioni ? r1(sezioni.filter((s) => suSezioni.has(s.id)).reduce((a, s) => a + s[k], 0) + meno) : { punti: totale, rigoroso }[k]);
+  const tuttiCriteri = sezioni.flatMap((s) => s.criteri);
+  const combinate = (categoria.soglieCombinate || bando.soglieCombinate || []).map((sc) => {
+    const parti = [...sc.criteri.map((id) => tuttiCriteri.find((c) => c.id === id)), ...sc.sezioni.map((id) => sezioni.find((s) => s.id === id))].filter(Boolean);
+    if (!parti.length) return null;
+    const tot = (k) => r1(parti.reduce((a, x) => a + (x[k] ?? x.punti ?? 0), 0));
+    const nome = sc.etichetta || [...sc.criteri.map((c) => `criterio ${c}`), ...sc.sezioni.map((x) => `sezione ${x}`)].join(' + ');
+    return { nome, minimo: sc.minimo, punti: tot('punti'), rigoroso: tot('rigoroso'), superata: tot('punti') >= sc.minimo };
+  }).filter(Boolean);
+  const combinateMancate = combinate.filter((c) => !c.superata).map((c) => c.nome);
   const sotto = sezioni.filter((s) => !s.superata).map((s) => s.id);
   // lo stesso motivo per più criteri si dice una volta sola: «1.1, 1.2: manca il testo dell’opera…»
   const perMotivo = new Map();
   for (const a of Object.values(anc.criteri).filter((x) => x.bloccante)) perMotivo.set(a.bloccante, [...(perMotivo.get(a.bloccante) || []), a.id]);
   const bloccanti = [...perMotivo].map(([motivo, ids]) => `${ids.join(', ')}: ${motivo}`);
   const datiMancanti = sezioni.flatMap((s) => s.criteri).filter((c) => c.mancante).map((c) => c.id);
-  const ammissibile = totale >= (bando.sogliaTotale || 0) && !sotto.length;
+  const ammissibile = perSoglia('punti') >= (bando.sogliaTotale || 0) && !sotto.length && !combinateMancate.length;
   const fiducie = Object.values(anc.criteri).map((a) => a.fiducia);
   return {
     versione: anc.versione, totale, min, max, rigoroso, sezioni, sotto, bloccanti, datiMancanti,
-    esito: bloccanti.length ? 'incompleta' : !ammissibile ? 'sotto_soglia' : rigoroso < (bando.sogliaTotale || 0) || sezioni.some((s) => s.fragile) ? 'a_rischio' : 'ammissibile',
-    ammissibile, sogliaTotale: bando.sogliaTotale || 0,
+    esito: bloccanti.length ? 'incompleta' : !ammissibile ? 'sotto_soglia' : perSoglia('rigoroso') < (bando.sogliaTotale || 0) || sezioni.some((s) => s.fragile) || combinate.some((c) => c.rigoroso < c.minimo) ? 'a_rischio' : 'ammissibile',
+    ammissibile, sogliaTotale: bando.sogliaTotale || 0, totaleSoglia: perSoglia('punti'), sogliaSuSezioni: suSezioni ? [...suSezioni] : null, combinate, combinateMancate, penalita: meno,
     fiducia: fiducie.includes('bassa') ? 'bassa' : fiducie.includes('media') ? 'media' : fiducie.length ? 'alta' : null,
     criteriBassaFiducia: Object.values(anc.criteri).filter((a) => a.fiducia === 'bassa').length,
     domande: anc.domande,

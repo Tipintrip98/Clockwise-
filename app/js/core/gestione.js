@@ -980,9 +980,14 @@ export function punteggioDaMantenere({ bando, categoriaId, dati, consuntivo, pun
     const dopo = prima == null ? null : r1(prima - p);
     return { id: s.id, nome: s.nome, persi: p, prima, dopo, soglia, sotto: dopo != null && soglia != null && dopo < soglia };
   }).filter((s) => s.persi > 0 || s.prima != null);
-  const primaTot = num(punteggi?.totale), dopoTot = primaTot == null ? null : r1(primaTot - persi);
-  const totale = { prima: primaTot, dopo: dopoTot, soglia: num(bando?.sogliaTotale), sotto: dopoTot != null && num(bando?.sogliaTotale) != null && dopoTot < bando.sogliaTotale };
-  const sottoSoglia = [...sezioni.filter((s) => s.sotto).map((s) => `sezione ${s.id} a ${s.dopo.toLocaleString('it-IT')} (minimo ${s.soglia})`), ...(totale.sotto ? [`totale a ${totale.dopo.toLocaleString('it-IT')} (minimo ${totale.soglia})`] : [])];
+  // soglia complessiva solo su alcune sezioni (es. esclusa una sezione di premialità): si confronta la loro somma, non il totale
+  const suSezioni = bando?.sogliaSuSezioni?.length ? bando.sogliaSuSezioni : null;
+  const noteTutte = suSezioni && suSezioni.every((id) => num(punteggi?.sezioni?.[id]) != null);
+  const primaTot = suSezioni ? (noteTutte ? r1(suSezioni.reduce((a, id) => a + punteggi.sezioni[id], 0)) : null) : num(punteggi?.totale);
+  const persiTot = suSezioni ? r1(criteri.filter((c) => suSezioni.includes(c.sezione) && c.differenza != null).reduce((a, c) => a + Math.max(0, -c.differenza), 0)) : persi;
+  const dopoTot = primaTot == null ? null : r1(primaTot - persiTot);
+  const totale = { prima: primaTot, dopo: dopoTot, soglia: num(bando?.sogliaTotale), sotto: dopoTot != null && num(bando?.sogliaTotale) != null && dopoTot < bando.sogliaTotale, sezioni: suSezioni ? [...suSezioni] : null };
+  const sottoSoglia = [...sezioni.filter((s) => s.sotto).map((s) => `sezione ${s.id} a ${s.dopo.toLocaleString('it-IT')} (minimo ${s.soglia})`), ...(totale.sotto ? [`${totale.sezioni ? `sezioni ${totale.sezioni.join(', ')}` : 'totale'} a ${totale.dopo.toLocaleString('it-IT')} (minimo ${totale.soglia})`] : [])];
   const citazioni = citaBando(bando, 'punteggio', 3);
   let rischio = 'da_completare', sintesi = 'Inserisci i dati effettivi per ricalcolare i criteri.';
   if (!criteri.length) { rischio = 'nessun_criterio'; sintesi = 'Questo bando non ha criteri calcolati dai numeri dichiarati: non c’è nulla da ricalcolare.'; }

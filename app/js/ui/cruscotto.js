@@ -20,7 +20,7 @@ function pannelloTaratura(tar, prev, mostra) {
   }
   const s = tar.stima;
   if (!s) return null;
-  const [classe, esito] = s.esito === 'incompleta' ? ['x', 'Mancano documenti essenziali'] : s.esito === 'sotto_soglia' ? ['bad', s.sotto.length ? `Sotto il minimo: ${s.sotto.join(', ')}` : `Sotto ${s.sogliaTotale}`]
+  const [classe, esito] = s.esito === 'incompleta' ? ['x', 'Mancano documenti essenziali'] : s.esito === 'sotto_soglia' ? ['bad', s.sotto.length ? `Sotto il minimo: ${s.sotto.join(', ')}` : s.combinateMancate?.length ? `Sotto il minimo: ${s.combinateMancate[0]}` : `Sotto ${s.sogliaTotale}`]
     : s.esito === 'a_rischio' ? ['warn', 'Sopra le soglie, con rischio documentale'] : ['ok', 'Sopra tutte le soglie'];
   return h('div.panel.stack', { id: 'cruscotto-taratura' },
     h('div', h('h2', 'Stima dalle regole di taratura'),

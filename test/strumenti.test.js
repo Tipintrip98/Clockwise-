@@ -52,12 +52,15 @@ test('versione e crediti', () => {
   assert.equal(NOVITA[0].versione, APP.versione);
 });
 
-test('storico delle soglie di finanziamento: 2025 (solo finanziati) e 2026', () => {
+test('storico delle soglie di finanziamento: 2024 (solo finanziati), 2025 e 2026 complete', () => {
   const film = storicoFinanziamento(B, 'film');
-  assert.deepEqual(film.map((x) => [x.anno, x.finanziati, x.primo, x.ultimoFinanziato]), [[2024, 9, 91.9, 80.6], [2025, 7, 86.1, 83.1], [2026, 11, 86.1, 77.1]]);
-  assert.deepEqual(storicoFinanziamento(B, 'documentario').map((x) => x.ultimoFinanziato), [75.2, 79.4, 80.2]);
+  // 2025: dopo lo scorrimento del D.D.G. 3542 finanziati tutti i 22 film ammissibili (in prima graduatoria fino a 83,1)
+  assert.deepEqual(film.map((x) => [x.anno, x.finanziati, x.primo, x.ultimoFinanziato]), [[2024, 9, 91.9, 80.6], [2025, 22, 86.1, 69.6], [2026, 11, 86.1, 77.1]]);
+  assert.deepEqual(film.map((x) => [x.ultimoInCapienza, x.perScorrimento]), [[null, 0], [83.1, 15], [77.1, 0]]);
+  // documentari 2026: decadenza e rinuncia, poi scorrimento fino a 79 (D.D.G. 3304)
+  assert.deepEqual(storicoFinanziamento(B, 'documentario').map((x) => [x.ultimoFinanziato, x.ultimoInCapienza]), [[75.2, null], [79.4, 79.4], [79, 80.2]]);
   assert.deepEqual(storicoFinanziamento(B, 'cortometraggio').map((x) => [x.anno, x.ultimoFinanziato]), [[2024, 68.8], [2025, 75.8], [2026, 77.7]]);
-  // i dati 2025 quadrano: somma delle sezioni e formula del contributo (richiesto × punteggio ÷ punteggio del primo)
+  // i dati 2024 quadrano: somma delle sezioni e formula del contributo (richiesto × punteggio ÷ punteggio del primo)
   for (const edizione of B.esitiFinanziati) for (const righe of Object.values(edizione.categorie)) {
     const primo = Math.max(...righe.map((r) => r.totale));
     for (const r of righe) assert.ok(Math.abs(r.sezioni.A + r.sezioni.B + r.sezioni.C + r.sezioni.D - r.totale) < 0.051, `somma istanza ${r.n} del ${edizione.anno}`);
