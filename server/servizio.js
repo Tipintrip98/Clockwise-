@@ -7,6 +7,7 @@ import path from 'node:path';
 import { creaClient, verificaChiave, chiamaApi, messaggioErrore } from './anthropic-api.js';
 import { statoClaudeCode, chiamaClaudeCode } from './claude-code.js';
 import { percorsoRelativo } from './statici.js';
+import { creaAggiornamenti } from './aggiornamenti.js';
 
 const TIPI_MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon', '.woff2': 'font/woff2' };
 
@@ -39,10 +40,13 @@ function origineValida(req) {
  * @param {string} o.versione
  * @param {boolean} [o.eseguibile]  true quando gira come Clockwise.exe (la UI mostra "Esci")
  * @param {() => void} [o.suEsci]   chiamata dopo aver risposto a POST /api/esci
+ * @param {object} [o.aggiornamenti]  opzioni per il controllo degli aggiornamenti dei bandi (nelle prove: rete, bandi, limiti)
  * @returns {http.Server}
  */
-export function creaServer({ fornitore, cartellaDati, versione, eseguibile = false, suEsci }) {
+export function creaServer({ fornitore, cartellaDati, versione, eseguibile = false, suEsci, aggiornamenti: opzioniAggiornamenti = {} }) {
   const fileConfig = path.join(cartellaDati, 'config.json');
+  // aggiornamento automatico dei bandi: catalogo dal canale e pagine ufficiali (vedi server/aggiornamenti.js)
+  const aggiornamenti = creaAggiornamenti({ versione, leggiConfig: () => leggiConfig(), ...opzioniAggiornamenti });
 
   // --- chiave API: variabile d'ambiente oppure file locale leggibile solo dall'utente
   function leggiConfig() { try { return JSON.parse(fs.readFileSync(fileConfig, 'utf8')); } catch { return {}; } }
@@ -124,6 +128,7 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
       return json(res, 200, await stato());
     }
     if (percorso === '/api/llm' && req.method === 'POST') return gestisciLlm(req, res);
+    if (percorso.startsWith('/api/bandi/')) return aggiornamenti.gestisci(req, res, percorso, { json, leggiCorpo });
     if (percorso === '/api/esci' && req.method === 'POST') {
       // Prima la risposta, poi la chiusura: la pagina deve poter mostrare "Clockwise è stato chiuso".
       res.once('finish', () => { if (suEsci) suEsci(); else chiudiServer(server); });

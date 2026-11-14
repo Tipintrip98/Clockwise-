@@ -426,7 +426,7 @@ function perche(riga, tutte) {
  * spesa indicate nei Dati chiave; per i bandi diversi da quello del dossier si considera richiesto il contributo
  * massimo ottenibile (per il bando del dossier vale il contributo richiesto indicato, se c'è).
  * Ordine: prima le categorie compatibili, poi i bandi aperti, quelli in apertura, quelli attesi, quelli chiusi;
- * a parità, per contributo ottenibile decrescente e poi per resa dei punti calcolabili.
+ * a parità, per contributo ottenibile decrescente, poi per resa dei punti calcolabili, poi per data più vicina.
  * @param {object} progetto dossier (bandoId, categoriaId, anno, dati, valutazione)
  * @param {object[]} bandi bandi a catalogo (si usano solo quelli simulabili)
  * @param {string|Date} [oggi] data di riferimento (AAAA-MM-GG)
@@ -479,17 +479,16 @@ export function confrontaBandi(progetto, bandi, oggi = new Date()) {
     }
 
     const avvertenze = [];
-    if (!scelta.compatibile) avvertenze.push(scelta.motivo);
-    else if (scelta.ambigua) avvertenze.push(`Categoria scelta in automatico: ${scelta.motivo}`);
+    // l'incompatibilità di durata non è un'avvertenza tra le altre: è il «perché» della riga
+    if (scelta.compatibile && scelta.ambigua) avvertenze.push(`Categoria scelta in automatico: ${scelta.motivo}`);
     if (bando.verificato === false) avvertenze.push('Griglia letta in automatico e non ancora verificata sul testo ufficiale: controlla criteri e soglie prima di fidarti dei numeri.');
-    if (costo == null) avvertenze.push('Manca il costo di produzione nei Dati chiave: il contributo ottenibile non si può calcolare.');
     if (contributo.massimale != null && contributo.massimaleEsatto === false) avvertenze.push(`Il massimale del ${anno} non è indicato: è stato usato quello del ${contributo.annoMassimale}.`);
     if (spesaMinima?.oltreIlCosto) avvertenze.push(`La spesa minima richiesta sul territorio (${euro(spesaMinima.euro)}) supera il costo di produzione: con il contributo massimo il requisito non si può rispettare, va chiesto meno.`);
     else if (spesaMinima && spesaMinima.coperta === false) avvertenze.push(`La spesa sul territorio indicata nei Dati chiave (${euro(spesaMinima.spesaIpotizzata)}) è sotto il minimo richiesto (${euro(spesaMinima.euro)}).`);
     if (numeri.mancanti.length) avvertenze.push(`${numeri.mancanti.length === 1 ? 'Manca un dato' : `Mancano ${numeri.mancanti.length} dati`} nei Dati chiave per ${numeri.mancanti.length === 1 ? 'il criterio' : 'i criteri'} ${numeri.mancanti.join(', ')}: i punti dai numeri sono parziali.`);
     for (const s of soglie.sezioni.filter((x) => !x.raggiungibile)) avvertenze.push(`Sezione ${s.id}: con questi numeri il minimo di ${fmt(s.minimo)} non si raggiunge nemmeno con il massimo nei criteri a giudizio.`);
     if (soglie.dalGiudizio && !soglie.dalGiudizio.possibile) avvertenze.push(`Soglia complessiva di ${fmt(soglie.totale)}: con questi numeri non si raggiunge nemmeno con il massimo nei criteri a giudizio.`);
-    if (stima && !stima.reale && !stima.sopraSoglia) avvertenze.push(stima.sezioniSotto.length ? `La stima indicativa resta sotto il minimo ${stima.sezioniSotto.length === 1 ? 'della sezione' : 'delle sezioni'} ${stima.sezioniSotto.join(', ')}.` : `La stima indicativa (${fmt(stima.totale)}) resta sotto la soglia di ${fmt(stima.sogliaTotale)}.`);
+    if (scelta.compatibile && stima && !stima.reale && !stima.sopraSoglia) avvertenze.push(stima.sezioniSotto.length ? `La stima indicativa resta sotto il minimo ${stima.sezioniSotto.length === 1 ? 'della sezione' : 'delle sezioni'} ${stima.sezioniSotto.join(', ')}.` : `La stima indicativa (${fmt(stima.totale)}) resta sotto la soglia di ${fmt(stima.sogliaTotale)}.`);
 
     return {
       bandoId: bando.id, nome: bando.nome, nomeBreve: bando.nomeBreve || bando.nome, regione: bando.regione || '', territorio: bando.territorio || bando.regione || '',
@@ -504,6 +503,7 @@ export function confrontaBandi(progetto, bandi, oggi = new Date()) {
     || ORDINE_STATO[a.finestra.condizione] - ORDINE_STATO[b.finestra.condizione]
     || (b.contributo.ottenibile ?? -1) - (a.contributo.ottenibile ?? -1)
     || b.numeri.quota - a.numeri.quota
+    || (a.finestra.giorni ?? Infinity) - (b.finestra.giorni ?? Infinity)
     || a.nome.localeCompare(b.nome, 'it'));
   righe.forEach((r, i) => { r.posizione = i + 1; r.perche = perche(r, righe); });
 
@@ -513,8 +513,11 @@ export function confrontaBandi(progetto, bandi, oggi = new Date()) {
     `Per i bandi diversi da quello del dossier si considera richiesto il contributo massimo ottenibile${casa ? `; per «${casa.nomeBreve || casa.nome}» vale il contributo richiesto nei Dati chiave` : ''}.`,
     'I criteri a giudizio non entrano nei «punti dai numeri»: dipendono da come la Commissione di ciascun bando leggerà il dossier.',
   ];
+  // ciò che manca al dossier e vale per tutti i bandi si dice una volta sola
+  const avvisi = [];
+  if (progetto && righe.length && costo == null) avvisi.push('Manca il costo di produzione nei Dati chiave: senza, il contributo ottenibile non si può calcolare per nessun bando.');
   return {
-    oggi: giorno, righe, ipotesi,
+    oggi: giorno, righe, ipotesi, avvisi,
     progetto: { id: progetto?.id ?? null, titolo: dati.titolo || progetto?.nome || '', costo, bandoId: progetto?.bandoId ?? null, haValutazione: !!base },
     bandoDiPartenza: casa ? { id: casa.id, nome: casa.nomeBreve || casa.nome } : null,
     esclusi: tutti.filter((b) => !simulabile(b)).map((b) => ({ id: b.id, nome: b.nomeBreve || b.nome || b.id })),
@@ -555,6 +558,7 @@ export function duplicaPerBando(progetto, bando, categoriaId, anno, nuovoId, ade
     duplicatoDa: { id: progetto.id ?? null, nome: progetto.nome || '', bandoId: progetto.bandoId ?? null, nomeBase: base },
   });
   delete copia.aggiornato;
+  delete copia.esempio; // la copia è un dossier dell'utente: la guida iniziale continua ad aprire l'esempio originale
   delete copia.gestione; // tappe, quote e rendiconto riguardano il contributo concesso dal bando di partenza
   copia.documenti = Array.isArray(copia.documenti) ? copia.documenti : [];
   copia.dati = { ...(copia.dati || {}), requisiti: {} };

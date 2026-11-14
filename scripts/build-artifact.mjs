@@ -21,7 +21,7 @@ const css = [fs.readFileSync(path.join(radice, 'app/css/app.css'), 'utf8'), ...m
 const CDN = 'https://cdnjs.cloudflare.com/ajax/libs';
 const pagina = `<title>Clockwise Bandi Cinema</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
 <style>
 ${css}
 </style>

@@ -1,0 +1,80 @@
+# Sorveglianza delle pagine ufficiali dei bandi.
+# Una volta alla settimana (e a mano, da Actions → Bandi → Run workflow) scarica le pagine ufficiali degli enti
+# e confronta l'elenco dei documenti pubblicati con quello conservato in bandi/sorgenti.lock.json.
+# Se trova documenti nuovi apre — oppure aggiorna, se è già aperta — UNA issue «Bandi: novità sulle pagine ufficiali».
+# È lo stesso controllo che ogni copia installata di Clockwise fa da sola (server/aggiornamenti.js): qui serve
+# a chi mantiene il catalogo, per sapere quando una scheda in bandi/dati/ va rivista e ripubblicata.
+#
+# ATTENZIONE — i workflow programmati (schedule) girano SOLO sul ramo predefinito del repository, e anche il
+# pulsante «Run workflow» compare solo quando questo file è presente lì. Finché il file sta su un altro ramo
+# non parte niente: nessun errore, semplicemente silenzio. GitHub inoltre sospende i workflow programmati dei
+# repository pubblici dopo 60 giorni senza attività: basta riattivarli da Actions.
+#
+# Il job non scrive nel repository (contents: read): il lock lo aggiorna chi mantiene il catalogo, dopo aver
+# guardato le novità, con `npm run bandi:controlla -- --aggiorna` seguito dal commit. Finché il lock non viene
+# aggiornato la issue resta aperta e viene ritoccata solo se le novità cambiano.
+name: Bandi
+
+on:
+  schedule:
+    - cron: '17 5 * * 1' # ogni lunedì alle 05:17 UTC
+  workflow_dispatch:
+
+# Permessi minimi: leggere i sorgenti, scrivere la issue. Nient'altro.
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: bandi
+  cancel-in-progress: false
+
+jobs:
+  pagine:
+    name: Pagine ufficiali dei bandi
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Sorgenti
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Nessuna dipendenza da installare: lo script usa solo Node e i moduli del repository.
+      # Esce con errore soltanto se NESSUNA pagina ha risposto (rete ferma): il job diventa rosso e avvisa.
+      - name: Controllo delle pagine
+        id: controllo
+        run: |
+          node scripts/controlla-bandi.mjs --json --rapporto rapporto.md > esito.json
+          node -e "const e = JSON.parse(require('fs').readFileSync('esito.json', 'utf8')); console.log('novita=' + (e.novita === true)); console.log('pagine=' + Number(e.pagine)); console.log('errori=' + e.errori.length);" >> "$GITHUB_OUTPUT"
+
+      - name: Riepilogo dell'esecuzione
+        if: always()
+        run: |
+          if [ -f rapporto.md ]; then cat rapporto.md >> "$GITHUB_STEP_SUMMARY"; else echo 'Controllo non riuscito: nessun rapporto.' >> "$GITHUB_STEP_SUMMARY"; fi
+
+      # I titoli dei documenti arrivano da siti esterni: entrano nella issue solo come file (--body-file),
+      # mai dentro un comando; lo script li ha già resi innocui per il Markdown.
+      - name: Issue «Bandi — novità sulle pagine ufficiali»
+        if: steps.controllo.outputs.novita == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITOLO: 'Bandi: novità sulle pagine ufficiali'
+        run: |
+          numero=$(gh issue list --state open --limit 100 --json number,title --jq "map(select(.title == env.TITOLO)) | .[0].number // empty")
+          impronta=$(grep -o 'clockwise-novita: [0-9a-f]*' rapporto.md || true)
+          if [ -z "$numero" ]; then
+            gh issue create --title "$TITOLO" --body-file rapporto.md
+            echo 'Issue aperta.'
+          elif [ -n "$impronta" ] && gh issue view "$numero" --json body --jq .body | grep -qF "$impronta"; then
+            echo "Issue #$numero già aggiornata: le novità sono le stesse dell'ultimo controllo."
+          else
+            gh issue edit "$numero" --body-file rapporto.md
+            gh issue comment "$numero" --body "Controllo del $(date -u +%d/%m/%Y): l'elenco delle novità è cambiato, il testo qui sopra è stato aggiornato."
+            echo "Issue #$numero aggiornata."
+          fi

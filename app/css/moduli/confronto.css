@@ -1,0 +1,114 @@
+/* Confronto dello stesso progetto su più bandi («Dove conviene presentare questo progetto»).
+   Una scheda per bando con le stesse colonne nello stesso ordine: a 1440 px si leggono come righe di una tabella,
+   sul telefono si impilano. Solo le variabili colore di app.css. */
+
+.cfr-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.cfr-scheda { display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: var(--r); }
+.cfr-scheda[data-stato="aperta"] { border-left-color: var(--ok); }
+.cfr-scheda[data-stato="futura"] { border-left-color: var(--accent); }
+
+/* testata: posizione, nome del bando, stato */
+.cfr-testa { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px 12px; align-items: start; }
+.cfr-pos { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--surface-2); color: var(--muted); font-size: .86rem; font-weight: 600; }
+.cfr-scheda:first-child .cfr-pos { background: var(--accent); color: var(--accent-ink, var(--surface)); }
+.cfr-nome h3 { font-size: 1.08rem; overflow-wrap: anywhere; }
+.cfr-tag { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.cfr-tag .tag { white-space: normal; text-align: left; }
+
+/* le tre colonne dei numeri */
+.cfr-corpo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px 28px; align-items: start; }
+.cfr-dato { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.cfr-valore { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; line-height: 1.1; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.cfr-valore small { font-family: var(--font-body); font-size: .8rem; font-weight: 500; letter-spacing: 0; color: var(--muted); white-space: nowrap; }
+.cfr-esito { font-weight: 600; white-space: nowrap; }
+.cfr-esito.ok { color: var(--ok); }
+.cfr-esito.bad { color: var(--bad); }
+
+/* scheda stretta (cruscotto): nome, contributo, punti e pulsante su una riga; il resto sotto, a tutta larghezza.
+   Nel codice il pulsante viene per ultimo (così sul telefono chiude la scheda): qui lo si riporta nella prima riga. */
+.cfr-scheda.compatta { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) 15.5rem; gap: 10px 24px; align-items: start; padding: 14px 16px; }
+.cfr-scheda.compatta > * { grid-column: 1 / -1; }
+.cfr-scheda.compatta > .cfr-testa { grid-column: 1; }
+.cfr-scheda.compatta > .cfr-dato { grid-column: auto; }
+.cfr-scheda.compatta > .cfr-azioni { grid-column: 4; grid-row: 1; justify-content: flex-end; }
+.cfr-lista.senza-azioni .cfr-scheda.compatta { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); }
+.cfr-scheda.compatta .cfr-testa { grid-template-columns: auto minmax(0, 1fr); }
+.cfr-scheda.compatta .cfr-tag { justify-content: flex-start; margin-top: 6px; }
+.cfr-scheda.compatta .cfr-valore { font-size: 1.35rem; }
+.cfr-scheda.compatta .cfr-perche { font-size: .88rem; }
+.cfr-scheda.compatta .cfr-stima { padding: 6px 10px; font-size: .86rem; }
+
+/* barra dei punti: ottenuti dai numeri, calcolabili ma non ottenuti, a giudizio; tacca = soglia complessiva */
+.cfr-punti { position: relative; display: flex; height: 10px; margin: 5px 0 4px; }
+.cfr-punti i { display: block; height: 100%; flex: none; border-right: 2px solid var(--surface); }
+.cfr-punti i:first-of-type { border-radius: 5px 0 0 5px; }
+.cfr-punti i:last-of-type { border-radius: 0 5px 5px 0; border-right: 0; }
+.cfr-punti i:first-of-type:last-of-type { border-radius: 5px; }
+.cfr-punti .ott, .cfr-legenda .ott { background: var(--accent); }
+.cfr-punti .calc, .cfr-legenda .calc { background: var(--accent-soft); background: color-mix(in srgb, var(--accent) 40%, var(--accent-soft)); }
+.cfr-punti .giud, .cfr-legenda .giud { background: var(--surface-2); }
+.cfr-punti u { position: absolute; top: -4px; bottom: -4px; width: 3px; border-radius: 2px; background: var(--signal); transform: translateX(-50%); }
+.cfr-legenda { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .8rem; color: var(--muted); }
+.cfr-legenda span { display: inline-flex; align-items: center; gap: 7px; }
+.cfr-legenda i { width: 14px; height: 8px; border-radius: 2px; flex: none; }
+.cfr-legenda .giud { box-shadow: inset 0 0 0 1px var(--line); }
+.cfr-legenda .soglia { width: 3px; height: 14px; border-radius: 2px; background: var(--signal); margin-inline: 5px; }
+
+/* elenco di barre allineate: nome, barra (quota del punteggio massimo, scala 0-100), percentuale */
+.cfr-barre { list-style: none; margin: 2px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 11.5em) minmax(36px, 1fr) 3.2em; gap: 6px 10px; align-items: center; font-size: .86rem; }
+.cfr-barre li { display: contents; }
+.cfr-barre .n { min-width: 0; overflow-wrap: anywhere; line-height: 1.25; }
+.cfr-barre .b { height: 8px; background: var(--accent-soft); border-radius: 0 4px 4px 0; }
+.cfr-barre .b i { display: block; height: 100%; min-width: 3px; background: var(--accent); border-radius: 0 4px 4px 0; }
+.cfr-barre .v { text-align: right; font-size: .82rem; color: var(--muted); white-space: nowrap; }
+.cfr-barre.larghe { grid-template-columns: minmax(0, 15em) minmax(36px, 1fr) auto; max-width: 620px; }
+
+/* ipotesi dichiarate */
+.cfr-ipotesi details { margin-top: 6px; }
+.cfr-ipotesi summary { cursor: pointer; font-weight: 600; width: fit-content; }
+.cfr-ipotesi ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+
+/* perché, stima indicativa, avvertenze, azioni */
+.cfr-perche { font-size: .93rem; max-width: 92ch; }
+.cfr-perche .label { margin-right: 4px; }
+.cfr-stima { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r-s); font-size: .9rem; }
+.cfr-stima.ipotesi { border-style: dashed; }
+.cfr-stima > span:last-child { flex: 1 1 240px; min-width: 0; }
+.cfr-avvisi { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: .88rem; }
+.cfr-avvisi li, .cfr-nota { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 9px; align-items: start; }
+.cfr-avvisi .ico, .cfr-nota .ico { margin-top: 1px; }
+.cfr-azioni { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; }
+.cfr-azioni:empty { display: none; }
+.cfr-azioni .btn { white-space: normal; text-align: left; }
+
+/* dettaglio dei calcoli */
+.cfr-dettagli dl.guida { padding-top: 2px; }
+.cfr-dettagli dl.guida dt { color: var(--muted); }
+.cfr-dettagli .live li:first-child { padding-top: 0; }
+.cfr-elenco { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 3px; }
+
+@media (max-width: 1000px) {
+  .cfr-scheda.compatta, .cfr-lista.senza-azioni .cfr-scheda.compatta { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cfr-scheda.compatta > .cfr-testa { grid-column: 1 / -1; }
+  .cfr-scheda.compatta > .cfr-azioni { grid-column: 1 / -1; grid-row: auto; justify-content: flex-start; }
+}
+@media (max-width: 900px) {
+  .cfr-corpo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cfr-corpo > .cfr-dato:nth-child(3) { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .cfr-scheda { padding: 14px; }
+  .cfr-testa { grid-template-columns: auto minmax(0, 1fr); }
+  .cfr-testa > .cfr-tag { grid-column: 1 / -1; justify-content: flex-start; }
+  .cfr-corpo, .cfr-scheda.compatta, .cfr-lista.senza-azioni .cfr-scheda.compatta { grid-template-columns: minmax(0, 1fr); }
+  .cfr-scheda.compatta > .cfr-dato { grid-column: 1 / -1; }
+  .cfr-valore { font-size: 1.45rem; }
+  .cfr-azioni .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
+  /* la barra scende sotto il nome dove la riga è stretta */
+  .cfr-barre.larghe { grid-template-columns: minmax(0, 1fr) auto; }
+  .cfr-barre.larghe .n { grid-column: 1 / -1; margin-top: 4px; }
+}
+@media print {
+  .cfr-azioni { display: none !important; }
+  .cfr-scheda { break-inside: avoid; }
+}

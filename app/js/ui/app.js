@@ -13,6 +13,7 @@ import { vistaBandi } from './bandi.js';
 import { vistaCollegamento } from './collegamento.js';
 import { apriAiuto } from './aiuto.js';
 import { avviaTutorial, tutorialAttivo } from './tutorial.js';
+import { apriSceltaBando } from './scelta-bando.js';
 
 export const S = {
   ambiente: { ambiente: 'attesa' },
@@ -117,12 +118,16 @@ export function render() {
   window.scrollTo(0, 0);
 }
 
+// Marchio: il quadrante di Clockwise su una tessera cobalto, con la lancetta ambra (i colori sono variabili di app.css).
 function logo() {
-  const tratto = { fill: 'none', stroke: 'currentColor', 'stroke-width': 2.6, 'stroke-linecap': 'round' };
-  return s('svg', { viewBox: '0 0 24 24', width: 24, height: 24, 'aria-hidden': 'true' },
-    s('path', { d: 'M5.1 17.5A9 9 0 1 1 18.9 17.5', ...tratto }),
-    s('path', { d: 'M12 12l4.2-4.6', ...tratto }),
-    s('circle', { cx: 12, cy: 12, r: 1.9, fill: 'currentColor' }));
+  const tratto = { fill: 'none', 'stroke-width': 2.7, 'stroke-linecap': 'round' };
+  return s('svg', { class: 'marchio', viewBox: '0 0 32 32', width: 30, height: 30, 'aria-hidden': 'true' },
+    s('defs', null, s('linearGradient', { id: 'cw-marchio', x1: 0, y1: 0, x2: 1, y2: 1 },
+      s('stop', { offset: '0', style: 'stop-color: var(--marchio-1, #6883FF)' }), s('stop', { offset: '1', style: 'stop-color: var(--marchio-2, #1F35C9)' }))),
+    s('rect', { width: 32, height: 32, rx: 9, fill: 'url(#cw-marchio)' }),
+    s('path', { d: 'M9.9 22.7A8.6 8.6 0 1 1 22.1 22.7', stroke: '#FFFFFF', ...tratto }),
+    s('path', { d: 'M16 16.6l3.9-4.3', stroke: 'var(--marchio-lancetta, #FFC233)', ...tratto }),
+    s('circle', { cx: 16, cy: 16.6, r: 1.9, fill: '#FFFFFF' }));
 }
 
 // Dossier dimostrativo: numeri d'invenzione, per mostrare subito come lavora il simulatore.
@@ -192,8 +197,22 @@ export function guidaIniziale() {
     await attendi('#cruscotto-stato');
   };
   const elenco = async () => { vai('dossier', true); await attendi('.page-head'); };
+  // «Quale bando vuoi simulare?»: si propone una sola volta per giro. La guida aspetta la scelta ma non si blocca mai:
+  // prosegue comunque se la finestra viene chiusa, saltata o non riesce ad aprirsi.
+  let bandoProposto = false;
+  const proponiBando = async () => {
+    await elenco();
+    if (bandoProposto) return;
+    bandoProposto = true;
+    await new Promise((fatto) => { try { apriSceltaBando({ primoAvvio: true, alTermine: () => fatto() }); } catch { fatto(); } });
+  };
+  const testoBando = () => {
+    const scelto = S.bandi.find((b) => b.id === S.imp.bandoPreferito);
+    return `${scelto ? `Bando preferito: «${scelto.nomeBreve || scelto.nome}». Clockwise lo propone ogni volta che crei un dossier.` : 'Non hai scelto un bando: lo farai quando crei il primo dossier.'} Nella pagina Bandi trovi il catalogo completo, con stato, scadenze, griglia e fonti di ogni fondo; da lì cambi il bando preferito quando vuoi.`;
+  };
   avviaTutorial([
-    { titolo: 'Benvenuto in Clockwise', testo: 'Clockwise legge il dossier di candidatura a un bando per il cinema e stima il punteggio che la Commissione gli darebbe, prima dell’invio. In un minuto ti mostro dove trovare le cose.', prima: elenco },
+    { titolo: 'Benvenuto in Clockwise', testo: 'Clockwise legge il dossier di candidatura a un bando per il cinema e stima il punteggio che la Commissione gli darebbe, prima dell’invio. Si comincia dal bando che vuoi simulare; poi, in un minuto, ti mostro dove trovare le cose.', prima: elenco },
+    { bersaglio: '.nav a[href="#bandi"]', titolo: 'Il tuo bando', get testo() { return testoBando(); }, prima: proponiBando },
     { bersaglio: '.link-pill', titolo: 'Il collegamento a Claude', testo: 'I documenti li legge Claude. Qui vedi se è collegato: toccalo per scegliere tra il tuo abbonamento Claude e una chiave API. I punti che dipendono dai numeri si calcolano anche senza.', prima: elenco },
     { bersaglio: '.cards .card', titolo: 'Un dossier per ogni candidatura', testo: 'Ogni progetto ha il suo dossier, salvato su questo dispositivo. Questo è un esempio già compilato: apriamolo.', prima: elenco },
     { bersaglio: '#cruscotto-stato', titolo: 'Il cruscotto', testo: 'Dice a che punto sei: semaforo, punteggio stimato, quanto manca alla finestra del bando e il prossimo passo da fare. Più sotto trovi i problemi da sistemare, ognuno con il pulsante che porta al punto giusto.', prima: apriEsempio },

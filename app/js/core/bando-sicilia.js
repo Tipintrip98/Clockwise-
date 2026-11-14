@@ -349,6 +349,8 @@ export const BANDO_SICILIA = {
   },
   spesaTerritorioMinPct: 150,
   producerFeeMaxPct: 7.5,
+  // Art. 15 lett. a) e art. 18.1: il conto consuntivo non può essere inferiore all'80% del costo presentato con l'istanza.
+  consuntivoMinPct: 80,
   regolaContributo: 'proporzionale_al_primo',
   gentilizio: 'siciliani',
   stato: 'aperto',
@@ -433,6 +435,14 @@ export const BANDO_SICILIA = {
   scadenzeNote: [
     'Uscita in sala o messa in onda (fruizione pubblica per documentari e cortometraggi): da documentare entro 6 mesi dalla liquidazione della seconda quota (art. 12 lett. q).',
     'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16).',
+  ],
+  // Modalità di erogazione (art. 16). L'avviso fissa due tetti cumulati: anticipo fino al 60%, seconda quota «fino alla
+  // concorrenza del 90%»; il saldo è ciò che resta. Le percentuali qui sotto sono quelle del caso con anticipo pieno:
+  // senza anticipo la sua parte passa alla seconda quota (vedi core/gestione.js › pianoErogazione).
+  erogazione: [
+    { quota: 'Anticipo (facoltativo)', percentuale: 60, condizione: 'Art. 16, punto 1: fino al 60% del contributo concesso in via provvisoria, su richiesta del beneficiario e con la presentazione contestuale di una garanzia fideiussoria che copra la quota anticipata, gli interessi legali e di mora e le spese di recupero, valida fino alla seconda erogazione.' },
+    { quota: 'Seconda quota', percentuale: 30, condizione: 'Art. 16, punto 2: fino alla concorrenza del 90% del contributo concesso in via provvisoria, da richiedere entro 24 mesi dalla notifica del decreto di concessione provvisoria insieme a Conto Consuntivo Generale e Matrice di Rendicontazione asseverati e alla copia campione dell’opera. Con la liquidazione l’Amministrazione fornisce la liberatoria per lo svincolo della garanzia.' },
+    { quota: 'Saldo finale', percentuale: 10, condizione: 'Art. 16, punto 3: con il decreto di concessione definitiva, dopo che il beneficiario ha documentato, entro 6 mesi dalla liquidazione della seconda quota, l’uscita in sala o la messa in onda (per documentari e cortometraggi la fruizione pubblica, anche SVOD).' },
   ],
   // Prassi osservata: come la Commissione ha applicato la griglia nei casi reali di cui si conoscono sia i documenti
   // sia i punteggi. Ricavata dalla prova su un dossier reale già finanziato e dalle graduatorie 2024-2026.

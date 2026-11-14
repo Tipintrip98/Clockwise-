@@ -1,0 +1,86 @@
+/* Aggiornamento dei bandi: riquadro compatto della pagina Bandi, avviso «novità sulla pagina ufficiale»,
+   proposta di nuova griglia con confronto. Solo le variabili di app.css: segue da sé tema chiaro e scuro. */
+
+.agg-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.agg-prosa { max-width: 78ch; }
+.agg-punti { margin: 6px 0 0; padding-left: 18px; }
+.agg-punti li + li { margin-top: 4px; }
+
+/* ------------------------------------------------------------------ riquadro */
+.agg { display: flex; flex-direction: column; gap: 14px; padding: 18px 22px; }
+.agg .agg-testata > h3 { margin: 0; }
+.agg .tag .spin { width: 10px; height: 10px; border-width: 2px; }
+
+.agg-fatti { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px 22px; }
+.agg-fatti > div { min-width: 0; padding-left: 12px; border-left: 2px solid var(--line); }
+.agg-valore { display: flex; align-items: center; gap: 8px; margin-top: 3px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.agg-fatti .small { overflow-wrap: anywhere; }
+.agg-punto { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--idle); }
+.agg-punto.ok { background: var(--ok); }
+.agg-punto.warn { background: var(--signal); }
+
+.agg-novita { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.agg-novita .btn { color: var(--ink); white-space: normal; text-align: left; }
+.agg-conta { font-weight: 500; color: var(--muted); }
+
+.agg-interruttori { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 22px; padding-top: 14px; border-top: 1px solid var(--line); }
+.agg-interruttore { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; cursor: pointer; }
+.agg-interruttore > span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.agg-voce { font-weight: 600; }
+.agg-nota { font-size: .84rem; color: var(--muted); }
+.agg-interruttore input { -webkit-appearance: none; appearance: none; position: relative; flex: none; width: 40px; height: 24px; min-height: 0; margin: 1px 0 0; padding: 0; border: 1px solid transparent; border-radius: 999px; background: var(--idle); cursor: pointer; transition: background-color .15s ease; }
+.agg-interruttore input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--surface); box-shadow: var(--shadow); transition: transform .15s ease; }
+.agg-interruttore input:checked { background: var(--accent); }
+.agg-interruttore input:checked::after { transform: translateX(16px); }
+.agg-interruttore input:focus-visible { border-radius: 999px; }
+.agg-interruttore input[disabled] { opacity: .5; cursor: not-allowed; }
+@media (prefers-reduced-motion: reduce) { .agg-interruttore input, .agg-interruttore input::after { transition: none; } }
+
+.agg-azioni { gap: 10px 14px; }
+.agg-esito { flex: 1 1 220px; min-width: 0; }
+.agg-esito.ok { color: var(--ok); }
+.agg-esito.warn { color: var(--warn); }
+.agg-esito.bad { color: var(--bad); }
+
+.agg-registro > summary { font-size: .9rem; }
+.agg-eventi { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow: auto; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--bg); }
+.agg-eventi li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 14px; padding: 8px 12px; font-size: .88rem; overflow-wrap: anywhere; }
+.agg-eventi li + li { border-top: 1px solid var(--line); }
+.agg-eventi time { white-space: nowrap; padding-top: 1px; }
+
+/* ------------------------------------------------------------------ avviso nel dettaglio di un bando */
+.agg-avvisi:empty { display: none; }
+.agg-avviso { display: flex; flex-direction: column; gap: 10px; }
+.agg-avviso.notice.warn, .agg-avviso.notice.info { color: var(--ink); }
+.agg-avviso.notice.warn { border-left: 3px solid var(--warn); }
+.agg-avviso.notice.info { border-left: 3px solid var(--accent); }
+.agg-avviso.notice.warn > div > strong { color: var(--warn); }
+.agg-avviso.notice.info > div > strong, .agg-avviso.notice.info > strong { color: var(--accent); }
+.agg-avviso a { color: inherit; font-weight: 600; }
+.agg-avviso .btn { color: var(--ink); }
+.agg-documenti { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-radius: var(--r-s); background: var(--surface); border: 1px solid var(--line); }
+.agg-documenti li { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 8px 12px; align-items: start; padding: 10px 12px; }
+.agg-documenti li + li { border-top: 1px solid var(--line); }
+.agg-tipo { justify-self: start; justify-content: center; min-width: 52px; margin-top: 1px; font-size: .68rem; letter-spacing: .04em; }
+.agg-doc { min-width: 0; overflow-wrap: anywhere; }
+.agg-doc .small { margin-top: 2px; }
+.agg-avviso .spin { vertical-align: -2px; }
+
+/* ------------------------------------------------------------------ proposta di nuova griglia */
+.agg-proposta { border-color: var(--warn); }
+.agg-proposta > .spread > h3 { margin: 0; }
+.agg-confronto { max-height: 420px; box-shadow: none; }
+.agg-confronto tbody th { position: static; z-index: auto; display: table-cell; padding: 10px 12px; background: transparent; color: var(--ink); font-size: inherit; font-weight: 500; letter-spacing: 0; text-transform: none; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.agg-voce-riga > span { display: block; overflow-wrap: anywhere; }
+.agg-confronto td .small { white-space: normal; }
+.agg-confronto tbody tr:last-child > * { border-bottom: 0; }
+
+@media (max-width: 640px) {
+  .agg { padding: 16px; }
+  .agg-fatti { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .agg-eventi li { grid-template-columns: minmax(0, 1fr); }
+  .agg-documenti li { grid-template-columns: minmax(0, 1fr); }
+  .agg-documenti li > .btn { justify-self: start; }
+  .agg-confronto table { font-size: .84rem; }
+  .agg-confronto th, .agg-confronto td, .agg-confronto tbody th { padding: 8px; }
+}

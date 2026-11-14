@@ -14,6 +14,7 @@ import { schedaFinanza } from './finanza.js';
 import { schedaGestione } from './gestione.js';
 import { schedaCruscotto } from './cruscotto.js';
 import { suggerimento } from './tutorial.js';
+import { sceltaNelDossier } from './scelta-bando.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 
 // Il cruscotto riassume lo stato; le quattro schede numerate sono i passi della valutazione;
@@ -59,20 +60,13 @@ export function vistaProgetto(main) {
     h('button', { type: 'button', role: 'tab', dataset: { id: 'cruscotto' }, onclick: () => mostra('cruscotto') }, 'Cruscotto'),
     SCHEDE.map(([id, nome], i) => h('button', { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, h('span.n', String(i + 1)), nome)),
     STRUMENTI.map(([id, nome], i) => h(`button${i === 0 ? '.sep' : ''}`, { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, nome)));
-  const cambiaBando = (id) => {
-    const b = S.bandi.find((x) => x.id === id);
-    p.bandoId = id; p.categoriaId = b.categorie[0].id; p.anno = annoPredefinito(b); p.valutazione = null;
-    salva().then(() => vai('progetto', true));
-  };
-  metti(main, 
+  metti(main,
     h('div.stack-s',
       h('a.small.muted', { href: '#dossier' }, '← Tutti i dossier'),
       h('input.title-input', { id: 'nome-dossier', type: 'text', value: p.nome, 'aria-label': 'Nome del dossier', oninput: (e) => { p.nome = e.target.value || 'Senza nome'; salvaPresto(); } }),
       p.esempio && h('div.notice.info', h('strong', 'Dossier di esempio. '), 'I numeri sono d’invenzione e servono a mostrare come funziona il simulatore. Modificali liberamente o crea un nuovo dossier.'),
-      h('div.grid.w', { style: { marginTop: '6px' } },
-        scelta('Bando', S.bandi.map((b) => ({ id: b.id, nome: b.nomeBreve || b.nome })), p.bandoId, cambiaBando, { id: 'sel-bando' }),
-        scelta('Categoria dell’opera', bando.categorie.map((c) => ({ id: c.id, nome: c.nome })), p.categoriaId, (v) => { p.categoriaId = v; p.valutazione = null; salva().then(() => mostra(S.scheda)); }, { id: 'sel-categoria' }),
-        scelta('Finestra', (bando.finestre?.length ? bando.finestre.map((f) => f.anno) : [p.anno]).map((a) => ({ id: a, nome: String(a) })), p.anno, (v) => { p.anno = Number(v); salva().then(() => mostra(S.scheda)); }, { id: 'sel-anno' }))),
+      // bando, categoria e finestra (con le edizioni previste e la conferma prima di perdere una valutazione): ui/scelta-bando.js
+      sceltaNelDossier(p, bando)),
     barra, corpo);
   mostra(VISTE[S.scheda] ? S.scheda : 'cruscotto');
 }

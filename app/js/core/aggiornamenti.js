@@ -246,7 +246,7 @@ function attributi(tag) {
   return out;
 }
 
-const testoPulito = (v, max = 160) => decodificaEntita(String(v || '').replace(/<[^>]{0,2000}>/g, ' ')).replace(/[\u0000-\u001f\u007f ​-‏ - ﻿]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+const testoPulito = (v, max = 160) => decodificaEntita(String(v || '').replace(/<[^>]{0,2000}>/g, ' ')).replace(/[\u0000-\u001f\u007f\u00a0\u200b-\u200f\u2028-\u202f\ufeff]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 
 /**
  * Elenco dei documenti pubblicati in una pagina: link a file (pdf, doc, docx, xls, xlsx, odt, zip, p7m) e link il cui
@@ -376,10 +376,11 @@ const INDIZI_AVVISO = [
 /** Quanto un documento somiglia al testo di un avviso (più alto = più probabile; zero o meno = no). */
 export function punteggioAvviso(documento) {
   if (!documento || documento.tipo !== 'pdf') return 0;
-  const frase = `${documento.titolo || ''} ${nomeDaUrl(documento.url)}`.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  let punti = 0;
-  for (const [indizio, peso] of INDIZI_AVVISO) if (indizio.test(frase)) punti += peso;
-  return punti;
+  const frase = `${documento.titolo || ''} ${nomeDaUrl(documento.url)}`.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // a favore conta l'indizio più forte (non la somma: «avviso pubblico» è un indizio solo), contro contano tutti
+  let favore = 0, contro = 0;
+  for (const [indizio, peso] of INDIZI_AVVISO) if (indizio.test(frase)) { if (peso > 0) favore = Math.max(favore, peso); else contro += peso; }
+  return favore + contro;
 }
 /**
  * Tra i documenti nuovi sceglie quello che più probabilmente è il testo dell'avviso (o del bando, o del disciplinare)
