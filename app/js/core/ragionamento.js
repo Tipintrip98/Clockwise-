@@ -202,7 +202,7 @@ export function fattiDossier(bando, progetto) {
   // difetti formali: controllo meccanico su codifica e numerazione delle scene; senza riscontri resta da leggere
   if (testo) {
     const t = String(testo.testo);
-    const codifica = conta(/Ã.|â€|�/g, t);
+    const codifica = conta(/Ã.|â€|\uFFFD/g, t);
     const numeri = tutte(/^\s*(\d{1,3})[.)]?\s+(?:INT|EST|EXT|I\/E)\b/gim, t).map((m) => Number(m[1]));
     let salti = 0;
     for (let i = 1; i < numeri.length; i++) if (numeri[i] !== numeri[i - 1] + 1 && numeri[i] !== numeri[i - 1]) salti++;
