@@ -4,6 +4,8 @@ import { S, risultatoDi, salvaPresto, nomeModello, aggiungiConoscenza } from './
 import { quadrante, barreSezioni } from './grafici.js';
 import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, storicoFinanziamento, r1 } from '../core/scoring.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
+import { pianoMiglioramento } from '../core/report-dati.js';
+import { scaricaReportPdf } from './pdf.js';
 
 const TITOLI = {
   ammissibile: 'Sopra tutte le soglie',
@@ -20,29 +22,6 @@ function spiegazione(ris, p) {
   if (ris.esito === 'ammissibile') return `Punteggio stimato ${fmt(ris.totale)} su ${ris.massimo}, con ogni sezione sopra il minimo. Anche nella lettura più severa (${fmt(ris.min)}) il dossier resta ammissibile.`;
   if (ris.esito === 'a_rischio') return `La media dei commissari supera le soglie, ma nella lettura più severa (${fmt(ris.min)}) il totale o una sezione scendono sotto il minimo. Basta poco per restare fuori.`;
   return ris.motivi.join(' ');
-}
-
-// Interventi ordinati per punti recuperabili: prima i blocchi di ammissibilità, poi numeri e contenuti.
-function pianoMiglioramento(p, bando, ris, controlli) {
-  const voci = [];
-  for (const c of controlli.filter((x) => x.esito === 'critico')) voci.push({ tipo: 'blocco', testo: `${c.titolo}: ${c.dettaglio}`, dove: 'Ammissibilità' });
-  for (const c of (p.valutazione?.verifica?.controlli || []).filter((x) => x.esito === 'critico')) voci.push({ tipo: 'blocco', testo: `${c.titolo}: ${c.azione || c.dettaglio}`, dove: 'Verifica formale' });
-  for (const s of suggerimentiQuantitativi(bando, p.categoriaId, p.dati)) voci.push({ tipo: 'punti', testo: s.azione, punti: s.guadagno, dove: `${s.criterio} · ${s.nome}` });
-  for (const sez of ris.sezioni) for (const c of sez.criteri) {
-    const proposte = c.giudizi.flatMap((g) => (g.miglioramenti || []).map((m) => ({ ...m, chi: g.commissario })));
-    const margine = c.massimo - (c.punti ?? 0);
-    proposte.sort((a, b) => b.punti - a.punti);
-    const viste = new Set();
-    for (const m of proposte) {
-      const chiave = m.azione.toLowerCase().slice(0, 40);
-      if (viste.has(chiave) || viste.size >= 2) continue;
-      viste.add(chiave);
-      voci.push({ tipo: 'punti', testo: m.azione, punti: Math.min(Math.max(m.punti, 0), margine), dove: `${c.id} · ${c.nome} — ${m.chi}` });
-    }
-  }
-  const blocchi = voci.filter((v) => v.tipo === 'blocco');
-  const punti = voci.filter((v) => v.tipo === 'punti' && v.punti > 0).sort((a, b) => b.punti - a.punti).slice(0, 12);
-  return { blocchi, punti };
 }
 
 function schedaCriterio(c, def) {
@@ -155,8 +134,9 @@ export function schedaReport(corpo, p, bando) {
     h('div.spread.no-print', { style: { marginBottom: '14px' } },
       h('div.muted.small', bando.verificato === false ? h('span.tag.warn', 'Griglia del bando non ancora verificata a mano') : ''),
       h('div.row',
+        h('button.btn.s.primary', { type: 'button', id: 'btn-pdf', title: 'Tutti i dati interni del dossier in un documento impaginato', onclick: (e) => scaricaReportPdf(p, bando, e.currentTarget) }, 'Report completo (PDF)'),
         h('button.btn.s', { type: 'button', onclick: () => copia(riepilogoTesto(p, bando, ris, piano)) }, 'Copia riepilogo'),
-        h('button.btn.s', { type: 'button', onclick: () => scarica(p, report) }, 'Scarica report'),
+        h('button.btn.s', { type: 'button', onclick: () => scarica(p, report) }, 'Scarica pagina (HTML)'),
         !globalThis.claude && h('button.btn.s', { type: 'button', onclick: () => { report.querySelectorAll('details').forEach((d) => { d.open = true; }); window.print(); } }, 'Stampa / PDF'))),
     report);
 }

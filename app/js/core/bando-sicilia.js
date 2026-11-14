@@ -436,6 +436,7 @@ export const BANDO_SICILIA = {
     { nome: 'Dossier di candidatura: Modulo I (Istanza), Modulo II (Scheda di produzione), Modulo III (Dati di produzione)', dettaglio: 'struttura dei campi; il Modulo III .xls viene letto in automatico' },
     { nome: 'D.D.G. n. 2384 del 28/07/2026 — graduatorie della finestra 2026', dettaglio: 'punteggi reali per sezione di 75 progetti valutati (38 film e serie, 25 documentari, 12 cortometraggi)' },
     { nome: 'D.D.G. n. 2698 del 06/08/2025 — beneficiari della finestra 2025', dettaglio: 'punteggi reali per sezione dei 14 progetti finanziati (7 film e serie, 5 documentari, 2 cortometraggi)' },
+    { nome: 'D.D.G. n. 2003 del 11/07/2024 — beneficiari della finestra 2024 (avviso precedente)', dettaglio: 'punteggi reali per sezione dei 17 progetti finanziati (9 film e serie, 7 documentari, 1 cortometraggio)' },
   ],
   note: [
     'Punteggio complessivo minimo 65/100, più un punteggio minimo per ciascuna sezione A, B, C e D.',

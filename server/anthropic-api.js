@@ -29,7 +29,7 @@ export function messaggioErrore(e) {
  * Una chiamata a Claude. I documenti sono il prefisso in cache: i commissari successivi
  * della stessa sezione rileggono lo stesso blocco a costo ridotto.
  */
-export async function chiamaApi({ client, modello, impegno, system, documenti, compito, schema, onPensiero, onTesto, signal }) {
+export async function chiamaApi({ client, modello, impegno, system, documenti, compito, schema, immagini, onPensiero, onTesto, signal }) {
   const strutturato = !!(schema && schema.type);
   const parametri = (conFormato) => ({
     model: modello,
@@ -40,6 +40,8 @@ export async function chiamaApi({ client, modello, impegno, system, documenti, c
     messages: [{
       role: 'user',
       content: [
+        // le pagine scansionate precedono il testo, come raccomandato per le immagini
+        ...(immagini || []).map((im) => ({ type: 'image', source: { type: 'base64', media_type: im.tipo, data: im.dati } })),
         { type: 'text', text: documenti, cache_control: { type: 'ephemeral' } },
         { type: 'text', text: compito },
       ],

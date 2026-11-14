@@ -11,7 +11,7 @@ Non c'è nulla da caricare per far funzionare la valutazione sul bando Sicilia. 
 - **il testo ufficiale dell'Avviso** (articoli 3-18) e le griglie di valutazione, trascritte criterio per criterio;
 - **la struttura dei Moduli I, II e III** del dossier; il Modulo III in formato .xls viene letto in automatico;
 - **la graduatoria reale della finestra 2026** (D.D.G. n. 2384 del 28/07/2026): i punteggi per sezione di tutti i 75 progetti valutati.
-- **i beneficiari della finestra 2025** (D.D.G. n. 2698 del 06/08/2025): i punteggi per sezione dei 14 progetti finanziati, usati come storico della soglia di finanziamento (ultimo film finanziato a 83,1 nel 2025 e a 77,1 nel 2026).
+- **i beneficiari delle finestre 2025 e 2024** (D.D.G. n. 2698 del 06/08/2025 e n. 2003 del 11/07/2024, quest'ultimo dell'avviso precedente): i punteggi per sezione dei progetti finanziati, usati come storico della soglia di finanziamento (ultimo film finanziato a 80,6 nel 2024, 83,1 nel 2025 e 77,1 nel 2026).
 
 A ogni lettura Claude riceve gli articoli che riguardano la sezione in esame e la distribuzione dei punteggi reali, che usa come metro. I test automatici verificano che la griglia trascritta sia coerente con i documenti: i 75 esiti reali del 2026 rispettano soglie, fasce e formula del contributo così come sono scritte nel programma. I PDF di origine sono in `bandi/sicilia-2025-2027/`.
 
@@ -60,10 +60,12 @@ Ogni dossier si apre sul **Cruscotto**:
 
 Le quattro schede numerate sono i passi della valutazione:
 
-1. **Documenti** — trascina i file del dossier: Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento. Il tipo di ogni file viene riconosciuto dal nome e si può correggere. Clockwise controlla i **formati** prescritti dall'avviso (Modulo I e allegati in PDF, Modulo II in PDF unico, Modulo III in .xls unico) e la **coerenza con il Modulo III**: accordi dichiarati ma non allegati, documenti allegati ma non dichiarati, nominativi di cast e troupe che non compaiono in nessun accordo, date delle riprese incoerenti.
+1. **Documenti** — trascina i file del dossier: Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento. Il tipo di ogni file viene riconosciuto dal nome e si può correggere. I PDF **scansionati** (contratti firmati, lettere, curriculum) e le fotografie non hanno testo: con **Leggi le scansioni con Claude** vengono letti come immagini e trascritti, con firme e timbri segnalati tra parentesi quadre. Clockwise controlla i **formati** prescritti dall'avviso (Modulo I e allegati in PDF, Modulo II in PDF unico, Modulo III in .xls unico) e la **coerenza con il Modulo III**: accordi dichiarati ma non allegati, documenti allegati ma non dichiarati, nominativi di cast e troupe che non compaiono in nessun accordo, date delle riprese incoerenti.
 2. **Dati chiave** — se carichi il **Modulo III in formato .xls**, giorni di lavorazione, professionisti siciliani, budget e piano finanziario si compilano da soli. I punti che dipendono dai numeri si aggiornano mentre scrivi, con le mosse per salire di fascia.
 3. **Valutazione** — scegli quanti commissari simulare (1, 3 o 5) e avvia. Ogni commissario legge i documenti della sezione e assegna i punteggi; il risultato è la media, arrotondata al decimale, come fa la Commissione reale.
-4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026 e con le soglie di finanziamento 2025 e 2026, stima del contributo. Si può scaricare o stampare.
+4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026 e con le soglie di finanziamento degli anni precedenti, stima del contributo.
+
+Con **Report completo (PDF)**, dal Report o dal Cruscotto, si ottiene un documento impaginato con **tutti i dati interni** del dossier: esito e stato dell'invio, interventi, punteggio di ogni criterio con le motivazioni, le evidenze e le criticità di ciascun commissario, controlli e verifica formale, confronto con le graduatorie e con il punteggio reale, stima del contributo, dati chiave e piano finanziario, indicatori calcolati, documenti caricati, parametri della valutazione e, se presenti, le appendici di produzione (piano di lavorazione, preventivo) e legale (contratti, fascicolo). È un documento riservato a uso interno.
 
 ### Produzione
 
@@ -119,7 +121,7 @@ Nella pagina **Bandi**:
 ## Limiti da conoscere
 
 - È una **stima**: aiuta a trovare i punti deboli, non anticipa né vincola il giudizio della Commissione.
-- Il vecchio formato `.doc` e i PDF scansionati non sono leggibili: usa PDF con testo, DOCX o XLS.
+- Il vecchio formato `.doc` non è leggibile: usa PDF, DOCX o XLS. Le scansioni si leggono con Claude, una lettura ogni 8 pagine: la trascrizione va controllata sull'originale per importi, date e firme. Dopo aver riaperto la pagina, per leggere una scansione serve trascinare di nuovo il file. Nell'app Claude la lettura delle scansioni dipende dal permesso di inviare immagini.
 - Il piano di lavorazione è una bozza automatica: non conosce disponibilità degli attori, spostamenti e meteo.
 - I bozzetti dello storyboard sono schizzi vettoriali di lavoro: servono a discutere la regia, non sostituiscono un disegnatore. Per immagini rifinite si usa il prompt in un generatore esterno e si carica il risultato.
 - Il preventivo non stima i costi: riordina quelli che inserisci o importi. La voce del Modulo III proposta per ogni riga va controllata.
@@ -138,9 +140,10 @@ app/            interfaccia (HTML, CSS, moduli JavaScript, nessuna compilazione)
                 stato dell'invio e controlli incrociati (invio.js), lettura del Modulo III, istruzioni per Claude,
                 spoglio e piano (sceneggiatura.js), ordine del giorno (odg.js), storyboard (storyboard.js),
                 preventivo e Master Budget (preventivo.js), adempimenti (adempimenti.js, condizioni.js),
-                area legale (legale.js), versione e crediti (versione.js)
+                area legale (legale.js), lettura delle scansioni (scansioni.js), report completo in PDF
+                (report-dati.js, report-pdf.js), versione e crediti (versione.js)
   js/ui/        pagine: cruscotto, schede del dossier, produzione, legale, aiuto, guida iniziale
-  vendor/       lettori di PDF, Word ed Excel
+  vendor/       lettori di PDF, Word ed Excel, generatore di PDF (jsPDF)
 server/         server locale: file statici e ponte verso Claude (API e Claude Code); avvio dell'eseguibile Windows
 installer/      programma di installazione per Windows (NSIS), icona, istruzioni
 scripts/        pagina singola per l'app Claude, pacchetto Windows

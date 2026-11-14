@@ -41,6 +41,16 @@ function tipoDocumento(s) {
   return 'nessuno';
 }
 
+// Una data lasciata da Excel come numero di serie (giorni dal 30/12/1899) torna gg/mm/aaaa.
+export function dataDaExcel(v) {
+  const s = String(v ?? '').trim();
+  if (!/^\d{5}(\.\d+)?$/.test(s)) return s;
+  const n = Math.floor(Number(s));
+  if (n < 20000 || n > 80000) return s;
+  const d = new Date(Date.UTC(1899, 11, 30) + n * 86400000);
+  return `${String(d.getUTCDate()).padStart(2, '0')}/${String(d.getUTCMonth() + 1).padStart(2, '0')}/${d.getUTCFullYear()}`;
+}
+
 export function eModuloIII(wb) {
   return !!(wb && wb.SheetNames && trovaFoglio(wb, /III\.?\s*3/i) && trovaFoglio(wb, /III\.?\s*4/i));
 }
@@ -65,8 +75,8 @@ export function leggiModuloIII(wb) {
     dati.genere = campo('I');
     const durata = /(\d+([.,]\d+)?)/.exec(campo('L'));
     dati.durataMin = durata ? parseFloat(durata[1].replace(',', '.')) : null;
-    dati.dataInizioRiprese = campo('P.1');
-    dati.dataFineRiprese = campo('P.2');
+    dati.dataInizioRiprese = dataDaExcel(campo('P.1'));
+    dati.dataFineRiprese = dataDaExcel(campo('P.2'));
     Object.assign(dati.giorni, {
       prepTot: giorni('P.3'), ripreseTot: giorni('P.4'), postTot: giorni('P.5'),
       prepSicilia: giorni('Q.1'), ripreseSicilia: giorni('Q.2'), postSicilia: giorni('Q.3'),

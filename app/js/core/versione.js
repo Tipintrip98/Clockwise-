@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '1.1.0',
+  versione: '1.2.0',
   rilascio: '2026-11-14',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,11 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '1.2.0', data: '2026-11-14', voci: [
+    'Report completo in PDF: tutti i dati interni del dossier in un documento impaginato (punteggi, motivazioni di ogni commissario, controlli, confronto con le graduatorie, dati e piano finanziario, documenti, appendici di produzione e legale).',
+    'Lettura delle scansioni: Claude legge come immagini i PDF senza testo e le fotografie (contratti firmati, lettere, curriculum) e ne trascrive il contenuto, segnalando firme e timbri.',
+    'Le date delle riprese scritte nel Modulo III come data di Excel vengono riconosciute.',
+  ] },
   { versione: '1.1.0', data: '2026-11-14', voci: [
     'Cruscotto del dossier: stato dell’invio, problemi in ordine di gravità con il collegamento al punto da correggere, date della finestra, PEC e oggetto pronti da copiare.',
     'Previsione statistica sui punteggi reali della Commissione, disponibile anche prima della lettura di Claude.',

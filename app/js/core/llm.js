@@ -42,7 +42,17 @@ const MESSAGGI_APP = {
   empty_completion: 'Claude non ha prodotto una risposta. Riprova.',
   upstream_error: 'Errore temporaneo del servizio. Riprova.',
   cancelled: 'Valutazione interrotta.',
+  images_unavailable: 'In questa vista Claude non può ricevere immagini: per leggere le scansioni usa il programma installato sul computer.',
+  image_rejected: 'Claude non ha accettato una delle pagine (formato o dimensione).',
 };
+
+// Un'immagine { tipo, dati in base64 } come Blob, per l'app Claude.
+function inBlob(im) {
+  const bin = atob(im.dati);
+  const byte = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) byte[i] = bin.charCodeAt(i);
+  return new Blob([byte], { type: im.tipo });
+}
 
 function llmApp(sample, limiti) {
   return {
@@ -50,13 +60,16 @@ function llmApp(sample, limiti) {
     etichetta: 'Account Claude (app)',
     limiteByte: Math.max(60000, (limiti?.maxPromptBytes || 262144) - 6000),
     paralleli: 2,
-    async chiama({ system, documenti, compito, schema, modello, impegno, onTesto, signal }) {
+    // immagini: quante pagine scansionate può ricevere una lettura (null = questa vista non può inviarne)
+    immagini: limiti?.images ? { max: Math.max(1, Math.min(limiti.images.maxCount || 1, 8)) } : null,
+    async chiama({ system, documenti, compito, schema, modello, impegno, immagini, onTesto, signal }) {
       const input = `${system}\n\n${documenti}\n\n${compito}`;
       let ris;
       try {
         ris = await sample(input, {
           model: modello, modelTier: 'complex', effort: ['low', 'medium', 'high'].includes(impegno) ? impegno : 'high',
           cache: false, signal,
+          ...(immagini?.length ? { images: immagini.map(inBlob) } : {}),
           onText: onTesto ? ({ text }) => onTesto(text) : undefined,
         });
       } catch (e) {
@@ -98,13 +111,14 @@ function llmServer(tipo) {
     limiteByte: 2400000,
     paralleli: tipo === 'api' ? 4 : 2,
     cacheCondivisa: tipo === 'api',
-    async chiama({ system, documenti, compito, schema, modello, impegno, onTesto, onPensiero, signal }) {
+    immagini: { max: 8 },
+    async chiama({ system, documenti, compito, schema, modello, impegno, immagini, onTesto, onPensiero, signal }) {
       let risposta;
       try {
         risposta = await fetch('api/llm', {
           method: 'POST', signal,
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ provider: tipo, modello, impegno, system, documenti, compito, schema }),
+          body: JSON.stringify({ provider: tipo, modello, impegno, system, documenti, compito, schema, ...(immagini?.length ? { immagini } : {}) }),
         });
       } catch (e) {
         if (e?.name === 'AbortError') throw new ErroreLlm('cancelled', MESSAGGI_APP.cancelled);

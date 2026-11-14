@@ -4,6 +4,7 @@ import { risultatoDi } from './app.js';
 import { statoInvio } from '../core/invio.js';
 import { previsioneStatistica, storicoFinanziamento, posizioneEsiti } from '../core/scoring.js';
 import { quadrante } from './grafici.js';
+import { scaricaReportPdf } from './pdf.js';
 
 const NOMI_SCHEDA = { documenti: 'Documenti', dati: 'Dati chiave', valutazione: 'Valutazione', report: 'Report' };
 const giorno = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -103,7 +104,8 @@ export function schedaCruscotto(corpo, p, bando, mostra) {
         h('p', { style: { maxWidth: '62ch' } }, sotto),
         st.prossimo && h('div.row', { style: { marginTop: '6px' } },
           h('button.btn.primary', { type: 'button', id: 'cruscotto-prossimo', onclick: () => mostra(st.prossimo.scheda) }, `${st.prossimo.testo} →`),
-          ris.totale > 0 && h('button.btn', { type: 'button', onclick: () => mostra('report') }, 'Apri il report'))),
+          ris.totale > 0 && h('button.btn', { type: 'button', onclick: () => mostra('report') }, 'Apri il report'),
+          h('button.btn', { type: 'button', id: 'btn-pdf-cruscotto', onclick: (e) => scaricaReportPdf(p, bando, e.currentTarget) }, 'Report completo (PDF)'))),
       pannelloFinestra(st, p))),
     h('div.passi', st.passi.map((x, i) => h('button.passo', { type: 'button', dataset: { stato: x.stato }, onclick: () => mostra(x.id) },
       h('div.spread', h('span.label', `Passo ${i + 1}`), h(`span.tag.${x.stato === 'fatto' ? 'ok' : x.stato === 'attenzione' ? 'warn' : 'x'}`, x.stato === 'fatto' ? 'Fatto' : x.stato === 'attenzione' ? 'Da completare' : 'Da fare')),

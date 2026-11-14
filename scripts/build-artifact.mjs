@@ -25,6 +25,7 @@ globalThis.CLOCKWISE_LIBS = {
   XLSX: ['${CDN}/xlsx/0.18.5/xlsx.full.min.js'],
   pdfjsLib: ['${CDN}/pdf.js/3.11.174/pdf.min.js', '${CDN}/pdf.js/3.11.174/pdf.worker.min.js'],
   mammoth: ['${CDN}/mammoth/1.6.0/mammoth.browser.min.js'],
+  jspdf: ['${CDN}/jspdf/4.2.1/jspdf.umd.min.js'],
 };
 </script>
 <script>

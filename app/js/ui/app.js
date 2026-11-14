@@ -58,10 +58,18 @@ export async function salva(p = S.progetto) {
 let timerSalva = null;
 export function salvaPresto() { clearTimeout(timerSalva); timerSalva = setTimeout(() => salva(), 500); }
 
+// Dei documenti d'identità non si conserva mai il testo, comunque sia arrivato.
+function senzaIdentita(p) {
+  let tolto = false;
+  for (const d of p.documenti || []) if (d.tipo === 'identita' && d.testo) { d.testo = ''; d.trascritto = false; tolto = true; }
+  return tolto;
+}
+
 export async function apriProgetto(id, scheda) {
   const p = await store.caricaProgetto(id);
   if (!p) return vai('dossier');
   p.dati = { ...datiVuoti(), ...p.dati };
+  if (senzaIdentita(p)) await store.salvaProgetto(p, riepilogo(p));
   S.progetto = p;
   S.scheda = scheda || 'cruscotto';
   S.sotto = { produzione: 'spoglio', legale: 'chiedi' };
@@ -144,15 +152,17 @@ export async function avvia(el) {
   }
   if (rotta() === 'progetto' && salvate.ultimoProgetto) {
     const p = await store.caricaProgetto(salvate.ultimoProgetto);
-    if (p) { p.dati = { ...datiVuoti(), ...p.dati }; S.progetto = p; S.scheda = 'cruscotto'; }
+    if (p) { p.dati = { ...datiVuoti(), ...p.dati }; if (senzaIdentita(p)) await store.salvaProgetto(p, riepilogo(p)); S.progetto = p; S.scheda = 'cruscotto'; }
   }
   window.addEventListener('hashchange', render);
   render();
   S.guida = { tutorialVisto: !!salvate.tutorialVisto, dritte: { ...(salvate.dritte || {}) } };
   // il collegamento a Claude arriva dopo: la pagina è già utilizzabile
   S.ambiente = await rilevaAmbiente();
-  if (rotta() !== 'progetto' || S.scheda === 'valutazione' || S.ambiente.server?.eseguibile) render(); else aggiornaPillola();
-  if (!S.guida.tutorialVisto) guidaIniziale();
+  // le schede con pulsanti che dipendono da Claude si ridisegnano; in Dati chiave no, per non interrompere chi sta scrivendo
+  if (rotta() !== 'progetto' || S.scheda !== 'dati' || S.ambiente.server?.eseguibile) render(); else aggiornaPillola();
+  // la guida parte solo dall'elenco dei dossier: chi ha già aperto un dossier non viene riportato indietro
+  if (!S.guida.tutorialVisto && rotta() === 'dossier') guidaIniziale();
 }
 
 /* ------------------------------------------------------------------ guida al primo utilizzo */

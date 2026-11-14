@@ -45,7 +45,7 @@ export async function statoClaudeCode(forza = false) {
  * Una chiamata a Claude tramite Claude Code. Tutto il contenuto viaggia su stdin
  * (nessun limite di lunghezza degli argomenti); nessuno strumento, nessuna personalizzazione.
  */
-export function chiamaClaudeCode({ modello, impegno, system, documenti, compito, schema, onTesto, onPensiero, signal }) {
+export function chiamaClaudeCode({ modello, impegno, system, documenti, compito, schema, immagini, onTesto, onPensiero, signal }) {
   return new Promise((ok, ko) => {
     const args = [
       '-p', '--safe-mode', '--strict-mcp-config', '--tools', WIN ? '""' : '',
@@ -55,6 +55,9 @@ export function chiamaClaudeCode({ modello, impegno, system, documenti, compito,
     ];
     const strutturato = !!(schema && schema.type) && !WIN; // su Windows il JSON non passa pulito dalla shell
     if (strutturato) args.push('--json-schema', JSON.stringify(schema));
+    // Con le immagini il messaggio non è più testo semplice: viaggia su stdin come riga JSON.
+    const conImmagini = Array.isArray(immagini) && immagini.length > 0;
+    if (conImmagini) args.push('--input-format', 'stream-json');
     let figlio;
     try { figlio = spawn(COMANDO, args, { env: ambiente(), cwd: os.tmpdir(), shell: WIN, windowsHide: true }); }
     catch (e) { return ko(Object.assign(new Error('Claude Code non è installato su questo computer.'), { codice: 'non_installato' })); }
@@ -106,6 +109,11 @@ export function chiamaClaudeCode({ modello, impegno, system, documenti, compito,
       });
     });
     figlio.stdin.on('error', () => { /* processo chiuso prima di leggere tutto */ });
-    figlio.stdin.end(`${system}\n\n${documenti}\n\n${compito}`);
+    const testo = `${system}\n\n${documenti}\n\n${compito}`;
+    if (!conImmagini) figlio.stdin.end(testo);
+    else {
+      const contenuto = [...immagini.map((im) => ({ type: 'image', source: { type: 'base64', media_type: im.tipo, data: im.dati } })), { type: 'text', text: testo }];
+      figlio.stdin.end(`${JSON.stringify({ type: 'user', message: { role: 'user', content: contenuto } })}\n`);
+    }
   });
 }

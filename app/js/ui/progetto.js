@@ -1,7 +1,8 @@
 // Area di lavoro di un dossier: Cruscotto, Documenti, Dati chiave, Valutazione, Report, più gli strumenti.
 import { h, metti, svuota, fmt, euro, toast, dimensione, campoNumero, campoTesto, scelta, elencoControlli, bottoneConferma } from './dom.js';
 import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello, dritaVista, guidaInCorso } from './app.js';
-import { TIPI, tipoPerId, estraiTesto, riconosciTipo } from '../core/docs.js';
+import { TIPI, tipoPerId, estraiTesto, riconosciTipo, immaginiScansione } from '../core/docs.js';
+import { trascriviScansione, AVVISO_TRASCRIZIONE } from '../core/scansioni.js';
 import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti } from '../core/scoring.js';
 import { MODELLI, IMPEGNI } from '../core/llm.js';
 import { pianoValutazione, eseguiValutazione, estraiDati } from '../core/engine.js';
@@ -27,6 +28,9 @@ const DRITTE = {
   produzione: ['Si parte dallo spoglio.', 'Piano di lavorazione, ordine del giorno, storyboard e adempimenti si riempiono dalle scene lette nella sceneggiatura. Il preventivo è indipendente: puoi importarlo subito.'],
   legale: ['Ogni risposta cita l’articolo dell’avviso.', 'Apri il testo ufficiale e controlla il punto indicato prima di decidere: è un supporto, non un parere legale.'],
 };
+
+// I file caricati in questa sessione: servono a rileggere le scansioni come immagini (dopo una ricarica vanno riselezionati).
+const FILE_SESSIONE = new Map();
 
 // Ciò che del Modulo III serve ai controlli incrociati (accordi dichiarati, nominativi, date).
 function estrattoModulo(m) {
@@ -95,7 +99,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
       const doc = { id: nuovoId(), nome: file.name, dimensione: file.size, tipo: 'altro', testo: '', pagine: null, avvisi: [] };
       try {
         const r = await estraiTesto(file);
-        Object.assign(doc, { testo: r.testo, pagine: r.pagine, avvisi: r.avvisi });
+        Object.assign(doc, { testo: r.testo, pagine: r.pagine, avvisi: r.avvisi, scansione: !!r.scansione });
         doc.tipo = r.modulo3 ? 'modulo3' : riconosciTipo(file.name, r.testo);
         if (r.modulo3) { unisciDatiModulo(p, r.modulo3.dati); p.modulo3 = estrattoModulo(r.modulo3); p.origineDati = { tipo: 'modulo3', file: file.name, avvisi: r.modulo3.avvisi }; letto3 = file.name; }
       } catch (e) {
@@ -103,6 +107,14 @@ function schedaDocumenti(corpo, p, bando, mostra) {
         doc.tipo = riconosciTipo(file.name, '');
       }
       if (doc.tipo === 'identita') doc.testo = ''; // mai inviato a Claude
+      // ricaricare un file già presente conserva il tipo scelto a mano e, per le scansioni, la lettura già fatta
+      const prima = p.documenti.find((d) => d.nome === doc.nome);
+      if (prima) {
+        doc.id = prima.id;
+        if (doc.tipo !== 'modulo3') doc.tipo = prima.tipo;
+        if (prima.trascritto && doc.scansione && prima.dimensione === doc.dimensione) Object.assign(doc, { testo: prima.testo, trascritto: true, avvisi: prima.avvisi });
+      }
+      if (doc.scansione) FILE_SESSIONE.set(doc.id, file);
       p.documenti = p.documenti.filter((d) => d.nome !== doc.nome);
       p.documenti.push(doc);
     }
@@ -120,16 +132,69 @@ function schedaDocumenti(corpo, p, bando, mostra) {
     ondrop: (e) => { e.preventDefault(); zona.classList.remove('over'); aggiungi(e.dataTransfer.files); },
   }, h('strong', 'Trascina qui i documenti del dossier'), h('span.muted', 'Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento · PDF, DOCX, XLS'), h('span.btn.s', 'Scegli i file'));
 
+  const daLeggere = () => p.documenti.filter((d) => d.scansione && !d.testo && d.tipo !== 'identita');
+  let lettura = null; // { controller, nome, fatte, totale }
+
+  async function leggiScansioni(elenco) {
+    const llm = llmAttivo();
+    if (!llm) { toast('Claude non è collegato'); return; }
+    lettura = { controller: new AbortController(), nome: '', fatte: 0, totale: 0 };
+    let lette = 0;
+    const errori = [];
+    for (const d of elenco) {
+      if (lettura.controller.signal.aborted) break;
+      const file = FILE_SESSIONE.get(d.id);
+      if (!file) { errori.push(`«${d.nome}»: ricarica il file per poterlo leggere`); continue; }
+      Object.assign(lettura, { nome: d.nome, fatte: 0, totale: d.pagine || 1 });
+      disegna();
+      try {
+        const { immagini, troncato } = await immaginiScansione(file);
+        const r = await trascriviScansione({
+          nome: d.nome, tipo: d.tipo, immagini, llm, signal: lettura.controller.signal, opzioni: { modello: S.imp.modello, impegno: 'low' },
+          onEvento: (e) => { Object.assign(lettura, e); const el = document.getElementById('avanzamento-scansioni'); if (el) el.textContent = `Lettura di «${d.nome}»: pagina ${e.fatte} di ${e.totale}`; },
+        });
+        Object.assign(d, { testo: r.testo, trascritto: true, avvisi: [AVVISO_TRASCRIZIONE, ...(troncato ? [`Lette solo le prime ${immagini.length} pagine.`] : [])] });
+        if (d.tipo === 'altro') d.tipo = riconosciTipo(d.nome, r.testo);
+        // un file dal nome generico può rivelarsi un documento d'identità: il testo letto non si conserva
+        if (d.tipo === 'identita') Object.assign(d, { testo: '', trascritto: false, avvisi: ['Riconosciuto come documento d’identità: il testo letto è stato scartato e non viene usato.'] });
+        lette++;
+        await salva();
+      } catch (e) {
+        if (e?.codice === 'cancelled') break;
+        errori.push(`«${d.nome}»: ${e.message || 'lettura non riuscita'}`);
+        if (e?.codice === 'images_unavailable') break;
+      }
+    }
+    lettura = null;
+    disegna();
+    toast(errori.length ? errori[0] : `${lette} ${lette === 1 ? 'scansione letta' : 'scansioni lette'}`);
+  }
+
   function disegna() {
     svuota(tabella);
+    const scansioni = daLeggere();
+    if (scansioni.length || lettura) {
+      const llm = llmAttivo();
+      const pag = scansioni.reduce((a, d) => a + (d.pagine || 1), 0);
+      const inMemoria = scansioni.filter((d) => FILE_SESSIONE.has(d.id));
+      const daRicaricare = scansioni.length - inMemoria.length;
+      metti(tabella, h('div.notice.info', { id: 'avviso-scansioni', style: { marginBottom: '12px' } },
+        lettura ? h('div.row', h('span.spin'), h('span', { id: 'avanzamento-scansioni' }, `Lettura di «${lettura.nome}»…`), h('button.btn.s.danger', { type: 'button', onclick: () => lettura.controller.abort() }, 'Interrompi'))
+          : h('div.spread',
+            h('div', h('strong', `${scansioni.length} ${scansioni.length === 1 ? 'documento è una scansione' : 'documenti sono scansioni'} senza testo. `), `Claude può leggerle come immagini e trascriverle (${pag} ${pag === 1 ? 'pagina' : 'pagine'}), segnalando firme e timbri: senza, contratti e curriculum scansionati non contano nella valutazione.`),
+            inMemoria.length ? h('button.btn.primary', { type: 'button', id: 'btn-scansioni', disabled: !llm || !llm.immagini, onclick: () => leggiScansioni(daLeggere().filter((d) => FILE_SESSIONE.has(d.id))) }, inMemoria.length === 1 ? 'Leggi la scansione con Claude' : `Leggi le ${inMemoria.length} scansioni con Claude`) : null),
+        !lettura && daRicaricare ? h('div.small', { style: { marginTop: '6px' } }, `${daRicaricare === scansioni.length ? 'Per leggerle' : `Per leggerne ${daRicaricare}`} serve di nuovo il file: dopo la riapertura della pagina le scansioni non restano in memoria. Trascina qui sopra gli stessi file: tipo e letture già fatte si conservano.`) : null,
+        !lettura && llm && !llm.immagini ? h('div.small', { style: { marginTop: '6px' } }, 'In questa vista Claude non può ricevere immagini: usa il programma installato sul computer.') : null,
+        !lettura && !llm ? h('div.small', { style: { marginTop: '6px' } }, h('a', { href: '#collegamento' }, 'Collega Claude'), ' per leggere le scansioni.') : null));
+    }
     if (p.documenti.length) {
       metti(tabella, h('div.tablewrap', h('table',
         h('thead', h('tr', h('th', 'File'), h('th', 'Tipo di documento'), h('th.r', 'Contenuto'), h('th', ''))),
         h('tbody', p.documenti.map((d) => h('tr',
           h('td.fname', d.nome, d.avvisi.map((a) => h('div.small', { style: { color: 'var(--warn)', fontWeight: 400 } }, a))),
           h('td', scelta(null, TIPI, d.tipo, (v) => { d.tipo = v; if (v === 'identita') d.testo = ''; salva().then(disegna); }, { id: `tipo-${d.id}` })),
-          h('td.r.num.small', d.tipo === 'identita' ? 'non letto' : d.testo ? `${d.pagine ? `${d.pagine} pag. · ` : ''}${fmt(d.testo.length / 1000, 0)}k caratteri` : dimensione(d.dimensione)),
-          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); if (!p.documenti.some((x) => x.tipo === 'modulo3')) p.modulo3 = null; salva().then(disegna); } }, 'Rimuovi'))))))));
+          h('td.r.num.small', d.tipo === 'identita' ? 'non letto' : d.testo ? `${d.pagine ? `${d.pagine} pag. · ` : ''}${fmt(d.testo.length / 1000, 0)}k caratteri${d.trascritto ? ' · letto da Claude' : ''}` : d.scansione ? `scansione · ${d.pagine || 1} pag.` : dimensione(d.dimensione)),
+          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); FILE_SESSIONE.delete(d.id); if (!p.documenti.some((x) => x.tipo === 'modulo3')) p.modulo3 = null; salva().then(disegna); } }, 'Rimuovi'))))))));
     }
     const allegati = verificheAmmissibilita(bando, p.categoriaId, p.anno, p.dati, p.documenti.map((d) => d.tipo)).filter((c) => c.id.startsWith('all_'));
     const mancanti = allegati.filter((c) => c.esito === 'critico').length;

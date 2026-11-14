@@ -54,13 +54,14 @@ test('versione e crediti', () => {
 
 test('storico delle soglie di finanziamento: 2025 (solo finanziati) e 2026', () => {
   const film = storicoFinanziamento(B, 'film');
-  assert.deepEqual(film.map((x) => [x.anno, x.finanziati, x.primo, x.ultimoFinanziato]), [[2025, 7, 86.1, 83.1], [2026, 11, 86.1, 77.1]]);
-  assert.deepEqual(storicoFinanziamento(B, 'documentario').map((x) => x.ultimoFinanziato), [79.4, 80.2]);
+  assert.deepEqual(film.map((x) => [x.anno, x.finanziati, x.primo, x.ultimoFinanziato]), [[2024, 9, 91.9, 80.6], [2025, 7, 86.1, 83.1], [2026, 11, 86.1, 77.1]]);
+  assert.deepEqual(storicoFinanziamento(B, 'documentario').map((x) => x.ultimoFinanziato), [75.2, 79.4, 80.2]);
+  assert.deepEqual(storicoFinanziamento(B, 'cortometraggio').map((x) => [x.anno, x.ultimoFinanziato]), [[2024, 68.8], [2025, 75.8], [2026, 77.7]]);
   // i dati 2025 quadrano: somma delle sezioni e formula del contributo (richiesto × punteggio ÷ punteggio del primo)
-  for (const righe of Object.values(B.esitiFinanziati[0].categorie)) {
+  for (const edizione of B.esitiFinanziati) for (const righe of Object.values(edizione.categorie)) {
     const primo = Math.max(...righe.map((r) => r.totale));
-    for (const r of righe) assert.ok(Math.abs(r.sezioni.A + r.sezioni.B + r.sezioni.C + r.sezioni.D - r.totale) < 0.051, `somma istanza ${r.n}`);
-    for (const r of righe.slice(0, 2)) assert.ok(Math.abs((r.richiesto * r.totale) / primo - r.concedibile) < 0.01, `contributo istanza ${r.n}`);
+    for (const r of righe) assert.ok(Math.abs(r.sezioni.A + r.sezioni.B + r.sezioni.C + r.sezioni.D - r.totale) < 0.051, `somma istanza ${r.n} del ${edizione.anno}`);
+    for (const r of righe.slice(0, 2).filter((x) => x.richiesto)) assert.ok(Math.abs((r.richiesto * r.totale) / primo - r.concedibile) < 0.01, `contributo istanza ${r.n} del ${edizione.anno}`);
   }
   // le statistiche di sezione restano quelle dell'edizione completa
   assert.equal(statisticheEsiti(B, 'film').anno, 2026);

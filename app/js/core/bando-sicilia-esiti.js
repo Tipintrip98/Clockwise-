@@ -124,10 +124,37 @@ const cortometraggio2025 = [
   [15, 18.7, 15.9, 29, 12.2, 75.8, 'F', 15000, 13568.02],
 ];
 
+// Finestra 2024, avviso precedente (2024-2025): punteggi per sezione dei progetti finanziati
+// (D.D.G. n. 2003 del 11/07/2024). Le sezioni erano le stesse, con minimi leggermente diversi
+// (film: A 16, B 13, C 20, D 16). Anche questi servono solo allo storico della soglia di finanziamento.
+const film2024 = [
+  [1, 24.2, 18.7, 28, 21, 91.9, 'F', 500000, 500000],
+  [23, 21.9, 15.3, 30, 23.4, 90.6, 'F', 440000, 433775.84],
+  [51, 19.8, 16.6, 30, 23.1, 89.5, 'F', 172000, 167508.16],
+  [11, 22.5, 16.7, 25, 21.7, 85.9, 'F', 500000, 467355.82],
+  [53, 20.2, 15.1, 26.2, 21.8, 83.3, 'F', 480000, 435081.61],
+  [29, 20.2, 15.7, 30, 17.1, 83, 'F', 241764.2, 218350.69],
+  [66, 17.6, 15.6, 30, 18.8, 82, 'F', 500000, 446137.11],
+  [33, 17.9, 15.2, 30, 18.8, 81.9, 'F', 390000, 347562.57],
+  [25, 19.1, 18.1, 24, 19.4, 80.6, 'F', 400000, 184228.2], // ultimo in capienza: contributo ridotto
+];
+const documentario2024 = [
+  [12, 27.4, 10.9, 23, 25, 86.3, 'F'], [37, 21.9, 10, 30, 22.8, 84.7, 'F'], [40, 25.6, 12, 28, 16.1, 81.7, 'F'], [6, 25.1, 10.3, 27, 16.1, 78.5, 'F'],
+  [27, 25.4, 10, 24, 18.8, 78.2, 'F'], [42, 25, 10.2, 30, 12.8, 78, 'F'], [39, 22.4, 10, 27, 15.8, 75.2, 'F'],
+];
+const cortometraggio2024 = [[48, 17.6, 15, 24, 12.2, 68.8, 'F']];
+
 export const FINANZIATI_SICILIA = [{
   anno: 2025,
   soloFinanziati: true,
   fonte: 'D.D.G. n. 2698 del 06/08/2025 — elenchi consolidati delle istanze beneficiarie di contributo, anno 2025',
   url: 'https://www.siciliafilmcommission.org/wp-content/uploads/2024/12/DDG-n.-2698-del-06.08.2025Allegati-Firmato.pdf',
   categorie: { film: righe(film2025), documentario: righe(documentario2025), cortometraggio: righe(cortometraggio2025) },
+}, {
+  anno: 2024,
+  soloFinanziati: true,
+  avvisoPrecedente: true,
+  fonte: 'D.D.G. n. 2003 del 11/07/2024 — elenchi delle istanze beneficiarie di contributo, anno 2024 (avviso 2024-2025)',
+  url: '',
+  categorie: { film: righe(film2024), documentario: righe(documentario2024), cortometraggio: righe(cortometraggio2024) },
 }];

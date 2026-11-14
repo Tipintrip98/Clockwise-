@@ -76,6 +76,11 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     }
     if (!/^claude-[a-z0-9.-]+$/.test(c.modello)) return json(res, 400, { codice: 'richiesta', messaggio: 'Modello non valido.' });
     if (!['low', 'medium', 'high', 'xhigh', 'max'].includes(c.impegno || 'high')) return json(res, 400, { codice: 'richiesta', messaggio: 'Livello di approfondimento non valido.' });
+    // pagine scansionate da far leggere a Claude: poche, solo JPEG o PNG, in base64
+    const immagini = c.immagini == null ? [] : c.immagini;
+    if (!Array.isArray(immagini) || immagini.length > 20 || immagini.some((im) => !im || !['image/jpeg', 'image/png'].includes(im.tipo) || typeof im.dati !== 'string' || !/^[A-Za-z0-9+/]+=*$/.test(im.dati.slice(0, 200)))) {
+      return json(res, 400, { codice: 'richiesta', messaggio: 'Immagini non valide: al massimo 20, in formato JPEG o PNG.' });
+    }
     let client = null;
     if (c.provider === 'api') {
       const k = chiaveApi();
@@ -89,7 +94,7 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     const invia = (evento, dati) => { if (!res.writableEnded) res.write(`event: ${evento}\ndata: ${JSON.stringify(dati)}\n\n`); };
     const battito = setInterval(() => { if (!res.writableEnded) res.write(': attivo\n\n'); }, 15000);
     const parametri = {
-      modello: c.modello, impegno: c.impegno || 'high', system: c.system, documenti: c.documenti, compito: c.compito, schema: c.schema,
+      modello: c.modello, impegno: c.impegno || 'high', system: c.system, documenti: c.documenti, compito: c.compito, schema: c.schema, immagini,
       onPensiero: (delta) => invia('pensiero', { delta }), onTesto: (delta) => invia('testo', { delta }), signal: controllo.signal,
     };
     try {

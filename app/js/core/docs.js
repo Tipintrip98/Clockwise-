@@ -81,7 +81,7 @@ function caricaScript(url) {
   });
   return inCaricamento[url];
 }
-async function assicura(globale) {
+export async function assicura(globale) {
   if (globalThis[globale]) return;
   for (const url of globalThis.CLOCKWISE_LIBS?.[globale] || []) await caricaScript(url);
 }
@@ -123,19 +123,20 @@ function testoFoglio(wb) {
 
 /**
  * Estrae il testo da un file caricato.
- * Restituisce { testo, pagine, avvisi, modulo3 } — modulo3 è presente se il file è il Modulo III ufficiale.
+ * Restituisce { testo, pagine, avvisi, modulo3, scansione } — modulo3 è presente se il file è il Modulo III ufficiale;
+ * scansione è vero per i PDF senza testo e per le fotografie, che Claude può leggere come immagini.
  */
 export async function estraiTesto(file) {
   const est = estensione(file.name);
   const avvisi = [];
-  let testo = '', pagine = null, modulo3 = null;
+  let testo = '', pagine = null, modulo3 = null, scansione = false;
   const buffer = await file.arrayBuffer();
   if (est === 'pdf') {
     await assicura('pdfjsLib');
     const r = await testoPdf(buffer);
     testo = r.testo; pagine = r.pagine;
     const utile = testo.replace(/\[pagina \d+\]/g, '').replace(/\s/g, '').length;
-    if (utile < 40 * pagine) avvisi.push('PDF senza testo selezionabile (probabile scansione): Claude non può leggerlo. Carica la versione esportata da Word/Final Draft, non la scansione.');
+    if (utile < 40 * pagine) { scansione = true; testo = ''; avvisi.push('PDF senza testo selezionabile (scansione): per leggerlo usa “Leggi la scansione con Claude”, oppure carica la versione esportata da Word o Final Draft.'); }
   } else if (est === 'docx') {
     await assicura('mammoth');
     if (!globalThis.mammoth) throw new Error('Lettore DOCX non disponibile.');
@@ -153,12 +154,56 @@ export async function estraiTesto(file) {
   } else if (est === 'doc') {
     avvisi.push('Il vecchio formato .doc non è leggibile: salva il file come PDF o DOCX e ricaricalo.');
   } else if (['jpg', 'jpeg', 'png', 'heic', 'tif', 'tiff'].includes(est)) {
-    avvisi.push('Immagine: conta come allegato presente, ma il contenuto non viene letto.');
+    if (ESTENSIONI_IMMAGINE.includes(est)) scansione = true;
+    avvisi.push(scansione ? 'Immagine: per leggerne il contenuto usa “Leggi la scansione con Claude”.' : 'Immagine: conta come allegato presente, ma il contenuto non viene letto.');
   } else {
     avvisi.push(`Formato .${est || '?'} non leggibile: conta solo come allegato presente.`);
   }
   testo = testo.replace(/\u0000/g, '').replace(/[ \t]+\n/g, '\n').replace(/\n{4,}/g, '\n\n\n').trim();
-  return { testo, pagine, avvisi, modulo3 };
+  return { testo, pagine, avvisi, modulo3, scansione };
+}
+
+export const ESTENSIONI_IMMAGINE = ['jpg', 'jpeg', 'png'];
+const LATO_MASSIMO = 1568; // oltre questa misura Claude riduce comunque l'immagine
+
+const inBase64 = (tela, qualita = 0.72) => tela.toDataURL('image/jpeg', qualita).split(',')[1];
+
+/**
+ * Pagine di un documento scansionato come immagini JPEG ({ tipo, dati in base64 }), pronte per essere lette da Claude.
+ * Accetta PDF (una immagine per pagina) e fotografie JPG/PNG. Restituisce { immagini, pagine, troncato }.
+ */
+export async function immaginiScansione(file, { massimo = 30 } = {}) {
+  const est = estensione(file.name);
+  const tela = document.createElement('canvas');
+  const immagini = [];
+  if (est === 'pdf') {
+    await assicura('pdfjsLib');
+    const lib = globalThis.pdfjsLib;
+    if (!lib) throw new Error('Lettore PDF non disponibile.');
+    const pdf = await lib.getDocument({ data: new Uint8Array(await file.arrayBuffer()), isEvalSupported: false }).promise;
+    const quante = Math.min(pdf.numPages, massimo);
+    for (let n = 1; n <= quante; n++) {
+      const pagina = await pdf.getPage(n);
+      const base = pagina.getViewport({ scale: 1 });
+      const vista = pagina.getViewport({ scale: LATO_MASSIMO / Math.max(base.width, base.height) });
+      tela.width = Math.round(vista.width); tela.height = Math.round(vista.height);
+      const ctx = tela.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, tela.width, tela.height);
+      await pagina.render({ canvasContext: ctx, viewport: vista }).promise;
+      immagini.push({ tipo: 'image/jpeg', dati: inBase64(tela) });
+    }
+    const pagine = pdf.numPages;
+    try { await pdf.destroy(); } catch { /* niente da liberare */ }
+    return { immagini, pagine, troncato: pagine > quante };
+  }
+  if (ESTENSIONI_IMMAGINE.includes(est)) {
+    const bitmap = await createImageBitmap(file);
+    const scala = Math.min(1, LATO_MASSIMO / Math.max(bitmap.width, bitmap.height));
+    tela.width = Math.round(bitmap.width * scala); tela.height = Math.round(bitmap.height * scala);
+    tela.getContext('2d').drawImage(bitmap, 0, 0, tela.width, tela.height);
+    return { immagini: [{ tipo: 'image/jpeg', dati: inBase64(tela, 0.8) }], pagine: 1, troncato: false };
+  }
+  throw new Error('Si possono leggere come scansione solo i PDF e le immagini JPG o PNG.');
 }
 
 // Apre un file Excel come workbook SheetJS (per gli importatori: preventivo, Master Budget).

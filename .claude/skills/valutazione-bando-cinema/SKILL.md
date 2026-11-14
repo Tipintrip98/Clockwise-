@@ -9,7 +9,7 @@ La conoscenza del bando è nel repository e va letta, non ricordata:
 
 - `app/js/core/bando-sicilia.js` — griglie A (film, serie, corti) e B (documentari), soglie, categorie, allegati, requisiti, invio.
 - `app/js/core/bando-sicilia-testo.js` — testo ufficiale degli articoli 3-18.
-- `app/js/core/bando-sicilia-esiti.js` — punteggi reali per sezione: 75 progetti del 2026 e i 14 finanziati del 2025.
+- `app/js/core/bando-sicilia-esiti.js` — punteggi reali per sezione: 75 progetti del 2026, i 14 finanziati del 2025 e i 17 del 2024.
 - `app/js/core/scoring.js` — calcolo delle fasce, soglie, previsione statistica.
 
 ## Metodo
@@ -25,7 +25,10 @@ La conoscenza del bando è nel repository e va letta, non ricordata:
 
 - Punteggio per sezione e totale, con forbice e confronto con le soglie.
 - Problemi bloccanti, poi gli interventi ordinati per punti recuperabili.
-- Posizione rispetto all'ultimo finanziato (2025: 83,1 film; 2026: 77,1 film).
+- Posizione rispetto all'ultimo finanziato (film: 80,6 nel 2024, 83,1 nel 2025, 77,1 nel 2026).
+- Se serve un documento da consegnare: `creaReportPdf` in `app/js/core/report-pdf.js` produce il report completo in PDF.
+
+I documenti scansionati non hanno testo: vanno prima letti come immagini (`app/js/core/scansioni.js`), altrimenti contratti e curriculum non entrano nella valutazione.
 - La frase: è una stima per il controllo qualità, non anticipa il giudizio della Commissione.
 
 Per provare il calcolo: `npm test` (i test in `test/core.test.js` e `test/conoscenza.test.js` verificano griglie ed esiti).
