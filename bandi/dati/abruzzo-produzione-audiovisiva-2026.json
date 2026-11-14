@@ -1,0 +1,853 @@
+{
+  "id": "abruzzo-produzione-audiovisiva-2026",
+  "fondoId": "abruzzo",
+  "revisione": "2026-11-14",
+  "nome": "Abruzzo — Avviso pubblico per il sostegno alla produzione audiovisiva e cinematografica in Abruzzo 2026 (PR FESR 2021-2027, Azione 1.3.1)",
+  "nomeBreve": "Abruzzo · Produzione audiovisiva 2026",
+  "ente": "Regione Abruzzo — Dipartimento Sociale – Enti Locali – Cultura (DPG), Servizio Beni e Attività Culturali DPG027, con il supporto della Fondazione Abruzzo Film Commission; istruttoria di ricevibilità e ammissibilità affidata a Fi.R.A. S.p.A.",
+  "regione": "Abruzzo",
+  "territorio": "Abruzzo",
+  "gentilizio": "abruzzesi",
+  "fonte": "Avviso pubblico per il sostegno alla produzione audiovisiva e cinematografica in Abruzzo (PR FESR Abruzzo 2021-2027, Azione 1.3.1, Scheda intervento 1.3.1.2, DGR 36/2026), approvato con Determinazione DPG/40 del 02/04/2026 e pubblicato sul BURA Speciale n. 55 dell’08/04/2026; allegati approvati con Determinazione DPG/49 del 24/04/2026; FAQ ufficiali aggiornate al 30/04/2026 e al 07/05/2026",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Sovvenzione a fondo perduto della Regione Abruzzo (fondi PR FESR 2021-2027) per micro, piccole e medie imprese di produzione con codice ATECO 59.11 che realizzano in tutto o in parte in Abruzzo lungometraggi, opere televisive e web, documentari, animazione e cortometraggi. Il contributo copre fino al 50% (60% o 70% nei casi previsti) delle sole spese sostenute in Abruzzo, entro un massimale per categoria. Procedura valutativa a graduatoria: una Commissione di cinque membri assegna fino a 100 punti su qualità, efficienza, impatti e criteri premiali; servono almeno 60 punti. Finestra 2026 chiusa il 27 maggio; graduatoria attesa entro il 23 novembre 2026.",
+  "paginaUfficiale": "https://coesione.regione.abruzzo.it/avvisi-pubblici/fesr/avviso-il-sostegno-alla-produzione-audiovisiva-e-cinematografica-abruzzo",
+  "fontiUrl": [
+    {
+      "titolo": "Avviso pubblico — testo approvato con DPG/40 del 02/04/2026 (copia del portale Coesione Abruzzo)",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1159/2026-04-03/avviso.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso pubblico — Allegato 1 alla DPG/40 nel BURA Speciale n. 55 dell’08/04/2026",
+      "url": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-04-08/040a-avviso-ver-fin-def.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione DPG/40 del 02/04/2026 — approvazione dell’Avviso e prenotazione dell’impegno",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1159/2026-04-03/10967597.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "BURA Speciale n. 55 dell’08/04/2026",
+      "url": "https://bura.regione.abruzzo.it/sites/bura.regione.abruzzo.it/files/bollettini/2026-04-08/bollettino-speciale-numero-55-del-08-04-2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione DPG/49 del 24/04/2026 — approvazione degli allegati",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1159/2026-04-24/11062403.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegati 1-9 in PDF (archivio zip)",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1152/2026-05-08/tutti-allegati-pdf.zip",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegati editabili (archivio zip; elencato dalla pagina ufficiale, non scaricato)",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1152/2026-04-27/film-commission-allegati-editabili.zip",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ aggiornate al 30 aprile 2026 (n. 1-25)",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1161/2026-05-04/faq-agg-20260430.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ aggiornate al 7 maggio 2026 (n. 26-38)",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1161/2026-05-08/faq-agg-20260507.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione DPG/102 del 18/08/2026 — nomina della Commissione Tecnica di Valutazione",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1155/2026-08-20/dpg-102-18-08-2026-nomina-commissione.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione DPG/103 del 25/08/2026 — proroga del termine di valutazione al 24/10/2026",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1159/2026-08-27/103-determina-proroga-termini.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione DPG/134 del 23/10/2026 — ulteriore proroga del termine di valutazione al 23/11/2026",
+      "url": "https://coesione.regione.abruzzo.it/sites/coesione.regione.abruzzo.it/files/allegati/1159/2026-10-29/dd-ulteriore-proroga-termine-valutazione.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina ufficiale dell’Avviso sul portale Coesione Abruzzo (stato: Chiuso)",
+      "url": "https://coesione.regione.abruzzo.it/avvisi-pubblici/fesr/avviso-il-sostegno-alla-produzione-audiovisiva-e-cinematografica-abruzzo",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-04-03",
+      "scadenza": "2026-05-27",
+      "nota": "Prima edizione dell’Avviso PR FESR 2021-2027 (Azione 1.3.1): DPG/40 del 02/04/2026, BURA Speciale n. 55 dell’08/04/2026. Domande dal 27/04 al 27/05/2026: 93 istanze. Valutazione prorogata al 23/11/2026 (DPG/134); al 14/11/2026 nessuna graduatoria."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Atto distinto e non verificato: avviso regionale ai sensi della L.R. 98/1999, approvato con determinazione DPH/256 del 31/07/2024 (dati ricavati dal nome del file sul sito della Regione). Il documento non è stato aperto in questa sessione: nessun dato trascritto."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-04-27",
+      "al": "2026-05-27",
+      "nota": "Finestra unica: dalle ore 09.00 del 27/04/2026 alle ore 23.59 del 27/05/2026, solo sulla piattaforma RASportello (art. 9.4)."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "non annunciato",
+    "base": "Nessun atto prevede un’edizione 2027 e non esiste una cadenza: quella del 2026 è la prima (domande dal 27 aprile al 27 maggio). La DGR 814/2025 assegna all’Azione 1.3.1 del PR FESR € 8.750.000, di cui questo Avviso impegna € 4.000.000, e l’art. 3.4 consente di integrare la dotazione: indizi, non una previsione."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 130,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Commissione Tecnica di Valutazione di cinque membri (art. 10.4): Presidente della Abruzzo Film Commission, Direttore della Abruzzo Film Commission, un rappresentante della Regione indicato dal Presidente della Regione e due esperti esterni del settore indicati dal Dipartimento; è coadiuvata da esperti tecnici di settore e da un segretario verbalizzante senza diritto di voto (DPG/102 del 18/08/2026). Riceve solo le domande già risultate ricevibili e ammissibili. L’Avviso non precisa la regola di calcolo collegiale (media, somma o consenso): per ogni parametro indica soltanto l’intervallo di punti per giudizio (scarso, sufficiente, buono, eccellente) o per fascia."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://rasportello.regione.abruzzo.it/",
+    "oggetto": "",
+    "regole": [
+      "Domanda compilata online, a pena di esclusione, sulla piattaforma RASportello dal legale rappresentante o da un suo procuratore; accesso con SPID.",
+      "Il modulo di domanda (Allegato 1), compilato in ogni sua parte, va firmato digitalmente dal legale rappresentante oppure dal procuratore speciale, con procura allegata.",
+      "Imposta di bollo di € 16,00: l’impresa dichiara nella domanda di averla assolta e conserva la documentazione.",
+      "Finestra: dalle ore 09.00 del 27/04/2026 alle ore 23.59 del 27/05/2026.",
+      "Le domande inviate con altre modalità o fuori termine, oppure mancanti anche di uno solo dei documenti richiesti o non correttamente compilate, sono irricevibili.",
+      "Una sola domanda per soggetto richiedente.",
+      "Per gli Allegati 10, 11 e 12 non esiste un modello: si carica la documentazione in proprio possesso (FAQ n. 6).",
+      "Dopo l’invio la domanda non è modificabile e non si possono aggiungere materiali, nemmeno via PEC o e-mail, salvo richiesta formale degli uffici (FAQ n. 25).",
+      "Dopo la pubblicazione degli esiti le comunicazioni con il Dipartimento avvengono solo via PEC (art. 11.4)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "a",
+      "nome": "Categoria A — Lungometraggi di finzione (durata minima 52 minuti) a principale sfruttamento cinematografico",
+      "griglia": "unica",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 500000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo, non del costo dell’opera: 50%, 60% per le produzioni transfrontaliere, 70% per opere difficili e coproduzioni con Paesi DAC. Copertura finanziaria minima del 40% del costo della copia campione. Dotazione del gruppo lungometraggi, film TV e serie (3.500.000 €)."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "b",
+      "nome": "Categoria B — Opere di finzione singole e seriali televisive e web (durata complessiva minima 90 minuti), anche SVOD",
+      "griglia": "unica",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 600000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo, non del costo dell’opera: 50%, 60% per le produzioni transfrontaliere, 70% per opere difficili e coproduzioni con Paesi DAC. Copertura finanziaria minima del 40% del costo della copia campione. Dotazione del gruppo lungometraggi, film TV e serie (3.500.000 €)."
+      },
+      "dotazione": {},
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "c",
+      "nome": "Categoria C — Documentari (creativi per il cinema, minimo 52 minuti; televisivi o non cinematografici, minimo 40 minuti in una o più parti)",
+      "griglia": "unica",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 100000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo, non del costo dell’opera: 50%, 60% per le produzioni transfrontaliere, 70% per opere difficili e coproduzioni con Paesi DAC. Copertura finanziaria minima del 30% del costo della copia campione. Dotazione del gruppo documentari e cortometraggi (500.000 €)."
+      },
+      "dotazione": {},
+      "durataMin": 40,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "d",
+      "nome": "Categoria D — Animazione (lungometraggi, minimo 52 minuti; opere seriali, durata complessiva minima 24 minuti)",
+      "griglia": "unica",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 80000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo, non del costo dell’opera: 50%, 60% per le produzioni transfrontaliere, 70% per opere difficili e coproduzioni con Paesi DAC. Copertura finanziaria minima del 30% del costo della copia campione. Dotazione del gruppo lungometraggi, film TV e serie (3.500.000 €)."
+      },
+      "dotazione": {},
+      "durataMin": 24,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "e",
+      "nome": "Categoria E — Cortometraggi (di finzione sotto i 52 minuti, musicali/videoclip, di animazione di almeno 5 minuti)",
+      "griglia": "unica",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 30000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo, non del costo dell’opera: 50%, 60% per le produzioni transfrontaliere, 70% per opere difficili e coproduzioni con Paesi DAC. Copertura finanziaria minima del 20% del costo della copia campione. Dotazione del gruppo documentari e cortometraggi (500.000 €)."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": 52,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "unica": {
+      "id": "unica",
+      "nome": "Criteri di valutazione (art. 10, comma 5) — tabella unica per tutte le categorie A, B, C, D ed E",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità",
+          "max": 40,
+          "obiettivo": "Qualità della proposta (A.1, 20 punti) e qualità della struttura di gestione (A.2, 20 punti). È il macro-criterio che decide in caso di parità all’ultima posizione utile.",
+          "criteri": [
+            {
+              "id": "A.1.1",
+              "nome": "Qualità del progetto",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità del progetto (carattere distintivo dell’idea, qualità della sceneggiatura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, ecc.).",
+              "principio": "Scarso: da 0 a 3. Sufficiente: da 3,5 a 6. Buono: da 6,5 a 8. Eccellente: da 8,5 a 10.",
+              "documenti": [
+                "modulo2",
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.1.2",
+              "nome": "Grado di innovazione dell’operazione sul contesto specifico regionale",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Grado di innovazione dell’operazione sul contesto specifico regionale in termini di visibilità e potenziale valorizzazione del patrimonio culturale, artistico, storico, ambientale e paesaggistico abruzzese. Il Formulario (Allegato 5) chiede di descrivere in che modo il progetto valorizzi in modo innovativo il territorio in chiave turistica e culturale, con riferimento ai luoghi di particolare pregio culturale, archeologico, storico e naturalistico e/o ai borghi antichi.",
+              "principio": "Scarso: da 0 a 3. Sufficiente: da 3,5 a 6. Buono: da 6,5 a 8. Eccellente: da 8,5 a 10.",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "A.2.1",
+              "nome": "Qualità delle soluzioni organizzative e metodologiche",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Qualità delle soluzioni organizzative e metodologiche individuate per la realizzazione degli interventi, con particolare riferimento all’adeguatezza delle risorse attribuite alle singole componenti progettuali (numero e curricula tecnico-artistici delle risorse impegnate nell’opera).",
+              "principio": "Scarso: da 0 a 3. Sufficiente: da 3,5 a 6. Buono: da 6,5 a 8. Eccellente: da 8,5 a 10.",
+              "documenti": [
+                "modulo2",
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "A.2.2",
+              "nome": "Capacità organizzativa, tecnica e gestionale del proponente",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Capacità organizzativa tecnica e gestionale del proponente in relazione agli obiettivi e al contenuto dell’intervento (numero e qualità delle produzioni realizzate, partecipazione a festival di rilievo nazionale e internazionale, premi ottenuti, ecc.).",
+              "principio": "Scarso: da 0 a 3. Sufficiente: da 3,5 a 6. Buono: da 6,5 a 8. Eccellente: da 8,5 a 10.",
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Efficienza",
+          "max": 24,
+          "obiettivo": "Sostenibilità economica e finanziaria della proposta (B.1, 16 punti) e capacità finanziaria del soggetto proponente (B.2, 8 punti).",
+          "criteri": [
+            {
+              "id": "B.1.1",
+              "nome": "Fattibilità economico/finanziaria del progetto",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Fattibilità economico/finanziaria del progetto e congruità tra piano di lavorazione, budget di produzione e opera proposta. Nel Formulario va dimostrata in coerenza con l’Allegato 2 (preventivo e piano finanziario).",
+              "principio": "Scarso: da 0 a 2. Sufficiente: da 2,5 a 4,5. Buono: da 5 a 6,5. Eccellente: da 7 a 8.",
+              "documenti": [
+                "modulo3",
+                "modulo2",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "B.1.2",
+              "nome": "Entità della quota di investimento privato",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Entità della quota di investimento privato che si combina al sostegno pubblico. Nel Formulario vanno descritte le altre fonti di finanziamento, diverse dal contributo richiesto alla Regione Abruzzo, di cui si allega la documentazione comprovante.",
+              "principio": "Scarso: da 0 a 2. Sufficiente: da 2,5 a 4,5. Buono: da 5 a 6,5. Eccellente: da 7 a 8.",
+              "documenti": [
+                "modulo3",
+                "modulo2",
+                "finanziamenti",
+                "referenze_bancarie",
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "B.2",
+              "nome": "Capacità finanziaria del soggetto proponente: capitale sociale e patrimonio netto",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Capitale sociale interamente versato e patrimonio netto uguale o superiore a € 40.000 (€ 10.000 per i cortometraggi), da dimostrare con l’ultimo bilancio approvato e depositato (Allegato 11).",
+              "principio": "Regola di calcolo scritta nel bando: Capitale sociale non versato e patrimonio netto inferiore a € 40.000 (€ 10.000 per i cortometraggi): 0 punti. Capitale sociale versato e patrimonio netto pari a € 40.000 (€ 10.000): 4 punti. Capitale sociale versato e patrimonio netto superiore a € 40.000 (€ 10.000): da 4,5 a 8 punti.",
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Impatti",
+          "max": 26,
+          "obiettivo": "Capacità di generare effetti in termini di rilancio produttivo e crescita territoriale e occupazionale (C.1, 24 punti) e riduzione dell’impatto ambientale (C.2, 2 punti).",
+          "criteri": [
+            {
+              "id": "C.1.1",
+              "nome": "Rilevanza dell’investimento in Abruzzo",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto percentuale tra le spese di investimento da sostenere in Abruzzo e la spesa totale.",
+              "principio": "Regola di calcolo scritta nel bando: 20-30%: da 0 a 2 punti. 31-50%: da 2,5 a 4,5. 51-70%: da 5 a 6,5. 71-100%: da 7 a 8. Dentro ogni fascia l’Avviso indica un intervallo di punti, non un valore fisso: la posizione nell’intervallo è decisa dalla Commissione.",
+              "documenti": [
+                "modulo3",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C.1.2",
+              "nome": "Piano di lavorazione in Abruzzo oltre la soglia di ammissibilità",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Piano di lavorazione che preveda una realizzazione in Abruzzo di una percentuale superiore a quella di ammissibilità (30%). Per le categorie A, B, C ed E la soglia di ammissibilità è il 30% dei giorni di riprese in Abruzzo; per la categoria D (animazione) il Formulario parla di un numero di episodi realizzati in Abruzzo superiore alla percentuale minima di ammissibilità.",
+              "principio": "Regola di calcolo scritta nel bando: 30%: 0 punti. 31-45%: da 0,5 a 2,0. 46-70%: da 2,5 a 6. Oltre 70%: da 6,5 a 8. Dentro ogni fascia l’Avviso indica un intervallo di punti, non un valore fisso: la posizione nell’intervallo è decisa dalla Commissione.",
+              "documenti": [
+                "modulo3",
+                "modulo2",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "C.1.3",
+              "nome": "Coinvolgimento di personale artistico e tecnico residente in Abruzzo",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Coinvolgimento di personale artistico e tecnico residente nella regione Abruzzo (di cui giovani e donne) sul totale. L’Allegato 6 elenca nominativamente cast artistico e cast tecnico locale (residenti in Abruzzo alla data di pubblicazione dell’Avviso), con curriculum vitae e lettera d’intenti per ciascuna risorsa; l’Allegato 2 calcola la percentuale di operatori abruzzesi sul totale, separatamente per cast artistico e cast tecnico.",
+              "principio": "Regola di calcolo scritta nel bando: 0-30%: fino a 2 punti. 31-45%: da 2,5 a 4,0. 46-70%: da 4,5 a 6. Oltre 70%: da 6,5 a 8. Dentro ogni fascia l’Avviso indica un intervallo di punti, non un valore fisso: la posizione nell’intervallo è decisa dalla Commissione.",
+              "documenti": [
+                "accordi_cast",
+                "modulo3",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C.2.1",
+              "nome": "Soluzioni tecniche innovative a basso impatto ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Introduzione di soluzioni tecniche innovative a basso impatto ambientale. Assenza: 0 punti. Presenza: 2 punti.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Presenza"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assenza"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Criteri di selezione premiali",
+          "max": 10,
+          "obiettivo": "Contributo allo sviluppo locale (D.1, 5 punti) e miglioramento del posizionamento competitivo (D.2, 5 punti).",
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Contributo allo sviluppo locale: MPMI nei territori delle Strategie Territoriali",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Numero di MPMI selezionate nei territori interessati dalle Strategie Territoriali (DGR n. 410/2023 e ss.mm.ii.). Le FAQ (n. 31) precisano che conta il numero di micro, piccole e medie imprese con sede in quei territori effettivamente coinvolte nel progetto (service audiovisivi, noleggio attrezzature, imprese tecniche, post-produzione, logistica, trasporti, ospitalità).",
+              "principio": "Regola di calcolo scritta nel bando: Da 0 a 5 imprese: fino a 2 punti. Da 6 a 10: da 2,5 a 3,5. Oltre 11: da 4 a 5. Dentro ogni fascia l’Avviso indica un intervallo di punti, non un valore fisso: la posizione nell’intervallo è decisa dalla Commissione.",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "D.2",
+              "nome": "Miglioramento del posizionamento competitivo: potenziale di diffusione dell’opera",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Potenziale di diffusione e fruizione dell’opera a livello nazionale o internazionale nelle sale cinematografiche e nelle emittenti televisive, in termini di rilevanza quantitativa e qualitativa degli accordi di distribuzione dell’opera (da valutarsi sulla base dei company profile delle società di distribuzione e/o del broadcaster).",
+              "principio": "Scarso: da 0 a 1. Sufficiente: da 1,5 a 2,5. Buono: da 3 a 4. Eccellente: da 4,5 a 5.",
+              "documenti": [
+                "distribuzione",
+                "modulo2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Allegato 1 — Domanda di partecipazione (compilata online su RASportello, firmata digitalmente; imposta di bollo di € 16,00)",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Allegato 2 — Piano Finanziario (preventivo, intensità di aiuto e contributo richiesto, fonti di copertura e copertura comprovata, giorni di lavorazione in Abruzzo, personale artistico e tecnico abruzzese)",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.1.1",
+        "B.1.2",
+        "C.1.1",
+        "C.1.2",
+        "C.1.3"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 3 — Dichiarazione sulla capacità finanziaria (da sola non basta: va sostenuta da evidenze, FAQ n. 27)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 4 — Dichiarazione di intenti (solo per i raggruppamenti/ATI non ancora costituiti alla data della domanda)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Allegato 5 — Formulario (dati sul progetto, valore culturale, abstract e risposte ai criteri A.1.1-D.2: è lo strumento principale della valutazione qualitativa)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A.1.1",
+        "A.1.2",
+        "A.2.1",
+        "A.2.2",
+        "B.1.1",
+        "B.1.2",
+        "B.2",
+        "C.1.1",
+        "C.1.2",
+        "C.1.3",
+        "C.2.1",
+        "D.1",
+        "D.2"
+      ]
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Materiali artistici (sceneggiatura, sinossi, trattamento, note di regia): non sono un allegato autonomo, vanno inseriti nel Formulario o uniti ad esso in un unico file (FAQ n. 6 e n. 25)",
+      "obbligo": "consigliato",
+      "criteri": [
+        "A.1.1"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Allegato 6 — Elenco cast artistico e tecnico locale (residenti in Abruzzo alla data di pubblicazione dell’Avviso), con curriculum vitae e lettera d’intenti per ciascuna risorsa indicata",
+      "obbligo": "sempre",
+      "criteri": [
+        "C.1.3",
+        "A.2.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 7 — Dichiarazione sostitutiva di certificazione sul cumulo degli aiuti di Stato",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 8 — Requisiti MPMI",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 9 — Informativa sui dati personali",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Allegato 10 — Contratto di coproduzione, produzione associata o produzione esecutiva (solo in questi casi); con paesi esteri: contratto di coproduzione vincolante e riconoscimento della coproduzione da parte della DGCA del MiC. Nessun modello prestabilito (FAQ n. 6)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 11 — Ultimo bilancio approvato e depositato che attesti capitale sociale versato e patrimonio netto (per le imprese non obbligate: bilancio redatto da un professionista abilitato ex artt. 2423-2425 c.c.). Nessun modello prestabilito",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.2"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Allegato 12 — Documentazione che attesta la copertura finanziaria minima (40% per A e B, 30% per C e D, 20% per E secondo l’art. 5): atti ufficiali degli enti finanziatori e/o accordi con coproduttori, terzi finanziatori, broadcaster, distributori. Nessun modello prestabilito",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.1.2"
+      ]
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "Attestazione bancaria, alla data di presentazione della domanda, della disponibilità effettiva dell’apporto diretto del richiedente e/o dei coproduttori/produttori associati, quando rientra nella copertura minima (parte dell’Allegato 12)",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "B.1.2"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Idoneità provvisoria al credito d’imposta della DG Cinema e Audiovisivo del MiC, quando il tax credit rientra nella copertura minima (parte dell’Allegato 12)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Deal memo, contratto o pre-contratto di distribuzione con un broadcaster o un fornitore di servizi media audiovisivi di rilevanza nazionale e/o internazionale: requisito di ammissibilità per le categorie A, B e D (non valgono le lettere di interesse); per C ed E conta solo ai fini del criterio D.2",
+      "obbligo": "sempre",
+      "criteri": [
+        "D.2"
+      ]
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con i giorni di riprese (o le lavorazioni di animazione) in Abruzzo: richiesto come requisito del progetto, descritto nel Formulario (C1.2) e nell’Allegato 2; l’Avviso non lo elenca come file separato",
+      "obbligo": "consigliato",
+      "criteri": [
+        "C.1.2",
+        "B.1.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Procura speciale (o copia autentica) con le dichiarazioni ex D.P.R. 445/2000, se la domanda è firmata da un procuratore",
+      "obbligo": "se_dichiarato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "mpmi",
+      "testo": "Micro, piccola o media impresa (Allegato I del Reg. UE 651/2014), anche in forma associata; le grandi imprese non sono beneficiarie"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO 2025 J 59.11 (o equivalente europeo) attivo alla data di presentazione della domanda"
+    },
+    {
+      "id": "iscrizione",
+      "testo": "Iscrizione al Registro delle imprese della CCIAA competente (o al registro/albo previsto per la propria forma giuridica)"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico (100% dei diritti di sfruttamento) oppure coproduttore/produttore associato con almeno il 20% dei diritti, oppure produttore esecutivo di opera straniera; non è ammessa la partecipazione meramente finanziaria"
+    },
+    {
+      "id": "diritti",
+      "testo": "Titolarità dei diritti di sfruttamento necessari alla realizzazione dell’opera (basta un’opzione, da esercitare a pena di decadenza)"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda per soggetto richiedente su questo Avviso"
+    },
+    {
+      "id": "avvio",
+      "testo": "Avvio dei lavori successivo alla presentazione della domanda (effetto di incentivazione, Reg. UE 651/2014): nessun impegno giuridicamente vincolante già assunto"
+    },
+    {
+      "id": "copertura",
+      "testo": "Copertura finanziaria minima documentata del costo della copia campione: 40% per le categorie A e B, 30% per C e D, 20% per E"
+    },
+    {
+      "id": "distribuzione",
+      "testo": "Per le categorie A, B e D: deal memo, contratto o pre-contratto di distribuzione con broadcaster o fornitore di servizi media audiovisivi di rilevanza nazionale/internazionale (le lettere di interesse non valgono)"
+    },
+    {
+      "id": "riprese",
+      "testo": "Almeno il 30% dei giorni di riprese in Abruzzo (categorie A, B, C, E); per l’animazione almeno il 20% degli episodi o della durata lavorato in Abruzzo (storyboard, animazione oppure lighting/rendering/compositing/color correction)"
+    },
+    {
+      "id": "innovazione",
+      "testo": "Il progetto prevede almeno uno degli elementi dell’art. 5.2: innovazione di prodotto, innovazione di processo, tecnologie digitali avanzate, miglioramento della capacità competitiva, nuovi modelli di distribuzione o fruizione"
+    },
+    {
+      "id": "capacita",
+      "testo": "Capacità economico-finanziaria rispetto al progetto, dichiarata con l’Allegato 3 e sostenuta da evidenze oggettive"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Regolarità fiscale e contributiva (DURC), assenza di cause antimafia ostative, capacità di contrarre con la pubblica amministrazione, rispetto dei CCNL e delle norme su sicurezza, disabili, pari opportunità, lavoro irregolare e ambiente"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà (art. 2, punto 18, Reg. UE 651/2014)"
+    },
+    {
+      "id": "delocalizzazione",
+      "testo": "Nessuna delocalizzazione verso lo stabilimento dell’operazione nei due anni precedenti la domanda, e impegno a non farla nei due anni successivi al completamento (Allegato 1)"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera è un prodotto culturale: non incita alla violenza o alla discriminazione, non ha contenuto pornografico, non è destinata alla diffusione tramite fornitori di servizi di hosting"
+    },
+    {
+      "id": "spesa",
+      "testo": "Le spese ammissibili (solo Abruzzo) sono almeno il 130% della sovvenzione e la spesa soggetta a obblighi territoriali non supera l’80% del bilancio totale di produzione"
+    },
+    {
+      "id": "bollo",
+      "testo": "Imposta di bollo di € 16,00 assolta e dichiarata nella domanda"
+    },
+    {
+      "id": "piattaforma",
+      "testo": "Domanda compilata online su RASportello e firmata digitalmente dal legale rappresentante (o dal procuratore speciale con procura allegata), completa di tutti gli allegati richiesti"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "ati",
+      "etichetta": "Costituzione dell’ATI (solo raggruppamenti non ancora costituiti) e invio della copia autentica dell’atto",
+      "mesi": 1,
+      "nota": "Allegato 4: termine perentorio di 30 giorni dal ricevimento della comunicazione di ammissione a contributo."
+    },
+    {
+      "id": "realizzazione",
+      "etichetta": "Conclusione dell’opera e consegna della copia campione (categorie A, B, C, E)",
+      "mesi": 18,
+      "preavvisoGiorni": 90,
+      "nota": "Art. 6.2: entro e non oltre 18 mesi dalla data di accettazione della concessione del finanziamento. Art. 6.3: proroga di non più di 6 mesi, con richiesta motivata almeno 3 mesi prima del termine; le spese vanno comunque sostenute e pagate entro 18 mesi dall’accettazione."
+    },
+    {
+      "id": "realizzazione-animazione",
+      "etichetta": "Conclusione dell’opera di animazione (categoria D)",
+      "mesi": 24,
+      "preavvisoGiorni": 90,
+      "nota": "Art. 6.2: entro e non oltre 24 mesi dalla data di accettazione della concessione. Art. 6.3: le spese vanno comunque sostenute e pagate entro 18 mesi dall’accettazione."
+    },
+    {
+      "id": "rendiconto",
+      "etichetta": "Rendicontazione finale e richiesta del saldo",
+      "mesi": 20,
+      "nota": "Art. 6.5: entro 60 giorni dalla conclusione del progetto. Il valore in mesi (18 mesi + 60 giorni) è il caso limite di un progetto concluso all’ultimo giorno utile; per l’animazione 24 mesi + 60 giorni. Rendicontazione sul sistema Fi.E.R.A., con costo totale asseverato da un Revisore dei conti iscritto all’Albo (art. 11.8)."
+    }
+  ],
+  "scadenzeNote": [],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Dopo la firma dell’Atto di Adesione e obbligo, su richiesta firmata digitalmente, con contestuale fideiussione bancaria o polizza assicurativa a prima richiesta intestata alla Regione Abruzzo; erogabile dal primo giorno di riprese, da comunicare via PEC (art. 11.6 lett. a, 11.7 e 11.9)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "condizione": "Residuo 60% (o saldo dell’intero contributo se non è stato chiesto l’anticipo) dopo la rendicontazione: fatture annullate delle spese in Abruzzo, rendiconto del costo totale asseverato da un Revisore dei conti, rendiconto analitico delle spese territoriali, estratti conto, relazione, copie dell’opera, trailer, almeno trenta foto di scena e tre foto delle location (art. 11.6 lett. b e 11.8). Verifica della regolarità contributiva a ogni erogazione."
+    }
+  ],
+  "note": [
+    "Punteggio massimo 100; sono finanziabili le domande con almeno 60 punti. Non sono previsti punteggi minimi di sezione.",
+    "Graduatorie decrescenti distinte per ciascuna categoria (A, B, C, D, E). A parità di punteggio all’ultima posizione utile prevale il punteggio del macro-criterio A – Qualità, poi l’ordine di arrivo della domanda.",
+    "Dotazione complessiva € 4.000.000: € 3.500.000 per lungometraggi, film TV e serie e € 500.000 per documentari e cortometraggi; in ciascun gruppo il 10% è destinato primariamente all’animazione. Le risorse avanzate su un gruppo possono passare all’altro. Se le risorse non bastano a coprire l’importo richiesto non si assegnano contributi parziali.",
+    "Il contributo si calcola solo sulle spese ammissibili sostenute in Abruzzo verso soggetti con sede fiscale e operativa in Abruzzo: fino al 50%, al 60% per le produzioni transfrontaliere, al 70% per le opere difficili e le coproduzioni con paesi DAC. Massimali: A € 500.000, B € 600.000, C € 100.000, D € 80.000, E € 30.000.",
+    "Le spese ammissibili devono essere pari ad almeno il 130% della sovvenzione ottenuta (art. 7.1); le FAQ (n. 38) chiariscono che il limite del 50% e la soglia del 130% operano su piani diversi: il primo sulla concessione, la seconda sulla rendicontazione.",
+    "Il progetto va realizzato per almeno il 75% dei costi totali ammissibili, altrimenti il contributo è revocato per intero (art. 12 e art. 14.6 lett. c).",
+    "Non sono ammissibili: producer’s fee, interessi passivi, costi figurativi, acquisto di macchinari e attrezzature, spese sotto i 100 euro IVA esclusa, spese sostenute da coproduttori o produttori associati, pagamenti in contanti o per compensazione, forniture da soci, amministratori, loro parenti o imprese collegate. Costi indiretti a forfait fino al 10% dei costi diretti ammissibili per il personale.",
+    "Cumulo ammesso con altre agevolazioni pubbliche e con il tax credit interno, entro le intensità massime dell’art. 54 del Reg. UE 651/2014. La spesa soggetta a obblighi territoriali non può superare l’80% del bilancio totale di produzione.",
+    "La valutazione qualitativa si basa sul Formulario (Allegato 5): sceneggiatura, note di regia e altri materiali artistici vanno scritti lì o uniti in un unico file; dopo l’invio non si possono integrare, nemmeno via PEC o e-mail (FAQ n. 25).",
+    "Solo le risorse finanziarie liquide e documentate valgono per la copertura minima: non contano gli apporti in natura, i crediti IVA, le lettere bancarie generiche; il contratto di coproduzione da solo non basta senza attestazione bancaria (FAQ n. 27-29).",
+    "L’Allegato 6 chiede nomi, curriculum e lettere d’intenti del cast artistico e tecnico residente in Abruzzo alla data di pubblicazione dell’Avviso: meglio pochi nominativi documentati che un allegato vuoto (FAQ n. 37).",
+    "Edizione 2026: 93 domande pervenute; istruttoria di ricevibilità e ammissibilità svolta da Fi.R.A. S.p.A.; termine della valutazione prorogato al 24 ottobre e poi al 23 novembre 2026. Dopo la graduatoria provvisoria: accesso agli atti entro 15 giorni lavorativi e istanza di riesame nei 5 giorni lavorativi successivi."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Regione Abruzzo — avviso per contributi al settore audiovisivo ai sensi della L.R. 98/1999 (annualità 2024, determinazione DPH/256 del 31/07/2024)",
+      "url": "https://www.regione.abruzzo.it/system/files/contributi-finanziamenti/cultura/176728/dph-256-310724approvazione-avviso-e-prenimpegnolr-98-2024.pdf",
+      "descrizione": "Atto distinto e precedente, gestito dal Servizio Beni e Attività Culturali. Non letto in questa sessione (il sito non ha risposto): titolo, numero e data vengono dal nome del file; criteri e importi non verificati."
+    }
+  ],
+  "esitiPubblici": [],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Avviso, art. 10, comma 6 — punteggio massimo e soglia",
+        "testo": "Il punteggio massimo attribuibile è pari a 100 punti. Sono ritenute finanziabili le domande che, a seguito della valutazione di merito, avranno riportato un punteggio uguale o superiore a 60 punti."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — tabella «Criteri di valutazione», Qualità (totale 40)",
+        "testo": "A.1.1. Qualità del progetto (carattere distintivo dell’idea, qualità della sceneggiatura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, ecc.) — Scarso: da 0 a 3; Sufficiente: da 3,5 a 6; Buono: da 6,5 a 8; Eccellente da 8,5 a 10 — 10. [Stessa modalità e stesso massimo di 10 per A.1.2, A.2.1 e A.2.2.]"
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — Efficienza (totale 24)",
+        "testo": "B.1.1 Fattibilità economico/finanziaria del progetto e congruità tra piano lavorazione, budget di produzione e opera proposta. — Scarso: da 0 a 2; Sufficiente: da 2,5 a 4,5; Buono: da 5 a 6,5; Eccellente da 7 a 8 — 8. B.1.2. Entità della quota di investimento privato che si combina al sostegno pubblico — [stessa scala] — 8."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — B.2 Capacità finanziaria del soggetto proponente",
+        "testo": "Capitale sociale interamente versato e patrimonio netto uguale o superiore a € 40.000 (€10.000 per i Cortometraggi) — CS non versato e PN < € 40.000/10.000: 0; CS versato e PN = € 40.000/10.000: 4; CS versato e PN > € 40.000/10.000: da 4,5 a 8 — 8."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — Impatti (totale 26)",
+        "testo": "C.1.1 Rilevanza dell’investimento in Abruzzo (rapporto percentuale tra le spese di investimento da sostenere in Abruzzo e la spesa totale) — 20-30%: da 0 a 2; 31-50%: da 2,5 a 4,5; 51-70%: da 5 a 6,5; 71-100% da 7 a 8 — 8. C.1.2 Piano di lavorazione che preveda una realizzazione in Abruzzo di una percentuale superiore a quella di ammissibilità (30%) — 30%: 0; 31-45%: da 0,5 a 2,0; 46-70%: da 2,5 a 6; Oltre 70%: da 6,5 a 8 — 8."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — Impatti, C.1.3 e C.2.1",
+        "testo": "C.1.3 Coinvolgimento personale artistico e tecnico residente nella regione Abruzzo (di cui giovani e donne) su tot. — 0 - 30%: fino a 2; 31-45%: da 2,5 a 4,0; 46-70%: da 4,5 a 6; Oltre 70%: da 6,5 a 8 — 8. C.2.1 Introduzione di soluzioni tecniche innovative a basso impatto ambientale — Assenza: 0; Presenza: 2 — 2."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 5 — Criteri di selezione premiali (totale 10) e totale",
+        "testo": "D.1 Contributo allo sviluppo locale — N. di MPMI selezionate nei territori interessati dalle Strategie Territoriali — 0 - 5: fino a 2; 6-10: da 2,5 a 3,5; Oltre 11: da 4 a 5 — 5. D.2 Miglioramento posizionamento competitivo — Potenziale di diffusione e fruizione dell’opera […] — Scarso: da 0 a 1; Sufficiente: da 1,5 a 2,5; Buono: da 3 a 4; Eccellente: da 4,5 a 5 — 5. TOTALE 100."
+      },
+      {
+        "riferimento": "Avviso, art. 10, commi 7 e 8 — graduatorie e parità",
+        "testo": "Sulla base del punteggio conseguito, l’ordine delle domande sarà definito in modo decrescente per ognuna delle categorie. Nel caso di parità di punteggio all’ultima posizione utile, sarà preferito il progetto che avrà ottenuto il maggior punteggio a valere sul macro-criterio A – Qualità; in caso di ulteriore parità prevarrà l’ordine di arrivo della domanda."
+      },
+      {
+        "riferimento": "Avviso, art. 10, comma 4 — Commissione",
+        "testo": "La Commissione Tecnica di Valutazione nominata dal Dipartimento Sociale – Enti Locali – Cultura è formata da cinque membri: Presidente della Abruzzo Film Commission, Direttore della Abruzzo Film Commission, un rappresentante della Regione Abruzzo indicato dal Presidente della Regione e due esperti esterni del settore, indicati dal Dipartimento Sociale – Enti Locali – Cultura."
+      },
+      {
+        "riferimento": "Avviso, art. 8, comma 2 — massimali e intensità",
+        "testo": "Categoria / Contributo massimo: A €500.000; B €600.000; C €100.000; D €80.000; E €30.000. L’intensità max di aiuto per ciascuna categoria è pari al max 50% sulle spese ammissibili. L’intensità di aiuto può essere aumentata come segue: a) al 60 % dei costi ammissibili per le produzioni transfrontaliere […]; b) al 70 % dei costi ammissibili per le opere audiovisive difficili e le coproduzioni cui partecipano paesi dell’elenco del comitato per l’assistenza allo sviluppo (DAC) dell’OCSE."
+      },
+      {
+        "riferimento": "Avviso, art. 3, commi 1, 3 e 5 — risorse",
+        "testo": "Le risorse finanziarie complessive previste per l’Avviso ammontano a 4 milioni (quattromilioni,00) di euro […] euro 3.500.000,00 […] per le tipologie di opere di Lungometraggio, Film tv e Serie, di cui il 10% destinato primariamente a progetti di genere Animazione; euro 500.000,00 […] per le tipologie di opere di Documentario o Cortometraggio, di cui il 10% destinato primariamente a progetti di genere Animazione. […] Nel caso in cui le risorse non siano sufficiente a coprire l’importo richiesto non saranno assegnati contributi parziali."
+      },
+      {
+        "riferimento": "Avviso, art. 7, comma 1 — spesa territoriale e soglia del 130%",
+        "testo": "Ai fini del calcolo del contributo, vengono prese in considerazione solo le spese effettuate nei confronti di persone giuridiche, soggetti pubblici o persone fisiche aventi sede fiscale e operativa in Abruzzo. […] Ai fini della loro rimborsabilità tramite il presente Avviso, le spese ammissibili debbono avere un importo complessivo pari ad almeno il 130% della sovvenzione ottenuta."
+      },
+      {
+        "riferimento": "Avviso, art. 9, comma 4 — finestra di presentazione (copia del portale Coesione)",
+        "testo": "La domanda deve essere inviata nel rispetto della finestra temporale: dalle ore 09.00 del 27/04/2026 alle ore 23.59 del 27/05/2026 esclusivamente in forma telematica accedendo sul portale https://rasportello.regione.abruzzo.it/home"
+      },
+      {
+        "riferimento": "Avviso, art. 11, comma 6 — erogazione",
+        "testo": "a) erogazione di una anticipazione pari al 40% dell’importo del contributo concesso, dopo la firma dell’Atto di Adesione e obbligo […] con contestuale presentazione di apposita fideiussione. L’erogazione potrà essere effettuata a partire dal primo giorno di riprese del progetto, data da comunicare esclusivamente via PEC; b) erogazione finale del residuo 60% o il saldo del totale del contributo, previo ricevimento della documentazione di cui al successivo art. 12"
+      },
+      {
+        "riferimento": "Avviso, art. 6, commi 2 e 3 — durata",
+        "testo": "Le imprese beneficiarie dovranno concludere la realizzazione dell’opera audiovisiva presentata in sede di candidatura entro e non oltre 18 mesi dalla data di accettazione della concessione del finanziamento, ad eccezione delle opere di animazione (Categoria D) la cui realizzazione dovrà avvenire entro e non oltre 24 mesi […]. Il Dipartimento […] può, a seguito di richiesta motivata da effettuarsi almeno 3 mesi prima del termine di consegna, concedere una proroga di non più di 6 mesi"
+      },
+      {
+        "riferimento": "Determinazione DPG/134 del 23/10/2026 — stato della valutazione",
+        "testo": "di stabilire che il processo di valutazione delle domande e l’approvazione dei relativi esiti dovranno concludersi entro il 23 novembre 2026"
+      }
+    ],
+    "dubbi": [
+      "Graduatoria non ancora pubblicata al 14/11/2026: la valutazione delle 93 domande deve concludersi entro il 23/11/2026 (DPG/134). Non esistono quindi punteggi reali per tarare il simulatore; ricontrollare la pagina ufficiale dopo quella data.",
+      "L’Avviso non dice come la Commissione di cinque membri arriva al punteggio di ciascun parametro (media, somma, consenso). L’art. 10.3 rinvia a «modalità di attribuzione di cui al paragrafo 10.6», ma il comma 6 fissa soltanto massimo e soglia.",
+      "Per C.1.1, C.1.2, C.1.3, D.1 e per l’ultima fascia di B.2 la tabella assegna a ogni fascia un intervallo di punti (es. 71-100% → da 7 a 8), non un valore fisso, e non dice come si sceglie il punto dentro l’intervallo. Per questo sono trascritti come criteri di tipo «qualitativo» con il campo «fasceIntervallo» (puntiMin/puntiMax): il simulatore può dare solo una forbice; ogni interpolazione sarebbe un’ipotesi non scritta nell’atto.",
+      "Le fasce hanno buchi e bordi non definiti: C.1.1 parte dal 20% (sotto il 20% non è previsto nulla); tra una fascia e l’altra restano scoperti i valori non interi (es. 30,5%, 45,5%); in C.1.3 «0-30%: fino a 2» e in D.1 «0-5: fino a 2» non indicano il minimo; in D.1 si passa da «6-10» a «Oltre 11», quindi 11 imprese non rientrano in nessuna fascia. I punteggi sembrano procedere a passi di 0,5 (3 → 3,5; 6 → 6,5) ma non è scritto.",
+      "C.1.1: non è chiaro il denominatore («spesa totale»): costo complessivo dell’opera oppure totale del preventivo dell’Allegato 2. È stata usata la metrica spesaTerritorioSuCosto (spesa in Abruzzo ÷ costo di produzione).",
+      "C.1.2 per la categoria D (animazione): la soglia di ammissibilità è il 20% degli episodi o della durata, mentre la tabella parla di 30% e di fasce pensate per i giorni di riprese; il Formulario dice solo «numero di episodi superiore alla percentuale minima». Non è chiaro come si applichino le fasce all’animazione.",
+      "C.1.3: l’inciso «(di cui giovani e donne)» non ha una regola di calcolo. L’Allegato 2 calcola due percentuali distinte (cast artistico e cast tecnico) senza dire come si combinano; il Formulario, al punto C1.3a, chiede invece la partecipazione femminile e/o giovanile nell’assetto societario del proponente. È stata usata la metrica professionistiSiciliani (artistici + tecnici residenti ÷ totale).",
+      "Dotazione per categoria: l’Avviso stanzia per gruppi di tipologie (3,5 milioni per lungometraggio, film TV e serie; 0,5 milioni per documentario e cortometraggio), non per le categorie A-E. L’attribuzione di A, B e D al primo gruppo e di C ed E al secondo (campo «dotazioneGruppo») è una lettura mia; il campo «dotazione» delle categorie è lasciato vuoto.",
+      "Incoerenze interne dell’Avviso tra art. 5 e «Definizioni»: cortometraggio «durata massima di 30 minuti presentata da giovani autori» sotto i 35 anni (definizioni) contro «durata inferiore ai 52 minuti» (art. 5, cat. E); documentario minimo 45 minuti (definizioni) contro 52/40 minuti (cat. C); serie minimo 45 minuti per almeno due episodi (definizioni) contro 90 minuti complessivi (cat. B); coproduttore con quota non inferiore al 10% (definizione di «Produttore») contro quota di almeno il 20% (art. 4.2 lett. k). Nella scheda sono riportati i valori dell’art. 4 e dell’art. 5.",
+      "L’Allegato 12 è intitolato alla «copertura finanziaria minima del 40%» per tutti, ma l’art. 5.3 chiede il 40% solo per A e B, il 30% per C e D e il 20% per E. Nella scheda valgono le percentuali dell’art. 5.",
+      "Categoria E: la frase «Il periodo minimo di riprese in Abruzzo non deve essere inferiore al 20% del bilancio totale di produzione» mescola giorni e bilancio; riportata tra virgolette senza interpretarla.",
+      "spesaTerritorioMinPct = 130 traduce l’art. 7.1 (spese ammissibili, cioè abruzzesi, almeno pari al 130% della sovvenzione). Di fatto il tetto di intensità (50%, 60% o 70% delle spese ammissibili) è più stringente: il simulatore non deve trattare il 130% come unico vincolo.",
+      "La pagina ufficiale riporta «100% di finanziamento a fondo perduto»: indica la forma dell’aiuto (tutta sovvenzione), non l’intensità, che resta al 50/60/70% delle spese ammissibili in Abruzzo (art. 8).",
+      "L’allegato «distribuzione» è marcato «sempre» ma vale come requisito di ammissibilità solo per A, B e D (campo aggiuntivo «categorie»): per C ed E conta solo per il punteggio D.2. Chi integra deve rispettare quel filtro.",
+      "Le scadenze decorrono dalla «data di accettazione della concessione» (art. 6.2), non dal decreto di concessione. La scadenza «rendiconto» a 20 mesi è derivata (18 mesi + 60 giorni dalla conclusione): l’Avviso scrive solo «entro 60 giorni dalla conclusione del progetto».",
+      "Numerazione dell’Avviso disordinata (due «Art. 14», due «Art. 15», rinvii a paragrafi 8.2, 9.6, 11.7, 12.1-12.4 che non corrispondono): i riferimenti agli articoli nella scheda seguono il testo del corpo, non il sommario.",
+      "La copia dell’Avviso sul BURA Speciale n. 55 riporta il refuso «27/056/2026»; la copia sul portale Coesione, la pagina ufficiale e le DPG/102, 103 e 134 confermano la scadenza del 27/05/2026. Per il resto le due copie coincidono parola per parola (confronto automatico).",
+      "Prossima edizione: nessun atto la annuncia. Il DEFR 2026-2028 citato nella DPG/40 parla di «un primo bando»; la DGR 814/2025 assegna all’Azione 1.3.1 (struttura DPG027) € 8.750.000, di cui questo Avviso impegna € 4.000.000. Sono indizi, non una previsione ufficiale.",
+      "Storico: l’avviso regionale precedente ai sensi della L.R. 98/1999 (determinazione DPH/256 del 31/07/2024, dal nome del file) non è stato letto: il sito regione.abruzzo.it ha rifiutato la connessione a curl (errore di certificato TLS) e ha risposto 503 a WebFetch. È citato in «altriBandi» solo per titolo e indirizzo, senza numeri.",
+      "Non ho trovato un sito proprio della Fondazione Abruzzo Film Commission con una pagina bandi: la pagina di riferimento per il controllo automatico è quella del portale Coesione della Regione.",
+      "famiglia di A.2.1 = «artistica» per scelta: il criterio guarda insieme curricula tecnici e artistici delle risorse impegnate. greenFilm = false: C.2.1 premia soluzioni a basso impatto ambientale ma non nomina alcun protocollo o certificazione.",
+      "B.2 e Allegato 11: le FAQ n. 34 e 36 (07/05/2026) chiariscono che il capitale sociale non è un requisito di ammissibilità e che una società neo-costituita senza bilancio approvato può partecipare allegando la documentazione disponibile (atto costitutivo, visura, situazione patrimoniale, documentazione bancaria). Il punteggio B.2 resta quello della tabella; l’obbligo «sempre» dell’Allegato 11 va letto con questa eccezione.",
+      "Costi indiretti: l’art. 7.2 dell’Avviso li fissa al massimo al 10% dei costi diretti ammissibili per il personale, mentre l’Allegato 2 (Piano finanziario) intitola la voce D «Spese generali (max il 10% delle spese ammissibili)». Nella scheda vale il testo dell’Avviso.",
+      "Il Formulario (Allegato 5) divide la risposta ad A.1.1 in «A1.1a Qualità artistica del progetto – Sceneggiatura» e «A1.1b Qualità artistica del progetto – Regia»: anche la regia rientra quindi nei 10 punti di A.1.1, pur non essendo nominata nella tabella dell’art. 10.5.",
+      "Formulario: B.1.2 è etichettato «B2.1» e B.2 «B2»; la numerazione nella scheda segue la tabella dell’art. 10.5 dell’Avviso."
+    ]
+  },
+  "verifica": {
+    "esito": "confermata",
+    "data": "2026-11-14",
+    "correzioni": [],
+    "dubbi": [
+      "Graduatoria non ancora pubblicata (termine di valutazione al 23/11/2026, DPG/134): nessun punteggio reale per tarare il simulatore.",
+      "Fasce di C.1.1, C.1.2, C.1.3, D.1 e ultima fascia di B.2 danno intervalli di punti, non valori fissi; buchi ai bordi (es. D.1: 11 imprese escluse, C.1.1 sotto il 20%).",
+      "Regola di calcolo collegiale della Commissione (media/somma/consenso) non indicata dall’Avviso.",
+      "C.1.2 per l’animazione (soglia di ammissibilità 20%, tabella scritta su 30%) e denominatore di C.1.1 («spesa totale») non definiti.",
+      "Aggiunti come dubbi: FAQ 34/36 su capitale e società neo-costituite (B.2/Allegato 11); discordanza 10% costi indiretti tra art. 7.2 e Allegato 2; A.1.1 nel Formulario comprende anche la regia."
+    ]
+  }
+}

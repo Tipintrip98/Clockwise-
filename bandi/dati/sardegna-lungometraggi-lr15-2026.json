@@ -1,0 +1,834 @@
+{
+  "id": "sardegna-lungometraggi-lr15-2026",
+  "fondoId": "sardegna",
+  "revisione": "2026-11-14",
+  "nome": "Sardegna — Bando pubblico per la produzione di lungometraggi di rilevante interesse regionale (L.R. 15/2006, artt. 7 e 12) — Anno 2026",
+  "nomeBreve": "Sardegna · Lungometraggi L.R. 15/2006 — 2026",
+  "ente": "Regione Autonoma della Sardegna — Assessorato della Pubblica Istruzione, Beni Culturali, Informazione, Spettacolo e Sport · Direzione generale dei beni culturali, informazione, spettacolo e sport · Servizio sport, spettacolo e cinema (gestione diretta della Regione; la Fondazione Sardegna Film Commission gestisce fondi distinti)",
+  "regione": "Sardegna",
+  "territorio": "Sardegna",
+  "gentilizio": "sardi",
+  "fonte": "Bando pubblico per la concessione di contributi finalizzati alla produzione di lungometraggi di rilevante interesse regionale — artt. 7 e 12 della L.R. 20 settembre 2006, n. 15 — Anno 2026, approvato con Determinazione del Direttore del Servizio sport, spettacolo e cinema n. 1566, prot. n. 15244 del 28/05/2026",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Regione Sardegna per lungometraggi (anche documentari) di rilevante interesse regionale, fino al 35% del costo complessivo e con un tetto di 400.000 euro (500.000 per le coproduzioni internazionali). Un bando l’anno con domanda via PEC; una Commissione tecnico-artistica di cinque esperti assegna fino a 100 punti, in parte con parametri automatici (giorni e personale in Sardegna, sede, regista sardo) e in parte a giudizio. Servono almeno 50 punti, di cui almeno 40 nella parte artistico-culturale (lettere A e B); il contributo è riparametrato per fasce di punteggio. L’edizione 2026 è scaduta il 30 giugno 2026 e la graduatoria definitiva è del 27 ottobre 2026.",
+  "paginaUfficiale": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi",
+  "fontiUrl": [
+    {
+      "titolo": "Bando pubblico 2026 — produzione di lungometraggi (testo integrale, 40 pagine)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/9fb5c645-fbf9-407e-b1ef-702002e05c54/bando-lungometraggi-2026.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina ufficiale del bando 2026 (ID Web 178004330766446): pubblicazione 29/05/2026, scadenza 30/06/2026, esito 28/10/2026",
+      "url": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/178004330766446",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. 1566/15244 del 28/05/2026 — approvazione dello schema di bando e della modulistica",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/2f5263b9-c1b9-403f-94b2-e966cf859777/dds-n.-1566-prot.-15244-del-28.05.2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica 2026 (modulo di domanda, scheda progetto, piano dei costi, piano finanziario, informativa privacy)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/7f59ac78-b22b-4dd1-bea2-83a92994c4cf/allegati-bando-lungometraggi.zip",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. 2704/60700 del 27/10/2026 — approvazione della graduatoria definitiva",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/d0abd170-4cb6-4c72-a92c-55fb50c8c87a/determinazione-n.-2704-prot.-n.-60700-del-27.10.2026-approvazione-graduatoria-definitiva.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A alla Det. n. 2704/60700 — progetti idonei, finanziati e non finanziati, con punteggi per criterio",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/c32ca7a2-d87c-4638-ab6a-5d324e500b07/a-idonei-finanziati-e-non-finanziati-signed.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato B alla Det. n. 2704/60700 — progetti non idonei",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/832957c2-0dc2-4526-93b2-1a078e67ec5d/b-non-idonei-signed.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria provvisoria 2026 — griglia di valutazione (Det. prot. n. 57470 del 30/09/2026)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/105b95d2-2e88-4f84-806b-ae7ee8200e6f/griglia-valutazione-lungometraggi-2026-provvisoria.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina ufficiale del bando 2025 (ID Web 175248937301864)",
+      "url": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/175248937301864",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bando 2025 modificato con Determinazione n. 1970/19202 del 24/07/2025 (testo integrale)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/02e44183-a207-4f38-8acc-0e87d5299279/bando-lungometraggi-2025-definitivo.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ del bando lungometraggi 2025",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/dc6fdade-12ec-4f65-8060-d77c32960610/faq-lungometraggi-2025.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria 2025 — Allegato A, progetti idonei ammessi al contributo",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/4dde40fc-6357-4890-a141-914c1aac69c7/all.-a-elenco-idonei-ammessi-al-contributo-lungometraggi-2025-signed.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-05-29",
+      "scadenza": "2026-06-30",
+      "nota": "Det. n. 1566/15244 del 28/05/2026. 20 domande valutate; graduatoria definitiva con Det. n. 2704/60700 del 27/10/2026: 17 idonei (9 finanziati per intero, 1 in parte, 7 non finanziati) e 3 non idonei. Dotazione iniziale 1.650.000 euro, risorse finali 2.120.314,70 euro."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-07-14",
+      "scadenza": "2025-09-15",
+      "nota": "Det. n. 1878/18018 dell’11/07/2025, modificata con Det. n. 1970/19202; scadenza spostata al 15/09/2025 (Det. n. 2060/20212). Graduatoria con Det. n. 3525/38775 del 19/12/2025, rettificata con Det. n. 3635/39857 del 24/12/2025. Dotazione 1.650.000 euro."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Annualità precedente segnalata dalla pagina «I Bandi» della Sardegna Film Commission (https://www.regione.sardegna.it/170617175910662): date e testo non verificati in questa sessione."
+    },
+    {
+      "anno": 2022,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Annualità precedente segnalata dalla pagina «I Bandi» della Sardegna Film Commission (https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/96423): date e testo non verificati in questa sessione."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-05-29",
+      "al": "2026-06-30",
+      "nota": "Sessione unica annuale. Scadenza alle ore 23.59 del 30 giugno 2026 (art. 5); la data di apertura è la data di pubblicazione indicata nella pagina ufficiale."
+    },
+    {
+      "anno": 2025,
+      "dal": "2025-07-14",
+      "al": "2025-09-15",
+      "nota": "Edizione precedente, con griglia in parte diversa (vedi variazioniRispettoAl2025). Scadenza originaria 5 settembre 2025, prorogata al 15 settembre."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "maggio-luglio (scadenza tra fine giugno e settembre)",
+    "base": "Cadenza annuale delle due ultime edizioni: 2025 pubblicato il 14 luglio con scadenza il 15 settembre, 2026 pubblicato il 29 maggio con scadenza il 30 giugno. Il bando esce dopo la legge di stabilità e la delibera di Giunta che ripartisce le risorse del capitolo SC09.4548. Nessun atto letto annuncia l’edizione 2027."
+  },
+  "sogliaTotale": 50,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 120,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": 7.5,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Commissione tecnico-artistica composta da cinque esperti del settore, individuati con decreto dell’Assessore (art. 9 del Bando, che richiama l’art. 12 della L.R. 15/2006; l’art. 4 del Bando la indica come Commissione di cui all’art. 11). Esprime per ciascun progetto un giudizio sintetico in termini numerici, accompagnato da un giudizio tecnico-artistico sulla realizzabilità; il bando non precisa se il punteggio sia una media o una decisione collegiale (in graduatoria i punteggi sono interi). Valuta prima le lettere A e B: sotto i 40 punti non prosegue e definisce il progetto «non idoneo». Può usare il videoclip di presentazione, convocare i proponenti in audizione e chiedere chiarimenti con termine non superiore a dieci giorni."
+  },
+  "invio": {
+    "canale": "PEC",
+    "indirizzo": "cultura@pec.regione.sardegna.it",
+    "oggetto": "Bando pubblico 2026 – progetti di lungometraggio - L.R. 15/2006, artt. 7 e 12",
+    "regole": [
+      "Un solo invio da una casella di posta elettronica certificata, entro le ore 23.59 del giorno di scadenza: fa fede la data di trasmissione (art. 5).",
+      "Domanda e allegati solo in formato PDF non modificabile e perfettamente leggibile; gli allegati, distinti e denominati e numerati come nell’art. 4, vanno trasmessi in una cartella compressa.",
+      "Si usa esclusivamente la modulistica dell’Amministrazione regionale (modulo di domanda, scheda progetto, piano finanziario, piano dei costi).",
+      "Il modulo di domanda e i modelli che prevedono la sottoscrizione vanno firmati digitalmente dal legale rappresentante (oppure firma autografa con documento d’identità valido): senza firma del modulo di domanda l’istanza è inammissibile.",
+      "La domanda deve essere in regola con l’imposta di bollo; i soggetti esenti indicano la norma di esenzione.",
+      "Una sola domanda l’anno per soggetto giuridico; in caso di più invii per lo stesso progetto vale l’ultimo pervenuto entro la scadenza. La partecipazione dello stesso soggetto in più raggruppamenti esclude tutte le domande.",
+      "I file corrotti, non apribili o non leggibili sono considerati non trasmessi. Dopo la scadenza non si possono presentare integrazioni.",
+      "Le imprese straniere possono inviare dalla posta elettronica ordinaria all’indirizzo cultura@regione.sardegna.it."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "lungometraggio",
+      "nome": "Lungometraggi di rilevante interesse regionale (finzione e documentario: graduatoria unica)",
+      "griglia": "L",
+      "soglie": {
+        "AB": 40
+      },
+      "contributo": {
+        "percentuale": 35,
+        "massimali": {
+          "2026": 400000
+        },
+        "nota": "Fino al 35% del costo complessivo del film, entro 400.000 € (500.000 € per le coproduzioni internazionali). Il contributo concesso è una quota del richiesto che dipende dal punteggio: 100% da 90 a 100 punti, 95% da 80 a 89, 90% da 70 a 79, 85% da 60 a 69, 80% da 50 a 59."
+      },
+      "dotazione": {
+        "2026": 1650000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "L": {
+      "id": "L",
+      "nome": "Tabella punteggi per i lungometraggi (art. 10 del Bando 2026)",
+      "sezioni": [
+        {
+          "id": "AB",
+          "nome": "Contenuto artistico-culturale (lettere A e B della tabella)",
+          "max": 60,
+          "obiettivo": "Valore artistico e valorizzazione dell’identità regionale. È la parte «culturale»: servono almeno 40 punti su 60, altrimenti la Commissione non valuta le lettere da C a I e il progetto è «non idoneo».",
+          "criteri": [
+            {
+              "id": "A",
+              "nome": "Valore artistico",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Valore artistico del progetto. Il bando indica solo il titolo del criterio e il massimo di 15 punti, senza sottocriteri: la Commissione valuta sulla documentazione dell’art. 4 (soggetto, sceneggiatura o trattamento e note di regia per i documentari, relazione tecnico-artistica con note di regia, possibili location sarde e moodboard).",
+              "principio": "La Commissione esprime un giudizio sintetico in termini numerici, accompagnato da un giudizio tecnico-artistico che tiene conto della realizzabilità del progetto in base alla documentazione presentata (art. 10).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2",
+                "altro"
+              ]
+            },
+            {
+              "id": "B1",
+              "nome": "Esplicita ambientazione in Sardegna del film",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Parametro automatico: attribuzione dell’intero punteggio in caso affermativo.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Il film è esplicitamente ambientato in Sardegna"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Ambientazione non esplicitamente sarda"
+                }
+              ]
+            },
+            {
+              "id": "B2",
+              "nome": "Incidenza in % dei giorni di lavorazione/riprese in Sardegna (inclusi i giorni di post-produzione)",
+              "max": 9,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Parametro automatico a fasce: incidenza percentuale dei giorni di lavorazione/riprese in Sardegna, inclusi i giorni di post-produzione, come risultano dal piano di lavorazione (All. 2.3).",
+              "principio": "I giorni devono risultare dal piano di lavorazione allegato alla domanda: nel 2026 la Commissione non ha accettato la ricostruzione successiva di giornate non indicate nel piano (Det. n. 2704/60700 del 27/10/2026). La variazione dei giorni di ripresa in Sardegna è una variazione sostanziale da autorizzare (art. 16). Il bando conta anche i giorni di post-produzione svolti in Sardegna e non definisce il denominatore: nessuna metrica del programma corrisponde, quindi il punteggio è stimato dalla Commissione simulata con la regola indicata. Regola di calcolo scritta nel bando: Giorni di lavorazione/riprese in Sardegna (inclusi quelli di post-produzione svolti in Sardegna) ÷ giorni complessivi di lavorazione, in percentuale. Fino al 30%: 0 punti; dal 31 al 50%: 3 punti; dal 51 al 74%: 6 punti; oltre il 75%: 9 punti.",
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "B3",
+              "nome": "Incidenza in % del personale tecnico e artistico nato o residente in Sardegna",
+              "max": 9,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Parametro automatico a fasce: incidenza percentuale del personale tecnico e artistico nato o residente in Sardegna, come elencato nel punto 2.4 dell’art. 4 del Bando.",
+              "principio": "Si contano le figure elencate al punto 2.4 dell’art. 4: autori (soggetto, sceneggiatura, regia e musica), attori principali (al massimo 3 ai fini del punteggio), attori secondari (al massimo 3), tecnici qualificati e maestranze principali (obbligatoriamente: direttore casting, aiuto regia, direttore di produzione, segretaria di edizione, scenografo, costumista truccatore, direttore della fotografia, operatore alla macchina, montatore fonico, capomacchinista e/o capo elettricista), specificando chi è nato e/o residente in Sardegna da almeno 24 mesi. In rendicontazione va presentato l’elenco del personale impiegato e la corrispondenza con quello della domanda (art. 19). Regola di calcolo scritta nel bando: Figure dell’elenco 2.4 nate o residenti in Sardegna (da almeno 24 mesi) ÷ totale delle figure dell’elenco 2.4, in percentuale. Fino al 30%: 0 punti; dal 31 al 50%: 3 punti; dal 51 al 74%: 6 punti; oltre il 75%: 9 punti.",
+              "metrica": "professionistiSiciliani",
+              "peso": 1,
+              "fasce": [
+                {
+                  "punti": 9,
+                  "etichetta": "Oltre il 75%",
+                  "oltre": 75
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "Dal 51 al 74%",
+                  "da": 51
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "Dal 31 al 50%",
+                  "da": 31
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Fino al 30%",
+                  "da": 0
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            },
+            {
+              "id": "B4",
+              "nome": "Sede legale della società in Sardegna da almeno 2 anni, oppure contratto di produzione esecutiva con un’impresa sarda per almeno il 100% del contributo",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Parametro automatico: attribuzione dell’intero punteggio in caso affermativo.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Sede legale in Sardegna da almeno 2 anni, oppure contratto di produzione esecutiva con un’impresa sarda per almeno il 100% del contributo"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna delle due condizioni"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "B5",
+              "nome": "Regista nato o residente in Sardegna da almeno 2 anni",
+              "max": 6,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Parametro automatico: attribuzione dell’intero punteggio in caso affermativo.",
+              "valori": [
+                {
+                  "punti": 6,
+                  "etichetta": "Regista nato o residente in Sardegna da almeno 2 anni"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista non sardo"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "B6",
+              "nome": "Valutazione dei parametri identitari a giudizio della Commissione",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valutazione tecnica discrezionale della Commissione sulla valorizzazione dell’identità regionale. Si basa sull’Allegato 6: relazione dettagliata dalla quale risulti la valorizzazione dell’identità regionale, con riferimento al patrimonio storico-culturale, paesaggistico-ambientale, socioeconomico, linguistico-letterario e antropologico della Sardegna, includendo in modo specifico e analitico tutti gli elementi previsti in sede di punteggio (massimo tre cartelle).",
+              "documenti": [
+                "altro",
+                "sceneggiatura"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CI",
+          "nome": "Curricula, validità economica, ricadute e premialità (lettere da C a I della tabella)",
+          "max": 40,
+          "obiettivo": "Criteri esaminati solo se il progetto ha raggiunto almeno 40 punti nelle lettere A e B.",
+          "criteri": [
+            {
+              "id": "C",
+              "nome": "Curriculum regista",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum del/i regista/i (All. 7), con indicazione per ciascuna esperienza di tipo di impiego, datore di lavoro, periodo di riferimento e principali mansioni svolte.",
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "D",
+              "nome": "Validità economica del progetto",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Validità economica del progetto. Il bando non dettaglia sottocriteri: i documenti di riferimento sono il piano finanziario (All. 3, con soggetto finanziatore, importo e indicazione delle coperture confermate con il documento che attesta l’ottenimento del finanziamento) e il piano dei costi (All. 4).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "E",
+              "nome": "Ricadute sul territorio",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Ricadute economiche sul territorio in termini di servizi, impiego di maestranze e professionalità locali, con la spesa prevista per i diversi impieghi (All. 9, massimo due cartelle). La percentuale di ricaduta deve essere maggiore o uguale al 120% del contributo.",
+              "principio": "La percentuale di ricaduta dichiarata in domanda è oggetto di valutazione e non può ridursi in rendicontazione: una riduzione comporta la riduzione proporzionale del contributo (art. 14).",
+              "documenti": [
+                "altro"
+              ]
+            },
+            {
+              "id": "F",
+              "nome": "Curriculum produttore",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum del/i produttore/i (All. 7), con indicazione per ciascuna esperienza di tipo di impiego, datore di lavoro, periodo di riferimento e principali mansioni svolte.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "G",
+              "nome": "Risultati di successo economico o di partecipazione a festival per precedenti progetti, di regista e produttori",
+              "max": 2,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Valutazione dei risultati di successo economico o di partecipazione a festival per precedenti progetti, di regista e produttori. Si basa sull’Allegato 11: relazione sui precedenti progetti, anche di cortometraggio, dalla quale si evinca il successo di critica e/o di pubblico, i premi e le segnalazioni conseguiti, la partecipazione a festival (massimo tre cartelle).",
+              "principio": "Per individuare i festival che danno diritto alla premialità la Commissione fa riferimento alla tabella ministeriale, così come aggiornata a seguito della fase di revisione in corso (art. 10).",
+              "documenti": [
+                "altro",
+                "cv_regista",
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "H",
+              "nome": "Rilevanza della componente femminile degli autori",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Rilevanza della componente femminile degli autori, in cui i 3/4 degli autori di sceneggiatura, regia, musica, DOP, direttore di produzione siano donne (max 3 punti). I nominativi vanno indicati nell’All. 2.5 b).",
+              "principio": "Regola di calcolo scritta nel bando: Il bando fissa la condizione dei 3/4 e il massimo di 3 punti, senza fasce intermedie. Nella graduatoria 2026 risultano però attribuiti anche punteggi di 1 e 2.",
+              "documenti": [
+                "altro"
+              ]
+            },
+            {
+              "id": "I",
+              "nome": "Migliore opera prima, migliore opera diretta da una donna, migliore opera diretta da un giovane under 35",
+              "max": 6,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Attribuzione di due punti per ciascuno dei casi affermativi A) migliore opera prima, B) migliore opera diretta da una donna, C) migliore opera diretta da un giovane under 35. I punteggi sono cumulabili per complessivi 6 punti massimi. Per l’under 35 conta l’età del regista alla data di pubblicazione del bando (All. 2.5 c).",
+              "principio": "Non è automatico. Secondo il criterio applicato dalla Commissione nel 2026, il solo possesso dei requisiti di opera prima, di opera diretta da una donna o da un under 35 non comporta l’attribuzione dei punti, che vanno alle opere individuate come migliori nelle rispettive categorie (Det. n. 2704/60700 del 27/10/2026). Nel 2026 solo 2 progetti idonei su 17 hanno ricevuto punti a questa lettera.",
+              "valori": [
+                {
+                  "punti": 6,
+                  "etichetta": "Riconosciuta migliore in tutte e tre le ipotesi A), B) e C)"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "Riconosciuta migliore in due ipotesi"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Riconosciuta migliore in una ipotesi"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun riconoscimento"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Modulo di domanda (modulo regionale, firmato digitalmente dal legale rappresentante, con imposta di bollo): indica anche se negli ultimi due anni il progetto ha già chiesto un contributo L.R. 15/2006 e le modifiche introdotte",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Allegato 1 — Scheda progetto (modulo regionale .xls)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Allegato 2.1 e 2.2 — Soggetto e sceneggiatura in formato «all’americana», Courier corpo 12 (trattamento e note di regia per i documentari)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Allegato 2.3 — Piano di lavorazione con i giorni di riprese in Sardegna (inclusi i giorni di post-produzione) e le località",
+      "obbligo": "sempre",
+      "criteri": [
+        "B2"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2.4 — Elenco di autori, attori principali e secondari, tecnici qualificati e maestranze principali, con indicazione dei nati e/o residenti in Sardegna da almeno 24 mesi",
+      "obbligo": "sempre",
+      "criteri": [
+        "B3",
+        "B5"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2.5 — Dichiarazione di opera prima, nominativi delle autrici (sceneggiatura, regia, musica, fotografia, direzione di produzione), regista under 35; va dichiarata anche l’insussistenza",
+      "obbligo": "sempre",
+      "criteri": [
+        "H",
+        "I"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2.6 — Elenco delle imprese di post-produzione audio e video ed eventuali vfx, specificando quelle che operano o sono domiciliate in Sardegna da almeno 24 mesi",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2.7 — Pianificazione dell’audiodescrizione e della sottotitolazione per persone con disabilità sensoriale",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Allegato 3 — Piano finanziario (modulo regionale .xlsx) con finanziamenti richiesti e/o ottenuti, soggetto finanziatore, importo e documento che attesta le coperture confermate",
+      "obbligo": "sempre",
+      "criteri": [
+        "D"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 4 — Piano dei costi del progetto (modulo regionale .xlsx)",
+      "obbligo": "sempre",
+      "criteri": [
+        "D"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 5 — Relazione tecnico-artistica: note di regia, possibili location sarde e moodboard (massimo due cartelle)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 6 — Identità regionale: relazione sulla valorizzazione dell’identità regionale (massimo tre cartelle)",
+      "obbligo": "sempre",
+      "criteri": [
+        "B6"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Allegato 7 — Curricula del/i produttore/i e dell’eventuale distributore",
+      "obbligo": "sempre",
+      "criteri": [
+        "F"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Allegato 7 — Curricula del/i regista/i",
+      "obbligo": "sempre",
+      "criteri": [
+        "C"
+      ]
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Allegato 8 — Accordo di coproduzione, di produzione associata e/o di produzione esecutiva, se esistenti",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "B4"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 9 — Ricadute economiche sul territorio, con la spesa prevista e la percentuale di ricaduta, almeno il 120% del contributo (massimo due cartelle)",
+      "obbligo": "sempre",
+      "criteri": [
+        "E"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Allegato 10 — Piano di diffusione commerciale, con eventuale contratto o opzione di distribuzione, anche in auto-distribuzione (massimo una cartella)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 11 — Relazione sui precedenti progetti di autori e produttore: successo di critica e pubblico, premi, festival (massimo tre cartelle)",
+      "obbligo": "sempre",
+      "criteri": [
+        "G"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 12 — Traduzione in lingua italiana, per i progetti in altre lingue",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 13 (facoltativo) — Link a materiale girato in precedenza o a prove filmate del lungometraggio",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 14 (facoltativo) — Videoclip di presentazione dell’opera illustrato dal regista e/o dal produttore (massimo 5 minuti)",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Informativa privacy (modulo della modulistica 2026; nel bando 2025 era l’Allegato 14 obbligatorio)",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Documento d’identità valido del legale rappresentante, se la firma è autografa",
+      "obbligo": "se_dichiarato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "ruolo",
+      "testo": "Il richiedente è produttore unico, oppure coproduttore o produttore associato con quota di maggioranza, oppure con quota di minoranza per un importo non inferiore al contributo richiesto (art. 3)"
+    },
+    {
+      "id": "forma",
+      "testo": "Impresa cinematografica e audiovisiva, singola o in rete di imprese: escluse associazioni culturali, fondazioni e liberi professionisti"
+    },
+    {
+      "id": "registro",
+      "testo": "Costituita e iscritta da almeno 24 mesi al Registro delle Imprese (o ente omologo estero), «Attiva» e senza procedure di liquidazione o concorsuali"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO primario 59.11 (classificazione NACE equivalente per le imprese UE; per le extra-UE fatturato riconducibile principalmente alla produzione audiovisiva)"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà (art. 2, par. 1, punto 18 del Reg. UE 651/2014) e non ha ordini di recupero pendenti (dichiarazione Deggendorf)"
+    },
+    {
+      "id": "onorabilita",
+      "testo": "Legali rappresentanti e amministratori senza condanne penali definitive né cause di divieto, decadenza o sospensione antimafia (art. 67 del D.lgs. 159/2011)"
+    },
+    {
+      "id": "sanzioni",
+      "testo": "Nessuna sanzione interdittiva (art. 9, c. 2, lett. d, D.lgs. 231/2001) né esclusione o revoca di contributi pubblici, in particolare L.R. 15/2006, nei dodici mesi precedenti"
+    },
+    {
+      "id": "durc",
+      "testo": "Regolarità contributiva verso INPS e INAIL (DURC regolare)"
+    },
+    {
+      "id": "assicurazioni",
+      "testo": "In regola con gli obblighi assicurativi, inclusa la copertura dei rischi catastrofali ove applicabile"
+    },
+    {
+      "id": "lr5",
+      "testo": "Non ricade nelle condizioni dell’art. 14, comma 1, della L.R. 5/2016 e non ha affidato incarichi in violazione dell’art. 53, comma 16-ter, del D.lgs. 165/2001"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda l’anno per soggetto giuridico; le società sarde partecipano con un solo progetto e possono sottoscrivere al massimo due produzioni esecutive con società non sarde"
+    },
+    {
+      "id": "ricaduta",
+      "testo": "Ricadute economiche in Sardegna non inferiori al 120% del contributo (art. 14)"
+    },
+    {
+      "id": "spese",
+      "testo": "Le spese ammissibili decorrono dalla data di pubblicazione del bando: quelle precedenti non sono rendicontabili"
+    },
+    {
+      "id": "accessibilita",
+      "testo": "Il progetto prevede audiodescrizione e sottotitolazione per le persone con disabilità sensoriale (All. 2.7; la mancanza è causa di revoca)"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera non rientra tra quelle escluse dall’art. 4, comma 3, della L.R. 15/2006 e non è pornografica, di apologia della violenza o di incitamento all’odio etnico o razziale"
+    },
+    {
+      "id": "revoche",
+      "testo": "Nessuna revoca di contributi L.R. 15/2006 negli ultimi 3 anni e nessuna esclusione triennale per progetto non concluso nei termini (artt. 22 e 25)"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "conclusione",
+      "etichetta": "Conclusione del lungometraggio e trasmissione della rendicontazione asseverata",
+      "mesi": 36,
+      "nota": "Artt. 19 e 22 (L.R. 15/2006, art. 13, comma 2): entro tre anni dalla comunicazione del beneficio, pena la revoca. Proroga solo per circostanze eccezionali, sopravvenute e imprevedibili, con istanza motivata da autorizzare; è elemento fondamentale aver realizzato almeno il 40% delle riprese. Chi non conclude nei termini è escluso per 3 anni dai benefici degli artt. 5, 6, 9 e 12."
+    }
+  ],
+  "scadenzeNote": [
+    "Anticipazione: va prevista nel cronoprogramma e chiesta via PEC entro e non oltre il mese di novembre di ciascun anno di riferimento (art. 17).",
+    "Modifiche al cronoprogramma: comunicazione formale non oltre il mese di settembre (art. 12).",
+    "Variazioni sostanziali (piano finanziario, proroghe, compagine produttiva, cast e troupe nelle quote sarde, giorni di ripresa in Sardegna): richiesta via PEC, pena la revoca (art. 16). Il soggetto del film non può essere modificato.",
+    "Documentazione del progetto da conservare per almeno 5 anni dall’erogazione del saldo (artt. 19 e 24).",
+    "Accettazione formale del contributo, con cronoprogramma delle attività e delle spese: Art. 12: entro dieci giorni dalla comunicazione formale di attribuzione, pena la rinuncia automatica. Chi riceve meno del richiesto deve rimodulare il piano finanziario (ed eventualmente il piano dei costi)."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 70,
+      "condizione": "Facoltativo, fino al 70% del contributo concesso: fideiussione bancaria o assicurativa di pari importo (art. 18) e attestazione documentata che l’opera dispone di almeno il 50% delle risorse finanziarie necessarie, incluso il contributo regionale (art. 17)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 30,
+      "condizione": "Dopo l’approvazione della rendicontazione finale asseverata da un revisore legale e la presentazione della ricevuta di consegna dell’opera alla Cineteca Sarda; è l’intero contributo se non è stato chiesto l’anticipo. Su ogni rata si applica la ritenuta d’acconto del 4% (art. 15)."
+    }
+  ],
+  "note": [
+    "Punteggio minimo 50/100, di cui almeno 40 nella parte artistico-culturale (lettere A e B, massimo 60). Sotto i 40 punti in A+B la Commissione non esamina gli altri criteri e il progetto è «non idoneo» (artt. 9 e 10).",
+    "La tabella del bando elenca le lettere da A a I. In questa scheda sono raggruppate in due sezioni (AB = lettere A e B; CI = lettere da C a I) solo per esprimere la soglia dei 40 punti, che il bando applica alla somma di A e B.",
+    "Il contributo richiesto non può superare il 35% del costo complessivo del film né 400.000 euro (500.000 per le coproduzioni internazionali). Quello concesso dipende dal punteggio: 100% del richiesto da 90 a 100 punti, 95% da 80 a 89, 90% da 70 a 79, 85% da 60 a 69, 80% da 50 a 59; conta anche la disponibilità delle risorse (l’ultimo finanziato può ricevere un importo ridotto).",
+    "Le ricadute economiche in Sardegna devono essere almeno il 120% del contributo. Contano solo le spese realmente sostenute nel territorio regionale verso operatori con sede operativa in Sardegna; la percentuale dichiarata non può scendere a consuntivo, pena la riduzione proporzionale del contributo (art. 14).",
+    "L’impresa beneficiaria deve sostenere direttamente spese ammissibili almeno pari al contributo concesso; il resto può essere sostenuto da coproduttori e produttore esecutivo (art. 6).",
+    "La percentuale di contribuzione dichiarata all’accettazione è il massimo in rendicontazione: con minori spese il contributo è ridotto in proporzione (art. 12).",
+    "Producer fee rendicontabile fino al 7,5% forfetario del totale parziale e spese generali fino al 10% documentato o al 7,5% forfetario: entrambe non finanziabili con il contributo. Apporti in kind ammessi entro il 5% (personale di amministratore o socio) e il 10% (mezzi e beni propri). Vitto e alloggio: importo massimo fisso di 200 euro per ciascun soggetto impiegato nel progetto (il bando non precisa se al giorno); spese per intelligenza artificiale non oltre il 50% del contributo (art. 13).",
+    "Le spese di sviluppo e preproduzione non sono ammissibili se il progetto ha già avuto il contributo dell’art. 5 della L.R. 15/2006 (sviluppo sceneggiature) in annualità precedenti.",
+    "Cumulo con altri aiuti di Stato e de minimis entro l’intensità massima del Reg. UE 651/2014; le spese già coperte da altri finanziamenti pubblici o dalla Fondazione Sardegna Film Commission restano nel costo totale ma non sono finanziabili (artt. 13 e 26).",
+    "A parità di punteggio precede chi ha il punteggio più alto nella parte culturale (A+B), poi alla lettera B, poi alla lettera D; in ulteriore parità valgono data e ora di presentazione.",
+    "Obblighi a fine progetto: copia dell’opera con audiodescrizione e sottotitoli alla Cineteca Sarda, deposito alla Biblioteca regionale, accordo di distribuzione o dichiarazione di auto-distribuzione; cartello singolo «Film realizzato con il contributo di Regione Autonoma della Sardegna» con logo nei titoli di testa e dicitura della Regione in doppia scritta, italiano e sardo, nei titoli di coda (art. 21).",
+    "La revoca comporta l’esclusione per 3 anni dai bandi della L.R. 15/2006, salvo rinuncia entro i termini ordinari (art. 25).",
+    "Per i documentari al posto della sceneggiatura si allegano trattamento e note di regia (All. 2.2). Il bando non indica una durata minima: rinvia alla definizione di lungometraggio dell’art. 4 della L.R. 15/2006 e alla normativa nazionale."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Regione Sardegna — Bando 2026 per la produzione di cortometraggi di rilevante interesse regionale (L.R. 15/2006, art. 6)",
+      "url": "https://www.regione.sardegna.it/notizie/pubblicato-il-bando-2026-per-i-contributi-alla-produzione-di-cortometraggi-di-rilevante-interesse-regionale-art-6-l-r-15-2006",
+      "descrizione": "Atto distinto dello stesso Servizio, con propria griglia. Testo del bando non letto in questa sessione: secondo la notizia della Regione scadeva il 30 giugno 2026, PEC cultura@pec.regione.sardegna.it (dati da verificare sul testo)."
+    },
+    {
+      "nome": "Fondazione Sardegna Film Commission — Fondo Grandi Produzioni, annualità 2025-2026",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/e7c3e26b-95b7-4781-9526-0e81846b1012/bando-fondo-gp25-rev-def.-del-17-12-25.pdf",
+      "descrizione": "Avviso della Fondazione, a punteggio (massimo 100, soglia minima 60), con tre categorie: A opere di finzione di grande richiamo mediatico, B opere di finzione legate a personalità storiche o culturali sarde, C opere documentarie. Dotazione 925.926 euro; scadenza originaria 4 marzo 2026. Il sito della Fondazione segnala una riapertura dei termini fino al 9 novembre 2026 (non verificata sull’atto). Griglia non trascritta in questa scheda."
+    },
+    {
+      "nome": "Fondazione Sardegna Film Commission — Fondo Sardegna Ospitalità 2025",
+      "url": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/176295945843172",
+      "descrizione": "Fondo della Fondazione per le spese di ospitalità delle produzioni in Sardegna. Avviso non letto in questa sessione: secondo la pagina «I Bandi» della Fondazione è scaduto il 28 febbraio 2026 e prevede una soglia a punteggio (dati da verificare sul testo)."
+    },
+    {
+      "nome": "Fondazione Sardegna Film Commission — Filming Cagliari 2025",
+      "url": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/176700532679658",
+      "descrizione": "Fondo per le spese sostenute nel Comune di Cagliari. Avviso non letto in questa sessione: secondo la pagina «I Bandi» della Fondazione è scaduto il 10 marzo 2026."
+    },
+    {
+      "nome": "Regione Sardegna — Sviluppo di sceneggiature (L.R. 15/2006, art. 5) e diffusione e distribuzione (art. 9)",
+      "url": "https://www.sardegnafilmcommission.it/i-bandi",
+      "descrizione": "Bandi annuali distinti dello stesso Servizio regionale, non di produzione. Chi ha avuto il contributo dell’art. 5 non può rendicontare sviluppo e preproduzione nel bando lungometraggi."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "Graduatoria definitiva 2026 — Allegato A (idonei finanziati e non finanziati) alla Det. n. 2704/60700 del 27/10/2026",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/c32ca7a2-d87c-4638-ab6a-5d324e500b07/a-idonei-finanziati-e-non-finanziati-signed.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2026,
+      "titolo": "Graduatoria definitiva 2026 — Allegato B (non idonei, solo punteggi A e B)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/832957c2-0dc2-4526-93b2-1a078e67ec5d/b-non-idonei-signed.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2026,
+      "titolo": "Graduatoria provvisoria 2026 — griglia di valutazione (Det. prot. n. 57470 del 30/09/2026)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/105b95d2-2e88-4f84-806b-ae7ee8200e6f/griglia-valutazione-lungometraggi-2026-provvisoria.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2025,
+      "titolo": "Graduatoria 2025 — Allegato A, 17 progetti idonei ammessi al contributo (solo punteggio culturale e punteggio totale)",
+      "url": "https://files.regione.sardegna.it/squidex/api/assets/redazionaleras/4dde40fc-6357-4890-a141-914c1aac69c7/all.-a-elenco-idonei-ammessi-al-contributo-lungometraggi-2025-signed.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Bando 2026, art. 10 — tabella punteggi (lettere A e B)",
+        "testo": "A) VALORE ARTISTICO MAX 15 | VALORIZZAZIONE IDENTITA’ 45 PUNTI: vengono indicati i parametri automatici e i casi in cui vi è una valutazione tecnica discrezionale della Commissione | B1) ESPLICITA AMBIENTAZIONE IN SARDEGNA DEL FILM 2 | B2) INCIDENZA IN %DEI GIORNI DI LAVORAZIONE RIPRESE IN SARDEGNA (inclusi giorni di post-produzione) 9 | FINO AL 30% 0 PUNTI | DAL 31 AL50% 3 PUNTI | DAL 51 AL 74% 6 PUNTI | OLTRE IL 75% 9 PUNTI"
+      },
+      {
+        "riferimento": "Bando 2026, art. 10 — tabella punteggi (B4-B6 e lettere C-I)",
+        "testo": "B4) SEDE LEGALE SOCIETA IN SARDEGNA DA ALMENO 2 ANNI OPPURE CONTRATTO DI PRODUZIONE ESECUTIVA CON UN’IMPRESA SARDA, PER ALMENO IL 100% DEL CONTRIBUTO 4 | B5) REGISTA NATO O RESIDENTE IN SARDEGNA DA ALMENO 2 ANNI 6 | B6) VALUTAZIONE DEI PARAMETRI IDENTITARI EFFETUATA A GIUDIZIO DELLA COMMISSIONE 15 | C) CURRICULUM REGISTA Max 8 | D) VALIDITA’ ECONOMICA DEL PROGETTO Max 8 | E) RICADUTE SUL TERRITORIO Max 5 | F) CURRICULUM PRODUTTORE Max 8 | G) … Max 2 | H) … Max 3 | I) … 6 | TOTALE 100"
+      },
+      {
+        "riferimento": "Bando 2026, art. 9 — soglie minime",
+        "testo": "Saranno ammessi a finanziamento esclusivamente i progetti che raggiungeranno un punteggio minimo di 50 punti, di cui almeno 40 punti relativi alla valutazione del contenuto artistico-culturale, meglio specificato nelle lettere A) e B) della tabella di cui all’art. 10. […] Qualora il progetto non raggiunga il punteggio minimo di 40 punti nella suddetta valutazione, lo stesso non sarà ammesso alla fase successiva di valutazione e la Commissione non procederà all’esame degli ulteriori criteri previsti dal bando."
+      },
+      {
+        "riferimento": "Bando 2026, art. 10 — misura del contributo in base al punteggio",
+        "testo": "Valutazione: punteggio attribuito da…- a… | % di contributo concesso rispetto a quanto richiesto | 100-90 100% | 89-80 95% | 79-70 90% | 69-60 85% | 59-50 80%"
+      },
+      {
+        "riferimento": "Bando 2026, art. 15 — percentuale e massimale",
+        "testo": "è concesso nella misura massima del 35% del costo complessivo del film fino ad un ammontare massimo di € 400.000,00 per progetto, elevabili ad euro 500.000,00, in caso di coproduzione internazionale."
+      },
+      {
+        "riferimento": "Bando 2026, art. 14 — spesa sul territorio",
+        "testo": "Le ricadute economiche sul territorio in termini di servizi, impiego di maestranze e professionalità locali, devono essere obbligatoriamente in misura non inferiore al 120% dell’importo del contributo."
+      },
+      {
+        "riferimento": "Det. n. 2704/60700 del 27/10/2026 — applicazione della lettera I",
+        "testo": "secondo il criterio applicato dalla Commissione tecnico-artistica, il solo possesso dei requisiti di opera prima, di opera diretta da una donna o di opera diretta da un giovane under 35 non comporta l’attribuzione automatica dei relativi punti, essendo questi assegnati alle opere individuate come migliori nelle rispettive categorie"
+      }
+    ],
+    "dubbi": [
+      "Il bando 2027 non è ancora uscito: la griglia trascritta è quella dell’annualità 2026 (chiusa). Tra 2025 e 2026 la Regione ha cambiato punti e regole (B4, B5, lettera C, lettera H, fasce del contributo): alla pubblicazione del 2027 la griglia va riletta per intero.",
+      "Le due sezioni AB e CI sono un raggruppamento di questa scheda: la tabella ufficiale elenca le lettere A-I e applica la soglia di 40 punti alla somma di A e B.",
+      "B2: il bando 2026 parla di «giorni di lavorazione riprese in Sardegna (inclusi giorni di post-produzione)» senza definire il denominatore. Nessuna metrica del programma somma riprese e post-produzione: il criterio è a giudizio, con la regola delle fasce scritta nel campo di calcolo.",
+      "Fasce di B2 e B3: il testo dice «fino al 30%», «dal 31 al 50%», «dal 51 al 74%», «oltre il 75%». I valori intermedi (per esempio 30,5%, 74,5% o 75% esatto) non sono coperti dal testo: nella scheda il 75% esatto ricade nella fascia da 6 punti.",
+      "Nella tabella dell’art. 10, accanto al massimo di 6 punti della lettera I compare un «3» isolato (anche nel bando 2025): sembra un refuso di impaginazione. Il totale 100 torna con I = 6 ed è confermato dalle intestazioni della graduatoria («max 6»).",
+      "Lettera H: il bando indica solo la condizione dei 3/4 di autrici e «Max 3»; in graduatoria compaiono punteggi di 1 e 2. La regola di graduazione non è scritta.",
+      "Lettera I: per la Commissione 2026 i punti non sono automatici (vanno alle opere «migliori» di ciascuna ipotesi). Una simulazione che li assegni al solo possesso dei requisiti sovrastima il punteggio.",
+      "Il bando non descrive i sottocriteri delle lettere A, C, D, E, F: le descrizioni riportano i documenti che il bando collega a ciascuna voce, non criteri di attribuzione ufficiali.",
+      "Durata minima del lungometraggio e tipologie ammesse (finzione, documentario, animazione) non sono scritte nel bando: rinvia all’art. 4 della L.R. 15/2006, non letto in questa sessione.",
+      "Informativa privacy: nel 2025 era l’Allegato 14 obbligatorio; nel bando 2026 non è numerata tra gli allegati ma il modulo è nella modulistica. Conviene allegarla comunque.",
+      "L’art. 12 del bando rinvia per l’anticipazione all’art. 17 e l’art. 17 alla «ricevuta della Cineteca Sarda di cui all’art. 20 c. 1», che in realtà è disciplinata dall’art. 21: refusi nei rinvii interni del testo.",
+      "Le annualità 2024 e 2022 e i fondi della Fondazione Sardegna Film Commission (Ospitalità, Filming Cagliari, riapertura di Grandi Produzioni) sono citati dalla pagina «I Bandi» della Fondazione senza aver letto gli atti: date e importi di quelle voci vanno verificati.",
+      "L’elenco dei bandi sul sito della Regione è caricato dal browser: non è stato possibile interrogarlo in automatico per escludere atti successivi al 28/10/2026 (per esempio scorrimenti della graduatoria).",
+      "Ricerca del 14/11/2026: nessuna edizione 2027, rettifica, proroga, FAQ o scorrimento della graduatoria 2026 trovati; la pagina ufficiale dell’annualità 2026 (ultima modifica 28/10/2026) elenca solo bando, modulistica, ammissibilità, graduatoria provvisoria e definitiva. La Det. n. 2142/33936 del 04/08/2026 riguarda la modulistica di rendicontazione dell’annualità 2025, non modifica il bando 2026."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Nota sugli obblighi dell’art. 21: la doppia scritta italiano/sardo vale per i titoli di coda; nei titoli di testa è richiesto un cartello singolo con logo.",
+      "Commissione: corretto il rinvio normativo (l’art. 9 del Bando richiama l’art. 12 della L.R. 15/2006, l’art. 4 l’art. 11).",
+      "Rinvio sulla conservazione dei documenti per 5 anni esteso agli artt. 19 e 24."
+    ],
+    "dubbi": [
+      "B2: il bando conta i giorni di post-produzione in Sardegna e non definisce il denominatore; la metrica ripreseTerritorioPct è un’approssimazione (dichiarata nel criterio).",
+      "Fasce B2/B3: valori tra 30 e 31%, tra 74 e 75% e il 75% esatto non sono coperti dal testo; nella scheda il 75% esatto vale 6 punti.",
+      "Lettera H: il bando dà solo «Max 3» per la condizione dei 3/4 di autrici; in graduatoria compaiono anche 1 e 2 punti, regola non scritta.",
+      "Lettera I: punti non automatici secondo la Commissione 2026 (Det. n. 2704/60700).",
+      "Griglia dell’annualità 2026 (chiusa): il bando 2027 non è uscito e potrebbe cambiare punti, come accaduto tra 2025 e 2026."
+    ]
+  }
+}

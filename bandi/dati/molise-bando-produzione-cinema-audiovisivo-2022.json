@@ -1,0 +1,676 @@
+{
+  "id": "molise-bando-produzione-cinema-audiovisivo-2022",
+  "fondoId": "molise",
+  "revisione": "2026-11-14",
+  "nome": "Regione Molise — Bando per il sostegno alla produzione di opere cinematografiche e audiovisive, realizzate da imprese operanti sul territorio nazionale, europeo (PSC/FSC 2022)",
+  "nomeBreve": "Molise · Bando produzione cinema e audiovisivo 2022",
+  "ente": "Regione Molise — Dipartimento Primo «Presidenza della Giunta regionale», Servizio «Competitività dei sistemi produttivi…» (RUP: Direttore del Servizio). Risorse FSC del Piano Sviluppo e Coesione (PSC) Molise.",
+  "regione": "Molise",
+  "territorio": "Molise",
+  "gentilizio": "molisani",
+  "fonte": "Determinazione Dirigenziale n. 5146 del 07/09/2022, Allegato 1 «Bando per il sostegno alla produzione di opere cinematografiche e audiovisive, realizzate da imprese operanti sul territorio nazionale, europeo» (Codice RNA CAR 23606), in attuazione della DGR n. 279 del 10/08/2022; modulistica di rendicontazione approvata con DD n. 2565 del 15/05/2024.",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Unica edizione finora individuata di un bando regionale molisano per la produzione audiovisiva: contributi a fondo perduto (art. 54 GBER) a imprese di produzione italiane o europee, produttori unici o coproduttori di maggioranza, per film, opere televisive e opere web narrative in lingua italiana girate prevalentemente in Molise. Il contributo è pari al 50% delle spese ammissibili sostenute in Molise, fino a 400.000 euro; una Commissione assegna fino a 100 punti: 80 sui criteri A–E a giudizio (solo 0, 5 o 10 per criterio) e 20 punti premiali fissi (sezione F), e i progetti con almeno 40 punti sui criteri A–E entrano in graduatoria fino a esaurimento dei 2 milioni di euro. Al 14 novembre 2026 non risultano nuove edizioni; la Molise Film Commission è stata annunciata a luglio 2025 ma non risulta operativa con propri fondi.",
+  "paginaUfficiale": "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/18918",
+  "fontiUrl": [
+    {
+      "titolo": "Regione Molise — pagina PSC del bando (bando, allegati, FAQ, modulistica di rendicontazione)",
+      "url": "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/18918",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Movies in Molise (portale regionale delle location) — notizia del bando con link ad atto e allegati",
+      "url": "https://www.moviesinmolise.eu/News/bando-per-il-sostegno-alla-produzione-di-opere-cinematografiche-e-audiovisive",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 279 del 10/08/2022 — attivazione risorse FSC e scheda dell’avviso",
+      "url": "https://cloud.urbi.it/urbi/progs/urp/solhome.sto?DB_NAME=l1200158",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DD n. 2565 del 15/05/2024 — approvazione modulistica di rendicontazione",
+      "url": "https://www.regione.molise.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/18918",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2022,
+      "pubblicato": "2022-09-07",
+      "scadenza": "2022-10-14",
+      "nota": "DD n. 5146 del 07/09/2022 (DGR n. 279/2022), dotazione 2.000.000 euro FSC-PSC; domande dal 3 al 14 ottobre 2022 via PEC. Progetti da concludere entro il 30/06/2024 e rendicontare entro il 31/07/2024. «Pubblicato» è la data della determinazione: quella sul BURM non è verificata."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2022,
+      "dal": "2022-10-03",
+      "al": "2022-10-14",
+      "nota": "Dalle ore 11.00 di lunedì 3 ottobre 2022 alle ore 11.00 di venerdì 14 ottobre 2022 (fa fede la ricezione della PEC sul Server Unico regionale)."
+    }
+  ],
+  "prossimaEdizione": null,
+  "sogliaTotale": 40,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Commissione nominata con provvedimento del Direttore del Primo Dipartimento della Regione Molise; procedimento a graduatoria ai sensi dell’art. 5, comma 2, del D.Lgs. 123/1998. Per i criteri A–E il bando prevede solo tre livelli (insufficiente 0, buono 5, ottimo 10); i criteri premiali F danno punti fissi (7, 6, 7) se esistono certificazioni ufficiali. Il bando non dice se i punti derivano da media, somma o consenso dei commissari."
+  },
+  "invio": {
+    "canale": "PEC",
+    "indirizzo": "regionemolise@cert.regione.molise.it",
+    "oggetto": "Servizio Competitività - Bando sostegno opere cinematografiche e audiovisive",
+    "regole": [
+      "Invio esclusivamente da una casella PEC dell’impresa (le imprese estere devono dotarsi di una PEC italiana); dimensione complessiva massima 40 Mb.",
+      "Documenti obbligatori (art. 11, c. 3) salvati singolarmente nei formati indicati: Allegati A e B in PDF con firma autografa del legale rappresentante, Allegati C e D in Excel, Allegato E in PDF.",
+      "Documentazione facoltativa per il merito (art. 11, c. 4) in PDF singoli dentro un’unica cartella .zip denominata «Documentazione ai fini della valutazione del merito»: se manca, la Commissione non può assegnare i punteggi corrispondenti.",
+      "Non sono ammesse integrazioni dopo l’invio; la modulistica non conforme agli allegati A–E comporta l’inammissibilità.",
+      "Gli apporti finanziari dichiarati come confermati ma non documentati da contratti, bozze, deal memo o lettere d’impegno non sono considerati nella valutazione.",
+      "Una sola domanda per impresa, come produttore unico o come coproduttore, pena l’esclusione di entrambe le candidature."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "film",
+      "nome": "Opera cinematografica narrativa in lingua italiana (durata superiore a 52 minuti), destinata prioritariamente alle sale",
+      "griglia": "molise-2022",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2022": 400000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Molise (personale residente, fornitori e professionisti con sede o residenza fiscale in Molise), non del costo di produzione. Il tetto di 400.000 € vale per progetto."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "tv",
+      "nome": "Opera televisiva narrativa in lingua italiana: film (oltre 52 minuti) o serie (almeno due episodi per complessivi 90 minuti o più)",
+      "griglia": "molise-2022",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2022": 400000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Molise (personale residente, fornitori e professionisti con sede o residenza fiscale in Molise), non del costo di produzione. Il tetto di 400.000 € vale per progetto."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "web",
+      "nome": "Opera web narrativa in lingua italiana (durata superiore a 52 minuti), destinata a servizi media audiovisivi a richiesta",
+      "griglia": "molise-2022",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2022": 400000
+        },
+        "nota": "Percentuale delle sole spese ammissibili sostenute in Molise (personale residente, fornitori e professionisti con sede o residenza fiscale in Molise), non del costo di produzione. Il tetto di 400.000 € vale per progetto."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "molise-2022": {
+      "id": "molise-2022",
+      "nome": "Criteri di valutazione — art. 13, c. 5, Bando DD 5146/2022",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Efficacia del progetto/operazione rispetto agli output ed agli indicatori di risultato",
+          "max": 20,
+          "obiettivo": "Occupazione di lavoratori residenti in Molise e innovazioni organizzative e di marketing (distribuzione, accessibilità).",
+          "criteri": [
+            {
+              "id": "A.1",
+              "nome": "Incremento del tasso di occupazione regionale",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Capacità di contribuire all’incremento del tasso di occupazione regionale attraverso l’occupabilità di lavoratori del settore residenti in Molise.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Capacità ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capacità buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Capacità insufficiente"
+                }
+              ]
+            },
+            {
+              "id": "A.2",
+              "nome": "Innovazioni di organizzazione o marketing",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "distribuzione",
+              "descrizione": "Capacità del progetto di introdurre innovazioni a livello di organizzazione o marketing (in particolare, si valuteranno i seguenti aspetti: presenza di accordi per la distribuzione (deal memo, lettera o contratto firmato); progettazione di strumenti ed attività di marketing adeguati; innovatività delle strategie di diffusione e distribuzione dell’opera; adozione di strumenti e modalità per garantire una maggiore accessibilità al prodotto (incluso previsione costi sottotitolatura plurilingue ed audiodescrizione)).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Capacità ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capacità buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Capacità insufficiente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Vantaggio competitivo del Progetto in termini tecnici e di mercato",
+          "max": 20,
+          "obiettivo": "Innovazione produttiva, rinnovamento della scena autoriale e professionale, innovazioni di prodotto e di processo.",
+          "criteri": [
+            {
+              "id": "B.1",
+              "nome": "Innovazione «produttiva» e rinnovamento della scena autoriale",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Capacità di contribuire all’incremento del tasso di innovazione “produttiva” delle imprese (in particolare, si valuterà l’attenzione al rinnovamento della scena autoriale e professionale).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Capacità ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capacità buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Capacità insufficiente"
+                }
+              ]
+            },
+            {
+              "id": "B.2",
+              "nome": "Innovazioni di prodotto, di processo e organizzative",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Capacità dell’operazione di generare innovazioni di prodotto, di processo e organizzative che accrescano la competitività delle imprese.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Capacità ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capacità buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Capacità insufficiente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Efficienza del Progetto",
+          "max": 10,
+          "obiettivo": "Ricadute economiche dirette e valorizzazione del territorio regionale.",
+          "criteri": [
+            {
+              "id": "C.1",
+              "nome": "Impatto economico degli investimenti",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Impatto economico degli investimenti (in particolare, si procederà ad analizzare: le ricadute economiche dirette sul territorio regionale; il grado di coinvolgimento della filiera produttiva dell’audiovisivo regionale; il grado di coinvolgimento delle maestranze regionali; la capacità di attivare relazioni con imprese ed enti locali in merito al progetto, la capacità di valorizzare e far conoscere gli aspetti storici, culturali, sociali e paesaggistici dell’identità e tradizione del territorio regionale).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Impatto ottimo"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Impatto buono"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Impatto insufficiente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Realizzabilità del Progetto",
+          "max": 20,
+          "obiettivo": "Sostenibilità del cronoprogramma e congruità delle spese.",
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Sostenibilità del cronoprogramma",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Sostenibilità del cronoprogramma (in termini organizzativi e temporali).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Sostenibilità ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Sostenibilità buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Sostenibilità insufficiente"
+                }
+              ]
+            },
+            {
+              "id": "D.2",
+              "nome": "Coerenza e congruità delle spese ammissibili",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle spese ammissibili rispetto all’iniziativa progettuale proposta.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Coerenza ottima"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Coerenza buona"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Coerenza insufficiente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Qualità del Progetto",
+          "max": 10,
+          "obiettivo": "Originalità e qualità artistica dell’opera.",
+          "criteri": [
+            {
+              "id": "E.1",
+              "nome": "Originalità e qualità artistica",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, della visione dell’autore e del linguaggio cinematografico; qualità ed originalità della sceneggiatura, ovvero del soggetto e dei temi trattati; eventuali tecniche di animazione utilizzate; altri eventuali materiali artistici a corredo della candidatura.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Livello ottimo"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Livello buono"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Livello insufficiente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Criteri premiali",
+          "max": 20,
+          "obiettivo": "Punteggi fissi attribuiti sulla base di certificazioni ufficiali; non concorrono alla soglia minima di 40 punti.",
+          "criteri": [
+            {
+              "id": "F.1",
+              "nome": "Innovazioni in campo ambientale (Green Film)",
+              "max": 7,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Progetti che prevedono innovazioni in campo ambientale, quali ad esempio la produzione sostenibile e l’utilizzo del protocollo GREEN FILM o altre certificazioni ambientali riconosciute.",
+              "valori": [
+                {
+                  "punti": 7,
+                  "etichetta": "Esistenza delle certificazioni ufficiali"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Certificazione assente o non documentata"
+                }
+              ]
+            },
+            {
+              "id": "F.2",
+              "nome": "Posizione contabile presso il MiC – DG Cinema e audiovisivo anteriore al 1° gennaio 2022",
+              "max": 6,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetti presentati da imprese in possesso di una posizione contabile presso il Ministero della Cultura – Direzione Generale Cinema e audiovisivo (apertura della posizione anteriore al 1° gennaio 2022).",
+              "valori": [
+                {
+                  "punti": 6,
+                  "etichetta": "Esistenza delle certificazioni ufficiali"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Certificazione assente o non documentata"
+                }
+              ]
+            },
+            {
+              "id": "F.3",
+              "nome": "Scrittura, sviluppo e pre-produzione già realizzati e documentati",
+              "max": 7,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Progetti presentati da imprese che abbiano già elaborato e/o realizzato le fasi di scrittura, sviluppo e pre-produzione dell’opera e possano dimostrarlo con idonea documentazione, ufficialmente depositata presso Enti e/o Istituzioni operanti nel settore del Cinema.",
+              "valori": [
+                {
+                  "punti": 7,
+                  "etichetta": "Esistenza delle certificazioni ufficiali"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Certificazione assente o non documentata"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Allegato A — Domanda di partecipazione (PDF, firma autografa del legale rappresentante)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Allegato B — Scheda tecnica e artistica del Progetto (PDF, firma autografa)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Allegato C — Piano finanziario preventivo a copertura dei costi di Progetto (Excel)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato D — Preventivo dei costi di Progetto (IVA esclusa) con dettaglio delle spese da sostenere in Molise (Excel)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato E — Dichiarazione antimafia ex art. 85 D.Lgs. 159/2011 (per progetti con finanziamento superiore a 150.000 euro)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Documento di identità in corso di validità del legale rappresentante (PDF)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Visura camerale o documento analogo (solo imprese straniere)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratti, deal memo o documentazione di coproduzione che attestino la titolarità a presentare la domanda (se il richiedente non è produttore unico)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Ulteriori contratti, bozze, deal memo o lettere d’impegno sull’assetto e la solidità produttiva",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Soggetto o trattamento o sceneggiatura dell’opera",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Curriculum dell’impresa richiedente e di tutti i soggetti coinvolti nella produzione (coproduttori, produttori esecutivi)",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Filmografia del regista",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Filmografia dello sceneggiatore",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Contratti, lettere, deal memo di cofinanziamento e/o sponsorizzazione",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratti, bozze, deal memo o lettere d’impegno per la distribuzione dell’opera",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Protocollo GREEN FILM o altre certificazioni ambientali riconosciute",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Domande di contributo presentate al MiC sui selettivi per scrittura e/o sviluppo e pre-produzione",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Documentazione depositata presso Istituzioni o Enti del settore Cinema che attesti la preesistenza della sceneggiatura o dello sviluppo",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Attestazione dell’apertura di una posizione contabile presso il MiC – DG Cinema e audiovisivo anteriore al 1° gennaio 2022",
+      "obbligo": "punteggio"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "produttore",
+      "testo": "Impresa di produzione cinematografica e audiovisiva operante in Italia e/o nell’UE, in forma singola, produttore unico o coproduttore con quota di maggioranza (da contratto, deal memo o lettera d’impegno; con Rai Fiction basta il contratto di attivazione)."
+    },
+    {
+      "id": "anzianita",
+      "testo": "Costituita da almeno tre anni alla data della domanda, con almeno due bilanci depositati."
+    },
+    {
+      "id": "ateco",
+      "testo": "Opera da almeno tre anni con codice ATECO 59.11 primario o secondario (o NACE Rev. 2 59.11 per le imprese UE); iscritta alla sezione ordinaria del Registro delle imprese o ente omologo."
+    },
+    {
+      "id": "regolarita",
+      "testo": "Non impresa in difficoltà (art. 2, punto 18, Reg. 651/2014); attiva, non in liquidazione o procedure concorsuali (salvo concordato in continuità); rispetto del CCNL di settore e degli obblighi contributivi; nessuna sanzione interdittiva o condanna ex art. 80 D.Lgs. 50/2016; regolarità antimafia oltre 150.000 euro di contributo; DURC regolare (fino a 8 giorni per regolarizzarlo)."
+    },
+    {
+      "id": "opere",
+      "testo": "Opere narrative in lingua italiana (film, TV, web) di cui si detengono i diritti; esclusi cortometraggi, factual, talent, reality, videoclip, programmi TV di informazione o intrattenimento e contenuti pornografici, pubblicitari o promozionali."
+    },
+    {
+      "id": "giorni-molise",
+      "testo": "Almeno 9 giorni di riprese in Molise e, in aggiunta, almeno il 50% dei giorni di ripresa totali in Molise OPPURE almeno il 50% dei costi totali di produzione preventivati sostenuti in Molise."
+    },
+    {
+      "id": "spesa-minima",
+      "testo": "Costi ammissibili (cioè spese sostenute in Molise) non inferiori a 30.000 euro."
+    },
+    {
+      "id": "avvio",
+      "testo": "Attività sul territorio regionale avviate non prima della data di presentazione della domanda, pena l’inammissibilità."
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "mantenimento-requisiti",
+      "etichetta": "Mantenimento dei requisiti dell’art. 2, c. 3",
+      "mesi": 36,
+      "nota": "Art. 14, c. 1, lett. c: 3 anni dalla data di erogazione del contributo (non dalla concessione)."
+    },
+    {
+      "id": "conservazione",
+      "etichetta": "Conservazione della documentazione",
+      "mesi": 120,
+      "nota": "Art. 14, c. 1, lett. i: 10 anni dalla data del provvedimento di erogazione (non dalla concessione); l’art. 20 indica anche 5 anni di disponibilità presso l’impresa dalla data di pagamento per i controlli."
+    }
+  ],
+  "scadenzeNote": [
+    "Restituzione via PEC di provvedimento di concessione e contratto di finanziamento firmati: Art. 13, c. 11: entro 7 giorni continuativi dalla ricezione, a pena di esclusione.",
+    "Comunicazione della data di inizio riprese in Molise con piano di lavorazione aggiornato: Art. 18: con almeno 10 giorni di anticipo; poi comunicazione di fine riprese (piano definitivo ed elenco location) e di conclusione del progetto.",
+    "Conclusione del progetto (comunicazione «Conclusione delle attività»): Artt. 4, 7, 14 e 17: data fissa 30/06/2024 salvo proroghe, non un termine in mesi dalla concessione.",
+    "Richiesta di saldo e rendicontazione finale: Art. 17, c. 4: entro 30 giorni dalla PEC di conclusione delle attività (non dalla concessione); art. 7, c. 4 e art. 14, c. 1, lett. b: comunque entro il 31/07/2024 salvo proroghe. Integrazioni: art. 17, c. 7 dà 20 giorni solari pena la revoca totale, mentre l’art. 15, c. 12 indica un termine non superiore a 10 giorni di calendario per la documentazione carente."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 50,
+      "condizione": "Facoltativo, fino al 50% del contributo concesso, su richiesta e dietro fideiussione bancaria o polizza assicurativa di pari importo (compagnie iscritte all’albo IVASS), più documentazione sull’esistenza dell’impresa e autocertificazione sull’assenza di procedure esecutive o concorsuali."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 50,
+      "condizione": "A conclusione del progetto e a rendicontazione di tutte le spese coerenti con il piano finanziario autorizzato; unica soluzione (100%) se l’anticipo non è stato chiesto. Subordinato a DURC, verifica Equitalia, comunicazione antimafia e controlli di primo livello."
+    }
+  ],
+  "note": [
+    "Spese ammissibili solo se sostenute in Molise: personale residente in Molise, fornitori con sede legale o unità locale in Molise, professionisti con residenza fiscale in Molise. Il contributo è il 50% di queste spese, fino a 400.000 euro.",
+    "Obbligo territoriale: almeno 9 giorni di riprese in Molise, e in aggiunta almeno il 50% dei giorni di ripresa totali oppure almeno il 50% dei costi totali di produzione in Molise. spesaTerritorioMinPct = 0 perché il bando non esprime la spesa minima in percentuale del contributo.",
+    "Soglia: almeno 40 punti calcolati sui soli criteri A–E (massimo 80); i 20 punti premiali F contano per la graduatoria ma non per raggiungere la soglia.",
+    "Non ammissibili, tra l’altro: scrittura, sviluppo e diritti, promozione e distribuzione del prodotto finito, colonna sonora, spese generali, producer fee, carburante, rimborsi spese, diarie del personale non residente, titoli di viaggio e pedaggi, documenti di spesa sotto i 30 euro IVA esclusa, beni durevoli, prestazioni di coproduttori o finanziatori, IVA. Prestazioni occasionali di residenti entro il 15% dei costi ammissibili.",
+    "Cumulo consentito con altri aiuti di Stato (anche sugli stessi costi) entro l’intensità massima del Reg. 651/2014, con aiuti de minimis e con agevolazioni fiscali statali generali (es. tax credit).",
+    "Obblighi di visibilità (art. 14 e art. 17, c. 6): logo PSC e dicitura «con il sostegno della Regione Molise» nei titoli e sui materiali promozionali; logo della Regione su trailer e teaser; per film e opere TV, informare la Regione della conferenza stampa programmata (con regista e/o interpreti principali); per i film almeno una proiezione in Molise con il regista e almeno un interprete principale; uso gratuito di opera, foto e backstage per fini istituzionali; consegna di 2 copie master e di 20 foto di scena/backstage e 20 foto delle location.",
+    "Revoca totale se la spesa rendicontata o riconosciuta è inferiore al 40% dell’importo ammesso; le variazioni non possono ridurre il contributo di oltre il 40% né abbassare il punteggio ottenuto.",
+    "Il bando è stato finanziato una sola volta con risorse FSC della Sezione ordinaria del PSC Molise prive di obbligazioni giuridicamente vincolanti, riprogrammate con la DGR 279/2022 e da impegnare entro il 31/12/2022 (Area tematica 03, settore 03.01), non con una legge regionale per il cinema: una riedizione non è prevedibile in base alla cadenza.",
+    "Al 14/11/2026 nessun nuovo bando regionale per la produzione: la Molise Film Commission è stata presentata a Termoli il 26/07/2025 (statuto atteso entro il 2025), senza fondi di produzione annunciati. Per i produttori interessati al Molise restano i selettivi MiC e il fondo FRAME (solo sviluppo e pre-produzione).",
+    "Durate: film e opere web oltre 52 minuti (52 esclusi), anche in animazione; opere televisive come film oltre 52 minuti oppure serie di almeno 2 episodi per complessivi 90 minuti o più, destinate prioritariamente a un’emittente televisiva."
+  ],
+  "altriBandi": [
+    {
+      "nome": "South Adriatic Co-Development Film Fund — progetto FRAME (Interreg IPA South Adriatic 2021-2027)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/02/1_Bando-FRAME_ITA.pdf",
+      "descrizione": "Avviso della Fondazione Apulia Film Commission (capofila) del 19/02/2026, con partner la Fondazione Molise Cultura e, come partner associato, la Regione Molise. Finanzia solo sviluppo e pre-produzione di coproduzioni tra Italia e Albania/Montenegro, con ambientazione o autori legati a Albania, Montenegro, Molise o Puglia: dotazione 160.000 euro, 100% delle spese fino a 20.000 euro per progetto, a punteggio. Non è un fondo di produzione; sul sito di Apulia Film Commission risulta una determina di approvazione della graduatoria (file datato luglio 2026, non letto)."
+    }
+  ],
+  "esitiPubblici": [],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Art. 13, cc. 3-4",
+        "testo": "la Commissione prenderà in considerazione i criteri di seguito riportati, con i relativi punteggi, fino ad un massimo di 100 punti. 4. Il punteggio minimo per poter accedere al contributo è pari a 40 punti riferiti ai criteri di cui alle lettere A, B, C, D, E della seguente tabella."
+      },
+      {
+        "riferimento": "Art. 13, c. 5, tabella (A–E)",
+        "testo": "A. Efficacia del progetto/operazione ... occupabilità di lavoratori del settore residenti in Molise. Capacità insufficiente: punti 0 Capacità buona: punti 5 Capacità ottima: punti 10 ... B. Vantaggio competitivo ... C. Efficienza del Progetto Impatto economico degli investimenti ... Impatto ottimo: punti 10 ... D. Realizzabilità del Progetto Sostenibilità del cronoprogramma ... Coerenza e congruità delle spese ammissibili ... E. Qualità del Progetto ... Livello ottimo: punti 10"
+      },
+      {
+        "riferimento": "Art. 13, c. 5, tabella (F)",
+        "testo": "F. Criteri premiali: ... protocollo GREEN FILM o altre certificazioni ambientali riconosciute. Esistenza delle certificazioni ufficiali: punti 7 ... posizione contabile presso il Ministero della Cultura – Direzione Generale Cinema e audiovisivo (apertura della posizione anteriore al 1° gennaio 2022). ... punti 6 ... fasi di scrittura, sviluppo e pre-produzione ... ufficialmente depositata presso Enti e/o Istituzioni operanti nel settore del Cinema. ... punti 7 TOTALE MASSIMO 100"
+      },
+      {
+        "riferimento": "Art. 6, c. 2",
+        "testo": "l’intensità di aiuto (a fondo perduto) per tutte le spese ammissibili (di cui al successivo Articolo 8) relative alla produzione delle opere considerate dal presente Bando è pari al 50%. In ogni caso, il contributo massimo concedibile non può superare 400.000,00 euro."
+      },
+      {
+        "riferimento": "Art. 3, cc. 2-3",
+        "testo": "le opere cinematografiche, le opere televisive e le opere web dovranno prevedere almeno 9 giorni di riprese sul territorio della regione Molise. 3. Tutte le opere dovranno soddisfare, inoltre, almeno uno dei seguenti criteri: a) realizzare sul territorio regionale non meno del 50% dei giorni di ripresa totali; b) sostenere sul territorio regionale almeno il 50% dei costi totali di produzione preventivati."
+      },
+      {
+        "riferimento": "Art. 11, c. 2",
+        "testo": "La candidatura ... può essere presentata a partire dalle ore 11.00 di lunedì 3 ottobre 2022 fino alle ore 11.00 di venerdì 14 ottobre 2022."
+      }
+    ],
+    "dubbi": [
+      "Bando chiuso (unica edizione 2022, risorse FSC una tantum): la griglia serve come riferimento storico, non per una domanda presentabile oggi. Nessuna edizione 2023-2026 né annunci per il 2027 trovati su web e stampa al 14/11/2026.",
+      "La pagina ufficiale regione.molise.it (IDPagina 18918) era irraggiungibile il 14/11/2026 (connessione rifiutata, poi HTTP 503): non è stato possibile verificare graduatoria, FAQ, proroghe o eventuali nuovi atti pubblicati lì. Testi usati: PDF ufficiali salvati in fonti/molise/ (DD 5146/2022 con bando e allegati, DGR 279/2022, DD 2565/2024).",
+      "Graduatoria ed elenco dei beneficiari 2022 non trovati (esitiPubblici vuoto): da cercare sul BURM o sulla pagina regionale quando torna raggiungibile.",
+      "Soglia: i 40 punti si contano sui soli criteri A–E (massimo 80), non sul totale di 100: la scheda lo indica con sogliaSuSezioni = A, B, C, D, E.",
+      "Il bando non dice come la Commissione combina i giudizi dei singoli commissari (media, somma o consenso), né come risolve i pari merito.",
+      "Massimale: il tetto di 400.000 euro vale per progetto e non è legato a un anno; è indicato con la chiave «2022», l’anno di emanazione. La dotazione di 2.000.000 euro è unica per tutte e tre le tipologie (nessuna ripartizione per categoria).",
+      "Erogazione: l’anticipo arriva al massimo al 50% ed è facoltativo; il saldo è il resto (50% se l’anticipo è stato preso al massimo, 100% in unica soluzione se non è stato chiesto).",
+      "Molise Film Commission: annunciata il 26/07/2025 (stampa di settore), statuto atteso entro il 2025; non ho trovato atti costitutivi né bandi propri. Va ricontrollata periodicamente perché potrebbe gestire un futuro fondo.",
+      "Revisione 14/11/2026: tabella dell’art. 13, c. 5 riletta voce per voce sul testo DD 5146/2022 (Allegato 1). Le sezioni A 20, B 20, C 10, D 20, E 10 e F 20 (7+6+7) coincidono, per un totale di 100. Coincidono anche la soglia di 40 su A–E, il contributo del 50% con tetto di 400.000 euro, la dotazione di 2.000.000 euro, la finestra dal 3 al 14/10/2022, la PEC, la spesa minima di 30.000 euro e l’obbligo di 9 giorni più il 50%."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Descrizione: chiarito che i 100 punti sono 80 (criteri A–E, livelli 0/5/10) + 20 premiali F, non 100 + 20.",
+      "Scadenze: «rendicontazione» da mesi 1 a null, perché i 30 giorni decorrono dalla PEC di conclusione e non dalla concessione (art. 17, c. 4). Segnalato anche il contrasto tra 20 giorni (art. 17, c. 7) e 10 giorni (art. 15, c. 12) per le integrazioni.",
+      "Scadenze di mantenimento (36 mesi) e conservazione (120 mesi): precisato nelle note che decorrono dall’erogazione, non dalla concessione.",
+      "Note: l’art. 14, lett. l) non impone di organizzare una conferenza stampa, ma di informarne la Regione (solo film e opere TV); aggiunte le condizioni della proiezione in Molise.",
+      "Note: precisata l’origine dei fondi. Sono risorse FSC «prive di OGV», riprogrammate con la DGR 279/2022 e da impegnare entro il 31/12/2022 (testo della DGR e della DD 5146).",
+      "Storico: indicato che la data «pubblicato» è quella della DD 5146, non la pubblicazione sul BURM (non verificata).",
+      "Aggiunto il campo informativo sogliaSuSezioni = [A, B, C, D, E]: la soglia di 40 punti (art. 13, c. 4) si conta solo su A–E. Il simulatore attuale (scoring.js) confronta sogliaTotale con il totale, F compresa."
+    ],
+    "dubbi": [
+      "La pagina ufficiale regione.molise.it (IDPagina 18918) era ancora irraggiungibile il 14/11/2026 (connessione resettata). Non ho potuto verificare FAQ, proroghe della scadenza del 30/06/2024, graduatoria e beneficiari. Le concessioni sono avvenute entro il 31/12/2022, come conferma la DD 2565/2024.",
+      "Nessuna edizione 2023-2026 né atti di modifica dei criteri trovati con due ricerche web del 14/11/2026: risultano solo il bando 2022 (anche su Italy for Movies) e il fondo FRAME, che finanzia solo lo sviluppo.",
+      "Il modulo Allegato E (dichiarazione antimafia) non è tra i file salvati in fonti/molise/: non incide sulla griglia.",
+      "La regola di aggregazione dei giudizi dei commissari (media, somma o consenso) e il criterio di spareggio non sono indicati nel bando."
+    ]
+  }
+}

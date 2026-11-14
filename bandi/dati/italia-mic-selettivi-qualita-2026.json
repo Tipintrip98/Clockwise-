@@ -1,0 +1,1334 @@
+{
+  "id": "italia-mic-selettivi-qualita-2026",
+  "fondoId": "mic-selettivi",
+  "revisione": "2026-11-14",
+  "nome": "Italia — Contributi selettivi MiC-DGCA 2026: film di qualità e identità culturale, documentari, animazione",
+  "nomeBreve": "MiC · Selettivi 2026 — qualità, documentari, animazione",
+  "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
+  "regione": "Italia",
+  "territorio": "Italia",
+  "gentilizio": "italiani",
+  "fonte": "Decreto del Direttore generale Cinema e audiovisivo 15 maggio 2026, rep. n. 1238 — «Bando per la concessione di contributi selettivi per la scrittura, lo sviluppo e la produzione di opere cinematografiche e audiovisive – articolo 26 della legge n. 220 del 2016 – Anno 2026» (63 pagine: articoli 1-28, tabelle 1-6, allegati 1 e 2)",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Bando annuale della DGCA per imprese di produzione indipendenti italiane (e, per la sola scrittura, per autori persone fisiche). Finanzia a fondo perduto scrittura di sceneggiature, sviluppo e produzione di opere prime e seconde, opere di giovani autori, documentari, cortometraggi, animazione e film di particolare qualità artistica o sull’identità culturale italiana. La Commissione degli esperti nominata dal Ministro assegna un punteggio per ogni criterio e sotto criterio delle tabelle allegate al bando, stila una graduatoria per linea e determina l’entità del contributo; due sessioni l’anno sulla piattaforma DGCOL.",
+  "paginaUfficiale": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
+  "fontiUrl": [
+    {
+      "titolo": "Bando contributi selettivi 2026 — D.D. 15 maggio 2026 rep. 1238 (PDF)",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/dlm_uploads/2026/05/Anno-2026-Bando-per-la-concessione-di-contributi-selettivi-per-la-scrittura-lo-sviluppo-e-la-produzione-di-opere-cinematograf.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bando contributi selettivi 2026 — link di download del sito DGCA",
+      "url": "https://cinema.cultura.gov.it/download/38796/",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso DGCA 15 maggio 2026 «Bando per la concessione di contributi selettivi – Anno 2026»",
+      "url": "https://cinema.cultura.gov.it/avvisi/bando-per-la-concessione-di-contributi-selettivi-anno-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Vademecum Contributi selettivi 2026 (agg. 3 giugno 2026): guida DGCOL, spese istruttorie, allegati, punteggio pari opportunità",
+      "url": "https://cinema.cultura.gov.it/download/39131/",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ Requisiti di accesso bando selettivi 2026 (10 giugno 2026)",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/06/Faq_Requisiti-di-accesso-bando-2026.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avvisi agli utenti — Contributi selettivi (bandi, rettifiche, graduatorie)",
+      "url": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bandi Legge Cinema (elenco dei bandi per anno)",
+      "url": "https://cinema.cultura.gov.it/normativa/bandi-legge-cinema/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Incentivi assegnati (decreti di approvazione delle graduatorie)",
+      "url": "https://cinema.cultura.gov.it/cosa-facciamo/sostegni-economici/incentivi-assegnati/",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Materiali utili DGCOL (vademecum)",
+      "url": "https://cinema.cultura.gov.it/per-gli-utenti/come-fare/dgcol/",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DM 6 settembre 2024 n. 271 — costituzione e funzionamento della Commissione degli esperti",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2024/11/DM-6-settembre-2024-rep.-271-Disposizioni-applicative-in-materia-di-costituzione-e-funzionamento-della-commissione-degli-espert.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DM 8 ottobre 2024 n. 345 — disposizioni applicative sui contributi selettivi (art. 26)",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2024/11/DM-8-ottobre-2024-rep.-345-art.-26-contributi-selettivi-signed.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 14 novembre 2025 rep. 3868 — suddivisione della Commissione in tre sezioni",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2025/11/d.d.-14-novembre-2025-rep.-3868.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso 17 luglio 2026 di manifestazione di interesse per la nomina della nuova Commissione degli esperti (DM 3 luglio 2026 n. 280)",
+      "url": "https://cinema.cultura.gov.it/wp-content/uploads/2026/07/20260716_Avviso-Manifestazione-di-interesse_-esperti-produzione_2026_def.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bando contributi selettivi 2025 — D.D. 9 giugno 2025 rep. 2251 (PDF)",
+      "url": "https://cinema.cultura.gov.it/download/35972/",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 3 ottobre 2025 rep. 3548 — differimento della seconda sessione 2025",
+      "url": "https://cinema.cultura.gov.it/download/36766/",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 10 luglio 2026 rep. 2211 — graduatorie Produzione, II sessione 2025",
+      "url": "https://cinema.cultura.gov.it/download/39356/",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 2 aprile 2026 rep. 738 — graduatorie Produzione, I sessione 2025",
+      "url": "https://cinema.cultura.gov.it/download/38395/",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 10 luglio 2026 rep. 2212 — graduatoria Film di particolare qualità artistica e identità italiana, II sessione 2025",
+      "url": "https://cinema.cultura.gov.it/download/39361/",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Piattaforma DGCOL",
+      "url": "https://doc.cultura.gov.it/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-05-15",
+      "scadenza": "2026-10-15",
+      "nota": "D.D. 15 maggio 2026 rep. 1238. Prima sessione 3-17 giugno 2026, seconda 1-15 ottobre 2026. Al 14 novembre 2026 nessuna rettifica né graduatoria pubblicata. Dal 2026 la linea «film di particolare qualità artistica e identità culturale italiana» è nel bando generale (art. 21, lett. f)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-06-09",
+      "scadenza": "2025-11-04",
+      "nota": "D.D. 9 giugno 2025 rep. 2251, rettificato dal rep. 2582. Sessioni 1-15 luglio e 14 ottobre-4 novembre 2025 (differita). Graduatorie Produzione: D.D. rep. 738 del 2 aprile 2026 e rep. 2211 del 10 luglio 2026. Nel 2025 i film di qualità e identità italiana avevano un bando separato (rep. 2249)."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-08-08",
+      "scadenza": null,
+      "nota": "Data e numero ricavati dal timbro di protocollo del PDF pubblicato sul sito («DG-CA|08/08/2024|DECRETO 2898»); il PDF è un’immagine non leggibile in automatico, quindi sessioni e scadenze 2024 non sono state trascritte."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-06-03",
+      "al": "2026-06-17",
+      "nota": "Prima sessione, termine perentorio ore 23.59 (art. 2, comma 3, lett. a)"
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-10-01",
+      "al": "2026-10-15",
+      "nota": "Seconda sessione, termine perentorio ore 23.59 (art. 2, comma 3, lett. b)"
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "pubblicazione attesa tra maggio e giugno 2027, con prima sessione tra giugno e luglio e seconda sessione in ottobre",
+    "base": "Il DM 8 ottobre 2024 n. 345 (art. 3, richiamato nelle premesse del bando) affida alla DGCA uno o più bandi annuali; il bando 2025 è uscito il 9 giugno 2025 e quello 2026 il 15 maggio 2026, entrambi dopo il decreto annuale di riparto del Fondo (6 marzo 2025 e 5 marzo 2026). Al 14 novembre 2026 sul sito DGCA non c’è alcun annuncio per il 2027."
+  },
+  "sogliaTotale": 80,
+  "punteggioMassimo": 147,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 160,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 15,
+    "descrizione": "Commissione degli esperti dell’art. 26, comma 2, L. 220/2016: 15 esperti nominati dal Ministro della cultura (DM 6 settembre 2024 n. 271). Può lavorare in sezioni: per le sessioni 2025 erano tre sezioni da 5 esperti (D.D. 14 novembre 2025 rep. 3868). Sedute valide con la maggioranza dei componenti, decisioni a maggioranza dei presenti. Per ogni progetto attribuisce «all’unanimità ovvero a maggioranza» un punteggio per ciascun criterio e sotto criterio e una sintetica motivazione (art. 3, comma 5): un punteggio collegiale, non una media dei voti dei singoli. Può adottare ulteriori sotto-criteri nella prima seduta annuale e svolgere audizioni. Se un progetto non raggiunge il minimo di un criterio, i criteri successivi non vengono valutati. Il DM 3 luglio 2026 n. 280 (in attesa di registrazione al 17 luglio 2026) prevede una Commissione nominata ogni anno, sempre di 15 esperti, con un Presidente."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://doc.cultura.gov.it",
+    "oggetto": "",
+    "regole": [
+      "Domanda solo sulla piattaforma DGCOL (doc.cultura.gov.it), secondo il vademecum; fa fede la data di invio riportata nella PEC generata dalla piattaforma (art. 2, commi 1 e 4).",
+      "Firma elettronica qualificata del legale rappresentante (del capofila se la domanda è congiunta); il PDF generato dalla piattaforma va scaricato, firmato digitalmente e ricaricato.",
+      "Domanda completa di tutti i documenti e della ricevuta del contributo per le spese istruttorie, pagato con PagoPA (D.D. 14 ottobre 2024 n. 3362): senza versamento integrale la domanda è inammissibile.",
+      "Termini perentori: prima sessione 3-17 giugno 2026, seconda sessione 1-15 ottobre 2026, ore 23.59.",
+      "Per la stessa opera la linea o sottolinea non può cambiare tra prima e seconda sessione; in ciascuna sessione un progetto concorre per una sola linea di produzione (art. 2, comma 5; art. 21, comma 3).",
+      "Prima della domanda di produzione: registrazione del soggetto e dell’opera su DGCOL e nazionalità italiana provvisoria ottenuta o almeno richiesta (art. 22, comma 5).",
+      "Sceneggiatura nel formato dell’Allegato 2 («americana»: Courier o Courier New 12, interlinea 1), a pena di inammissibilità; materiali artistici in italiano.",
+      "Soccorso istruttorio di non oltre 10 giorni; le variazioni dopo l’invio non sono valutate dalla Commissione (art. 3, comma 13; art. 22, comma 10).",
+      "Richieste di audizione e comunicazioni di variazione via PEC a dg-ca.selettivi@pec.cultura.gov.it."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "film-qualita-identita",
+      "nome": "Produzione — Film di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana",
+      "griglia": "T5",
+      "soglie": {
+        "A": 30,
+        "B": 18,
+        "D": 8
+      },
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 1200000
+        },
+        "nota": "Contributo massimo assegnabile = importo minore fra il contributo richiesto (come da piano finanziario dell’opera) e il 40% dei costi ammissibili (tabella 6), oltre al tetto in euro dove previsto; il contributo assegnato non può essere inferiore al 40% di tale massimo, salvo l’ultimo progetto finanziato in graduatoria (art. 24, commi 6 e 7)."
+      },
+      "dotazione": {
+        "2026": 7500000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentari",
+      "nome": "Produzione — Documentari cinematografici, televisivi o web di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana",
+      "griglia": "T5",
+      "soglie": {
+        "A": 30,
+        "B": 18,
+        "D": 8
+      },
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {},
+        "nota": "Contributo massimo assegnabile = importo minore fra il contributo richiesto (come da piano finanziario dell’opera) e il 40% dei costi ammissibili (tabella 6), oltre al tetto in euro dove previsto; il contributo assegnato non può essere inferiore al 40% di tale massimo, salvo l’ultimo progetto finanziato in graduatoria (art. 24, commi 6 e 7)."
+      },
+      "dotazione": {
+        "2026": 4000000
+      },
+      "durataMin": 20,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "animazione",
+      "nome": "Produzione — Opere di animazione cinematografiche, televisive o web di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana",
+      "griglia": "T5A",
+      "soglie": {
+        "A": 30,
+        "B": 18,
+        "D": 8
+      },
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 1000000
+        },
+        "nota": "Contributo massimo assegnabile = importo minore fra il contributo richiesto (come da piano finanziario dell’opera) e il 40% dei costi ammissibili (tabella 6), oltre al tetto in euro dove previsto; il contributo assegnato non può essere inferiore al 40% di tale massimo, salvo l’ultimo progetto finanziato in graduatoria (art. 24, commi 6 e 7)."
+      },
+      "dotazione": {
+        "2026": 5000000
+      },
+      "durataMin": 20,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "T5": {
+      "id": "T5",
+      "nome": "Tabella 5, colonna lett. c) e f) — Produzione di documentari e di film di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità, innovatività e originalità del soggetto e della sceneggiatura",
+          "max": 50,
+          "criteri": [
+            {
+              "id": "A.1",
+              "nome": "Originalità del soggetto",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità del soggetto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.2",
+              "nome": "Qualità della scrittura della sceneggiatura",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura della sceneggiatura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.3",
+              "nome": "Innovatività del linguaggio narrativo",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Innovatività del linguaggio narrativo proposto del soggetto e della sceneggiatura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.4",
+              "nome": "Capacità di elaborazione drammaturgica",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Capacità di elaborazione drammaturgica: valutazione della complessità nello sviluppo dei personaggi, nella costruzione dei dialoghi e nella coerenza narrativa tra le diverse componenti del film (idea, struttura, personaggi e dialoghi).",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Qualità della regia, del linguaggio cinematografico e audiovisivo proposto e del cast artistico e tecnico",
+          "max": 25,
+          "criteri": [
+            {
+              "id": "B.1",
+              "nome": "Stile di regia e linguaggio cinematografico e audiovisivo",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Qualità, coerenza, innovatività e originalità dello stile di regia e del linguaggio cinematografico e audiovisivo proposto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "cv_regista",
+                "altro"
+              ]
+            },
+            {
+              "id": "B.2",
+              "nome": "Apporto del cast artistico e tecnico",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Qualità, coerenza e congruità dell’apporto del cast artistico e tecnico.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "accordi_cast",
+                "cv_artistico",
+                "cv_tecnico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Valore culturale dell’opera",
+          "max": 30,
+          "criteri": [
+            {
+              "id": "C.1",
+              "nome": "Rilevanza culturale, sociale, civile e istituzionale",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Rilevanza culturale, sociale, civile e istituzionale dei temi, dei personaggi, degli avvenimenti e dei luoghi trattati.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.2",
+              "nome": "Valorizzazione delle identità culturali italiane",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di valorizzare, promuovere e diffondere le identità culturali italiane attraverso personaggi, avvenimenti e luoghi rappresentativi delle identità nazionali e/o della varietà culturale delle diverse tradizioni e storie dell’Italia.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.3",
+              "nome": "Produzione culturale e artistica giovanile (Piano Olivetti)",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "formazione",
+              "descrizione": "Capacità di promuovere e valorizzare la produzione culturale e artistica giovanile, in coerenza con il Piano Olivetti per la cultura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.4",
+              "nome": "Cultura come bene comune e rigenerazione culturale (Piano Olivetti)",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di favorire lo sviluppo della cultura come bene comune accessibile e integrato nella vita delle comunità e quale strumento di rigenerazione culturale, in coerenza con il Piano Olivetti per la cultura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Coerenza, congruità e sostenibilità del progetto in termini economico-finanziari",
+          "max": 15,
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Coerenza tra sceneggiatura, cast e dimensione economico-finanziaria",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza tra sceneggiatura, cast tecnico e artistico e dimensione economico-finanziaria del progetto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "D.2",
+              "nome": "Congruità dei costi, sostenibilità del piano e copertura finanziaria",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Congruità dei costi, sostenibilità del piano economico-finanziario e livello di copertura finanziaria.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5). Il bando non fissa fasce di copertura: preventivo dei costi e piano finanziario si compilano nella domanda online.",
+              "documenti": [
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Potenzialità di diffusione e fruizione dell’opera",
+          "max": 10,
+          "criteri": [
+            {
+              "id": "E.1",
+              "nome": "Coerenza con le potenzialità distributive e di fruizione",
+              "max": 7,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Coerenza e congruità del progetto rispetto alle potenzialità distributive e di fruizione dell’opera.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "E.2",
+              "nome": "Accordi con distributori o fornitori di servizi media audiovisivi",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Presenza di accordi con società di distribuzione cinematografica o con fornitori di servizi media audiovisivi.",
+              "principio": "Il bando indica 3 punti come massimo per la «presenza di accordi» e non precisa se il punteggio sia fisso o graduato, né elenca gli accordi tra gli allegati obbligatori: vanno caricati tra gli ulteriori materiali utili alla valutazione.",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Pari opportunità di genere (punteggio dei sotto-criteri non cumulabile)",
+          "max": 7,
+          "criteri": [
+            {
+              "id": "F.1",
+              "nome": "Pari opportunità (sotto criteri non cumulabili)",
+              "max": 7,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Sotto criteri 1-4 della lettera F): regista o maggioranza dei registi donna (7); autori dell’opera in maggioranza donne (6); capi-reparto in maggioranza donne (5); capi-reparto in maggioranza under 35 (4). Non cumulabili.",
+              "principio": "Punteggio dei sotto criteri non cumulabile: conta la sola condizione soddisfatta con il punteggio più alto. Il vademecum DGCOL 2026 (agg. 3 giugno 2026) lo chiama «punteggio automatico»: si calcola sui nominativi inseriti nella scheda «Cast e troupe» dell’anagrafica dell’opera; la maggioranza si misura sul numero di tipologie di figure (autore del soggetto, della sceneggiatura, della musica; capi-reparto secondo la tabella di raccordo) in cui prevalgono le donne; per gli under 35 il calcolo riguarda solo i capi-reparto; il requisito va posseduto alla data di presentazione della domanda. Il punteggio è comunque assegnato dalla Commissione in fase di valutazione. Capi reparto considerati: DOP o operatore/operatrice di macchina; organizzazione generale e/o direzione di produzione; suono; scenografia; costumi; montaggio; montaggio del suono; VFX producer o supervisor. Per l’animazione: storyboard; direzione di produzione; sound design; background artist; character designer; montaggio; montaggio del suono; supervisione dell’animazione.",
+              "valori": [
+                {
+                  "punti": 7,
+                  "etichetta": "Regista o maggioranza dei registi donna"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "Autori dell’opera come individuati dalla legge 633/1941 in maggioranza donne"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capi reparto in maggioranza donne (ruoli elencati dal bando)"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "Capi reparto in maggioranza di età inferiore a 35 anni (ruoli elencati dal bando)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna delle condizioni"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "nome": "Realizzazione dell’opera in coproduzione internazionale, compartecipazione internazionale o produzione internazionale",
+          "max": 5,
+          "criteri": [
+            {
+              "id": "G.1",
+              "nome": "Con Paesi dello Spazio Economico Europeo e con la Confederazione Svizzera",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Opera realizzata in coproduzione, compartecipazione o produzione internazionale con Paesi dello Spazio Economico Europeo e con la Confederazione Svizzera.",
+              "principio": "Il bando indica il punteggio in tabella senza precisare se sia fisso o graduabile; la somma dei due sotto criteri (3 + 2) dà il massimo di 5 della lettera G).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Coproduzione con Paesi SEE o Svizzera"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "G.2",
+              "nome": "Con Paesi non appartenenti allo Spazio Economico Europeo",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Opera realizzata in coproduzione, compartecipazione o produzione internazionale con Paesi non appartenenti allo Spazio Economico Europeo.",
+              "principio": "Il bando indica il punteggio in tabella senza precisare se sia fisso o graduabile; la somma dei due sotto criteri (3 + 2) dà il massimo di 5 della lettera G).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Coproduzione con Paesi extra SEE"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H",
+          "nome": "Certificazione per la sostenibilità ambientale dell’opera",
+          "max": 5,
+          "criteri": [
+            {
+              "id": "H.1",
+              "nome": "Impegno a ottenere la certificazione di sostenibilità ambientale",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno ad ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata in conformità a protocolli riconosciuti da enti pubblici competenti in materia ambientale oppure dall’Ente Unico di Accreditamento, a seguito di una verifica in loco e di una valutazione documentale effettuate da un organismo indipendente e autonomo rispetto all’ente che ha emesso il protocollo (art. 24, comma 1, lett. h).",
+              "principio": "Serve la dichiarazione di impegno (modello in piattaforma, art. 23, comma 3, lett. c). La certificazione deve riguardare l’opera, non l’impresa, e la totalità delle riprese (FAQ del vademecum 2026); va prodotta con la richiesta definitiva (art. 26, comma 1, punto ix).",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Dichiarazione di impegno allegata alla domanda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T5A": {
+      "id": "T5A",
+      "nome": "Tabella 5, colonna lett. e) — Produzione di opere di animazione di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità, innovatività e originalità del soggetto e della sceneggiatura",
+          "max": 50,
+          "criteri": [
+            {
+              "id": "A.1",
+              "nome": "Originalità del soggetto",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità del soggetto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.2",
+              "nome": "Qualità della scrittura della sceneggiatura",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura della sceneggiatura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.3",
+              "nome": "Innovatività del linguaggio narrativo",
+              "max": 9,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Innovatività del linguaggio narrativo proposto del soggetto e della sceneggiatura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.4",
+              "nome": "Capacità di elaborazione drammaturgica",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Capacità di elaborazione drammaturgica: valutazione della complessità nello sviluppo dei personaggi, nella costruzione dei dialoghi e nella coerenza narrativa tra le diverse componenti del film (idea, struttura, personaggi e dialoghi).",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A.5",
+              "nome": "Design dei personaggi e delle scenografie",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Qualità e originalità del design dei personaggi e delle scenografie (solo per animazione).",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Qualità della regia, del linguaggio cinematografico e audiovisivo proposto e del cast artistico e tecnico",
+          "max": 25,
+          "criteri": [
+            {
+              "id": "B.1",
+              "nome": "Stile di regia e linguaggio cinematografico e audiovisivo",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Qualità, coerenza, innovatività e originalità dello stile di regia e del linguaggio cinematografico e audiovisivo proposto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "cv_regista",
+                "altro"
+              ]
+            },
+            {
+              "id": "B.2",
+              "nome": "Apporto del cast artistico e tecnico",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Qualità, coerenza e congruità dell’apporto del cast artistico e tecnico.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5).",
+              "documenti": [
+                "accordi_cast",
+                "cv_artistico",
+                "cv_tecnico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Valore culturale dell’opera",
+          "max": 30,
+          "criteri": [
+            {
+              "id": "C.1",
+              "nome": "Rilevanza culturale, sociale, civile e istituzionale",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Rilevanza culturale, sociale, civile e istituzionale dei temi, dei personaggi, degli avvenimenti e dei luoghi trattati.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.2",
+              "nome": "Valorizzazione delle identità culturali italiane",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di valorizzare, promuovere e diffondere le identità culturali italiane attraverso personaggi, avvenimenti e luoghi rappresentativi delle identità nazionali e/o della varietà culturale delle diverse tradizioni e storie dell’Italia.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.3",
+              "nome": "Produzione culturale e artistica giovanile (Piano Olivetti)",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "formazione",
+              "descrizione": "Capacità di promuovere e valorizzare la produzione culturale e artistica giovanile, in coerenza con il Piano Olivetti per la cultura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "C.4",
+              "nome": "Cultura come bene comune e rigenerazione culturale (Piano Olivetti)",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di favorire lo sviluppo della cultura come bene comune accessibile e integrato nella vita delle comunità e quale strumento di rigenerazione culturale, in coerenza con il Piano Olivetti per la cultura.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Coerenza, congruità e sostenibilità del progetto in termini economico-finanziari",
+          "max": 15,
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Coerenza tra sceneggiatura, cast e dimensione economico-finanziaria",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza tra sceneggiatura, cast tecnico e artistico e dimensione economico-finanziaria del progetto.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "D.2",
+              "nome": "Congruità dei costi, sostenibilità del piano e copertura finanziaria",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Congruità dei costi, sostenibilità del piano economico-finanziario e livello di copertura finanziaria.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5). Il bando non fissa fasce di copertura: preventivo dei costi e piano finanziario si compilano nella domanda online.",
+              "documenti": [
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Potenzialità di diffusione e fruizione dell’opera",
+          "max": 10,
+          "criteri": [
+            {
+              "id": "E.1",
+              "nome": "Coerenza con le potenzialità distributive e di fruizione",
+              "max": 7,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Coerenza e congruità del progetto rispetto alle potenzialità distributive e di fruizione dell’opera.",
+              "principio": "Il bando indica solo il punteggio massimo del sotto criterio: la Commissione degli esperti lo gradua con una sintetica motivazione (art. 3, comma 5)."
+            },
+            {
+              "id": "E.2",
+              "nome": "Accordi con distributori o fornitori di servizi media audiovisivi",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Presenza di accordi con società di distribuzione cinematografica o con fornitori di servizi media audiovisivi.",
+              "principio": "Il bando indica 3 punti come massimo per la «presenza di accordi» e non precisa se il punteggio sia fisso o graduato, né elenca gli accordi tra gli allegati obbligatori: vanno caricati tra gli ulteriori materiali utili alla valutazione.",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Pari opportunità di genere (punteggio dei sotto-criteri non cumulabile)",
+          "max": 7,
+          "criteri": [
+            {
+              "id": "F.1",
+              "nome": "Pari opportunità (sotto criteri non cumulabili)",
+              "max": 7,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Sotto criteri 1-4 della lettera F): regista o maggioranza dei registi donna (7); autori dell’opera in maggioranza donne (6); capi-reparto in maggioranza donne (5); capi-reparto in maggioranza under 35 (4). Non cumulabili.",
+              "principio": "Punteggio dei sotto criteri non cumulabile: conta la sola condizione soddisfatta con il punteggio più alto. Il vademecum DGCOL 2026 (agg. 3 giugno 2026) lo chiama «punteggio automatico»: si calcola sui nominativi inseriti nella scheda «Cast e troupe» dell’anagrafica dell’opera; la maggioranza si misura sul numero di tipologie di figure (autore del soggetto, della sceneggiatura, della musica; capi-reparto secondo la tabella di raccordo) in cui prevalgono le donne; per gli under 35 il calcolo riguarda solo i capi-reparto; il requisito va posseduto alla data di presentazione della domanda. Il punteggio è comunque assegnato dalla Commissione in fase di valutazione. Capi reparto considerati: DOP o operatore/operatrice di macchina; organizzazione generale e/o direzione di produzione; suono; scenografia; costumi; montaggio; montaggio del suono; VFX producer o supervisor. Per l’animazione: storyboard; direzione di produzione; sound design; background artist; character designer; montaggio; montaggio del suono; supervisione dell’animazione.",
+              "valori": [
+                {
+                  "punti": 7,
+                  "etichetta": "Regista o maggioranza dei registi donna"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "Autori dell’opera come individuati dalla legge 633/1941 in maggioranza donne"
+                },
+                {
+                  "punti": 5,
+                  "etichetta": "Capi reparto in maggioranza donne (ruoli elencati dal bando)"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "Capi reparto in maggioranza di età inferiore a 35 anni (ruoli elencati dal bando)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna delle condizioni"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "nome": "Realizzazione dell’opera in coproduzione internazionale, compartecipazione internazionale o produzione internazionale",
+          "max": 5,
+          "criteri": [
+            {
+              "id": "G.1",
+              "nome": "Con Paesi dello Spazio Economico Europeo e con la Confederazione Svizzera",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Opera realizzata in coproduzione, compartecipazione o produzione internazionale con Paesi dello Spazio Economico Europeo e con la Confederazione Svizzera.",
+              "principio": "Il bando indica il punteggio in tabella senza precisare se sia fisso o graduabile; la somma dei due sotto criteri (3 + 2) dà il massimo di 5 della lettera G).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Coproduzione con Paesi SEE o Svizzera"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "G.2",
+              "nome": "Con Paesi non appartenenti allo Spazio Economico Europeo",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Opera realizzata in coproduzione, compartecipazione o produzione internazionale con Paesi non appartenenti allo Spazio Economico Europeo.",
+              "principio": "Il bando indica il punteggio in tabella senza precisare se sia fisso o graduabile; la somma dei due sotto criteri (3 + 2) dà il massimo di 5 della lettera G).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Coproduzione con Paesi extra SEE"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H",
+          "nome": "Certificazione per la sostenibilità ambientale dell’opera",
+          "max": 5,
+          "criteri": [
+            {
+              "id": "H.1",
+              "nome": "Impegno a ottenere la certificazione di sostenibilità ambientale",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno ad ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata in conformità a protocolli riconosciuti da enti pubblici competenti in materia ambientale oppure dall’Ente Unico di Accreditamento, a seguito di una verifica in loco e di una valutazione documentale effettuate da un organismo indipendente e autonomo rispetto all’ente che ha emesso il protocollo (art. 24, comma 1, lett. h).",
+              "principio": "Serve la dichiarazione di impegno (modello in piattaforma, art. 23, comma 3, lett. c). La certificazione deve riguardare l’opera, non l’impresa, e la totalità delle riprese (FAQ del vademecum 2026); va prodotta con la richiesta definitiva (art. 26, comma 1, punto ix).",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Dichiarazione di impegno allegata alla domanda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda di contributo compilata su DGCOL (PDF generato dalla piattaforma, firmato digitalmente)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Budget complessivo del progetto: preventivo dei costi e piano finanziario preventivo, compilati nella domanda online in fase di registrazione dell’opera (non si allegano)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Documento di riconoscimento",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Ricevuta del pagamento delle spese istruttorie (PagoPA)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 1 — autocertificazione dei requisiti di ammissibilità, firmata digitalmente, per ciascun soggetto richiedente",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Soggetto (soggetto di serie per le opere seriali)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Sceneggiatura secondo le linee guida dell’Allegato 2 (trattamento per i documentari; almeno la puntata pilota per le opere seriali)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Profilo dei personaggi",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Storyboard (almeno del primo episodio per le opere seriali) — obbligatorio solo per le opere di animazione",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Progetto di serializzazione (formato, durata, genere e struttura degli episodi, modelli di riferimento) — solo opere seriali",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Autodichiarazione sulla titolarità dei diritti di elaborazione a carattere creativo dei materiali artistici (con gli estremi dell’atto; contratti con clausola che consente agli autori di non assentire allo sfruttamento da parte di sistemi di intelligenza artificiale)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratto ovvero opzione di acquisto dei diritti sull’opera originaria, in caso di adattamento da altra opera protetta",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione ovvero numero delle settimane di lavorazione e luoghi delle riprese",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Lettera di intenti sottoscritta dal regista, con documento d’identità valido",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione artistica sottoscritta dal regista",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione analitica dell’impresa di produzione sull’impianto produttivo del progetto (e sulle potenzialità distributive, secondo il vademecum)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Autodichiarazione degli autori sull’assenza dei reati indicati dal bando, con documento d’identità",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratto assicurativo contro i danni da calamità naturali ed eventi catastrofali (L. 213/2023, art. 1, commi 101-102), per ciascun soggetto richiedente",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Documentazione che comprova la produzione e la diffusione di un’opera audiovisiva negli ultimi cinque anni (non dovuta dalle imprese di nuova costituzione)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Profilo breve e curriculum di ciascuna impresa richiedente",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Profilo breve del regista (o dei registi) e curriculum dell’autore della regia",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Curriculum degli autori del soggetto e della sceneggiatura",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Dichiarazioni d’interesse degli attori, con documenti di identità (il bando dice «tutti gli attori», il vademecum «interpreti principali»)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Delega al capofila sottoscritta da tutti i soggetti associati (domande in forma associata); contratto di rete se il richiedente è una rete di imprese",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione sulle modifiche apportate, per i progetti già valutati dalla Commissione degli esperti",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione illustrativa sull’incapacità dell’opera di attrarre risorse private significative, per la dichiarazione di opera difficile",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione di esenzione dall’obbligo di deposito dell’ultimo bilancio, se ricorre",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Dichiarazione di impegno a ottenere la certificazione per la sostenibilità ambientale dell’opera (criterio H)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "H.1"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Accordi con società di distribuzione cinematografica o con fornitori di servizi media audiovisivi (criterio E.2; non elencati tra gli allegati del bando: si caricano tra gli ulteriori materiali)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "E.2"
+      ]
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Curriculum di direttore della fotografia, autore del montaggio, autore della musica, scenografo, costumista e altri professionisti individuati",
+      "obbligo": "consigliato",
+      "criteri": [
+        "B.2"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Link a un video di non oltre 6 minuti in cui regista e produttore presentano elementi artistici, produttivi e finanziari (si inserisce nella domanda online)",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Altri materiali artistici (storyboard, moodboard) e dati di produzione (troupe, location, industrie tecniche) inseriti in fase di registrazione dell’opera",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "impresa",
+      "testo": "Impresa cinematografica o audiovisiva italiana indipendente (produttore indipendente ai sensi del d.lgs. 208/2021), non qualificabile come impresa non europea, con sede legale nello Spazio economico europeo e soggetta a tassazione in Italia"
+    },
+    {
+      "id": "registro",
+      "testo": "Iscritta nella sezione ordinaria del Registro delle imprese, opera con il codice Ateco 59.1 e ha depositato l’ultimo bilancio approvato (salvo esenzione di legge)"
+    },
+    {
+      "id": "opera-5-anni",
+      "testo": "Ha prodotto e diffuso al pubblico almeno un’opera audiovisiva ammissibile ai benefici di legge negli ultimi cinque anni (tra il 15 maggio 2021 e il 15 maggio 2026, secondo le FAQ), salvo impresa di nuova costituzione (non più di 36 mesi alla scadenza della sessione)"
+    },
+    {
+      "id": "diritti",
+      "testo": "Ha acquisito con contratti o opzioni i diritti di elaborazione a carattere creativo su soggetto, sceneggiatura o trattamento; le opzioni vanno esercitate entro la richiesta di acconto"
+    },
+    {
+      "id": "riprese-18-mesi",
+      "testo": "Dichiara che l’inizio delle riprese è previsto non oltre 18 mesi dalla data di scadenza della sessione"
+    },
+    {
+      "id": "nazionalita",
+      "testo": "L’opera ha ottenuto la nazionalità italiana provvisoria, o l’istanza è stata inoltrata entro la data della domanda; assetto produttivo e quote coincidono con quelli della richiesta di nazionalità"
+    },
+    {
+      "id": "parametri-costo",
+      "testo": "Rispetta i parametri finanziari della linea: costo complessivo inferiore a 4.000.000 euro e costi sopra la linea non oltre il 25% (opere prime e seconde, giovani autori); costo inferiore a 1.000.000 euro (documentari) e a 200.000 euro (cortometraggi); costi sopra la linea non oltre il 30% (film e documentari di particolare qualità artistica e identità culturale italiana)"
+    },
+    {
+      "id": "quota-italiana",
+      "testo": "In coproduzione, compartecipazione o produzione internazionale: quota italiana dei diritti non inferiore al 20% (10% se sono coinvolte imprese di più di due Paesi) e almeno un’impresa italiana produttore audiovisivo originario"
+    },
+    {
+      "id": "accessibilita",
+      "testo": "L’opera prevede strumenti per la fruizione da parte delle persone con disabilità sensoriale (audiodescrizione e sottotitolazione)"
+    },
+    {
+      "id": "no-contributi-precedenti",
+      "testo": "L’opera non ha già beneficiato di contributi selettivi alla produzione o alla distribuzione, del bando «particolare qualità artistica» dell’8 agosto 2024, dei bandi coproduzioni minoritarie 2019-2025, né è risultata assegnataria nella prima sessione 2026"
+    },
+    {
+      "id": "opera-non-conclusa",
+      "testo": "Alla data di pubblicazione del bando (15 maggio 2026) l’opera non ha richiesto la verifica della classificazione né inviato la copia per il tax credit, non è stata diffusa su alcun servizio di media audiovisivo o piattaforma di condivisione video e non ha richiesto o ottenuto la nazionalità definitiva"
+    },
+    {
+      "id": "sviluppo-chiuso",
+      "testo": "Se l’opera ha avuto contributi selettivi allo sviluppo o alla pre-produzione, la relativa richiesta definitiva è già stata presentata completa"
+    },
+    {
+      "id": "italiano",
+      "testo": "I materiali artistici sono scritti in italiano"
+    },
+    {
+      "id": "no-ia",
+      "testo": "Sceneggiatura e materiali artistici non sono realizzati con sistemi di intelligenza artificiale; i contratti con autori, interpreti ed esecutori contengono la clausola che consente di non assentire allo sfruttamento da parte di sistemi di intelligenza artificiale"
+    },
+    {
+      "id": "diritti-europei",
+      "testo": "I diritti dell’art. 45 della legge 633/1941 non sono in capo per la maggior parte a soggetti non europei e/o non indipendenti"
+    },
+    {
+      "id": "autori-reati",
+      "testo": "Nessuno degli autori ha riportato le condanne indicate all’art. 22, comma 8, lett. i) del bando (autodichiarazione allegata)"
+    },
+    {
+      "id": "allegato1",
+      "testo": "L’impresa attesta i requisiti dell’Allegato 1: sicurezza sul lavoro, pari opportunità e protocollo anti-molestie, contratti collettivi nazionali, tutela ambientale, capacità di contrarre, nessun ordine di recupero pendente, non è impresa in difficoltà né in liquidazione, nessuna sanzione ex d.lgs. 231/2001"
+    },
+    {
+      "id": "assicurazione",
+      "testo": "Ogni impresa richiedente ha la polizza contro i danni da calamità naturali ed eventi catastrofali"
+    },
+    {
+      "id": "una-linea",
+      "testo": "Il progetto concorre per una sola linea di produzione nella sessione e mantiene la stessa linea tra prima e seconda sessione"
+    },
+    {
+      "id": "spese-istruttorie",
+      "testo": "Contributo per le spese istruttorie versato per intero con PagoPA e ricevuta allegata"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "richiesta-definitiva",
+      "etichetta": "Richiesta definitiva del contributo e della nazionalità italiana (consegna dell’opera, consuntivo certificato, piano finanziario definitivo, contratto di sfruttamento in sala o con un fornitore di servizi media)",
+      "mesi": 24,
+      "nota": "Art. 26, comma 1, lett. c): entro 24 mesi dalla data di approvazione della graduatoria, a pena di decadenza dell’intero contributo. Proroga ordinaria fino a 6 mesi autorizzata dalla DGCA; proroga straordinaria una sola volta per forza maggiore, previo parere della Commissione."
+    },
+    {
+      "id": "richiesta-definitiva-animazione",
+      "etichetta": "Richiesta definitiva del contributo e della nazionalità italiana — opere di animazione",
+      "mesi": 36,
+      "nota": "Art. 26, comma 1, lett. c): il termine di 24 mesi è elevato a 36 mesi per le opere di animazione; stesse proroghe."
+    }
+  ],
+  "scadenzeNote": [
+    "Inizio delle riprese: da dichiarare non oltre 18 mesi dalla scadenza della sessione (art. 22, comma 2); il termine decorre dalla sessione, non dalla concessione.",
+    "Dopo l’erogazione dell’acconto: quietanza dei compensi agli autori di soggetto, trattamento e sceneggiatura entro 30 giorni e comprova dell’inizio delle riprese entro 90 giorni, a pena di decadenza dell’intero contributo (art. 26, comma 1, lett. b).",
+    "Circolazione in sala (opere cinematografiche) o diffusione tramite fornitori di servizi di media audiovisivi (opere tv e web): entro un anno dalla presentazione della richiesta definitiva, a pena di decadenza (art. 28, comma 3).",
+    "Graduatorie: approvate con decreto del Direttore generale entro 120 giorni dal termine di presentazione delle domande (art. 3, comma 10; art. 24, comma 8). Per le sessioni 2025 i decreti sono usciti dopo circa 8-9 mesi.",
+    "Sviluppo: acconto del 50% da chiedere entro 90 giorni dal decreto di graduatoria; richiesta definitiva entro 18 mesi (art. 18). Scrittura: acconto del 50% entro 90 giorni dalla pubblicazione della graduatoria; richiesta definitiva con la sceneggiatura entro 12 mesi (art. 10)."
+  ],
+  "erogazione": [
+    {
+      "quota": "acconto",
+      "percentuale": 50,
+      "condizione": "Facoltativo, su richiesta tramite DGCOL (art. 26, comma 1, lett. a): contratti con gli autori dei materiali artistici e con il regista (cessioni non gratuite, con equo compenso), autodichiarazione a firma congiunta, protocollo ed ente certificatore se c’è l’impegno ambientale, contratto di associazione registrato, diritti di adattamento acquisiti. Erogato entro 90 giorni e comunque dopo l’approvazione della nazionalità provvisoria. Non è prevista fideiussione."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 50,
+      "condizione": "Dopo la richiesta definitiva (entro 24 mesi, 36 per l’animazione) e le verifiche: erogato entro 120 giorni. Occorrono opera consegnata, consuntivo con certificazione contabile, piano finanziario definitivo, iscrizione e deposito degli atti nel Registro pubblico delle opere (PRCA), nazionalità definitiva approvata, DURC regolare e, se dichiarata, la certificazione ambientale. Se l’acconto non è stato chiesto, il contributo è liquidato per intero a saldo."
+    }
+  ],
+  "note": [
+    "Per accedere al contributo servono il punteggio minimo totale (75 nella Tabella 4, 80 nella Tabella 5) e i minimi dei criteri A (30), B (18) e D (8). Se un minimo di criterio non è raggiunto, i criteri successivi non vengono valutati.",
+    "Il punteggio massimo teorico supera 100 (137 nella Tabella 4, 147 nella Tabella 5) perché ai criteri di qualità si sommano pari opportunità (7), coproduzione internazionale (5) e certificazione ambientale (5): senza questi tre criteri il massimo è 120 (Tabella 4) o 130 (Tabella 5).",
+    "Contributo alla produzione: al massimo l’importo minore fra contributo richiesto e 40% dei costi ammissibili, con tetto di 1.200.000 euro per i film di qualità/identità e di 1.000.000 euro per l’animazione (600.000 per animazione di giovani autori, opere prime e seconde); non meno del 40% di tale massimo, salvo l’ultimo finanziato. In ogni sessione è finanziato un numero massimo di opere per linea (13 giovani autori, 12 prime e seconde, 26 documentari, 15 cortometraggi), derogabile se restano risorse.",
+    "Costi ammissibili: voci A-F della tabella 6 (scrittura e diritti, regia, cast artistico, pre-produzione e produzione, animazione, post-produzione). Spese varie (amministrazione, assicurazioni, oneri finanziari, legali, promozione, completion bond) e spese generali (comprese producer’s fee) non sono ammissibili. In coproduzione conta solo la quota italiana.",
+    "Spesa sul territorio italiano non inferiore al 160% del contributo concesso, a pena di decadenza (art. 27): contano le spese verso persone fisiche e giuridiche fiscalmente residenti in Italia o verso residenti SEE tassati in Italia su quel reddito.",
+    "Cumulo: contributi selettivi e altri aiuti pubblici non oltre il 50% del costo dell’opera (60% per le produzioni transfrontaliere dell’art. 54, par. 7, lett. a, GBER; 80% per le opere difficili; 100% per le coproduzioni con Paesi DAC). Opere difficili: documentari, opere prime e seconde, di giovani autori e cortometraggi con costo inferiore a 3.500.000 euro (1.000.000 per i documentari, 200.000 per i cortometraggi), più i casi dichiarati dalla Commissione.",
+    "Riduzione proporzionale del contributo se i costi ammissibili a consuntivo sono inferiori di oltre il 10% a quelli preventivati (art. 28, comma 4). Revoca se l’opera realizzata è sostanzialmente difforme dal progetto o priva di adeguata professionalità.",
+    "Variazioni di autori, regia, compagine produttiva, attori principali, destinazione e materiali artistici dopo la graduatoria vanno approvate dalla Commissione; il capofila non può cambiare.",
+    "Spese istruttorie 2026 (vademecum): 500 euro giovani autori, 800 opere prime e seconde, 400 documentari, 200 cortometraggi, 600 animazione, 5.000 film di qualità/identità con costo fino a 3.500.000 euro e 10.000 oltre; 400 sviluppo, 200 scrittura.",
+    "Sopra i 150.000 euro di contributo viene acquisita l’informazione antimafia. Obbligo di logo e dicitura del Ministero della cultura nei titoli e nei materiali promozionali, con lo stesso rilievo del produttore; deposito della copia campione alla Cineteca nazionale.",
+    "Il bando 2026 non finanzia la produzione di serie tv e web di finzione: per la tv e il web ammette solo documentari, cortometraggi e animazione. Nel 2025 esisteva un bando separato per le opere tv e web sull’identità culturale italiana (D.D. 9 giugno 2025 rep. 2250), di cui non risulta un’edizione 2026.",
+    "Questa scheda copre la Tabella 5 (film di qualità e identità culturale, documentari, animazione): soglia 80 su 147. Opere prime e seconde, giovani autori e cortometraggi (Tabella 4) hanno soglia 75 su 137 e sono nella scheda «MiC · Selettivi 2026 — opere prime, giovani autori, corti». Il bando dei contributi selettivi copre anche scrittura (Tabella 1, soglia 55 su 85) e sviluppo (Tabella 2, soglia 70 su 105): non sono linee di produzione e non sono simulate in Clockwise."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Coproduzioni o compartecipazioni internazionali minoritarie — Anno 2026",
+      "url": "https://cinema.cultura.gov.it/download/39589/",
+      "descrizione": "Bando distinto per lungometraggi cinematografici a partecipazione italiana minoritaria; dall’avviso DGCA del 31 luglio 2026: 5 milioni di euro l’anno, prima sessione 1-28 settembre 2026, seconda sessione 30 novembre-18 dicembre 2026, su DGCOL. Testo non trascritto qui."
+    },
+    {
+      "nome": "Bando di sviluppo e coproduzione Italia-Francia 2026",
+      "url": "https://cinema.cultura.gov.it/download/38379/",
+      "descrizione": "Fondo bilaterale di co-sviluppo e co-produzione, pubblicato il 1° aprile 2026; graduatoria della I sessione pubblicata il 17 luglio 2026. Testo non trascritto qui."
+    },
+    {
+      "nome": "Opere televisive e web su personaggi e avvenimenti dell’identità culturale nazionale italiana — Anno 2025",
+      "url": "https://cinema.cultura.gov.it/download/35966/",
+      "descrizione": "Bando separato 2025 (D.D. 9 giugno 2025 rep. 2250) per film tv e serie; al 14 novembre 2026 la pagina «Bandi Legge Cinema» non elenca un’edizione 2026. Testo non trascritto qui."
+    },
+    {
+      "nome": "Film di particolare qualità artistica e film su personaggi e avvenimenti dell’identità culturale italiana — Anno 2025",
+      "url": "https://cinema.cultura.gov.it/download/35969/",
+      "descrizione": "Bando separato 2025 (D.D. 9 giugno 2025 rep. 2249); nel 2026 la linea è confluita nel bando generale (art. 21, comma 1, lett. f)."
+    },
+    {
+      "nome": "Sviluppo di coproduzioni Italia-Portogallo — Anno 2025",
+      "url": "https://cinema.cultura.gov.it/avvisi/pubblicato-il-bando-per-lo-sviluppo-di-coproduzioni-di-opere-cinematografiche-tra-litalia-e-il-portogallo-anno-2025/",
+      "descrizione": "Fondo bilaterale di co-sviluppo pubblicato il 1° ottobre 2026. Testo non trascritto qui."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2025,
+      "titolo": "D.D. 10 luglio 2026 rep. 2211 — graduatorie complete Produzione, II sessione 2025 (allegati A-E: giovani autori, opere prime e seconde, documentari, cortometraggi, animazione)",
+      "url": "https://cinema.cultura.gov.it/download/39356/",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2025,
+      "titolo": "D.D. 2 aprile 2026 rep. 738 — graduatorie complete Produzione, I sessione 2025",
+      "url": "https://cinema.cultura.gov.it/download/38395/",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2025,
+      "titolo": "D.D. 10 luglio 2026 rep. 2212 — graduatoria Film di particolare qualità artistica e identità culturale italiana, II sessione 2025 (bando separato rep. 2249)",
+      "url": "https://cinema.cultura.gov.it/download/39361/",
+      "contienePunteggi": true,
+      "perSezione": true
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Bando 2026, Tabella 4 (pagg. 47-49) — criteri e punteggi, art. 21, comma 1, lett. a), b) e d)",
+        "testo": "A) Qualità, innovatività e originalità del soggetto e della sceneggiatura 50 […] B) Qualità della regia, del linguaggio cinematografico e audiovisivo proposto […] 25 […] C) Valore culturale dell’opera 20 […] D) Coerenza, congruità e sostenibilità del progetto in termini economico-finanziari 15 […] E) Potenzialità di diffusione e fruizione dell’opera 10 […] F) Pari opportunità di genere e generazionale (punteggio dei sotto criteri non cumulabile) 7 […] G) Realizzazione dell’opera in coproduzione internazionale […] 5 […] H) Certificazione per la sostenibilità ambientale dell’opera 5"
+      },
+      {
+        "riferimento": "Bando 2026, Tabella 4 (pag. 49) — punteggi minimi",
+        "testo": "Il punteggio minimo totale per accedere al contributo è di 75 punti, di cui almeno: • 30 punti nel criterio A); • 18 punti nel criterio B); • 8 punti nel criterio D)."
+      },
+      {
+        "riferimento": "Bando 2026, Tabella 5 (pagg. 50-53) — colonne lett. c) e f) / lett. e) e punteggi minimi",
+        "testo": "1. Originalità del soggetto 15 12 […] 2. Qualità della scrittura della sceneggiatura 15 12 […] 5. Qualità e originalità del design dei personaggi e delle scenografie (solo per animazione) x 12 […] C) Valore culturale dell’opera 30 30 […] Il punteggio minimo totale per accedere al contributo è di 80 punti, di cui almeno: • 30 punti nel criterio A); • 18 punti nel criterio B); • 8 punti nel criterio D)."
+      },
+      {
+        "riferimento": "Bando 2026, art. 24, comma 5 — minimi e criteri successivi",
+        "testo": "I punteggi minimi necessari per accedere al contributo sono riportati nelle tabelle 4 e 5. Qualora non si raggiungano i punteggi minimi previsti nei singoli criteri di cui alle tabelle 4 e 5, non verrà espressa una valutazione del progetto in relazione ai successivi criteri"
+      },
+      {
+        "riferimento": "Bando 2026, art. 3, comma 5 — metodo della Commissione",
+        "testo": "La Commissione degli esperti provvede alla valutazione dei progetti attribuendo all’unanimità ovvero a maggioranza un punteggio per ciascun criterio e sotto criterio e redigendo una sintetica motivazione per ciascun progetto."
+      },
+      {
+        "riferimento": "Bando 2026, art. 24, commi 6 e 7 — misura del contributo",
+        "testo": "Il contributo massimo assegnabile dalla Commissione degli esperti […] è l’importo minore fra: il contributo richiesto ai sensi del presente bando, come riportato nel piano finanziario dell’opera; il 40 per cento dei costi ammissibili; nel caso di opere di animazione, euro 1.000.000,00 ridotto a euro 600.000,00 per le opere di giovani autori e le opere prime e seconde; nel caso di film di particolare qualità artistica e su personaggi e avvenimenti dell’identità culturale italiana, euro 1.200.0000,00. […] è altresì non inferiore al 40 per cento del contributo massimo"
+      },
+      {
+        "riferimento": "Bando 2026, art. 2, comma 3 — sessioni",
+        "testo": "prima sessione: dal 3 giugno 2026 al 17 giugno 2026, ore 23.59; seconda sessione: dal 1°ottobre 2026 al 15 ottobre 2026, ore 23.59."
+      },
+      {
+        "riferimento": "Bando 2026, art. 27, comma 1 — spesa in Italia",
+        "testo": "spendere sul territorio italiano un importo non inferiore al 160 per cento del contributo concesso."
+      },
+      {
+        "riferimento": "Bando 2026, art. 26, comma 1 — acconto e richiesta definitiva",
+        "testo": "il beneficiario può richiedere, tramite la piattaforma DGCOL, un acconto del 50 per cento del contributo assegnato. […] entro ventiquattro mesi dalla data di approvazione della graduatoria, elevati a trentasei mesi per le opere di animazione, a pena di decadenza dell’intero contributo assegnato, l’impresa beneficiaria presenta […] la richiesta definitiva di riconoscimento della nazionalità italiana e la richiesta definitiva del contributo"
+      },
+      {
+        "riferimento": "Bando 2026, Tabelle 1 e 2 (pagg. 42-44) — minimi di scrittura e sviluppo",
+        "testo": "Il punteggio minimo totale per accedere al contributo è di 55 punti, di cui almeno: • 40 punti nel criterio A). […] Il punteggio minimo totale per accedere al contributo è di 70 punti, di cui almeno: • 40 punti nel criterio A); • 10 punti nel criterio C)."
+      }
+    ],
+    "dubbi": [
+      "Il bando non dichiara il punteggio massimo complessivo: 137 (Tabella 4), 147 (Tabella 5), 105 (sviluppo) e 85 (scrittura) sono la somma dei massimi dei criteri. Le graduatorie 2025, con totali oltre 100, confermano che la scala non è in centesimi.",
+      "Art. 24, comma 6, lett. d): il testo riporta «euro 1.200.0000,00» (uno zero in più). Trascritto come 1.200.000 euro: da confermare con la DGCA o con un’eventuale rettifica.",
+      "Criteri F, G e H trattati come punteggi fissi (discreti). Le tabelle li presentano come punteggi massimi: per F il vademecum parla di «punteggio automatico»; per G e H il bando non dice se la Commissione possa graduarli. La cumulabilità di G.1 (3) e G.2 (2) è dedotta dal massimo di 5 della lettera G.",
+      "Criterio E.2 (accordi di distribuzione, 3 punti): non è chiaro se sia fisso o graduato e il bando non indica quale tipo di accordo (contratto, deal memo, lettera) basti.",
+      "Criterio D.2: il bando non dà fasce numeriche per il «livello di copertura finanziaria»; ogni conversione da percentuale di copertura a punti sarebbe una stima, non una regola del bando.",
+      "Le lettere degli elenchi (art. 21, comma 1, lett. a-f; art. 1, comma 3) non compaiono nel testo estratto dal PDF: sono state ricostruite dall’ordine degli elenchi e coincidono con i titoli delle tabelle 4 e 5. Da ricontrollare a video sul PDF.",
+      "Art. 23, comma 2, lett. c) chiede le dichiarazioni d’interesse di «tutti gli attori»; il vademecum le limita agli «interpreti principali».",
+      "Il bando 2026 non indica un termine per chiedere l’acconto della produzione (per sviluppo e scrittura sono 90 giorni); nel 2025 un avviso DGCA lo fissava entro 12 mesi dai decreti e almeno 90 giorni prima delle riprese.",
+      "Per categorie giovani autori, opere prime e seconde, documentari e cortometraggi il bando non fissa un tetto in euro: massimali lasciati a null (resta il 40% dei costi ammissibili entro i limiti di costo della linea).",
+      "Durate: «film» di qualità/identità (lett. f) non ha una durata minima espressa; per documentari e animazione è stato dedotto «oltre 20 minuti» dall’esclusione dei cortometraggi. durataMin vale come soglia esclusa (campo durataMinEsclusa).",
+      "Commissione: le sessioni 2026 saranno valutate verosimilmente dalla nuova Commissione annuale prevista dal DM 3 luglio 2026 n. 280 (non letto: citato nell’avviso del 17 luglio 2026, allora in attesa di registrazione). Gli esiti 2025 vengono da un’altra Commissione e da una griglia diversa: usarli per la taratura con cautela.",
+      "Graduatorie 2026 non trovate al 14 novembre 2026 (avvisi DGCA fino al 21 ottobre 2026 e sezione «Incentivi assegnati», letta solo nella parte dell’anno 2026). I conteggi degli esiti 2025 sono un’estrazione automatica dai PDF, verificata a mano solo sulla prima riga dell’allegato A del D.D. 2211.",
+      "Edizione 2024: PDF del bando in formato immagine, sessioni e scadenze non lette. Bandi collegati (coproduzioni minoritarie, Italia-Francia, opere tv e web 2025) citati dagli avvisi DGCA ma non trascritti.",
+      "Il bando unico dei selettivi 2026 ha griglie con massimi diversi (137, 147, 105, 85); il programma gestisce un solo punteggio massimo per scheda, perciò il bando è diviso in due schede di produzione (Tabella 4 e Tabella 5) con lo stesso fondo. Scrittura e sviluppo non sono simulati."
+    ]
+  },
+  "verifica": {
+    "esito": "confermata",
+    "data": "2026-11-14",
+    "correzioni": [],
+    "dubbi": [
+      "Art. 24, comma 6: il tetto per i film di qualità/identità è scritto «euro 1.200.0000,00» (refuso); trascritto 1.200.000 euro, nessuna rettifica pubblicata al 14 novembre 2026.",
+      "Criteri F, G, H trattati come punteggi fissi (discreti) ed E.2 come qualitativo: le tabelle indicano solo i massimi; la cumulabilità G.1 + G.2 è dedotta dal massimo 5 della lettera G.",
+      "Le lettere degli elenchi (art. 21, comma 1; art. 1, comma 3) non compaiono nel testo estratto: ricostruite dall’ordine, coerenti con le intestazioni delle tabelle 4 e 5.",
+      "Il punteggio massimo (137/147/105/85) non è dichiarato dal bando: è la somma dei massimi delle tabelle, ricalcolata e coerente.",
+      "Nessun atto di modifica del bando 2026 trovato (pagina avvisi DGCA contributi selettivi fino al 21 ottobre 2026 e ricerca web); graduatorie 2026 non ancora pubblicate."
+    ]
+  }
+}

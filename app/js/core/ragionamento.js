@@ -653,9 +653,9 @@ export function scostamenti(risultato, ancore) {
     let spiegazione;
     if (stato === 'dentro') spiegazione = `La media dei commissari (${fmt(c.punti)}) è nella fascia attesa ${intervallo(a.atteso)}.`;
     else {
-      spiegazione = `La media dei commissari (${fmt(c.punti)}) è ${stato === 'sopra' ? 'sopra' : 'sotto'} la fascia attesa ${intervallo(a.atteso)} di ${fmt(Math.abs(scarto))} punti. `
-        + (stato === 'sopra' ? 'Nei casi reali la Commissione non è andata così in alto con documenti di questo tipo: ' : 'Nei casi reali la Commissione non è scesa così in basso con documenti di questo tipo: ')
-        + `${a.spiegazione} `
+      spiegazione = `La media dei commissari (${fmt(c.punti)}) è ${fmt(Math.abs(scarto))} punti ${stato === 'sopra' ? 'sopra' : 'sotto'} la fascia attesa (${intervallo(a.atteso)}). `
+        + (stato === 'sopra' ? 'Nei casi reali la Commissione non è andata così in alto con documenti di questo tipo' : 'Nei casi reali la Commissione non è scesa così in basso con documenti di questo tipo')
+        + `${a.regole?.[0]?.id ? ` (regola «${a.regole[0].id}»)` : ''}. ${String(a.spiegazione || '').replace(/^Regola «[^»]+»\.\s*/, '')} `
         + (motivati ? `${motivati} ${motivati === 1 ? 'commissario motiva' : 'commissari motivano'} l’uscita dalla fascia con un riferimento ai documenti: leggilo prima di decidere.` : 'Nessun commissario ha motivato l’uscita dalla fascia con un riferimento preciso: considera la fascia come la previsione più probabile.');
     }
     criteri.push({
@@ -705,7 +705,10 @@ export function stimaDaRegole(bando, categoriaId, progetto, ancorePronte = null)
   const somma = (k) => r1(sezioni.reduce((s, x) => s + x[k], 0));
   const totale = somma('punti'), min = somma('min'), max = somma('max'), rigoroso = somma('rigoroso');
   const sotto = sezioni.filter((s) => !s.superata).map((s) => s.id);
-  const bloccanti = Object.values(anc.criteri).filter((a) => a.bloccante).map((a) => `${a.id}: ${a.bloccante}`);
+  // lo stesso motivo per più criteri si dice una volta sola: «1.1, 1.2: manca il testo dell’opera…»
+  const perMotivo = new Map();
+  for (const a of Object.values(anc.criteri).filter((x) => x.bloccante)) perMotivo.set(a.bloccante, [...(perMotivo.get(a.bloccante) || []), a.id]);
+  const bloccanti = [...perMotivo].map(([motivo, ids]) => `${ids.join(', ')}: ${motivo}`);
   const datiMancanti = sezioni.flatMap((s) => s.criteri).filter((c) => c.mancante).map((c) => c.id);
   const ammissibile = totale >= (bando.sogliaTotale || 0) && !sotto.length;
   const fiducie = Object.values(anc.criteri).map((a) => a.fiducia);

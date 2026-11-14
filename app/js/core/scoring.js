@@ -177,7 +177,7 @@ export function puntiFascia(criterio, valore, flags, unita = 'pct') {
   let prossima = null;
   for (let j = i - 1; j >= 0; j--) {
     const s = criterio.fasce[j];
-    if (s.flag) continue;
+    if (s.flag || s.punti <= f.punti) continue; // solo una fascia che vale davvero di più
     prossima = {
       soglia: s.oltre != null ? s.oltre : s.da,
       stretta: s.oltre != null,

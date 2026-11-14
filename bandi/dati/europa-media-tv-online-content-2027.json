@@ -1,0 +1,546 @@
+{
+  "id": "europa-media-tv-online-content-2027",
+  "fondoId": "europa",
+  "revisione": "2026-11-14",
+  "nome": "Europa — Creative Europe MEDIA, TV and online content (CREA-MEDIA-2027-TVONLINE), invito 2027",
+  "nomeBreve": "Europa · MEDIA TV and Online Content 2027",
+  "ente": "Commissione europea — programma Europa creativa (Creative Europe), sezione MEDIA; gestione: Agenzia esecutiva europea per l’istruzione e la cultura (EACEA), unità B.2 – MEDIA",
+  "regione": "Europa",
+  "territorio": "Paesi partecipanti alla sezione MEDIA",
+  "gentilizio": "europei",
+  "fonte": "Call for proposals «TV and online content» (CREA-MEDIA-2027-TVONLINE), Call document versione 1.0 del 30 settembre 2026, firmato elettronicamente il 30/09/2026; programma di lavoro 2027 adottato con decisione di esecuzione della Commissione C(2026)6518 del 22/09/2026",
+  "stato": "aperto",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Invito a presentare proposte dell’EACEA per società di produzione audiovisiva europee indipendenti: sostiene la produzione di animazione (topic 1, durata totale minima 24 minuti), documentari creativi (topic 2, minimo 50 minuti) e fiction (topic 3, film o serie, minimo 90 minuti) destinati principalmente alla televisione o allo sfruttamento online, con almeno due emittenti di due Paesi MEDIA e almeno il 40% di finanziamento confermato da terzi. Un comitato di valutazione assistito da esperti esterni indipendenti assegna fino a 100 punti su quattro criteri (Relevance 30, Quality 35, Project management 5, Dissemination 30), con soglia complessiva di 70; le proposte sono finanziate in ordine di graduatoria per topic fino a esaurimento del budget. La sovvenzione è una somma forfettaria (lump sum) da 70.000 a 2.000.000 euro determinata dal budget totale di produzione.",
+  "paginaUfficiale": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-3",
+  "fontiUrl": [
+    {
+      "titolo": "Call document CREA-MEDIA-2027-TVONLINE, V1.0 30.09.2026 (PDF)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2027/call-fiche_crea-media-2027-tvonline_en.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Topic page CREA-MEDIA-2027-TVONLINE-3 — Fiction projects (Funding & Tenders Portal)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-3",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Topic page CREA-MEDIA-2027-TVONLINE-1 — Animation projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-1",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Topic page CREA-MEDIA-2027-TVONLINE-2 — Documentary projects",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2027-TVONLINE-2",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Application form Part B (CREA MEDIA and CROSS) V5.0 15.09.2025 — modello informativo",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/temp-form/af/af_crea-media_en.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Call document CREA-MEDIA-2026-TVONLINE (edizione precedente)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2026/call-fiche_crea-media-2026-tvonline_en.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Call document CREA-MEDIA-2025-TVONLINE (edizione 2025)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2025/call-fiche_crea-media-2025-tvonline_en.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2025,
+      "pubblicato": "2024-10-01",
+      "scadenza": "2025-05-14",
+      "nota": "CREA-MEDIA-2025-TVONLINE, topic unico, 20 milioni di euro; scadenze 5 dicembre 2024 e 14 maggio 2025. Stessi massimi 30/35/5/30 e soglia 70. Contributo diverso: massimale 300.000 € per i documentari, 500.000 € per l’animazione, fino a 2 milioni per la fiction secondo il budget."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2025-09-30",
+      "scadenza": "2026-05-07",
+      "nota": "CREA-MEDIA-2026-TVONLINE, tre topic (animazione 5.500.000 €, documentario 1.760.000 €, fiction 14.740.000 €), 22 milioni di euro; scadenze 3 dicembre 2025 e 7 maggio 2026. Stessi massimi, soglia 70 e tabella forfettaria del 2027; nel 2027 cambiano solo alcuni elementi dei criteri B.2 e D.3."
+    },
+    {
+      "anno": 2027,
+      "pubblicato": "2026-09-30",
+      "scadenza": "2027-09-15",
+      "nota": "CREA-MEDIA-2027-TVONLINE, tre topic, budget 23.300.000 euro; due scadenze: 10 febbraio 2027 e 15 settembre 2027 (17:00 CET). Stato «Open» sul portale."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2027,
+      "dal": "2026-09-30",
+      "al": "2027-02-10",
+      "nota": "1ª scadenza (cut-off): 10 febbraio 2027 ore 17:00:00 CET (Bruxelles); circa il 40% del budget. Valutazione febbraio-giugno 2027, esiti agosto 2027, firma della convenzione novembre 2027 (indicativo)."
+    },
+    {
+      "anno": 2027,
+      "dal": "2027-02-11",
+      "al": "2027-09-15",
+      "nota": "2ª scadenza (cut-off): 15 settembre 2027 ore 17:00:00 CET (Bruxelles); circa il 60% del budget. Valutazione settembre 2027-gennaio 2028, esiti marzo 2028, firma giugno 2028 (indicativo)."
+    }
+  ],
+  "prossimaEdizione": null,
+  "sogliaTotale": 70,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Un comitato di valutazione assistito da esperti esterni indipendenti valuta tutte le proposte ammissibili ed eleggibili, per ciascun topic, rispetto alla capacità operativa e ai criteri di aggiudicazione, e le classifica in base al punteggio (procedura in una fase: una sola presentazione, una sola valutazione). Nessuna soglia per singolo criterio; soglia complessiva 70/100. A parità di punteggio nello stesso topic prevale il punteggio del criterio «Relevance», poi «Dissemination», poi «Quality of content and activities». Le proposte sopra soglia sono finanziate nei limiti del budget; le altre vanno in lista di riserva o sono respinte."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "Funding & Tenders Portal — Electronic Submission System, dalla pagina del topic",
+    "oggetto": "",
+    "regole": [
+      "Solo invio elettronico tramite il Funding & Tenders Portal; non sono ammesse domande cartacee.",
+      "Serve un account EU Login e la registrazione dell’organizzazione nel Participant Register (codice PIC di 9 cifre) prima dell’invio.",
+      "La domanda si compone di Parte A (online), Parte B (modello Word da scaricare dal sistema, caricato in PDF), Parte C (online) e allegati obbligatori; usare i moduli del sistema, non quelli della pagina del topic.",
+      "Parte B: massimo 70 pagine; le pagine in eccesso non sono considerate.",
+      "Ogni proposta riguarda un solo topic; le serie concepite con distribuzione e marketing comuni vanno presentate come serie, senza dividere gli episodi.",
+      "La domanda va presentata al più tardi il primo giorno delle riprese principali (o di inizio animazione).",
+      "Lingua: qualunque lingua ufficiale UE, ma sintesi sempre in inglese; si raccomanda l’inglese per tutta la domanda.",
+      "Conferma via e-mail dell’invio; la proposta può essere modificata e ripresentata fino alla scadenza.",
+      "Domande non tecniche: EACEA-MEDIA-TV@ec.europa.eu, indicando call e topic."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "fiction",
+      "nome": "Fiction (drama, film unico o serie) — CREA-MEDIA-2027-TVONLINE-3",
+      "griglia": "tvonline",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 100,
+        "massimali": {
+          "2027": 2000000
+        },
+        "nota": "Somma forfettaria (lump sum) fissata dal budget totale di produzione, da 70.000 € (budget fino a 500.000 €) a 2.000.000 € (budget oltre 20 milioni di euro): non è una percentuale del costo, quindi il controllo sul massimo concedibile verifica solo il tetto di 2.000.000 €."
+      },
+      "dotazione": {
+        "2027": 15611000
+      },
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "animazione",
+      "nome": "Animazione (unica o serie) — CREA-MEDIA-2027-TVONLINE-1",
+      "griglia": "tvonline",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 100,
+        "massimali": {
+          "2027": 2000000
+        },
+        "nota": "Somma forfettaria (lump sum) fissata dal budget totale di produzione, da 70.000 € (budget fino a 500.000 €) a 2.000.000 € (budget oltre 20 milioni di euro): non è una percentuale del costo, quindi il controllo sul massimo concedibile verifica solo il tetto di 2.000.000 €."
+      },
+      "dotazione": {
+        "2027": 5825000
+      },
+      "durataMin": 24,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentario",
+      "nome": "Documentario creativo (unico o serie) — CREA-MEDIA-2027-TVONLINE-2",
+      "griglia": "tvonline",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 100,
+        "massimali": {
+          "2027": 2000000
+        },
+        "nota": "Somma forfettaria (lump sum) fissata dal budget totale di produzione, da 70.000 € (budget fino a 500.000 €) a 2.000.000 € (budget oltre 20 milioni di euro): non è una percentuale del costo, quindi il controllo sul massimo concedibile verifica solo il tetto di 2.000.000 €."
+      },
+      "dotazione": {
+        "2027": 1864000
+      },
+      "durataMin": 50,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "tvonline": {
+      "id": "tvonline",
+      "nome": "Award criteria CREA-MEDIA-2027-TVONLINE (§9 del Call document)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Pertinenza (Relevance)",
+          "max": 30,
+          "obiettivo": "Pertinenza del progetto rispetto all’obiettivo del bando e ai progetti destinatari (“Relevance of the project in relation to the call’s objective and targeted projects”).",
+          "criteri": [
+            {
+              "id": "A.1",
+              "nome": "Dimensione europea del finanziamento del progetto",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "European dimension of the financing of the project: livello di cooperazione tra operatori di Paesi diversi; percentuale di finanziamento non nazionale; strategie del produttore e sforzi compiuti per raggiungere il finanziamento confermato; originalità e innovazione della struttura finanziaria; diversità geografica e linguistica dei partner, tenendo conto anche delle dimensioni dei mercati."
+            },
+            {
+              "id": "A.2",
+              "nome": "Coproduzione europea",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "European co-production: esistenza di una coproduzione europea tra due società di produzione di Paesi diversi; livello di cooperazione sugli aspetti creativi; cooperazione tra Paesi con mercati di dimensioni diverse, compreso un partner di un Paese LCC Gruppo A o Gruppo B, e ripartizione della sovvenzione MEDIA tra i coproduttori.",
+              "principio": "Paesi LCC Gruppo A: Croazia, Cechia, Estonia, Grecia, Polonia, Portogallo, Romania. Gruppo B: Bulgaria, Cipro, Ungheria, Lettonia, Lituania, Lussemburgo, Malta, Slovacchia, Slovenia (più, se partecipanti a MEDIA, Albania, Bosnia-Erzegovina, Islanda, Liechtenstein, Montenegro, Macedonia del Nord, Serbia, Ucraina). L’Italia non è LCC."
+            },
+            {
+              "id": "A.3",
+              "nome": "Strategie per un’industria più sostenibile e rispettosa dell’ambiente",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "sostenibilita",
+              "descrizione": "Adequacy of the strategies presented to ensure a more sustainable and environmentally-respectful industry (il §2 del bando cita in particolare il ricorso a greening consultant per ridurre l’impatto ambientale di produzioni e riprese)."
+            },
+            {
+              "id": "A.4",
+              "nome": "Strategie per equilibrio di genere, inclusione, diversità e rappresentatività",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "sostenibilita",
+              "descrizione": "Adequacy of the strategies to ensure gender balance, inclusion, diversity and representativeness, either in the project/content or in the way of managing the activity."
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Qualità dei contenuti e delle attività (Quality of content and activities)",
+          "max": 35,
+          "obiettivo": "Qualità del progetto e potenziale di raggiungere il pubblico (“The quality of the project and the potential to reach audiences”).",
+          "criteri": [
+            {
+              "id": "B.1",
+              "nome": "Qualità artistica del progetto",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Artistic quality of the project: innovazione, pertinenza, originalità e qualità complessiva di soggetto/formato/trattamento; qualità del pitch/trailer; per le stagioni successive delle serie, qualità dei nuovi sviluppi di storie e personaggi."
+            },
+            {
+              "id": "B.2",
+              "nome": "Qualità complessiva e finanziamento del progetto",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Overall quality and financing of the project: fattibilità del progetto; adeguatezza del budget di produzione rispetto al tipo di progetto."
+            },
+            {
+              "id": "B.3",
+              "nome": "Potenziale di raggiungere il pubblico a livello europeo e internazionale",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Potential to reach audiences at European and international level: appeal transnazionale del concept/soggetto; pubblico confermato tramite le emittenti coinvolte; potenziale di raggiungere pubblici giovani e nativi digitali (bambini, adolescenti, giovani adulti)."
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Gestione del progetto (Project management)",
+          "max": 5,
+          "obiettivo": "Distribuzione di ruoli e responsabilità (“Distribution of roles and responsibilities”).",
+          "criteri": [
+            {
+              "id": "C.1",
+              "nome": "Distribuzione dei ruoli e delle responsabilità",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "The distribution of the roles and responsibilities of the production and creative team, including the adequacy of the collaboration in relation to the objectives of the project. Per i progetti di animazione si valuta anche la localizzazione del lavoro di animazione, per incoraggiare l’uso di studi europei.",
+              "principio": "Su questo criterio si valuta anche la capacità operativa (§7): se la valutazione del criterio è positiva, i richiedenti sono considerati in possesso di sufficiente capacità operativa."
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Diffusione (Dissemination)",
+          "max": 30,
+          "obiettivo": "Qualità del coinvolgimento del distributore e della strategia di distribuzione, qualità della strategia di promozione e marketing.",
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Qualità del coinvolgimento del distributore",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Quality of the distributor’s involvement: esperienza e track record del distributore con progetti simili; coinvolgimento finanziario e rischio assunto dal distributore (cioè importo del minimo garantito); se applicabile e se la società di produzione agisce da distributore, esperienza e track record del produttore come distributore."
+            },
+            {
+              "id": "D.2",
+              "nome": "Qualità della strategia di distribuzione",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Quality of the distribution strategy: coerenza e pertinenza della strategia di distribuzione; adeguatezza della strategia al tipo di opera; coerenza delle stime di vendita; numero di emittenti interessate all’acquisizione dell’opera."
+            },
+            {
+              "id": "D.3",
+              "nome": "Qualità della strategia di promozione e marketing",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Quality of the promotion and marketing strategy: coerenza e pertinenza delle strategie di promozione e marketing sviluppate per promuovere il progetto presso il pubblico; strategie di marketing B2C e strategie promozionali innovative verso il pubblico, incluse promozione online e sui social media."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Application Form Part A — dati amministrativi dei partecipanti e budget sintetico (online)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Application Form Part B — descrizione tecnica del progetto (modello del sistema, max 70 pagine)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Part C — dati aggiuntivi e contributo agli indicatori chiave del programma (online)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Lump sum calculator (modello obbligatorio)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "PDF con le informazioni sulle opere generato dal Creative Europe MEDIA Database",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Presentazione creativa del progetto (nota di regia, booklet, presentazione grafica, estratto di sceneggiatura ecc.), con link a trailer/teaser se disponibile",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Production Financing Structure (modello obbligatorio) con il quadro di tutte le fonti confermate",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Fonti di finanziamento confermate: copie dei contratti o lettere di impegno vincolanti, nello stesso ordine della Production Financing Structure",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratto (o deal memo) di coproduzione",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Lettere di intenti di emittenti/distributori che non finanziano la produzione",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione di indipendenza e di proprietà europea (modello obbligatorio)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione sulla lingua dei materiali presentati (modello obbligatorio)",
+      "obbligo": "sempre"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "persona-giuridica",
+      "testo": "Essere persona giuridica (pubblica o privata) stabilita in un Paese partecipante a Europa creativa e pienamente alla sezione MEDIA, e posseduta direttamente o indirettamente, interamente o a maggioranza, da cittadini di tali Paesi (verifica in fase di preparazione della convenzione)."
+    },
+    {
+      "id": "produttore-indipendente",
+      "testo": "Essere società di produzione audiovisiva europea indipendente: non controllata a maggioranza da un fornitore di servizi di media audiovisivi (controllo = oltre il 25% del capitale detenuto da un solo fornitore, 50% se più fornitori); attività principale la produzione audiovisiva."
+    },
+    {
+      "id": "durata-minima",
+      "testo": "Opera destinata principalmente a TV o sfruttamento online, di durata totale minima: animazione 24 minuti, documentario creativo 50 minuti, fiction 90 minuti (film unico o serie)."
+    },
+    {
+      "id": "prima-delle-riprese",
+      "testo": "Domanda presentata al più tardi il primo giorno delle riprese principali (inizio dell’animazione per l’animazione)."
+    },
+    {
+      "id": "partecipazione-significativa",
+      "testo": "Partecipazione significativa di professionisti cittadini e/o residenti in Paesi MEDIA: più del 50% dei punti della tabella del §6 (fiction: regista 3, autore/sceneggiatore 3, attori 1-3 2 ciascuno, compositore 1, scenografo 1, direttore della fotografia 1, montatore 1, suono 1, location delle riprese 1, location della post-produzione 1 — totale 19; documentario totale 13; animazione totale 19). Ruoli condivisi = punti condivisi."
+    },
+    {
+      "id": "due-emittenti",
+      "testo": "Partecipazione di almeno due emittenti (lineari o servizi on demand) stabilite in due Paesi MEDIA, provata da contratti o lettere di impegno vincolanti con prezzo e durata della licenza."
+    },
+    {
+      "id": "durata-licenze",
+      "testo": "Diritti di sfruttamento concessi alle emittenti che tornano al produttore dopo al massimo 7 anni (prevendita) o 10 anni (se l’emittente è anche coproduttrice); altrimenti la domanda è ineleggibile. Le emittenti non possono essere produttori maggioritari in termini di diritti."
+    },
+    {
+      "id": "terzi-40",
+      "testo": "Almeno il 40% del budget totale di produzione stimato garantito da fonti terze (emittenti, distributori, fondi, investitori pubblici/privati), provate da contratti o lettere vincolanti con importo, diritti ceduti e durata della licenza. Apporto proprio dei (co)produttori e sovvenzione MEDIA non contano; il tax shelter conta solo se confermato da documenti dell’autorità competente."
+    },
+    {
+      "id": "media-50",
+      "testo": "Almeno il 50% del finanziamento totale stimato proveniente da Paesi partecipanti alla sezione MEDIA."
+    },
+    {
+      "id": "isan",
+      "testo": "Indicare l’identificativo ISAN o EIDR se esiste; per i progetti finanziati va creato entro la fine dell’azione."
+    },
+    {
+      "id": "esclusioni-tipologie",
+      "testo": "Esclusi tra l’altro: riprese dal vivo, giochi TV, talk show, cooking show, magazine, reality, programmi educativi; documentari turistici, making-of, reportage, docu-soap; opere promozionali o istituzionali; videoclip; progetti già finanziati da Eurimages (salvo il Pilot Programme for Series Co-Production); produzioni nate per il cinema (es. più distributori theatrical e/o un agente di vendita internazionale)."
+    },
+    {
+      "id": "capacita-finanziaria",
+      "testo": "Capacità finanziaria stabile e sufficiente (verifica sui documenti caricati nel Participant Register in fase di preparazione della convenzione) e assenza di cause di esclusione (artt. 138 e 143 del Regolamento finanziario UE 2024/2509)."
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "durata-progetto",
+      "etichetta": "Durata massima del progetto (pre-produzione, produzione, post-produzione, consegna, comunicazione e diffusione)",
+      "mesi": 36,
+      "nota": "§6 Duration: «Projects should not normally exceed 36 months»; proroghe possibili se motivate, con emendamento. Decorre dalla data di inizio fissata nella convenzione (di norma dopo la firma)."
+    }
+  ],
+  "scadenzeNote": [
+    "Consegna dei deliverable: struttura finanziaria aggiornata, contratto con l’emittente principale, lettera di accettazione del materiale, link all’opera prodotta, materiale promozionale, ultimo rendiconto royalty dell’agente di vendita, identificativo standard (ISAN/EIDR), dichiarazione di indipendenza e proprietà: §10 Milestones and deliverables: entro la fine dell’azione; titoli e ordine vanno rispettati. Nessun termine in mesi indicato nel bando."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 70,
+      "condizione": "Prefinanziamento di norma pari al 70% dell’importo massimo della sovvenzione (eccezionalmente inferiore o nullo), pagato entro 30 giorni dall’entrata in vigore della convenzione o dalla garanzia finanziaria, se richiesta."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 30,
+      "condizione": "Pagamento del saldo a fine progetto dopo il calcolo dell’importo finale; nessun pagamento intermedio. Il bando non scrive «30%»: è la differenza tra l’importo finale e il prefinanziamento ordinario del 70%, dato che non ci sono pagamenti intermedi."
+    }
+  ],
+  "note": [
+    "Sovvenzione forfettaria (lump sum) fissata dal budget totale di produzione: oltre 20 M€ → 2.000.000 €; oltre 10 e fino a 20 M€ → 1.000.000 €; oltre 3 e fino a 10 M€ → 500.000 €; oltre 2 e fino a 3 M€ → 400.000 €; oltre 1,5 e fino a 2 M€ → 300.000 €; oltre 1 e fino a 1,5 M€ → 220.000 €; oltre 800.000 e fino a 1 M€ → 150.000 €; oltre 500.000 e fino a 800.000 € → 100.000 €; fino a 500.000 € → 70.000 €. Importo richiesto tra 70.000 e 2.000.000 € per progetto.",
+    "Budget indicativo 23.300.000 €: 40% alla 1ª scadenza e 60% alla 2ª; almeno il 25% riservato all’animazione e un altro 8% ai documentari (topic: animazione 5.825.000 €, documentari 1.864.000 €, fiction 15.611.000 €). Il bando è subordinato all’adozione definitiva del bilancio UE 2027.",
+    "Non c’è un obbligo di spesa sul territorio: il criterio territoriale è la partecipazione significativa di professionisti dei Paesi MEDIA (oltre il 50% dei punti della tabella) e la provenienza da Paesi MEDIA di almeno il 50% del finanziamento.",
+    "Divieto di cumulo con altre sovvenzioni del bilancio UE per la stessa azione; la sovvenzione non può generare profitto (no-profit rule).",
+    "Le proposte di progetti già completati sono respinte; quelle di progetti già avviati sono valutate caso per caso, senza rimborso delle attività precedenti alla data di inizio.",
+    "Ammesse candidature di un solo richiedente o di consorzi di almeno 2 beneficiari; ammessi partner associati di Paesi non MEDIA (es. Corea), che non ricevono fondi.",
+    "La garanzia di prefinanziamento, se richiesta, è fissata in fase di preparazione della convenzione e di norma non supera il prefinanziamento.",
+    "Per il simulatore: la griglia è unica per i tre topic; graduatoria separata per topic."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Eurimages — Co-production Support Programme (Consiglio d’Europa)",
+      "url": "https://www.coe.int/en/web/eurimages",
+      "descrizione": "Sostegno alla coproduzione di lungometraggi di finzione, animazione e documentari tra produttori di almeno due Stati membri di Eurimages; domande sulla piattaforma eurimages-online. È la linea più rilevante per i lungometraggi cinematografici (che MEDIA TV and Online esclude), ma in questa sessione non è stato letto un regolamento con una griglia a punti ufficiale (il sito coe.int ha risposto 403): non trascritta."
+    },
+    {
+      "nome": "Creative Europe MEDIA — European co-development (CREA-MEDIA-2027-CODEV)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2027/call-fiche_crea-media-2027-codev_en.pdf",
+      "descrizione": "Sviluppo in coproduzione tra almeno due società di Paesi MEDIA (lungometraggi, serie, animazione, documentari). Griglia ufficiale a punti: Relevance 40, Quality of content 20, Project management 25, Dissemination 15; soglia complessiva 70/100. Scadenza 2 marzo 2027 ore 17:00 CET; budget stimato 12.500.000 €. È sviluppo, non produzione."
+    },
+    {
+      "nome": "Creative Europe MEDIA — European slate development (CREA-MEDIA-2027-DEVSLATE)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2027/call-fiche_crea-media-2027-devslate_en.pdf",
+      "descrizione": "Sviluppo di un portafoglio (slate) di progetti; sovvenzione tra 90.000 e 510.000 € per progetto; soglia complessiva 70 punti; scadenza 1 dicembre 2026 ore 17:00 CET; budget stimato 22.374.320 €."
+    },
+    {
+      "nome": "Creative Europe MEDIA — Films on the Move (CREA-MEDIA-2027-FILMOVE)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2027/call-fiche_crea-media-2027-filmove_en.pdf",
+      "descrizione": "Distribuzione cinematografica transnazionale di film europei non nazionali (agenti di vendita e distributori), non produzione; budget stimato 23.500.000 €; soglia complessiva 70 punti."
+    },
+    {
+      "nome": "Creative Europe MEDIA — Development of video games and immersive content (CREA-MEDIA-2027-DEVVGIM)",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/crea/wp-call/2027/call-fiche_crea-media-2027-devvgim_en.pdf",
+      "descrizione": "Sviluppo di videogiochi e opere immersive; fuori dall’ambito film/serie. Citato per completezza."
+    }
+  ],
+  "esitiPubblici": [],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Call document CREA-MEDIA-2027-TVONLINE V1.0, §9 Award criteria (p. 18-19), tabella riassuntiva",
+        "testo": "Award criteria / Minimum pass score / Maximum score — Relevance N/A 30 — Quality of content and activities N/A 35 — Project management N/A 5 — Dissemination N/A 30 — Overall (pass) scores 70 100. Maximum points: 100 points. Individual thresholds per criterion: N/A. Overall threshold: 70 points."
+      },
+      {
+        "riferimento": "§9, Relevance (p. 18)",
+        "testo": "Relevance: Relevance of the project in relation to the call’s objective and targeted projects (30 points) − European dimension of the financing of the project (15 points) […] − European co-production (5 points) […] − Adequacy of the strategies presented to ensure a more sustainable and environmentally-respectful industry (5 points) − Adequacy of the strategies to ensure gender balance, inclusion, diversity and representativeness […] (5 points)"
+      },
+      {
+        "riferimento": "§9, Quality of content and activities (p. 18)",
+        "testo": "Quality of content and activities: The quality of the project and the potential to reach audiences (35 points) − Artistic quality of the project (15 points) […] − Overall quality and financing of the project (5 points) […] − Potential to reach audiences at European and international level (15 points)"
+      },
+      {
+        "riferimento": "§9, Project management e Dissemination (p. 19)",
+        "testo": "Project management: Distribution of roles and responsibilities (5 points) […] Dissemination: Quality of the distributor’s involvement and distribution strategy and quality of the promotion and marketing strategy (30 points) − Quality of the distributor’s involvement (10 points) […] − Quality of the distribution strategy (15 points) […] − Quality of the promotion and marketing strategy (5 points)"
+      },
+      {
+        "riferimento": "§10, Form of grant (p. 20-21)",
+        "testo": "Project budget (requested grant amount): between EUR 70 000 and EUR 2 000 000 per project. The grant will be a lump sum grant. […] Total production budget >EUR 20 000 000 — Lump sum EUR 2 000 000 […] < or = EUR 500 000 — EUR 70 000"
+      },
+      {
+        "riferimento": "§4 Timetable (p. 8)",
+        "testo": "Call opening: 30 September 2026. Deadline for submission: 10 February 2027 – 17:00:00 CET (Brussels) / 15 September 2027 – 17:00:00 CET (Brussels)"
+      }
+    ],
+    "dubbi": [
+      "Il bando MEDIA TV and Online Content finanzia opere destinate principalmente a TV/online: esclude espressamente le produzioni nate per il cinema (più distributori theatrical e/o agente di vendita internazionale). Per un lungometraggio cinematografico la linea pertinente è Eurimages, la cui griglia non è stata trascritta (sito coe.int in 403 in questa sessione).",
+      "La griglia non prevede punteggi per fasce numeriche: tutti i sottocriteri sono qualitativi, con elenchi di elementi considerati ma senza ripartizione interna dei punti.",
+      "Il bando è subordinato all’adozione del bilancio UE 2027: budget e topic possono cambiare (controllare gli aggiornamenti sulla pagina del topic).",
+      "La quota di saldo del 30% è ricavata come complemento del prefinanziamento “normalmente del 70%”; il bando non la indica esplicitamente.",
+      "prossimaEdizione lasciata a null: il programma Europa creativa 2021-2027 termina con il programma di lavoro 2027 e in questa sessione non è stato letto alcun atto ufficiale sul periodo successivo.",
+      "Esiti/graduatorie non pubblicati con punteggi (le liste dei progetti finanziati MEDIA non riportano i punteggi); esitiPubblici lasciato vuoto.",
+      "Le date «pubblicato» dello storico (2024-10-01, 2025-09-30, 2026-09-30) sono le date di apertura (Call opening) scritte nei Call document e confermate dai dati dei topic del Funding & Tenders Portal; per il 2025 la pubblicazione sul portale risulta del 26/09/2024.",
+      "Verifica del 14/11/2026: i dati live dei tre topic 2027 risultano «Open» e riportano un solo aggiornamento (30/09/2026, apertura della sessione di invio); il PDF ufficiale ha Last-Modified 30/09/2026 e la «History of changes» elenca solo la versione 1.0. Nessuna rettifica, proroga o FAQ che modifichi i criteri trovata."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "storicoEdizioni 2025: tolta l’affermazione che il bando 2025 avesse soglie per singolo criterio; il Call document 2025 dice «Individual thresholds per criterion: N/A» (la frase «individual thresholds AND the overall threshold» è formula standard presente anche nel 2026). Aggiunti i massimali 2025, diversi dalla tabella forfettaria.",
+      "storicoEdizioni 2026: precisato che i massimi coincidono ma due elenchi di elementi dei criteri B.2 e D.3 sono cambiati nel 2027; aggiunte le dotazioni per topic 2026.",
+      "erogazione saldo: chiarito che il 30% deriva da prefinanziamento 70% senza pagamenti intermedi (non è scritto nel bando).",
+      "affidabilita.dubbi: riformulata la nota sulle date dello storico e aggiunto l’esito del controllo su rettifiche e aggiornamenti."
+    ],
+    "dubbi": [
+      "Tutti i sottocriteri sono qualitativi: il bando non ripartisce i punti all’interno dei sottocriteri.",
+      "Bando subordinato all’adozione definitiva del bilancio UE 2027: budget e dotazioni dei topic possono cambiare.",
+      "Saldo 30% ricavato per differenza, non scritto nel bando.",
+      "Linea esclusa per le opere nate per il cinema: per un lungometraggio cinematografico serve Eurimages, la cui griglia non è stata trascritta.",
+      "Nessuna graduatoria pubblica con punteggi; prossimaEdizione non determinabile (fine del programma 2021-2027)."
+    ]
+  }
+}

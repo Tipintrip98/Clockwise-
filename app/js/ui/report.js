@@ -5,7 +5,81 @@ import { quadrante, barreSezioni } from './grafici.js';
 import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, storicoFinanziamento, r1 } from '../core/scoring.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 import { pianoMiglioramento, titoloEsito } from '../core/report-dati.js';
+import { taraturaDossier } from '../core/ragionamento.js';
 import { scaricaReportPdf } from './pdf.js';
+
+/* ------------------------------------------------------------------ taratura sui casi reali */
+
+const fascia = (f) => (f.min === f.max ? fmt(f.min) : `${fmt(f.min)}–${fmt(f.max)}`);
+const STATO_TARATURA = { dentro: ['ok', 'Nella fascia'], sopra: ['warn', 'Sopra la fascia'], sotto: ['warn', 'Sotto la fascia'] };
+
+// Scala del criterio con la fascia rigorosa, quella attesa e la media dei commissari (i numeri sono anche nel testo).
+function scalaTaratura(a, media) {
+  const x = (v) => `${Math.max(0, Math.min(100, (v / a.massimo) * 100))}%`;
+  const largo = (f) => `${Math.max(0.8, ((f.max - f.min) / a.massimo) * 100)}%`;
+  return h('div.tar-scala', { 'aria-hidden': 'true' },
+    h('span.tar-rig', { style: { left: x(a.rigoroso.min), width: largo(a.rigoroso) } }),
+    h('span.tar-att', { style: { left: x(a.atteso.min), width: largo(a.atteso) } }),
+    media != null ? h('span.tar-media', { style: { left: x(media) } }) : null);
+}
+
+function rigaTaratura(a, sc) {
+  if (!a) return null;
+  const [classe, testo] = sc ? STATO_TARATURA[sc.stato] : ['x', 'Da valutare'];
+  return h('div.tar-crit',
+    h('div.tar-testa',
+      h('span.label', 'Taratura sui casi reali'),
+      h(`span.tag.${sc?.gravita === 'marcato' ? 'bad' : classe}`, testo),
+      h('span.tag.x', `fiducia ${a.fiducia}`)),
+    h('div.tar-fasce',
+      h('span', 'Attesa ', h('strong.num', fascia(a.atteso))),
+      h('span', 'Rigorosa ', h('strong.num', fascia(a.rigoroso))),
+      sc ? h('span', 'Media dei commissari ', h('strong.num', fmt(sc.media))) : null),
+    scalaTaratura(a, sc?.media),
+    a.bloccante ? h('div.notice.bad', a.bloccante) : null,
+    h('p.small', sc && sc.stato !== 'dentro' ? sc.spiegazione : a.spiegazione),
+    a.regole?.length ? h('div.muted.small', `${a.regole.length === 1 ? 'Regola' : 'Regole'}: `, a.regole.map((r) => `${r.id} (forza ${r.forza})`).join(' · ')) : null);
+}
+
+let domandeAperteUi = false; // dopo una risposta l'elenco delle domande resta aperto
+function pannelloTaratura(tar, p, ridisegna) {
+  if (!tar) return null;
+  const sc = tar.scostamenti;
+  const rispondi = (fatto, valore, id) => {
+    p.fattiConfermati = { ...(p.fattiConfermati || {}) };
+    if (valore == null) delete p.fattiConfermati[fatto]; else p.fattiConfermati[fatto] = valore;
+    domandeAperteUi = true;
+    salvaPresto(); ridisegna();
+    document.getElementById(id)?.focus();
+  };
+  const domande = tar.tutteLeDomande || [];
+  const aperte = domande.filter((d) => d.valore == null).length;
+  const bottone = (d, valore, etichetta) => {
+    const id = `tar-${d.fatto}-${valore ? 'si' : 'no'}`;
+    const scelto = d.confermato && d.valore === valore;
+    return h(`button.btn.s${scelto ? '.primary' : ''}`, { type: 'button', id, 'aria-pressed': String(scelto), onclick: () => rispondi(d.fatto, scelto ? null : valore, id) }, etichetta);
+  };
+  return h('div.panel.stack.tar-pannello',
+    h('div.spread',
+      h('h2', 'Taratura sui casi reali'),
+      h('div.row',
+        sc ? h(`span.tag.${sc.fuori ? (sc.marcati ? 'bad' : 'warn') : 'ok'}`, sc.fuori ? `${sc.fuori} fuori fascia su ${sc.valutati}` : `${sc.valutati} su ${sc.valutati} nella fascia`) : h('span.tag.x', 'Valutazione non ancora fatta'),
+        h('span.tag.x', `regole ${tar.versione}`))),
+    h('p', { style: { maxWidth: '80ch' } }, sc ? sc.sintesi : `Stima dalle sole regole: ${fmt(tar.stima?.totale)} punti (da ${fmt(tar.stima?.min)} a ${fmt(tar.stima?.max)}). Dopo la valutazione qui vedi se i commissari simulati escono dalle fasce.`),
+    h('p.muted.small', { style: { maxWidth: '80ch' } }, 'Ogni criterio ha una fascia attesa e una rigorosa, calcolate dai fatti verificabili del dossier (allegati, firme, piano finanziario, figure dichiarate) con regole ricavate dal confronto tra simulazioni e punteggi reali della Commissione. Le fasce sono passate ai commissari simulati; una media fuori fascia non viene corretta: va letta la motivazione.'),
+    tar.cambiate ? h('div.notice.warn', 'Documenti o dati sono cambiati dopo la valutazione: qui vedi le fasce usate allora. Ripeti la valutazione per applicare quelle nuove.') : null,
+    sc?.fuori ? h('ul.tar-elenco', sc.criteri.filter((x) => x.stato !== 'dentro').map((x) => h('li',
+      h('strong', `${x.id} · ${x.nome}`),
+      h('span.num', ` · media ${fmt(x.media)}, fascia attesa ${fascia(x.atteso)}, scarto ${x.scarto > 0 ? '+' : '−'}${fmt(Math.abs(x.scarto))}`),
+      x.motivati ? h('span.muted.small', ` · ${x.motivati} con motivazione «fuori fascia»`) : null))) : null,
+    domande.length ? h('details.more', { open: domandeAperteUi || (aperte > 0 && !sc) },
+      h('summary', aperte ? `Domande per affinare le fasce (${aperte} senza risposta)` : 'Domande per affinare le fasce'),
+      h('p.muted.small', 'Sono i fatti che dipendono da un giudizio. Rispondi solo se ne sei sicuro: la risposta vale per le fasce delle prossime valutazioni e per la stima dalle regole. Un secondo tocco sulla stessa risposta la annulla.'),
+      h('ul.tar-domande', domande.map((d) => h('li',
+        h('div', h('div', d.domanda), h('div.muted.small', d.confermato ? 'Risposta tua.' : d.valore == null ? 'Non determinato dai documenti.' : `Dai documenti: ${d.origine}`)),
+        h('div.row', { role: 'group', 'aria-label': d.domanda }, bottone(d, true, 'Sì'), bottone(d, false, 'No')))))) : null,
+    h('details.more', h('summary', 'Limiti dichiarati della taratura'), h('ul.small', tar.limiti.map((l) => h('li', l)))));
+}
 
 const TITOLI = {
   ammissibile: 'Sopra tutte le soglie',
@@ -28,10 +102,13 @@ function spiegazione(ris, p) {
   return ris.motivi.join(' ');
 }
 
-function schedaCriterio(c, def) {
+function schedaCriterio(c, def, tar = null) {
   const forbice = c.min != null && c.max != null && c.max - c.min >= 0.1;
   const corpo = [];
+  const ancora = tar?.ancore?.criteri?.[c.id];
+  const sc = tar?.scostamenti?.criteri?.find((x) => x.id === c.id) || null;
   if (def.descrizione) corpo.push(h('p.muted.small', def.descrizione));
+  if (ancora) corpo.push(rigaTaratura(ancora, sc));
   if (c.fonte === 'calcolo' || c.fonte === 'dichiarato') {
     corpo.push(c.mancante ? h('div.notice.warn', 'Dato mancante: compila i Dati chiave.')
       : h('div', h('strong', c.valoreTesto), c.dettaglio ? ` (${c.dettaglio})` : '', ' → fascia “', c.fascia, '”', h('div.muted.small', `Calcolo: ${c.formula}.`)));
@@ -51,7 +128,8 @@ function schedaCriterio(c, def) {
     h('summary',
       h('span.id', c.id), h('span.nm', c.nome),
       h('span.pt', h('b', c.punti == null ? '—' : fmt(c.punti)), ` / ${fmt(c.massimo)}`, forbice && h('div.muted.small', `${fmt(c.min)} – ${fmt(c.max)}`),
-        c.rigoroso != null && c.rigoroso < c.punti - 0.05 && h('div.small', { style: { color: 'var(--warn)' } }, `rigorosa ${fmt(c.rigoroso)}`))),
+        c.rigoroso != null && c.rigoroso < c.punti - 0.05 && h('div.small', { style: { color: 'var(--warn)' } }, `rigorosa ${fmt(c.rigoroso)}`),
+        sc && sc.stato !== 'dentro' && h('div.small.tar-fuori', `fuori fascia (${fascia(sc.atteso)})`))),
     h('div.meter', h('i', { style: { width: `${pct}%` } })),
     h('div.body', corpo));
 }
@@ -68,6 +146,8 @@ export function schedaReport(corpo, p, bando) {
   controlli = [...controlli, ...controlliFormato(bando, p.documenti), ...controlliIncrociati(bando, p)];
   const val = p.valutazione;
   const piano = pianoMiglioramento(p, bando, ris, controlli);
+  let tar = null;
+  try { tar = taraturaDossier(bando, p, ris); } catch { tar = null; } // la taratura non deve mai impedire di vedere il report
   const conta = (e) => controlli.filter((c) => c.esito === e).length;
 
   // stima del contributo
@@ -101,6 +181,8 @@ export function schedaReport(corpo, p, bando) {
       piano.punti.length ? h('ul.actions', piano.punti.map((v) => h('li', h('div', v.testo), h('div.g', `+${fmt(v.punti)}`), h('div.w', v.dove)))) : null,
       piano.punti.length ? h('p.muted.small', { style: { marginTop: '8px' } }, 'I punti indicati sono stime per singolo intervento e non si sommano automaticamente.') : null) : null,
 
+    pannelloTaratura(tar, p, () => schedaReport(svuota(corpo), p, bando)),
+
     ris.sezioni.map((sez) => h('section',
       h('div.sec-h',
         h('h3', `Sezione ${sez.id} — ${sez.nome}`),
@@ -108,7 +190,7 @@ export function schedaReport(corpo, p, bando) {
           sez.soglia != null && h(`span.tag.${!sez.completo ? (sez.raggiungibile ? 'x' : 'bad') : sez.superata ? 'ok' : 'bad'}`, !sez.completo ? (sez.raggiungibile ? `minimo ${fmt(sez.soglia)} · da completare` : `minimo ${fmt(sez.soglia)} irraggiungibile`) : sez.superata ? `minimo ${fmt(sez.soglia)} superato` : `sotto il minimo di ${fmt(sez.soglia)}`))),
       (val?.giudizi?.[sez.id] || []).filter((g) => g.sintesi).length ? h('details.more', { style: { marginBottom: '10px' } }, h('summary', 'Giudizio di sintesi dei commissari'),
         h('div.stack-s', val.giudizi[sez.id].filter((g) => g.sintesi).map((g) => h('div.judge', h('h4', g.commissario.nome), h('p', g.sintesi))))) : null,
-      sez.criteri.map((c) => schedaCriterio(c, definizioni[c.id] || {})))),
+      sez.criteri.map((c) => schedaCriterio(c, definizioni[c.id] || {}, tar)))),
 
     h('section',
       h('div.sec-h', h('h3', 'Ammissibilità e completezza'),

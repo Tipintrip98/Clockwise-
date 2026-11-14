@@ -13,7 +13,7 @@
 .fin input[type="month"]:focus { outline: none; border-color: var(--fuoco); box-shadow: 0 0 0 3px var(--fuoco-alone); }
 .fin .check span { font-size: .9rem; }
 /* nelle griglie di campi le etichette su due righe non spostano gli input */
-.fin .grid > .field > span:first-child { min-height: 2.5em; display: flex; align-items: flex-end; }
+.fin .grid > .field > span:first-child { min-height: 2.75em; line-height: 1.35; display: flex; align-items: flex-end; }
 .fin .check input:disabled + span { color: var(--muted); }
 
 /* fonte e avvertenze accanto ai numeri */
@@ -151,3 +151,6 @@ td.fin-warn { color: var(--warn); font-weight: 600; }
   .fin-legenda .muted.small { display: none; }
   .fin-norme { padding: 12px; }
 }
+.fin-tab td.num, .fin-tab td.r { white-space: nowrap; }
+@media (max-width: 520px) { .fin-tab th[scope="row"] { min-width: 11em; } }
+.fin .row > .btn { white-space: normal; text-align: left; max-width: 100%; }

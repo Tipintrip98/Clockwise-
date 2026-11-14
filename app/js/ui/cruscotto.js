@@ -5,6 +5,36 @@ import { statoInvio } from '../core/invio.js';
 import { previsioneStatistica, storicoFinanziamento, posizioneEsiti } from '../core/scoring.js';
 import { quadrante } from './grafici.js';
 import { scaricaReportPdf } from './pdf.js';
+import { taraturaDossier } from '../core/ragionamento.js';
+
+// Taratura sui casi reali: prima della valutazione la stima dalle regole, dopo una riga sugli scostamenti dei commissari.
+function pannelloTaratura(tar, prev, mostra) {
+  if (!tar) return null;
+  const sc = tar.scostamenti;
+  if (sc) {
+    if (!sc.valutati) return null;
+    return h(`div.notice.${sc.fuori ? (sc.marcati ? 'warn' : 'info') : 'ok'}.tar-riga`, { id: 'cruscotto-taratura' },
+      h('div', h('strong', 'Taratura sui casi reali: '), sc.sintesi, tar.cambiate ? ' Il dossier è cambiato dopo la valutazione.' : ''),
+      h('button.btn.s', { type: 'button', onclick: () => mostra('report') }, 'Vedi nel report →'));
+  }
+  const s = tar.stima;
+  if (!s) return null;
+  const [classe, esito] = s.esito === 'incompleta' ? ['x', 'Mancano documenti essenziali'] : s.esito === 'sotto_soglia' ? ['bad', s.sotto.length ? `Sotto il minimo: ${s.sotto.join(', ')}` : `Sotto ${s.sogliaTotale}`]
+    : s.esito === 'a_rischio' ? ['warn', 'Sopra le soglie, con rischio documentale'] : ['ok', 'Sopra tutte le soglie'];
+  return h('div.panel.stack', { id: 'cruscotto-taratura' },
+    h('div', h('h2', 'Stima dalle regole di taratura'),
+      h('p.muted', { style: { maxWidth: '78ch', marginTop: '4px' } }, 'Applica ai fatti del tuo dossier — allegati, firme, piano finanziario, figure dichiarate — le regole ricavate dal confronto tra simulazioni e punteggi reali della Commissione. Non legge il merito dei testi: lo fa la valutazione con Claude.')),
+    h('div.tar-stima',
+      h('div.box', h('div.label', 'Stima'), h('div.num.tar-grande', fmt(s.totale)), h('div', h(`span.tag.${classe}`, esito))),
+      h('div.box', h('div.label', 'Intervallo delle fasce'), h('div.num.tar-medio', `${fmt(s.min)} – ${fmt(s.max)}`), h('div.muted.small', `fiducia ${s.fiducia || '—'}${s.criteriBassaFiducia ? ` · ${s.criteriBassaFiducia} ${s.criteriBassaFiducia === 1 ? 'criterio' : 'criteri'} da estrapolazione` : ''}`)),
+      h('div.box', h('div.label', 'Lettura rigorosa'), h('div.num.tar-medio', fmt(s.rigoroso)), h('div.muted.small', 'solo ciò che è provato da documenti firmati'))),
+    h('ul.tar-sezioni', s.sezioni.map((x) => h('li', h('strong', x.id), h('span.num', `${fmt(x.punti)} / ${fmt(x.massimo)}`),
+      x.soglia != null ? h(`span.tag.${!x.superata ? 'bad' : x.fragile ? 'warn' : 'ok'}`, !x.superata ? `minimo ${fmt(x.soglia)}` : x.fragile ? 'a rischio' : 'ok') : null))),
+    s.bloccanti.length ? h('div.notice.bad', h('strong', 'Non stimabile per intero: '), s.bloccanti.join(' ')) : null,
+    s.datiMancanti.length ? h('div.notice', `Criteri quantitativi senza dati (${s.datiMancanti.join(', ')}): compila i Dati chiave.`) : null,
+    prev && !prev.completa ? h('p.muted.small', { style: { maxWidth: '78ch' } }, 'La differenza con la previsione qui sotto: quella completa le sezioni con i punteggi che la Commissione ha dato a tutti i progetti reali, senza guardare il tuo dossier; questa guarda i tuoi documenti ma non li legge nel merito. Se le due stime divergono molto, il motivo è quasi sempre negli allegati.') : null,
+    s.domande?.length ? h('div.row', h('span.muted.small', `${s.domande.length} ${s.domande.length === 1 ? 'fatto dipende' : 'fatti dipendono'} da un giudizio: rispondi alle domande nel report per restringere le fasce.`), h('button.btn.s', { type: 'button', onclick: () => mostra('report') }, 'Apri il report →')) : null);
+}
 
 const NOMI_SCHEDA = { documenti: 'Documenti', dati: 'Dati chiave', valutazione: 'Valutazione', report: 'Report' };
 const giorno = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -79,6 +109,8 @@ export function schedaCruscotto(corpo, p, bando, mostra) {
   const ris = risultatoDi(p);
   const st = statoInvio(bando, p, ris);
   const prev = previsioneStatistica(bando, p.categoriaId, ris);
+  let tar = null;
+  try { tar = taraturaDossier(bando, p, ris); } catch { tar = null; }
   const [titolo, sotto] = titoloStato(st, ris);
   const problemi = h('div');
   let tutti = false;
@@ -111,6 +143,7 @@ export function schedaCruscotto(corpo, p, bando, mostra) {
       h('div.spread', h('span.label', `Passo ${i + 1}`), h(`span.tag.${x.stato === 'fatto' ? 'ok' : x.stato === 'attenzione' ? 'warn' : 'x'}`, x.stato === 'fatto' ? 'Fatto' : x.stato === 'attenzione' ? 'Da completare' : 'Da fare')),
       h('strong', x.titolo), h('span.muted.small', x.dettaglio)))),
     problemi,
+    pannelloTaratura(tar, prev, mostra),
     pannelloPrevisione(prev, ris, bando, p),
     pannelloInvio(st, p),
     h('div.panel.stack',

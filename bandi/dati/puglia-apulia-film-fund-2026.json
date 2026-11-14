@@ -1,0 +1,2832 @@
+{
+  "id": "puglia-apulia-film-fund-2026",
+  "fondoId": "puglia",
+  "revisione": "2026-11-14",
+  "nome": "Puglia — Apulia Film Fund 2026",
+  "nomeBreve": "Puglia · Apulia Film Fund 2026",
+  "ente": "Regione Puglia (Accordo per la Coesione – Fondo di rotazione 2021-2027) · gestione della Fondazione Apulia Film Commission, Organismo delegato ai sensi della DGR n. 1105 del 04/08/2026",
+  "regione": "Puglia",
+  "territorio": "Puglia",
+  "gentilizio": "pugliesi",
+  "fonte": "Avviso pubblico Apulia Film Fund 2026, Prot. N. 2021/26/U del 26 agosto 2026, adottato con Determinazione del Direttore Generale Prot. N. 2020/26/U del 26/08/2026 e pubblicato sul BURP del 03/09/2026; termini prorogati con Determinazione Prot. N. 2482/26/U del 27/10/2026; FAQ al bando del 09/11/2026",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Sovvenzione a fondo perduto per micro, piccole e medie imprese di produzione (ATECO 59.11) italiane ed europee che realizzano in tutto o in parte in Puglia film, opere televisive e web, documentari, animazione e cortometraggi. Il contributo è una percentuale (35%, 40% o 60%) delle sole spese ammissibili sostenute in Puglia, entro un minimo e un massimo per categoria. Procedura a graduatoria: una Commissione Tecnica di Valutazione assegna fino a 100 punti; servono almeno 60 punti complessivi e almeno 27 su 45 nel criterio A.",
+  "paginaUfficiale": "https://www.apuliafilmcommission.it/fondi/apulia-film-fund/",
+  "fontiUrl": [
+    {
+      "titolo": "Avviso pubblico Apulia Film Fund 2026 (versione con protocollo 2021/26/U, file del 21/10/2026)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/10/20260826-Avviso_AFF_2026_26.08.2026.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso pubblico Apulia Film Fund 2026 (prima versione pubblicata, file del 31/08/2026: stessa griglia, tabella impaginata con i punteggi allineati ai sub-criteri)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/20260831_Avviso_AFF_2026_26.08.2026.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione di adozione dell’Avviso «Apulia Film Fund 2026», Prot. N. 2020/26/U del 26/08/2026",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/Determinazione-adozione_Avviso-AFF_2026-signed.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione di proroga dei termini di candidatura, Prot. N. 2482/26/U del 27/10/2026",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/10/Proroga_Determinazione_Avviso-AFF_2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ al bando (file del 09/11/2026)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/11/20261109-FAQ-AL-BANDO.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina ufficiale Apulia Film Fund 2026",
+      "url": "https://www.apuliafilmcommission.it/fondi/apulia-film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato 1 – Formulario (xlsx: 1a Formulario, 1b preventivo Puglia, 1c bilancio totale, 1d piano finanziario)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/AFF_All.-1_Formulario.xlsx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato 2 – Dichiarazioni sostitutive (2a, 2b, 2c, 2d)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/AFF_All.-2_DichiarazioniSostitutive.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato 5 – Dichiarazione di disponibilità finanziaria",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/AFF_All.-5_DichiarazioneDispFinanziaria.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato 8 – Richiesta di anticipo e di saldo (8a, 8c)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/AFF_All.-8_RichiestaAnticipoSaldo.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato 10 – Disciplinare (format)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/08/AFF_All.-10_Disciplinare_format.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Apulia Film Fund 2025 – Approvazione degli esiti della valutazione, Prot. N. 2481/26/U del 27/10/2026 (Allegato A con punteggi per criterio)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/10/DD__26_U_AFF2025_EsitiValutazione_signed.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso pubblico Apulia Film Fund 2025, Prot. N. 2984/25/U del 3 novembre 2025",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2025/11/Avviso-pubblico-Apulia-Film-Fund-2025-1.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Apulia Film Fund 2025 – Determinazione di proroga, Prot. N. 3319/25/U del 28 novembre 2025",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2025/11/Proroga_Determinazione_Avviso-AFF_2025-signed.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Apulia Film Fund 2024 – Approvazione degli esiti della valutazione, Prot. N. 3069/24/U dell’11/11/2024",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2024/11/DD_3069_24_U_AFF2024_EsitiValutazione-signed-1.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Apulia Film Fund 2024 – Rettifica della graduatoria finale, Prot. N. 0920/25/U del 26/03/2025",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2025/03/DD_0920_25_U_AFF2024_RettificaEsitiValutazione_signed.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina Apulia Film Fund 2025",
+      "url": "https://www.apuliafilmcommission.it/fondi/apulia-film-fund-2025/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina Apulia Film Fund 2024",
+      "url": "https://www.apuliafilmcommission.it/fondi/apulia-film-fund-2024/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-09-03",
+      "scadenza": "2026-11-12",
+      "nota": "Adottato il 26/08/2026 (Prot. N. 2020/26/U; Avviso Prot. N. 2021/26/U) e pubblicato sul BURP del 03/09/2026. Scadenza originaria ore 23:59 del 02/11/2026, prorogata alle ore 23:59 del 12/11/2026. Dotazione 5 milioni di euro sull’Accordo per la Coesione – Fondo di rotazione 2021-2027."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-11-03",
+      "scadenza": "2026-01-09",
+      "nota": "Adottato il 03/11/2025, BURP n. 93 del 20/11/2025; finestra dal 03/11/2025 al 09/01/2026 (dopo la proroga); 95 istanze; esiti del 27/10/2026. Dotazione 5 milioni di euro, poi 7.739.123,11 euro. Griglia diversa dal 2026: criterio C 35 punti (C7 = 12), premialità E 5 punti."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2023-12-22",
+      "scadenza": "2024-02-28",
+      "nota": "Determinazione di adozione del 22/12/2023 (non è la data del BURP). Finestra dal 29/01/2024 al 28/02/2024. Esiti dell’11/11/2024, rettificati il 26/03/2025. Dotazione 5 milioni di euro (PR Puglia FESR-FSE+ 2021-2027, Azione 1.9)."
+    },
+    {
+      "anno": 2021,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Avviso Apulia Film Fund 2020-2023, in più versioni (versione 3 del 10/08/2021, versione 4 del 05/11/2021, versione 5 del 04/07/2023, secondo la pagina dell’ente). Testo non letto in questa ricerca."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-09-03",
+      "al": "2026-11-12",
+      "nota": "Finestra unica di 60 giorni dalla pubblicazione sul BURP del 03/09/2026: termine originario ore 23:59 del 02/11/2026, prorogato alle ore 23:59 del 12/11/2026 (Determinazione Prot. N. 2482/26/U del 27/10/2026)."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "non annunciato (stima: seconda metà del 2027)",
+    "base": "Nessun annuncio per il 2027 al 14/11/2026: l’Avviso 2026 prevede solo eventuali ulteriori finestre se la Regione incrementa la dotazione (art. 4, par. 2). La stima segue la cadenza irregolare delle ultime edizioni: gennaio-febbraio 2024, novembre 2025-gennaio 2026, settembre-novembre 2026."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 20,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Commissione Tecnica di Valutazione nominata dal Direttore Generale entro 10 giorni lavorativi dalla chiusura dell’Avviso: numero dispari di membri, per un massimo di 5, di cui almeno quattro esperti del settore (due dell’area «Autori e story editor», a ciascuno dei quali viene assegnato un progetto diverso; uno dell’area «Produzione»; uno dell’area «Finanziamenti»), coadiuvati da un dipendente della Fondazione. Per i sub-criteri qualitativi (A1, A2, A3, A8, C1, C2, D2) il punteggio è il coefficiente del giudizio moltiplicato per il punteggio massimo; l’Avviso non dice come si compongono i giudizi dei singoli commissari. La Commissione può chiedere chiarimenti o l’audizione del proponente, con le modalità e i termini del soccorso istruttorio; senza riscontro non attribuisce il punteggio degli elementi non comprovati (art. 14, par. 11)."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://www.apuliafilmcommission.it/fondi/apulia-film-fund/",
+    "oggetto": "",
+    "regole": [
+      "La domanda si presenta solo con l’applicazione del Sistema informativo accessibile dal sito della Fondazione Apulia Film Commission, dentro la finestra di candidatura (art. 11, par. 1).",
+      "La domanda va sottoscritta con firma digitale, a pena di irricevibilità (art. 11, par. 2).",
+      "La data di presentazione è certificata dal Sistema informativo; dopo l’invio definitivo la domanda non si può più modificare (art. 11, par. 4).",
+      "Ogni impresa può inviare al massimo due domande nella stessa finestra: una come produttore (unico, coproduttore o associato) e una come produttore esecutivo (art. 11, par. 6). Per la seconda serve un nuovo account (FAQ).",
+      "Soccorso istruttorio: le integrazioni sono chieste alla PEC indicata nella domanda e vanno fornite entro il termine perentorio di 5 giorni lavorativi; non sanano ciò che l’Avviso richiede a pena di inammissibilità (art. 14, par. 5-7).",
+      "A parità di punteggio prevale la domanda presentata prima, per data e ora di ricezione (art. 13)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "a",
+      "nome": "Categoria A — Lungometraggi di finzione (durata minima 52 minuti, principale sfruttamento cinematografico)",
+      "griglia": "AB",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 35,
+        "massimali": {
+          "2026": 320000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. 35% di base, 40% per le produzioni transfrontaliere, 60% per le opere difficili (opere prime o seconde, giovani autori, basso costo, coproduzioni con Paesi DAC). Contributo richiesto tra 80.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "b",
+      "nome": "Categoria B — Opere di finzione singole e seriali televisive e web (durata complessiva minima 90 minuti, destinate principalmente alla trasmissione televisiva, anche SVOD)",
+      "griglia": "AB",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 35,
+        "massimali": {
+          "2026": 450000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. 35% di base, 40% per le produzioni transfrontaliere, 60% per le opere difficili (opere prime o seconde, giovani autori, basso costo, coproduzioni con Paesi DAC). Contributo richiesto tra 250.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "c",
+      "nome": "Categoria C — Documentari creativi (durata minima 52 minuti se a principale sfruttamento cinematografico; in una o più parti se non principalmente destinati alla sala)",
+      "griglia": "C",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 120000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. Documentari e cortometraggi sono «opere difficili» per requisito oggettivo (art. 1, def. 11.1 e 11.4: la qualifica è attribuita direttamente), quindi si applica il 60% dell’art. 9, par. 10.3. Il 35% resta la percentuale di base dell’Avviso. Contributo richiesto tra 40.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "d",
+      "nome": "Categoria D — Lungometraggi di animazione (durata minima 52 minuti) e opere seriali di animazione (durata complessiva minima 24 minuti)",
+      "griglia": "D",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 35,
+        "massimali": {
+          "2026": 500000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. 35% di base, 40% per le produzioni transfrontaliere, 60% per le opere difficili (opere prime o seconde, giovani autori, basso costo, coproduzioni con Paesi DAC). Contributo richiesto tra 300.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": 24,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "e-finzione",
+      "nome": "Categoria E — Cortometraggi di finzione (durata inferiore a 52 minuti) e cortometraggi musicali (videoclip)",
+      "griglia": "E_FINZIONE",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 40000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. Documentari e cortometraggi sono «opere difficili» per requisito oggettivo (art. 1, def. 11.1 e 11.4: la qualifica è attribuita direttamente), quindi si applica il 60% dell’art. 9, par. 10.3. Il 35% resta la percentuale di base dell’Avviso. Contributo richiesto tra 10.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": 52,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "e-animazione",
+      "nome": "Categoria E — Cortometraggi di animazione (durata minima 5 minuti)",
+      "griglia": "E_ANIMAZIONE",
+      "soglie": {
+        "A": 27
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 40000
+        },
+        "nota": "Percentuale delle spese ammissibili sostenute in Puglia, non del costo di produzione. Documentari e cortometraggi sono «opere difficili» per requisito oggettivo (art. 1, def. 11.1 e 11.4: la qualifica è attribuita direttamente), quindi si applica il 60% dell’art. 9, par. 10.3. Il 35% resta la percentuale di base dell’Avviso. Contributo richiesto tra 10.000 € e il massimale."
+      },
+      "dotazione": {},
+      "durataMin": 5,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "AB": {
+      "id": "AB",
+      "nome": "Categorie A e B — lungometraggi di finzione, opere di finzione singole e seriali televisive e web",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità e validità della proposta progettuale in ottica di interventi volti a migliorare il posizionamento competitivo dell’impresa, anche attraverso azioni di marketing e di internazionalizzazione",
+          "max": 45,
+          "obiettivo": "Qualità artistica del progetto, curriculum di chi lo realizza, apertura internazionale e legame con la Puglia. È il solo criterio con un minimo: 27 punti su 45.",
+          "criteri": [
+            {
+              "id": "A1",
+              "nome": "Originalità della storia e struttura narrativa",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A2",
+              "nome": "Qualità della scrittura",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A4",
+              "nome": "Curriculum della squadra artistica e della squadra tecnica",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum della squadra artistica (regia, sceneggiatura, attori) e della squadra tecnica (fotografia, montaggio, scenografia, musiche, costumi); un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti. L’Avviso non precisa se i lavori si contano per singolo professionista o per l’intera squadra.",
+              "documenti": [
+                "cv_artistico",
+                "cv_tecnico",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "A5",
+              "nome": "Curriculum della società di produzione, del produttore e dei coproduttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum della società di produzione, del produttore e di eventuali coproduttori; un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "A7",
+              "nome": "Coproduzione o compartecipazione internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale: i. con Paesi dello Spazio Economico Europeo (2 punti); ii. con Paesi non appartenenti allo Spazio Economico Europeo (2 punti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Coproduzione o compartecipazione sia con Paesi dello Spazio Economico Europeo sia con Paesi non appartenenti (2 + 2)"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Solo con Paesi dello Spazio Economico Europeo, oppure solo con Paesi non appartenenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coproduzione o compartecipazione internazionale"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "A8",
+              "nome": "Valorizzazione o autenticità del patrimonio della Puglia nella narrazione",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione o autenticità del patrimonio artistico, culturale, storico, ambientale, paesaggistico, enogastronomico ed artigianale della Puglia, all’interno della narrazione.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A9",
+              "nome": "Apulia Development / Apulia Film Forum",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "altro",
+              "descrizione": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum. Ai progetti di cortometraggio è assegnato automaticamente il punteggio di 2 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuno dei due"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Sostenibilità e affidabilità del soggetto proponente e dell’iniziativa sotto il profilo finanziario ed economico",
+          "max": 5,
+          "obiettivo": "Congruenza tra il patrimonio netto dell’impresa e il costo del progetto al netto del contributo.",
+          "criteri": [
+            {
+              "id": "B1",
+              "nome": "Situazione economico-patrimoniale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Situazione economico-patrimoniale, valutando la congruenza fra il patrimonio netto delle imprese proponenti e il costo del progetto al netto del contributo, secondo la formula PN/(CA-C). PN = patrimonio netto della singola impresa quale risulta dall’ultimo bilancio approvato e depositato alla data di presentazione della domanda (per le imprese non obbligate alla redazione del bilancio il PN si desume da un bilancio redatto ex artt. da 2423 a 2425 del Codice Civile da un professionista abilitato). CA = somma dei costi agevolabili del progetto, così come indicato in domanda. C = importo del contributo richiesto dall’impresa.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Rapporto inferiore o uguale a 0,2: 0 punti. Rapporto maggiore o uguale a 1: 5 punti. Tra 0,2 e 1 il punteggio si assegna per interpolazione lineare, con arrotondamento per eccesso all’unità (in pratica: 5 × (rapporto − 0,2) / 0,8, arrotondato all’intero superiore). Formula: PN / (CA − C)",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Qualità e validità della proposta progettuale in ottica di coerenza dei costi e dei tempi di realizzazione",
+          "max": 33,
+          "obiettivo": "Coerenza del preventivo, solidità dei partner e ricadute in Puglia: spesa, giornate, lavoratori, imprese pugliesi e post-produzione.",
+          "criteri": [
+            {
+              "id": "C1",
+              "nome": "Coerenza tra componenti artistiche e tecniche, preventivo e piano finanziario",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle componenti artistiche e tecniche del progetto con il preventivo e il piano finanziario.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "C2",
+              "nome": "Qualità e affidabilità dei partner per la copertura finanziaria",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Qualità ed affidabilità dei partner eventualmente coinvolti (coproduttori, investitori, broadcaster, distributori) ai fini della copertura finanziaria.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "C3",
+              "nome": "Spese rimborsabili in Puglia sul costo della copia campione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra spese rimborsabili sostenute nel territorio regionale e costo della copia campione dell’opera.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Spese rimborsabili in Puglia (totale dell’Allegato 1b) ÷ costo della copia campione (bilancio totale di produzione senza spese generali e producer’s fee). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C4",
+              "nome": "Giornate di lavorazione in Puglia sul totale",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra giornate di lavorazione in Puglia e giornate di lavorazione totali.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Giorni di lavorazione (riprese) in Puglia ÷ giorni di lavorazione (riprese) totali, come nel cronoprogramma del Formulario (Allegato 1a), dove il sabato è considerato lavorativo. Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "C5",
+              "nome": "Lavoratori iscritti alla Production Guide sul totale",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra lavoratori iscritti alla Production Guide e lavoratori totali (esclusi generici, lavoratori assunti «a giornata», figurazioni, figurazioni speciali e tirocinanti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Lavoratori iscritti alla Production Guide (dipendenti a tempo determinato o indeterminato residenti in Puglia e lavoratori autonomi con partita IVA residenti in Puglia, escluse le ditte individuali) ÷ lavoratori totali di cast artistico e cast tecnico, come nella tabella del Formulario (Allegato 1a). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            },
+            {
+              "id": "C7",
+              "nome": "Imprese con sede legale in Puglia da almeno 24 mesi",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). FAQ del 09/11/2026: «Conta la sede legale, non l’unità locale. Il punteggio è assegnato solo se il requisito è adeguatamente comprovato (art. 14 c. 11) e l’impresa opera come produzione esecutiva secondo le definizioni dell’Avviso».",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Nella compagine (produzione, coproduzione o produzione esecutiva) c’è un’impresa con sede legale in Puglia da almeno 24 mesi, comprovata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa con sede legale in Puglia da almeno 24 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "coproduzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "C8",
+              "nome": "Post-produzione in Puglia",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post-produzione. Rapporto tra investimento in Puglia e investimento complessivo. Inferiore al 25% 0 punti; dal 25% al 50% 1 punto; maggiore del 50% sino al 75% 2 punti; maggiore del 75% sino al 100% 3 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Investimento di post-produzione in Puglia maggiore del 75% e fino al 100% del totale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Maggiore del 50% e fino al 75%"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Dal 25% al 50%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Inferiore al 25%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Capacità di generare effetti di crescita, sviluppo e/o rafforzamento dell’attività economica anche con riferimento alla capacità di aggregazione e contaminazione",
+          "max": 10,
+          "obiettivo": "Prospettive di distribuzione e riconoscimenti del progetto.",
+          "criteri": [
+            {
+              "id": "D1",
+              "nome": "Curriculum del distributore o del fornitore di servizi media",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Curriculum di distributori nazionali e internazionali ovvero di altri fornitori di servizi media audiovisivi nazionali e internazionali (distributori cinematografici, emittenti televisive, piattaforme SVOD), per i progetti afferenti alle categorie A, B e D di cui si produce contratto; un punto per ogni opera distribuita omogenea alla categoria in cui si candida il progetto; in caso di auto distribuzione il massimo punteggio assegnabile è di punti 2 (due), 1 punto per ogni opera distribuita omogenea alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni opera distribuita omogenea alla categoria del progetto, fino a 6 punti; con l’autodistribuzione il massimo è 2 punti. Per la distribuzione valgono le definizioni e i requisiti del Capo II, art. 4 del D.I. MiC-MEF n. 152/2021 come modificato dal D.I. n. 383/2021 (nota 16 dell’Avviso).",
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "D3",
+              "nome": "Sostegno MEDIA, Eurimages, Ibermedia o fondi similari",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Progetto che abbia ottenuto il supporto dei programmi MEDIA, Eurimages, Ibermedia ovvero fondi di sostegno al settore similari per i progetti afferenti alle categorie A, B e D.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Sostegno ottenuto e documentato"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun sostegno"
+                }
+              ],
+              "documenti": [
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "D4",
+              "nome": "Regista all’opera prima o seconda",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista alla sua opera prima o seconda per i progetti afferenti alle categorie A, B e D.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista all’opera prima o seconda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Altro"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Rilevanza della componente femminile e adozione di politiche di environmental",
+          "max": 7,
+          "obiettivo": "Criteri di premialità (così li chiama il Formulario): presenza femminile, giovani autori, professioniste pugliesi e sostenibilità ambientale. Nella tabella dell’Avviso il criterio non ha lettera, ma i sub-criteri sono numerati E1-E4.",
+          "criteri": [
+            {
+              "id": "E1",
+              "nome": "Regista donna o regista pugliese",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista o maggioranza dei registi donna o regista pugliese.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista (o maggioranza dei registi) donna, oppure regista pugliese"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E2",
+              "nome": "Autori o regista under 35",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Autori dell’opera (come individuati dalla legge 633/1941) o regista under 35.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Autori dell’opera o regista under 35"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_autori",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E3",
+              "nome": "Almeno due capi reparto donne pugliesi",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Almeno 2 capi reparto donne (tra i reparti fotografia, scenografia, costumi, montaggio, ecc) residenti in Puglia e iscritti alla Production guide.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Almeno 2 capi reparto donne residenti in Puglia e iscritte alla Production Guide"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "E4",
+              "nome": "Impegno alla certificazione di sostenibilità ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno a ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata da soggetti certificatori abilitati.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Impegno dichiarato nel Formulario"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "C",
+      "nome": "Categoria C — documentari creativi",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità e validità della proposta progettuale in ottica di interventi volti a migliorare il posizionamento competitivo dell’impresa, anche attraverso azioni di marketing e di internazionalizzazione",
+          "max": 45,
+          "obiettivo": "Qualità artistica del progetto, curriculum di chi lo realizza, apertura internazionale e legame con la Puglia. È il solo criterio con un minimo: 27 punti su 45.",
+          "criteri": [
+            {
+              "id": "A1",
+              "nome": "Originalità della storia e struttura narrativa",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A2",
+              "nome": "Qualità della scrittura",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A4",
+              "nome": "Curriculum della squadra artistica e della squadra tecnica",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum della squadra artistica (regia, sceneggiatura, attori) e della squadra tecnica (fotografia, montaggio, scenografia, musiche, costumi); un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti. L’Avviso non precisa se i lavori si contano per singolo professionista o per l’intera squadra.",
+              "documenti": [
+                "cv_artistico",
+                "cv_tecnico",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "A5",
+              "nome": "Curriculum della società di produzione, del produttore e dei coproduttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum della società di produzione, del produttore e di eventuali coproduttori; un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "A7",
+              "nome": "Coproduzione o compartecipazione internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale: i. con Paesi dello Spazio Economico Europeo (2 punti); ii. con Paesi non appartenenti allo Spazio Economico Europeo (2 punti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Coproduzione o compartecipazione sia con Paesi dello Spazio Economico Europeo sia con Paesi non appartenenti (2 + 2)"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Solo con Paesi dello Spazio Economico Europeo, oppure solo con Paesi non appartenenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coproduzione o compartecipazione internazionale"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "A8",
+              "nome": "Valorizzazione o autenticità del patrimonio della Puglia nella narrazione",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione o autenticità del patrimonio artistico, culturale, storico, ambientale, paesaggistico, enogastronomico ed artigianale della Puglia, all’interno della narrazione.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A9",
+              "nome": "Apulia Development / Apulia Film Forum",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "altro",
+              "descrizione": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum. Ai progetti di cortometraggio è assegnato automaticamente il punteggio di 2 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuno dei due"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Sostenibilità e affidabilità del soggetto proponente e dell’iniziativa sotto il profilo finanziario ed economico",
+          "max": 5,
+          "obiettivo": "Congruenza tra il patrimonio netto dell’impresa e il costo del progetto al netto del contributo.",
+          "criteri": [
+            {
+              "id": "B1",
+              "nome": "Situazione economico-patrimoniale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Situazione economico-patrimoniale, valutando la congruenza fra il patrimonio netto delle imprese proponenti e il costo del progetto al netto del contributo, secondo la formula PN/(CA-C). PN = patrimonio netto della singola impresa quale risulta dall’ultimo bilancio approvato e depositato alla data di presentazione della domanda (per le imprese non obbligate alla redazione del bilancio il PN si desume da un bilancio redatto ex artt. da 2423 a 2425 del Codice Civile da un professionista abilitato). CA = somma dei costi agevolabili del progetto, così come indicato in domanda. C = importo del contributo richiesto dall’impresa.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Rapporto inferiore o uguale a 0,2: 0 punti. Rapporto maggiore o uguale a 1: 5 punti. Tra 0,2 e 1 il punteggio si assegna per interpolazione lineare, con arrotondamento per eccesso all’unità (in pratica: 5 × (rapporto − 0,2) / 0,8, arrotondato all’intero superiore). Formula: PN / (CA − C)",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Qualità e validità della proposta progettuale in ottica di coerenza dei costi e dei tempi di realizzazione",
+          "max": 33,
+          "obiettivo": "Coerenza del preventivo, solidità dei partner e ricadute in Puglia: spesa, giornate, lavoratori, imprese pugliesi e post-produzione.",
+          "criteri": [
+            {
+              "id": "C1",
+              "nome": "Coerenza tra componenti artistiche e tecniche, preventivo e piano finanziario",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle componenti artistiche e tecniche del progetto con il preventivo e il piano finanziario.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "C2",
+              "nome": "Qualità e affidabilità dei partner per la copertura finanziaria",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Qualità ed affidabilità dei partner eventualmente coinvolti (coproduttori, investitori, broadcaster, distributori) ai fini della copertura finanziaria.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "C3",
+              "nome": "Spese rimborsabili in Puglia sul costo della copia campione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra spese rimborsabili sostenute nel territorio regionale e costo della copia campione dell’opera.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Spese rimborsabili in Puglia (totale dell’Allegato 1b) ÷ costo della copia campione (bilancio totale di produzione senza spese generali e producer’s fee). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C4",
+              "nome": "Giornate di lavorazione in Puglia sul totale",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra giornate di lavorazione in Puglia e giornate di lavorazione totali.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Giorni di lavorazione (riprese) in Puglia ÷ giorni di lavorazione (riprese) totali, come nel cronoprogramma del Formulario (Allegato 1a), dove il sabato è considerato lavorativo. Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "C5",
+              "nome": "Lavoratori iscritti alla Production Guide sul totale",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra lavoratori iscritti alla Production Guide e lavoratori totali (esclusi generici, lavoratori assunti «a giornata», figurazioni, figurazioni speciali e tirocinanti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Lavoratori iscritti alla Production Guide (dipendenti a tempo determinato o indeterminato residenti in Puglia e lavoratori autonomi con partita IVA residenti in Puglia, escluse le ditte individuali) ÷ lavoratori totali di cast artistico e cast tecnico, come nella tabella del Formulario (Allegato 1a). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            },
+            {
+              "id": "C7",
+              "nome": "Imprese con sede legale in Puglia da almeno 24 mesi",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). FAQ del 09/11/2026: «Conta la sede legale, non l’unità locale. Il punteggio è assegnato solo se il requisito è adeguatamente comprovato (art. 14 c. 11) e l’impresa opera come produzione esecutiva secondo le definizioni dell’Avviso».",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Nella compagine (produzione, coproduzione o produzione esecutiva) c’è un’impresa con sede legale in Puglia da almeno 24 mesi, comprovata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa con sede legale in Puglia da almeno 24 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "coproduzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "C8",
+              "nome": "Post-produzione in Puglia",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post-produzione. Rapporto tra investimento in Puglia e investimento complessivo. Inferiore al 25% 0 punti; dal 25% al 50% 1 punto; maggiore del 50% sino al 75% 2 punti; maggiore del 75% sino al 100% 3 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Investimento di post-produzione in Puglia maggiore del 75% e fino al 100% del totale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Maggiore del 50% e fino al 75%"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Dal 25% al 50%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Inferiore al 25%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Capacità di generare effetti di crescita, sviluppo e/o rafforzamento dell’attività economica anche con riferimento alla capacità di aggregazione e contaminazione",
+          "max": 10,
+          "obiettivo": "Prospettive di distribuzione e riconoscimenti del progetto.",
+          "criteri": [
+            {
+              "id": "D2",
+              "nome": "Contratto di distribuzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Contratto di distribuzione per i progetti afferenti alle categorie C e E.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Rilevanza della componente femminile e adozione di politiche di environmental",
+          "max": 7,
+          "obiettivo": "Criteri di premialità (così li chiama il Formulario): presenza femminile, giovani autori, professioniste pugliesi e sostenibilità ambientale. Nella tabella dell’Avviso il criterio non ha lettera, ma i sub-criteri sono numerati E1-E4.",
+          "criteri": [
+            {
+              "id": "E1",
+              "nome": "Regista donna o regista pugliese",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista o maggioranza dei registi donna o regista pugliese.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista (o maggioranza dei registi) donna, oppure regista pugliese"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E2",
+              "nome": "Autori o regista under 35",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Autori dell’opera (come individuati dalla legge 633/1941) o regista under 35.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Autori dell’opera o regista under 35"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_autori",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E3",
+              "nome": "Almeno due capi reparto donne pugliesi",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Almeno 2 capi reparto donne (tra i reparti fotografia, scenografia, costumi, montaggio, ecc) residenti in Puglia e iscritti alla Production guide.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Almeno 2 capi reparto donne residenti in Puglia e iscritte alla Production Guide"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "E4",
+              "nome": "Impegno alla certificazione di sostenibilità ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno a ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata da soggetti certificatori abilitati.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Impegno dichiarato nel Formulario"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "D": {
+      "id": "D",
+      "nome": "Categoria D — lungometraggi e opere seriali di animazione",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità e validità della proposta progettuale in ottica di interventi volti a migliorare il posizionamento competitivo dell’impresa, anche attraverso azioni di marketing e di internazionalizzazione",
+          "max": 45,
+          "obiettivo": "Qualità artistica del progetto, curriculum di chi lo realizza, apertura internazionale e legame con la Puglia. È il solo criterio con un minimo: 27 punti su 45.",
+          "criteri": [
+            {
+              "id": "A1",
+              "nome": "Originalità della storia e struttura narrativa",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A2",
+              "nome": "Qualità della scrittura",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A3",
+              "nome": "Approccio visivo, artwork e approccio grafico",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Qualità dell’approccio visivo, dell’artwork e dell’approccio grafico (per progetti afferenti a categoria D o categoria E, limitatamente ai cortometraggi di animazione).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "altro"
+              ]
+            },
+            {
+              "id": "A5",
+              "nome": "Curriculum della società di produzione, del produttore e dei coproduttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum della società di produzione, del produttore e di eventuali coproduttori; un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "A6",
+              "nome": "Curriculum del team creativo",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum del team creativo, premi ottenuti, coerenza nella scelta del team creativo rispetto alla qualità creativa richiesta dal progetto (per i progetti afferenti alla categoria D o categoria E, limitatamente ai cortometraggi di animazione); un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_artistico",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "A7",
+              "nome": "Coproduzione o compartecipazione internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale: i. con Paesi dello Spazio Economico Europeo (2 punti); ii. con Paesi non appartenenti allo Spazio Economico Europeo (2 punti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Coproduzione o compartecipazione sia con Paesi dello Spazio Economico Europeo sia con Paesi non appartenenti (2 + 2)"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Solo con Paesi dello Spazio Economico Europeo, oppure solo con Paesi non appartenenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coproduzione o compartecipazione internazionale"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "A8",
+              "nome": "Valorizzazione o autenticità del patrimonio della Puglia nella narrazione",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione o autenticità del patrimonio artistico, culturale, storico, ambientale, paesaggistico, enogastronomico ed artigianale della Puglia, all’interno della narrazione.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A9",
+              "nome": "Apulia Development / Apulia Film Forum",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "altro",
+              "descrizione": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum. Ai progetti di cortometraggio è assegnato automaticamente il punteggio di 2 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuno dei due"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Sostenibilità e affidabilità del soggetto proponente e dell’iniziativa sotto il profilo finanziario ed economico",
+          "max": 5,
+          "obiettivo": "Congruenza tra il patrimonio netto dell’impresa e il costo del progetto al netto del contributo.",
+          "criteri": [
+            {
+              "id": "B1",
+              "nome": "Situazione economico-patrimoniale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Situazione economico-patrimoniale, valutando la congruenza fra il patrimonio netto delle imprese proponenti e il costo del progetto al netto del contributo, secondo la formula PN/(CA-C). PN = patrimonio netto della singola impresa quale risulta dall’ultimo bilancio approvato e depositato alla data di presentazione della domanda (per le imprese non obbligate alla redazione del bilancio il PN si desume da un bilancio redatto ex artt. da 2423 a 2425 del Codice Civile da un professionista abilitato). CA = somma dei costi agevolabili del progetto, così come indicato in domanda. C = importo del contributo richiesto dall’impresa.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Rapporto inferiore o uguale a 0,2: 0 punti. Rapporto maggiore o uguale a 1: 5 punti. Tra 0,2 e 1 il punteggio si assegna per interpolazione lineare, con arrotondamento per eccesso all’unità (in pratica: 5 × (rapporto − 0,2) / 0,8, arrotondato all’intero superiore). Formula: PN / (CA − C)",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Qualità e validità della proposta progettuale in ottica di coerenza dei costi e dei tempi di realizzazione",
+          "max": 33,
+          "obiettivo": "Coerenza del preventivo, solidità dei partner e ricadute in Puglia: spesa, giornate, lavoratori, imprese pugliesi e post-produzione.",
+          "criteri": [
+            {
+              "id": "C1",
+              "nome": "Coerenza tra componenti artistiche e tecniche, preventivo e piano finanziario",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle componenti artistiche e tecniche del progetto con il preventivo e il piano finanziario.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "C2",
+              "nome": "Qualità e affidabilità dei partner per la copertura finanziaria",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Qualità ed affidabilità dei partner eventualmente coinvolti (coproduttori, investitori, broadcaster, distributori) ai fini della copertura finanziaria.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "C3",
+              "nome": "Spese rimborsabili in Puglia sul costo della copia campione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra spese rimborsabili sostenute nel territorio regionale e costo della copia campione dell’opera.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Spese rimborsabili in Puglia (totale dell’Allegato 1b) ÷ costo della copia campione (bilancio totale di produzione senza spese generali e producer’s fee). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C5",
+              "nome": "Lavoratori iscritti alla Production Guide sul totale",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra lavoratori iscritti alla Production Guide e lavoratori totali (esclusi generici, lavoratori assunti «a giornata», figurazioni, figurazioni speciali e tirocinanti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Lavoratori iscritti alla Production Guide (dipendenti a tempo determinato o indeterminato residenti in Puglia e lavoratori autonomi con partita IVA residenti in Puglia, escluse le ditte individuali) ÷ lavoratori totali di cast artistico e cast tecnico, come nella tabella del Formulario (Allegato 1a). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            },
+            {
+              "id": "C6",
+              "nome": "Spesa in Puglia in termini assoluti",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Spesa sostenuta nel territorio regionale in termini assoluti per i progetti afferenti alla categoria D e categoria E, limitatamente ai cortometraggi di animazione (per i quali le seguenti soglie sono calcolate per un decimo del loro valore): i. maggiore di 600.000,00 Euro: 5 punti; ii. tra 400.000,01 Euro e 600.000,00 Euro: da 1 a 4 punti; iii. inferiore o uguale a 400.000,00 Euro: 0.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Spesa in Puglia maggiore di 600.000,00 euro 5 punti; tra 400.000,01 e 600.000,00 euro da 1 a 4 punti; inferiore o uguale a 400.000,00 euro 0 punti. L’Avviso non dice come si gradua il punteggio da 1 a 4 nella fascia intermedia.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C7",
+              "nome": "Imprese con sede legale in Puglia da almeno 24 mesi",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). FAQ del 09/11/2026: «Conta la sede legale, non l’unità locale. Il punteggio è assegnato solo se il requisito è adeguatamente comprovato (art. 14 c. 11) e l’impresa opera come produzione esecutiva secondo le definizioni dell’Avviso».",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Nella compagine (produzione, coproduzione o produzione esecutiva) c’è un’impresa con sede legale in Puglia da almeno 24 mesi, comprovata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa con sede legale in Puglia da almeno 24 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "coproduzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "C8",
+              "nome": "Post-produzione in Puglia",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post-produzione. Rapporto tra investimento in Puglia e investimento complessivo. Inferiore al 25% 0 punti; dal 25% al 50% 1 punto; maggiore del 50% sino al 75% 2 punti; maggiore del 75% sino al 100% 3 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Investimento di post-produzione in Puglia maggiore del 75% e fino al 100% del totale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Maggiore del 50% e fino al 75%"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Dal 25% al 50%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Inferiore al 25%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Capacità di generare effetti di crescita, sviluppo e/o rafforzamento dell’attività economica anche con riferimento alla capacità di aggregazione e contaminazione",
+          "max": 10,
+          "obiettivo": "Prospettive di distribuzione e riconoscimenti del progetto.",
+          "criteri": [
+            {
+              "id": "D1",
+              "nome": "Curriculum del distributore o del fornitore di servizi media",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Curriculum di distributori nazionali e internazionali ovvero di altri fornitori di servizi media audiovisivi nazionali e internazionali (distributori cinematografici, emittenti televisive, piattaforme SVOD), per i progetti afferenti alle categorie A, B e D di cui si produce contratto; un punto per ogni opera distribuita omogenea alla categoria in cui si candida il progetto; in caso di auto distribuzione il massimo punteggio assegnabile è di punti 2 (due), 1 punto per ogni opera distribuita omogenea alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni opera distribuita omogenea alla categoria del progetto, fino a 6 punti; con l’autodistribuzione il massimo è 2 punti. Per la distribuzione valgono le definizioni e i requisiti del Capo II, art. 4 del D.I. MiC-MEF n. 152/2021 come modificato dal D.I. n. 383/2021 (nota 16 dell’Avviso).",
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "D3",
+              "nome": "Sostegno MEDIA, Eurimages, Ibermedia o fondi similari",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Progetto che abbia ottenuto il supporto dei programmi MEDIA, Eurimages, Ibermedia ovvero fondi di sostegno al settore similari per i progetti afferenti alle categorie A, B e D.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Sostegno ottenuto e documentato"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun sostegno"
+                }
+              ],
+              "documenti": [
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "D4",
+              "nome": "Regista all’opera prima o seconda",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista alla sua opera prima o seconda per i progetti afferenti alle categorie A, B e D.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista all’opera prima o seconda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Altro"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Rilevanza della componente femminile e adozione di politiche di environmental",
+          "max": 7,
+          "obiettivo": "Criteri di premialità (così li chiama il Formulario): presenza femminile, giovani autori, professioniste pugliesi e sostenibilità ambientale. Nella tabella dell’Avviso il criterio non ha lettera, ma i sub-criteri sono numerati E1-E4.",
+          "criteri": [
+            {
+              "id": "E1",
+              "nome": "Regista donna o regista pugliese",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista o maggioranza dei registi donna o regista pugliese.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista (o maggioranza dei registi) donna, oppure regista pugliese"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E2",
+              "nome": "Autori o regista under 35",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Autori dell’opera (come individuati dalla legge 633/1941) o regista under 35.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Autori dell’opera o regista under 35"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_autori",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E3",
+              "nome": "Almeno due capi reparto donne pugliesi",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Almeno 2 capi reparto donne (tra i reparti fotografia, scenografia, costumi, montaggio, ecc) residenti in Puglia e iscritti alla Production guide.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Almeno 2 capi reparto donne residenti in Puglia e iscritte alla Production Guide"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "E4",
+              "nome": "Impegno alla certificazione di sostenibilità ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno a ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata da soggetti certificatori abilitati.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Impegno dichiarato nel Formulario"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E_FINZIONE": {
+      "id": "E_FINZIONE",
+      "nome": "Categoria E — cortometraggi di finzione e cortometraggi musicali (videoclip)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità e validità della proposta progettuale in ottica di interventi volti a migliorare il posizionamento competitivo dell’impresa, anche attraverso azioni di marketing e di internazionalizzazione",
+          "max": 45,
+          "obiettivo": "Qualità artistica del progetto, curriculum di chi lo realizza, apertura internazionale e legame con la Puglia. È il solo criterio con un minimo: 27 punti su 45.",
+          "criteri": [
+            {
+              "id": "A1",
+              "nome": "Originalità della storia e struttura narrativa",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A2",
+              "nome": "Qualità della scrittura",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A4",
+              "nome": "Curriculum della squadra artistica e della squadra tecnica",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum della squadra artistica (regia, sceneggiatura, attori) e della squadra tecnica (fotografia, montaggio, scenografia, musiche, costumi); un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti. L’Avviso non precisa se i lavori si contano per singolo professionista o per l’intera squadra.",
+              "documenti": [
+                "cv_artistico",
+                "cv_tecnico",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "A5",
+              "nome": "Curriculum della società di produzione, del produttore e dei coproduttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum della società di produzione, del produttore e di eventuali coproduttori; un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "A7",
+              "nome": "Coproduzione o compartecipazione internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale: i. con Paesi dello Spazio Economico Europeo (2 punti); ii. con Paesi non appartenenti allo Spazio Economico Europeo (2 punti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Coproduzione o compartecipazione sia con Paesi dello Spazio Economico Europeo sia con Paesi non appartenenti (2 + 2)"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Solo con Paesi dello Spazio Economico Europeo, oppure solo con Paesi non appartenenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coproduzione o compartecipazione internazionale"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "A8",
+              "nome": "Valorizzazione o autenticità del patrimonio della Puglia nella narrazione",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione o autenticità del patrimonio artistico, culturale, storico, ambientale, paesaggistico, enogastronomico ed artigianale della Puglia, all’interno della narrazione.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A9",
+              "nome": "Apulia Development / Apulia Film Forum",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "altro",
+              "descrizione": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum. Ai progetti di cortometraggio è assegnato automaticamente il punteggio di 2 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Cortometraggio: punteggio assegnato automaticamente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Sostenibilità e affidabilità del soggetto proponente e dell’iniziativa sotto il profilo finanziario ed economico",
+          "max": 5,
+          "obiettivo": "Congruenza tra il patrimonio netto dell’impresa e il costo del progetto al netto del contributo.",
+          "criteri": [
+            {
+              "id": "B1",
+              "nome": "Situazione economico-patrimoniale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Situazione economico-patrimoniale, valutando la congruenza fra il patrimonio netto delle imprese proponenti e il costo del progetto al netto del contributo, secondo la formula PN/(CA-C). PN = patrimonio netto della singola impresa quale risulta dall’ultimo bilancio approvato e depositato alla data di presentazione della domanda (per le imprese non obbligate alla redazione del bilancio il PN si desume da un bilancio redatto ex artt. da 2423 a 2425 del Codice Civile da un professionista abilitato). CA = somma dei costi agevolabili del progetto, così come indicato in domanda. C = importo del contributo richiesto dall’impresa.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Rapporto inferiore o uguale a 0,2: 0 punti. Rapporto maggiore o uguale a 1: 5 punti. Tra 0,2 e 1 il punteggio si assegna per interpolazione lineare, con arrotondamento per eccesso all’unità (in pratica: 5 × (rapporto − 0,2) / 0,8, arrotondato all’intero superiore). Formula: PN / (CA − C)",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Qualità e validità della proposta progettuale in ottica di coerenza dei costi e dei tempi di realizzazione",
+          "max": 33,
+          "obiettivo": "Coerenza del preventivo, solidità dei partner e ricadute in Puglia: spesa, giornate, lavoratori, imprese pugliesi e post-produzione.",
+          "criteri": [
+            {
+              "id": "C1",
+              "nome": "Coerenza tra componenti artistiche e tecniche, preventivo e piano finanziario",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle componenti artistiche e tecniche del progetto con il preventivo e il piano finanziario.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "C2",
+              "nome": "Qualità e affidabilità dei partner per la copertura finanziaria",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Qualità ed affidabilità dei partner eventualmente coinvolti (coproduttori, investitori, broadcaster, distributori) ai fini della copertura finanziaria.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "C3",
+              "nome": "Spese rimborsabili in Puglia sul costo della copia campione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra spese rimborsabili sostenute nel territorio regionale e costo della copia campione dell’opera.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Spese rimborsabili in Puglia (totale dell’Allegato 1b) ÷ costo della copia campione (bilancio totale di produzione senza spese generali e producer’s fee). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C4",
+              "nome": "Giornate di lavorazione in Puglia sul totale",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra giornate di lavorazione in Puglia e giornate di lavorazione totali.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Giorni di lavorazione (riprese) in Puglia ÷ giorni di lavorazione (riprese) totali, come nel cronoprogramma del Formulario (Allegato 1a), dove il sabato è considerato lavorativo. Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "C5",
+              "nome": "Lavoratori iscritti alla Production Guide sul totale",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra lavoratori iscritti alla Production Guide e lavoratori totali (esclusi generici, lavoratori assunti «a giornata», figurazioni, figurazioni speciali e tirocinanti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Lavoratori iscritti alla Production Guide (dipendenti a tempo determinato o indeterminato residenti in Puglia e lavoratori autonomi con partita IVA residenti in Puglia, escluse le ditte individuali) ÷ lavoratori totali di cast artistico e cast tecnico, come nella tabella del Formulario (Allegato 1a). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            },
+            {
+              "id": "C7",
+              "nome": "Imprese con sede legale in Puglia da almeno 24 mesi",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). FAQ del 09/11/2026: «Conta la sede legale, non l’unità locale. Il punteggio è assegnato solo se il requisito è adeguatamente comprovato (art. 14 c. 11) e l’impresa opera come produzione esecutiva secondo le definizioni dell’Avviso».",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Nella compagine (produzione, coproduzione o produzione esecutiva) c’è un’impresa con sede legale in Puglia da almeno 24 mesi, comprovata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa con sede legale in Puglia da almeno 24 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "coproduzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "C8",
+              "nome": "Post-produzione in Puglia",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post-produzione. Rapporto tra investimento in Puglia e investimento complessivo. Inferiore al 25% 0 punti; dal 25% al 50% 1 punto; maggiore del 50% sino al 75% 2 punti; maggiore del 75% sino al 100% 3 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Investimento di post-produzione in Puglia maggiore del 75% e fino al 100% del totale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Maggiore del 50% e fino al 75%"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Dal 25% al 50%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Inferiore al 25%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Capacità di generare effetti di crescita, sviluppo e/o rafforzamento dell’attività economica anche con riferimento alla capacità di aggregazione e contaminazione",
+          "max": 10,
+          "obiettivo": "Prospettive di distribuzione e riconoscimenti del progetto.",
+          "criteri": [
+            {
+              "id": "D2",
+              "nome": "Contratto di distribuzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Contratto di distribuzione per i progetti afferenti alle categorie C e E.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Rilevanza della componente femminile e adozione di politiche di environmental",
+          "max": 7,
+          "obiettivo": "Criteri di premialità (così li chiama il Formulario): presenza femminile, giovani autori, professioniste pugliesi e sostenibilità ambientale. Nella tabella dell’Avviso il criterio non ha lettera, ma i sub-criteri sono numerati E1-E4.",
+          "criteri": [
+            {
+              "id": "E1",
+              "nome": "Regista donna o regista pugliese",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista o maggioranza dei registi donna o regista pugliese.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista (o maggioranza dei registi) donna, oppure regista pugliese"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E2",
+              "nome": "Autori o regista under 35",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Autori dell’opera (come individuati dalla legge 633/1941) o regista under 35.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Autori dell’opera o regista under 35"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_autori",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E3",
+              "nome": "Almeno due capi reparto donne pugliesi",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Almeno 2 capi reparto donne (tra i reparti fotografia, scenografia, costumi, montaggio, ecc) residenti in Puglia e iscritti alla Production guide.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Almeno 2 capi reparto donne residenti in Puglia e iscritte alla Production Guide"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "E4",
+              "nome": "Impegno alla certificazione di sostenibilità ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno a ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata da soggetti certificatori abilitati.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Impegno dichiarato nel Formulario"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "E_ANIMAZIONE": {
+      "id": "E_ANIMAZIONE",
+      "nome": "Categoria E — cortometraggi di animazione",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità e validità della proposta progettuale in ottica di interventi volti a migliorare il posizionamento competitivo dell’impresa, anche attraverso azioni di marketing e di internazionalizzazione",
+          "max": 45,
+          "obiettivo": "Qualità artistica del progetto, curriculum di chi lo realizza, apertura internazionale e legame con la Puglia. È il solo criterio con un minimo: 27 punti su 45.",
+          "criteri": [
+            {
+              "id": "A1",
+              "nome": "Originalità della storia e struttura narrativa",
+              "max": 12,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A2",
+              "nome": "Qualità della scrittura",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "A3",
+              "nome": "Approccio visivo, artwork e approccio grafico",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Qualità dell’approccio visivo, dell’artwork e dell’approccio grafico (per progetti afferenti a categoria D o categoria E, limitatamente ai cortometraggi di animazione).",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "altro"
+              ]
+            },
+            {
+              "id": "A5",
+              "nome": "Curriculum della società di produzione, del produttore e dei coproduttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Curriculum della società di produzione, del produttore e di eventuali coproduttori; un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "A6",
+              "nome": "Curriculum del team creativo",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Curriculum del team creativo, premi ottenuti, coerenza nella scelta del team creativo rispetto alla qualità creativa richiesta dal progetto (per i progetti afferenti alla categoria D o categoria E, limitatamente ai cortometraggi di animazione); un punto per ogni lavoro precedente, omogeneo alla categoria in cui si candida il progetto.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): un punto per ogni lavoro precedente omogeneo alla categoria in cui si candida il progetto, fino al punteggio massimo. Regola di calcolo scritta nel bando: 1 punto per ogni lavoro precedente omogeneo alla categoria del progetto, fino a 5 punti.",
+              "documenti": [
+                "cv_artistico",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "A7",
+              "nome": "Coproduzione o compartecipazione internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale: i. con Paesi dello Spazio Economico Europeo (2 punti); ii. con Paesi non appartenenti allo Spazio Economico Europeo (2 punti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Coproduzione o compartecipazione sia con Paesi dello Spazio Economico Europeo sia con Paesi non appartenenti (2 + 2)"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Solo con Paesi dello Spazio Economico Europeo, oppure solo con Paesi non appartenenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coproduzione o compartecipazione internazionale"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "A8",
+              "nome": "Valorizzazione o autenticità del patrimonio della Puglia nella narrazione",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione o autenticità del patrimonio artistico, culturale, storico, ambientale, paesaggistico, enogastronomico ed artigianale della Puglia, all’interno della narrazione.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo1"
+              ]
+            },
+            {
+              "id": "A9",
+              "nome": "Apulia Development / Apulia Film Forum",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "altro",
+              "descrizione": "Progetto supportato da Apulia Development e/o selezionato in Apulia Film Forum. Ai progetti di cortometraggio è assegnato automaticamente il punteggio di 2 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Cortometraggio: punteggio assegnato automaticamente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Sostenibilità e affidabilità del soggetto proponente e dell’iniziativa sotto il profilo finanziario ed economico",
+          "max": 5,
+          "obiettivo": "Congruenza tra il patrimonio netto dell’impresa e il costo del progetto al netto del contributo.",
+          "criteri": [
+            {
+              "id": "B1",
+              "nome": "Situazione economico-patrimoniale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Situazione economico-patrimoniale, valutando la congruenza fra il patrimonio netto delle imprese proponenti e il costo del progetto al netto del contributo, secondo la formula PN/(CA-C). PN = patrimonio netto della singola impresa quale risulta dall’ultimo bilancio approvato e depositato alla data di presentazione della domanda (per le imprese non obbligate alla redazione del bilancio il PN si desume da un bilancio redatto ex artt. da 2423 a 2425 del Codice Civile da un professionista abilitato). CA = somma dei costi agevolabili del progetto, così come indicato in domanda. C = importo del contributo richiesto dall’impresa.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Rapporto inferiore o uguale a 0,2: 0 punti. Rapporto maggiore o uguale a 1: 5 punti. Tra 0,2 e 1 il punteggio si assegna per interpolazione lineare, con arrotondamento per eccesso all’unità (in pratica: 5 × (rapporto − 0,2) / 0,8, arrotondato all’intero superiore). Formula: PN / (CA − C)",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Qualità e validità della proposta progettuale in ottica di coerenza dei costi e dei tempi di realizzazione",
+          "max": 33,
+          "obiettivo": "Coerenza del preventivo, solidità dei partner e ricadute in Puglia: spesa, giornate, lavoratori, imprese pugliesi e post-produzione.",
+          "criteri": [
+            {
+              "id": "C1",
+              "nome": "Coerenza tra componenti artistiche e tecniche, preventivo e piano finanziario",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Coerenza e congruità delle componenti artistiche e tecniche del progetto con il preventivo e il piano finanziario.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "C2",
+              "nome": "Qualità e affidabilità dei partner per la copertura finanziaria",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Qualità ed affidabilità dei partner eventualmente coinvolti (coproduttori, investitori, broadcaster, distributori) ai fini della copertura finanziaria.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "C3",
+              "nome": "Spese rimborsabili in Puglia sul costo della copia campione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra spese rimborsabili sostenute nel territorio regionale e costo della copia campione dell’opera.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Spese rimborsabili in Puglia (totale dell’Allegato 1b) ÷ costo della copia campione (bilancio totale di produzione senza spese generali e producer’s fee). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C5",
+              "nome": "Lavoratori iscritti alla Production Guide sul totale",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra lavoratori iscritti alla Production Guide e lavoratori totali (esclusi generici, lavoratori assunti «a giornata», figurazioni, figurazioni speciali e tirocinanti).",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4). L’Avviso indica soltanto il rapporto da misurare e il punteggio massimo: non pubblica fasce né una formula di conversione del rapporto in punti. A consuntivo il rapporto dichiarato può scendere al massimo del 30% (art. 18, par. 5), pena la decadenza. Regola di calcolo scritta nel bando: Lavoratori iscritti alla Production Guide (dipendenti a tempo determinato o indeterminato residenti in Puglia e lavoratori autonomi con partita IVA residenti in Puglia, escluse le ditte individuali) ÷ lavoratori totali di cast artistico e cast tecnico, come nella tabella del Formulario (Allegato 1a). Regola di conversione in punti non pubblicata.",
+              "documenti": [
+                "modulo1",
+                "altro"
+              ]
+            },
+            {
+              "id": "C6",
+              "nome": "Spesa in Puglia in termini assoluti",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Spesa sostenuta nel territorio regionale in termini assoluti per i progetti afferenti alla categoria D e categoria E, limitatamente ai cortometraggi di animazione (per i quali le seguenti soglie sono calcolate per un decimo del loro valore): i. maggiore di 600.000,00 Euro: 5 punti; ii. tra 400.000,01 Euro e 600.000,00 Euro: da 1 a 4 punti; iii. inferiore o uguale a 400.000,00 Euro: 0.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). Regola di calcolo scritta nel bando: Per i cortometraggi di animazione le soglie valgono un decimo: spesa in Puglia maggiore di 60.000,00 euro 5 punti; tra 40.000,01 e 60.000,00 euro da 1 a 4 punti; inferiore o uguale a 40.000,00 euro 0 punti. L’Avviso non dice come si gradua il punteggio da 1 a 4 nella fascia intermedia.",
+              "documenti": [
+                "modulo1",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "C7",
+              "nome": "Imprese con sede legale in Puglia da almeno 24 mesi",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11). FAQ del 09/11/2026: «Conta la sede legale, non l’unità locale. Il punteggio è assegnato solo se il requisito è adeguatamente comprovato (art. 14 c. 11) e l’impresa opera come produzione esecutiva secondo le definizioni dell’Avviso».",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Nella compagine (produzione, coproduzione o produzione esecutiva) c’è un’impresa con sede legale in Puglia da almeno 24 mesi, comprovata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa con sede legale in Puglia da almeno 24 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "coproduzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "C8",
+              "nome": "Post-produzione in Puglia",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post-produzione. Rapporto tra investimento in Puglia e investimento complessivo. Inferiore al 25% 0 punti; dal 25% al 50% 1 punto; maggiore del 50% sino al 75% 2 punti; maggiore del 75% sino al 100% 3 punti.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Investimento di post-produzione in Puglia maggiore del 75% e fino al 100% del totale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Maggiore del 50% e fino al 75%"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Dal 25% al 50%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Inferiore al 25%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Capacità di generare effetti di crescita, sviluppo e/o rafforzamento dell’attività economica anche con riferimento alla capacità di aggregazione e contaminazione",
+          "max": 10,
+          "obiettivo": "Prospettive di distribuzione e riconoscimenti del progetto.",
+          "criteri": [
+            {
+              "id": "D2",
+              "nome": "Contratto di distribuzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Contratto di distribuzione per i progetti afferenti alle categorie C e E.",
+              "principio": "Scala dei giudizi dell’art. 13, par. 4: il punteggio è il coefficiente del giudizio qualitativo moltiplicato per il punteggio massimo del sub-criterio (Eccellente 1,0 · Ottimo 0,9 · Buono 0,8 · Discreto 0,7 · Sufficiente 0,6 · Mediocre 0,5 · Insufficiente 0,4 · Non adeguato 0,3 · Scarso 0,2 · Molto scarso 0,1 · Non valutabile 0,0).",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Rilevanza della componente femminile e adozione di politiche di environmental",
+          "max": 7,
+          "obiettivo": "Criteri di premialità (così li chiama il Formulario): presenza femminile, giovani autori, professioniste pugliesi e sostenibilità ambientale. Nella tabella dell’Avviso il criterio non ha lettera, ma i sub-criteri sono numerati E1-E4.",
+          "criteri": [
+            {
+              "id": "E1",
+              "nome": "Regista donna o regista pugliese",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista o maggioranza dei registi donna o regista pugliese.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista (o maggioranza dei registi) donna, oppure regista pugliese"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E2",
+              "nome": "Autori o regista under 35",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Autori dell’opera (come individuati dalla legge 633/1941) o regista under 35.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Autori dell’opera o regista under 35"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_autori",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "E3",
+              "nome": "Almeno due capi reparto donne pugliesi",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Almeno 2 capi reparto donne (tra i reparti fotografia, scenografia, costumi, montaggio, ecc) residenti in Puglia e iscritti alla Production guide.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Almeno 2 capi reparto donne residenti in Puglia e iscritte alla Production Guide"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "E4",
+              "nome": "Impegno alla certificazione di sostenibilità ambientale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Impegno a ottenere una certificazione per la sostenibilità ambientale dell’opera, rilasciata da soggetti certificatori abilitati.",
+              "principio": "Sub-criterio escluso dalla scala dei giudizi qualitativi (art. 13, par. 4): il punteggio dipende dal dato dichiarato e documentato. Gli elementi non adeguatamente comprovati non ricevono punteggio (art. 14, par. 11).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Impegno dichiarato nel Formulario"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Allegato 1a — Formulario di progetto (anagrafica, profilo dell’impresa, proposta e cronoprogramma, piano dei costi, elenco delle spese, contributo richiesto, ulteriori elementi per la valutazione)",
+      "obbligo": "sempre",
+      "formati": [
+        "xlsx"
+      ]
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Allegati 1b e 1c — Preventivo analitico dei costi da sostenere in Puglia e preventivo del bilancio totale di produzione (sopra la linea, sotto la linea, producer fee e spese generali, con le spese in Puglia distinte)",
+      "obbligo": "sempre",
+      "formati": [
+        "xlsx"
+      ]
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Allegato 1d — Piano finanziario",
+      "obbligo": "sempre",
+      "formati": [
+        "xlsx"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione della copertura finanziaria minima: atti ufficiali degli enti che erogano contributi; contratti di associazione in partecipazione firmati digitalmente o registrati; idoneità al tax credit della DG Cinema del MiC se il credito d’imposta rientra nella copertura minima",
+      "obbligo": "sempre",
+      "criteri": [
+        "C2"
+      ]
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "Allegato 5 — Dichiarazione di disponibilità finanziaria, con documentazione degli importi (se nella copertura minima c’è un apporto diretto dell’impresa o dei coproduttori)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Deal memo o contratto di distribuzione con impresa ATECO primario 59.13, broadcaster o fornitore di servizi media audiovisivi di rilevanza nazionale e/o internazionale (le lettere di interesse non sono ammesse)",
+      "obbligo": "sempre",
+      "criteri": [
+        "D1"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratto di distribuzione (categorie C ed E: non obbligatorio, vale fino a 10 punti)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "D2"
+      ]
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratti di coproduzione",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "A7",
+        "C7"
+      ]
+    },
+    {
+      "tipo": "produttore_esecutivo",
+      "nome": "Contratto di produzione esecutiva a costo bloccato",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "C7"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2 — Dichiarazioni sostitutive: 2a tracciabilità finanziaria e regolarità contributiva, 2b requisiti di ammissibilità, 2c cumulo di aiuti; dichiarazione sui rapporti di cointeressenza o collegamento con fornitori e produttore esecutivo",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 2d — Dichiarazioni per l’informazione antimafia (solo se l’agevolazione richiesta supera 150.000,00 euro)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 3 — Dichiarazione PMI (due annualità precedenti) con asseverazione di un consulente del lavoro sul dato delle ULA dell’ultimo anno contabile concluso",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Materiali artistici. A, B ed E: soggetto, sinossi, sceneggiatura, moodboard e teaser (videoclip: trattamento, note di regia, brano, piano di uscita). C: sinossi, trattamento, dossier di ricerca, teaser. D e corti animati: soggetto, sceneggiatura, storyboard, studi di personaggi e location, teaser",
+      "obbligo": "sempre",
+      "criteri": [
+        "A1",
+        "A2",
+        "A3",
+        "A8"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Scheda del cast tecnico e artistico: elenco numerato delle professionalità individuate o da individuare, con indicazione di quelle iscritte alla Production Guide",
+      "obbligo": "sempre",
+      "criteri": [
+        "C5",
+        "E3"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Curriculum e filmografia dell’impresa richiedente, degli eventuali coproduttori e del produttore (in un unico file PDF insieme ai curricula dei capi reparto)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A5"
+      ],
+      "unico": true
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Curriculum e filmografia dei capi reparto della squadra artistica: regia, sceneggiatura, attori (stesso file PDF unico)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A4",
+        "A6"
+      ],
+      "unico": true
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Curriculum e filmografia dei capi reparto della squadra tecnica: fotografia, montaggio, scenografia, musiche, costumi (stesso file PDF unico)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A4"
+      ],
+      "unico": true
+    },
+    {
+      "tipo": "altro",
+      "nome": "Note di produzione e note di regia (le note di produzione illustrano anche copertura finanziaria e prospettive distributive)",
+      "obbligo": "sempre",
+      "criteri": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "tipo": "identita",
+      "nome": "Documento di identità in corso di validità del legale rappresentante",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione del sostegno MEDIA, Eurimages, Ibermedia o fondi similari (categorie A, B e D)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "D3"
+      ]
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con le giornate in Puglia (almeno il 30% dei giorni di riprese; il cronoprogramma è nel Formulario)",
+      "obbligo": "consigliato",
+      "criteri": [
+        "C4"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Qualsiasi altra documentazione utile a verificare ammissibilità e valutazione",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "pmi",
+      "testo": "Micro, piccola o media impresa in forma societaria (no persone fisiche, ditte individuali, associazioni, fondazioni, istituti, università)"
+    },
+    {
+      "id": "produttore",
+      "testo": "Produttore dell’opera: produttore unico, coproduttore con quota non inferiore al 10%, oppure produttore esecutivo con contratto a costo bloccato"
+    },
+    {
+      "id": "anzianita",
+      "testo": "Impresa costituita da almeno 24 mesi e iscritta al Registro delle Imprese (o registro equivalente in uno Stato membro UE)"
+    },
+    {
+      "id": "capitale",
+      "testo": "Capitale sociale interamente versato (società di capitali) o patrimonio netto (società di persone) non inferiore a 40.000 euro; 10.000 euro per documentari e cortometraggi (categorie C ed E)"
+    },
+    {
+      "id": "ateco",
+      "testo": "Attività prevalente con codice ATECO 2007 J 59.11 (NACE J 59.11) risultante da visura camerale"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà, non è in procedure concorsuali o in liquidazione, non ha aiuti da restituire per decisioni di recupero"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Regolarità contributiva (DURC), rispetto dei contratti collettivi (L.R. Puglia 28/2006), normativa antimafia, nessuna sanzione interdittiva né condanne ostative"
+    },
+    {
+      "id": "assicurazione",
+      "testo": "In regola, ove applicabile, con l’obbligo di stipula dei contratti assicurativi a copertura dei danni di cui all’art. 1, comma 101, della legge 213/2023; nessuna delocalizzazione o cessazione di attività (art. 16 del D.Lgs. 184/2025)"
+    },
+    {
+      "id": "avvio",
+      "testo": "Lavori sull’opera non avviati prima dell’invio della domanda (effetto di incentivazione): ammessi solo i lavori preparatori"
+    },
+    {
+      "id": "sede",
+      "testo": "Sede legale o unità locale in Puglia al momento del primo pagamento dell’aiuto"
+    },
+    {
+      "id": "copertura",
+      "testo": "Copertura finanziaria minima documentata sul costo della copia campione: 25% categoria A, 40% categoria B, 20% categorie C ed E, 25% lungometraggi di animazione e 40% serie di animazione"
+    },
+    {
+      "id": "distribuzione",
+      "testo": "Categorie A, B e D: deal memo o contratto di distribuzione (no lettere di interesse)"
+    },
+    {
+      "id": "riprese",
+      "testo": "Almeno il 30% dei giorni di riprese in Puglia (animazione: almeno il 20% di storyboard, animazione o lighting/rendering/compositing/color correction in Puglia)"
+    },
+    {
+      "id": "spesa-minima",
+      "testo": "Spese da sostenere in Puglia (Allegato 1b) pari ad almeno il 20% del bilancio totale di produzione (Allegato 1c)"
+    },
+    {
+      "id": "importi",
+      "testo": "Contributo richiesto compreso tra il minimo e il massimo della categoria"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera non incita alla violenza o alla discriminazione, non è pornografica e non è destinata alla diffusione tramite fornitori di servizi di hosting"
+    },
+    {
+      "id": "domande",
+      "testo": "Non più di due domande nella stessa finestra (una da produttore, una da produttore esecutivo), con firma digitale"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "realizzazione",
+      "etichetta": "Conclusione della realizzazione dell’opera, con consegna della copia campione",
+      "mesi": 12,
+      "nota": "Art. 7, par. 2-4: proroga di non più di sei mesi, con richiesta motivata almeno tre mesi prima del termine. Il Disciplinare (art. 13) ammette la valutazione di un’ulteriore proroga di non più di sei mesi."
+    },
+    {
+      "id": "realizzazione-animazione",
+      "etichetta": "Conclusione della realizzazione dell’opera di animazione (categoria D)",
+      "mesi": 24,
+      "nota": "Art. 7, par. 2-3: stessa regola di proroga."
+    },
+    {
+      "id": "rendiconto",
+      "etichetta": "Consegna della rendicontazione e richiesta del saldo (Allegato 8c)",
+      "mesi": 12,
+      "nota": "Art. 7, par. 5 e art. 16: entro 60 giorni dalla conclusione del progetto e comunque dal termine di realizzazione (12 mesi, 24 per la categoria D, più l’eventuale proroga). Rendiconto analitico (Allegato 9) sul sistema SIRP, asseverato da commercialista o revisore legale (Allegato 6); integrazioni entro 20 giorni solari dalla richiesta. Il format del Disciplinare (art. 4) indica il 31 dicembre 2029 come fine del periodo di ammissibilità entro cui le spese devono essere sostenute e pagate."
+    }
+  ],
+  "scadenzeNote": [
+    "Sottoscrizione del Disciplinare con firma elettronica del legale rappresentante: Art. 14, par. 14 e art. 15, par. 3: oltre i 10 giorni lavorativi l’impresa è considerata rinunciataria e decade dall’agevolazione.",
+    "Ultimo giorno per rinunciare senza perdere l’accesso al successivo Apulia Film Fund: Art. 19, par. 1: rinuncia via PEC a funding@pec.apuliafilmcommission.it; oltre i 90 giorni comporta l’esclusione dal successivo avviso, salvo forza maggiore documentata.",
+    "Richiesta dell’anticipazione del 40% (Allegato 8a) con fideiussione: Art. 10, par. 2.1: le richieste oltre i 120 giorni non sono prese in considerazione."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Facoltativo: richiesta con l’Allegato 8a entro 120 giorni dalla firma del Disciplinare e fideiussione bancaria, polizza assicurativa o polizza di un intermediario finanziario a favore della Fondazione Apulia Film Commission (schema Allegato 7, DGR n. 1000/2016) per un importo pari all’anticipo."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "condizione": "Rimanente quota del contributo (Allegato 8c), al termine della post-produzione e dopo la rendicontazione finale; è il 100% in un’unica soluzione se non si è chiesto l’anticipo. Il contributo è rideterminato sulle spese ammissibili effettivamente sostenute, rendicontate e riconosciute."
+    }
+  ],
+  "note": [
+    "Per essere ammissibili a finanziamento servono almeno 60 punti su 100 e almeno 27 punti su 45 nel criterio A (art. 13).",
+    "Procedura a graduatoria, nei limiti della dotazione di 5 milioni di euro (non ripartita per categoria): in fase di esaurimento delle risorse non si assegnano contributi parziali (art. 4, par. 3). A parità di punteggio prevale la domanda arrivata prima.",
+    "Il contributo si calcola sulle sole spese ammissibili sostenute in Puglia: 35% di base, 40% per le produzioni transfrontaliere, 60% per le opere difficili e/o le coproduzioni con Paesi dell’elenco DAC dell’OCSE (art. 9, par. 10). Sono opere difficili, tra le altre, documentari, cortometraggi, opere prime o seconde e opere di giovani autori.",
+    "Importi per categoria (art. 9, par. 9): A da 80.000 a 320.000 euro; B da 250.000 a 450.000; C da 40.000 a 120.000; D da 300.000 a 500.000; E da 10.000 a 40.000.",
+    "Le spese in Puglia devono essere almeno il 20% del bilancio totale di produzione (art. 7, par. 12, come chiarito dalle FAQ); la spesa soggetta a obbligo territoriale non può superare l’80% del bilancio totale di produzione (art. 9, par. 7). Il bando non esprime la spesa minima in percentuale del contributo: per questo spesaTerritorioMinPct è 0.",
+    "Costi «sopra la linea» (soggetto e sceneggiatura, regia, attori principali) rendicontabili al massimo per 100.000 euro nelle categorie A e B, 40.000 nella C, 200.000 nella D e 10.000 nella E (art. 9, par. 12).",
+    "Sono rimborsabili solo: buste paga di personale residente in Puglia, iscritto alla Production Guide e assunto con CCNL del settore cineaudiovisivo; servizi e consulenze di imprese e professionisti dell’audiovisivo residenti fiscalmente in Puglia da almeno 12 mesi; beni di consumo e noleggi da fornitori pugliesi; location, permessi e strutture ricettive in Puglia (art. 8, par. 4).",
+    "Non sono ammissibili, tra l’altro: producer’s fee, spese generali, titoli di viaggio, spese in contanti, spese sotto i 100 euro per beni e servizi, prestazioni occasionali, carburante oltre 600 euro, compensi ad amministratori e soci, fatture di imprese collegate o di parenti entro il secondo grado, giustificativi senza CUP (art. 8, par. 8 e 11-14).",
+    "Effetto di incentivazione: i lavori non devono essere avviati prima della domanda e le spese devono essere successive all’invio, salvo i costi già sostenuti per i diritti del soggetto o di adattamento (art. 7, par. 15-17 e art. 8, par. 2).",
+    "Con un produttore esecutivo è ammissibile solo il corrispettivo del contratto di produzione esecutiva a costo bloccato; la stessa spesa non può essere rendicontata due volte (art. 8, par. 15-16).",
+    "A consuntivo i rapporti dichiarati per spesa in Puglia sulla copia campione, giornate in Puglia e lavoratori iscritti alla Production Guide possono scendere al massimo del 30%, e le spese pugliesi non possono ridursi di oltre il 30%: oltre scatta la decadenza (art. 18).",
+    "Il contributo è cumulabile con altri aiuti di Stato e con il tax credit nei limiti dell’intensità massima; l’intensità può essere riparametrata in presenza di altri aiuti già concessi (art. 9, par. 4-8 e 14).",
+    "Il criterio C7 vale 10 punti e premia la presenza di un’impresa con sede legale (non unità locale) in Puglia da almeno 24 mesi nella produzione, coproduzione o produzione esecutiva.",
+    "I punteggi pubblici delle edizioni 2024 e 2025 non sono confrontabili uno a uno con il 2026 per i criteri C ed E: nel 2025 il criterio C valeva 35 punti (C7 = 12) e le premialità E 5 punti."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Apulia Development Film Fund",
+      "url": "https://www.apuliafilmcommission.it/fondi/apulia-development-film-fund-2023/",
+      "descrizione": "Fondo per lo sviluppo, elencato tra i «Fondi aperti» del sito; il sostegno di Apulia Development vale 2 punti nel sub-criterio A9 dell’Apulia Film Fund. Testo non letto in questa ricerca."
+    },
+    {
+      "nome": "Cine Market Voucher Puglia",
+      "url": "https://www.apuliafilmcommission.it/fondi/cine-market-voucher-puglia/",
+      "descrizione": "Elencato tra i «Fondi aperti» del sito; non riguarda la produzione di opere. Testo non letto in questa ricerca."
+    },
+    {
+      "nome": "Social Film Production con il SUD",
+      "url": "https://www.apuliafilmcommission.it/fondi/social-film-production-con-il-sud/",
+      "descrizione": "Elencato tra i «Fondi aperti» del sito. Testo non letto in questa ricerca."
+    },
+    {
+      "nome": "IPA South Adriatic Co-Development Film Fund",
+      "url": "https://www.apuliafilmcommission.it/bandiefornitori/ipa-south-adriatic-co-development-film-fund/",
+      "descrizione": "Fondo di co-sviluppo dell’area adriatica meridionale, distinto dall’Apulia Film Fund. Testo non letto in questa ricerca."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2025,
+      "titolo": "Determinazione del Direttore Generale Prot. N. 2481/26/U del 27/10/2026 — Approvazione degli esiti della valutazione, Allegato A (Apulia Film Fund 2025)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2026/10/DD__26_U_AFF2025_EsitiValutazione_signed.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2024,
+      "titolo": "Determinazione del Direttore Generale Prot. N. 3069/24/U dell’11/11/2024 — Approvazione degli esiti della valutazione, Allegato A (Apulia Film Fund 2024)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2024/11/DD_3069_24_U_AFF2024_EsitiValutazione-signed-1.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    },
+    {
+      "anno": 2024,
+      "titolo": "Determinazione del Direttore Generale Prot. N. 0920/25/U del 26/03/2025 — Rettifica della graduatoria finale (Apulia Film Fund 2024)",
+      "url": "https://www.apuliafilmcommission.it/wp-content/uploads/2025/03/DD_0920_25_U_AFF2024_RettificaEsitiValutazione_signed.pdf",
+      "contienePunteggi": true,
+      "perSezione": true
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Avviso 2026, art. 13 — soglia complessiva e minimo del criterio A",
+        "testo": "Sono considerate ammissibili a finanziamento, nei limiti della dotazione finanziaria dell’Avviso, le domande che in sede di valutazione tecnica raggiungono un punteggio complessivo non inferiore a 60, nonché un punteggio non inferiore a 27 punti nel criterio A"
+      },
+      {
+        "riferimento": "Avviso 2026, art. 13 — tabella, criterio A (colonne «Categ. A, B, C, E finzione» | «Categ. D, E animazione»; punteggio massimo criterio 45)",
+        "testo": "A1. Originalità della storia, solidità, tono e ritmo della struttura narrativa; 12 | 12 — A2. Qualità della scrittura […] 12 | 6 — A3. Qualità dell’approccio visivo, dell’artwork e dell’approccio grafico […] 0 | 6 — A4. Curriculum della squadra artistica […] e della squadra tecnica […] 5 | 0 — A5. Curriculum della società di produzione […] 5 | 5 — A6. Curriculum del team creativo […] 0 | 5 — A7. […] 4 | 4 — A8. […] 5 | 5 — A9. […] 2 | 2"
+      },
+      {
+        "riferimento": "Avviso 2026, art. 13 — tabella, criteri B e C (punteggio massimo 5 e 33; ordine di lettura del PDF del 31/08/2026)",
+        "testo": "B1 […] 5 — C1 5 | 5 — C2 5 | 3 — C3 3 | 3 — C4 3 | (vuoto) — C5 4 | 4 — C6 (vuoto) | 5 — C7. Progetto presentato con imprese quali produzione, coproduzione, produzione esecutiva con sede legale in Puglia da almeno 24 mesi 10 | 10 — C8. Fase di post-produzione. […] Inferiore al 25% 0 punti; Dal 25% al 50% 1 punti, maggiore del 50% sino al 75% 2 punti, maggiore del 75% sino al 100% 3 punti. 3 | 3"
+      },
+      {
+        "riferimento": "Avviso 2026, art. 13 — tabella, criteri D ed E (colonne «Cat. A, B e D» | «Cat. C ed E»; punteggio massimo 10 e 7)",
+        "testo": "D1. Curriculum di distributori nazionali e internazionali […] un punto per ogni opera distribuita omogenea alla categoria in cui si candida il progetto; in caso di auto distribuzione il massimo punteggio assegnabile è di punti 2 (due) […] 6 — D2. Contratto di distribuzione per i progetti afferenti alle categorie C e E; 10 — D3. […] 2 — D4. […] 2 — E1. […] 2 — E2. […] 1 — E3. […] 2 — E4. […] 2"
+      },
+      {
+        "riferimento": "Avviso 2026, art. 13 — sub-criterio B1",
+        "testo": "secondo la seguente formula: PN/(CA-C) […] Qualora il rapporto sia inferiore/uguale a 0,2 il punteggio è pari a 0 (zero). Qualora il rapporto sia maggiore/uguale a 1 il punteggio è pari a 5. L’assegnazione all’interno di tali valori avviene per interpolazione lineare, con arrotondamento del punteggio assegnato per eccesso all’unità."
+      },
+      {
+        "riferimento": "Avviso 2026, art. 13, par. 4 — scala dei giudizi",
+        "testo": "In relazione a ciascun sub-criterio, ad eccezione di A4, A5, A6, A7, A9, B1, C3, C4, C5, C6, C7, C8, D1, D3, D4, E1, E2, E3 ed E4 di cui alla su rappresentata griglia di valutazione, la Commissione di Valutazione terrà conto della relazione tra il giudizio qualitativo di valutazione e i coefficienti di seguito specificati che dovranno essere moltiplicati per il corrispondente punteggio massimo stabilito"
+      },
+      {
+        "riferimento": "Avviso 2026, art. 9, par. 9-10 — importi e percentuali",
+        "testo": "9.1. Categoria A: minimo 80.000 euro – massimo 320.000 euro 9.2. Categoria B: minimo 250.000 euro – massimo 450.000 euro 9.3. Categoria C: minimo 40.000 euro – massimo 120.000 euro 9.4. Categoria D: minimo 300.000 euro – massimo 500.000 euro 9.5. Categoria E: minimo 10.000 euro – massimo 40.000 euro […] 10.1. 35% dei costi ammissibili; 10.2. 40% dei costi ammissibili per le produzioni transfrontaliere […] 10.3. 60% dei costi ammissibili per le opere audiovisive difficili e/o le coproduzioni cui partecipano paesi dell’elenco del Comitato per l’assistenza allo sviluppo (DAC) dell’OCSE."
+      },
+      {
+        "riferimento": "FAQ al bando del 09/11/2026 — criterio C7",
+        "testo": "Come si ottiene il punteggio C7 (10 punti)? Il criterio C7 premia il progetto presentato con imprese di produzione, coproduzione o produzione esecutiva con sede legale in Puglia da almeno 24 mesi (art. 13). Conta la sede legale, non l’unità locale."
+      },
+      {
+        "riferimento": "Avviso 2026, art. 11, par. 7 — procedura",
+        "testo": "La selezione delle operazioni avverrà attraverso procedura “a graduatoria”, per cui si procederà ad istruire e finanziare le proposte progettuali procedendo con valutazione comparativa sulla base di criteri predeterminati."
+      },
+      {
+        "riferimento": "Determinazione Prot. N. 2482/26/U del 27/10/2026 — proroga",
+        "testo": "l’Avviso Apulia Film Fund 2026, pubblicato sul BURP del 03/09/2026, prevede che le candidature possano essere inviate entro e non oltre le ore 23:59 del 02/11/2026 […] di disporre una proroga dei termini di candidatura sino alle ore 23:59 del 12/11/2026"
+      },
+      {
+        "riferimento": "Avviso 2026 (file del 21/10/2026), art. 9, nota 10 — opere difficili",
+        "testo": "Si precisa che per opere difficili si intendono i cortometraggi, film opera prima e opera seconda di un regista, documentari o film low cost o altre opere difficili dal punto di vista commerciale, con riferimento a quanto disciplinato dal MiC e dettagliato nelle definizioni su riportate."
+      }
+    ],
+    "dubbi": [
+      "Tabella dei criteri, sezione C: nel PDF con protocollo del 21/10/2026 la colonna dei punteggi è sfalsata di una riga. L’attribuzione trascritta (C1 5|5, C2 5|3, C3 3|3, C4 3|–, C5 4|4, C6 –|5, C7 10|10, C8 3|3) è stata ricontrollata a vista dal revisore il 14/11/2026 sulle pagine 16-17 di entrambe le versioni: nel PDF del 31/08/2026 le righe sono allineate e i valori coincidono. Le due versioni hanno testo identico, salvo la nota 10 aggiunta il 21/10/2026.",
+      "C3, C4 e C5 (rapporti di spesa, giornate e lavoratori): l’Avviso dà solo il punteggio massimo e li esclude dalla scala dei giudizi, senza fasce né formula. I decimali dei punteggi reali 2024-2025 nel criterio C fanno pensare a un calcolo proporzionale (rapporto × punteggio massimo), ma non è scritto: nel JSON sono qualitativi con «calcolo» e una «metricaIndicativa».",
+      "C6 (solo animazione): tra 400.000,01 e 600.000,00 euro il bando dice «da 1 a 4 punti» senza regola di graduazione.",
+      "C7: trascritto come 10 punti oppure 0. L’Avviso scrive solo il punteggio massimo e non dice espressamente che non sia graduabile.",
+      "A4, A5, A6 e D1 («un punto per ogni lavoro precedente omogeneo alla categoria»): non è precisato come si contano i lavori quando la squadra ha più persone, né che cosa renda un lavoro «omogeneo».",
+      "Percentuale del contributo per le categorie C ed E indicata al 60% perché documentari e cortometraggi sono opere difficili per definizione (art. 1, def. 11.1 e 11.4, requisiti oggettivi; art. 9, par. 10.3); la nota 10 della versione dell’Avviso del 21/10/2026 lo conferma («per opere difficili si intendono i cortometraggi, film opera prima e opera seconda di un regista, documentari o film low cost…»). Resta una lettura del testo, non una riga della tabella degli importi; per A, B e D è indicato il 35% di base.",
+      "Soglia di costo delle opere difficili: l’Avviso (art. 1, def. 11.7) dice «inferiore a 2.500.000 euro» citando il D.M. 343/2017; le FAQ del 09/11/2026 dicono «inferiore a 3.500.000 €» citando il D.I. 225/2024. Discordanza da chiarire con l’ente.",
+      "Art. 7, par. 12: il testo parla di «periodo minimo di riprese in Puglia» non inferiore al 20% del bilancio totale di produzione; le FAQ lo leggono come soglia di spesa in Puglia (Allegato 1b almeno il 20% dell’Allegato 1c). Trascritta la lettura delle FAQ.",
+      "Commissione: l’Avviso dice «numero dispari di membri, per un massimo di 5, di cui almeno quattro esperti» più un dipendente della Fondazione; non dice se il punteggio è media, somma o consenso. Indicati 5 componenti.",
+      "Rendicontazione: l’Avviso (art. 7, par. 5) la chiede entro 60 giorni dalla conclusione del progetto; il format del Disciplinare (art. 13) sembra chiedere realizzazione e documentazione entro 12 mesi dalla concessione. Trascritta la regola dell’Avviso.",
+      "Stato: finestra chiusa il 12/11/2026 alle 23:59. Il BURP non è stato consultato direttamente: la data di pubblicazione (03/09/2026) viene dalla determinazione di proroga e dalla pagina dell’ente; il numero del BURP non è stato verificato.",
+      "Edizione 2027: nessun annuncio trovato; il periodo atteso è una stima sulla cadenza delle edizioni precedenti.",
+      "La dotazione di 5 milioni di euro non è ripartita per categoria: il campo «dotazione» delle categorie è vuoto.",
+      "Nella tabella il criterio delle premialità (E1-E4) non ha lettera e il titolo è troncato («politiche di environmental»). La nota 15 richiamata in C5 non compare nel testo estratto: usata la definizione delle note 14 e 17.",
+      "Categoria D: l’Avviso dice «durata complessiva minima di 24 minuti» per le opere seriali di animazione, la pagina web «durata minima di 24 minuti». L’art. 9, par. 10 rinvia all’«art. 8 par. 5» per le tipologie di costo, che sono all’art. 8, par. 4.",
+      "Non letti: Allegati 3, 4, 7 e 9, linee guida sull’anticipazione, Avviso 2020-2023 e testi degli altri fondi della Fondazione. Le statistiche sugli esiti 2024 e 2025 vengono da un’estrazione automatica del testo dei PDF.",
+      "A9: i 2 punti automatici sono scritti per i «progetti di cortometraggio» e sono applicati alle sole griglie della categoria E. L’Avviso non dice se valgano anche per un documentario breve della categoria C (che non ha durata minima se non destinato alla sala): nella griglia C A9 resta 2 oppure 0."
+    ]
+  },
+  "verifica": {
+    "esito": "confermata",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Nessun numero corretto: punteggi, massimi di sezione (45+5+33+10+7=100 per tutte e cinque le griglie), soglie (60 complessivi, 27 nel criterio A), importi minimi e massimi, percentuali, sopra la linea, coperture minime, dotazione, finestra e proroga coincidono con Avviso, determinazioni e FAQ salvati.",
+      "Dubbio sulla colonna sfalsata della sezione C chiuso: ricontrollato a vista sulle pagine 16-17 delle due versioni dell’Avviso.",
+      "Aggiunta la citazione della nota 10 (versione del 21/10/2026) che conferma il 60% per documentari e cortometraggi.",
+      "Aggiunto un dubbio sui 2 punti automatici di A9 per eventuali documentari brevi della categoria C."
+    ],
+    "dubbi": [
+      "C3, C4, C5 e C6 (fascia intermedia): l’Avviso dà solo il massimo, senza regola di conversione in punti.",
+      "C7 trascritto come 10 oppure 0; le FAQ legano il punteggio anche all’operare come produzione esecutiva secondo le definizioni dell’Avviso.",
+      "Soglia di costo delle opere difficili: 2.500.000 euro nell’Avviso, 3.500.000 euro nelle FAQ.",
+      "Nessun esito, rettifica o edizione 2027 trovati al 14/11/2026 (pagina ufficiale ricontrollata: stessi documenti)."
+    ]
+  }
+}

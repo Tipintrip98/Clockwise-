@@ -1,0 +1,1206 @@
+{
+  "id": "campania-piano-cinema-2026",
+  "fondoId": "campania",
+  "revisione": "2026-11-14",
+  "nome": "Campania — Piano Cinema 2026, Sezione 1.2 Produzione di opere audiovisive",
+  "nomeBreve": "Campania · Piano Cinema 2026",
+  "ente": "Regione Campania — Direzione Generale Politiche Culturali e Turismo · Fondazione Film Commission Regione Campania (soggetto attuatore, gestisce l’Avviso)",
+  "regione": "Campania",
+  "territorio": "Campania",
+  "gentilizio": "campani",
+  "fonte": "Avviso pubblico «Contributi a sostegno della produzione, la valorizzazione e la fruizione della cultura cinematografica e audiovisiva anno 2026» (Piano Cinema Campania 2026, L.R. 30/2016), BURC n. 38 del 20 luglio 2026 — Sezione 1 Opere audiovisive, artt. 1-7 e 17-25; Avviso di rettifica del Direttore della Fondazione del 3 novembre 2026 (art. 22 c. 1)",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Regione Campania, gestito dalla Film Commission Regione Campania, per film e serie di finzione, documentari e cortometraggi con riprese in Campania; possono chiederlo imprese di produzione (ATECO 59.11 o 59.12) con sede in uno Stato SEE. Una finestra l’anno sulla piattaforma pianocinemacampania.it: una Commissione di cinque membri assegna fino a 100 punti e l’importo del contributo dipende dal punteggio secondo una tabella per fasce. L’edizione 2026 si è chiusa il 30 settembre 2026 ed è in valutazione; la prossima non è ancora annunciata.",
+  "paginaUfficiale": "https://fcrc.it/category/bandi/piano_cinema/",
+  "fontiUrl": [
+    {
+      "titolo": "Avviso pubblico Piano Cinema Campania 2026 (BURC n. 38 del 20/07/2026)",
+      "url": "https://fcrc.it/wp-content/uploads/FCRC_PIANO_CINEMA_2026_AVVISI.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso di rettifica del 03/11/2026 (art. 22 c. 1, criterio 3.2 della griglia DOC e CORTO)",
+      "url": "https://fcrc.it/wp-content/uploads/Piano-Cinema-2026-AVVISO-DI-RETTIFICA-AVVISO-PUBBLICO_signed.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FAQ Piano Cinema 2026 aggiornate al 23/09/2026",
+      "url": "https://fcrc.it/wp-content/uploads/Piano-Cinema-2026-FAQ_09_23_26.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto Dirigenziale n. 569 del 13/10/2026 — nomina delle Commissioni di valutazione della Sezione 1 Opere audiovisive",
+      "url": "https://fcrc.it/wp-content/uploads/DD-569_del-13.10.2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina «Piano Cinema 2026» della Film Commission Regione Campania",
+      "url": "https://fcrc.it/piano-cinema-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Piattaforma Piano Cinema Campania (presentazione delle domande, modelli, FAQ)",
+      "url": "https://www.pianocinemacampania.it/",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Piano Cinema 2025 — Determina n. 7 del 20/10/2025, graduatorie di merito della Sezione 1 (BURC n. 75 del 20/10/2025)",
+      "url": "https://fcrc.it/wp-content/uploads/FFC_DET.7_GRAD._GRADUATORIE.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Piano Cinema 2024 — graduatorie della Sezione 1 Opere audiovisive (Determina n. 6 del 22/11/2024)",
+      "url": "https://fcrc.it/wp-content/uploads/Graduatorie-Sez.-1-2.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagine delle edizioni 2025, 2024 e 2023 (date di pubblicazione e scadenze)",
+      "url": "https://fcrc.it/piano-cinema-2025/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-07-20",
+      "scadenza": "2026-09-30",
+      "nota": "BURC n. 38 del 20/07/2026. Domande dalle ore 14:00 del 31/08/2026 alle ore 14:00 del 30/09/2026. Commissioni nominate con DD n. 569 del 13/10/2026; rettifica del 03/11/2026. Al 14/11/2026 le graduatorie non risultano pubblicate."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-04-07",
+      "scadenza": "2025-05-19",
+      "nota": "BURC n. 21 del 07/04/2025. Domande dalle ore 14:00 dell’08/04/2025 alle ore 14:00 del 19/05/2025. Graduatorie della Sezione 1: Determina n. 7 del 20/10/2025 (BURC n. 75 del 20/10/2025)."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-04-29",
+      "scadenza": "2024-06-06",
+      "nota": "BURC n. 34 del 29/04/2024. Domande dal 30/04/2024; scadenza del 30/05/2024 prorogata al 06/06/2024 ore 14:00 (Determina n. 1 del 28/05/2024). Graduatorie della Sezione 1: Determina n. 6 del 22/11/2024 (BURC n. 80 del 25/11/2024)."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": "2023-06-12",
+      "scadenza": "2023-07-13",
+      "nota": "BURC n. 44 del 12/06/2023. Domande dalle ore 14:00 del 13/06/2023 alle ore 14:00 del 13/07/2023."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-08-31",
+      "al": "2026-09-30",
+      "nota": "Art. 5 c. 1: dalle ore 14:00 del 31.08.2026 alle ore 14:00 del 30.09.2026, solo sulla piattaforma www.pianocinemacampania.it. Finestra chiusa."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "pubblicazione sul BURC tra aprile e luglio 2027; finestra di 30-40 giorni, aperta subito o dopo circa sei settimane",
+    "base": "Cadenza delle ultime quattro edizioni (pubblicazione sul BURC: 12/06/2023, 29/04/2024, 07/04/2025, 20/07/2026). Il Programma triennale 2026-2028 è stato approvato con DGRC n. 301 del 18/06/2026 e ogni anno serve un Piano operativo annuale della Giunta prima dell’Avviso. Al 14/11/2026 non risulta alcun annuncio per il 2027."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": 0,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Commissione unica per la Sezione 1.2 Produzione e la Sezione 1.3 Distribuzione: cinque membri, due dipendenti della Direzione Generale Politiche Culturali e Turismo della Regione Campania e tre esperti indicati dalla Fondazione Film Commission Regione Campania, nominati con Decreto Dirigenziale (per il 2026: DD n. 569 del 13/10/2026), più i supplenti (art. 6 c. 4). L’Avviso non indica una regola di calcolo (media, somma, consenso): la Commissione attribuisce a ciascun progetto un punteggio fino a 100 punti e il punteggio numerico esprime e sintetizza il giudizio tecnico (art. 22 c. 2). Le graduatorie 2025 riportano punteggi interi."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://www.pianocinemacampania.it",
+    "oggetto": "",
+    "regole": [
+      "Solo tramite l’applicazione web «Piano Cinema Campania» e con i modelli messi a disposizione sulla piattaforma; fanno fede ora e data di invio registrate nella ricevuta (art. 5 c. 1).",
+      "Domanda, modelli e dichiarazioni generate dal sistema firmati digitalmente dal legale rappresentante; i materiali artistici (soggetto, sceneggiatura, curricula, note) non richiedono firma digitale (art. 5 c. 3).",
+      "Piano dei costi, piano finanziario ed elenco del cast artistico e tecnico si compilano online tramite webform (art. 21 c. 1 lett. o, p, q).",
+      "Massimo due domande per soggetto, per progetti diversi, e una sola per categoria; nella Sezione 1.2 due domande solo in categorie diverse. Oltre il limite tutte le domande sono inammissibili (art. 5 c. 4, art. 21 c. 5).",
+      "Le domande ancora in stato di «bozza» alla scadenza non vengono prese in considerazione (art. 21 c. 4).",
+      "Materiali artistici in lingua italiana; per documenti in altra lingua la Fondazione può chiedere la traduzione (art. 21 c. 1 lett. g e c. 3).",
+      "Richieste di chiarimenti e assistenza: assistenza@pianocinemacampania.it."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "film",
+      "nome": "Categoria A) FILM — opera di finzione di durata superiore a 52’ (opera singola, film TV in due parti, opera seriale con parti fino a 30’)",
+      "griglia": "A",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 300000
+        },
+        "nota": "Percentuale sui costi ammissibili, non sul costo totale. L’importo dipende dal punteggio (art. 19 c. 3): € 100.000 a 60 punti, più € 3.000 a punto fino a 70; € 135.000 a 71, più € 5.000 a punto fino a 80; € 186.000 a 81 e € 246.000 a 91, più € 6.000 a punto. Mai oltre l’importo richiesto né il funding gap (art. 19 c. 4)."
+      },
+      "dotazione": {
+        "2026": 1600000
+      },
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura",
+      "soglieCombinate": [
+        {
+          "etichetta": "Criteri 1 + 2",
+          "minimo": 30,
+          "criteri": [],
+          "sezioni": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documentario",
+      "nome": "Categoria B) DOC — opera, anche seriale, a contenuto documentaristico di durata superiore a 50’",
+      "griglia": "BC",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 70,
+        "massimali": {
+          "2026": 90000
+        },
+        "nota": "Percentuale sui costi ammissibili, non sul costo totale. L’importo dipende dal punteggio (art. 19 c. 3): € 30.000 a 60 punti, più € 900 a punto fino a 70; € 40.500 a 71, più € 1.500 a punto fino a 80; € 55.800 a 81 e € 73.800 a 91, più € 1.800 a punto. Mai oltre l’importo richiesto né il funding gap (art. 19 c. 4)."
+      },
+      "dotazione": {
+        "2026": 550000
+      },
+      "durataMin": 50,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento",
+      "soglieCombinate": [
+        {
+          "etichetta": "Criteri 1 + 2",
+          "minimo": 40,
+          "criteri": [],
+          "sezioni": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cortometraggio",
+      "nome": "Categoria C) CORTO — opera di finzione di durata uguale o inferiore a 52’ (opera singola o seriale con parti fino a 15’)",
+      "griglia": "BC",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 70,
+        "massimali": {
+          "2026": 30000
+        },
+        "nota": "Percentuale sui costi ammissibili, non sul costo totale. L’importo dipende dal punteggio (art. 19 c. 3): € 10.000 a 60 punti, più € 300 a punto fino a 70; € 13.500 a 71, più € 500 a punto fino a 80; € 18.600 a 81 e € 24.600 a 91, più € 600 a punto. Mai oltre l’importo richiesto né il funding gap (art. 19 c. 4)."
+      },
+      "dotazione": {
+        "2026": 150000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura",
+      "soglieCombinate": [
+        {
+          "etichetta": "Criteri 1 + 2",
+          "minimo": 40,
+          "criteri": [],
+          "sezioni": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "griglie": {
+    "A": {
+      "id": "A",
+      "nome": "Criteri di valutazione — Categoria A) FILM (art. 22 c. 1)",
+      "sezioni": [
+        {
+          "id": "1",
+          "nome": "Qualità artistica e tecnica e del progetto",
+          "max": 43,
+          "obiettivo": "Qualità della storia e della scrittura, realizzabilità del progetto produttivo, copertura finanziaria e profilo dei produttori.",
+          "criteri": [
+            {
+              "id": "1.1",
+              "nome": "Storia, scrittura e profili di cast artistico e tecnico",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Interesse e originalità della storia; qualità della scrittura, sviluppo dei personaggi e dei dialoghi; tono, ritmo e coerenza con il genere; coerenza con il mercato di riferimento ed il target di pubblico, respiro internazionale; elementi di innovazione nel linguaggio e nelle tecniche di realizzazione. Profili ed esperienza del cast artistico e tecnico coinvolto, in relazione alla tipologia dell’opera.",
+              "principio": "Scala di punteggio: basso da 1 a 5 punti; medio da 6 a 11 punti; alto da 12 a 15 punti.",
+              "documenti": [
+                "sceneggiatura",
+                "cv_regista",
+                "cv_autori",
+                "cv_artistico",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "1.2",
+              "nome": "Completezza e realizzabilità del progetto produttivo",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Completezza e realizzabilità del progetto produttivo; coerenza delle componenti artistiche, tecniche, produttive e finanziarie con il progetto filmico; coerenza e sostenibilità del piano finanziario.",
+              "principio": "Scala di punteggio: basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "piano_lavorazione",
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "1.3",
+              "nome": "Copertura finanziaria confermata e documentata",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Copertura finanziaria confermata e documentata.",
+              "principio": "Art. 22 c. 3: il punteggio è assegnato sulla base della documentazione allegata alla domanda come attestazione della percentuale di copertura dichiarata (atti di concessione di contributi, contratti di coproduzione, prevendita diritti, accordi commerciali, di partenariato o sponsorizzazione, documentazione di costi già sostenuti, attestazioni bancarie anche relative a cessioni di crediti), con facoltà della Commissione di non tener conto di documentazione ritenuta insufficiente o inidonea. L’apporto diretto del richiedente va avvalorato da un’attestazione bancaria riferita al progetto (art. 21 c. 1 lett. l). Non è prevista una soglia minima di copertura per l’ammissibilità (FAQ). Il tax credit può essere considerato in presenza di documenti probanti, in relazione allo stadio di avanzamento dell’iter (FAQ). Regola di calcolo scritta nel bando: Copertura finanziaria documentata in percentuale del costo: alto (≥50%): da 6 a 8 punti; medio (da ≥30% a <50%): da 3 a 5 punti; basso (<30%): da 1 a 2 punti. Dentro la fascia la Commissione sceglie il punteggio.",
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie",
+                "coproduzione",
+                "distribuzione",
+                "finanziatori_esterni"
+              ]
+            },
+            {
+              "id": "1.4",
+              "nome": "Profilo ed esperienza del richiedente e dei coproduttori",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Profilo, esperienza del soggetto richiedente e di eventuali produttori associati / coproduttori. Qualora il soggetto richiedente e/o gli eventuali produttori associati / coproduttori siano già beneficiari di contributi alla produzione nelle precedenti edizioni del Piano Cinema della Regione Campania (L.R. 30/16), si terrà conto anche dello stadio di avanzamento nella realizzazione dei progetti finanziati.",
+              "principio": "Scala di punteggio: basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "nome": "Interesse regionale e sostenibilità ambientale",
+          "max": 12,
+          "obiettivo": "Valorizzazione dell’identità e del patrimonio della Campania; produzione ecosostenibile.",
+          "criteri": [
+            {
+              "id": "2.1",
+              "nome": "Valorizzazione dell’identità regionale e del patrimonio della Campania",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione dell’identità regionale con riferimento ai luoghi di realizzazione, a contenuti, tematiche, forme espressive e processi creativi e produttivi rilevanti per lo sviluppo culturale del territorio campano e per la crescita del suo capitale umano. Potenziale promozionale in favore del patrimonio storico, artistico, culturale e paesaggistico della Campania. Attenzione a tematiche ambientali e/o di rilevanza sociale.",
+              "principio": "Scala di punteggio: assente = 0; basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "2.2",
+              "nome": "Adesione a un protocollo di produzione ecosostenibile",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Adesione ad un protocollo riconosciuto per la produzione cinematografica e audiovisiva ecosostenibile (N.B. per il riconoscimento del punteggio è necessario compilare ed allegare la dichiarazione di impegno per l’ottenimento di una certificazione di sostenibilità ambientale con specifica indicazione del protocollo che si intende adottare).",
+              "principio": "Art. 22 c. 4: il punteggio è assegnato solo in presenza della dichiarazione di impegno ad ottenere una certificazione di sostenibilità ambientale sulla base di un protocollo riconosciuto da un ente pubblico nazionale competente in materia ambientale in uno Stato SEE, o da altri enti competenti ai sensi della normativa europea. In rendicontazione va consegnata copia della certificazione ottenuta (art. 23 c. 9 lett. d).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Dichiarazione di impegno alla certificazione ambientale allegata, con indicazione del protocollo"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Dichiarazione assente"
+                }
+              ],
+              "richiede": [
+                "green_film"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "nome": "Visibilità e qualità della diffusione dell’opera a livello nazionale e internazionale",
+          "max": 15,
+          "obiettivo": "Strategia e accordi di distribuzione; risultati di diffusione delle opere precedenti.",
+          "criteri": [
+            {
+              "id": "3.1",
+              "nome": "Strategia di diffusione e accordi di distribuzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Qualità ed efficacia potenziale della strategia di diffusione dell’opera a livello nazionale e internazionale. Presenza documentata di accordi di distribuzione, estensione e diversificazione dei canali di diffusione. Profilo ed esperienza del distributore.",
+              "principio": "Scala di punteggio: basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "3.2",
+              "nome": "Risultati di diffusione delle opere precedenti dei produttori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Risultati ottenuti nella diffusione in Italia e all’estero delle opere precedentemente prodotte dal soggetto richiedente e/o dagli eventuali coproduttori / produttori associati.",
+              "principio": "Scala di punteggio: basso da 1 a 2 punti; medio da 3 a 4 punti; alto 5 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "nome": "Impatto economico e occupazionale, ricadute del progetto sullo sviluppo e la crescita della filiera produttiva di settore in Campania",
+          "max": 27,
+          "obiettivo": "Spesa, giornate di lavorazione, imprese e professionisti in Campania.",
+          "criteri": [
+            {
+              "id": "4.1",
+              "nome": "Spesa, giornate di riprese e spesa per cast e troupe in Campania",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Volume complessivo della spesa sostenuta in territorio campano. Percentuale delle giornate di riprese / animazione realizzate in territorio campano sul totale. Percentuale della spesa sostenuta in territorio campano per i componenti del cast artistico e tecnico sul totale, con particolare riferimento ai costi “sotto la linea”.",
+              "principio": "Scala di punteggio: basso da 1 a 5 punti; medio da 6 a 11 punti; alto da 12 a 15 punti. Regola di calcolo scritta nel bando: L’Avviso non fissa soglie numeriche: la Commissione gradua il punteggio su volume della spesa in Campania, quota di giornate in Campania e quota di spesa per cast artistico e tecnico campano, con particolare riferimento ai costi «sotto la linea».",
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "4.2",
+              "nome": "Imprese con sede in Campania nell’assetto produttivo",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Coinvolgimento di imprese con sede in Campania nel ruolo di produttore unico, produttore associato o coproduttore.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. a): il coinvolgimento dell’impresa campana come produttore associato o coproduttore deve risultare dalle dichiarazioni rese nella domanda e dal contratto di produzione associata o coproduzione allegato. Il punteggio è assegnato automaticamente solo se il soggetto richiedente è un’impresa con sede legale oppure unità locale in Campania, operante con uno dei codici ATECO ammessi da almeno 12 mesi prima della pubblicazione dell’Avviso. Non spetta al richiedente campano che sia solo produttore esecutivo senza diritti sull’opera (FAQ). Le FAQ del 23/09/2026 precisano: sede legale in Campania oppure unità locale in Campania, comunque operante con codice ATECO 59.11 o 59.12; per l’unità locale l’attività deve risultare dalla documentazione e la data di apertura deve precedere di almeno 12 mesi la pubblicazione dell’Avviso sul BURC (20/07/2026). L’Avviso non dice espressamente se il punteggio spetti quando l’impresa campana è soltanto un coproduttore diverso dal richiedente: la lettera dell’art. 22 c. 5 lett. a) lo lega al richiedente.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Richiedente (produttore unico, produttore associato o coproduttore) con sede legale oppure unità locale in Campania, operante con un codice ATECO ammesso da almeno 12 mesi prima del 20/07/2026 (per le FAQ i 12 mesi riguardano l’apertura dell’unità locale)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente o non documentata"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "4.3",
+              "nome": "Regista residente in Campania",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista residente in Campania.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. b): serve il contratto di incarico o la lettera di impegno per la regia. Non contano registi/e di seconda unità, aiuto-registi/e, né persone prive di qualifiche o esperienza rilevanti per il ruolo. In caso di più registi con residenze diverse, i residenti in Campania devono essere almeno il 50%. Conta la residenza, non la nascita (FAQ). Se la stessa persona ricopre più ruoli, il punteggio è attribuito per uno solo (FAQ: al regista che è anche capo reparto spetta solo il punteggio del criterio 4.3).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista residente in Campania, con contratto di incarico o lettera di impegno allegati"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista non residente in Campania o requisito non documentato"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "4.4",
+              "nome": "Capi reparto e ruoli di responsabilità residenti in Campania",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Componenti effettivi della troupe coinvolti nei principali ruoli di responsabilità per la realizzazione dell’opera residenti in Campania.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. c): 1 punto per ciascun ruolo coperto da un/a professionista residente in Campania, solo se sono allegati contratti di incarico o lettere di impegno firmati dai professionisti, per prestazioni retribuite secondo il CCNL di settore, ed esclusivamente nei ruoli elencati dall’Avviso (campo «ruoliAmmessi»; l’organizzatore generale non è compreso, FAQ). Due o più residenti nello stesso ruolo contano una volta sola; la stessa persona in più ruoli dà punteggio per un solo ruolo. Conta la residenza, non la nascita (FAQ). Ruoli ammessi: Aiuto regista, Direttore di produzione, Location manager, Direttore della fotografia, Scenografo, Costumista, Fonico di presa diretta, Supervisore effetti speciali, Montatore, Sound designer / Sound mixer, Supervisore post-produzione, Supervisore effetti visivi VFX, Supervisore storyboard (animazione), Supervisore modelli, personaggi, props (animazione), Supervisore rigging (animazione), Supervisore animazione (2D / 3D / stop motion / tecniche miste), Supervisore colori e luci (animazione), Direttore tecnico FX - 3D e final compositing (animazione). Regola di calcolo scritta nel bando: 1 punto per ciascun ruolo fino al massimo di 5.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "5 o più ruoli di responsabilità (tra quelli elencati) coperti da residenti in Campania"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "4 ruoli di responsabilità coperti da residenti in Campania"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "3 ruoli di responsabilità coperti da residenti in Campania"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "2 ruoli di responsabilità coperti da residenti in Campania"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "1 ruolo di responsabilità coperto da un residente in Campania"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun ruolo documentato"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "nome": "Promozione della parità di genere e della creatività giovanile. Opere prime e seconde",
+          "max": 3,
+          "obiettivo": "Punteggi parziali non cumulabili: la sezione vale al massimo 3 punti.",
+          "criteri": [
+            {
+              "id": "5",
+              "nome": "Parità di genere, creatività giovanile, opere prime e seconde",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Punteggi parziali non cumulabili: 3 punti se ricorre almeno una delle condizioni dei criteri 5.1, 5.2 e 5.3.",
+              "principio": "Art. 22 c. 6: il punteggio è assegnato solo se il requisito è chiaramente riscontrabile nella domanda e nella documentazione allegata. Non contano registi/e di seconda unità, aiuto-registi/e, né persone prive di qualifiche o esperienza rilevanti per il ruolo. I punteggi parziali non sono cumulabili: la sezione vale al massimo 3 punti. Per l’opera prima o seconda (definizioni dell’art. 2 c. 1 lett. e) ed f) della L. 220/2016) serve la dichiarazione sottoscritta dal regista sul modello della piattaforma (art. 21 c. 1 lett. t); in caso di co-regia tutti i registi devono soddisfare il requisito. Condizioni: 5.1 Regista donna o presenza di almeno il 50% di donne nel ruolo di registe. 5.2 Regista di età inferiore ai 35 anni o presenza di almeno il 50% di persone di età inferiore ai 35 anni nel ruolo di registi/e. 5.3 Regista alla sua opera prima o seconda. In caso di co-regia, tutti i soggetti coinvolti devono soddisfare il requisito per il riconoscimento del punteggio.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Almeno una condizione soddisfatta: regista donna (o almeno 50% di registe), regista sotto i 35 anni (o almeno 50% dei registi), opera prima o seconda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna condizione soddisfatta o documentata"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "BC": {
+      "id": "BC",
+      "nome": "Criteri di valutazione — Categoria B) DOC e Categoria C) CORTO (art. 22 c. 1)",
+      "sezioni": [
+        {
+          "id": "1",
+          "nome": "Qualità artistica e tecnica del progetto",
+          "max": 47,
+          "obiettivo": "Qualità della storia e della scrittura, realizzabilità del progetto produttivo, copertura finanziaria e profilo dei produttori.",
+          "criteri": [
+            {
+              "id": "1.1",
+              "nome": "Storia, scrittura e profili di cast artistico e tecnico",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Interesse e originalità della storia; qualità della scrittura, sviluppo dei personaggi e dei dialoghi; tono, ritmo e coerenza con il genere; coerenza con il mercato di riferimento ed il target di pubblico, respiro internazionale; elementi di innovazione nel linguaggio e nelle tecniche di realizzazione. Profili ed esperienza del cast artistico e tecnico coinvolto, in relazione alla tipologia dell’opera.",
+              "principio": "Scala di punteggio: basso da 1 a 6 punti; medio da 7 a 14 punti; alto da 15 a 20 punti.",
+              "documenti": [
+                "sceneggiatura",
+                "cv_regista",
+                "cv_autori",
+                "cv_artistico",
+                "cv_tecnico"
+              ]
+            },
+            {
+              "id": "1.2",
+              "nome": "Completezza e realizzabilità del progetto produttivo",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Completezza e realizzabilità del progetto produttivo; coerenza delle componenti artistiche, tecniche, produttive e finanziarie con il progetto filmico. Coerenza e sostenibilità del piano finanziario.",
+              "principio": "Scala di punteggio: basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "piano_lavorazione",
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "1.3",
+              "nome": "Copertura finanziaria confermata e documentata",
+              "max": 7,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Copertura finanziaria confermata e documentata.",
+              "principio": "Art. 22 c. 3: il punteggio è assegnato sulla base della documentazione allegata alla domanda come attestazione della percentuale di copertura dichiarata (atti di concessione di contributi, contratti di coproduzione, prevendita diritti, accordi commerciali, di partenariato o sponsorizzazione, documentazione di costi già sostenuti, attestazioni bancarie anche relative a cessioni di crediti), con facoltà della Commissione di non tener conto di documentazione ritenuta insufficiente o inidonea. L’apporto diretto del richiedente va avvalorato da un’attestazione bancaria riferita al progetto (art. 21 c. 1 lett. l). Non è prevista una soglia minima di copertura per l’ammissibilità (FAQ). Il tax credit può essere considerato in presenza di documenti probanti, in relazione allo stadio di avanzamento dell’iter (FAQ). Regola di calcolo scritta nel bando: Copertura finanziaria documentata in percentuale del costo: alto (≥40%): da 6 a 7 punti; medio (da ≥20% a <40%): da 3 a 5 punti; basso (<20%): da 1 a 2 punti. Dentro la fascia la Commissione sceglie il punteggio.",
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie",
+                "coproduzione",
+                "distribuzione",
+                "finanziatori_esterni"
+              ]
+            },
+            {
+              "id": "1.4",
+              "nome": "Profilo ed esperienza del richiedente e dei coproduttori",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Profilo, esperienza del soggetto richiedente e di eventuali coproduttori / produttori associati. Qualora il soggetto richiedente e/o gli eventuali coproduttori / produttori associati siano già beneficiari di contributi alla produzione nelle precedenti edizioni del Piano Cinema della Regione Campania (L.R. 30/16), si terrà conto anche dello stadio di avanzamento nella realizzazione dei progetti finanziati.",
+              "principio": "Scala di punteggio: basso da 1 a 3 punti; medio da 4 a 7 punti; alto da 8 a 10 punti.",
+              "documenti": [
+                "cv_societa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "nome": "Interesse regionale",
+          "max": 15,
+          "obiettivo": "Valorizzazione dell’identità e del patrimonio della Campania.",
+          "criteri": [
+            {
+              "id": "2.1",
+              "nome": "Valorizzazione dell’identità regionale e del patrimonio della Campania",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione dell’identità regionale con riferimento ai luoghi di realizzazione, a contenuti, tematiche, forme espressive e processi creativi e produttivi rilevanti per lo sviluppo culturale del territorio campano e per la crescita del suo capitale umano. Potenziale promozionale in favore patrimonio storico, artistico, culturale e paesaggistico della Campania. Attenzione a tematiche ambientali e/o di rilevanza sociale.",
+              "principio": "Scala di punteggio: basso da 1 a 5 punti; medio da 6 a 11 punti; alto da 12 a 15 punti.",
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "nome": "Visibilità e qualità della diffusione dell’opera a livello nazionale e internazionale",
+          "max": 10,
+          "obiettivo": "Strategia e accordi di distribuzione; risultati di diffusione delle opere precedenti.",
+          "criteri": [
+            {
+              "id": "3.1",
+              "nome": "Strategia di diffusione e accordi di distribuzione",
+              "max": 7,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Qualità ed efficacia della strategia di diffusione dell’opera a livello nazionale e internazionale. Presenza documentata di accordi di distribuzione, estensione e diversificazione dei canali di distribuzione (theatrical, TV generalista, Pay TV, home video, web e altre piattaforme nazionali e internazionali). Profilo ed esperienza del distributore.",
+              "principio": "Scala di punteggio: basso da 1 a 2 punti; medio da 3 a 5 punti; alto da 6 a 7 punti.",
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "3.2",
+              "nome": "Risultati di diffusione delle opere precedenti dei produttori",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Risultati ottenuti nella diffusione in Italia e all’estero delle opere precedentemente prodotte dal soggetto richiedente e/o dagli eventuali coproduttori / produttori associati.",
+              "principio": "Scala di punteggio: da 1 a 3 punti (così rettificata con l’Avviso di rettifica del 3 novembre 2026; il testo pubblicato sul BURC riportava per errore materiale «1 punto per ciascun ruolo fino al massimo di 3 punti»).",
+              "documenti": [
+                "cv_societa"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "nome": "Impatto economico e occupazionale, ricadute del progetto sullo sviluppo e la crescita della filiera produttiva di settore in Campania",
+          "max": 25,
+          "obiettivo": "Spesa, giornate di lavorazione, imprese e professionisti in Campania.",
+          "criteri": [
+            {
+              "id": "4.1",
+              "nome": "Spesa, giornate di lavorazione e spesa per cast e troupe in Campania",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Volume complessivo della spesa sostenuta in territorio campano. Percentuale delle giornate di lavorazione realizzate in territorio campano sul totale. Percentuale della spesa sostenuta in territorio campano per i componenti del cast artistico e tecnico sul totale, con particolare riferimento ai costi “sotto la linea”.",
+              "principio": "Scala di punteggio: basso da 1 a 5 punti; medio da 6 a 11 punti; alto da 12 a 15 punti. Regola di calcolo scritta nel bando: L’Avviso non fissa soglie numeriche: la Commissione gradua il punteggio su volume della spesa in Campania, quota di giornate in Campania e quota di spesa per cast artistico e tecnico campano, con particolare riferimento ai costi «sotto la linea».",
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "4.2",
+              "nome": "Imprese con sede in Campania nell’assetto produttivo",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Coinvolgimento di imprese con sede in Campania nel ruolo di produttore unico, produttore associato o coproduttore.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. a): il coinvolgimento dell’impresa campana come produttore associato o coproduttore deve risultare dalle dichiarazioni rese nella domanda e dal contratto di produzione associata o coproduzione allegato. Il punteggio è assegnato automaticamente solo se il soggetto richiedente è un’impresa con sede legale oppure unità locale in Campania, operante con uno dei codici ATECO ammessi da almeno 12 mesi prima della pubblicazione dell’Avviso. Non spetta al richiedente campano che sia solo produttore esecutivo senza diritti sull’opera (FAQ). Le FAQ del 23/09/2026 precisano: sede legale in Campania oppure unità locale in Campania, comunque operante con codice ATECO 59.11 o 59.12; per l’unità locale l’attività deve risultare dalla documentazione e la data di apertura deve precedere di almeno 12 mesi la pubblicazione dell’Avviso sul BURC (20/07/2026). L’Avviso non dice espressamente se il punteggio spetti quando l’impresa campana è soltanto un coproduttore diverso dal richiedente: la lettera dell’art. 22 c. 5 lett. a) lo lega al richiedente.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Richiedente (produttore unico, produttore associato o coproduttore) con sede legale oppure unità locale in Campania, operante con un codice ATECO ammesso da almeno 12 mesi prima del 20/07/2026 (per le FAQ i 12 mesi riguardano l’apertura dell’unità locale)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Condizione assente o non documentata"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "4.3",
+              "nome": "Regista residente in Campania",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Regista residente in Campania.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. b): serve il contratto di incarico o la lettera di impegno per la regia. Non contano registi/e di seconda unità, aiuto-registi/e, né persone prive di qualifiche o esperienza rilevanti per il ruolo. In caso di più registi con residenze diverse, i residenti in Campania devono essere almeno il 50%. Conta la residenza, non la nascita (FAQ). Se la stessa persona ricopre più ruoli, il punteggio è attribuito per uno solo (FAQ: al regista che è anche capo reparto spetta solo il punteggio del criterio 4.3).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista residente in Campania, con contratto di incarico o lettera di impegno allegati"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista non residente in Campania o requisito non documentato"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "4.4",
+              "nome": "Capi reparto e ruoli di responsabilità residenti in Campania",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Componenti effettivi della troupe coinvolti nei principali ruoli di responsabilità per la realizzazione dell’opera residenti in Campania.",
+              "principio": "Punteggio automatico (art. 22 c. 5 lett. c): 1 punto per ciascun ruolo coperto da un/a professionista residente in Campania, solo se sono allegati contratti di incarico o lettere di impegno firmati dai professionisti, per prestazioni retribuite secondo il CCNL di settore, ed esclusivamente nei ruoli elencati dall’Avviso (campo «ruoliAmmessi»; l’organizzatore generale non è compreso, FAQ). Due o più residenti nello stesso ruolo contano una volta sola; la stessa persona in più ruoli dà punteggio per un solo ruolo. Conta la residenza, non la nascita (FAQ). Ruoli ammessi: Aiuto regista, Direttore di produzione, Location manager, Direttore della fotografia, Scenografo, Costumista, Fonico di presa diretta, Supervisore effetti speciali, Montatore, Sound designer / Sound mixer, Supervisore post-produzione, Supervisore effetti visivi VFX, Supervisore storyboard (animazione), Supervisore modelli, personaggi, props (animazione), Supervisore rigging (animazione), Supervisore animazione (2D / 3D / stop motion / tecniche miste), Supervisore colori e luci (animazione), Direttore tecnico FX - 3D e final compositing (animazione). Regola di calcolo scritta nel bando: 1 punto per ciascun ruolo fino al massimo di 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "3 o più ruoli di responsabilità (tra quelli elencati) coperti da residenti in Campania"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "2 ruoli di responsabilità coperti da residenti in Campania"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "1 ruolo di responsabilità coperto da un residente in Campania"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun ruolo documentato"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "nome": "Promozione della parità di genere e della creatività giovanile",
+          "max": 3,
+          "obiettivo": "Punteggi parziali non cumulabili: la sezione vale al massimo 3 punti.",
+          "criteri": [
+            {
+              "id": "5",
+              "nome": "Parità di genere, creatività giovanile",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Punteggi parziali non cumulabili: 3 punti se ricorre almeno una delle condizioni dei criteri 5.1 e 5.2.",
+              "principio": "Art. 22 c. 6: il punteggio è assegnato solo se il requisito è chiaramente riscontrabile nella domanda e nella documentazione allegata. Non contano registi/e di seconda unità, aiuto-registi/e, né persone prive di qualifiche o esperienza rilevanti per il ruolo. I punteggi parziali non sono cumulabili: la sezione vale al massimo 3 punti. Condizioni: 5.1 Regista donna o presenza di almeno il 50% di donne nel ruolo di registe. 5.2 Regista di età inferiore ai 35 anni o presenza di almeno il 50% di persone di età inferiore ai 35 anni nel ruolo di registi/e.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Almeno una condizione soddisfatta: regista donna (o almeno 50% di registe), regista sotto i 35 anni (o almeno 50% dei registi)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna condizione soddisfatta o documentata"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda di contributo e dichiarazioni generate dalla piattaforma, firmate digitalmente dal legale rappresentante (art. 5 c. 3)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Copia del documento di identità del legale rappresentante (art. 21 c. 1 lett. a)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Visura camerale ordinaria, completa e aggiornata (lett. b)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Polizza assicurativa contro i rischi catastrofali in corso di validità, oppure dichiarazione sostitutiva di esonero con documentazione probatoria (lett. c)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratti attestanti la titolarità dei diritti di elaborazione creativa e utilizzazione economica dell’opera (anche opzione), datati e firmati; per gli adattamenti, anche i diritti sull’opera originale (lett. d.i)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratto di incarico o lettera di impegno per la regia, datato e firmato (lett. d.i)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratto di produzione associata o coproduzione, datato e firmato: obbligatorio se il richiedente è produttore associato o coproduttore (lett. d.ii)",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "4.2"
+      ]
+    },
+    {
+      "tipo": "produttore_esecutivo",
+      "nome": "Contratto di appalto per l’affidamento dei servizi al produttore esecutivo: obbligatorio se il richiedente è produttore esecutivo o se ne è coinvolto uno diverso dal richiedente (lett. d.iii ed e)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Accordi di distribuzione con società italiane e/o internazionali (theatrical, broadcast, home video, SVOD/VOD): contratti, deal memo o lettere di impegno (lett. f)",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "3.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Scheda sintetica dell’opera in un unico file: log-line (max 300 caratteri) e sinossi (max 3.000 caratteri), in italiano (lett. g.i)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Soggetto, in italiano (lunghezza raccomandata max 10 cartelle) (lett. g.ii)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Sceneggiatura per le Categorie A) e C); trattamento / scaletta per la Categoria B) (raccomandate max 25 cartelle). Opere seriali: almeno due soggetti di puntata e, per la finzione, la sceneggiatura di una puntata. Animazione: anche storyboard e bozzetti dei personaggi principali (lett. g.iii-iv)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Note del regista, max 2 cartelle (lett. h)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Bio-filmografie degli autori del soggetto / trattamento e della sceneggiatura, max 2 cartelle ciascuna (lett. i)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Bio-filmografia del regista, max 2 cartelle (lett. i)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Bio-filmografie dei principali componenti del cast artistico già confermati, max 2 cartelle ciascuna (lett. i)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Bio-filmografie dei principali componenti del cast tecnico già confermati, max 2 cartelle ciascuna (lett. i)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Profilo del soggetto richiedente e di eventuali produttori associati o coproduttori già coinvolti, max 2 cartelle ciascuno (lett. j)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Note del/dei produttore/i su realizzabilità, coerenza con assetto artistico, budget, coperture attese e impatto economico e occupazionale in Campania, max 2 cartelle (lett. k)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione attestante la copertura finanziaria dichiarata: delibere, atti di concessione di contributi, contratti di coproduzione, prevendite, accordi commerciali, sponsorizzazioni, costi già sostenuti (lett. l)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1.3"
+      ]
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "Attestazione bancaria dell’effettiva disponibilità dell’apporto diretto del richiedente, riferita al progetto (lett. l)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1.3"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Nota sulla strategia di diffusione e presentazione al pubblico, con profilo dell’eventuale distributore e/o sales agent (lett. m)",
+      "obbligo": "sempre",
+      "criteri": [
+        "3.1"
+      ]
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con relazione su luoghi, ambientazioni e giornate complessive di lavorazione in Campania, post-produzione compresa (lett. n)",
+      "obbligo": "sempre",
+      "criteri": [
+        "4.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Piano dei costi di produzione, compilato online tramite webform (lett. o)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Piano finanziario, compilato online tramite webform (lett. p)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Elenco del cast artistico e tecnico, compilato online tramite webform (lett. q)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Solo Categoria A): dichiarazione di impegno all’ottenimento di una certificazione ambientale dell’opera, su modello della piattaforma, firmata digitalmente (lett. r)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "2.2"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Contratti di incarico o lettere di impegno dei professionisti residenti in Campania (lett. s)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "4.3",
+        "4.4"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Solo Categoria A): dichiarazione del regista (di tutti i registi in caso di co-regia) che il progetto è opera prima o seconda, su modello della piattaforma (lett. t)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "5"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione sullo stato di avanzamento dei progetti eventualmente già finanziati nella Sezione Produzione del Piano Cinema in annualità precedenti, firmata digitalmente (lett. u)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione di assenza di patti collaterali, firmata digitalmente (lett. v)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione sostitutiva sul cumulo di aiuti ai sensi del Reg. UE n. 651/2014, firmata digitalmente (lett. w)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione sostitutiva sul possesso dei requisiti di ammissibilità, su modello precompilato dalla piattaforma, firmata digitalmente (lett. x)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Altri materiali utili alla valutazione: dossier, moodboard, lettere di intenti (art. 21 c. 2, facoltativi; non danno automaticamente più punti, FAQ)",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "registro",
+      "testo": "Impresa iscritta nella sezione ordinaria del Registro delle imprese (o registro equivalente), con sede in uno Stato dello Spazio Economico Europeo (art. 2 c. 1 e art. 17 c. 1)"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO 59.11 o 59.12, primario o secondario (art. 17 c. 1 e FAQ)"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Richiedente produttore unico, produttore associato o coproduttore, oppure produttore esecutivo con contratto di appalto; per le opere con più produttori presenta domanda uno solo (art. 17 c. 2 e 4)"
+    },
+    {
+      "id": "diritti",
+      "testo": "Contratti di acquisizione dei diritti dagli autori (anche in opzione), validi fino alla consegna della copia campione, e contratto o lettera di impegno per la regia (art. 17 c. 3 e art. 21 c. 1 lett. d)"
+    },
+    {
+      "id": "patti",
+      "testo": "Nessun patto collaterale che modifichi l’assetto produttivo, economico o finanziario del progetto (art. 17 c. 5)"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Regolarità fiscale e contributiva (INPS, INAIL) e rispetto delle norme su salute e sicurezza sul lavoro (art. 2 c. 2 lett. a)"
+    },
+    {
+      "id": "catastrofali",
+      "testo": "Polizza contro i rischi catastrofali in corso di validità, oppure presupposti di esonero comprovati (art. 2 c. 2 lett. b)"
+    },
+    {
+      "id": "contratti-lavoro",
+      "testo": "Applicazione dei contratti nazionali di categoria e dell’Accordo ANICA del 31.07.2018 sul lavoro nel cinema e audiovisivo (art. 2 c. 2 lett. c)"
+    },
+    {
+      "id": "condanne",
+      "testo": "Nessuna condanna definitiva per i reati dell’art. 94 c. 1 D.Lgs. 36/2023, nessuna causa di divieto antimafia (D.Lgs. 159/2011), nessuna sanzione interdittiva (art. 2 c. 2 lett. d, e, f)"
+    },
+    {
+      "id": "contenziosi",
+      "testo": "Nessun contenzioso per indebita percezione di risorse pubbliche; ottemperati i provvedimenti di restituzione di contributi degli ultimi 5 anni (art. 2 c. 2 lett. g, h)"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà (Reg. UE 651/2014) e non ricorrono le esclusioni degli artt. 94 e 95 D.Lgs. 36/2023 (art. 2 c. 3)"
+    },
+    {
+      "id": "riprese",
+      "testo": "Riprese (o animazione) non ancora iniziate alla data di presentazione della domanda; per i soli documentari sono ammesse riprese precedenti giustificate da accadimenti non ripetibili (art. 18 c. 2 e 3)"
+    },
+    {
+      "id": "giornate",
+      "testo": "Giornate minime di riprese con troupe completa in Campania: 6 per FILM, 4 per DOC, 3 per CORTO; per l’animazione almeno il 15% delle giornate (art. 18 c. 1)"
+    },
+    {
+      "id": "domande",
+      "testo": "Non più di due domande per soggetto, per progetti diversi, e una sola per categoria, contando anche le imprese collegate e i progetti di cui si detiene la maggioranza dei diritti (art. 5 c. 4)"
+    },
+    {
+      "id": "ripresentazione",
+      "testo": "Il progetto non ha già mancato per due volte il punteggio minimo di ammissibilità in precedenti edizioni del Piano Cinema (art. 3 c. 4)"
+    },
+    {
+      "id": "sviluppo",
+      "testo": "Se il progetto ha avuto un contributo allo sviluppo del Piano Cinema, la rendicontazione definitiva è già agli atti (art. 18 c. 4)"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera è destinata al pubblico e non rientra tra le tipologie escluse: pubblicità, opere promozionali, istituzionali o didattiche, backstage, informazione e attualità, videoclip, giochi, varietà, talk show, reality, riprese di eventi (art. 3 c. 2 e 3)"
+    },
+    {
+      "id": "firma",
+      "testo": "Domanda, modelli e dichiarazioni firmati digitalmente dal legale rappresentante; invio completato in piattaforma entro le ore 14:00 della scadenza, non in stato di bozza (art. 5 c. 3 e art. 21 c. 4)"
+    },
+    {
+      "id": "spesa-campania-categoria",
+      "testo": "Spesa in Campania almeno pari al 160% del contributo per i FILM, al 150% per i documentari e al 120% per i cortometraggi (obbligo diverso per categoria: il controllo automatico è disattivato, va verificato a mano)."
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "completamento",
+      "etichetta": "Completamento del progetto: copia campione pronta per la distribuzione, diffusione o messa in onda",
+      "mesi": 36,
+      "nota": "Art. 23 c. 5: entro 36 mesi dalla data di pubblicazione della determina di concessione con i codici identificativi dei contributi (DM 115/2017). Proroga una sola volta, fino a un massimo di 6 mesi, da chiedere prima della scadenza. Il completamento va comunicato via PEC alla Fondazione. Coincide con il termine del periodo di ammissibilità delle spese (art. 20 c. 1)."
+    }
+  ],
+  "scadenzeNote": [
+    "Rendicontazione definitiva completa: entro 120 giorni dalla comunicazione di completamento del progetto, salvo proroghe (art. 23 c. 6); per i progetti già completati alla data della determina di concessione, entro 120 giorni dalla sottoscrizione dell’atto unilaterale d’obbligo (art. 23 c. 7).",
+    "Atto unilaterale d’obbligo: da restituire firmato digitalmente entro il termine indicato nella lettera di invito, altrimenti il beneficiario è considerato rinunciatario (art. 23 c. 1 e 2).",
+    "Per contributi superiori a € 150.000,00 va trasmessa con l’atto d’obbligo la documentazione antimafia (art. 23 c. 3).",
+    "Entro 2 mesi dall’uscita in sala, dalla messa in onda o dall’immissione nel mercato editoriale: almeno 10 foto di scena o di backstage e 2 clip alla Fondazione (art. 25 lett. f).",
+    "Deposito di tre copie digitali dell’opera in alta definizione con loghi e dicitura «con il contributo ex L.R. 30/2016 della Regione Campania» (art. 25 lett. c e g).",
+    "Rimodulazioni del preventivo o tra macro-voci di costo oltre il 20% di scostamento vanno comunicate prima e autorizzate dalla Fondazione (art. 23 c. 8)."
+  ],
+  "erogazione": [
+    {
+      "quota": "acconto",
+      "percentuale": 50,
+      "condizione": "Facoltativo (art. 23 c. 5 lett. a): dietro polizza fideiussoria di pari importo, valida almeno 12 mesi e rinnovabile fino alla verifica della rendicontazione definitiva."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 50,
+      "condizione": "Previo completamento e verifica della rendicontazione definitiva. In alternativa all’acconto, l’intero importo (100%) è erogato a saldo (art. 23 c. 5 lett. b)."
+    }
+  ],
+  "note": [
+    "Finanziabili, in ordine di punteggio decrescente fino a esaurimento delle risorse, i progetti con almeno 60/100, di cui almeno 30 punti (Categoria A) o 40 punti (Categorie B e C) dalla somma delle sezioni 1 e 2 (art. 22 c. 8 e 9).",
+    "L’importo del contributo dipende dal punteggio (art. 19 c. 3): FILM da € 100.000 (60 punti) a € 300.000 (100 punti); DOC da € 30.000 a € 90.000; CORTO da € 10.000 a € 30.000. Non può superare l’importo richiesto, il funding gap, né il 50% (FILM) o il 70% (DOC e CORTO) dei costi ammissibili (art. 19 c. 4).",
+    "Obbligo di spesa in Campania, rendicontata con giustificativi quietanzati: almeno il 160% del contributo per FILM, il 150% per DOC, il 120% per CORTO (art. 20 c. 2). Se a consuntivo la spesa è inferiore, il contributo è rideterminato in proporzione (art. 24 c. 3).",
+    "Composizione della spesa in Campania che vale per l’obbligo: personale e prestazioni «sotto la linea» almeno il 40%; costi «sopra la linea» al massimo il 30%; viaggi, hotel, vitto e diarie al massimo il 30%; non contano i compensi di «giornalieri» e «generici» (art. 20 c. 4-7).",
+    "Costi ammissibili: spese generali fino al 5% del totale; oneri assicurativi, finanziari, di garanzia e spese legali fino al 7,5% complessivo; producer’s fee, apporti in natura, spese in contanti e spese verso imprese collegate non ammissibili (art. 20 c. 9-14).",
+    "Le spese sono ammissibili dal giorno successivo alla presentazione della domanda; soggetto, sceneggiatura e sviluppo dal 1° gennaio 2026 (art. 20 c. 1).",
+    "Cumulo con altri aiuti, tax credit compreso, entro il 50% dei costi ammissibili; 60% per le produzioni transfrontaliere; 100% per le opere difficili e le coproduzioni con Paesi DAC (art. 19 c. 2).",
+    "Se a consuntivo le giornate di riprese in Campania scendono sotto il minimo di categoria il contributo è revocato (art. 24 c. 4).",
+    "Se vengono meno le condizioni di un punteggio, entro i limiti del punteggio minimo, il contributo erogabile è ridotto del 10% per una diminuzione fino a 3 punti e del 20% oltre i 3 punti, oltre all’eventuale rideterminazione; sotto il punteggio minimo è revocato (art. 7 c. 1, art. 22 c. 7, art. 24 c. 5).",
+    "Soccorso istruttorio: 5 giorni lavorativi dalla notifica via PEC per integrare le carenze formali; non vengono chieste integrazioni sui documenti che servono ai punteggi (art. 6 c. 3).",
+    "Dichiarazioni mendaci: revoca, restituzione ed esclusione per cinque anni dai contributi della L.R. 30/2016 (art. 7 c. 3).",
+    "Le risorse non utilizzate in una categoria possono passare alle altre categorie della stessa sotto-sezione e poi alle altre sotto-sezioni (art. 1 c. 3)."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Piano Cinema 2026 — Sezione 1.1 Sviluppo / pre-produzione di opere audiovisive (stesso Avviso, artt. 8-16)",
+      "url": "https://fcrc.it/wp-content/uploads/FCRC_PIANO_CINEMA_2026_AVVISI.pdf",
+      "descrizione": "Dotazione € 400.000,00, regime «de minimis», riservata a imprese con sede legale o unità locale in Campania (ATECO 59.11 o 59.12) che detengono almeno il 50% dei diritti. Contributo fino al 70% dei costi ammissibili, stabilito dal punteggio: da € 15.000 a € 65.000 secondo la tipologia. Commissione di tre membri; finanziabili i progetti con almeno 70/100, di cui almeno 20 punti al criterio 1 e 50 dalla somma dei criteri 1 e 2."
+    },
+    {
+      "nome": "Piano Cinema 2026 — Sezione 1.3 Distribuzione di opere audiovisive (stesso Avviso, artt. 26-34)",
+      "url": "https://fcrc.it/wp-content/uploads/FCRC_PIANO_CINEMA_2026_AVVISI.pdf",
+      "descrizione": "Dotazione € 400.000,00 (FILM € 300.000,00; DOC € 100.000,00) per la distribuzione in sala di opere non seriali prodotte per almeno il 50% da imprese campane. Contributo massimo € 45.000 o € 50.000 per i FILM e € 17.500 o € 21.000 per i DOC secondo l’investimento in P&A, entro il 50% (FILM) o il 70% (DOC) dei costi ammissibili. Stessa Commissione della Sezione 1.2."
+    },
+    {
+      "nome": "Piano Cinema 2026 — Sezione 2 Promozione e diffusione della cultura cinematografica e audiovisiva; Sezione 3 Sostegno all’esercizio cinematografico (stesso Avviso)",
+      "url": "https://fcrc.it/piano-cinema-2026/",
+      "descrizione": "Non riguardano la produzione di opere: € 1.520.000,00 per festival, rassegne e iniziative di promozione; € 780.000,00 per le sale cinematografiche."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2025,
+      "titolo": "Piano Cinema 2025 — Determina n. 7 del 20/10/2025, graduatorie di merito Sezione 1 Opere audiovisive (BURC n. 75 del 20/10/2025)",
+      "url": "https://fcrc.it/wp-content/uploads/FFC_DET.7_GRAD._GRADUATORIE.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "Piano Cinema 2024 — graduatorie Sezione 1 Opere audiovisive (Determina n. 6 del 22/11/2024, BURC n. 80 del 25/11/2024)",
+      "url": "https://fcrc.it/wp-content/uploads/Graduatorie-Sez.-1-2.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Art. 22 c. 1, tabella «Criteri di valutazione - Categoria A) FILM» (pagg. 34-35 del BURC n. 38/2026)",
+        "testo": "1 Qualità artistica e tecnica e del progetto 43 […] Interesse regionale e sostenibilità ambientale 12 […] 3 Visibilità e qualità della diffusione dell’opera a livello nazionale e internazionale 15 […] 4 Impatto economico e occupazionale, ricadute del progetto sullo sviluppo e la crescita della filiera produttiva di settore in Campania 27 […] 5 Promozione della parità di genere e della creatività giovanile. Opere prime e seconde punteggi parziali non cumulabili 3 punti […] Punteggio Totale 100"
+      },
+      {
+        "riferimento": "Art. 22 c. 1, tabella «Criteri di valutazione Categoria B) DOC – Categoria C) CORTO» (pagg. 36-37)",
+        "testo": "1 Qualità artistica e tecnica del progetto 47 […] 1.3 Copertura finanziaria confermata e documentata. basso (<20%): da 1 a 2 pt. medio (da ≥ 20% a < 40%): da 3 a 5 pt. alto (≥ 40%): da 6 a 7 pt. 7 […] 2 Interesse regionale 15 […] Visibilità e qualità della diffusione dell’opera a livello nazionale e internazionale 10 […] 4 Impatto economico e occupazionale, ricadute del progetto sullo sviluppo e la crescita della filiera produttiva di settore in Campania 25 […] 5 Promozione della parità di genere e della creatività giovanile punteggi parziali non cumulabili 3 punti […] Punteggio Totale 100"
+      },
+      {
+        "riferimento": "Art. 22 c. 1, criterio 1.3 della griglia Categoria A) FILM (pag. 34)",
+        "testo": "1.3 Copertura finanziaria confermata e documentata. basso: (<30%): da 1 a 2 pt. medio: (da ≥30% a < 50%): da 3 a 5 pt. alto: (≥50%): da 6 a 8 pt. 8"
+      },
+      {
+        "riferimento": "Art. 22 c. 8 (soglie minime, Categoria A)",
+        "testo": "8. Per la Categoria A) sono finanziabili, in ordine di punteggio decrescente fino ad esaurimento delle risorse disponibili, i progetti che abbiano raggiunto un punteggio minimo complessivo pari a 60/100, di cui almeno 30 punti dati dalla somma dei punteggi ottenuti ai Criteri nr. 1 e nr. 2."
+      },
+      {
+        "riferimento": "Art. 22 c. 9 (soglie minime, Categorie B e C)",
+        "testo": "9. Per la Categoria B) e la Categoria C) sono finanziabili, in ordine di punteggio decrescente fino ad esaurimento delle risorse disponibili, i progetti che abbiano raggiunto un punteggio minimo complessivo pari a 60/100, di cui almeno 40 punti dati dalla somma dei punteggi ottenuti ai Criteri nr. 1 e nr. 2."
+      },
+      {
+        "riferimento": "Art. 19 c. 3 (importo del contributo in base al punteggio)",
+        "testo": "Punteggio da 60 a 70: Categoria A) FILM € 100.000,00 - € 130.000,00; Categoria B) DOC € 30.000,00 - € 39.000,00; Categoria C) CORTO € 10.000,00 - € 13.000,00. da 71 a 80: € 135.000,00 - € 180.000,00; € 40.500,00 - € 54.000,00; € 13.500,00 - € 18.000,00. da 81 a 90: € 186.000,00 - € 240.000,00; € 55.800,00 - € 72.000,00; € 18.600,00 - € 24.000,00. da 91 a 100: € 246.000,00 - € 300.000,00; € 73.800,00 - € 90.000,00; € 24.600,00 - € 30.000,00. […] (es. al punteggio 73 nella categoria A) corrisponde un contributo pari a 135.000,00 + (2 x 5.000,00) = € 145.000,00)."
+      },
+      {
+        "riferimento": "Art. 19 c. 4 (percentuali massime)",
+        "testo": "l’importo concesso ai sensi del presente Avviso non deve superare quanto necessario a coprire il deficit (funding gap) tra l’ammontare dei costi e gli apporti a copertura degli stessi e non deve superare la misura massima delle seguenti percentuali: a) 50% sul totale dei costi ammissibili preventivati e verificati a consuntivo, riferiti all’intero costo di produzione, per la Categoria A) FILM b) 70% sul totale dei costi ammissibili, preventivati e verificati a consuntivo, riferiti all’intero costo di produzione, per la Categoria B) DOC e per la Categoria C) CORTO"
+      },
+      {
+        "riferimento": "Art. 20 c. 2 (obbligo di spesa in Campania)",
+        "testo": "l’obbligo di spesa in Campania vale a dire l’ammontare delle spese effettivamente sostenute in Campania e rendicontate in quanto ammissibili con giustificativi quietanzati deve essere pari ad almeno: a) 160% del contributo per la Categoria A) FILM; b) 150% del contributo per la Categoria B) DOC; c) 120% del contributo per la Categoria C) CORTO."
+      },
+      {
+        "riferimento": "Art. 5 c. 1 (termini) e art. 6 c. 1 e c. 4 lett. b) (procedura e Commissione)",
+        "testo": "a decorrere dalle ore 14:00 del giorno 31.08.2026 , entro e non oltre i successivi 30 giorni, vale a dire, entro le ore 14.00 del 30.09.2026, utilizzando esclusivamente l’applicazione web “Piano Cinema Campania” […] La procedura di selezione delle domande presentate sarà di tipo valutativo 'a graduatoria' […] la Commissione unica sarà composta da cinque membri […] due dipendenti della Direzione Generale Politiche Culturali e Turismo della Regione Campania; tre esperti indicati dalla Fondazione Film Commission Regione Campania."
+      },
+      {
+        "riferimento": "Art. 23 c. 5 (erogazione e termine di completamento)",
+        "testo": "a) in due tranche con le seguenti modalità: i. acconto del 50% del contributo assegnato, dietro presentazione di polizza fideiussoria di pari importo […] ii. saldo del restante 50% previo completamento e verifica della rendicontazione definitiva; b) intero importo a saldo, previo completamento e verifica della rendicontazione definitiva. […] la copia campione deve essere pronta per la distribuzione e/o diffusione e/o messa in onda, entro 36 mesi dalla data di pubblicazione della determina di concessione"
+      },
+      {
+        "riferimento": "Avviso di rettifica del 03/11/2026",
+        "testo": "la descrizione della scala di punteggio applicabile al criterio 3.2 della griglia di valutazione per la Categoria B) DOC e la Categoria C) CORTO deve intendersi correttamente formulata come “da 1 a 3 punti”."
+      },
+      {
+        "riferimento": "Art. 22 c. 5 lett. a) (punteggio automatico del criterio 4.2)",
+        "testo": "il coinvolgimento di un’impresa con sede in Campania, in qualità di produttore associato o coproduttore dell’opera, sia chiaramente attestato dalle dichiarazioni rese nella compilazione della domanda e dalla documentazione allegata (contratto di produzione associata o coproduzione). Il punteggio è automaticamente assegnato solo se il soggetto richiedente è un’impresa che ha sede legale oppure una unità locale nella regione Campania, comunque operante con uno dei codici ATECO ammessi, di cui al precedente articolo 2, da almeno 12 mesi precedenti alla data di pubblicazione del presente Avviso"
+      },
+      {
+        "riferimento": "FAQ aggiornate al 23/09/2026, Sezione 1.2, Valutazione delle domande (criterio 4.2)",
+        "testo": "Ai fini dell’assegnazione di questo punteggio le imprese devono avere sede legale in Campania o oppure una unità locale nella regione Campania, comunque operante con codice ATECO 59.11 o 59.12; in quest’ultimo caso, l’attività dell’unità locale in Campania dovrà essere riscontrabile nella documentazione prodotta e la data di apertura dovrà essere di almeno 12 mesi precedente alla data di pubblicazione sul BURC del presente Avviso."
+      }
+    ],
+    "dubbi": [
+      "Soglia combinata: il minimo di sezione non è per singola sezione ma sulla somma delle sezioni 1 e 2 (30 punti per FILM, 40 per DOC e CORTO). Lo schema prevede solo soglie per sezione: l’ho messa nel campo aggiuntivo «soglieCombinate» di ogni categoria, con «soglie» vuoto. Il simulatore deve leggerla.",
+      "Criterio 1.3 (copertura finanziaria): la percentuale individua la fascia, ma dentro la fascia la Commissione sceglie tra un minimo e un massimo (es. FILM ≥50%: da 6 a 8 punti). Nel campo «punti» c’è il massimo della fascia, in «puntiMin» il minimo: il simulatore dovrebbe mostrare un intervallo, non un valore certo.",
+      "Scale «basso / medio / alto»: quasi tutti i criteri qualitativi hanno un punteggio minimo di 1 (lo 0 è previsto solo al criterio 2.1 della griglia FILM, «Assente = 0»). L’Avviso non dice che cosa accade se un elemento manca del tutto.",
+      "Sezione 5: i sotto-criteri 5.1, 5.2 e 5.3 (5.3 solo per FILM) valgono 3 punti ciascuno ma non sono cumulabili; l’ho trascritta come un solo criterio «5» da 3 punti con i sotto-criteri nel campo «sottocriteri», perché la somma torni a 100.",
+      "Criterio 4.4: «1 punto per ciascun ruolo» tra quelli elencati dall’Avviso; l’ho trascritto come criterio discreto (da 0 a 5 per FILM, da 0 a 3 per DOC e CORTO) e non con la metrica «professionistiTerritorio», che conterebbe tutti i professionisti locali.",
+      "Regola di calcolo della Commissione (media, somma o consenso): l’Avviso non la indica. Le graduatorie 2025 riportano punteggi interi.",
+      "Obbligo di spesa sul territorio diverso per categoria (160%, 150%, 120% del contributo): nel campo generale «spesaTerritorioMinPct» c’è 160 (FILM); il valore di ogni categoria è nel campo omonimo dentro «categorie».",
+      "Durate: FILM «superiore a 52’» e DOC «superiore a 50’» (soglia esclusa: ho aggiunto «durataMinEsclusa»); CORTO «uguale o inferiore a 52’» (soglia inclusa: ho usato il campo aggiuntivo «durataMaxInclusa» e lasciato vuoto «durataMaxEsclusa»). Le opere seriali di finzione entrano in FILM solo con parti fino a 30’ e in CORTO solo con parti fino a 15’: le serie con episodi più lunghi di 30’ non sono previste, salvo il film TV in due parti.",
+      "Decorrenza delle spese di soggetto, sceneggiatura e sviluppo: l’Avviso (art. 20 c. 1 lett. b) dice 1° gennaio 2026, una risposta delle FAQ del 23/09/2026 dice 1° gennaio 2025. Ho seguito l’Avviso, che le stesse FAQ indicano come unica fonte normativa.",
+      "Rendicontazione: il termine di 120 giorni decorre dalla comunicazione di completamento, non dalla concessione; nel campo «scadenze» ha «mesi» vuoto e i campi aggiuntivi «giorni» e «decorreDa».",
+      "Esito 2026: al 14/11/2026 sulla pagina della Film Commission ci sono solo la nomina delle Commissioni (13/10/2026) e la rettifica del 03/11/2026; graduatorie non ancora pubblicate. Edizione 2027 non annunciata: il periodo atteso è una stima sulla cadenza passata, che è irregolare (da aprile a luglio).",
+      "Non ho letto il Manuale utente della piattaforma né i modelli scaricabili (accessibili solo dopo la registrazione): l’elenco degli allegati viene dall’art. 21 dell’Avviso. Della Sezione 1.3 Distribuzione ho letto requisiti e massimali ma non la griglia di valutazione.",
+      "Criterio 4.2: per l’art. 22 c. 5 lett. a) il punteggio è automatico solo se il richiedente ha sede legale o unità locale in Campania; non è chiarito se spetti quando l’impresa campana è soltanto un coproduttore diverso dal richiedente (nella griglia ho lasciato la lettura più prudente: 0 punti). Sui 12 mesi l’Avviso parla di operatività con il codice ATECO, le FAQ della data di apertura dell’unità locale.",
+      "L’Avviso non prevede una regola per i progetti a pari punteggio né l’ordine di scorrimento tra ex aequo quando le risorse della categoria si esauriscono."
+    ]
+  },
+  "verifica": {
+    "esito": "confermata",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Nessun numero cambiato: punteggi dei criteri, massimi di sezione, totale 100, soglia 60 con minimo 30 (FILM) o 40 (DOC e CORTO) sulla somma delle sezioni 1 e 2, percentuali, massimali, tabella del contributo per punteggio, dotazioni, obbligo di spesa, finestra e quote di erogazione coincidono con l’Avviso (BURC n. 38 del 20/07/2026) e con la rettifica del 03/11/2026.",
+      "Criterio 4.2 (griglie A e BC): riscritta l’etichetta dei 5 punti, che legava i 12 mesi anche alla sede legale; aggiunta al principio la precisazione delle FAQ del 23/09/2026 (i 12 mesi riguardano l’apertura dell’unità locale) e il caso non chiarito del coproduttore campano diverso dal richiedente.",
+      "Allegati: bio-filmografie del cast artistico e del cast tecnico passate da «sempre» a «se_dichiarato», perché l’art. 21 c. 1 lett. i) le chiede solo per i componenti già confermati.",
+      "Aggiunto «contributo.nota» in ogni categoria (base di calcolo e regola dell’importo per punteggio) e ripetuto in «scadenzeNote» il termine di 120 giorni per la rendicontazione: sono campi che il programma legge anche senza adattamenti.",
+      "Prossima edizione: precisato il periodo atteso (nel 2026 la finestra si è aperta sei settimane dopo la pubblicazione, non subito).",
+      "Aggiunte due citazioni (art. 22 c. 5 lett. a e FAQ sul criterio 4.2) e due dubbi (criterio 4.2, assenza di una regola per gli ex aequo)."
+    ],
+    "dubbi": [
+      "Soglia sulla somma delle sezioni 1 e 2 (30 punti FILM, 40 DOC e CORTO): è nel campo aggiuntivo «soglieCombinate», che il programma oggi non legge. Finché non viene letta, la simulazione può dare per finanziabile un progetto che non lo è.",
+      "Importo del contributo: dipende dal punteggio («regolaContributo: tabella_per_punteggio» e «contributo.perPunteggio»). Il programma oggi conosce solo «pieno» e «proporzionale_al_primo»: senza adattamento sovrastima (un FILM a 60 punti ottiene € 100.000, non € 300.000).",
+      "Criterio 1.3: la percentuale di copertura individua la fascia, ma dentro la fascia la Commissione sceglie (FILM ≥50%: da 6 a 8 punti). In «punti» c’è il massimo della fascia: la simulazione può sovrastimare fino a 2 punti.",
+      "Obbligo di spesa in Campania diverso per categoria (160%, 150%, 120% del contributo): il campo generale vale 160 ed è corretto solo per FILM; i valori di DOC e CORTO sono nel campo omonimo di ogni categoria.",
+      "Durate: FILM oltre 52’ e DOC oltre 50’ sono soglie escluse, CORTO fino a 52’ compresi è una soglia inclusa («durataMinEsclusa», «durataMaxInclusa»). Il programma tratta «durataMin» come soglia inclusa: un’opera di finzione di 52’ esatti verrebbe letta come FILM anziché CORTO.",
+      "Criterio 4.2: non è chiarito se i 5 punti spettino quando l’impresa campana è solo un coproduttore diverso dal richiedente; sui 12 mesi Avviso e FAQ non usano le stesse parole.",
+      "Spese di soggetto, sceneggiatura e sviluppo: ammissibili dal 1° gennaio 2026 per l’Avviso (art. 20 c. 1), dal 1° gennaio 2025 per una risposta delle FAQ. Seguito l’Avviso.",
+      "L’Avviso non indica come la Commissione di cinque membri arriva al punteggio (media, somma, consenso) né una regola per gli ex aequo.",
+      "Al 14/11/2026 le graduatorie 2026 non sono pubblicate e l’edizione 2027 non è annunciata: la pagina ufficiale non riporta atti successivi alla rettifica del 03/11/2026. Da ricontrollare.",
+      "Non letti il Manuale utente e i modelli della piattaforma (richiedono registrazione); le FAQ sulla piattaforma sono una pagina dinamica, ho usato il PDF del 23/09/2026."
+    ]
+  }
+}

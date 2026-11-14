@@ -1,0 +1,49 @@
+/* Taratura sui casi reali: fasce di ogni criterio nel Report, riquadro di sintesi, stima dalle regole nel cruscotto.
+   Solo le variabili colore di app.css, così valgono in entrambi i temi. */
+
+/* nel dettaglio di un criterio */
+.tar-crit { display: flex; flex-direction: column; gap: 7px; padding: 11px 13px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--r-s); background: var(--surface-2); min-width: 0; }
+.tar-testa { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.tar-testa .label { margin-right: auto; }
+.tar-fasce { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .9rem; color: var(--muted); }
+.tar-fasce strong { color: var(--ink); font-weight: 600; }
+.tar-crit p { margin: 0; overflow-wrap: anywhere; }
+
+/* scala del criterio: fascia rigorosa (sotto), fascia attesa (sopra), media dei commissari (segno verticale) */
+.tar-scala { position: relative; height: 14px; border-radius: 7px; background: var(--surface); border: 1px solid var(--line); overflow: hidden; }
+.tar-scala > span { position: absolute; top: 0; bottom: 0; }
+.tar-rig { background: var(--warn-soft); border-left: 1px solid var(--warn); border-right: 1px solid var(--warn); }
+.tar-att { top: 3px !important; bottom: 3px !important; border-radius: 4px; background: var(--accent-soft); border: 1px solid var(--accent); }
+.tar-media { width: 3px; margin-left: -1px; background: var(--ink); border-radius: 2px; }
+
+.crit summary .tar-fuori { color: var(--warn); font-weight: 600; white-space: nowrap; }
+
+/* riquadro di sintesi nel Report */
+.tar-elenco, .tar-domande, .tar-sezioni { list-style: none; margin: 0; padding: 0; }
+.tar-elenco { display: flex; flex-direction: column; gap: 6px; }
+.tar-elenco li { padding: 8px 11px; border-radius: var(--r-s); background: var(--warn-soft); overflow-wrap: anywhere; }
+.tar-domande { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.tar-domande li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); }
+.tar-domande li:first-child { border-top: 0; }
+.tar-domande .row { flex-wrap: nowrap; }
+
+/* cruscotto */
+.tar-riga { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.tar-riga > div { flex: 1 1 32ch; min-width: 0; }
+.tar-stima { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.tar-grande { font-size: 1.9rem; font-weight: 700; line-height: 1.05; letter-spacing: -.02em; }
+.tar-medio { font-size: 1.35rem; font-weight: 600; line-height: 1.15; }
+.tar-sezioni { display: flex; flex-wrap: wrap; gap: 8px; }
+.tar-sezioni li { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--bg); }
+.tar-sezioni .num { white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .tar-stima { grid-template-columns: minmax(0, 1fr); }
+  .tar-domande li { grid-template-columns: minmax(0, 1fr); }
+  .tar-sezioni li { flex: 1 1 100%; justify-content: space-between; }
+  .tar-sezioni li strong { margin-right: auto; }
+}
+@media print {
+  .tar-domande .row { display: none; }
+  .tar-crit { break-inside: avoid; }
+}

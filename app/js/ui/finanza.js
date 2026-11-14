@@ -543,10 +543,13 @@ function graficoCassa(cassa) {
   const valori = m.flatMap((x) => [x.entrate, -x.uscite, x.cumulato]);
   let max = Math.max(0, ...valori), min = Math.min(0, ...valori);
   if (max === min) max = 1;
-  const pad = (max - min) * 0.06; max += pad; min -= max > 0 && min < 0 ? pad : 0;
+  // tacche «tonde» (1, 2, 2,5 o 5 per una potenza di dieci) che comprendono lo zero
+  const grezzo = (max - min) / 4, dieci = 10 ** Math.floor(Math.log10(grezzo));
+  const passoY = [1, 2, 2.5, 5, 10].map((k) => k * dieci).find((k) => k >= grezzo);
+  max = Math.ceil(max / passoY) * passoY; min = Math.floor(min / passoY) * passoY;
   const y = (v) => T + ((max - v) / (max - min)) * (H - T - B);
   const x = (i) => L + passo * i + passo / 2;
-  const tacche = Array.from({ length: 5 }, (_, k) => min + ((max - min) * k) / 4);
+  const tacche = Array.from({ length: Math.round((max - min) / passoY) + 1 }, (_, k) => min + passoY * k);
   const ogni = Math.ceil(m.length / Math.floor((W - L) / 54));
   const id = `fin-graf-${++progressivo}`;
   const linea = m.map((r, i) => `${i ? 'L' : 'M'} ${x(i).toFixed(1)} ${y(r.cumulato).toFixed(1)}`).join(' ');

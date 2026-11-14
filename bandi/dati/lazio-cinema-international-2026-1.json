@@ -1,0 +1,864 @@
+{
+  "id": "lazio-cinema-international-2026-1",
+  "fondoId": "lazio",
+  "revisione": "2026-11-14",
+  "nome": "Lazio — Lazio Cinema International 2026 (1ª edizione)",
+  "nomeBreve": "Lazio · Cinema International 2026",
+  "ente": "Regione Lazio — Direzione Affari della Presidenza, Turismo, Cinema, Audiovisivo e Sport, di concerto con l’Autorità di Gestione del PR FESR Lazio 2021-2027 · gestione: Lazio Innova S.p.A. (Organismo Intermedio)",
+  "regione": "Lazio",
+  "territorio": "Lazio",
+  "gentilizio": "laziali",
+  "fonte": "Avviso pubblico «Lazio Cinema International 2026 – 1° Edizione» e allegato «Modulistica e Istruzioni», approvati con Determinazione n. G03117 del 10/03/2026 (BUR Lazio n. 21 del 12/03/2026)",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto (PR FESR Lazio 2021-2027) per opere cinematografiche, televisive o web e documentari di durata superiore a 52 minuti realizzati in coproduzione o compartecipazione internazionale da produttori indipendenti originari che sono PMI con sede operativa nel Lazio e accedono al tax credit produzione. Procedura a graduatoria: una Commissione di Valutazione attribuisce i punti di una griglia (qualità e respiro internazionale, curricula e track record, realizzabilità finanziaria, equilibrio delle quote italiana ed estera, valorizzazione turistica del Lazio, componente femminile, opere prime e seconde). L’aiuto integra il tax credit fino all’intensità consentita dall’art. 54 del Reg. (UE) 651/2014, con un massimo di 2 milioni di euro per opera.",
+  "paginaUfficiale": "https://regione.lazio.it/imprese/cinema",
+  "fontiUrl": [
+    {
+      "titolo": "Determinazione n. G03117 del 10/03/2026 con Avviso e Modulistica (testo pubblicato sul BUR Lazio n. 21 del 12/03/2026)",
+      "url": "https://regione.lazio.it/sites/default/files/documentazione/2026/CIN-DD-G03117-10-03-2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso pubblico Lazio Cinema International 2026 – 1° Edizione (solo avviso)",
+      "url": "https://www.lazioinnova.it/app/uploads/2026/03/DD_G03117_10_03_2026_Bando.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica e Istruzioni",
+      "url": "https://www.lazioinnova.it/app/uploads/2026/03/DD_G03117_10_03_2026_Modulistica_istruzioni.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Foglio «Dati e Calcoli Opera» (.xlsx) con le formule dei criteri C.1 e C.2",
+      "url": "https://www.lazioinnova.it/app/uploads/2026/04/Copia-di-Foglio-Dati-e-CalcoliOpera-3-ed-2026.xlsx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Lazio Innova — pagina del bando Lazio Cinema International, I edizione 2026",
+      "url": "https://www.lazioinnova.it/bandi/lazio-cinema-international-i-edizione-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "LazioEuropa — pagina del bando Lazio Cinema International 2026, I edizione",
+      "url": "https://www.lazioeuropa.it/bandi/lazio-cinema-international-2026-i-edizione/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione Lazio — notizia «Pubblicato l’Avviso pubblico Lazio Cinema International 2026 1° edizione» (13/03/2026)",
+      "url": "https://regione.lazio.it/notizie/cinema/pubblicato-avviso-pubblico-lazio-cinema-international-2026-iedizione",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "LazioEuropa — pagina del bando Lazio Cinema International 2025, I edizione (documenti ed esiti)",
+      "url": "https://www.lazioeuropa.it/bandi/lazio-cinema-international-2025-i-edizione/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso pubblico Lazio Cinema International 2025 – 1° Edizione (Det. G11692 del 15/09/2025), usato per il confronto della griglia",
+      "url": "https://www.lazioeuropa.it/app/uploads/2025/09/DD_G11692_15_09_2025_Bando.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. G06096 del 06/05/2026 — edizione 2025: domande idonee e finanziabili",
+      "url": "https://www.lazioeuropa.it/app/uploads/2026/05/DD_G06096_06_05_2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 439 del 28/05/2026 — Piano annuale 2026 degli interventi in materia di cinema e audiovisivo (L.R. 5/2020)",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/CIN-DGR-439-28-05-2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso Lazio Next Generation – Anno 2026 (Allegato A alla Det. G13701 del 07/10/2026)",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/DD-G13701-07-10-2026-AllegatoA-avviso-lazio-next-generation-2026.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Avviso Lazio Cinema Futuro (Det. G14904 del 10/11/2025)",
+      "url": "https://www.lazioinnova.it/app/uploads/2025/11/DD_G14904_10_11_2025_Bando.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Lazio Innova — pagina del bando Lazio Cinema Futuro (documenti ed esiti)",
+      "url": "https://www.lazioinnova.it/bandi/bando-lazio-cinema-futuro/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. G13701 del 07/10/2026 — approvazione dell’Avviso Lazio Next Generation 2026",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/DD-G13701-07-10-2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. G13879 del 12/10/2026 — Lazio Next Generation 2026: rettifica degli artt. 3 e 16 dell’Avviso, modulistica e Allegato F «Chiarimenti applicativi»",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/DD-G13879-12-10-2026.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2026-03-12",
+      "scadenza": "2026-04-21",
+      "nota": "1ª edizione 2026: Det. G03117 del 10/03/2026, BUR n. 21 del 12/03/2026; dotazione 5 milioni di euro. Al 14/11/2026 le pagine ufficiali del bando lo indicano «Chiuso» e non riportano ancora elenchi o graduatorie."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-09-16",
+      "scadenza": "2025-10-28",
+      "nota": "1ª edizione 2025: Det. G11692 del 15/09/2025; domande dal 30/09 al 28/10/2025; 5 milioni di euro, per metà riservati alle Opere di Interesse Regionale. Griglia diversa dal 2026 (A 20, B 40, C 10, D 20, E 10; soglia 60). Idonee e finanziabili: Det. G06096 del 06/05/2026."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Due edizioni (I e II edizione 2024), risultanti dalle pagine LazioEuropa e Lazio Innova; date non verificate sul testo ufficiale."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Due edizioni (I e II edizione 2023), risultanti dalle pagine LazioEuropa; date non verificate."
+    },
+    {
+      "anno": 2022,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Due edizioni (I e II edizione 2022), risultanti dalle pagine LazioEuropa; date non verificate."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-03-12",
+      "al": "2026-04-21",
+      "nota": "Unica finestra della 1ª edizione: dalle ore 12:00 del giorno di pubblicazione dell’Avviso (BUR n. 21 del 12/03/2026) alle ore 17:00 del 21 aprile 2026, su GeCoWEB Plus (art. 5)."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "non annunciato; le ultime due edizioni si sono aperte a fine settembre 2025 e a metà marzo 2026",
+    "base": "Cadenza delle edizioni precedenti (due l’anno dal 2022 al 2024, una nel 2025, una «1ª edizione» nel 2026). Al 14/11/2026 non risulta pubblicata una 2ª edizione 2026 né un annuncio per il 2027 sulle pagine di Regione Lazio, Lazio Innova e LazioEuropa: la data è una stima da ricontrollare."
+  },
+  "sogliaTotale": 50,
+  "punteggioMassimo": 90,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [
+    {
+      "etichetta": "Sub criterio B.3 (track record dei produttori stranieri)",
+      "minimo": 3,
+      "criteri": [
+        "B.3"
+      ],
+      "sezioni": []
+    }
+  ],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Commissione di Valutazione istituita dall’Autorità di Gestione del PR FESR: l’AdG o suo supplente e quattro esperti designati uno dalla Direzione Regionale, uno dalla Direzione Cinema del MIC, uno dalla Fondazione Film Commission di Roma e Lazio e uno da Lazio Innova (Appendice 1). L’Avviso non precisa la regola di calcolo (media, consenso). La Commissione verifica anche la coerenza dell’opera con l’art. 1, la capacità finanziaria dell’art. 2 e la congruità dei costi. A parità di punteggio prevale il criterio A, poi il D, poi gli altri in ordine alfabetico."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://www.lazioinnova.it/gecoweb-plus/",
+    "oggetto": "",
+    "regole": [
+      "Domanda esclusivamente on line sulla piattaforma GeCoWEB Plus di Lazio Innova: compilazione del Formulario e caricamento degli allegati (art. 5, primo passo).",
+      "Il file generato dalla piattaforma (Domanda, Formulario e elenco dei documenti) va firmato digitalmente dal legale rappresentante del Proponente (del Mandatario se i Proponenti sono più di uno), ricaricato e inviato con il comando «Invia domanda».",
+      "La PEC automatica di conferma fissa la Data della Domanda: solo da quella data si possono iniziare le riprese.",
+      "Una sola Domanda valida per Proponente, inteso come Impresa Unica: se ne arrivano più d’una vale l’ultima inviata entro i termini.",
+      "Sono non ammissibili e non integrabili le domande prive degli allegati dell’art. 5 lettere a), b), c) e d): contratto di coproduzione, richiesta tax credit, sceneggiatura, Dati e Calcoli Opera.",
+      "Bilanci dei coproduttori esteri e prove delle coperture finanziarie (art. 5 lettere f e g) non sono integrabili: se mancano, quei valori non contano per la capacità finanziaria né per il criterio C.",
+      "Per le altre carenze Lazio Innova chiede integrazioni, da inviare entro 10 giorni dalla richiesta.",
+      "PEC di Lazio Innova per le comunicazioni: incentivi@pec.lazioinnova.it; quesiti a infobandi@lazioinnova.it."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "cinema",
+      "nome": "Opere cinematografiche in coproduzione o compartecipazione internazionale",
+      "griglia": "LCI",
+      "soglie": {
+        "A": 9,
+        "B": 15,
+        "C": 6
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 2000000
+        },
+        "nota": "Intensità sui Costi Ammissibili (soprattutto costi verso imprese e lavoratori residenti nel Lazio), non sul costo di produzione: 60% massimo, per le coproduzioni con Paesi DAC; 40% opere difficili, 20% transfrontaliere, 10% le altre. Massimo 2.000.000 € per opera. Contributo minimo 200.000 €. Costo minimo 2.500.000 € (1.250.000 € per opere prime, seconde e di giovani autori)."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "tv-web",
+      "nome": "Opere televisive o web di produzione internazionale (film TV e serie)",
+      "griglia": "LCI",
+      "soglie": {
+        "A": 9,
+        "B": 15,
+        "C": 6
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 2000000
+        },
+        "nota": "Intensità sui Costi Ammissibili (soprattutto costi verso imprese e lavoratori residenti nel Lazio), non sul costo di produzione: 60% massimo, per le coproduzioni con Paesi DAC; 40% opere difficili, 20% transfrontaliere, 10% le altre. Massimo 2.000.000 € per opera. Contributo minimo 200.000 €. Costo minimo dell’opera 1.250.000 €."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentario",
+      "nome": "Documentari (cinematografici, televisivi o web)",
+      "griglia": "LCI",
+      "soglie": {
+        "A": 9,
+        "B": 15,
+        "C": 6
+      },
+      "contributo": {
+        "percentuale": 60,
+        "massimali": {
+          "2026": 2000000
+        },
+        "nota": "Intensità sui Costi Ammissibili (soprattutto costi verso imprese e lavoratori residenti nel Lazio), non sul costo di produzione: 60% massimo, per le coproduzioni con Paesi DAC; 40% opere difficili, 20% transfrontaliere, 10% le altre. Massimo 2.000.000 € per opera. Nessun contributo minimo. Costo minimo dell’opera 400.000 €."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "LCI": {
+      "id": "LCI",
+      "nome": "Art. 6 — Criteri di valutazione tecnica (A, B, C) e criteri di priorità (D, E, F, G)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità tecnica, originalità e respiro internazionale dell’Opera Audiovisiva",
+          "max": 15,
+          "obiettivo": "Criterio di valutazione tecnica con punteggio soglia 9.",
+          "criteri": [
+            {
+              "id": "A.1",
+              "nome": "Livello di sviluppo e originalità della sceneggiatura e del piano di lavorazione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Per livello di sviluppo si intende il grado di maturità dell’Opera nell’affrontare l’Inizio delle Riprese, tenendo conto dei diversi percorsi di sviluppo che caratterizzano le Opere di fiction, documentaristiche, di animazione e di eventuali loro combinazioni.",
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "A.2",
+              "nome": "Respiro internazionale e coerenza con un pubblico internazionale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "Respiro internazionale e coerenza con un pubblico internazionale.",
+              "documenti": [
+                "sceneggiatura",
+                "coproduzione",
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Curricula o track record delle figure chiave",
+          "max": 25,
+          "obiettivo": "Criterio di valutazione tecnica con punteggio soglia 15; il sub criterio B.3 ha una soglia propria di 3 punti.",
+          "criteri": [
+            {
+              "id": "B.1",
+              "nome": "Curriculum di autore del soggetto, sceneggiatori, regista e altri eventuali autori già contrattualizzati",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Si considereranno in modo equilibrato sia gli aspetti commerciali (diffusione internazionale, incassi, etc.) che quelli artistici (partecipazione a festival, premi, etc.) nonché l’assortimento delle esperienze.",
+              "principio": "Per valutare in misura equilibrata le Opere Prime e Seconde si tiene in debita considerazione il curriculum formativo del regista, altre esperienze comunque formative e l’affiancamento da parte di figure professionali (sceneggiatori, direttori della fotografia, ecc.) dotati di maggiore esperienza, tanto più in presenza di Costi Complessivi della Produzione alti. I curricula (art. 5 lett. i) devono evidenziare i ruoli sostenuti almeno negli ultimi 5 anni, la classe di costo delle opere, gli indicatori di successo commerciale e i premi vinti nei festival.",
+              "documenti": [
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "B.2",
+              "nome": "Track record complessivo dei produttori e degli eventuali distributori",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Si considerano, tenendo conto delle relative Quote di Compartecipazione, sia la capacità pregressa di portare a compimento Opere Audiovisive da parte dei Coproduttori che il loro successo commerciale e artistico. In caso di società recenti si valuta anche la capacità e l’esperienza delle figure chiave.",
+              "principio": "Si valuta sui company profile di ciascun Coproduttore, degli eventuali distributori e dei soggetti incaricati delle Produzioni Appaltate (art. 5 lett. e): produzioni degli ultimi 3 anni con budget e quote, incassi in sala e dati analoghi per televisione e web, festival e premi.",
+              "documenti": [
+                "cv_societa",
+                "distribuzione",
+                "produttore_esecutivo"
+              ]
+            },
+            {
+              "id": "B.3",
+              "nome": "Track record specifico dei produttori stranieri e dei relativi eventuali distributori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "Si considera la capacità e l’esperienza pregressa riguardante la diffusione sul proprio mercato nazionale di Opere Audiovisive. In caso di società recenti si valuta anche la capacità e l’esperienza specifica delle figure chiave.",
+              "principio": "Punteggio soglia del sub criterio: 3 punti su 5. Si valuta sui company profile dei coproduttori esteri e dei loro distributori (art. 5 lett. e).",
+              "documenti": [
+                "cv_societa",
+                "coproduzione",
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Grado di realizzabilità finanziaria dell’Opera",
+          "max": 10,
+          "obiettivo": "Criterio di valutazione tecnica con punteggio soglia 6, calcolato con formule sui dati di bilancio e sulle coperture documentate (foglio «Dati e Calcoli Opera»).",
+          "criteri": [
+            {
+              "id": "C.1",
+              "nome": "Maggiore capacità finanziaria rispetto al rapporto minimo dell’art. 2",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Si considera la maggiore capacità finanziaria di cui all’articolo 2 rispetto al rapporto minimo ivi stabilito. Sono attribuiti 2 punti in caso di rapporto minimo (1), 5 punti in caso di rapporto pari o superiore a 4 e punteggi calcolati per interpolazione lineare per rapporti intermedi.",
+              "principio": "Contano solo i bilanci e le coperture documentati in sede di Domanda (art. 5 lettere f e g): la documentazione mancante non è integrabile. Regola di calcolo scritta nel bando: Rapporto (art. 2) = somma del Valore della Produzione Medio dei Coproduttori Qualificati (media della voce A del conto economico negli ultimi tre bilanci) ÷ [Costo Complessivo della Produzione − crediti d’imposta produzione indicati a copertura dai Coproduttori Qualificati − Coperture Finanziarie reperite alla Data della Domanda dai Coproduttori Qualificati − Quota di Compartecipazione dei Coproduttori non Qualificati]. Nel foglio ufficiale «Verifiche»: =SE(rapporto<1;«NON AMMISSIBILE»;SE(rapporto>=4;5;rapporto+1)). Formula: punti = rapporto + 1 per rapporti tra 1 e 4; 5 punti se rapporto ≥ 4; rapporto < 1 = opera non ammissibile (art. 2).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "C.2",
+              "nome": "Capacità di autofinanziamento dei Coproduttori Qualificati rispetto al costo a loro carico",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Si considera per ciascun Coproduttore Qualificato il rapporto tra la capacità di autofinanziamento (somma dell’utile (perdita) netto e ammortamenti e svalutazioni) risultante dalla media dai dati degli ultimi tre Bilanci e l’importo del Costo Complessivo di Produzione a suo carico, vale a dire al netto delle Coperture Finanziarie dallo stesso reperite alla Data della Domanda, di eventuali ulteriori coperture finanziarie aziendali (aumenti di capitale, finanziamenti soci dedicati, prestiti bancari dedicati) di cui sia stata fornita documentazione che ne attesti la certezza in sede di Domanda, e del contributo concedibile sull’Avviso.",
+              "principio": "Coproduttori Qualificati: i Proponenti, gli altri coproduttori italiani con quota almeno del 15% che non siano «imprese esterne», i coproduttori esteri con quota almeno del 10% (art. 2). Regola di calcolo scritta nel bando: Nel foglio ufficiale «Coperture finanziarie»: punteggio individuale (riga 43) =SE(rapporto<0,5;0;SE(rapporto>2,5;5;(rapporto−0,5)×2,5)); punteggio del sub criterio (cella B45) = Σ punteggio individuale × Quota di Compartecipazione del Coproduttore Qualificato sul Costo Complessivo della Produzione. Non è una media normalizzata: le quote dei Coproduttori non Qualificati pesano zero, quindi se i Coproduttori Qualificati detengono ad esempio l’80% delle quote il massimo ottenibile in C.2 è 4 punti. Formula: Per ciascun Coproduttore Qualificato: 0 punti se rapporto ≤ 50%; 5 punti se rapporto ≥ 250%; interpolazione lineare tra i due, cioè (rapporto − 0,5) × 2,5. Punteggio del sub criterio = somma dei punteggi individuali moltiplicati ciascuno per la propria Quota di Compartecipazione (quota sul totale dell’opera, non riproporzionata ai soli Qualificati).",
+              "documenti": [
+                "modulo3",
+                "finanziamenti",
+                "referenze_bancarie"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Quote di compartecipazione italiana ed estera equilibrate",
+          "max": 20,
+          "obiettivo": "Criterio di priorità (senza soglia), calcolabile dal contratto di coproduzione.",
+          "criteri": [
+            {
+              "id": "D.1",
+              "nome": "Equilibrio tra Quota Italiana e Quota Estera",
+              "max": 16,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "I punteggi sono assegnati considerando la Quota Italiana, vale a dire il totale delle Quote di Compartecipazione di tutti i Coproduttori Italiani, e la Quota Estera, vale a dire il totale delle Quote di Compartecipazione di tutti i Coproduttori Esteri (anche appartenenti a diversi Stati). La somma delle due quote è sempre pari a 100%.",
+              "principio": "Nell’Avviso il criterio D è unico (massimo 20): la divisione in D.1 (tabella, massimo 16) e D.2 (maggiorazione, massimo 4) è di questa scheda. Regola di calcolo scritta nel bando: Si guarda la minore tra Quota Italiana e Quota Estera: inferiore o pari al 10% = 0 punti; superiore al 10% ma non superiore al 15% = 4; superiore al 15% ma non superiore al 20% = 8; superiore al 20% ma inferiore al 30% = 12; pari o superiore al 30% = 16.",
+              "documenti": [
+                "coproduzione",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "D.2",
+              "nome": "Maggiorazione per coproduzioni tra più di due Stati",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "È attribuito un ulteriore punteggio (maggiorazione) nel caso la Coproduzione coinvolga più di due Stati, considerando esclusivamente gli Stati che hanno una Quota di Compartecipazione (anche da parte di più Coproduttori) pari o superiore al 10%.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "4 Stati o più (3 Stati esteri o più), ciascuno con almeno il 10%"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "3 Stati (2 Stati esteri), ciascuno con almeno il 10%"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "2 Stati"
+                }
+              ],
+              "documenti": [
+                "coproduzione",
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Valorizzazione del Lazio come destinazione turistica",
+          "max": 10,
+          "obiettivo": "Criterio di priorità (senza soglia).",
+          "criteri": [
+            {
+              "id": "E",
+              "nome": "Capacità dell’Opera Audiovisiva di valorizzare il Lazio come destinazione turistica, ed in particolare le aree al di fuori di quelle di Roma Capitale",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità dell’Opera Audiovisiva di valorizzare il Lazio come destinazione turistica, ed in particolare le aree al di fuori di quelle di Roma Capitale.",
+              "principio": "Il punteggio è assegnato sulla base di quanto desumibile dalla sceneggiatura o dal piano di lavorazione e da eventuale ulteriore documentazione coerente allegata (foto location, bozzetti scenografia, storyboard, altro). La sceneggiatura deve indicare il numero totale delle scene e quello delle scene ambientate nel Lazio, divise tra interni ed esterni; il piano di lavorazione le giornate di ripresa nel Lazio e totali (art. 5 lettere c e h). Il foglio «Riprese, Scene e Cast» distingue Roma, altro Lazio, altro Italia, estero.",
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione",
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Rilevante componente femminile",
+          "max": 5,
+          "obiettivo": "Criterio di priorità (senza soglia).",
+          "criteri": [
+            {
+              "id": "F",
+              "nome": "Rilevante componente femminile",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Il punteggio di 5 punti è assegnato nel caso ricorra almeno una delle due seguenti fattispecie: l’Opera è diretta da una regista donna o, in caso di direzione collettiva, da tutte registe donne; il Proponente è alla Data della Domanda una Impresa Femminile (in caso di più Proponenti tutti devono essere Imprese Femminili a tale data). Il punteggio è pari a 0 se non ricorre nessuna delle due fattispecie.",
+              "principio": "Impresa Femminile (Appendice 1): impresa individuale con titolare donna; cooperativa o società di persone con almeno il 60% di socie; società di capitali con quote possedute per almeno due terzi da donne e da Imprese Femminili e organi di amministrazione composti per almeno due terzi da donne.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Regista donna (tutte registe donne se la direzione è collettiva) oppure Proponente Impresa Femminile (tutti i Proponenti, se più d’uno)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna delle due fattispecie"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "nome": "Opere Prime e Seconde o di Giovani Autori",
+          "max": 5,
+          "obiettivo": "Criterio di priorità (senza soglia).",
+          "criteri": [
+            {
+              "id": "G",
+              "nome": "Opere Prime e Seconde o di Giovani Autori",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Opere Prime e Seconde o di Giovani Autori (definizioni della Legge Cinema e della normativa derivata).",
+              "principio": "L’Avviso indica soltanto il massimo di 5 punti, senza una regola di attribuzione: la lettura più diretta è 5 punti alle Opere Prime, Seconde o di Giovani Autori (definizioni della Legge Cinema) e 0 alle altre, ma non è scritta."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda e Formulario generati da GeCoWEB Plus, firmati digitalmente dal legale rappresentante",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratto di Coproduzione sottoscritto dai Proponenti e da almeno un Coproduttore Estero, vincolante (art. 5 lett. a)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Richiesta preventiva di tax credit (artt. 14, 18, 22 o 25 del D.I. Tax Credit Produttori) o, se non ancora disponibile, richiesta di idoneità ex art. 10 (art. 5 lett. b)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Sceneggiatura in lingua italiana con numero totale delle scene e numero delle scene ambientate nel Lazio, divise tra interni ed esterni (art. 5 lett. c)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Documento «Dati e Calcoli Opera», in formato non modificabile (.pdf o immagine) e modificabile (.xlsx) (art. 5 lett. d)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Company profile di ciascun Coproduttore, degli eventuali distributori e dei soggetti incaricati delle Produzioni Appaltate: produzioni degli ultimi 3 anni con budget, incassi, festival e premi (art. 5 lett. e)",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.2",
+        "B.3"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Ultimi tre Bilanci dei Coproduttori Qualificati esteri o non iscritti al Registro delle Imprese italiano, con traduzione, oppure attestazione di un Revisore Legale (art. 5 lett. f) — non integrabile",
+      "obbligo": "punteggio",
+      "criteri": [
+        "C.1",
+        "C.2"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione delle Coperture Finanziarie reperite alla Data della Domanda e delle altre coperture finanziarie aziendali dedicate (art. 5 lett. g) — non integrabile",
+      "obbligo": "punteggio",
+      "criteri": [
+        "C.1",
+        "C.2"
+      ]
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con le giornate di riprese (o di lavorazione per l’animazione) nel Lazio e totali, divise tra interni ed esterni (art. 5 lett. h)",
+      "obbligo": "sempre",
+      "criteri": [
+        "A.1",
+        "E"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Curriculum vitae del regista (ruoli almeno negli ultimi 5 anni, classe di costo, successo commerciale, premi) (art. 5 lett. i)",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.1"
+      ]
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Curriculum vitae degli sceneggiatori e degli altri autori già contrattualizzati (art. 5 lett. i)",
+      "obbligo": "sempre",
+      "criteri": [
+        "B.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Polizza assicurativa catastrofale in corso di validità (art. 1, commi 101-111, legge 213/2023) (art. 5 lett. j)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Con più Proponenti: mandato e dichiarazioni di ciascun Mandante (modello D) e Accordo a Latere sottoscritto (art. 5 lett. k)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazioni secondo i modelli 1 e 2 dell’Allegato, nei casi ivi indicati",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Lettere di impegno o di disponibilità dei distributori",
+      "obbligo": "consigliato",
+      "criteri": [
+        "A.2",
+        "B.2",
+        "B.3"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Lettere di impegno o di disponibilità del regista, degli altri autori e degli attori principali",
+      "obbligo": "consigliato",
+      "criteri": [
+        "A.1",
+        "B.1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Foto delle location, bozzetti di scenografia, storyboard e altra documentazione sulla valorizzazione turistica del Lazio",
+      "obbligo": "consigliato",
+      "criteri": [
+        "E"
+      ]
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "internazionale",
+      "testo": "Opera internazionale: coproduzione internazionale con nazionalità italiana ex art. 3 D.P.C.M. 11/07/2017; oppure compartecipazione internazionale o produzione internazionale TV/web ex art. 4 (Quota Italiana almeno 20%, Quota Estera almeno 10%); oppure opera TV o web ex art. 2 con quota dei coproduttori italiani indipendenti originari almeno 20% e Quota Estera almeno 20% (art. 1 lett. A)"
+    },
+    {
+      "id": "contratto-coproduzione",
+      "testo": "Contratto di Coproduzione vincolante, firmato dai Proponenti e da almeno un Coproduttore Estero, presentato con la Domanda (può essere condizionato solo all’ottenimento del contributo) (art. 1 lett. B)"
+    },
+    {
+      "id": "tax-credit",
+      "testo": "Alla Data della Domanda è stata almeno presentata al MIC la richiesta di idoneità al tax credit produzione (art. 10 D.I. Tax Credit Produttori); l’opera deve poi ottenere il credito d’imposta, la nazionalità italiana e l’eleggibilità culturale (art. 1 lett. C)"
+    },
+    {
+      "id": "durata",
+      "testo": "Durata dell’opera superiore a 52 minuti (art. 1 lett. D)"
+    },
+    {
+      "id": "costo-minimo",
+      "testo": "Costo Complessivo di Produzione: almeno 2.500.000 euro per le opere cinematografiche (1.250.000 euro se Opere Prime e Seconde o di Giovani Autori); almeno 1.250.000 euro per le opere televisive o web; almeno 400.000 euro per i documentari (art. 1 lett. E)"
+    },
+    {
+      "id": "riprese",
+      "testo": "Riprese (o lavorazioni di animazione) non iniziate alla Data della Domanda; per i documentari, non più del 25% delle Spese Ammissibili Dirette già contrattualizzato con impegni vincolanti"
+    },
+    {
+      "id": "aiuto-minimo",
+      "testo": "Aiuto concedibile ex art. 54 RGE non inferiore a 200.000 euro (non si applica ai documentari e alle opere con Quota Italiana inferiore al 50%)"
+    },
+    {
+      "id": "no-cumulo-regionale",
+      "testo": "L’opera non ha ottenuto contributi sugli avvisi regionali Lazio Cinema Lab e Lazio Cinema Futuro"
+    },
+    {
+      "id": "produttore-indipendente",
+      "testo": "Il Beneficiario è Produttore Indipendente Originario con i requisiti dell’art. 2, comma 4, del D.I. Tax Credit Produttori"
+    },
+    {
+      "id": "pmi",
+      "testo": "Il Beneficiario è una PMI dalla Data della Domanda fino alla Data di Concessione e non è un’Impresa in Difficoltà"
+    },
+    {
+      "id": "sede-lazio",
+      "testo": "Sede Operativa nel Lazio al momento della prima richiesta di erogazione e fino al saldo (e nei 5 anni successivi nessuna rilocalizzazione fuori regione)"
+    },
+    {
+      "id": "capacita-finanziaria",
+      "testo": "Capacità finanziaria: rapporto tra Valore della Produzione Medio dei Coproduttori Qualificati e costo di produzione non ancora coperto almeno pari a 1 (art. 2)"
+    },
+    {
+      "id": "requisiti-generali",
+      "testo": "Requisiti generali dell’Appendice 2 (regolarità contributiva DURC, antimafia, assenza di cause ostative), attestati con dichiarazioni ex D.P.R. 445/2000"
+    },
+    {
+      "id": "una-opera",
+      "testo": "Una sola Opera e una sola Domanda per Beneficiario, inteso come Impresa Unica"
+    },
+    {
+      "id": "polizza",
+      "testo": "Polizza catastrofale in corso di validità (art. 1, commi 101-111, legge 213/2023)"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "atto-impegno",
+      "etichetta": "Sottoscrizione con firma digitale e invio dell’Atto di Impegno",
+      "mesi": 1,
+      "nota": "Art. 7: entro 30 giorni da quando Lazio Innova lo mette a disposizione (entro 5 giorni dalla Data di Concessione sotto i 150.000 euro; dopo le verifiche antimafia negli altri casi). In caso di ritardo, diffida ad adempiere entro 10 giorni, poi revoca."
+    },
+    {
+      "id": "richiesta-preventiva",
+      "etichetta": "Invio a Lazio Innova della richiesta preventiva di tax credit presentata al MIC",
+      "mesi": 4,
+      "nota": "Art. 1: entro 4 mesi dalla Data di Concessione (pubblicazione sul BUR), pena revoca; è anche condizione per ogni erogazione."
+    },
+    {
+      "id": "anticipo",
+      "etichetta": "Richiesta dell’anticipo obbligatorio del 40% con fideiussione",
+      "mesi": 4,
+      "nota": "Art. 8 lett. a): entro 4 mesi dalla Data di Concessione; non serve se entro lo stesso termine si chiede il saldo."
+    },
+    {
+      "id": "inizio-riprese",
+      "etichetta": "Inizio delle riprese",
+      "mesi": 6,
+      "nota": "Art. 1, nota 1: dalla richiesta preventiva decorrono 60 giorni per l’inizio delle riprese, quindi al più tardi entro 6 mesi dalla Data di Concessione."
+    },
+    {
+      "id": "rinuncia",
+      "etichetta": "Termine per comunicare l’eventuale rinuncia",
+      "mesi": 10,
+      "nota": "Art. 10: comunicazione esplicita a Lazio Innova entro e non oltre 10 mesi dalla Data di Concessione."
+    },
+    {
+      "id": "saldo",
+      "etichetta": "Richiesta di erogazione del saldo con rendicontazione asseverata",
+      "mesi": 12,
+      "nota": "Artt. 1 e 8 lett. b): entro 30 giorni dalla richiesta definitiva di tax credit e comunque entro 12 mesi dalla Data di Concessione (24 mesi per le opere di durata superiore a 220 minuti e per l’animazione); in ogni caso entro il 31 dicembre 2028. In caso di ritardo, diffida ad adempiere entro 30 giorni, poi revoca."
+    }
+  ],
+  "scadenzeNote": [],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Obbligatorio, da chiedere entro 4 mesi dalla Data di Concessione; garantito da fideiussione bancaria o assicurativa a prima richiesta (importo dell’anticipo maggiorato del 10%); serve la copia della richiesta preventiva di tax credit e la polizza catastrofale (art. 8)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "condizione": "Differenza rispetto all’anticipo, rideterminata sui Costi Effettivamente Sostenuti: relazione finale, richiesta definitiva di tax credit, documentazione di nazionalità italiana, perizia giurata di un Revisore Legale (asseverazione obbligatoria), titoli di spesa e pagamenti. Lazio Innova eroga entro 80 giorni dalla richiesta (art. 8)."
+    }
+  ],
+  "note": [
+    "La tabella dell’art. 6 riporta «Totale 100», ma i massimi dei criteri sommano a 90 (A 15 + B 25 + C 10 + D 20 + E 10 + F 5 + G 5): qui il punteggio massimo è 90, cioè la somma effettiva. La soglia complessiva di idoneità è 50 punti.",
+    "Idoneità: almeno 9 punti nel criterio A, 15 nel B, 6 nel C, 3 nel sub criterio B.3 e almeno 50 punti in totale. I criteri D, E, F e G sono criteri di priorità senza soglia.",
+    "Il contributo si calcola sui Costi Ammissibili e non sul costo di produzione: costi diretti del Beneficiario verso imprese e lavoratori fiscalmente residenti nel Lazio, più costi extraterritoriali fino al 25% di quelli territoriali, più il 7% forfettario di costi indiretti (art. 4).",
+    "Intensità di norma concedibile, al netto del tax credit ordinario del 40%: 60% per le opere in coproduzione con Paesi DAC, 40% per le Opere Difficili, 20% per le opere transfrontaliere con un altro Stato UE, 10% per le altre opere; si sottraggono gli altri aiuti italiani sugli stessi costi. Massimo 2.000.000 di euro per opera e mai più del contributo richiesto (art. 3).",
+    "Aiuto accessorio in De Minimis pari al 100% delle spese per il Revisore Legale che assevera i costi, entro il 3% dei costi sostenuti e comunque entro 20.000 euro.",
+    "Costi del personale calcolati obbligatoriamente con i Costi Standard Orari dell’Appendice 4. Producer fee non ammissibile, salvo quella pagata a terzi per Produzioni in Appalto entro il 15% delle spese rimborsate. Non ammissibili i titoli di spesa con imponibile inferiore a 200 euro.",
+    "Sono ammissibili i costi sostenuti dopo la Data della Domanda; fanno eccezione, purché successivi al 1° gennaio 2021, la voce «Sviluppo e acquisto diritti» e fino al 5% dei costi diretti delle altre voci.",
+    "Regia, soggetto e sceneggiatura, diritti e attori principali sono eleggibili fino al 30% del Costo Complessivo della Produzione; oneri assicurativi, legali e finanziari fino al 7,5%.",
+    "Variazioni compensative tra voci di costo libere fino al 20% dei Costi Ammessi; le modifiche che alterano gli elementi valutati (contratto di coproduzione compreso) tornano alla Commissione e possono portare alla revoca.",
+    "Revoca se l’opera non ottiene il tax credit, la nazionalità italiana definitiva o l’eleggibilità culturale, o se non sono rispettati i termini per anticipo e saldo.",
+    "Nell’edizione 2026 non è più prevista la riserva del 50% per le Opere di Interesse Regionale che c’era nel 2025."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Lazio Next Generation – Anno 2026 (L.R. 5/2020, opere low budget fino a 2,5 milioni di euro)",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/DD-G13701-07-10-2026-AllegatoA-avviso-lazio-next-generation-2026.pdf",
+      "descrizione": "Avviso approvato con Det. n. G13701 del 07/10/2026 (L.R. 5/2020, Piano annuale 2026): 3 milioni di euro per opere di finzione, documentari, animazione e cortometraggi con costo fino a 2.500.000 euro. Domande via PEC dal 15/10 al 04/11/2026 (chiuso, in valutazione al 14/11/2026). Valutazione mista: Fase A automatica (massimo 50, soglia 20) e Fase B qualitativa di una commissione di tre membri (massimo 50, soglia 30); idoneità con almeno 60 punti su 100. È l’avviso regionale più recente per la produzione."
+    },
+    {
+      "nome": "Lazio Cinema Futuro (L.R. 5/2020, lungometraggi cinematografici con costo tra 2,5 e 5 milioni di euro)",
+      "url": "https://www.lazioinnova.it/bandi/bando-lazio-cinema-futuro/",
+      "descrizione": "Avviso approvato con Det. n. G14904 del 10/11/2025, gestito da Lazio Innova: 6,5 milioni di euro per lungometraggi di finzione o animazione sui temi «educazione al sentimento», «storia», «benessere» o «turismo», con costo tra 2,5 e 5 milioni di euro e almeno il 50% dei costi del beneficiario nel Lazio. Domande dal 14/11/2025 al 12/02/2026 (chiuso); esiti con Det. G11079 del 05/08/2026 e G13542 del 05/10/2026. Idoneità con tutte le soglie e almeno 60 punti su 100. Il Piano annuale 2026 prevede una nuova edizione da 3 milioni, non ancora uscita al 14/11/2026."
+    },
+    {
+      "nome": "Avviso per iniziative di promozione della cultura cinematografica e audiovisiva nel Lazio – Edizione 2026 (L.R. 5/2020)",
+      "url": "https://www.regione.lazio.it/sites/default/files/documentazione/2026/CIN-DD-G08532-19-06-2026-AllegatoA.pdf",
+      "descrizione": "Allegato A alla Det. n. G08532 del 19/06/2026: contributi per iniziative di promozione della cultura cinematografica (proposte dalle ore 12:00 del 30/06/2026 alle ore 12:00 del 10/08/2026). Non finanzia la produzione di opere: è citato solo per evitare confusione con gli avvisi di produzione. Sul sito regionale compare anche la notizia «Avviso pubblico Lazio Terra di Cinema edizione 2026», che non ho aperto: il collegamento tra i due non è verificato."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2025,
+      "titolo": "Det. n. G06096 del 06/05/2026 — Lazio Cinema International 2025, 1ª edizione: domande idonee e finanziabili (Allegati A e B)",
+      "url": "https://www.lazioeuropa.it/app/uploads/2026/05/DD_G06096_06_05_2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "Det. n. G04931 del 15/04/2026 — Lazio Cinema International 2025, 1ª edizione: domande non idonee",
+      "url": "https://www.lazioeuropa.it/app/uploads/2026/04/Det-G04931-del-15.04.26-Non-Idonei.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "Det. n. G10680 del 29/07/2026 — Lazio Cinema International 2025, 1ª edizione: domande non ammissibili e rinunciatarie (2° stralcio)",
+      "url": "https://www.lazioeuropa.it/app/uploads/2026/08/DeG10680-del-29.07.2026_-Non-Ammissibili-2%C2%B0-stralcio.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Art. 6, tabella dei criteri (pag. 18-19 dell’Avviso)",
+        "testo": "[Punti soglia, Punti max] A Qualità tecnica, originalità e respiro internazionale dell’Opera Audiovisiva 9 15 […] B Curricula o track record delle figure chiave 15 25 […] 3 Track record specifico produttori stranieri e relativi eventuali distributori 3 5 […] C Grado di realizzabilità finanziaria dell’Opera 6 10 […] Criterio di Priorità — D Quote di compartecipazione italiana ed estera equilibrate 20 — E Capacità dell’Opera Audiovisiva di valorizzare il Lazio come destinazione turistica […] 10 — F Rilevante componente femminile 5 — G Opere Prime e Seconde o di Giovani Autori 5 — Totale 100"
+      },
+      {
+        "riferimento": "Art. 6, soglie di idoneità",
+        "testo": "Saranno considerate idonee le Opere Audiovisive che hanno raggiunto almeno i punteggi soglia previsti per i criteri di valutazione A, B e C e per il sub criterio B.3, e almeno il punteggio complessivo di 50 punti."
+      },
+      {
+        "riferimento": "Art. 6, criterio C.1",
+        "testo": "Si considera la maggiore capacità finanziaria di cui all’articolo 2 rispetto al rapporto minimo ivi stabilito. Sono attribuiti 2 punti in caso di rapporto minimo (1), 5 punti in caso di rapporto pari o superiore a 4 e punteggi calcolati per interpolazione lineare per rapporti intermedi."
+      },
+      {
+        "riferimento": "Art. 6, criterio C.2",
+        "testo": "A ciascun Coproduttore Qualificato è attribuito un punteggio pari a 0 ove il rapporto risulti pari o inferiore al 50%, pari a 5 ove il rapporto risulti pari o superiore al 250% e punteggi calcolati per interpolazione lineare per rapporti intermedi. Il punteggio assegnato per il sub-criterio è la somma dei punteggi attribuiti a ciascun Coproduttore Qualificato moltiplicata per la Quota di Compartecipazione di ciascuno di essi."
+      },
+      {
+        "riferimento": "Art. 6, criterio D",
+        "testo": "Minore tra Quota Italiana e Estera — Punteggio: Inferiore o pari al 10% 0; Superiore al 10%, ma non superiore al 15% 4; Superiore al 15%, ma non superiore al 20% 8; Superiore al 20%, ma non pari o superiore al 30% 12; Pari o superiore al 30% 16. Maggiorazione per coproduzioni tra più di 2 Stati (almeno 10% ciascuno): 3 Stati (2 Stati Esteri) +2; 4 Stati o più (3 Stati Esteri o più) +4."
+      },
+      {
+        "riferimento": "Art. 3",
+        "testo": "L’Avviso ha una dotazione finanziaria di 5 milioni di euro. […] L’importo massimo dell’Aiuto concedibile per ogni singola Opera Audiovisiva ai sensi dell’art. 54 del RGE non può superare l’importo di 2.000.000,00 euro in valore assoluto."
+      },
+      {
+        "riferimento": "Art. 5, termini",
+        "testo": "L’invio della Domanda deve avvenire a partire dalle ore 12:00 del giorno di pubblicazione del presente avviso e fino alle ore 17:00 del 21 aprile 2026."
+      },
+      {
+        "riferimento": "Art. 8, erogazione",
+        "testo": "un anticipo obbligatorio da richiedersi entro 4 mesi dalla Data di Concessione, nella misura del 40% del contributo concesso e garantito da Fideiussione. […] una erogazione a saldo, da richiedersi entro i 30 giorni successivi alla presentazione della richiesta definitiva di credito di imposta […] e comunque entro 12 mesi dalla Data di Concessione. Tale secondo termine è di 24 mesi per le Opere di durata superiore ai 220 minuti e per le Opere di Animazione."
+      },
+      {
+        "riferimento": "Foglio ufficiale «Dati e Calcoli Opera» 2026, «Coperture finanziarie», cella B45 (punteggio C.2)",
+        "testo": "=+D43*D44+E43*E44+F43*F44+…+P43*P44, dove la riga 43 è il punteggio individuale =+IF(D42<0.5,0,+IF(D42>2.5,5,+(D42-0.5)*2.5)) e la riga 44 la Quota di Compartecipazione del coproduttore se Qualificato (altrimenti 0)."
+      }
+    ],
+    "dubbi": [
+      "INCOERENZA NEL TESTO UFFICIALE: la tabella dell’art. 6 dichiara «Totale 100», ma i massimi dei criteri sommano a 90 (15 + 25 + 10 + 20 + 10 + 5 + 5). Verificato sia sul testo estratto sia sull’immagine delle pagine 18-19 del BUR n. 21 del 12/03/2026 e sulla copia dell’Avviso sul sito di Lazio Innova. Qui punteggioMassimo = 90 (somma reale) e punteggioMassimoDichiarato = 100; non ho trovato rettifiche o FAQ che chiariscano dove siano i 10 punti mancanti.",
+      "Il criterio G (Opere Prime e Seconde o di Giovani Autori) ha solo il massimo di 5 punti, senza regola di attribuzione scritta: l’alternativa 5/0 è una lettura, non una citazione.",
+      "Il criterio D è unico nell’Avviso (massimo 20): l’ho diviso in D.1 (tabella, massimo 16) e D.2 (maggiorazione, massimo 4). La metrica «minore tra Quota Italiana e Quota Estera» non è tra quelle previste dallo schema: D.1 è di tipo qualitativo con campo «calcolo», più le fasce pronte in «fasce» e «metricaProposta».",
+      "La soglia di 3 punti sul sub criterio B.3 non è una soglia di sezione: è riportata in «soglieCriteri» della categoria e in «sogliaMin» del criterio, campi non previsti dallo schema.",
+      "«contributo.percentuale» = 60 è l’intensità massima (opere in coproduzione con Paesi DAC) sui Costi Ammissibili, non sul costo di produzione; per un’opera ordinaria l’intensità di norma concedibile è 10% (20% transfrontaliera, 40% opera difficile): vedi «percentualePerTipo». Il minimo di 200.000 euro non vale per i documentari e per le opere con Quota Italiana inferiore al 50%.",
+      "La dotazione di 5 milioni di euro è unica per tutto l’Avviso, non ripartita per tipologia di opera: è in «dotazioneComplessiva» e le categorie hanno «dotazione» vuota. Le tre categorie sono una nostra suddivisione per i diversi costi minimi: griglia e soglie sono identiche.",
+      "Il saldo del 60% è ricavato per differenza dall’anticipo del 40%: l’Avviso non scrive la percentuale del saldo.",
+      "La regola con cui la Commissione compone i punteggi dei singoli membri non è scritta nell’Avviso.",
+      "Esito della 1ª edizione 2026 non trovato: al 14/11/2026 le pagine del bando su Lazio Innova e LazioEuropa non riportano elenchi né graduatorie. Non ho trovato né una 2ª edizione 2026 né un annuncio per il 2027: «prossimaEdizione» è una stima.",
+      "La graduatoria pubblica dell’edizione 2025 (Det. G06096/2026, Allegato A) ha una colonna «Punteggio» con il solo totale per progetto, non il dettaglio per criterio; la griglia 2025 era diversa (soglia 60) e quei punteggi non sono confrontabili con la griglia 2026.",
+      "L’Avviso 2025 è in un PDF con testo non estraibile: la sua griglia è stata letta dall’immagine delle pagine 19-20 solo per confronto.",
+      "Scelta dell’atto principale: nel Lazio ci sono tre avvisi distinti per la produzione (Lazio Cinema International, Lazio Cinema Futuro, Lazio Next Generation). Ho trascritto come principale Lazio Cinema International perché copre lungometraggi e serie TV/web con il massimale più alto; Lazio Next Generation, che è il più recente (ottobre-novembre 2026) e ha una griglia coerente a 100 punti, è trascritto per intero in «altriBandi[0].scheda» e può essere promosso a bando autonomo.",
+      "Durata: l’Avviso richiede una durata «superiore a 52 minuti» (art. 1 lett. D), cioè 52 minuti esclusi; «durataMin» = 52 va letto come soglia esclusa (il foglio ufficiale controlla C13>52).",
+      "Verifica del 14/11/2026: nessuna rettifica, proroga o FAQ che modifichi l’Avviso LCI 2026 risulta sulle pagine di Lazio Innova e LazioEuropa né dalle ricerche; il foglio «Dati e Calcoli Opera» è stato ricaricato ad aprile 2026 ma le formule di C.1 e C.2 coincidono con il testo dell’art. 6."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "C.2: corretto il campo «calcolo», che parlava di media ponderata sulle quote dei soli Coproduttori Qualificati. Il foglio ufficiale (cella B45) e l’art. 6 sommano il punteggio di ciascuno moltiplicato per la sua quota sul totale dell’opera, quindi con coproduttori non qualificati il massimo scende sotto 5.",
+      "Aggiunta la citazione della formula ufficiale di C.2 e il dubbio sulla durata «superiore a 52 minuti» (52 esclusi).",
+      "Aggiunti in fontiUrl le Det. G13701 e G13879/2026 (Lazio Next Generation) e in esitiPubblici la Det. G10680 del 29/07/2026 (LCI 2025, non ammissibili, 2° stralcio).",
+      "Scheda Lazio Next Generation in altriBandi: aggiornato il dubbio sulle fonti (rettifica G13879 e chiarimenti letti, nessun effetto sui punteggi) e aggiunta una nota sui chiarimenti."
+    ],
+    "dubbi": [
+      "L’atto dichiara «Totale 100» ma i massimi dei criteri sommano a 90 (verificato su testo e immagine delle pagg. 18-19 del BUR n. 21/2026); il file usa 90, nessuna rettifica trovata.",
+      "Criterio G: solo il massimo (5) è scritto; la regola 5/0 è una lettura.",
+      "Divisione di D in D.1 (16) e D.2 (+4) è redazionale; la regola di composizione dei voti della Commissione non è scritta.",
+      "Esiti della 1ª edizione 2026 non ancora pubblicati al 14/11/2026; prossima edizione non annunciata."
+    ]
+  }
+}
