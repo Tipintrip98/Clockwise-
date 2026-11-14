@@ -1,0 +1,596 @@
+{
+ "id": "alto-adige-idm-film-fund-2024-2026",
+ "fondoId": "alto-adige",
+ "revisione": "2026-11-14",
+ "nome": "Alto Adige — IDM Film Fund: sostegno alle produzioni cinematografiche e televisive (criteri di applicazione 2024-2026, call 2026 e 2027)",
+ "nomeBreve": "Alto Adige · IDM Film Fund 2024-2026",
+ "ente": "Provincia autonoma di Bolzano – Alto Adige (Giunta provinciale: approva i criteri) · IDM Südtirol – Alto Adige, ente strumentale della Provincia, tramite IDM Film & Music Commission Südtirol (riceve e istruisce le domande, nomina il gruppo di esperti, concede ed eroga i contributi)",
+ "regione": "Trentino-Alto Adige (Provincia autonoma di Bolzano)",
+ "territorio": "Alto Adige (provincia di Bolzano)",
+ "gentilizio": "altoatesini",
+ "fonte": "Criteri di applicazione per il sostegno alle produzioni cinematografiche e televisive — Allegato A alla deliberazione della Giunta provinciale di Bolzano n. 269 del 23 aprile 2024 (validi dal 01.01.2024 per le domande presentate entro il 31 dicembre 2026), integrati dal Fact Sheet IDM «Produzione lungometraggi» (ultimo aggiornamento: maggio 2026)",
+ "stato": "aperto",
+ "tipoValutazione": "selettiva",
+ "descrizione": "Contributo a fondo perduto della Provincia autonoma di Bolzano, gestito da IDM Film & Music Commission Südtirol, per lungometraggi e serie (oltre 52 minuti) e per cortometraggi realizzati in tutto o in parte in Alto Adige; possono chiederlo imprese di produzione di qualunque Paese. Tre scadenze («call») l’anno, domanda solo online dopo un colloquio di consulenza obbligatorio. Non c’è punteggio: un gruppo di esperti esprime un parere a maggioranza sui criteri culturali, contenutistici ed economici dell’art. 7; il vincolo numerico centrale è l’«effetto Alto Adige», cioè una spesa sul territorio pari ad almeno il 150% del contributo richiesto.",
+ "paginaUfficiale": "https://www.film-music.idm-suedtirol.com/it/funding/termini-di-presentazione-della-domanda",
+ "fontiUrl": [
+  {
+   "titolo": "Criteri di applicazione validi a partire dal 01/01/2024 — deliberazione della Giunta provinciale n. 269 del 23/04/2024 con Allegato A e allegati A-D (PDF bilingue, 49 pagine)",
+   "url": "https://www.film-music.idm-suedtirol.com/media/37000/criteri-di-applicazioni-validi-a-partire-dal-01012024.pdf",
+   "tipo": "decreto",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "Fact Sheet — sostegno alla produzione di lungometraggi (ultimo aggiornamento: maggio 2026)",
+   "url": "https://www.film-music.idm-suedtirol.com/media/38778/202604_fact-sheet_pf-it.pdf",
+   "tipo": "avviso",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "Fact Sheet — sostegno alla produzione di cortometraggi (ultimo aggiornamento: maggio 2026)",
+   "url": "https://www.film-music.idm-suedtirol.com/media/38777/202604_fact-sheet_kf-it.pdf",
+   "tipo": "avviso",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "Fact Sheet — sostegno allo sviluppo e pre-produzione",
+   "url": "https://www.film-music.idm-suedtirol.com/media/38779/202604_fact-sheet_pvf-it.pdf",
+   "tipo": "avviso",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Termini di presentazione della domanda (call 2026 e 2027)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/termini-di-presentazione-della-domanda",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Finanziamento alla produzione",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/finanziamenti/finanziamento-alla-produzione",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Il finanziamento alle produzioni cinematografiche in Alto Adige (dotazione, tre call l’anno)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/finanziamenti",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Funding (stanziamento complessivo annuale di 4,5 milioni di euro)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Area download (criteri, fact sheet, modelli di calcolo, esempi di domanda)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/area-download",
+   "tipo": "modulistica",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Esempio di domanda di contributo alla produzione (modulo online, versione del 23.12.2024)",
+   "url": "https://www.film-music.idm-suedtirol.com/media/1568/template_domanda_pf.pdf",
+   "tipo": "modulistica",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — La Commissione di esperti di IDM",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/la-commissione-di-esperti-di-idm",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Domanda online (portale)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/domanda-online",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — News del 03.11.2026: «Dal Wolpertinger a Taylor Swift a Vienna: IDM sostiene undici progetti cinematografici» (esito della Call #3 2026)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/news/dal-wolpertinger-a-taylor-swift-a-vienna-idm-sostiene-undici-progetti-cinematografici/71545",
+   "tipo": "graduatoria",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "IDM — Banca dati dei progetti (produzioni finanziate per call, dal 2010)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/banca-dati-dei-progetti",
+   "tipo": "graduatoria",
+   "consultato": "2026-11-14"
+  },
+  {
+   "titolo": "Italy for Movies — scheda «IDM Film Fund» (fonte secondaria, usata solo per le date delle Call #1 e #2 2026)",
+   "url": "https://www.italyformovies.com/bandi/detail/38/idm-film-fund",
+   "tipo": "pagina",
+   "consultato": "2026-11-14"
+  }
+ ],
+ "storicoEdizioni": [
+  {
+   "anno": 2026,
+   "pubblicato": null,
+   "scadenza": "2026-09-08",
+   "nota": "Call #3 2026 (pagina ufficiale dei termini): invio entro l’08.09.2026 ore 12:00, ultimo giorno di consulenza obbligatoria 25.08.2026, decisione entro il 30.10.2026."
+  },
+  {
+   "anno": 2026,
+   "pubblicato": null,
+   "scadenza": "2026-05-05",
+   "nota": "Call #2 2026. Data ricavata da fonte secondaria (scheda Italy for Movies): la pagina ufficiale dei termini non la riporta più."
+  },
+  {
+   "anno": 2026,
+   "pubblicato": null,
+   "scadenza": "2026-01-20",
+   "nota": "Call #1 2026. Data ricavata da fonte secondaria (scheda Italy for Movies): la pagina ufficiale dei termini non la riporta più."
+  },
+  {
+   "anno": 2024,
+   "pubblicato": null,
+   "scadenza": null,
+   "nota": "Criteri oggi in vigore: approvati dalla Giunta provinciale con deliberazione n. 269 nella seduta del 23/04/2024, validi dal 01.01.2024 per le domande presentate entro il 31 dicembre 2026 (art. 27). Revocano la deliberazione n. 479 del 5 luglio 2022."
+  },
+  {
+   "anno": 2022,
+   "pubblicato": null,
+   "scadenza": null,
+   "nota": "Criteri precedenti: «validi a partire dal 05/07/2022» (deliberazione della Giunta provinciale n. 479 del 5 luglio 2022), scaduti il 31/12/2023; valgono ancora per i progetti che hanno fatto domanda entro il 31 dicembre 2023."
+  },
+  {
+   "anno": 2021,
+   "pubblicato": null,
+   "scadenza": null,
+   "nota": "Criteri «validi a partire dal 01/01/2021» (elencati nell’area download di IDM per i progetti con domanda entro il 31 dicembre 2023)."
+  },
+  {
+   "anno": 2010,
+   "pubblicato": null,
+   "scadenza": null,
+   "nota": "La banca dati dei progetti di IDM elenca le call dal 2010 (una call) e poi tre call l’anno dal 2011 al 2026 (per il 2021 sono elencate solo la 1 e la 3)."
+  }
+ ],
+ "finestre": [
+  {
+   "anno": 2027,
+   "dal": "2026-09-08",
+   "al": "2027-01-12",
+   "ora": "12:00",
+   "consulenzaEntro": "2026-12-29",
+   "decisioneEntro": "2027-03-05",
+   "nota": "Call #1 2027: invio della candidatura entro il 12.01.2027 ore 12:00; ultimo giorno di consulenza obbligatoria 29.12.2026; decisione entro il 05.03.2027. La data «dal» non è scritta: è la scadenza precedente, perché le domande si possono presentare in qualunque momento (art. 6, comma 1)."
+  },
+  {
+   "anno": 2027,
+   "dal": "2027-01-12",
+   "al": "2027-05-18",
+   "ora": "12:00",
+   "consulenzaEntro": "2027-05-04",
+   "decisioneEntro": "2027-07-09",
+   "nota": "Call #2 2027: invio entro il 18.05.2027 ore 12:00; ultimo giorno di consulenza obbligatoria 04.05.2027; decisione entro il 09.07.2027. «Dal» = scadenza precedente (art. 6, comma 1)."
+  },
+  {
+   "anno": 2027,
+   "dal": "2027-05-18",
+   "al": "2027-09-21",
+   "ora": "12:00",
+   "consulenzaEntro": "2027-09-07",
+   "decisioneEntro": "2027-11-12",
+   "nota": "Call #3 2027: invio entro il 21.09.2027 ore 12:00; ultimo giorno di consulenza obbligatoria 07.09.2027; decisione entro il 12.11.2027. «Dal» = scadenza precedente (art. 6, comma 1)."
+  }
+ ],
+ "prossimaEdizione": {
+  "anno": 2027,
+  "periodoAtteso": "tre call già fissate: 12 gennaio, 18 maggio e 21 settembre 2027, sempre alle ore 12:00",
+  "base": "Date pubblicate da IDM sulla pagina dei termini e nella news del 03.11.2026. Attenzione: i criteri in vigore si applicano alle domande presentate entro il 31 dicembre 2026 (art. 27, comma 1); per le call 2027 è quindi attesa una nuova deliberazione della Giunta provinciale (nuovi criteri o proroga), che al 14.11.2026 non risulta pubblicata nell’area download di IDM."
+ },
+ "sogliaTotale": 0,
+ "punteggioMassimo": 0,
+ "spesaTerritorioMinPct": 150,
+ "producerFeeMaxPct": 7.5,
+ "commissione": {
+  "componenti": null,
+  "componentiMin": 3,
+  "componentiMax": 12,
+  "descrizione": "Gruppo di esperti (art. 8): da un minimo di tre a un massimo di dodici esperti indipendenti del settore, nominati da IDM su proposta del responsabile del fondo, possibilmente in pari numero donne e uomini, con almeno un rappresentante della Provincia o di IDM; devono essere rappresentate le Ripartizioni provinciali Cultura italiana e Cultura tedesca, le istituzioni di formazione cinematografica e le organizzazioni culturali del cinema dell’Alto Adige. La composizione può variare da una call all’altra. Ogni membro presenta, dove possibile, una valutazione preliminare (anche un breve commento) sul portale online; le valutazioni preliminari sono la base della discussione in seduta. La seduta è valida con la maggioranza dei componenti; il parere definitivo è formulato a maggioranza dei votanti. Nessun punteggio numerico. Al gruppo arrivano solo le domande che soddisfano i requisiti di ammissibilità. La decisione finale è del direttore di IDM, che tiene conto del parere e la comunica per iscritto."
+ },
+ "invio": {
+  "canale": "piattaforma",
+  "indirizzo": "https://filmfund.idm-suedtirol.com/index.php?lang=IT",
+  "oggetto": "",
+  "regole": [
+   "La domanda si presenta solo tramite il portale online di IDM (art. 6, comma 2); il modulo PDF dell’area download è soltanto un esempio.",
+   "Prima serve un colloquio di consulenza con un referente del fondo, da sostenere almeno 10 giorni lavorativi prima della scadenza (art. 6, comma 4): dopo il colloquio IDM abilita la registrazione al portale. Per prenotarlo vanno inviati soggetto, piano finanziario complessivo, piano dei costi con le spese con effetto territoriale in colonna separata e cronoprogramma (Fact Sheet).",
+   "La domanda deve pervenire prima del primo giorno di riprese; l’avvio dell’opera prima della concessione è a rischio del richiedente (art. 6, comma 3).",
+   "Le domande vanno presentate complete: quelle incomplete sono archiviate se non vengono completate entro la data fissata da IDM (art. 6, comma 2).",
+   "Documenti in tedesco o in italiano; quelli contrassegnati con asterisco nel Fact Sheet (soggetto, sceneggiatura o trattamento, progetto di serializzazione, piano di produzione, piano di distribuzione, producer’s note e director’s note) anche in traduzione inglese, oppure in originale inglese.",
+   "Diritti di presentazione: versamento di 16,00 euro sul conto di IDM con causale «Film», titolo dell’opera e nome del richiedente; IDM provvede alle marche da bollo (Fact Sheet).",
+   "Una domanda può essere ritirata senza giustificazione fino a due settimane dopo la scadenza; dopo, solo in casi eccezionali e con richiesta scritta motivata entro le ore 18:00 del giorno precedente la riunione del gruppo di esperti (Fact Sheet).",
+   "Un progetto non ammesso può essere ripresentato una seconda volta, dopo un nuovo colloquio di consulenza e solo con modifiche sostanziali (per esempio una nuova sceneggiatura o la conferma di una componente decisiva del finanziamento) (Fact Sheet)."
+  ]
+ },
+ "categorie": [],
+ "griglie": {},
+ "allegati": [
+  {
+   "tipo": "modulo1",
+   "nome": "Domanda di contributo compilata sul portale online IDM (dati dell’opera, diritti, società, budget, piano di finanziamento, cast e troupe)",
+   "obbligo": "sempre",
+   "fonte": "art. 6, comma 2"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Soggetto dell’opera (per le serie: soggetto breve di serie), massimo 2 pagine A4, carattere minimo 10, interlinea minima 1,5, in tedesco o italiano e in inglese",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. a) e Fact Sheet"
+  },
+  {
+   "tipo": "sceneggiatura",
+   "nome": "Sceneggiatura o, per i documentari, trattamento; per le opere seriali almeno la sceneggiatura o il trattamento della puntata pilota e il progetto di serializzazione (formato, durata, genere, struttura degli episodi e della serie, modelli di riferimento); in tedesco o italiano e in inglese",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. b)"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Elenco del cast, della troupe e dei fornitori con residenza fiscale o sede legale di ciascuno, con evidenza dei professionisti e delle ditte riconosciuti come effetto territoriale; accordi vincolanti documentati.",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. c) e Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Attestazione dei diritti di utilizzazione di soggetto, sceneggiatura e titolo",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. d)"
+  },
+  {
+   "tipo": "distribuzione",
+   "nome": "Contratto di distribuzione valido (opere cinematografiche) o contratto con un servizio di media audiovisivo lineare o a richiesta (opere TV e web); lettere d’intenti, deal memo e contratti con distributori, broadcaster, piattaforme, festival, da cui risultino i diritti che restano al produttore",
+   "obbligo": "se_dichiarato",
+   "fonte": "art. 12, comma 1, lett. e) e comma 6"
+  },
+  {
+   "tipo": "modulo3",
+   "nome": "Preventivo dettagliato dei costi complessivi, al netto dell’IVA, con i giustificativi delle voci principali e con le spese in Alto Adige e negli altri territori su colonne separate (modello MiC «Piano dei costi di coproduzione»…",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. f), comma 4 e Fact Sheet"
+  },
+  {
+   "tipo": "finanziamenti",
+   "nome": "Piano finanziario completo e vincolante, con le voci possibilmente già confermate e documentate e con evidenza del gap di finanziamento; panoramica delle richieste presentate o in programma presso altri enti, con lo stato di ciascuna",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. g) e Fact Sheet"
+  },
+  {
+   "tipo": "referenze_bancarie",
+   "nome": "Attestazione delle risorse finanziarie proprie (5% dei costi complessivi): liquidità comprovata da conferma bancaria oppure da garanzia bancaria o assicurativa",
+   "obbligo": "sempre",
+   "fonte": "art. 9, comma 2 e Fact Sheet"
+  },
+  {
+   "tipo": "piano_lavorazione",
+   "nome": "Piano di lavorazione",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Piano di produzione dettagliato (cronoprogramma), in tedesco o italiano e in inglese",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1 e art. 22, comma 6"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Piano di distribuzione/sfruttamento commerciale dell’opera, in tedesco o italiano e in inglese",
+   "obbligo": "sempre",
+   "fonte": "art. 12, comma 1, lett. j)"
+  },
+  {
+   "tipo": "coproduzione",
+   "nome": "Contratto di coproduzione; profilo e filmografia delle società coproduttrici",
+   "obbligo": "se_dichiarato",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "accordi_cast",
+   "nome": "Contratto di regia",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Producer’s note e director’s note sull’opera e sulla sua realizzazione, in tedesco o italiano e in inglese",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "cv_societa",
+   "nome": "Profilo e filmografia della società richiedente, curricula con filmografia di produttori e coproduttori",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "cv_autori",
+   "nome": "Curriculum con filmografia dello sceneggiatore/della sceneggiatrice",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "cv_regista",
+   "nome": "Curriculum con filmografia del/della regista e link ai lavori precedenti",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "produttore_esecutivo",
+   "nome": "Contratto con la produzione esecutiva",
+   "obbligo": "se_dichiarato",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Estratto del Registro delle imprese della società richiedente e copia dei bilanci e dei conti economici degli ultimi due esercizi",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Indicazione delle possibilità di formazione e aggiornamento offerte al personale altoatesino durante la realizzazione (per esempio tirocini)",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Bechdel Wallace Test e Chavez Perez Test compilati (Allegato D)",
+   "obbligo": "sempre",
+   "fonte": "art. 7, comma 1, lett. d) e Fact Sheet"
+  },
+  {
+   "tipo": "green_film",
+   "nome": "Checklist del protocollo di riprese sostenibili scelto (Green Shooting, parametri ÖFI) oppure autodichiarazione (FFA, Green Film)",
+   "obbligo": "se_dichiarato",
+   "fonte": "art. 7, comma 1, lett. e) ed esempio di domanda online"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Conferma del versamento di 16,00 euro per i diritti di presentazione della domanda",
+   "obbligo": "sempre",
+   "fonte": "Fact Sheet"
+  },
+  {
+   "tipo": "altro",
+   "nome": "Moodboard, storyboard e altri materiali artistici",
+   "obbligo": "consigliato",
+   "fonte": "Fact Sheet"
+  }
+ ],
+ "requisiti": [
+  {
+   "id": "impresa",
+   "testo": "Il richiedente è un’impresa di produzione cinematografica o televisiva (di qualunque Paese), con risorse economiche sufficienti; non è un canale televisivo né una piattaforma di streaming (art. 3, commi 1 e 4)"
+  },
+  {
+   "id": "coproduzione",
+   "testo": "In coproduzione presenta la domanda: il produttore altoatesino se partecipa (anche minoritario); altrimenti il produttore italiano se partecipa (anche minoritario); altrimenti il produttore maggioritario per distribuzione dei diritti (Fact Sheet)"
+  },
+  {
+   "id": "difficolta",
+   "testo": "Non è impresa in difficoltà (Reg. UE 651/2014, art. 2, punto 18) e non ha ordini di recupero pendenti per aiuti dichiarati illegali (art. 3, comma 3)"
+  },
+  {
+   "id": "opera",
+   "testo": "L’opera rientra tra quelle ammissibili (lungometraggio o serie oltre 52 minuti, oppure cortometraggio fino a 52 minuti) e non è uno spot pubblicitario, un video musicale, una trasmissione di attualità o sportiva, uno spettacolo televisivo, un reality o un format docutainment (art. 4)"
+  },
+  {
+   "id": "tv-web",
+   "testo": "Se è un’opera televisiva o web: non è commissionata e finanziata completamente da un’emittente o da una piattaforma e ha costi e qualità superiori alla media, oppure un importante collegamento culturale con l’Alto Adige (art. 4, comma 3)"
+  },
+  {
+   "id": "consulenza",
+   "testo": "Colloquio di consulenza con un referente del fondo sostenuto almeno 10 giorni lavorativi prima della scadenza della call (art. 6, comma 4)"
+  },
+  {
+   "id": "riprese",
+   "testo": "La domanda arriva prima del primo giorno di riprese (art. 6, comma 3)"
+  },
+  {
+   "id": "effetto",
+   "testo": "Il preventivo dimostra spese riconoscibili in Alto Adige pari ad almeno il 150% del contributo richiesto (60% per i cortometraggi; non richiesto per MASO) (artt. 11, 14 e 16)"
+  },
+  {
+   "id": "risorse-proprie",
+   "testo": "Risorse finanziarie proprie pari ad almeno il 5% dei costi di produzione, in liquidità attestata dalla banca (art. 9, comma 2)"
+  },
+  {
+   "id": "gap",
+   "testo": "Il piano finanziario mostra un fabbisogno (gap) almeno pari al contributo richiesto, senza sovrafinanziamento (art. 9, comma 1 e art. 12, comma 1, lett. g)"
+  },
+  {
+   "id": "cumulo",
+   "testo": "Il totale degli aiuti pubblici resta entro il 50% del costo totale (60% per le coproduzioni tra più Stati membri UE), salvo che l’opera sia un’«opera audiovisiva difficile» (art. 21)"
+  },
+  {
+   "id": "diritti",
+   "testo": "Il produttore dispone dei diritti di utilizzazione di soggetto, sceneggiatura e titolo (art. 12, comma 1, lett. d e art. 22, comma 3)"
+  },
+  {
+   "id": "lingua",
+   "testo": "Documenti in tedesco o in italiano, con traduzione inglese dei documenti creativi (art. 12, comma 1)"
+  },
+  {
+   "id": "lavoro",
+   "testo": "L’opera rispetta la legislazione italiana, in particolare diritto del lavoro, salari minimi e disposizioni tariffarie (art. 26, comma 1)"
+  },
+  {
+   "id": "diritti-presentazione",
+   "testo": "Versati 16,00 euro per i diritti di presentazione della domanda (Fact Sheet)"
+  }
+ ],
+ "scadenze": [
+  {
+   "id": "finanziamento",
+   "etichetta": "Attestazione dell’intero finanziamento dell’opera",
+   "mesi": 12,
+   "nota": "Art. 24, comma 5: se entro dodici mesi dalla conferma di concessione non è attestato l’intero finanziamento, la conferma è revocata per iscritto. Proroga solo in casi eccezionali, su richiesta scritta motivata."
+  },
+  {
+   "id": "riprese",
+   "etichetta": "Primo giorno di riprese",
+   "mesi": 18,
+   "nota": "Art. 24, comma 5 e Fact Sheet: le riprese devono iniziare entro 18 mesi dalla comunicazione di concessione, altrimenti la conferma è revocata. Proroga solo in casi eccezionali, su richiesta scritta motivata."
+  },
+  {
+   "id": "lancio",
+   "etichetta": "Lancio dell’opera in un Paese dello Spazio economico europeo",
+   "mesi": 30,
+   "nota": "Art. 26, comma 4 (lancio cinematografico dei film sovvenzionati); il Fact Sheet lo estende a tutte le opere sostenute in produzione: entro 30 mesi dalla conferma di concessione."
+  }
+ ],
+ "scadenzeNote": [
+  "Rendicontazione finale e documenti per la rata finale: entro 12 mesi dalla conclusione dell’opera, intesa come primo sfruttamento (Allegato B, punto 1, lett. d), salvo diversa previsione della dichiarazione d’impegno unilaterale.",
+  "Le rate vanno richieste secondo il cronoprogramma e le relative spese rendicontate entro la fine dell’anno successivo; in caso contrario il contributo è revocato, salvo proroga chiesta prima della scadenza per gravi e motivate ragioni (art. 22, comma 6).",
+  "Per le opere cinematografiche: almeno una proiezione in Alto Adige con il regista e almeno uno degli interpreti principali (art. 25, comma 3).",
+  "Un’opera cinematografica italiana sovvenzionata deve rispettare i termini sospensivi vigenti per lo sfruttamento su supporto video e audio e per la trasmissione televisiva (art. 26, comma 3)."
+ ],
+ "erogazione": [
+  {
+   "quota": "prima rata (anticipo)",
+   "percentuale": 25,
+   "condizione": "Alla chiusura del finanziamento: prova certa del finanziamento complessivo, piano di finanziamento e preventivo definitivi, conto corrente dedicato all’opera, date definitive delle riprese in Alto Adige e fuori provincia, conferma delle principali figure di cast e troupe, assicurazione per annullamento e materiali; dopo la revisione economico-giuridica dell’opera e il rilascio della dichiarazione d’impegno unilaterale (Allegato B, punto 1, lett. a; art. 22, comma 2)."
+  },
+  {
+   "quota": "seconda rata (anticipo)",
+   "percentuale": 30,
+   "condizione": "All’avvio delle riprese: sceneggiatura definitiva, elenco definitivo di cast e troupe con residenza o sede fiscale, piano definitivo delle riprese, ordine del giorno e primo giornaliero, elenco definitivo delle location (Allegato B, punto 1, lett. b)."
+  },
+  {
+   "quota": "terza rata (anticipo)",
+   "percentuale": 25,
+   "condizione": "Alla consegna del primo montaggio approvato da IDM, con informazioni aggiornate sul primo sfruttamento e rendicontazione intermedia che evidenzi l’effetto Alto Adige raggiunto (Allegato B, punto 1, lett. c)."
+  },
+  {
+   "quota": "saldo",
+   "percentuale": 20,
+   "condizione": "Dopo l’esito positivo della verifica della rendicontazione finale, da presentare entro 12 mesi dal primo sfruttamento, con copia digitale dell’opera, prova del deposito della copia zero e materiale promozionale (Allegato B, punto 1, lett. d)."
+  }
+ ],
+ "note": [
+  "Valutazione selettiva senza punteggio: un gruppo di esperti (da 3 a 12) valuta valore culturale, contenutistico ed economico del progetto (art. 7-8) e formula un parere a maggioranza; il direttore di IDM decide importo e progetti finanziati. Non ci sono punteggi, soglie né graduatorie.",
+  "Tipologie e massimali dell’ultimo atto letto: Produzione di lungometraggi — opere cinematografiche, anche seriali, di durata complessiva superiore a 52 minuti: fino al 50%, massimo 800.000 euro (2026); Produzione di lungometraggi — opere televisive e opere web (film TV, serie, opere per piattaforme) di durata complessiva superiore a 52 minuti: fino al 30%, massimo 800.000 euro (2026); Produzione di cortometraggi e serie short-form — opere, anche seriali, di durata complessiva non superiore a 52 minuti: fino al 70%, massimo 30.000 euro (2026); MASO — cortometraggi low budget di alta qualità artistica il cui team creativo è stato selezionato al programma MASO (art. 16): fino al 70%, massimo 30.000 euro (2026).",
+  "Nessun punteggio, nessuna soglia e nessuna graduatoria: la selezione è un parere a maggioranza del gruppo di esperti sui criteri qualitativi dell’art. 7; Clockwise non può simulare un punteggio, può solo verificare i vincoli numerici (effetto Alto Adige, intensità, massimali, risorse proprie, voci di budget).",
+  "Effetto Alto Adige: almeno il 150% del contributo richiesto va speso in Alto Adige (art. 11, comma 1). IDM dichiara un effetto medio di circa il 200% negli ultimi anni.",
+  "Massimale di 800.000,00 euro a opera; IDM avverte che negli ultimi anni l’importo massimo erogato è stato di 500.000,00 euro.",
+  "Se a consuntivo i costi complessivi, l’effetto territoriale o le giornate di ripresa in Alto Adige sono inferiori a quanto dichiarato, il contributo è ridotto della stessa percentuale; con più scostamenti vale quello maggiore (art. 24, commi 1-3). Se i costi aumentano il contributo non aumenta.",
+  "Il contributo è cumulabile con altri aiuti pubblici e con il tax credit nazionale, entro i limiti di intensità dell’art. 21.",
+  "Non esiste alcun diritto alla concessione: il numero dei progetti ammessi dipende dai fondi disponibili nell’anno e IDM può concedere meno di quanto richiesto.",
+  "L’esempio di domanda online (versione del 23.12.2024) chiede di dichiarare se è stato usato un software di intelligenza artificiale per preparare i documenti della richiesta e per scrivere il trattamento o la sceneggiatura.",
+  "Le prestazioni proprie, gli accantonamenti e le forniture gratuite sono riconosciuti a consuntivo solo per l’importo indicato nel preventivo presentato con la domanda (art. 12, commi 3 e 5).",
+  "Nei titoli di testa e di coda va inserito il logo di IDM/Provincia; a fine lavorazione vanno consegnati una copia digitale archiviabile dell’opera e il materiale promozionale (almeno dieci foto di scena, backstage, locandina, trailer, pressbook) (art. 25).",
+  "I criteri in vigore si applicano alle domande presentate entro il 31 dicembre 2026 (art. 27): per le call del 2027 va verificato se la Giunta provinciale ha approvato nuovi criteri o una proroga.",
+  "Effetto Alto Adige: spesa riconosciuta sul territorio almeno pari al 150% del contributo per i lungometraggi (art. 11, comma 1) e al 60% per i cortometraggi (art. 14, comma 1); nessun minimo per MASO (art. 16, comma 7). IDM indica un effetto medio di circa il 200% negli ultimi anni."
+ ],
+ "altriBandi": [
+  {
+   "nome": "Sostegno allo sviluppo e alla pre-produzione (stesso atto, Capo V, artt. 17-19)",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/finanziamenti/finanziamento-alla-preproduzione",
+   "descrizione": "Per lo sviluppo e/o la pre-produzione di lungometraggi, anche seriali, con un riferimento culturale all’Alto Adige o un forte nesso produttivo con il territorio. Fino al 70% dei costi di sviluppo, massimale 50.000 euro; possibile contributo in due fasi, con prima fase per la sceneggiatura di norma fino a 25.000 euro. Rate 50% – 25% – 25% (Allegato B, punto 2). Stesse call e stesso gruppo di esperti; nessun punteggio."
+  },
+  {
+   "nome": "Criteri per il sostegno delle candidature ai premi cinematografici internazionali di produzioni cinematografiche e audiovisive (validi dal 14.01.2025)",
+   "url": "https://www.film-music.idm-suedtirol.com/media/37541/brl-10_2025-richtlinien-unterstuetzung-kandidaturen-internationale-filmpreise.pdf",
+   "descrizione": "Atto distinto, elencato nell’area download di IDM; non riguarda la produzione e non è stato trascritto."
+  },
+  {
+   "nome": "MASO — Short Film Training Programme",
+   "url": "https://www.film-music.idm-suedtirol.com/it/location-development/maso",
+   "descrizione": "Programma di formazione di IDM per cortometraggi: i team selezionati possono chiedere il contributo dell’art. 16 (categoria «cortometraggio-maso»)."
+  }
+ ],
+ "esitiPubblici": [
+  {
+   "anno": 2026,
+   "titolo": "Call #3 2026 — news IDM del 03.11.2026: undici progetti selezionati (cinque in produzione, tre cortometraggi, tre in sviluppo), con titoli e registi",
+   "url": "https://www.film-music.idm-suedtirol.com/it/news/dal-wolpertinger-a-taylor-swift-a-vienna-idm-sostiene-undici-progetti-cinematografici/71545",
+   "contienePunteggi": false,
+   "perSezione": false
+  },
+  {
+   "anno": 2026,
+   "titolo": "Banca dati dei progetti IDM: produzioni finanziate per call (dal 2010 al 2026), con informazioni su finanziamento e produzione",
+   "url": "https://www.film-music.idm-suedtirol.com/it/funding/banca-dati-dei-progetti",
+   "contienePunteggi": false,
+   "perSezione": false
+  }
+ ],
+ "affidabilita": {
+  "griglia": "testo_ufficiale",
+  "citazioni": [
+   {
+    "riferimento": "Criteri, art. 7, comma 1 — criteri di selezione (lett. a-c)",
+    "testo": "Possono accedere al sostegno opere audiovisive, anche seriali, conformi alle finalità del sostegno di cui all’articolo 1, che rispondano ad uno o più dei seguenti requisiti: a) durante la produzione dell’opera producano degli effetti positivi sull’economia culturale e sull’offerta formativa dell’Alto Adige; b) contribuiscano al rafforzamento del polo culturale e mediatico Alto Adige e/o alla visibilità della “Destinazione Alto Adige”; c) siano adatti ad una distribuzione/uno sfruttamento sovraregionale e/o internazionale"
+   },
+   {
+    "riferimento": "Criteri, art. 7, comma 1, lett. d) — parametri di qualità",
+    "testo": "contribuiscano alla cultura cinematografica europea; i parametri che determinano la qualità artistica e culturale delle opere audiovisive sono tra gli altri l’importanza contenutistica, storica, contemporanea, creativa, sociale o civile del soggetto, la rappresentazione di minoranze e il superamento dei test di cui all’Allegato D, l’elaborazione narrativa e linguistica della sceneggiatura o del trattamento e dei dialoghi, la prevista realizzazione artistica e visiva delle opere così come la competenza degli artisti coinvolti nel film"
+   },
+   {
+    "riferimento": "Criteri, art. 8, comma 1 — chi decide e che cosa valuta il gruppo di esperti",
+    "testo": "La decisione in merito alla concessione di contributi a sostegno di produzioni cinematografiche e televisive viene adottata dal direttore/dalla direttrice della ripartizione provinciale competente o dal direttore/dalla direttrice dell’ente strumentale incaricato tenendo conto del parere di un gruppo di esperti selezionato, che può variare di volta in volta. […] Il gruppo di esperti esamina e valuta il valore culturale, contenutistico ed economico dei progetti presentati, tenendo conto delle finalità delle misure di sostegno e dei criteri di selezione di cui agli articoli 1 e 7."
+   },
+   {
+    "riferimento": "Criteri, art. 8, comma 5 — metodo: valutazione preliminare e parere a maggioranza (nessun punteggio)",
+    "testo": "Al fine di valutare le domande presentate, ogni membro del gruppo di esperti presenta, laddove possibile, una propria valutazione preliminare, anche in forma di breve commento, attraverso il portale online della Provincia o dell’ente strumentale incaricato. […] Per la validità dell’adunanza è necessaria la presenza della maggioranza dei componenti del gruppo di esperti. Il parere definitivo viene formulato a maggioranza dei componenti che partecipano alla votazione."
+   },
+   {
+    "riferimento": "Criteri, art. 11, comma 1 — soglia minima dell’effetto Alto Adige",
+    "testo": "Nell’ambito del sostegno alla produzione si dovrà attestare che, in relazione ai costi di produzione totali ammessi per la realizzazione dell’opera, almeno il 150 per cento del contributo viene speso in Alto Adige."
+   },
+   {
+    "riferimento": "Criteri, art. 10, commi 2 e 3 — massimale e limite per TV e web",
+    "testo": "Fatti salvi i limiti di cui all’articolo 21, è previsto un contributo massimo di 800.000,00 euro a opera. 3. Per opere televisive o web, l’ammontare dell’agevolazione da parte della Provincia o dell’ente strumentale incaricato non può superare il 30 per cento del costo complessivo di produzione."
+   },
+   {
+    "riferimento": "Criteri, art. 6, comma 5 — al massimo tre termini l’anno",
+    "testo": "La Provincia o l’ente strumentale da essa incaricato fissa ogni anno anticipatamente al massimo tre termini per la valutazione delle domande pervenute fino a quel momento. Tali termini vengono pubblicati sul rispettivo sito web."
+   },
+   {
+    "riferimento": "Criteri, art. 27, comma 1 — efficacia",
+    "testo": "I presenti criteri si applicano dal momento della loro approvazione alle domande presentate entro il 31 dicembre 2026."
+   },
+   {
+    "riferimento": "Fact Sheet «Produzione lungometraggi» (maggio 2026) — importo del contributo",
+    "testo": "Per tutte le opere: il massimale di contributo è pari a 800.000,00 euro; Opere cinematografiche: l’agevolazione di IDM può ammontare al massimo al 50% dei costi complessivi dell’opera; Opere televisive o web: l’agevolazione di IDM può ammontare al massimo al 30% dei costi complessivi dell’opera. Dato l’alto numero di richieste, si fa presente che l’importo contributo massimo erogato negli ultimi anni è 500.000,00 euro."
+   },
+   {
+    "riferimento": "Fact Sheet «Produzione lungometraggi» (maggio 2026) — tempistiche e base della valutazione",
+    "testo": "Entro circa sei settimane dalla scadenza della presentazione della domanda: revisione e valutazione delle opere da parte di IDM e di un gruppo di esperti in base a criteri contenutistici, culturali ed economici."
+   }
+  ],
+  "dubbi": [
+   "Scheda informativa: il fondo non assegna punteggi. Un gruppo di esperti esprime un parere a maggioranza sui criteri culturali, contenutistici ed economici dell’art. 7 e decide il direttore di IDM: non esiste una griglia da simulare.",
+   "Il bando non ha un metodo a punteggio: è una valutazione selettiva qualitativa, qui indicata come «misto» perché l’elenco dei tipi di valutazione non ne prevede una apposita.",
+   "I criteri della deliberazione n. 269/2024 si applicano alle domande presentate entro il 31 dicembre 2026 (art. 27). IDM ha già pubblicato tre call per il 2027 (12 gennaio, 18 maggio, 21 settembre), ma al 14.11.2026 non ho trovato né nell’area download di IDM né con ricerche web una nuova deliberazione (nuovi criteri o proroga) per il 2027: massimali, percentuali ed effetto territoriale del 2027 vanno riverificati appena esce il nuovo atto. Per questo i massimali sono indicati solo per il 2024-2026.",
+   "Il limite del 50% dei costi complessivi per le opere cinematografiche è scritto nel Fact Sheet IDM, che rinvia all’art. 10, commi 2 e 3; nel testo dell’art. 10 la percentuale del 50% non compare: compare all’art. 21, comma 2 come limite complessivo di intensità degli aiuti. Ho riportato 50% come percentuale massima del contributo IDM seguendo il Fact Sheet.",
+   "Le date delle Call #1 (20.01.2026) e #2 (05.05.2026) del 2026 vengono da una fonte secondaria (Italy for Movies): la pagina ufficiale oggi mostra solo la Call #3 2026 e le tre del 2027 e l’archivio web non era raggiungibile. Sono state messe solo nello storico, non nelle finestre.",
+   "Nelle finestre 2027 la data «dal» non è scritta in alcun atto: è la scadenza della call precedente, ricavata dalla regola dell’art. 6, comma 1 (domande presentabili in qualunque momento). La registrazione al portale è comunque abilitata solo dopo il colloquio di consulenza.",
+   "La dotazione annua non è fissata nei criteri: 4.500.000 euro è la stima della deliberazione per il solo 2024; le pagine ufficiali di IDM indicano senza anno ora 4,5 milioni (pagina «Funding») ora 4 milioni (pagina «Finanziamenti») di euro annui. La dotazione 2026 e 2027 non è stata verificata su un atto di bilancio.",
+   "Parte degli allegati obbligatori (contratto di regia, producer’s e director’s note, bilanci, test dell’Allegato D, versamento di 16 euro) è elencata nel Fact Sheet IDM e non nell’art. 12 dei criteri: il Fact Sheet è un documento informativo ufficiale di IDM aggiornato a maggio 2026, ma può cambiare senza una nuova deliberazione.",
+   "Il divieto di riserva per imprevisti nelle opere televisive è esplicito solo nel Fact Sheet; l’art. 5, comma 3 dei criteri si limita a non prevederla.",
+   "Gli esiti pubblici (news e banca dati dei progetti) non riportano valutazioni: non esistono punteggi reali su cui tarare una simulazione. La banca dati dei progetti non è stata interrogata call per call per ricavare gli importi concessi.",
+   "Il Fact Sheet «Produzione lungometraggi» riporta nell’intestazione «ultimo aggiornamento: maggio 2026» mentre il file si chiama 202604: la data dell’ultimo aggiornamento è quella scritta nel documento.",
+   "Non è chiaro dal testo se i contributi MASO (art. 16) rientrino nel tetto di 240.000 euro annui previsto per i cortometraggi dall’art. 13, comma 1: l’art. 16 dice solo «nell’ambito del sostegno ai cortometraggi»."
+  ]
+ },
+ "verifica": {
+  "esito": "senza_griglia",
+  "data": "2026-11-14",
+  "correzioni": [
+   "Dotazione annua: aggiunto che la pagina ufficiale IDM «Funding» indica 4,5 milioni di euro annui, in contrasto con i 4 milioni della pagina «Finanziamenti» (prima era riportato solo il secondo valore); aggiunta la pagina a fontiUrl e aggiornato il dubbio relativo.",
+   "Nessun altro valore modificato: massimali (800.000 euro lungometraggi, 30.000 euro corti e MASO), intensità (30% TV/web art. 4 c.3 e art. 10 c.3; 70% corti art. 13 c.2 e art. 16 c.3; 50% cinema da Fact Sheet e art. 21 c.2), effetto territoriale (150% art. 11 c.1; 60% corti art. 14 c.1."
+  ],
+  "dubbi": [
+   "Il bando non usa punteggi: la delibera n. 269/2024 (letta per intero) non contiene griglia, punteggio massimo, soglie né graduatoria; il gruppo di esperti esprime un parere a maggioranza (art. 8) sui criteri qualitativi dell’art. 7.",
+   "I criteri valgono per le domande presentate entro il 31.12.2026 (art. 27): al 14.11.2026 l’area download di IDM non mostra nuovi criteri né proroghe per le call 2027 (12.01, 18.05, 21.09.2027) e una ricerca web non ne ha trovati; i valori 2027 vanno riverificati.",
+   "Il 50% per le opere cinematografiche è scritto solo nel Fact Sheet (che rinvia all’art. 10); nell’art. 10 compare solo il massimale di 800.000 euro, il 50% è il limite di cumulo dell’art. 21, comma 2.",
+   "Le date delle Call #1 e #2 2026 vengono da fonte secondaria (Italy for Movies) e sono solo nello storico."
+  ]
+ }
+}

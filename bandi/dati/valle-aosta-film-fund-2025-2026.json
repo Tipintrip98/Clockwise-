@@ -1,0 +1,891 @@
+{
+  "id": "valle-aosta-film-fund-2025-2026",
+  "fondoId": "valle-aosta",
+  "revisione": "2026-11-14",
+  "nome": "Valle d’Aosta — Film Fund FCVDA, sostegno alla produzione audiovisiva (Regolamento 2025, finestre 2025-2026)",
+  "nomeBreve": "Valle d’Aosta · Film Fund 2025-2026",
+  "ente": "Fondazione Film Commission Vallée d’Aoste (istituita dalla Regione autonoma Valle d’Aosta con L.R. 9 novembre 2010, n. 36): approva il Regolamento con il proprio Consiglio di Amministrazione e gestisce il Fondo con risorse regionali",
+  "regione": "Valle d’Aosta",
+  "territorio": "Valle d’Aosta",
+  "gentilizio": "valdostani",
+  "fonte": "Film Fund FCVDA — Regolamento. Regole attuative (versione 2025, file «FF2025_Regolamento_definitivo.pdf», 13 pagine, sul sito della Fondazione dal 2 giugno 2025): Capo I «Fondo per il sostegno alla produzione audiovisiva», artt. 3-11; Capo III, artt. 18-19; Titolo III, artt. 20-23; Allegato A «Spese ammissibili»",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Fondazione Film Commission Vallée d’Aoste per imprese di produzione indipendenti (ATECO 59.11 o 59.12) che realizzano film, cortometraggi, opere televisive e serie web legati alla Valle d’Aosta o che coinvolgono professionisti valdostani. Le domande si presentano nei primi dieci giorni di ogni mese; una commissione di tre membri assegna fino a 100 punti su otto criteri e ammette i progetti con almeno 60 punti, fino a 80.000 euro (300.000 per le opere di particolare rilevanza) e non oltre il 50% del costo di produzione, con spesa in Valle d’Aosta pari almeno al 150% del contributo. Da marzo 2026 il Fondo è chiuso per esaurimento delle risorse e al 14 novembre 2026 non sono annunciate nuove finestre.",
+  "paginaUfficiale": "https://www.filmcommission.vda.it/produzioni/film-fund",
+  "fontiUrl": [
+    {
+      "titolo": "Film Fund FCVDA — Regolamento (versione 2025)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Regolamento_definitivo.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina «Film Fund» della Fondazione (avviso di chiusura 2026, opere ammissibili, modulistica, elenchi delle opere sostenute)",
+      "url": "https://www.filmcommission.vda.it/produzioni/film-fund",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Home page della Fondazione (riquadro «Chiusura Film Fund 2026»)",
+      "url": "https://www.filmcommission.vda.it/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A — Spese ammissibili",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Spese_ammissibili_-_Allegato_A.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Application Form (modulo di domanda e facsimile della lettera di trasmissione)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Application_Form.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Check List dei documenti del dossier",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Check_List.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Dichiarazione sostitutiva di certificazione",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Dichiarazione_Sostitutiva.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Dichiarazione De Minimis",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Dichiarazione_De_Minimis.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Dichiarazione di fine lavori (rendicontazione)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Dichiarazione_Fine_lavori.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Contributi erogati Film Fund — anno 2026",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Contributi erogati Film Fund — anno 2025",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Contributi erogati Film Fund — anno 2024",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2024.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Sovvenzione Regione autonoma Valle d’Aosta — anno 2026 (contributo gestione Film Fund)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/sovvenzione_regione_2026.pdf",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bilancio preventivo 2026 della Fondazione",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/bilancio_preventivo_2026.pdf",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bilancio consuntivo 2025 della Fondazione (gestione Film Fund)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/bilancio_consuntivo_2025.pdf",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina «Trasparenza» della Fondazione (regolamento, contributi erogati, bilanci)",
+      "url": "https://www.filmcommission.vda.it/la-fondazione/trasparenza",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regolamento Film Fund — versione 2024 (per il confronto storico)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2024_Regolamento_definitivo.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regolamento Film Fund — versione 2022 (per il confronto storico)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2022_Regolamento_definitivo.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Vale il Regolamento versione 2025. Fondo chiuso da marzo 2026 per esaurimento delle risorse: ultima finestra mensile utile 1-10 febbraio (data ricavata dall’art. 6 c. 1, non scritta). Contributo regionale 500.000 euro; 9 opere per 500.000 euro (da 11.000 a 270.000)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": null,
+      "dataFilePdf": "2025-06-02",
+      "nota": "Versione 2025 dopo la L.R. 1/2025 (PDF del 2 giugno 2025; moduli FF2025 del 27-28 febbraio 2025): griglia 20/17/15/15/7/3/5/18, sede in Valle d’Aosta da 6 mesi, animazione premiata, Capo III fino a 300.000 euro. Dotazione 599.000 euro; 8 opere per 599.000 euro (da 9.000 a 300.000)."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "dataFilePdf": "2024-05-31",
+      "nota": "Versione 2024 (PDF del 31 maggio 2024): griglia 15/15/15/15/12/3/5/20, tetto di 80.000 euro, Capo III fino a 180.000 euro. Contributo regionale 430.000 euro; 10 opere in elenco per 430.000 euro, una delle quali revocata (15.000 euro)."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "6 opere sostenute per 400.000 euro in tutto (da 12.000 a 180.000 euro)."
+    },
+    {
+      "anno": 2022,
+      "pubblicato": null,
+      "scadenza": null,
+      "dataFilePdf": "2022-04-08",
+      "nota": "Versione 2022 (PDF dell’8 aprile 2022): griglia 15/15/15/15/12/3/5/20, tetto di 80.000 euro. 10 opere in elenco per 549.000 euro: una revocata (16.000 euro) e una rinunciata (130.000 euro)."
+    },
+    {
+      "anno": 2021,
+      "pubblicato": null,
+      "scadenza": null,
+      "dataFilePdf": "2020-12-31",
+      "nota": "Versione 2021 (PDF del 31 dicembre 2020): stessa griglia 15/15/15/15/12/3/5/20 e stesso tetto di 80.000 euro."
+    }
+  ],
+  "finestre": [],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "non annunciato; se il Fondo viene rifinanziato, finestre nei primi dieci giorni di ogni mese",
+    "base": "Il Regolamento non ha scadenza e la dotazione regionale è stata rinnovata ogni anno (430.000 euro nel 2024, 599.000 nel 2025, 500.000 nel 2026). Non è una previsione dell’atto: al 14 novembre 2026 la pagina ufficiale dice «Al momento non sono previste ulteriori finestre di presentazione» e non c’è alcun annuncio per il 2027."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "spesaTerritorioMinPct": 150,
+  "commissione": {
+    "componenti": 3,
+    "descrizione": "Direttore della Fondazione Film Commission Vallée d’Aoste e due esperti esterni nominati dal Consiglio di Amministrazione; il Presidente della Fondazione può sostituire uno dei due esterni (art. 7 c. 1-2). Per ciascun criterio la commissione assegna un punteggio fino al massimo previsto (art. 7 c. 5): il Regolamento non dice se è la media dei voti dei singoli membri o un voto collegiale. Per ogni scadenza mensile la commissione redige un verbale e una graduatoria di merito, sulla quale vengono deliberati i contributi; può sottoporre alcune valutazioni al Consiglio di Amministrazione. Le valutazioni si chiudono entro 90 giorni dalla scadenza della finestra."
+  },
+  "invio": {
+    "canale": "PEC, raccomandata A/R o consegna a mano",
+    "indirizzo": "filmcommissionvda@pec.net",
+    "oggetto": "Richiesta accesso al Fondo regionale per il sostegno alla produzione audiovisiva per il Progetto audiovisivo dal titolo: <titolo dell’opera>",
+    "regole": [
+      "Le domande si presentano nei primi dieci giorni di ogni mese; l’ordine cronologico di arrivo non è un criterio di selezione (art. 6 c. 1).",
+      "Una sola domanda per soggetto in ciascuna finestra mensile, anche come produttore associato o coproduttore: se lo stesso soggetto ne presenta di più, sono tutte inammissibili (art. 6 c. 2).",
+      "Tre modalità ammesse (art. 20): consegna a mano; raccomandata con avviso di ricevimento, inviando insieme la copia della ricevuta di spedizione a produzioni@filmcommission.vda.it; PEC a filmcommissionvda@pec.net.",
+      "Per la raccomandata fa fede il timbro dell’ufficio postale o del corriere, ma non sono ammessi i progetti arrivati oltre sette giorni lavorativi dopo la scadenza.",
+      "Sede per consegna a mano e posta: Fondazione Film Commission Vallée d’Aoste, Via Croce di Città 18, 11100 Aosta (dal facsimile della lettera di trasmissione).",
+      "Domanda e dichiarazioni sono sottoscritte dal legale rappresentante ai sensi del D.P.R. 445/2000, con copia di un documento d’identità valido e la prova dei poteri di firma (certificato camerale, procura).",
+      "La lettera di trasmissione va redatta su carta intestata secondo il facsimile, con l’Application Form compilato in ogni parte e la Check List compilata e allegata al dossier.",
+      "L’art. 6 c. 4 chiede gli allegati «in duplice copia».",
+      "Le domande prive della documentazione obbligatoria della Check List non sono prese in considerazione.",
+      "Lo stesso progetto si può ripresentare solo dopo aver ricevuto l’esito della valutazione; un progetto non ammesso va ripresentato con modifiche sostanziali, salvo che abbia ottenuto almeno 60 punti su 100 (art. 6 c. 3)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "cinema-lungo",
+      "nome": "Opere cinematografiche di durata superiore a 52 minuti",
+      "griglia": "FF",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 80000,
+          "2026": 80000,
+          "2027": 80000
+        },
+        "nota": "Fino al 50% del costo complessivo di produzione (nelle coproduzioni internazionali, della sola quota del richiedente). Tetto di 80.000 euro (art. 8 c. 1), che il Consiglio di Amministrazione può alzare fino a 300.000 euro per le opere di particolare rilevanza (Capo III, art. 19). Il Regolamento non ha scadenza: il tetto vale finché l’atto non viene sostituito, quindi anche per il 2027."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "cinema-corto",
+      "nome": "Opere cinematografiche di cortometraggio (durata uguale o inferiore a 52 minuti)",
+      "griglia": "FF",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 80000,
+          "2026": 80000,
+          "2027": 80000
+        },
+        "nota": "Fino al 50% del costo complessivo di produzione (nelle coproduzioni internazionali, della sola quota del richiedente). Tetto di 80.000 euro (art. 8 c. 1), che il Consiglio di Amministrazione può alzare fino a 300.000 euro per le opere di particolare rilevanza (Capo III, art. 19). Il Regolamento non ha scadenza: il tetto vale finché l’atto non viene sostituito, quindi anche per il 2027."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "tv",
+      "nome": "Opere televisive: opere singole di durata superiore a 52 minuti, oppure serie con durata complessiva di almeno 90 minuti",
+      "griglia": "FF",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 80000,
+          "2026": 80000,
+          "2027": 80000
+        },
+        "nota": "Fino al 50% del costo complessivo di produzione (nelle coproduzioni internazionali, della sola quota del richiedente). Tetto di 80.000 euro (art. 8 c. 1), che il Consiglio di Amministrazione può alzare fino a 300.000 euro per le opere di particolare rilevanza (Capo III, art. 19). Il Regolamento non ha scadenza: il tetto vale finché l’atto non viene sostituito, quindi anche per il 2027."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "web-seriale",
+      "nome": "Opere web seriali (almeno 2 episodi di almeno 13 minuti ciascuno)",
+      "griglia": "FF",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 80000,
+          "2026": 80000,
+          "2027": 80000
+        },
+        "nota": "Fino al 50% del costo complessivo di produzione (nelle coproduzioni internazionali, della sola quota del richiedente). Tetto di 80.000 euro (art. 8 c. 1), che il Consiglio di Amministrazione può alzare fino a 300.000 euro per le opere di particolare rilevanza (Capo III, art. 19). Il Regolamento non ha scadenza: il tetto vale finché l’atto non viene sostituito, quindi anche per il 2027."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "FF": {
+      "id": "FF",
+      "nome": "Art. 7 c. 4 — Criteri di valutazione della qualità culturale del progetto (griglia unica per tutte le tipologie di opera)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Qualità culturale del progetto",
+          "max": 100,
+          "obiettivo": "Valutazione della qualità culturale del progetto ai sensi dell’art. 54 del Regolamento UE n. 651/2014 e della Comunicazione della Commissione europea del 15 novembre 2013 sugli aiuti di Stato alle opere audiovisive. Il Regolamento elenca otto criteri senza raggrupparli in sezioni e senza minimi parziali.",
+          "criteri": [
+            {
+              "id": "1",
+              "nome": "Qualità produttiva del progetto",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Qualità produttiva del progetto: curriculum dell’impresa di produzione proponente, della compagine produttiva e del cast tecnico; sostenibilità del piano finanziario; coerenza tra aspetti produttivi, finanziari e legali.",
+              "documenti": [
+                "cv_societa",
+                "cv_tecnico",
+                "modulo3",
+                "coproduzione",
+                "finanziamenti",
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "2",
+              "nome": "Valenza culturale e artistica del progetto",
+              "max": 17,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Valenza culturale e artistica del progetto: qualità del soggetto e della sceneggiatura; originalità della storia, stile e credibilità della regia; profili del cast artistico.",
+              "documenti": [
+                "sceneggiatura",
+                "cv_regista",
+                "cv_autori",
+                "cv_artistico",
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "3",
+              "nome": "Riferimento alla Valle d’Aosta nei contenuti",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Riferimento nei contenuti del progetto alla Valle d’Aosta, con particolare riguardo a mercati strategici, aspetti territoriali e culturali della regione.",
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "4",
+              "nome": "Rilevanza del progetto per la Regione",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rilevanza del progetto per la Regione Valle d’Aosta in termini economici, turistici e culturali, ed in generale strategici, ivi compreso l’utilizzo di autori e/o maestranze e/o professionalità valdostane.",
+              "documenti": [
+                "modulo3",
+                "piano_lavorazione",
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "5",
+              "nome": "Impresa valdostana come soggetto proponente",
+              "max": 7,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Un’impresa con sede legale o sede operativa da almeno 6 mesi nel territorio della Regione Autonoma Valle d’Aosta è soggetto proponente.",
+              "principio": "Condizione di fatto. Il Regolamento non scrive che il punteggio è «tutto o niente»: l’art. 7 c. 5 dice soltanto che per ciascun criterio la commissione assegna un punteggio fino al massimo previsto. I due valori qui sotto sono la lettura più diretta del testo.",
+              "valori": [
+                {
+                  "punti": 7,
+                  "etichetta": "Il proponente è un’impresa con sede legale o operativa in Valle d’Aosta da almeno 6 mesi"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Il proponente non ha sede legale o operativa in Valle d’Aosta da almeno 6 mesi"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "modulo2",
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "6",
+              "nome": "Valorizzazione di specificità regionali",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Valorizzazione di specificità regionali: l’opera è realizzata in doppia lingua (italiano e francese) e/o valorizza specificità linguistiche locali e/o è realizzata in regime di coproduzione con Paesi confinanti con la Valle d’Aosta.",
+              "calcolo": "Tre condizioni alternative o cumulabili (doppia lingua italiano-francese; specificità linguistiche locali; coproduzione con Paesi confinanti con la Valle d’Aosta). Il Regolamento non dice quanti punti vale ciascuna: la commissione assegna fino a 3 punti.",
+              "documenti": [
+                "sceneggiatura",
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "7",
+              "nome": "Tipologie specifiche di opera",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "formazione",
+              "descrizione": "Tipologie specifiche di opera: l’opera è un documentario o è un’opera prima o seconda o è un’opera di animazione.",
+              "principio": "Condizione di fatto. Il Regolamento non scrive che il punteggio è «tutto o niente»: l’art. 7 c. 5 dice soltanto che per ciascun criterio la commissione assegna un punteggio fino al massimo previsto. I due valori qui sotto sono la lettura più diretta del testo.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Documentario, oppure opera prima o seconda, oppure opera di animazione"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna delle tre tipologie"
+                }
+              ],
+              "documenti": [
+                "modulo1",
+                "sceneggiatura",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "8",
+              "nome": "Potenziale di visibilità dell’opera",
+              "max": 18,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Potenziale di visibilità dell’opera: qualità ed estensione delle prospettive distributive.",
+              "documenti": [
+                "distribuzione",
+                "coproduzione"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Application Form (modulo di domanda) con lettera di trasmissione su carta intestata secondo il facsimile",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Dichiarazione sostitutiva di certificazione sui requisiti dell’art. 5 (art. 6 c. 6 lett. a)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato A — Spese ammissibili, datato, timbrato e firmato",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Check List compilata e firmata",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione De Minimis (solo se il contributo è chiesto in regime «de minimis», Reg. UE 2023/2831)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Copia fronte e retro del documento d’identità del sottoscrittore",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Certificato di iscrizione alla CCIAA (originale o copia conforme) o a registro equivalente, e prova dei poteri di rappresentanza se non risultano dal certificato",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratto, almeno in forma di opzione, di acquisto dei diritti di soggetto, trattamento e sceneggiatura firmato con gli autori; oppure, per gli adattamenti, contratto o opzione sui diritti di elaborazione creativa dell’opera protetta",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "obbligo": "sempre",
+      "criteri": [
+        "2",
+        "3"
+      ],
+      "nome": "Opere non seriali: soggetto, sceneggiatura (trattamento per i documentari), profilo dei personaggi; per le opere di animazione anche lo storyboard (l’art. 6 c. 4 lo indica «in alternativa ai materiali di cui al punto i)», la Check List lo elenca accanto agli altri)"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "obbligo": "sempre",
+      "criteri": [
+        "2",
+        "3"
+      ],
+      "nome": "Opere seriali: soggetto di serie e sceneggiatura almeno della puntata pilota (per i documentari basta il trattamento del primo episodio), progetto di serializzazione, profilo dei personaggi; per l’animazione anche lo storyboard almeno del primo episodio"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Budget complessivo: preventivo dei costi e piano finanziario preventivo, con l’elenco dettagliato delle spese da effettuare in Valle d’Aosta (almeno il 150% del contributo richiesto)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione: settimane di lavorazione, luoghi delle riprese, interni ed esterni, giornate complessive sul territorio regionale compresa la post-produzione",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione artistica del regista",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione analitica dell’impresa di produzione sull’impianto produttivo e sulle potenzialità distributive (note del produttore)",
+      "obbligo": "sempre",
+      "criteri": [
+        "1",
+        "8"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Profilo breve e curriculum dell’impresa proponente e del produttore",
+      "obbligo": "sempre",
+      "criteri": [
+        "1"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Profilo breve e curriculum del regista o dei registi, con una o più opere precedenti (meglio se con screener online o file)",
+      "obbligo": "sempre",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Curriculum dell’autore del soggetto e dello sceneggiatore",
+      "obbligo": "sempre",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Delega al soggetto che presenta la domanda e riceve il contributo, firmata dagli altri soggetti, se il progetto fa capo a più soggetti",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratti o accordi di coproduzione, ove esistenti",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "1",
+        "6"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratti o accordi di distribuzione o di licenza per la diffusione televisiva o altra, ove esistenti",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "8"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Contratti, incarichi accettati (anche in forma opzionale), lettere d’intenti o contratti preliminari dei principali componenti del cast artistico e tecnico, ove esistenti; dichiarazioni di interesse degli interpreti principali",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Per i professionisti nati in Valle d’Aosta ma residenti altrove: documentazione che prova l’attività professionale svolta in Valle d’Aosta",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "4"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Copia dei documenti che provano l’effettiva disponibilità delle risorse indicate nel piano finanziario, ove già disponibili",
+      "obbligo": "consigliato",
+      "criteri": [
+        "1"
+      ]
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Curriculum degli altri componenti del cast artistico (autore della musica, interpreti e altre figure previste)",
+      "obbligo": "consigliato",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Curriculum di direttore della fotografia, montatore, scenografo, costumista e delle altre figure del cast tecnico",
+      "obbligo": "consigliato",
+      "criteri": [
+        "1"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Altri materiali artistici (moodboard o altro) e altri dati di produzione (troupe, elenco dei luoghi delle riprese, specialisti e operatori tecnici)",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "sede",
+      "testo": "Sede legale in Italia, in un Paese dell’Unione Europea o in un Paese extraeuropeo equiparato a condizioni di reciprocità"
+    },
+    {
+      "id": "ateco",
+      "testo": "Iscrizione al Registro delle Imprese con codice ATECO 59.11 o 59.12 (o registro equivalente con classificazione NACE Rev. 2 59.11)"
+    },
+    {
+      "id": "indipendente",
+      "testo": "Qualifica di produttore indipendente secondo la normativa nazionale"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico (100% dei diritti), oppure produttore in produzione associata o coproduzione/compartecipazione/produzione internazionale con una quota di diritti e un apporto tecnico o artistico (non solo finanziario), oppure produttore esecutivo con accordi già in essere con i titolari dei diritti"
+    },
+    {
+      "id": "forma",
+      "testo": "Il richiedente è un’impresa (anche individuale): associazioni culturali e fondazioni senza scopo di lucro sono escluse dal sostegno alla produzione"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà (Reg. UE 651/2014) e non ha ordini di recupero pendenti per aiuti dichiarati illegali"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Nessuna causa di esclusione dell’art. 80 del D.Lgs. 50/2016, nessuna violazione grave accertata su imposte e contributi, nessuna procedura concorsuale, nessuna grave infrazione sulla sicurezza sul lavoro, nessun divieto di contrattare con la pubblica amministrazione"
+    },
+    {
+      "id": "restituzioni",
+      "testo": "Nessun provvedimento di restituzione totale di agevolazioni pubbliche negli ultimi 5 anni (salvo rinunce) e agevolazioni da restituire già restituite"
+    },
+    {
+      "id": "opera",
+      "testo": "L’opera ha almeno uno degli elementi dell’art. 4 c. 1: rilievo nazionale o internazionale con temi legati al territorio valdostano o valorizzazione del suo patrimonio; rilievo nazionale o internazionale con coinvolgimento di professionisti valdostani; valorizzazione delle minoranze linguistiche della Regione con l’uso delle loro lingue"
+    },
+    {
+      "id": "tipologia",
+      "testo": "L’opera rientra in una delle quattro tipologie ammesse e non è tra quelle escluse dall’art. 14 c. 2 della L. 220/2016 (pubblicità, informazione e attualità, giochi, varietà, quiz, talk show, riprese di eventi, contenuti pornografici o che incitano alla violenza o all’odio)"
+    },
+    {
+      "id": "fuori_territorio",
+      "testo": "Se l’opera è realizzata fuori dalla Valle d’Aosta: l’impresa di produzione, almeno un autore o il regista ha sede (da almeno sei mesi), residenza fiscale o domicilio fiscale in Valle d’Aosta, e l’obbligo di spesa del 150% è comunque rispettato"
+    },
+    {
+      "id": "spesa150",
+      "testo": "Spesa prevista in Valle d’Aosta pari ad almeno il 150% del contributo richiesto, contando solo le spese ammissibili dell’Allegato A (escluse producer’s fee, personale a tempo indeterminato e spese di investimento)"
+    },
+    {
+      "id": "tetto50",
+      "testo": "Contributo richiesto non superiore al 50% del costo complessivo di produzione e, sommato agli altri finanziamenti del piano finanziario, non superiore al costo totale dell’opera"
+    },
+    {
+      "id": "voce40",
+      "testo": "Nel budget preventivo, e poi nel consuntivo, nessuna singola voce supera il 40% del costo totale, salvo eccezione sottoposta alla Fondazione e approvata prima di presentare i documenti (Allegato A)"
+    },
+    {
+      "id": "avvio",
+      "testo": "I lavori sul territorio regionale iniziano dopo la presentazione della domanda; sono rendicontabili solo le spese sostenute dopo quella data"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda del soggetto in questa finestra mensile, anche come coproduttore o produttore associato"
+    },
+    {
+      "id": "regime",
+      "testo": "Scelta di un solo regime di aiuto nell’Application Form: esenzione (art. 54 Reg. UE 651/2014) oppure «de minimis» (massimo 300.000 euro in tre esercizi per l’impresa unica, con la relativa dichiarazione)"
+    },
+    {
+      "id": "cumulo_capi",
+      "testo": "Nello stesso anno non è stato ottenuto un contributo allo sviluppo del Capo II (non cumulabile con il Capo I)"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "avvio_lavori",
+      "etichetta": "Avvio dei lavori sul territorio regionale, da comunicare alla Film Commission",
+      "mesi": 12,
+      "decorrenza": "pubblicazione della delibera di assegnazione del contributo",
+      "nota": "Decorre dalla pubblicazione della delibera di assegnazione del contributo. Art. 9 c. 2 lett. a): avvio dopo la presentazione della domanda e comunque entro 12 mesi; proroga motivata da chiedere prima della scadenza, per non più di 6 mesi. Vale anche per le opere realizzate fuori regione."
+    },
+    {
+      "id": "rendiconto",
+      "etichetta": "Conclusione e rendicontazione del progetto",
+      "mesi": 18,
+      "mesiAnimazione": 24,
+      "decorrenza": "sottoscrizione dell’atto di impegno",
+      "nota": "Decorre dalla sottoscrizione dell’atto di impegno, non dalla concessione. Art. 9 c. 2 lett. b): 18 mesi, 24 mesi per i progetti di animazione; proroga motivata da chiedere prima della scadenza, per non più di 6 mesi."
+    }
+  ],
+  "scadenzeNote": [
+    "Documentazione richiesta con la comunicazione di valutazione positiva: entro il termine indicato nella comunicazione o, se manca, entro 15 giorni naturali e consecutivi dalla ricezione; in difetto il beneficiario decade e il contributo è revocato (art. 10 c. 1-2).",
+    "Atto di impegno: da sottoscrivere entro il termine indicato nella comunicazione o, se manca, entro 30 giorni naturali e consecutivi dalla data della comunicazione; in difetto decadenza e revoca (art. 10 c. 1-2).",
+    "Su richiesta della Fondazione: tre copie dell’opera su supporto digitale e file in alta risoluzione entro trenta giorni dalla prima messa in onda o proiezione in sala (art. 9 c. 4 lett. c).",
+    "La commissione completa le valutazioni entro 90 giorni dalla scadenza della finestra mensile; gli esiti arrivano per via elettronica (art. 7 c. 7)."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 80,
+      "condizione": "Al massimo l’80% del contributo assegnato (art. 10 c. 4), a discrezione della Fondazione, che può chiedere garanzie e/o un certo ammontare di fatture quietanzate per spese ammissibili sostenute in Valle d’Aosta; in ogni caso solo dopo l’accredito del finanziamento regionale. Modalità ed eventuali acconti sono fissati nell’atto di impegno."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 20,
+      "condizione": "Quota residua dopo la rendicontazione (art. 11 c. 1): consuntivo analitico con i documenti di spesa quietanzati, autodichiarazione del legale rappresentante su pertinenza, regolarità, congruità e pagamento delle spese (modulo «Dichiarazione fine lavori») e valutazione di idoneità del Consiglio di Amministrazione. Il 20% non è scritto nell’atto: è la differenza rispetto all’anticipo massimo."
+    }
+  ],
+  "note": [
+    "Sono ammessi a contributo i progetti con almeno 60 punti su 100, nei limiti delle risorse del Fondo; non ci sono minimi per singolo criterio (art. 7 c. 5).",
+    "I requisiti dell’art. 5 vanno mantenuti per tutta la durata del progetto, fino all’erogazione del saldo, pena l’esclusione o la revoca; l’ammissibilità è subordinata alle verifiche antimafia, ove necessarie (art. 5 c. 3 e 5).",
+    "Ogni finestra mensile ha la sua graduatoria di merito. Se i fondi residui non bastano, le domande valutate positivamente hanno priorità quando arrivano risorse aggiuntive o nelle erogazioni successive (art. 7 c. 6).",
+    "Contributo fino a 80.000 euro (art. 8 c. 1). Il Regolamento non contiene una formula che leghi il punteggio all’importo: il contributo è deliberato sulla graduatoria, entro quanto richiesto e i massimali.",
+    "Capo III: se la commissione ritiene il progetto di particolare rilevanza artistica e/o economica lo segnala al Consiglio di Amministrazione, che con delibera motivata può aumentare il contributo fino a 300.000 euro. Non c’è una domanda separata: si passa sempre dal Capo I.",
+    "Il contributo non può superare il 50% del costo complessivo di produzione (nelle coproduzioni internazionali, della sola quota del richiedente) e, con gli altri finanziamenti, il costo totale dell’opera. È cumulabile con altri aiuti nei limiti europei.",
+    "Spesa in Valle d’Aosta pari ad almeno il 150% del contributo: è condizione di ammissibilità sul preventivo e obbligo a consuntivo. Se a rendiconto la spesa sul territorio è inferiore al 150% del contributo concesso, l’intero contributo è revocato (art. 11 c. 6).",
+    "Contano come spese sul territorio quelle pagate a soggetti con sede legale o operativa, domicilio fiscale o residenza fiscale in Valle d’Aosta (l’Allegato A chiede almeno sei mesi prima della domanda) e a nati in Valle d’Aosta residenti altrove che provano di lavorarvi, nei ruoli di autore, regista, compositore, attore, produttore, capo reparto.",
+    "Non sono ammissibili: producer’s fee, personale a tempo indeterminato, spese di investimento, ricariche telefoniche, carburante. I pedaggi contano solo sulla tratta Pont-Saint-Martin – Monte Bianco; le diarie delle giornate di ripresa in Valle d’Aosta sono ammesse per tutti i collaboratori (Allegato A).",
+    "Se a rendiconto le spese ammissibili sono inferiori al preventivo (ma almeno pari al 150% del contributo), oltre una tolleranza del 5%, il saldo è ricalcolato; se il punteggio rideterminato scende sotto la soglia il contributo è revocato per intero. Spese superiori al preventivo non aumentano il contributo (art. 11 c. 4-5).",
+    "Ogni variazione rispetto alla domanda va comunicata subito: la Fondazione può rivalutare il punteggio e rideterminare o revocare il contributo. Le variazioni del cast nei ruoli chiave (regista, attori principali) vanno motivate, pena l’esclusione.",
+    "Obblighi di comunicazione: logo «Film Commission Vallée d’Aoste», dicitura «con il contributo del Fondo per il sostegno alla produzione audiovisiva della Fondazione Film Commission Vallée d’Aoste» e ringraziamenti con logo alla Regione; su richiesta conferenza stampa durante le riprese, quindici foto di scena, accesso al set, proiezione in una località della regione.",
+    "I contributi del Capo I (produzione) e del Capo II (sviluppo) non sono cumulabili nello stesso anno; quelli del Capo III sono cumulabili con il Capo I (art. 22).",
+    "La presentazione della domanda non dà diritto al contributo, nemmeno con tutti i requisiti: l’erogazione dipende dall’effettiva disponibilità del Fondo (artt. 6 c. 9 e 23).",
+    "La dotazione non è ripartita per tipologia di opera: è annuale per l’intero Fondo (500.000 euro di contributo regionale nel 2026) e il Consiglio di Amministrazione decide ogni anno le quote tra produzione, sviluppo e opere di particolare rilevanza.",
+    "Il Regolamento non ha una scadenza: finché non viene sostituito, gli stessi criteri e limiti valgono anche per le finestre successive, se il Fondo viene rifinanziato.",
+    "Finestre mensili: Art. 6 c. 1: le domande si presentano nei primi dieci giorni di ogni mese; ogni finestra mensile ha la sua graduatoria. Il Regolamento non elenca date né anni: le finestre esistono finché il Fondo ha risorse. Nel 2026 l’ultima finestra utile è stata quella di febbraio (1-10 febbraio secondo la regola), perché da marzo 2026 il Fondo è chiuso; queste date non sono scritte in alcun atto."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Film Fund — Capo II: sostegno allo sviluppo di progetti di produzioni audiovisive",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/FF2025_Regolamento_definitivo.pdf",
+      "descrizione": "Linea prevista dagli artt. 12-17 dello stesso Regolamento, attivata solo con appositi avvisi pubblici che fissano criteri, punteggio minimo e limiti; contributo fino al 50% dei costi di sviluppo, solo in regime «de minimis», aperto anche ad associazioni culturali e fondazioni. Al 14 novembre 2026 sul sito non risulta alcun avviso aperto."
+    },
+    {
+      "nome": "Concorso di idee «Match & Catch» (2024)",
+      "url": "https://www.filmcommission.vda.it/produzioni/supporto",
+      "descrizione": "Concorso con premi in denaro per registi e soggetti produttivi valdostani, finalizzato a cortometraggi documentari; terminato (registi 15/02/2024, produttori 01/03/2024). Regolamento: https://www.filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/supporto/2024_METC_Regolamento.pdf. Nella stessa pagina i concorsi di idee precedenti: «Séquences et Conséquences» (2023, terminato il 10/02/2023) e «Ça tourne!» (2020, terminato il 09/12/2020)."
+    },
+    {
+      "nome": "Valle d’Aosta Doc-FF Film Fund (bando 2017, storico)",
+      "url": "https://filmcommission.vda.it/fileadmin/user_upload/PRODUZIONI/film-fund/BANDO_DOC-FF_2017.pdf",
+      "descrizione": "Fondo per documentari e opere prime con bando annuale unico nel 2017 (60.000 euro di risorse, contributo da 5.000 a 60.000 euro, fino al 50% del budget, griglia propria a 100 punti). Non compare più tra le linee attive: oggi documentari e opere prime passano dal Film Fund, con 5 punti dedicati."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "Contributi erogati Film Fund — anno 2026 (9 opere, 500.000 euro)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2026.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "Contributi erogati Film Fund — anno 2025 (8 opere, 599.000 euro)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2025.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "Contributi erogati Film Fund — anno 2024 (10 opere, 430.000 euro, una revocata)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2024.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    },
+    {
+      "anno": 2023,
+      "titolo": "Contributi erogati Film Fund — anno 2023 (6 opere, 400.000 euro)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2023.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    },
+    {
+      "anno": 2022,
+      "titolo": "Contributi erogati Film Fund — anno 2022 (10 opere, 549.000 euro, una revocata e una rinunciata)",
+      "url": "https://www.filmcommission.vda.it/fileadmin/user_upload/LA_FONDAZIONE/trasparenza/contributi_erogati_FF_2022.pdf",
+      "contienePunteggi": false,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Regolamento, art. 7 c. 4 — tabella dei criteri (prima parte)",
+        "testo": "Qualità produttiva del progetto: curriculum dell’impresa di produzione proponente, della compagine produttiva e del cast tecnico; sostenibilità del piano finanziario; coerenza tra aspetti produttivi, finanziari e legali. 20 | Valenza culturale e artistica del progetto: qualità del soggetto e della sceneggiatura; originalità della storia, stile e credibilità della regia; profili del cast artistico. 17 | Riferimento nei contenuti del progetto alla Valle d’Aosta, con particolare riguardo a mercati strategici, aspetti territoriali e culturali della regione. 15"
+      },
+      {
+        "riferimento": "Regolamento, art. 7 c. 4 — tabella dei criteri (seconda parte)",
+        "testo": "Rilevanza del progetto per la Regione Valle d’Aosta in termini economici, turistici e culturali, ed in generale strategici, ivi compreso l’utilizzo di autori e/o maestranze e/o professionalità valdostane. 15 | Un’impresa con sede legale o sede operativa da almeno 6 mesi nel territorio della Regione Autonoma Valle d’Aosta è soggetto proponente 7"
+      },
+      {
+        "riferimento": "Regolamento, art. 7 c. 4 — tabella dei criteri (terza parte)",
+        "testo": "Valorizzazione di specificità regionali: l’opera è realizzata in doppia lingua (italiano e francese) e/o valorizza specificità linguistiche locali e/o è realizzata in regime di coproduzione con Paesi confinanti con la Valle d’Aosta. 3 | Tipologie specifiche di opera: l’opera è un documentario o è un’opera prima o seconda o è un’opera di animazione. 5 | Potenziale di visibilità dell’opera: qualità ed estensione delle prospettive distributive. 18 | TOTALE 100"
+      },
+      {
+        "riferimento": "Regolamento, art. 7 c. 5 — soglia minima",
+        "testo": "Per ciascuno dei criteri sopra indicati, viene assegnato dalla commissione un punteggio fino al punteggio massimo previsto. Saranno ammessi a contributo, nei limiti delle risorse disponibili a bilancio sul Fondo, i progetti che avranno ottenuto un totale di almeno 60 punti su 100."
+      },
+      {
+        "riferimento": "Regolamento, art. 7 c. 1 — commissione",
+        "testo": "I progetti vengono valutati da una commissione composta dal direttore della Fondazione Film Commission Vallée d’Aoste e da due esperti esterni nominato dal Consiglio di Amministrazione della stessa Fondazione."
+      },
+      {
+        "riferimento": "Regolamento, art. 6 c. 1 — finestre",
+        "testo": "Le domande di contributo devono essere presentate alla Fondazione con le modalità di cui al successivo art. 20 nei primi dieci giorni di ogni mese, sottoscritte dal legale rappresentante del soggetto proponente, unitamente alla documentazione oltre indicata. L’ordine cronologico di presentazione non è da ritenersi criterio di selezione."
+      },
+      {
+        "riferimento": "Regolamento, art. 8 c. 1 — massimale e spesa minima",
+        "testo": "Per i progetti valutati positivamente, la Film Commission concede un contributo fino a 80.000,00 euro, a fronte di una spesa minima sul territorio della Regione Valle d’Aosta garantita ed effettuata dal soggetto richiedente pari, almeno, al 150% del contributo richiesto. L’importo massimo di 80.000,00 euro potrà, eventualmente, essere superato, soltanto nei casi previsti e disciplinati dal Capo III di questo Regolamento."
+      },
+      {
+        "riferimento": "Regolamento, art. 8 c. 4 — intensità",
+        "testo": "I contributi sono erogati a fondo perduto, e possono essere assegnati nel limite del 50% del costo complessivo di produzione dell’opera, come definito dalla vigente normativa nazionale, ivi incluso l’apporto societario diretto del produttore."
+      },
+      {
+        "riferimento": "Regolamento, art. 19 c. 2 — Capo III",
+        "testo": "Il Consiglio di Amministrazione della Fondazione, una volta informato ai sensi del comma 1, ove ravvisi la particolare rilevanza artistica e/o economica del progetto può, con delibera motivata e compatibilmente alle risorse disponibili, deliberare un aumento dell’ammontare del contributo riconosciuto al progetto ai sensi dell’art. 8 sino a € 300.000,00 o eventuale diverso massimale compatibile con la normativa a quella data vigente."
+      },
+      {
+        "riferimento": "Regolamento, art. 9 c. 2 lett. a) e b) — termini",
+        "testo": "avvio dei lavori sul territorio regionale in data successiva alla presentazione della domanda e comunque entro 12 mesi dalla pubblicazione dell’eventuale delibera di assegnazione del contributo […] la conclusione e rendicontazione dei progetti entro 18 mesi o 24 mesi per i progetti di animazione dalla data di sottoscrizione dell’atto di impegno"
+      },
+      {
+        "riferimento": "Regolamento, art. 10 c. 4 — anticipo",
+        "testo": "Le erogazioni a titolo di anticipo, che potranno essere corrisposte al massimo nella misura dell’80 per cento del totale del contributo assegnato, intervengono comunque in data successiva all’accreditamento del relativo finanziamento regionale."
+      },
+      {
+        "riferimento": "Regolamento, art. 11 c. 6 — revoca",
+        "testo": "Qualora in sede di rendicontazione risulti che le spese sostenute sul territorio regionale siano state inferiori al 150% del contributo concesso, l’intero contributo verrà revocato ed eventuali importi già erogati dovranno essere restituiti."
+      },
+      {
+        "riferimento": "Pagina ufficiale «Film Fund», avviso «ATTENZIONE» (letta il 14/11/2026)",
+        "testo": "A partire dal mese di marzo il Film Fund della Fondazione Film Commission Vallée d’Aoste chiuderà per esaurimento delle risorse disponibili. […] Al momento non sono previste ulteriori finestre di presentazione. […] Qualora si rendessero disponibili ulteriori risorse, ne sarà data tempestiva comunicazione attraverso i canali ufficiali della Fondazione."
+      },
+      {
+        "riferimento": "Home page della Fondazione, riquadro in evidenza (letta il 14/11/2026) e banner della pagina «Film Fund» (file ff-chiusura-2026.jpg, sul sito dal 28/02/2026)",
+        "testo": "Chiusura Film Fund 2026 — Quest’anno, il Film Fund FCVDA ha ricevuto molte richieste tutte ravvicinate, per altrettanti bei progetti. VDA piace! | Banner: FILM FUND 2026 CHIUSO"
+      }
+    ],
+    "dubbi": [
+      "La chiusura riguarda il 2026: lo dicono il riquadro «Chiusura Film Fund 2026» in home page e il banner «Film Fund 2026 chiuso» (sul sito dal 28/02/2026). L’avviso dice «a partire dal mese di marzo» senza una data precisa e senza indicare l’atto che la dispone.",
+      "Finestre: il Regolamento fissa solo la regola (primi dieci giorni di ogni mese) e nessun atto scrive le date. Per questo «finestre» è vuoto e lo storico non ha una scadenza per il 2026; l’ultima finestra utile (1-10 febbraio 2026) è ricavata dalla regola e dall’avviso di chiusura. Non so quali mesi siano stati aperti nel 2025 e nel gennaio 2026.",
+      "Nessun annuncio per il 2027: la riapertura dipende dal rifinanziamento regionale. Da ricontrollare a inizio 2027 la pagina ufficiale e l’eventuale nuova versione del Regolamento (i file seguono lo schema FF<anno>_Regolamento_definitivo.pdf; al 14/11/2026 FF2026 e FF2027 non esistono).",
+      "Il Regolamento non riporta data e numero della delibera del Consiglio di Amministrazione che ha approvato la versione 2025. Il PDF sul sito è del 2 giugno 2025, i moduli FF2025 del 27-28 febbraio 2025: non so da quale finestra del 2025 la nuova griglia sia stata applicata né se il PDF di giugno abbia sostituito una prima stesura.",
+      "Massimali: il tetto di 80.000 euro è indicato anche per il 2027 perché il Regolamento vigente non ha scadenza; una nuova versione potrebbe cambiarlo (dal 2024 al 2025 il Capo III è passato da 180.000 a 300.000 euro). Per le domande valutate con la versione 2024 valevano la griglia 15/15/15/15/12/3/5/20 e il Capo III fino a 180.000 euro.",
+      "Criteri 5 e 7 codificati come discreti (tutto o niente): è una lettura del testo, perché l’art. 7 c. 5 dice solo «fino al punteggio massimo previsto» e non esclude punteggi intermedi. Il criterio 6 (tre condizioni «e/o», 3 punti) è lasciato qualitativo perché il Regolamento non dice quanto vale ciascuna condizione.",
+      "La griglia ufficiale non ha sezioni, numerazione dei criteri né minimi parziali: la sezione unica «A», gli id da 1 a 8, l’attribuzione delle famiglie (alcuni criteri mescolano più temi) e i documenti associati ai criteri sono scelte di trascrizione.",
+      "Il Regolamento non dice come la commissione arriva al punteggio (media dei membri o voto collegiale) né come si passa dal punteggio all’importo del contributo.",
+      "Non sono pubblici i punteggi: gli elenchi «Contributi erogati» riportano solo casa di produzione, titolo e importo, quindi la simulazione non si può tarare su punteggi reali.",
+      "La dotazione non è ripartita per tipologia di opera né, pubblicamente, tra Capo I, II e III: il contributo regionale annuale per l’intero Film Fund è stato di 430.000 euro nel 2024, 599.000 nel 2025 e 500.000 nel 2026.",
+      "Limiti di durata: «superiore a 52 minuti» (52 esclusi) per film e opere TV singole, «uguale o inferiore a 52 minuti» per i cortometraggi, almeno 90 minuti complessivi per le serie TV e almeno 2 episodi da 13 minuti per le serie web. Il controllo automatico applica solo un minimo per categoria: un film di 52 minuti esatti risulta accettato come lungometraggio, e per le serie va inserita la durata complessiva.",
+      "Refusi dell’atto: l’art. 11 c. 4 rinvia alla soglia «di cui all’articolo 7, comma 3» (è al comma 5); gli artt. 6 c. 3 e 10 c. 1 rinviano all’art. 7 c. 4 per la comunicazione degli esiti (è il comma 7); nell’art. 6 c. 4 le lettere ripartono da a) dopo la e).",
+      "Storyboard delle opere di animazione non seriali: l’art. 6 c. 4 lett. a) lo chiede «in alternativa ai materiali di cui al punto i)» (il soggetto), la Check List lo elenca accanto a soggetto e sceneggiatura. Non è chiaro se sostituisca il soggetto o si aggiunga.",
+      "L’art. 5 c. 1 lett. k) conta i 5 anni «antecedenti la data di pubblicazione del presente Regolamento», la Dichiarazione sostitutiva «antecedenti la data di presentazione della domanda».",
+      "L’Allegato A chiede che fornitori e residenti siano in Valle d’Aosta «da almeno 6 mesi antecedenti la data di presentazione della domanda», mentre l’art. 8 c. 3 del Regolamento non indica un’anzianità per le spese sul territorio.",
+      "L’art. 6 c. 4 chiede gli allegati «in duplice copia»: non è chiaro come si applichi all’invio via PEC.",
+      "Termini dopo la concessione: quelli di 15 e 30 giorni valgono solo se la comunicazione di valutazione positiva non ne indica altri e sono nelle note sulle scadenze. I 12 mesi per l’avvio decorrono dalla pubblicazione della delibera, i 18 (24 per l’animazione) dalla firma dell’atto di impegno. Il saldo del 20% è ricavato per differenza dall’anticipo massimo dell’80%.",
+      "Non è stato possibile consultare le copie d’archivio della pagina (web.archive.org) per datare con precisione la comparsa dell’avviso di chiusura.",
+      "Cura della scheda (14/11/2026): criteri 5 e 7 a punteggio fisso (tutto o niente) come nella trascrizione; se la commissione gradua, la simulazione sovrastima fino a 12 punti. Il tetto mostrato nei controlli è il 50% del costo di produzione entro 80.000 euro; i 300.000 euro del Capo III non sono simulati."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Griglia confrontata riga per riga con l’art. 7 c. 4 del Regolamento versione 2025 (PDF sul sito identico alla copia salvata): otto criteri 20/17/15/15/7/3/5/18, somma 100, soglia 60, nessun minimo parziale. Nessun punteggio da correggere.",
+      "Finestre: tolte le due finestre 2026 (1-10 gennaio, 1-10 febbraio) e la scadenza 2026-02-10 dello storico, perché ricavate dalla regola mensile e non scritte in alcun atto; la regola e l’ultima finestra utile restano descritte in «regolaFinestre» e nella nota 2026.",
+      "Storico: le date «pubblicato» erano date di creazione dei PDF, non di pubblicazione dell’atto: spostate in «dataFilePdf». Per il 2022 l’elenco ha una revoca (16.000 euro) e una rinuncia (130.000 euro), non una sola revoca; corretto anche il titolo dell’esito 2022.",
+      "Tolta l’affermazione, non provata, che nei primi mesi del 2025 valesse la versione 2024: i moduli FF2025 sono del 27-28 febbraio 2025, il PDF del Regolamento del 2 giugno 2025.",
+      "Chiusura 2026: l’anno ora è provato dal riquadro «Chiusura Film Fund 2026» della home page (aggiunto tra fonti e citazioni), non solo dal nome del banner.",
+      "Scadenze: i termini di 15 e 30 giorni (espressi come 0,5 e 1 mese, che il programma avrebbe calcolato male) sono passati a «terminiInGiorni» e «scadenzeNote»; le note dei termini di 12 e 18 mesi dicono da quale evento decorrono.",
+      "Massimali: aggiunto il 2027 a 80.000 euro (Regolamento vigente senza scadenza), altrimenti la simulazione dell’edizione attesa non avrebbe alcun tetto; aggiunta «contributo.nota» con base di calcolo e Capo III.",
+      "Testi accorciati o divisi per rientrare nei limiti letti dal programma: canale di invio, note dello storico, prossima edizione, allegato dei materiali artistici (ora due voci: opere non seriali e seriali).",
+      "Aggiunte: «revisione»; documenti da leggere per i criteri 5 e 7; requisito del 40% per singola voce esteso al consuntivo (Allegato A); nota su mantenimento dei requisiti e verifiche antimafia (art. 5 c. 3 e 5); refuso dell’art. 6 c. 3 e ambiguità sullo storyboard tra i dubbi; nome del concorso «Ça tourne!»."
+    ],
+    "dubbi": [
+      "Nessuna edizione più recente né atto di modifica: al 14/11/2026 sul sito non esistono FF2026 o FF2027 (Regolamento, moduli), né elenchi, sovvenzioni o bilanci 2027; la pagina ufficiale, riletta oggi, riporta lo stesso avviso di chiusura e le ultime notizie del sito (dal 31/07 al 14/10/2026) non parlano del Film Fund.",
+      "Il Fondo è chiuso da marzo 2026 e non c’è alcun annuncio di riapertura: una simulazione per il 2027 usa il Regolamento vigente, che potrebbe essere sostituito prima della riapertura.",
+      "Criteri 5 (7 punti) e 7 (5 punti) come «tutto o niente»: lettura ragionevole di condizioni di fatto, ma l’art. 7 c. 5 dice solo «fino al punteggio massimo previsto». Se la commissione gradua, il simulatore sovrastima fino a 12 punti.",
+      "Punteggi reali non pubblici: gli elenchi dei contributi riportano solo titolo e importo, quindi il metro della commissione non è tarabile sugli esiti.",
+      "Non so da quale finestra del 2025 sia stata applicata la griglia 20/17/15/15/7/3/5/18 (PDF del 2 giugno 2025, moduli di fine febbraio 2025), né data e numero della delibera di approvazione.",
+      "Durate: il programma legge solo durataMin e durataMaxEsclusa, quindi non applica esattamente i confini dell’atto (oltre 52 minuti per film e opere TV singole, fino a 52 per i corti, 90 minuti complessivi per le serie TV, 2 episodi da 13 minuti per le serie web). Non incide su punteggio e tetti, che sono uguali per le quattro tipologie.",
+      "Saldo del 20% ricavato per differenza dall’anticipo massimo dell’80%; l’anticipo è a discrezione della Fondazione e arriva solo dopo l’accredito del finanziamento regionale.",
+      "Italy for Movies (fonte terza, non usata per i dati) segna per questo fondo una sessione scaduta l’08.05.2025: non ho trovato un atto ufficiale che dica quali finestre del 2025 siano state aperte."
+    ]
+  }
+}

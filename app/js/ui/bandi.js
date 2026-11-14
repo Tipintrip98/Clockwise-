@@ -32,6 +32,15 @@ const maiuscola = (t) => (t ? t.charAt(0).toUpperCase() + t.slice(1) : '');
 // I segnaposto e gli altri moduli possono non avere nulla da mostrare (o fallire): la pagina resta in piedi.
 const prova = (fn) => { try { return fn() || null; } catch { return null; } };
 
+// Regole di soglia particolari: soglia complessiva su alcune sezioni, minimi su somme di criteri o sezioni, penalità.
+function regoleSoglia(b, c) {
+  const righe = [];
+  if (b.sogliaSuSezioni?.length) righe.push(`soglia complessiva calcolata sulle sezioni ${b.sogliaSuSezioni.join(', ')}`);
+  for (const sc of c.soglieCombinate || b.soglieCombinate || []) righe.push(`${sc.etichetta || [...sc.criteri.map((x) => `criterio ${x}`), ...sc.sezioni.map((x) => `sezione ${x}`)].join(' + ')} ≥ ${fmt(sc.minimo)}`);
+  for (const p of b.penalita || []) righe.push(`${p.testo}: ${fmt(p.punti)}`);
+  return righe.length ? h('div.muted.small', righe.map((r) => h('div', r))) : null;
+}
+
 function regola(c) {
   if (c.tipo === 'fasce') return h('div.small.muted', c.fasce.map((f) => `${f.etichetta} → ${fmt(f.punti * c.peso)}`).join(' · '));
   if (c.tipo === 'discreto') return h('div.small.muted', c.valori.map((v) => `${fmt(v.punti)}: ${v.etichetta}`).join(' · '));
@@ -72,7 +81,8 @@ function sezioneScheda(b, oggi) {
             griglie ? h('td.num.small',
               sc.sogliaTotale ? h('div', `${fmt(sc.sogliaTotale)} su ${fmt(sc.punteggioMassimo)} in totale`) : null,
               sc.soglie.length ? h('div.muted', sc.soglie.map((x) => `${x.id} ≥ ${fmt(x.min)}`).join(' · ')) : null,
-              !sc.sogliaTotale && !sc.soglie.length ? '—' : null) : null);
+              regoleSoglia(b, c),
+              !sc.sogliaTotale && !sc.soglie.length && !regoleSoglia(b, c) ? '—' : null) : null);
         }))))) : null,
 
     h('div.panel', h('h3', 'Calendario delle edizioni'),

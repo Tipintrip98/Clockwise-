@@ -1,0 +1,576 @@
+{
+  "id": "liguria-sviluppo-progetti-audiovisivi-2026",
+  "fondoId": "liguria",
+  "revisione": "2026-11-14",
+  "nome": "Liguria — PR FESR 2021-2027, Azione 1.3.4: bando 2026 «Sviluppo e produzione di progetti audiovisivi», sottomisura Sviluppo",
+  "nomeBreve": "Liguria · Sviluppo imprese liguri 2026",
+  "ente": "Regione Liguria (PR FESR 2021-2027) · gestione e istruttoria: FI.L.S.E. S.p.A., organismo intermedio · Genova Liguria Film Commission coinvolta negli obblighi di promozione",
+  "regione": "Liguria",
+  "territorio": "Liguria",
+  "gentilizio": "liguri",
+  "fonte": "Programma Regionale Liguria FESR 2021-2027, Azione 1.3.4 — Bando 2026 «Interventi a sostegno dello sviluppo e produzione di progetti audiovisivi» (Allegato numero 1), sottomisura Sviluppo, pubblicato dalla Regione Liguria il 3 agosto 2026",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto in regime de minimis, finanziato dal PR FESR Liguria e gestito da FI.L.S.E., per imprese e associazioni con sede in Liguria che sviluppano lungometraggi, serie TV, serie web e cortometraggi. La sottomisura Sviluppo ha il 20% dei 750.000 euro del bando; il contributo copre fino all’80% del budget di sviluppo, da 2.000 a 30.000 euro secondo la tipologia. Una Commissione di esperti assegna i punteggi e forma la graduatoria.",
+  "paginaUfficiale": "https://www.regione.liguria.it/homepage-sviluppo-economico/servizi-canale/bandi-sviluppo-economico-tutti.html",
+  "fontiUrl": [
+    {
+      "titolo": "Bando 2026 «Interventi a sostegno dello sviluppo e produzione di progetti audiovisivi» (PDF)",
+      "url": "https://www.regione.liguria.it/components/com_publiccompetitions/includes/download.php?id=79558:bando-azione134-audiovisivo-sviluppe-produzioni-2026.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione Liguria — pagina del bando sviluppo e produzione 2026",
+      "url": "https://www.regione.liguria.it/homepage-sviluppo-economico/servizi-canale/bandi-sviluppo-economico-tutti/publiccompetition/4703:azione-134-audiovisivi-sviluppo-produzioni-2026.html",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione Liguria — pagina del bando sviluppo e produzione 2024",
+      "url": "https://www.regione.liguria.it/homepage-sviluppo-economico/servizi-canale/bandi-sviluppo-economico-tutti/publiccompetition/3870:azione134_audiovisivo_sviluppo_e_produzione_progetti_2024.html",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2024,
+      "pubblicato": "2024-03-18",
+      "scadenza": "2024-06-03",
+      "nota": "Bando «sviluppo e produzione»: domande dal 14 maggio al 3 giugno 2024; 750 mila euro, rifinanziati con 982 mila euro; 48 progetti ammissibili (34 lungometraggi, 7 cortometraggi, 7 serie); termine di realizzazione prorogato al 31 dicembre 2025 (pagina della Regione)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Nessuna edizione risulta nell’elenco dei bandi dello sviluppo economico della Regione Liguria consultato il 14 novembre 2026."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-08-03",
+      "scadenza": "2026-10-02",
+      "nota": "Due bandi (attrazione: 1 milione; sviluppo e produzione: 750 mila euro), stessa finestra 22 settembre - 2 ottobre 2026; FI.L.S.E. ha tenuto aperto lo sportello fino alle 17:30 del 5 ottobre 2026 per un disservizio di rete."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-09-22",
+      "al": "2026-10-02",
+      "nota": "Art. 9, punto 1: invio telematico dal 22 settembre al 2 ottobre 2026, dal lunedì al venerdì dalle 8.30 alle 17.30 (compilazione dal 15 settembre). FI.L.S.E. ha tenuto aperto lo sportello fino alle 17.30 del 5 ottobre per un disservizio di rete."
+    }
+  ],
+  "prossimaEdizione": null,
+  "sogliaTotale": 0,
+  "punteggioMassimo": 118,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Commissione nominata da FI.L.S.E. S.p.A., «composta da esperti di settore» (art. 9b, punto 5). Il bando non indica il numero dei componenti né la regola di calcolo (media, somma o consenso). FI.L.S.E. verifica prima l’ammissibilità formale, in ordine cronologico di arrivo; le domande ammissibili passano alla valutazione di merito che determina la posizione in graduatoria."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://filseonline.regione.liguria.it/FilseWeb/Home.do",
+    "oggetto": "",
+    "regole": [
+      "Domanda solo online sul sistema «Bandi on line» di FI.L.S.E. (da www.filse.it oppure da filseonline.regione.liguria.it), resa come dichiarazione sostitutiva ai sensi del D.P.R. 445/2000.",
+      "Firma digitale del legale rappresentante in corso di validità (formato PDF.p7m) e invio esclusivamente con la procedura telematica, pena l’inammissibilità.",
+      "Invio possibile dal lunedì al venerdì, dalle 08.30 alle 17.30 (salvo festività); vale la data di invio telematico.",
+      "La domanda è soggetta a imposta di bollo.",
+      "Tutti gli allegati in formato PDF, completi e leggibili; i preventivi devono riportare fedelmente quanto inserito a sistema (in caso di discrepanza si valuta con criteri prudenziali).",
+      "Serve una PEC già attiva alla data di presentazione: le comunicazioni con FI.L.S.E. passano dal sistema Bandi on line e, quando necessario, dalla PEC.",
+      "Una domanda per richiedente per ciascuna tipologia di progetto (attrazione) o per ciascuna sottomisura (sviluppo e produzione).",
+      "Dopo l’invio non sono ammesse integrazioni documentali o di dati strutturali del progetto: FI.L.S.E. può chiedere solo precisazioni sul merito."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "sviluppo-lungometraggio",
+      "nome": "Imprese e associazioni liguri, sottomisura Sviluppo — Lungometraggi",
+      "griglia": "SVILUPPO",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 80,
+        "massimali": {
+          "2026": 30000
+        },
+        "nota": "Contributo tra 25.000 e 30.000 euro; l’intervento ammissibile non può essere inferiore a 31.250 euro (art. 6, punto 6)."
+      },
+      "dotazione": {
+        "2026": 105000
+      },
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "sviluppo-serie-tv",
+      "nome": "Imprese e associazioni liguri, sottomisura Sviluppo — Serie TV",
+      "griglia": "SVILUPPO",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 80,
+        "massimali": {
+          "2026": 10000
+        },
+        "nota": "Contributo tra 7.000 e 10.000 euro; l’intervento ammissibile non può essere inferiore a 8.750 euro (art. 6, punto 6)."
+      },
+      "dotazione": {
+        "2026": 105000
+      },
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "sviluppo-serie-web",
+      "nome": "Imprese e associazioni liguri, sottomisura Sviluppo — Serie web",
+      "griglia": "SVILUPPO",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 80,
+        "massimali": {
+          "2026": 3000
+        },
+        "nota": "Contributo tra 2.000 e 3.000 euro; l’intervento ammissibile non può essere inferiore a 2.500 euro (art. 6, punto 6)."
+      },
+      "dotazione": {
+        "2026": 45000
+      },
+      "durataMin": 50,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "sviluppo-cortometraggio",
+      "nome": "Imprese e associazioni liguri, sottomisura Sviluppo — Cortometraggi",
+      "griglia": "SVILUPPO",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 80,
+        "massimali": {
+          "2026": 3000
+        },
+        "nota": "Contributo tra 2.000 e 3.000 euro; l’intervento ammissibile non può essere inferiore a 2.500 euro (art. 6, punto 6)."
+      },
+      "dotazione": {
+        "2026": 45000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    }
+  ],
+  "griglie": {
+    "SVILUPPO": {
+      "id": "SVILUPPO",
+      "nome": "Bando «Sviluppo e produzione di progetti audiovisivi» 2026 — CRITERI PER LA SOTTOMISURA SVILUPPO (art. 9b)",
+      "sezioni": [
+        {
+          "id": "1",
+          "nome": "Qualità della proposta in termini di definizione degli obiettivi, metodologia e procedure di attuazione dell’intervento",
+          "max": 70,
+          "obiettivo": "Criterio n. 1 della tabella: insieme al criterio n. 5 determina l’ammissibilità di merito; nessuno dei suoi quattro elementi di valutazione può valere zero.",
+          "criteri": [
+            {
+              "id": "1.1",
+              "nome": "Capacità narrativa, chiarezza degli obiettivi, originalità, competenze del team creativo",
+              "max": 30,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Capacità narrativa, chiarezza degli obiettivi, originalità, competenze del team creativo, ecc.",
+              "principio": "Punteggio pari a zero su questo elemento = domanda non ammissibile. Il bando non pubblica sotto-fasce: la Commissione attribuisce da 0 al massimo."
+            },
+            {
+              "id": "1.2",
+              "nome": "Fattibilità del progetto, strategia di finanziamento, analisi del piano finanziario",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Fattibilità del progetto, strategia di finanziamento, analisi del piano finanziario.",
+              "principio": "Punteggio pari a zero su questo elemento = domanda non ammissibile. Tra i documenti di merito il bando cita quelli «comprovanti la disponibilità delle risorse complessive atte alla realizzazione del progetto e al conseguimento degli obiettivi, cofinanziamenti, ecc.» (art. 9a)."
+            },
+            {
+              "id": "1.3",
+              "nome": "Strategie di distribuzione — Potenzialità del soggetto",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Strategie di distribuzione: potenzialità del soggetto.",
+              "principio": "Punteggio pari a zero su questo elemento = domanda non ammissibile."
+            },
+            {
+              "id": "1.4",
+              "nome": "Strategie di distribuzione — Coinvolgimento di agenti di vendita nazionali o internazionali, distributori o broadcaster",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Strategie di distribuzione: coinvolgimento agenti di vendita nazionali o internazionali o distributori o broadcaster.",
+              "principio": "Punteggio pari a zero su questo elemento = domanda non ammissibile. Il bando non pubblica sotto-fasce (per esempio per tipo di accordo): la Commissione attribuisce da 0 al massimo."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "nome": "Capacità del progetto di contribuire al rafforzamento dell’offerta del settore e alla destagionalizzazione dell’offerta turistica",
+          "max": 5,
+          "obiettivo": "Criterio n. 2 della tabella (Sì/No).",
+          "criteri": [
+            {
+              "id": "2.1",
+              "nome": "Rafforzamento dell’offerta del settore e destagionalizzazione dell’offerta turistica",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Capacità del progetto di contribuire al rafforzamento dell’offerta del settore e alla destagionalizzazione dell’offerta turistica: Sì 5 punti, No 0 punti.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Sì"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "No"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "nome": "Numero di imprese regionali potenzialmente coinvolte",
+          "max": 3,
+          "obiettivo": "Criterio n. 3 della tabella.",
+          "criteri": [
+            {
+              "id": "3.1",
+              "nome": "Numero di imprese regionali potenzialmente coinvolte",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Numero di imprese regionali potenzialmente coinvolte: da 1 a 5 = 1 punto; da 6 a 10 = 2 punti; oltre 10 = 3 punti.",
+              "principio": "A consuntivo FI.L.S.E. riverifica i criteri basati su dati previsionali: uno scostamento in riduzione può ridurre il contributo, abbassarne la percentuale o portare alla revoca (art. 13, punto 2).",
+              "calcolo": "Conteggio delle imprese liguri potenzialmente coinvolte: 1-5 → 1; 6-10 → 2; oltre 10 → 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Oltre 10 imprese regionali"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Da 6 a 10 imprese regionali"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Da 1 a 5 imprese regionali"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna impresa regionale (caso non indicato nella tabella del bando)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "nome": "Cantierabilità e tempi di realizzazione dell’intervento",
+          "max": 10,
+          "obiettivo": "Criterio n. 4 della tabella.",
+          "criteri": [
+            {
+              "id": "4.1",
+              "nome": "Cantierabilità e tempi di realizzazione dell’intervento",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Intervento già avviato o avvio entro 6 mesi dalla presentazione della domanda: 10 punti. Avvio entro 9 mesi dalla presentazione della domanda: 1 punto.",
+              "principio": "Ai fini del bando l’avvio coincide con la data del primo titolo di spesa (art. 6, punto 5). A consuntivo FI.L.S.E. riverifica i criteri basati su dati previsionali: uno scostamento in riduzione può ridurre il contributo, abbassarne la percentuale o portare alla revoca (art. 13, punto 2).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "Intervento già avviato o avvio entro 6 mesi dalla presentazione della domanda"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Avvio entro 9 mesi dalla presentazione della domanda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Avvio oltre 9 mesi (caso non indicato nella tabella del bando)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "nome": "Capacità di integrazione con le politiche regionali di promozione",
+          "max": 30,
+          "obiettivo": "Criterio n. 5 della tabella: insieme al criterio n. 1 determina l’ammissibilità di merito.",
+          "criteri": [
+            {
+              "id": "5.1",
+              "nome": "Valorizzazione e promozione del patrimonio della Liguria (Brand Liguria)",
+              "max": 30,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di valorizzare e promuovere il patrimonio geografico, ambientale e culturale, storico, musicale, sportivo e turistico della Liguria (valorizzazione Brand Liguria)."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda online (Bandi on line): schermata dei dati generali dell’impresa e dei relativi credit ufficiali, firmata digitalmente (PDF.p7m)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Relazione tecnico-illustrativa del progetto (schermata online): elenco di opere prodotte, cronoprogramma delle fasi, piano finanziario, informazioni creative",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Copia dei preventivi relativi alle spese dell’art. 7 (devono coincidere con quanto inserito a sistema)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Documenti sulle credenziali di attori, registi o altri soggetti con ruoli rilevanti nella produzione, con il cast intenzionale e/o effettivo e relativa documentazione",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1.1"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documenti comprovanti la disponibilità delle risorse complessive per realizzare il progetto e conseguire gli obiettivi, cofinanziamenti, ecc.",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1.2"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Solo sottomisura Sviluppo: copia del contratto di opzione o di cessione dei diritti sul soggetto",
+      "obbligo": "se_dichiarato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "pmi",
+      "testo": "Piccola o media impresa, in forma singola o associata (Racc. 2003/361/CE e Allegato 1 del Reg. UE 651/2014)"
+    },
+    {
+      "id": "ateco",
+      "testo": "Attività prevalente di produzione cinematografica e audiovisiva: codice ATECO 2025 59.11.00, impresa attiva e iscritta al Registro delle imprese (bando attrazione, imprese UE: classificazione NACE Rev. 2 «59.11» e iscrizione al registro omologo). Sottomisura Sviluppo: anche associazioni iscritte al REA con la produzione di audiovisivi come attività prevalente nello statuto."
+    },
+    {
+      "id": "indipendente",
+      "testo": "Produttore indipendente"
+    },
+    {
+      "id": "credit",
+      "testo": "Pregressa esperienza nella produzione audiovisiva dimostrata con credit ufficiali"
+    },
+    {
+      "id": "tipologia",
+      "testo": "Bando attrazione: lungometraggio di almeno 52 minuti o serie TV di almeno 90 minuti. Bando sviluppo e produzione: anche serie web di durata superiore a 50 minuti e cortometraggi di durata massima 30 minuti. Finzione o documentario, anche in animazione, destinati alla distribuzione nazionale e internazionale"
+    },
+    {
+      "id": "investimento",
+      "testo": "Intervento ammissibile non inferiore a 300.000 euro (bando attrazione, sole spese in Liguria); 15.000 euro (sottomisura Produzione); sottomisura Sviluppo: 31.250 euro lungometraggi, 8.750 euro serie TV, 2.500 euro serie web e cortometraggi"
+    },
+    {
+      "id": "avvio",
+      "testo": "Iniziativa avviata dal 1° giugno 2024 e non conclusa alla data di presentazione della domanda"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera non è pornografica, razzista, apologetica della violenza o lesiva delle pari opportunità, non è pubblicitaria, non promuove un’istituzione o un’organizzazione; non è un gioco televisivo, talk show, reality show o programma esclusivamente didattico"
+    },
+    {
+      "id": "regolarita",
+      "testo": "DURC regolare, nessuna procedura concorsuale liquidatoria, nessuna causa antimafia o interdittiva, nessuna condanna ostativa degli amministratori, nessuna revoca di agevolazioni regionali non restituita"
+    },
+    {
+      "id": "polizza",
+      "testo": "Se tenuta, l’impresa ha la polizza assicurativa dell’art. 1, comma 101, della legge 213/2023 in corso di validità (anche al momento dell’erogazione)"
+    },
+    {
+      "id": "deminimis",
+      "testo": "Rispetto del regime de minimis (Reg. UE 2023/2831) e nessun altro aiuto di Stato o de minimis sugli stessi costi ammissibili"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda per richiedente per ciascuna tipologia di progetto (bando attrazione) o per ciascuna sottomisura (bando sviluppo e produzione)"
+    },
+    {
+      "id": "intestazione",
+      "testo": "Tutti i titoli di spesa e i conti correnti usati per i pagamenti sono intestati al soggetto richiedente; nessun pagamento in contanti, permuta o compensazione"
+    },
+    {
+      "id": "firma_pec",
+      "testo": "Firma digitale del legale rappresentante e PEC attiva alla data di presentazione"
+    },
+    {
+      "id": "diritti_sviluppo",
+      "testo": "Solo sottomisura Sviluppo: il richiedente detiene almeno il 50% dei diritti del soggetto dell’opera, direttamente o tramite un’opzione di contratto di cessione dei diritti"
+    },
+    {
+      "id": "sede_liguria",
+      "testo": "Solo bando «sviluppo e produzione»: sede legale o operativa in Liguria, oppure impegno ad aprire un’unità locale in Liguria entro il pagamento della prima quota di contributo"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "conclusione",
+      "etichetta": "Conclusione dell’intervento (data dell’ultimo titolo di spesa ammesso)",
+      "mesi": 12,
+      "nota": "Art. 6, punti 4 e 5: entro 12 mesi dalla data di ricevimento del provvedimento di concessione. I titoli di spesa successivi al termine comportano la revoca parziale (art. 13)."
+    },
+    {
+      "id": "rendiconto",
+      "etichetta": "Rendicontazione finale di spesa (e richiesta del saldo)",
+      "mesi": 14,
+      "giorniDopoConclusione": 60,
+      "nota": "Art. 11, lett. b): entro 60 giorni dalla data ultima concessa per il completamento dell’investimento. I 14 mesi sono un’approssimazione di 12 mesi + 60 giorni."
+    }
+  ],
+  "scadenzeNote": [
+    "L’istruttoria deve concludersi entro 90 giorni dal termine ultimo per la presentazione della domanda (art. 9b); l’erogazione avviene entro 80 giorni dalla richiesta del beneficiario (art. 10).",
+    "In caso di esito negativo l’impresa ha 15 giorni dal preavviso per presentare osservazioni scritte.",
+    "La documentazione originale di spesa va conservata per 10 anni dall’erogazione del saldo; per i 5 anni successivi al completamento vanno forniti, se richiesti, i dati sugli indicatori socio-economici.",
+    "Solo bando «sviluppo e produzione»: per tre anni dopo l’erogazione va mantenuta l’unità operativa in Liguria e non va cessata l’attività."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "A richiesta del beneficiario, con fideiussione bancaria, polizza assicurativa o garanzia di un intermediario finanziario ex art. 106 TUB sull’importo erogato, svincolata con il saldo (art. 10, punto 2, lett. a)."
+    },
+    {
+      "quota": "acconto",
+      "percentuale": 40,
+      "condizione": "In alternativa all’anticipo, al raggiungimento di uno stato di avanzamento della spesa pari ad almeno il 50% del progetto, con i titoli di spesa rendicontati (art. 10, punto 2, lett. b)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "condizione": "Su richiesta online con i titoli di spesa rendicontati (art. 10, punto 2, lett. c). Il bando non indica la percentuale del saldo: 60% è la quota residua, dato che anticipo e acconto sono alternativi."
+    }
+  ],
+  "note": [
+    "La percentuale di contributo si applica alle sole spese ammissibili sostenute in Liguria (compensi a personale residente in Liguria, beni e noleggi da fornitori con sede legale od operativa in Liguria, prestazioni di titolari e soci residenti in Liguria, permessi e autorizzazioni, costi indiretti fino al 15% dei costi di personale, strutture ricettive liguri fino al 10% delle spese ammissibili), non al costo complessivo di produzione.",
+    "Non sono ammissibili: producer’s fee, carburante, leasing, acquisto di terreni e immobili, contratti di manutenzione, lavori in economia, opere di restauro, consulenze continuative (fiscale, legale, pubblicità), autofatturazione, IVA recuperabile.",
+    "Ammissibilità di merito: la somma dei criteri n. 1 e n. 5 deve raggiungere 50 punti (attrazione), 45 (sottomisura Produzione) o 40 (sottomisura Sviluppo); un punteggio pari a zero anche in uno solo dei quattro elementi del criterio n. 1 rende la domanda non ammissibile.",
+    "Il punteggio decide anche la percentuale di contributo: 35% da 50 a 75 punti (da 45 per la sottomisura Produzione), 40% da 76 a 90, 60% oltre 90. Massimo 300.000 euro per l’attrazione; 120.000 euro (lungometraggi e serie TV), 30.000 (cortometraggi) e 15.000 (serie web) per la sottomisura Produzione.",
+    "I contributi sono assegnati secondo l’ordine della graduatoria fino a esaurimento delle risorse; a parità di punteggio si applicano i criteri premiali (occupazione, impresa giovanile e femminile, rating di legalità, modelli turistici innovativi, coerenza S3).",
+    "Regime de minimis (Reg. UE 2023/2831): il contributo non è cumulabile con altri aiuti di Stato o de minimis sugli stessi costi; è cumulabile con agevolazioni che non sono aiuti di Stato, entro il valore del bene o servizio.",
+    "A consuntivo FI.L.S.E. riverifica i punteggi basati su dati previsionali: se lo scostamento avrebbe escluso il progetto dalla graduatoria il contributo è ridotto in proporzione; se il punteggio scende in una fascia inferiore la percentuale è rideterminata; se i criteri 1 e 5 scendono sotto il minimo il contributo è revocato. È revocato anche se le spese rendicontate sono inferiori all’intervento minimo.",
+    "L’intervento va concluso entro 12 mesi dal ricevimento della concessione; i titoli di spesa devono riportare il CUP comunicato da FI.L.S.E.; non si possono apportare variazioni al progetto prima della concessione.",
+    "Obblighi di promozione: logo della Regione Liguria e dicitura «con il contributo del PR FESR della Liguria» nei titoli di testa e come primo cartello dei titoli di coda; presenza sul set di Regione, Genova Liguria Film Commission e FI.L.S.E.; conferenza stampa e anteprima a proprie spese, preferibilmente nel Comune delle riprese; tre copie digitali dell’opera; uso gratuito di estratti fino a 30 minuti per scopi istituzionali. L’obbligo del logo e della dicitura nei titoli è scritto solo nel bando attrazione (art. 11, lett. h); nel bando sviluppo e produzione restano gli altri obblighi di promozione e quelli generali di comunicazione FESR.",
+    "Solo bando «sviluppo e produzione»: l’erogazione è subordinata alla disponibilità della sede del beneficiario in Liguria (art. 10, punto 1).",
+    "Punteggio massimo 118: è la somma dei punteggi massimi stampati nella tabella del bando, che non dichiara un totale."
+  ],
+  "altriBandi": [],
+  "esitiPubblici": [
+    {
+      "anno": 2024,
+      "titolo": "Bando sviluppo e produzione 2024 — la pagina della Regione riporta solo il numero dei progetti ammissibili (48); nessuna graduatoria con punteggi trovata",
+      "url": "https://www.regione.liguria.it/homepage-sviluppo-economico/servizi-canale/bandi-sviluppo-economico-tutti/publiccompetition/3870:azione134_audiovisivo_sviluppo_e_produzione_progetti_2024.html",
+      "contienePunteggi": false,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Bando sviluppo e produzione 2026, art. 9b, CRITERI PER LA SOTTOMISURA SVILUPPO e punto 6",
+        "testo": "Capacità narrativa, chiarezza degli obiettivi, originalità, competenze del team creativo, ecc.: 30 — Fattibilità del progetto, strategia di finanziamento, analisi del piano finanziario: 20 — Strategie di distribuzione: Potenzialità del soggetto: 15 — Coinvolgimento agenti di vendita nazionali o internazionali o distributori o broadcaster: 5 […] consegua un punteggio complessivo non inferiore a 40."
+      }
+    ],
+    "dubbi": [
+      "Punteggio massimo: il bando non lo dichiara. Il massimo indicato è la somma dei punteggi stampati nella tabella (191 attrazione, 171 sottomisura Produzione, 118 sottomisura Sviluppo), mentre le fasce di contributo (50-75, 76-90, oltre 90) fanno pensare a una scala vicina a 100. La stessa tabella compare identica nei bandi 2023 e 2024, quindi non è un refuso dell’edizione 2026, ma nessuna graduatoria con punteggi reali conferma la scala: da chiedere a FI.L.S.E.",
+      "Non è chiaro se il «punteggio attribuito» che determina la percentuale di contributo (35/40/60%) sia il totale di tutti i criteri o la sola somma dei criteri 1 e 5 usata per l’ammissibilità. L’art. 13 parla dei «punteggi per il posizionamento in graduatoria», il che fa propendere per il totale, ma il bando non lo dice espressamente.",
+      "Nella tabella i punti 10 e 45 del criterio 1 sono stampati leggermente sfalsati rispetto alle righe «Potenzialità del soggetto» e «Coinvolgimento agenti di vendita…». Li ho attribuiti in quest’ordine perché nelle edizioni 2023 e 2024 l’allineamento è inequivocabile (10 e 45) e perché il bando parla di «quattro elementi di valutazione» del criterio 1.",
+      "Per i criteri 6.1 (giorni in Liguria, 30 punti), 6.2 (personale residente, 3 punti) e 6.3 (spesa sul territorio, 5 punti) il bando non pubblica fasce né formule: li valuta la commissione simulata. Per i criteri 3 e 4 la tabella non prevede il caso «zero» (nessuna impresa regionale; avvio oltre 9 mesi): il valore 0 è una deduzione.",
+      "Il bando non indica numero dei componenti della Commissione né il metodo di calcolo dei punteggi (media o consenso).",
+      "Numero e data del decreto regionale di approvazione dei bandi 2026 non compaiono nei PDF (nella convenzione allegata sono lasciati in bianco): la data certa è quella di pubblicazione, 3 agosto 2026.",
+      "La pagina web della Regione sul bando «sviluppo e produzione» 2026 parla di «copertura massima del 70% dell’investimento», ma il testo del bando indica 80% del budget per lo Sviluppo e 35/40/60% per la Produzione: ho seguito il testo del bando.",
+      "La percentuale del saldo (60%) non è scritta nel bando: è il residuo dopo l’anticipo o l’acconto del 40%. Le dotazioni per tipologia del bando «sviluppo e produzione» sono calcolate dalle percentuali di riparto.",
+      "L’art. 9a non elenca espressamente il contratto di distribuzione tra gli allegati, ma l’art. 4 lo richiede come requisito di ammissibilità: l’ho indicato come allegato sempre necessario.",
+      "Stato al 14 novembre 2026: sportello chiuso (2 ottobre, tenuto aperto da FI.L.S.E. fino al 5 ottobre alle 17:30); istruttoria in corso (90 giorni dal termine). Non ho trovato né la graduatoria 2026 né annunci per un’edizione 2027; nessuna edizione 2025 risulta nell’elenco regionale.",
+      "Il sito della Genova Liguria Film Commission non è stato consultato: bando e aggiornamenti sono pubblicati da Regione Liguria e FI.L.S.E.",
+      "Soglia: il bando non fissa un minimo sul totale ma sulla somma dei criteri 1 e 5 (50 punti per l’attrazione, 45 per la sottomisura Produzione, 40 per la sottomisura Sviluppo), e rende non ammissibile chi ha zero anche in uno solo dei quattro elementi del criterio 1 (art. 9b, punto 7). Il «diverso da zero» è reso come minimo di 0,1 punti per ciascun elemento.",
+      "L’art. 13, punto 2 del bando rinvia per le fasce di contributo all’«art. 6, punto 1», ma le fasce sono all’art. 8: è un rinvio errato del testo, senza effetti sui numeri.",
+      "Anticipo (40%) e acconto (40%) sono alternativi e facoltativi: il saldo è il 60% solo se se ne chiede uno, altrimenti è il 100%; la somma delle tre quote nel file non va letta come 140%.",
+      "Il criterio 1.1 unisce la qualità del soggetto e le credenziali di produzione, regista, autore e interpreti: è classificato come scrittura, quindi per la sezione 1 la commissione simulata legge moduli e sceneggiatura ma non i curriculum allegati.",
+      "Cura della scheda (14/11/2026): i due bandi Azione 1.3.4 del 2026 hanno tre tabelle con massimi diversi (191, 171, 118) e sono stati divisi in tre schede: questa riguarda la griglia sviluppo."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Storico 2023 e 2024: non era «la stessa tabella»; stessi punti massimi, ma numerazione 1-2-5-6-7-8 e nessun minimo sui criteri 1+5 (introdotto nel 2026).",
+      "Requisiti: distribuzione e quota territoriale 30%/20% valgono solo per attrazione e sottomisura Produzione, non per lo Sviluppo.",
+      "Requisiti: aggiunte serie web e cortometraggi (bando sviluppo e produzione) e gli interventi minimi della sottomisura Sviluppo; associazioni REA ammesse allo Sviluppo; una domanda per sottomisura.",
+      "Note: obbligo del logo nei titoli presente solo nel bando attrazione; erogazione subordinata alla sede in Liguria nel bando sviluppo e produzione."
+    ],
+    "dubbi": [
+      "Il bando non dichiara un punteggio massimo: 191/171/118 sono somme dei massimi stampati, mentre le fasce di contributo (fino a >90) fanno pensare a una scala vicina a 100.",
+      "Non è detto espressamente se le fasce 35/40/60% si applichino al totale o alla somma dei criteri 1 e 5.",
+      "La soglia vera è sulla somma dei criteri 1+5 (soglieCombinate); sogliaTotale è solo una condizione necessaria.",
+      "Criteri 6.1-6.3 senza fasce pubblicate; valore 0 dei criteri 3 e 4 dedotto; saldo 60% e dotazioni per tipologia del bando sviluppo e produzione calcolati."
+    ]
+  },
+  "soglieCombinate": [
+    {
+      "etichetta": "Criteri 1 + 5 (art. 9b): almeno 40 punti",
+      "sezioni": [
+        "1",
+        "5"
+      ],
+      "minimo": 40
+    },
+    {
+      "etichetta": "Elemento 1.1 diverso da zero (art. 9b, punto 7)",
+      "criteri": [
+        "1.1"
+      ],
+      "minimo": 0.1
+    },
+    {
+      "etichetta": "Elemento 1.2 diverso da zero (art. 9b, punto 7)",
+      "criteri": [
+        "1.2"
+      ],
+      "minimo": 0.1
+    },
+    {
+      "etichetta": "Elemento 1.3 diverso da zero (art. 9b, punto 7)",
+      "criteri": [
+        "1.3"
+      ],
+      "minimo": 0.1
+    },
+    {
+      "etichetta": "Elemento 1.4 diverso da zero (art. 9b, punto 7)",
+      "criteri": [
+        "1.4"
+      ],
+      "minimo": 0.1
+    }
+  ]
+}

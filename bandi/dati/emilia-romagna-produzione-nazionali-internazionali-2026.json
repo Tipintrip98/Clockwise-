@@ -1,0 +1,1053 @@
+{
+  "id": "emilia-romagna-produzione-nazionali-internazionali-2026",
+  "fondoId": "emilia-romagna",
+  "revisione": "2026-11-14",
+  "nome": "Emilia-Romagna — Bando per il sostegno alla produzione di opere cinematografiche e audiovisive realizzate da imprese nazionali, europee ed extraeuropee, anno 2026",
+  "nomeBreve": "Emilia-Romagna · Produzione (imprese nazionali e internazionali) 2026",
+  "ente": "Regione Emilia-Romagna — Settore Attività culturali, Economia della Cultura (alla data del bando: Direzione Generale Conoscenza, Ricerca, Lavoro, Imprese; nelle delibere di graduatoria 2026: Direzione Generale Sviluppo economico, Cultura e Turismo) · gestione Emilia-Romagna Film Commission (Fondo per l’audiovisivo, L.R. n. 20/2014, art. 10)",
+  "regione": "Emilia-Romagna",
+  "territorio": "Emilia-Romagna",
+  "gentilizio": "emiliano-romagnoli",
+  "fonte": "Bando per il sostegno alla produzione di opere cinematografiche e audiovisive realizzate da imprese nazionali, europee ed extraeuropee – Anno 2026, Allegato 1 alla Deliberazione della Giunta regionale n. 2175 del 22/12/2025 (L.R. n. 20/2014, art. 10)",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Regione Emilia-Romagna per film, opere televisive, serie e documentari realizzati almeno in parte sul territorio regionale da imprese di produzione italiane, europee o extraeuropee (codice ATECO 59.11). Due sessioni l’anno e due sezioni: la Sezione A per opere da almeno 4 milioni di euro ambientate in Emilia-Romagna, la Sezione B per film, serie e documentari con obblighi territoriali più leggeri. Un nucleo di esperti assegna fino a 100 punti (minimo 80 in Sezione A, 70 in Sezione B) e il punteggio determina anche l’importo del contributo.",
+  "paginaUfficiale": "https://cinema.emiliaromagnacultura.it/tipologia-bando/per-imprese-nazionali-ed-internazionali/",
+  "fontiUrl": [
+    {
+      "titolo": "Delibera di Giunta regionale n. 2175 del 22/12/2025 con il bando allegato (testo integrale)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Delibera-di-Giunta-Regionale-n.2175-del-22122025.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Testo del bando 2026 (solo allegato, identico all’Allegato 1 della DGR 2175/2025)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Allegato-Avviso-Bando-2.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina ufficiale del bando 2026 per imprese nazionali, europee ed extraeuropee",
+      "url": "https://cinema.emiliaromagnacultura.it/it/bando/bando-sostegno-alla-produzione-opere-cinematografiche-audiovisive-realizzate-imprese-nazionali-europee-ed-extraeuropee-anno-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bandi produzione per imprese nazionali ed internazionali (bandi attivi e archivio)",
+      "url": "https://cinema.emiliaromagnacultura.it/tipologia-bando/per-imprese-nazionali-ed-internazionali/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 797 del 25/05/2026 — graduatoria e assegnazione dei contributi, prima sessione 2026",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Documento_finale_pubblicazione_GPG2026875.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 1764 del 27/10/2026 — graduatoria e assegnazione dei contributi, seconda sessione 2026",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Documento_finale_GPG20261853-1.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Slide del webinar di presentazione del bando, 15 gennaio 2026",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/SLIDE-WEBINAR-15_01_26-1.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Manuale SFINGE2020 per la presentazione della domanda",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/manuale-sfinge.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina del bando 2025 (DGR n. 40 del 20/01/2025)",
+      "url": "https://cinema.emiliaromagnacultura.it/it/bando/bando-sostegno-alla-produzione-opere-cinematografiche-audiovisive-realizzate-imprese-nazionali-europee-ed-extraeuropee-anno-2025/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina del bando 2024 (DGR n. 144 del 29/01/2024, modificata con DGR n. 1023 del 04/06/2024)",
+      "url": "https://cinema.emiliaromagnacultura.it/it/bando/bando-sostegno-alla-produzione-opere-cinematografiche-audiovisive-realizzate-imprese-nazionali-europee-ed-extraeuropee-anno-2024/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 378 del 16/03/2026 — bando 2026 per imprese con sede o unità locale in Emilia-Romagna (atto distinto, PR FESR 2021-2027)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2026/03/Documento_finale_GPG2026365-6.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato M — scheda di sintesi del bando 2026 per imprese regionali",
+      "url": "https://fesr.regione.emilia-romagna.it/opportunita/opportunita-di-finanziamento/2026/sostegno-alla-produzione-di-opere-cinematografiche-e-audiovisive-anno-2026/presentazione-domanda/bando-e-modulistica/allegato-m-scheda-sintesi-bando.pdf/@@download/file",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. 11359/2026 — concessione dei contributi, prima sessione 2026 (collegata dalla pagina del bando, non trascritta)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2026/06/dd-11359_26.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione n. 21998 dell’11/11/2026 — concessione dei contributi, seconda sessione 2026 (collegata dalla pagina del bando, non trascritta)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Determina-di-concessione-n.-21998-dell11-novembre-2026-Seconda-sessione.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": "2025-12-23",
+      "scadenza": "2026-07-31",
+      "nota": "DGR n. 2175 del 22/12/2025. Sessioni 13/01–27/02 e 1–31/07/2026; dotazione 1.500.000 euro (800.000 + 700.000). Prima sessione (DGR 797/2026): 35 domande, 19 sopra soglia, 11 finanziate (3 in A, 8 in B da 77 punti in su). Seconda (DGR 1764/2026): 46 domande in B, 19 sopra soglia, tutte finanziate."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-01-21",
+      "scadenza": "2025-07-31",
+      "nota": "DGR n. 40 del 20/01/2025. Sessioni 28/01–28/02 e 1–31/07/2025. Graduatorie: DGR n. 786 del 26/05/2025 (32 domande, 13 progetti finanziabili) e DGR n. 1727 del 27/10/2025 (36 domande); scorrimento con DGR n. 1787 del 03/11/2025."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-01-30",
+      "scadenza": "2024-07-31",
+      "nota": "DGR n. 144 del 29/01/2024, modificata con DGR n. 1023 del 04/06/2024. Sessioni 30/01–29/02 e 1–31/07/2024; dotazione 1.350.000 euro (700.000 + 650.000). Graduatorie: DGR n. 932 del 27/05/2024 (17 domande) e DGR n. 1965 del 21/10/2024 (33 domande)."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-01-13",
+      "al": "2026-02-27",
+      "nota": "Prima sessione: dalle ore 16:00 del 13 gennaio 2026 alle ore 16:00 del 27 febbraio 2026 (par. 11.2)."
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-07-01",
+      "al": "2026-07-31",
+      "nota": "Seconda sessione: dalle ore 16:00 del 1° luglio 2026 alle ore 16:00 del 31 luglio 2026 (par. 11.2)."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "delibera tra fine dicembre 2026 e gennaio 2027; sessioni attese gennaio–febbraio e 1–31 luglio 2027",
+    "base": "Cadenza 2024-2026: bando approvato il 29/01/2024, il 20/01/2025 e il 22/12/2025; prima sessione chiusa a fine febbraio, seconda sempre 1–31 luglio. Al 14/11/2026 il sito della Film Commission non ha bandi attivi né annunci per il 2027. Il Programma triennale 2024-2026 scade: criteri, punteggi e massimali del 2027 vanno riletti sul nuovo atto."
+  },
+  "sogliaTotale": 70,
+  "punteggioMassimo": 100,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Nucleo di valutazione di esperti nominato con atto del Direttore generale competente (per il 2026: determinazione del Direttore Generale Sviluppo economico, cultura e turismo n. 5969 del 26/03/2026, citata nelle delibere di graduatoria; sedute del 5 e 12 maggio e del 14 e 16 ottobre 2026). Per ciascuna sezione il nucleo definisce la spesa ammissibile, il punteggio e la proposta di contributo (par. 12.2). Il bando non indica il numero dei componenti né la regola di calcolo (media, somma o consenso); i verbali restano agli atti del Settore. L’istruttoria formale è svolta prima da un gruppo di lavoro del Settore. A parità di punteggio precede il progetto già sostenuto dalla Regione con un contributo allo sviluppo, poi quello con il punteggio più alto nel criterio 1."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://servizifederati.regione.emilia-romagna.it/fesr2020",
+    "oggetto": "",
+    "regole": [
+      "Domanda compilata, validata e inviata solo per via telematica con l’applicazione web SFINGE2020; altre modalità non sono ammesse (par. 11.1).",
+      "Accesso con SPID, CIE o CNS del legale rappresentante o di un delegato con procura speciale (modello all’Allegato C).",
+      "Il modulo di domanda generato dal sistema va caricato firmato: la sua assenza è causa di inammissibilità (par. 12.1).",
+      "Imposta di bollo di 16,00 euro: estremi della marca da bollo riportati nella domanda oppure pagamento telematico in SFINGE2020.",
+      "Una sola domanda per impresa in ciascuna delle due sessioni; valgono data e ora di invio, i termini sono perentori.",
+      "Integrazioni e chiarimenti richiesti dalla Regione vanno forniti entro 10 giorni, pena l’inammissibilità.",
+      "Video di presentazione facoltativo: formato .mp4, durata massima 3 minuti, file non oltre 350 MB."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "sezione-a",
+      "nome": "Sezione A — Opere cinematografiche e opere televisive (film o serie) di assoluto rilievo, con costo di produzione di almeno 4 milioni di euro",
+      "griglia": "A",
+      "soglie": {
+        "A": 80
+      },
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 250000
+        },
+        "nota": "Importo fisso per fascia di punteggio (par. 6.1): 150.000 euro tra 80 e 85 punti, 200.000 tra 86 e 90, 250.000 con punteggio superiore a 91 (il 91 esatto non è assegnato a nessuna fascia). Il 50% non è la formula di calcolo: è il tetto di intensità di aiuto sul costo dell’opera (par. 6.3), più alto per le opere difficili."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "sezione-b-film-serie",
+      "nome": "Sezione B — Opere cinematografiche e opere televisive (film o serie) a contenuto narrativo, con i requisiti territoriali pieni",
+      "griglia": "B",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 150000
+        },
+        "nota": "Non è una quota del costo totale. Il contributo è il 40-60% delle spese di personale, il 30-50% di beni, servizi e professionisti e il 50-70% della colonna sonora sostenute in Emilia-Romagna: fascia bassa con 70-79 punti, media con 80-89, alta con 90-100 (graduatorie 2024-2026). Tetto 150.000 euro (70.000 nella categoria a contributo ridotto). Il 50% è il limite di aiuto del par. 6.3."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "sezione-b-film-serie-ridotto",
+      "nome": "Sezione B — Opere cinematografiche e opere televisive con i soli 6 giorni di riprese in regione (contributo ridotto)",
+      "griglia": "B",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 70000
+        },
+        "nota": "Non è una quota del costo totale. Il contributo è il 40-60% delle spese di personale, il 30-50% di beni, servizi e professionisti e il 50-70% della colonna sonora sostenute in Emilia-Romagna: fascia bassa con 70-79 punti, media con 80-89, alta con 90-100 (graduatorie 2024-2026). Tetto ridotto a 70.000 euro (par. 6.2 c. 3). Il 50% è il limite di aiuto del par. 6.3."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "sezione-b-documentario",
+      "nome": "Sezione B — Documentari e serie di documentari",
+      "griglia": "B",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2026": 50000
+        },
+        "nota": "Non è una quota del costo totale. Il contributo è il 40-60% delle spese di personale, il 30-50% di beni, servizi e professionisti e il 50-70% della colonna sonora sostenute in Emilia-Romagna: fascia bassa con 70-79 punti, media con 80-89, alta con 90-100 (graduatorie 2024-2026). Tetto 50.000 euro. Il 50% è il limite del par. 6.3; per l’Allegato E i documentari sono opere difficili (fino all’80%)."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    }
+  ],
+  "griglie": {
+    "A": {
+      "id": "A",
+      "nome": "Sezione A — Criteri di valutazione (par. 13.1)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Sezione A — criteri di valutazione del par. 13.1 (totale 100 punti, minimo 80)",
+          "max": 100,
+          "obiettivo": "Favorire i progetti per la loro qualità culturale: opere di assoluto rilievo per la valorizzazione della cultura cinematografica, con elevati requisiti di qualità e di impatto economico sul settore. Criteri 1-6: valutazione tecnica del nucleo (92 punti). Criteri 7-9: punteggi automatici sulle dichiarazioni rese in candidatura (8 punti). Minimo per accedere al contributo: 80 punti su 100.",
+          "criteri": [
+            {
+              "id": "1",
+              "nome": "Qualità del progetto",
+              "max": 35,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "In particolare, si procederà ad analizzare: l’originalità della storia, della visione dell’autore e del linguaggio cinematografico; la qualità ed originalità della sceneggiatura ovvero del soggetto e dei temi trattati; temi, storie o punti di vista provenienti da gruppi sottorappresentati e/o potenzialmente discriminati; le eventuali tecniche di animazione utilizzate; gli altri eventuali materiali artistici a corredo della candidatura.",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "2",
+              "nome": "Solidità produttiva",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "In particolare, si procederà ad analizzare: la storia e il cv della compagine produttiva; la presenza di cofinanziatori, sponsor ecc.; la congruità del progetto di produzione con il piano finanziario; la struttura finanziaria del progetto; il livello di copertura finanziaria (ovvero investimenti da parte dei produttori, di altri finanziamenti pubblici, eventuali finanziamenti esterni, eventuale vendita o prevendita dei diritti dell’opera).",
+              "documenti": [
+                "modulo3",
+                "cv_societa",
+                "coproduzione",
+                "finanziamenti",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "3",
+              "nome": "Impatto economico",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "In particolare, si procederà ad analizzare: le ricadute economiche dirette sul territorio regionale e soprattutto l’occupabilità dei lavoratori del settore residenti in Emilia-Romagna; il grado di coinvolgimento della filiera produttiva dell’audiovisivo regionale; la capacità di attivare relazioni con imprese ed enti locali in merito al progetto.",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "4",
+              "nome": "Valorizzazione territoriale",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "In particolare, si procederà ad analizzare: la capacità della sceneggiatura o del trattamento di valorizzare e far conoscere gli aspetti storici, culturali, sociali e paesaggistici dell’identità e tradizione del territorio regionale, nonché i personaggi, i fatti e gli eventi regionali.",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "5",
+              "nome": "Strategie di marketing ed innovazione produttiva",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "In particolare, si valuteranno i seguenti aspetti: presenza di accordi per la distribuzione (deal memo, lettera o contratto firmato); progettazione di strumenti ed attività di marketing adeguati; innovatività delle strategie di diffusione e distribuzione dell’opera; adozione di strumenti e modalità per garantire una maggiore accessibilità al prodotto (incluso previsione costi sottotitolatura plurilingue ed audiodescrizione); attività di formazione e/o tutela delle persone coinvolte nella produzione sui temi della diversità, equità, inclusione e accessibilità.",
+              "documenti": [
+                "distribuzione",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "6",
+              "nome": "Rinnovamento area professionale e creativa",
+              "max": 2,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "In particolare, si valuterà l’attenzione al rinnovamento della scena creativa e professionale; al coinvolgimento delle donne e degli under 35 nei principali ruoli creativi e direttivi (sceneggiatori, direttori della fotografia, scenografi, regia collettiva).",
+              "documenti": [
+                "modulo2",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "7",
+              "nome": "Rinnovamento autoriale",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "formazione",
+              "descrizione": "Il punteggio sarà assegnato qualora sia previsto l’impiego nel progetto di regista di età pari o inferiore a 35 anni al momento della domanda. Non concorrono a questa premialità le regie collettive.",
+              "principio": "La perdita a consuntivo di uno o più presupposti dei punteggi automatici ottenuti in candidatura comporta una penalità pari al 10% del contributo liquidabile (par. 19 c. 2).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista di età pari o inferiore a 35 anni al momento della domanda (regia non collettiva)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista di età superiore a 35 anni oppure regia collettiva"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "nome": "Promozione pari opportunità",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Il punteggio sarà assegnato qualora sia previsto l’impiego nel progetto di regista di genere femminile. Non concorrono a questa premialità le regie collettive.",
+              "principio": "La perdita a consuntivo di uno o più presupposti dei punteggi automatici ottenuti in candidatura comporta una penalità pari al 10% del contributo liquidabile (par. 19 c. 2).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Regista di genere femminile (regia non collettiva)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista non di genere femminile oppure regia collettiva"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "nome": "Sostenibilità ambientale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Il punteggio sarà assegnato qualora l’impresa dichiari l’impegno ad acquisire la certificazione GREEN FILM o altre certificazioni ambientali per la produzione dell’opera candidata.",
+              "principio": "La perdita a consuntivo di uno o più presupposti dei punteggi automatici ottenuti in candidatura comporta una penalità pari al 10% del contributo liquidabile (par. 19 c. 2).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Impegno dichiarato ad acquisire la certificazione Green Film o altra certificazione ambientale"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno dichiarato"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "B",
+      "nome": "Sezione B — Criteri di valutazione (par. 13.2)",
+      "sezioni": [
+        {
+          "id": "B",
+          "nome": "Sezione B — criteri di valutazione del par. 13.2 (totale 100 punti, minimo 70)",
+          "max": 100,
+          "obiettivo": "Favorire i progetti per la loro qualità culturale: progetti di rilievo per qualità progettuale, impatto economico e valorizzazione territoriale, realizzati almeno in parte in Emilia-Romagna. Criteri 1-6: valutazione tecnica del nucleo (90 punti). Criteri 7-9: punteggi automatici sulle autodichiarazioni rese in candidatura (10 punti). Minimo per accedere al contributo: 70 punti su 100.",
+          "criteri": [
+            {
+              "id": "1",
+              "nome": "Qualità del progetto",
+              "max": 35,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "In particolare, si procederà ad analizzare: l’originalità della storia, della visione dell’autore e del linguaggio cinematografico; la qualità ed originalità della sceneggiatura, ovvero del soggetto e dei temi trattati; temi, storie o punti di vista provenienti da gruppi sottorappresentati e/o potenzialmente discriminati; le eventuali tecniche di animazione utilizzate; gli altri eventuali materiali artistici a corredo della candidatura.",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2",
+                "cv_regista",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "2",
+              "nome": "Solidità produttiva",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "In particolare, si procederà ad analizzare: la storia e il cv della compagine produttiva; la presenza di cofinanziatori, sponsor ecc.; la congruità del progetto di produzione con il piano finanziario; la struttura finanziaria del progetto; il livello di copertura finanziaria (ovvero investimenti da parte dei produttori, di altri finanziamenti pubblici, eventuali finanziamenti esterni, eventuale vendita o prevendita dei diritti dell’opera).",
+              "documenti": [
+                "modulo3",
+                "cv_societa",
+                "coproduzione",
+                "finanziamenti",
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "3",
+              "nome": "Impatto economico",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "In particolare, si procederà ad analizzare: le ricadute economiche dirette sul territorio regionale e soprattutto l’occupabilità dei lavoratori del settore residenti in Emilia-Romagna; il grado di coinvolgimento della filiera produttiva dell’audiovisivo regionale; la capacità di attivare relazioni con imprese ed enti locali in merito al progetto.",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "4",
+              "nome": "Valorizzazione territoriale",
+              "max": 13,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "In particolare, si procederà ad analizzare: la capacità della sceneggiatura o del trattamento di valorizzare e far conoscere gli aspetti storici, culturali, sociali e paesaggistici dell’identità e tradizione del territorio regionale, nonché i personaggi, i fatti e gli eventi regionali.",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "5",
+              "nome": "Strategie di marketing ed innovazione produttiva",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "In particolare, si valuteranno i seguenti aspetti: presenza di accordi per la distribuzione (deal memo, lettera o contratto firmato); progettazione di strumenti ed attività di marketing adeguati; innovatività delle strategie di diffusione e distribuzione dell’opera; adozione di strumenti e modalità per garantire una maggiore accessibilità al prodotto (incluso previsione costi sottotitolatura plurilingue ed audiodescrizione); attività di formazione e/o tutela delle persone coinvolte nella produzione sui temi della diversità, equità, inclusione e accessibilità.",
+              "documenti": [
+                "distribuzione",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "6",
+              "nome": "Rinnovamento area professionale e creativa",
+              "max": 2,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "In particolare, si valuterà l’attenzione al rinnovamento della scena creativa e professionale; al coinvolgimento delle donne e degli under 35 nei principali ruoli creativi e direttivi (sceneggiatori, direttori della fotografia, scenografi, regia collettiva).",
+              "documenti": [
+                "modulo2",
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "7",
+              "nome": "Rinnovamento autoriale",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "formazione",
+              "descrizione": "Il punteggio sarà assegnato qualora sia previsto l’impiego nel progetto di regista di età pari o inferiore a 35 anni al momento della domanda. Non concorrono a questa premialità le regie collettive.",
+              "principio": "L’attribuzione dei punteggi automatici di premialità (criteri n. 7, 8 e 9) avviene sulla base delle autodichiarazioni fornite in fase di candidatura, che devono essere obbligatoriamente mantenute in fase di realizzazione del progetto, pena la decurtazione del 10% del contributo effettivamente liquidabile (par. 13.2 c. 3).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Regista di età pari o inferiore a 35 anni al momento della domanda (regia non collettiva)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista di età superiore a 35 anni oppure regia collettiva"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "nome": "Promozione pari opportunità",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Il punteggio sarà assegnato qualora sia previsto l’impiego nel progetto di regista di genere femminile. Non concorrono a questa premialità le regie collettive.",
+              "principio": "L’attribuzione dei punteggi automatici di premialità (criteri n. 7, 8 e 9) avviene sulla base delle autodichiarazioni fornite in fase di candidatura, che devono essere obbligatoriamente mantenute in fase di realizzazione del progetto, pena la decurtazione del 10% del contributo effettivamente liquidabile (par. 13.2 c. 3).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Regista di genere femminile (regia non collettiva)"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Regista non di genere femminile oppure regia collettiva"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "nome": "Sostenibilità ambientale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Il punteggio sarà assegnato qualora l’impresa dichiari l’impegno ad acquisire la certificazione GREEN FILM o altre certificazioni ambientali per la produzione dell’opera candidata.",
+              "principio": "L’attribuzione dei punteggi automatici di premialità (criteri n. 7, 8 e 9) avviene sulla base delle autodichiarazioni fornite in fase di candidatura, che devono essere obbligatoriamente mantenute in fase di realizzazione del progetto, pena la decurtazione del 10% del contributo effettivamente liquidabile (par. 13.2 c. 3).",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "Impegno dichiarato ad acquisire la certificazione Green Film o altra certificazione ambientale"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno dichiarato"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda di contributo generata da SFINGE2020, firmata dal legale rappresentante o dal procuratore, con imposta di bollo da 16,00 euro",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Dossier di candidatura: scheda di dettaglio descrittiva del progetto e scheda di sintesi (abstract) soggetta a pubblicazione",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Dossier di candidatura: scheda economico-finanziaria di progetto compilata in SFINGE2020",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Autodichiarazioni sui requisiti di partecipazione, presa visione della Carta dei principi di responsabilità sociale d’impresa (Allegato A), dichiarazione di impegno al rispetto degli obblighi, dichiarazione antimafia e dati del titolare effettivo (Allegato D)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratto, deal memo o lettera di impegno con il produttore principale, se il richiedente è coproduttore di maggioranza o produttore delegato (contratto firmato entro 60 giorni dal termine di presentazione)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "produttore_esecutivo",
+      "nome": "Contratto, deal memo o lettera di impegno con il produttore principale, se il richiedente è produttore esecutivo (senza contratto firmato entro 60 giorni la domanda è inammissibile)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Contratto, deal memo o lettera di impegno con l’autore della musica residente in Emilia-Romagna, per usare le soglie territoriali ridotte al 20%",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Procura speciale (Allegato C), se la domanda è presentata da un delegato",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imprese straniere: documentazione degli enti del paese di sede che attesta i requisiti (attività di produzione audiovisiva, iscrizione al registro, non essere impresa in difficoltà)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Soggetto o trattamento o sceneggiatura dell’opera",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Curriculum dell’impresa richiedente e di tutti i soggetti coinvolti nella produzione (eventuali coproduttori e/o produttori esecutivi)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Filmografia del regista",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1"
+      ]
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Filmografia dello sceneggiatore",
+      "obbligo": "punteggio",
+      "criteri": [
+        "1"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Contratti, lettere, deal memo di attestazione di cofinanziamento e/o sponsorizzazione",
+      "obbligo": "punteggio",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratti, bozze di contratti, deal memo o lettere di impegno per la distribuzione dell’opera",
+      "obbligo": "punteggio",
+      "criteri": [
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Ulteriori contratti, bozze di contratti, deal memo o lettere di impegno che definiscono l’assetto e la solidità produttiva; letter of interest",
+      "obbligo": "punteggio",
+      "criteri": [
+        "2"
+      ]
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Protocollo di sostenibilità ambientale che si intende adottare",
+      "obbligo": "consigliato",
+      "criteri": [
+        "9"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Note di regia, moodboard, elenco location, video di presentazione (.mp4, massimo 3 minuti e 350 MB) e ogni altro materiale utile a illustrare il progetto",
+      "obbligo": "consigliato",
+      "criteri": [
+        "1",
+        "4"
+      ]
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "posizione",
+      "testo": "Il richiedente è produttore unico, coproduttore con quota di maggioranza, produttore delegato dai coproduttori (due quote di pari valore, non inferiori al 50%) oppure produttore esecutivo del progetto"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO 59.11 primario o secondario (o NACE Rev. 2 59.11 per le imprese UE; le imprese extraeuropee documentano l’attività di produzione)"
+    },
+    {
+      "id": "registro",
+      "testo": "Iscrizione nella sezione ordinaria del Registro delle imprese, o ente omologo del paese di sede"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà ai sensi del Reg. (UE) n. 651/2014 e non ha cause di decadenza, sospensione o divieto antimafia (art. 67 D.Lgs. 159/2011)"
+    },
+    {
+      "id": "revoche",
+      "testo": "Nessuna revoca di un contributo della L.R. 20/2014 nei 12 mesi precedenti la candidatura"
+    },
+    {
+      "id": "lavoro",
+      "testo": "Rispetto del contratto collettivo nazionale di settore e regolarità contributiva e retributiva"
+    },
+    {
+      "id": "rsi",
+      "testo": "Presa visione della Carta dei principi di responsabilità sociale d’impresa (Allegato A)"
+    },
+    {
+      "id": "diritti",
+      "testo": "I diritti dell’opera sono detenuti già in fase di candidatura"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda per impresa in questa sessione; il progetto non è stato presentato nella prima sessione né, nello stesso anno, su altri bandi di produzione della L.R. 20/2014; per una serie, una sola domanda per stagione"
+    },
+    {
+      "id": "avvio",
+      "testo": "Le attività in Emilia-Romagna iniziano non prima della presentazione della domanda e comunque entro il 2026"
+    },
+    {
+      "id": "cronoprogramma",
+      "testo": "Tra il 70% e il 90% delle attività sul territorio regionale è previsto nel 2026, il resto nel 2027"
+    },
+    {
+      "id": "tipologia",
+      "testo": "L’opera non è un cortometraggio, un factual, talent o reality show, un videoclip o un programma televisivo, e non ha contenuti pornografici, pubblicitari, promozionali o didattici (par. 3.3)"
+    },
+    {
+      "id": "sezione-a",
+      "testo": "Solo Sezione A: costo complessivo di produzione di almeno 4.000.000 di euro, almeno 18 giorni di ripresa (in Emilia-Romagna, secondo le slide del webinar) e ambientazione storica o geografica con riferimenti narrativi o biografici in Emilia-Romagna"
+    },
+    {
+      "id": "sezione-b-film",
+      "testo": "Solo Sezione B, film e serie: almeno 6 giorni di riprese in Emilia-Romagna e, in più, almeno il 30% dei giorni di ripresa oppure almeno il 30% dei costi totali in regione (20% con autore della musica residente); nessuna percentuale richiesta con almeno 18 giorni di riprese in regione. Con i soli 6 giorni e senza le percentuali si accede al contributo ridotto (massimo 70.000 euro)"
+    },
+    {
+      "id": "sezione-b-doc",
+      "testo": "Solo Sezione B, documentari: almeno il 30% dei giorni di ripresa oppure almeno il 30% dei costi totali di produzione in Emilia-Romagna (20% con autore della musica residente)"
+    },
+    {
+      "id": "costo-minimo",
+      "testo": "Solo Sezione B: costi ammissibili non inferiori a 30.000 euro"
+    },
+    {
+      "id": "guida",
+      "testo": "Il personale residente in regione messo a contributo è iscritto alla Guida alla Produzione di Emilia-Romagna Film Commission (esclusi attori, comparse, tirocinanti e dipendenti a tempo indeterminato)"
+    }
+  ],
+  "scadenze": [],
+  "scadenzeNote": [
+    "Le scadenze di questo bando sono date fisse di calendario, non mesi dalla concessione.",
+    "Entro 60 giorni dal termine di presentazione della domanda: contratto firmato con il produttore principale (per coproduttore di maggioranza, produttore delegato e produttore esecutivo) e con l’autore della musica residente, se in domanda c’erano solo deal memo o lettere di impegno (par. 2 c. 2 e par. 3.2.1 c. 2).",
+    "Entro il 31/12/2026: avvio delle attività in Emilia-Romagna, non prima della presentazione della domanda, pena l’inammissibilità (par. 4 c. 1). Tra il 70% e il 90% delle attività sul territorio va realizzato nel 2026, il resto nel 2027 (par. 7).",
+    "Almeno 10 giorni prima dell’inizio delle riprese in regione: comunicazione via PEC della data, con piano di lavorazione e cast list; a fine riprese, piano di lavorazione definitivo ed elenco delle location (par. 20).",
+    "Entro il 31/01/2027: richiesta di acconto tramite SFINGE2020 sullo stato di avanzamento al 31/12/2026 (par. 15 e 16). Secondo le slide del webinar l’acconto è facoltativo e se ne può chiedere uno solo.",
+    "Entro il 31/12/2027: conclusione del progetto. Proroga di norma fino a 6 mesi, da chiedere tramite SFINGE2020 almeno 30 giorni prima; oltre il termine il contributo è revocato (par. 4, 17, 22.2 e 23).",
+    "Entro 30 giorni dalla conclusione del progetto (fine gennaio 2028, salvo proroga): rendicontazione finale, richiesta di saldo e 2 copie campione dell’opera. Ritardo fino a 30 giorni: revoca del 10% del contributo liquidabile; da 31 a 60 giorni: 40%; oltre 60 giorni: revoca totale (par. 17 e 22.2 c. 2). Le integrazioni richieste vanno date entro 20 giorni solari.",
+    "Attenzione: il par. 8 c. 12 ammette a rendiconto solo giustificativi emessi entro il 31 gennaio 2027 e le slide del webinar indicano il 31/01/2027 come termine ultimo del saldo, in contrasto con la conclusione al 31/12/2027 scritta negli altri paragrafi. Prima di pianificare spese nel 2027 va chiesta conferma scritta alla Film Commission."
+  ],
+  "erogazione": [
+    {
+      "quota": "acconto",
+      "percentuale": null,
+      "condizione": "Su richiesta tramite SFINGE2020 entro il 31/01/2027 (facoltativo, uno solo secondo le slide del webinar): fino alla concorrenza della parte di contributo della prima annualità, in proporzione alle spese sostenute per lo stato di avanzamento al 31/12/2026, con relazione e attestazione delle spese. In Sezione A l’acconto è pari al 30% delle spese sostenute e non supera 150.000 euro (par. 15 e 16)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": null,
+      "condizione": "A partire da gennaio 2027, a ultimazione del progetto e dietro presentazione della rendicontazione finale (par. 15 lett. b e par. 17); liquidazione entro 90 giorni dalla ricezione dei documenti (par. 18)."
+    }
+  ],
+  "note": [
+    "Punteggio minimo per accedere al contributo: 80 punti in Sezione A, 70 punti in Sezione B. Non ci sono minimi per singolo criterio.",
+    "Un progetto di Sezione A senza i requisiti della sezione, o che non raggiunge 80 punti, è valutato d’ufficio in Sezione B con i criteri di quella sezione.",
+    "Sezione A: contributo fisso di 150.000, 200.000 o 250.000 euro secondo la fascia di punteggio. Sezione B: percentuale sulle spese ammissibili in regione, crescente con il punteggio e diversa per personale, beni e servizi, colonna sonora, entro il massimale (150.000 euro film e serie, 70.000 euro con i soli 6 giorni di riprese, 50.000 euro documentari).",
+    "Dotazione 2026: fino a 1.500.000 euro per le due sezioni insieme, 800.000 alla prima sessione e 700.000 alla seconda; in Sezione B nessuna tipologia di opera può ricevere più del 75% delle risorse di una sessione (par. 5). Nel 2026 la Regione ha poi assegnato di più: 1.056.408 euro nella prima sessione e 1.276.899 nella seconda, tra annualità 2026 e 2027.",
+    "I punteggi automatici (criteri 7, 8 e 9) si basano su quanto dichiarato in domanda: se a consuntivo viene meno il presupposto, il contributo liquidabile è ridotto del 10% (par. 13.2 c. 3 e par. 19 c. 2).",
+    "Sono ammissibili solo le spese sostenute in Emilia-Romagna: personale residente iscritto alla Guida alla Produzione, beni e servizi da fornitori con sede legale o unità locale in regione, professionisti con residenza fiscale in regione. Il bando non fissa una spesa minima in rapporto al contributo: gli obblighi territoriali sono in giorni di ripresa o in quota dei costi totali.",
+    "Non sono ammissibili, tra le altre: sceneggiatura, sviluppo e diritti, spese generali, producer fee, carburante, rimborsi spese, titoli di viaggio, documenti sotto i 30 euro, autofatture, apporti in natura. Le prestazioni occasionali valgono entro il 15% dei costi ammissibili.",
+    "Il contributo non può superare il 50% delle spese ammissibili ai sensi dell’art. 54 del Reg. (UE) n. 651/2014, salvo opere difficili (Allegato E); è cumulabile con altri aiuti entro le stesse intensità.",
+    "I contributi sono arrotondati per difetto all’unità. Se le risorse residue non bastano, al primo progetto non finanziato può essere proposto un contributo diverso, comunque non inferiore a 10.000 euro.",
+    "Presentare la domanda implica accettare il contributo assegnato anche se inferiore a quello richiesto.",
+    "A consuntivo: in Sezione B il contributo è ridotto in proporzione se le spese ammissibili scendono; in Sezione A la perdita di un requisito lo riduce al 30% delle spese ammissibili, fino a 150.000 euro. Sotto i 30.000 euro di costo ammissibile rendicontato il contributo è revocato.",
+    "Tutti i giustificativi di spesa, tranne le buste paga, devono riportare il CUP del progetto.",
+    "Obblighi di visibilità: logo di Emilia-Romagna Film Commission con la dicitura «con il sostegno della Regione Emilia-Romagna» nei titoli (la mancanza è causa di revoca), loghi degli enti locali nei titoli di coda, almeno una proiezione in regione per film e documentari."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Bando per il sostegno alla produzione di opere cinematografiche e audiovisive destinato ad imprese con sede o unità locale in Emilia-Romagna — Anno 2026 (PR FESR 2021-2027, Azione 1.3.4)",
+      "url": "https://cinema.emiliaromagnacultura.it/tipologia-bando/per-imprese-regionali/",
+      "urlAtto": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2026/03/Documento_finale_GPG2026365-6.pdf",
+      "descrizione": "Atto distinto: DGR n. 378 del 16/03/2026 (PR FESR, regime de minimis). Per micro, piccole e medie imprese con sede legale o unità locale in Emilia-Romagna attiva da almeno 12 mesi, ATECO 59.11; anche cortometraggi. Domande dal 20 marzo al 27 aprile 2026; dotazione 750.000 euro. Massimali: 150.000 euro film e opere televisive, 50.000 documentari, 25.000 cortometraggi. A punteggio: minimo 60 punti sui criteri A-F e almeno 28 nel criterio A; contributo pari al 30% delle spese eleggibili con 60-70 punti, 40% con 71-80, 50% con 81-90, 60% con 91-100.",
+      "stato": "chiuso",
+      "tipoValutazione": "punteggio",
+      "sogliaTotale": 60,
+      "punteggioMassimo": 100,
+      "finestre": [
+        {
+          "anno": 2026,
+          "dal": "2026-03-20",
+          "al": "2026-04-27",
+          "nota": "Date di apertura e chiusura dalla scheda di sintesi (Allegato M)."
+        }
+      ],
+      "griglia": {
+        "id": "REG",
+        "nome": "Bando imprese regionali 2026 — criteri di valutazione e di premialità (par. 10.3)",
+        "sezioni": [
+          {
+            "id": "V",
+            "nome": "Criteri di valutazione",
+            "max": 96,
+            "obiettivo": "Minimo 60 punti per procedere all’attribuzione dei punteggi di premialità; la valutazione complessiva si fa solo con almeno 28 punti nel criterio A.",
+            "criteri": [
+              {
+                "id": "A",
+                "nome": "Qualità della proposta in termini di definizione degli obiettivi, metodologia e procedure di attuazione dell’intervento",
+                "max": 40,
+                "tipo": "qualitativo",
+                "famiglia": "scrittura",
+                "descrizione": "Originalità della storia, della visione dell’autore e del linguaggio cinematografico; qualità ed originalità della sceneggiatura, ovvero del soggetto e dei temi trattati; capacità della sceneggiatura o del trattamento di valorizzare e far conoscere gli aspetti storici, culturali, sociali e paesaggistici del territorio, nonché i personaggi, i fatti e gli eventi regionali; capacità di delineare una specifica strategia di attuazione dall’ideazione alla distribuzione; spazio a storie o punti di vista di gruppi sottorappresentati e/o potenzialmente discriminati; percorso artistico-professionale di regista, sceneggiatore, direttore della fotografia, compositore, montatore, costumista, scenografo (CV e premi)."
+              },
+              {
+                "id": "B",
+                "nome": "Ampliamento e innovatività dei servizi, dei prodotti e delle attività",
+                "max": 10,
+                "tipo": "qualitativo",
+                "famiglia": "formazione",
+                "descrizione": "Ampliamento e rinnovamento della scena creativa e professionale (opera prima/seconda); coinvolgimento nei principali ruoli creativi e direttivi di donne, under 35 e appartenenti a gruppi sottorappresentati; utilizzo di tecniche innovative di animazione o post-produzione visiva e sonora; servizi innovativi a supporto del set, in ottica di inclusione e supporto alla genitorialità."
+              },
+              {
+                "id": "C",
+                "nome": "Qualità economico-finanziaria del progetto",
+                "max": 30,
+                "tipo": "qualitativo",
+                "famiglia": "piano_finanziario",
+                "descrizione": "Congruità del progetto di produzione con il piano finanziario e rapporto tra il sostegno e l’attività realizzata sul territorio; solidità della struttura finanziaria: livello di copertura mediante investimenti di altri soggetti pubblici o privati (produttori, sponsor, vendita o prevendita dei diritti); solidità della compagine produttiva, attraverso la sua storia e il suo cv."
+              },
+              {
+                "id": "D",
+                "nome": "Livello di digitalizzazione dei servizi, dei prodotti e delle attività",
+                "max": 8,
+                "tipo": "qualitativo",
+                "famiglia": "distribuzione",
+                "descrizione": "Strumenti e attività di marketing digitali coerenti al prodotto e adeguati al mercato; strumenti per una maggiore accessibilità (sottotitolatura plurilingue, audiodescrizione); formazione e/o tutela delle persone coinvolte sui temi della diversità, equità, inclusione e accessibilità."
+              },
+              {
+                "id": "E",
+                "nome": "Coerenza con le value chain dei Clust-ER regionali (CULT-TECH; Turismo e riattivazione urbana)",
+                "max": 4,
+                "tipo": "qualitativo",
+                "famiglia": "territorio_contenuto",
+                "descrizione": "Valorizzazione, utilizzo e divulgazione di materiali di archivio; reti di imprese culturali e creative di «distretti creativi»; coinvolgimento della filiera audiovisiva regionale; spazi capaci di innescare riattivazione e rigenerazione urbana; place branding e marketing territoriale."
+              },
+              {
+                "id": "F",
+                "nome": "Contributo alla neutralità carbonica e alla lotta al cambiamento climatico",
+                "max": 4,
+                "tipo": "qualitativo",
+                "famiglia": "sostenibilita",
+                "descrizione": "Ottenimento della certificazione di sostenibilità ambientale sul processo produttivo, con protocolli specifici (Green Film o equivalenti)."
+              }
+            ]
+          },
+          {
+            "id": "P",
+            "nome": "Criteri di premialità",
+            "max": 4,
+            "obiettivo": "Attribuiti sulle caratteristiche autodichiarate in candidatura; se non mantenute, decurtazione del 5% del contributo liquidabile.",
+            "criteri": [
+              {
+                "id": "P1",
+                "nome": "Rilevanza della componente femminile e giovanile nella partecipazione societaria e/o finanziaria al capitale sociale",
+                "max": 2,
+                "tipo": "qualitativo",
+                "famiglia": "sostenibilita",
+                "descrizione": "Come definito all’Allegato C del bando regionale."
+              },
+              {
+                "id": "P2",
+                "nome": "Rating di legalità dell’impresa proponente",
+                "max": 1,
+                "tipo": "discreto",
+                "famiglia": "altro",
+                "descrizione": "Conseguimento del rating di legalità ai sensi del Decreto MEF n. 57 del 20 febbraio 2014.",
+                "valori": [
+                  {
+                    "punti": 1,
+                    "etichetta": "Rating di legalità conseguito"
+                  },
+                  {
+                    "punti": 0,
+                    "etichetta": "Assente"
+                  }
+                ]
+              },
+              {
+                "id": "P3",
+                "nome": "Localizzazione in aree montane o in aree interne",
+                "max": 1,
+                "tipo": "discreto",
+                "famiglia": "altro",
+                "descrizione": "Imprese o unità locali coinvolte localizzate nelle aree montane (L.R. 2/2004) o nelle aree interne (DGR 512/2022), elencate nell’Allegato D del bando regionale.",
+                "valori": [
+                  {
+                    "punti": 1,
+                    "etichetta": "Sede o unità locale in area montana o interna"
+                  },
+                  {
+                    "punti": 0,
+                    "etichetta": "Altra localizzazione"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "dettagli": "Contributo al 60% delle spese eleggibili, a prescindere dal punteggio (purché sopra il minimo), per i produttori con sede in Emilia-Romagna che hanno un contratto di coproduzione internazionale con imprese dell’Assia, della Nouvelle-Aquitaine o della Contea di Memphis & Shelby (par. 6.1 c. 3 del bando regionale). Premialità non mantenute: decurtazione del 5% del contributo liquidabile (par. 10.3 c. 4)."
+    },
+    {
+      "nome": "Bandi per lo sviluppo di opere cinematografiche e audiovisive",
+      "url": "https://cinema.emiliaromagnacultura.it/tipologia-bando/per-lo-sviluppo/",
+      "descrizione": "Linea distinta della Film Commission dedicata allo sviluppo dei progetti, non alla produzione: non letta in questa sessione. Un contributo regionale allo sviluppo ottenuto negli anni precedenti vale come primo criterio di preferenza a parità di punteggio nei bandi di produzione."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "DGR n. 797 del 25/05/2026 — graduatoria prima sessione 2026 (Sezioni A e B)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Documento_finale_pubblicazione_GPG2026875.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2026,
+      "titolo": "DGR n. 1764 del 27/10/2026 — graduatoria seconda sessione 2026 (Sezione B)",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/12/Documento_finale_GPG20261853-1.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "DGR n. 786 del 26/05/2025 — graduatoria prima sessione 2025",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/01/Graduatoria-progetti-finanziati-prima-sessione-Delibera-Num.-786-del-26-05-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "DGR n. 1727 del 27/10/2025 — graduatoria seconda sessione 2025",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2025/01/Graduatoria-progetti-finanziati-seconda-sessione-Delibera-n.-1727-del-27-10-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "DGR n. 932 del 27/05/2024 — assegnazione prima sessione 2024",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2024/05/DGR-.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "DGR n. 1965 del 21/10/2024 — graduatoria seconda sessione 2024",
+      "url": "https://cinema.emiliaromagnacultura.it/wp-content/uploads/2024/01/Delibera-di-Giunta-1965-22-ottobre-2024-Graduatoria-seconda-sessione.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Bando 2026, par. 13.1, commi 1 e 3 (Allegato 1 alla DGR 2175/2025, pag. 26 di 50)",
+        "testo": "Il punteggio minimo per poter accedere al contributo nella Sezione A) – è 80 punti. […] Qualora un progetto presentato nella Sezione A) non raggiunga il punteggio minimo per l’assegnazione del contributo, pari a 80 punti, sarà automaticamente valutato nell’ambito della Sezione B), applicandone i criteri previsti."
+      },
+      {
+        "riferimento": "Bando 2026, par. 13.1, tabella SEZIONE A (pagg. 26-27 di 50)",
+        "testo": "SEZIONE A Punteggio max — CRITERI PER L’ATTRIBUZIONE DEI PUNTEGGI DI VALUTAZIONE TECNICA: 1.Qualità del progetto 35; 2.Solidità produttiva 10; 3.Impatto economico 20; 4.Valorizzazione territoriale 15; 5.Strategie di marketing ed innovazione produttiva 10; 6.Rinnovamento area professionale e creativa 2 — CRITERI PER L’ATTRIBUZIONE DI PUNTEGGI AUTOMATICI: 7. Rinnovamento autoriale 2; 8. Promozione pari opportunità 2; 9. Sostenibilità ambientale 4 — TOTALE 100 [descrizioni dei criteri omesse]"
+      },
+      {
+        "riferimento": "Bando 2026, par. 13.2, commi 1 e 3 (pag. 28 di 50)",
+        "testo": "Il punteggio minimo per poter accedere al contributo nella Sezione B è pari a 70 punti. […] L’attribuzione dei punteggi automatici di premialità (criteri n. 7, 8 e 9) avverrà sulla base delle autodichiarazioni fornite in fase di candidatura, che dovranno essere obbligatoriamente mantenute in fase di realizzazione del progetto, pena la decurtazione in misura del 10% del contributo effettivamente liquidabile."
+      },
+      {
+        "riferimento": "Bando 2026, par. 13.2, tabella SEZIONE B (pagg. 28-29 di 50)",
+        "testo": "SEZIONE B Punteggio max — CRITERI PER L’ATTRIBUZIONE DEI PUNTEGGI DI VALUTAZIONE TECNICA: 1.Qualità del progetto 35; 2.Solidità produttiva 15; 3.Impatto economico 15; 4.Valorizzazione territoriale 13; 5.Strategie di marketing ed innovazione produttiva 10; 6.Rinnovamento area professionale e creativa 2 — CRITERI PER L’ATTRIBUZIONE DI PUNTEGGI AUTOMATICI: 7. Rinnovamento autoriale 3; 8. Promozione pari opportunità 3; 9. Sostenibilità ambientale 4 — TOTALE 100 [descrizioni dei criteri omesse]"
+      },
+      {
+        "riferimento": "Bando 2026, par. 6.1 (pag. 18 di 50)",
+        "testo": "Il contributo massimo concedibile per le opere cinematografiche e televisive candidate nella Sezione A è pari a 250.000 euro. L’entità del contributo assegnabile è determinata sulla base del punteggio ottenuto dal progetto, a seguito dell’applicazione dei seguenti criteri: - punteggio superiore a 91: contributo pari a 250.000 euro; - punteggio tra 86 e 90: contributo pari a 200.000 euro; - punteggio tra 80 e 85: contributo pari a 150.000 euro."
+      },
+      {
+        "riferimento": "Bando 2026, par. 6.2, commi 1 e 3 (pag. 18 di 50)",
+        "testo": "tra il 40% ed il 60% delle spese ammissibili relativamente alla categoria di costo “personale”; tra il 30% ed il 50% delle spese ammissibili relativamente alla categoria di costo “beni, servizi e professionisti”; tra il 50% e il 70% delle spese ammissibili relativamente ai costi di produzione della colonna sonora. […] Il contributo massimo concedibile ai progetti candidati nella Sezione B), è pari a: 150.000,00 euro per le opere cinematografiche e per le opere televisive, ridotto a 70.000,00 euro nel caso di opere che effettuano solo 6 giorni di ripresa […]; - 50.000,00 euro per i documentari"
+      },
+      {
+        "riferimento": "Bando 2026, par. 11.2 (pag. 24 di 50)",
+        "testo": "Prima sessione: dalle ore 16:00 del 13 gennaio 2026 alle ore 16:00 del 27 febbraio 2026; Seconda sessione: dalle ore 16:00 del 1° luglio 2026 alle ore 16:00 del 31 luglio 2026."
+      },
+      {
+        "riferimento": "DGR n. 797 del 25/05/2026, premesse (pag. 5 di 18) — griglia applicata dal nucleo in Sezione B, ripetuta nella DGR n. 1764 del 27/10/2026",
+        "testo": "Punteggio assegnato al progetto / % Costi ammissibili personale / % Costi ammissibili per acquisto beni e servizi / % Costi ammissibili per produzione colonna sonora — Tra 90 e 100: 60% 50% 70%; Tra 80 e 89: 50% 40% 60%; Tra 70 e 79: 40% 30% 50%"
+      },
+      {
+        "riferimento": "Bando imprese regionali 2026 (DGR n. 378 del 16/03/2026), par. 10.3 — per la voce in altriBandi",
+        "testo": "TOTALE PARZIALE – CRITERI DI VALUTAZIONE 96 (Minimo 60 punti per procedere all’attribuzione dei punteggi di premialità) […] TOTALE PARZIALE – CRITERI DI PREMIALITA’ 4 […] Si procederà alla valutazione complessiva solo qualora siano assegnati almeno 28 punti nel criterio A) […] Il punteggio minimo per poter accedere al contributo è di 60 punti, maturati quale somma dei criteri dalla A) alla F)."
+      },
+      {
+        "riferimento": "Bando 2026, par. 3.2.1 c. 4 (contributo ridotto)",
+        "testo": "I progetti che effettuano solo 6 giorni di ripresa, senza soddisfare i requisiti territoriali indicati al precedente comma 1 e 2, possono accedere a un contributo ridotto, come indicato al successivo paragrafo 6.2 comma 3."
+      },
+      {
+        "riferimento": "Bando 2026, par. 19 c. 2 (penalità sui punteggi automatici, entrambe le sezioni)",
+        "testo": "Sarà inoltre applicata una penalità pari al 10% del contributo liquidabile, qualora sia riscontrata a consuntivo la perdita di uno o più presupposti per l’assegnazione dei punteggi automatici e ottenuti in fase di candidatura."
+      },
+      {
+        "riferimento": "Bando 2026, par. 13, comma 1 (punteggio massimo)",
+        "testo": "il nucleo di valutazione prenderà in considerazione, per ciascuna Sezione, i criteri di seguito riportati, con i relativi punteggi, fino ad un massimo di 100 punti"
+      }
+    ],
+    "dubbi": [
+      "La griglia del bando ha 9 criteri senza sottocriteri né fasce numeriche: i criteri da 1 a 6 (92 punti in Sezione A, 90 in Sezione B) sono giudizi del nucleo di valutazione, solo i criteri 7, 8 e 9 sono automatici. Il bando non spiega come si gradua il punteggio dentro ciascun criterio né come il nucleo compone i voti dei singoli esperti.",
+      "La tabella ufficiale ha due intestazioni (valutazione tecnica e punteggi automatici) e un solo «TOTALE 100», senza subtotali: ogni griglia è quindi una sola sezione da 100 punti. Gli 80 punti minimi della Sezione A sono resi come minimo di quella sezione; la soglia complessiva di 70 vale per la Sezione B.",
+      "Sezione A, par. 6.1: le fasce sono «superiore a 91», «tra 86 e 90», «tra 80 e 85». Un punteggio esattamente pari a 91 non rientra in nessuna fascia: è una lacuna del testo ufficiale, ripetuta identica nel bando 2025.",
+      "Sezione B: il bando indica solo intervalli di percentuale (40-60, 30-50, 50-70). La corrispondenza punteggio-percentuale (70-79, 80-89, 90-100) viene dalle delibere di graduatoria su proposta del nucleo, non dal bando: è rimasta identica nelle sei sessioni 2024-2026, ma nel 2027 potrebbe cambiare.",
+      "La percentuale indicata (50%) è il tetto di intensità del par. 6.3 (art. 54 Reg. UE 651/2014), non la formula di calcolo: il contributo vero è un importo fisso (Sezione A) o una percentuale delle sole spese ammissibili sostenute in Emilia-Romagna (Sezione B), entro i massimali. Per le opere difficili il tetto è più alto: il corpo del bando non scrive la percentuale, l’Allegato E cita l’80% e qualifica i documentari come opere difficili di diritto.",
+      "Contributo ridotto a 70.000 euro: il bando parla di opere che effettuano «solo 6 giorni di ripresa» senza i requisiti territoriali, le slide del webinar del 15/01/2026 di opere «tra 6 e 17 giorni di ripresa». L’ho trascritto come categoria a parte; il confine esatto (numero di giorni) va chiesto alla Film Commission.",
+      "Sezione A: il par. 3.1 chiede «almeno 18 giorni di ripresa» senza dire dove; solo le slide del webinar precisano «in Emilia-Romagna».",
+      "Par. 8 c. 12: il bando ammette a rendiconto solo giustificativi emessi «entro e non oltre la data del 31 gennaio 2027» e le slide del webinar indicano il 31/01/2027 come termine del saldo, mentre spese e conclusione del progetto arrivano al 31/12/2027 (par. 4, 8 c. 2 e 17). Sembra un residuo dell’edizione 2025: da chiarire con la Film Commission.",
+      "Le scadenze dopo la concessione sono date fisse di calendario, non mesi dalla concessione: sono scritte per esteso nelle note sulle scadenze. L’acconto e il saldo non hanno una percentuale fissa.",
+      "Durata: il bando chiede una durata «superiore a 52 minuti» e, per le serie, almeno due episodi per almeno 90 minuti complessivi; il controllo automatico applica solo il minimo di 52 minuti.",
+      "Le premesse della DGR 2175/2025 citano anche le «opere web» tra le tipologie della Sezione B, ma l’elenco del par. 3.2 del bando non le riporta come tipologia autonoma.",
+      "Le graduatorie pubblicano solo il punteggio totale dei progetti sopra soglia; i progetti sotto soglia sono elencati senza punteggio e i verbali del nucleo non sono pubblici. Per le edizioni 2024 e 2025 è verificata la presenza della colonna dei punteggi, i valori non sono trascritti.",
+      "Per il 2027 non risulta alcun atto né annuncio ufficiale al 14/11/2026: la previsione si basa solo sulla cadenza delle tre edizioni precedenti. Il Programma regionale 2024-2026 è in scadenza e il nuovo bando potrebbe cambiare sezioni, punteggi e massimali.",
+      "Il bando per le imprese regionali (DGR 378/2026) è un atto distinto con griglia propria: è riassunto tra gli altri bandi (criteri, soglie, massimali e percentuali verificati sul testo), ma requisiti, allegati, scadenze ed erogazione di quel bando non sono trascritti.",
+      "Il numero dei componenti del nucleo di valutazione non è indicato nel bando; la determinazione di nomina n. 5969 del 26/03/2026 non è pubblicata sulla pagina del bando e non è stata letta.",
+      "Classificazione dei criteri (decide quali documenti legge la commissione simulata): «Impatto economico» è trattato come ricaduta di spesa anche se il testo insiste sull’occupabilità dei lavoratori residenti; «Solidità produttiva» come piano finanziario, quindi il curriculum della società si legge dai moduli di domanda; «Rinnovamento area professionale e creativa» come componente artistica, perché si verifica su curriculum e accordi."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Soglia della Sezione A: gli 80 punti erano solo in un campo fuori schema (categorie[].sogliaTotale) che il programma scarta, lasciando 70 anche per la Sezione A. Ogni griglia è ora una sola sezione da 100 punti (come il «TOTALE 100» della tabella ufficiale) e la categoria sezione-a ha soglie A = 80.",
+      "Aggiunta la categoria «Sezione B — contributo ridotto» con massimale 70.000 euro (par. 3.2.1 c. 4 e par. 6.2 c. 3): prima il massimale ridotto era solo in un campo fuori schema.",
+      "Tolto il campo contributo.minimo = 10.000: non è un minimo generale ma il limite del par. 6.4 per il solo caso di risorse residue insufficienti (ora in minimoConRisorseResidue e nelle note).",
+      "Aggiunto contributo.nota a ogni categoria: spiega che il 50% è il tetto del par. 6.3 e riporta la regola vera (importi fissi in Sezione A, percentuali per voce di spesa e fascia di punteggio in Sezione B).",
+      "Aggiunto scadenzeNote con le scadenze a data fissa (acconto 31/01/2027, conclusione 31/12/2027, rendiconto entro 30 giorni, contratti entro 60 giorni): nel campo scadenze i mesi sono nulli e il programma le scarterebbe.",
+      "Accorciate le note di storicoEdizioni, prossimaEdizione e la descrizione del bando regionale in altriBandi entro i limiti di lunghezza del programma, senza cambiare i dati.",
+      "Aggiunte in note la dotazione (1.500.000 euro, 800.000 + 700.000, limite del 75% per tipologia) con gli importi poi assegnati nel 2026, e la penalità del 10% sui punteggi automatici non mantenuti.",
+      "Aggiornati ente e commissione: le delibere di graduatoria 2026 indicano la Direzione Generale Sviluppo economico, cultura e turismo e la determinazione di nomina n. 5969 del 26/03/2026.",
+      "Precisati con le slide ufficiali del webinar del 15/01/2026 i 18 giorni di ripresa della Sezione A («in Emilia-Romagna») e il contributo ridotto («tra 6 e 17 giorni di ripresa»).",
+      "Aggiunte tre citazioni letterali (par. 3.2.1 c. 4, par. 13 c. 1, par. 19 c. 2) e le due determinazioni di concessione 2026 tra le fonti."
+    ],
+    "dubbi": [
+      "Confermati sul testo ufficiale (PDF salvato, identico a quello oggi sul sito): 9 criteri, pesi 35-10-20-15-10-2 + 2-2-4 in Sezione A e 35-15-15-13-10-2 + 3-3-4 in Sezione B, totale 100, minimi 80 e 70, massimali 250.000, 150.000, 70.000 e 50.000 euro, finestre e dotazione.",
+      "Nessuna edizione più recente né atto di modifica del bando 2026 trovato al 14/11/2026: la pagina del bando (ultima modifica 11/11/2026) riporta solo graduatorie e concessioni; nessun bando 2027 pubblicato.",
+      "La griglia punteggio-percentuale della Sezione B (70-79, 80-89, 90-100) non è nel bando ma nelle delibere di graduatoria: per il 2027 va riletta.",
+      "Il punteggio 91 in Sezione A non è assegnato a nessuna fascia di contributo nel testo ufficiale.",
+      "Contrasto tra par. 8 c. 12 e slide (31/01/2027) e il resto del bando (31/12/2027) sui termini di spesa e saldo: da chiarire con la Film Commission.",
+      "Confine del contributo ridotto a 70.000 euro («solo 6 giorni» nel bando, «tra 6 e 17 giorni» nelle slide) da chiarire con la Film Commission.",
+      "Numero dei componenti e regola di calcolo del nucleo di valutazione non pubblicati.",
+      "Il programma legge una sola percentuale di contributo per categoria: gli importi fissi della Sezione A e le percentuali per voce di spesa della Sezione B restano in contributo.nota e nei campi in più (fascePunteggio, percentualiPerVoce)."
+    ]
+  }
+}

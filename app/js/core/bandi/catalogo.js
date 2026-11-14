@@ -61,7 +61,7 @@ export function statoBando(bando, oggi = oggiIso()) {
 
 /* ------------------------------------------------------------------ valutazione e simulabilità */
 
-const TIPI_BREVI = { punteggio: 'Griglia a punti', automatico: 'Automatico', sportello: 'A sportello', misto: 'Misto', nessuna: 'Nessun bando attivo' };
+const TIPI_BREVI = { punteggio: 'Griglia a punti', automatico: 'Automatico', sportello: 'A sportello', misto: 'Misto', selettiva: 'Selettiva, senza punti', nessuna: 'Nessun bando attivo' };
 const haGriglie = (b) => Object.keys(b?.griglie || {}).length > 0 && (b?.categorie || []).length > 0;
 
 /** Etichetta breve del tipo di valutazione. Un bando senza tipo ma con una griglia è a punti. */
@@ -86,6 +86,9 @@ export function simulabilita(bando) {
   if (b.tipoValutazione === 'automatico') {
     motivo = 'Contributo automatico';
     spiegazione = 'Il contributo è riconosciuto in automatico a chi ha i requisiti: non c’è una Commissione che assegna punteggi, quindi non c’è una graduatoria da simulare.';
+  } else if (b.tipoValutazione === 'selettiva') {
+    motivo = 'Selezione senza punteggio';
+    spiegazione = 'Un gruppo di esperti dà un parere sul progetto, senza griglia a punti né graduatoria: non c’è un punteggio da simulare. Restano utili i vincoli numerici del bando (percentuali, massimali, spesa sul territorio) riportati nella scheda.';
   } else if (b.tipoValutazione === 'sportello') {
     motivo = 'Bando a sportello';
     spiegazione = 'Le domande sono esaminate in ordine di arrivo fino a esaurimento dei fondi: conta presentare presto una domanda completa, non un punteggio.';

@@ -1,0 +1,1041 @@
+{
+  "id": "friuli-venezia-giulia-fvg-film-fund-2026-2027",
+  "fondoId": "friuli-venezia-giulia",
+  "revisione": "2026-11-14",
+  "nome": "Friuli Venezia Giulia — FVG Film Fund, call 2026 e 2027 (regolamento DPReg. 0167/2022 aggiornato al 2026)",
+  "nomeBreve": "Friuli Venezia Giulia · FVG Film Fund 2026-2027",
+  "ente": "Regione autonoma Friuli Venezia Giulia — PromoTurismoFVG in qualità di Friuli Venezia Giulia Film Commission (bandi, concessione e liquidazione con decreto del Direttore generale di PromoTurismoFVG; valutazione del Comitato tecnico nominato dalla Direzione centrale attività produttive e turismo)",
+  "regione": "Friuli Venezia Giulia",
+  "territorio": "Friuli Venezia Giulia",
+  "gentilizio": "friulani e giuliani",
+  "fonte": "Decreto del Presidente della Regione 22 dicembre 2022, n. 0167/Pres. (B.U.R. 30/12/2022, S.O. n. 47), regolamento ex art. 9, comma 2, L.R. 21/2006, testo coordinato con DPReg. 8/5/2024, n. 051/Pres. e DPReg. 16/1/2026, n. 01/Pres. (B.U.R. 19/1/2026, S.O. n. 2): art. 12, Allegato 1, Tabelle A e B",
+  "stato": "atteso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto per imprese di produzione indipendenti (ATECO 59.11 o 59.12; produttore unico, coproduttore o produttore esecutivo) che girano in Friuli Venezia Giulia serie, opere di finzione, documentari e cortometraggi. Tre call l’anno (28 febbraio, 30 giugno, 30 settembre) sulla piattaforma regionale; il Comitato tecnico assegna fino a 100 punti con le Tabelle A e B del regolamento e servono almeno 75 punti. Il contributo è una percentuale del preventivo di spesa in regione che cresce con il punteggio: dal 20% al 30% fino a 350.000 euro per serie e film, 25% o 40% fino a 40.000 euro per documentari e cortometraggi.",
+  "paginaUfficiale": "https://fvgfilmcommission.com/film-fund/",
+  "fontiUrl": [
+    {
+      "titolo": "Regolamento FVG Film Fund 2026 — DPReg. 0167/Pres. del 22/12/2022, testo coordinato con le modifiche 2024 e 2026",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/01/Regolamento-Film-Fund-DPR.167-2022-10.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DPReg. 16 gennaio 2026, n. 01/Pres. — modifiche al regolamento (B.U.R. 19/1/2026, S.O. n. 2), banca dati Lexview della Regione",
+      "url": "https://lexview-int.regione.fvg.it/FontiNormative/ScaricaDocumento.aspx?Id=7768",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FVG Film Commission — pagina Film Fund (criteri, importi, scadenze, modulistica, graduatorie)",
+      "url": "https://fvgfilmcommission.com/film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "FVG Film Commission — Film Fund, versione inglese",
+      "url": "https://fvgfilmcommission.com/en/film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria ex verbale della seconda seduta del Comitato tecnico 2026 (24/07/2026)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/08/GRADUATORIA-EX-VERBALE-DELLA-SECONDA-SEDUTA-DEL-COMITATO-TECNICO-2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria ex verbale della prima seduta del Comitato tecnico 2026 (31/03/2026)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/04/GRADUATORIA-EX-VERBALE-DELLA-PRIMA-SEDUTA-DEL-COMITATO-TECNICO-2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria FVG Film Fund 2025 (sedute del 31/03, 25/07, 29/10 e 5/11/2025)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2025/12/GRADUATORIA-FVG-FILM-FUND-2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Graduatoria Film Fund 2024 (sedute del 26/03 e 9/04, 26/07, 31/10/2024)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2025/04/GRADUATORIA-FILM-FUND-2024.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto del Direttore generale PromoTurismoFVG n. 486/26/GEN del 03/08/2026 — concessione (cita stanziamento 2026, bando n. 27/26/GEN e riparto delle call)",
+      "url": "https://www.promoturismo.fvg.it/ProxyVFS.axd?snode=499400&stream=",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto del Direttore generale PromoTurismoFVG n. 289/26GEN del 16/04/2026 — concessione (totale prima seduta 2026)",
+      "url": "https://www.promoturismo.fvg.it/ProxyVFS.axd?snode=485378&stream=",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "PromoTurismoFVG — Amministrazione trasparente, atti di concessione 2026 FVG Film Commission",
+      "url": "https://www.promoturismo.fvg.it/it/485360/fvg-film-commission",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Notizia 21/01/2026 — Aperta la prima call di FVG Film Fund 2026",
+      "url": "https://fvgfilmcommission.com/news/aperta-la-prima-call-di-fvg-film-fund-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Notizia 04/05/2026 — Aperta la seconda call di FVG Film Fund 2026",
+      "url": "https://fvgfilmcommission.com/news/aperta-la-seconda-call-di-fvg-film-fund-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Notizia 5/8/2026 — Pubblicata la seconda graduatoria 2026, aperta la terza e ultima call dell’anno",
+      "url": "https://fvgfilmcommission.com/news/fvg-film-fund-pubblicata-la-seconda-graduatoria-2026-aperta-la-terza-e-ultima-call-dellanno-per-le-produzioni-audiovisive/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Notizia 22/11/2025 — Pubblicati gli esiti della terza call 2025 del Film Fund",
+      "url": "https://fvgfilmcommission.com/news/pubblicati-gli-esiti-della-terza-call-2025-del-film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato p) — Relazione descrittiva del progetto",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/11/allegato-p-relazione-descrittiva-del-progetto.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato p_bis) — Accettazione criteri e regolamento",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/03/allegato-p_bis-accettazione-criteri-e-dichiarazioni.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato k) — Piano finanziario dell’opera",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/05/allegato-k-piano-finanziario-dellopera.xlsx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato l) — Preventivo analitico dei costi",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/03/allegato-l-preventivo-analitico-dei-costi.xlsx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato o) — Dichiarazione apporto societario diretto",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/11/allegato-o-dichiarazione-apporto-societario-diretto.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Richiesta erogazione anticipo",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/03/Richiesta-erogazione-anticipo.docx",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Linee guida per la presentazione della domanda sul sistema Istanze On Line (edizione 2023)",
+      "url": "https://fvgfilmcommission.com/wp-content/uploads/2023/01/LineeGuida_Film-Commission.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione FVG — Sostegno al cinema e all’audiovisivo: Film Fund e Fondo regionale per l’audiovisivo (pagina non aggiornata ai massimali 2026)",
+      "url": "https://www.regione.fvg.it/rafvg/cms/RAFVG/economia-imprese/turismo/FOGLIA13/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2027,
+      "pubblicato": null,
+      "scadenza": "2027-02-28",
+      "nota": "1ª call 2027: annunciata sulla pagina ufficiale, apre il 4 gennaio e chiude il 28 febbraio 2027 alle 23:59."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": "2026-09-30",
+      "nota": "3ª e ultima call 2026: aperta a inizio agosto (notizia ufficiale del 5/8/2026), chiusa il 30 settembre 2026. Graduatoria non ancora pubblicata sulla pagina ufficiale al 14/11/2026."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-05-01",
+      "scadenza": "2026-06-30",
+      "nota": "2ª call 2026: seduta del Comitato del 24/07/2026, graduatoria approvata con decreto n. 475/26/GEN del 30/07/2026; contributi per 1.266.624,80 euro (5 serie o film e 3 documentari o cortometraggi finanziati; un’opera con 80 punti ammissibile ma non finanziata per esaurimento di risorse)."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-01-21",
+      "scadenza": "2026-02-28",
+      "nota": "1ª call 2026, la prima con soglia a 75 punti e massimali a 350.000 e 40.000 euro: seduta del 31/03/2026; contributi per 1.235.673,89 euro (6 serie o film e 8 documentari o cortometraggi finanziati; 9 domande sotto soglia)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-09-30",
+      "nota": "3ª call 2025 (data di apertura non scritta nei testi ufficiali salvati): sedute del 29/10 e 5/11/2025, esiti pubblicati il 22/11/2025. Nel 2025: 57 progetti presentati nelle tre call, 21 finanziati, oltre 2,5 milioni di euro assegnati. Regole precedenti: soglia 60 punti."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-06-30",
+      "nota": "2ª call 2025: seduta del 25/07/2025."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-02-28",
+      "nota": "1ª call 2025: seduta del 31/03/2025."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Tre call: sedute del Comitato del 26/03 e 9/04/2024, del 26/07/2024 e del 31/10/2024 (graduatoria 2024). Le modifiche del DPReg. 051/2024 sono pubblicate sul B.U.R. del 15/5/2024 (S.O. n. 14) (nuova Tabella B, riduzione del 5% senza certificazione Green)."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-01-21",
+      "al": "2026-02-28",
+      "nota": "1ª call 2026, chiusura alle 23:59 (notizia ufficiale del 21/01/2026)"
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-05-01",
+      "al": "2026-06-30",
+      "nota": "2ª call 2026, chiusura alle 23:59 (notizia ufficiale del 04/05/2026)"
+    },
+    {
+      "anno": 2026,
+      "dal": null,
+      "al": "2026-09-30",
+      "nota": "3ª call 2026: aperta a inizio agosto, data di apertura non scritta nei testi ufficiali letti (notizia ufficiale del 5/8/2026)"
+    },
+    {
+      "anno": 2027,
+      "dal": "2027-01-04",
+      "al": "2027-02-28",
+      "nota": "1ª call 2027, chiusura alle 23:59 (pagina ufficiale)"
+    },
+    {
+      "anno": 2027,
+      "dal": null,
+      "al": "2027-06-30",
+      "nota": "2ª call 2027: scadenza fissa indicata sulla pagina ufficiale; data di apertura non ancora pubblicata"
+    },
+    {
+      "anno": 2027,
+      "dal": null,
+      "al": "2027-09-30",
+      "nota": "3ª call 2027: scadenza fissa indicata sulla pagina ufficiale; data di apertura non ancora pubblicata"
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "1ª call dal 4 gennaio al 28 febbraio 2027 (ore 23:59); le call successive scadono il 30 giugno e il 30 settembre 2027",
+    "base": "Annuncio sulla pagina ufficiale del Film Fund (consultata il 14/11/2026) e cadenza fissa delle tre call annuali indicata dalla stessa pagina e dall’art. 9 del regolamento (bandi quadrimestrali). Nel 2026 le call si sono aperte il 21 gennaio, il 1° maggio e a inizio agosto."
+  },
+  "sogliaTotale": 75,
+  "punteggioMassimo": 100,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": 3,
+    "descrizione": "Comitato tecnico Friuli Venezia Giulia Film Commission (art. 11), nominato con decreto del Direttore centrale attività produttive e turismo e in carica quattro anni: il Direttore del Servizio competente in materia di turismo o un suo delegato (Presidente), il Direttore designato dalla Direzione centrale cultura e sport o un suo delegato, un dipendente della Direzione centrale competente in materia di turismo con funzioni di segretario. Possono partecipare con funzioni consultive il Direttore generale di PromoTurismoFVG, il coordinatore e i film commissioner. Le deliberazioni richiedono la presenza della maggioranza dei componenti e sono prese a maggioranza dei presenti; a parità prevale il voto del Presidente. Il regolamento non indica una regola di calcolo dei punteggi (media o somma): le graduatorie riportano un punteggio complessivo intero per opera. La graduatoria è redatta entro 30 giorni dalla scadenza della call."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://istanze-web.regione.fvg.it/CruscottoBeneficiario/login.aspx?ID_CON=2&ID_PROC=517853",
+    "oggetto": "",
+    "regole": [
+      "Domanda solo in via telematica sulla piattaforma regionale Istanze On Line, con SPID o eIDAS, sottoscritta a pena di inammissibilità dal legale rappresentante o da un suo delegato (art. 9, commi 1 e 2); chi non è titolare dell’impresa carica la delega.",
+      "La domanda deve essere in ogni caso antecedente l’avvio delle riprese sul territorio regionale (art. 9, comma 1).",
+      "Tre call l’anno con scadenza 28 febbraio, 30 giugno e 30 settembre, alle ore 23:59; le domande fuori termine o con modalità diverse sono archiviate d’ufficio (art. 10, comma 3).",
+      "Il peso complessivo degli allegati non può superare i 50 MB.",
+      "Piano finanziario (all. k) e preventivo analitico dei costi (all. l): scaricare il file Excel, compilarlo, salvarlo in PDF e caricarlo. La relazione descrittiva (all. p) e i documenti della sezione «Altri documenti» vanno su carta intestata della società richiedente.",
+      "Massimo due domande per soggetto sullo stesso bando; ogni ulteriore domanda è inammissibile (art. 9, comma 7).",
+      "Domanda irregolare o incompleta: il responsabile del procedimento può chiedere rettifiche assegnando un termine non inferiore a dieci giorni; se il termine decorre inutilmente la domanda è archiviata (art. 10, commi 2 e 3).",
+      "La Film Commission gradisce un incontro di presentazione del progetto, anche online, prima dell’invio.",
+      "Produttori esteri: la versione inglese della pagina indica l’invio dei documenti a FVG Film Commission, Piazza Duca degli Abruzzi 3, 34132 Trieste (fa fede il timbro postale)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "serie",
+      "nome": "Opera seriale di finzione o documentaria (durata complessiva minima 90 minuti)",
+      "griglia": "A",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 30,
+        "massimali": {
+          "2026": 350000,
+          "2027": 350000
+        },
+        "nota": "Percentuale sul preventivo di spesa in Friuli Venezia Giulia, non sul costo dell’opera: 30% fino a 350.000 euro con almeno 90 punti, 25% fino a 250.000 da 81 a 89, 20% fino a 150.000 da 75 a 80. Indicati i valori massimi."
+      },
+      "dotazione": {},
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "film",
+      "nome": "Opera di finzione (durata minima 52 minuti)",
+      "griglia": "A",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 30,
+        "massimali": {
+          "2026": 350000,
+          "2027": 350000
+        },
+        "nota": "Percentuale sul preventivo di spesa in Friuli Venezia Giulia, non sul costo dell’opera: 30% fino a 350.000 euro con almeno 90 punti, 25% fino a 250.000 da 81 a 89, 20% fino a 150.000 da 75 a 80. Indicati i valori massimi."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentario",
+      "nome": "Documentario",
+      "griglia": "B",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 40000,
+          "2027": 40000
+        },
+        "nota": "Percentuale sul preventivo di spesa in Friuli Venezia Giulia, non sul costo dell’opera: 40% fino a 40.000 euro con almeno 86 punti, 25% fino a 20.000 da 75 a 85. Indicati i valori massimi."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "cortometraggio",
+      "nome": "Cortometraggio",
+      "griglia": "B",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 40000,
+          "2027": 40000
+        },
+        "nota": "Percentuale sul preventivo di spesa in Friuli Venezia Giulia, non sul costo dell’opera: 40% fino a 40.000 euro con almeno 86 punti, 25% fino a 20.000 da 75 a 85. Indicati i valori massimi."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    }
+  ],
+  "griglie": {
+    "A": {
+      "id": "A",
+      "nome": "Tabella A — Opera seriale di finzione o documentaria e opera di finzione (art. 5, comma 1, lettere a e b)",
+      "sezioni": [
+        {
+          "id": "T",
+          "nome": "Criteri della Tabella A (lettere a–m)",
+          "max": 100,
+          "obiettivo": "Sostenere opere che favoriscono l’occupazione, lo sviluppo dell’economia territoriale e turistica e la promozione del territorio regionale (art. 1, comma 2).",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Pertinenza in relazione alla promozione del territorio regionale",
+              "max": 8,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "pertinenza in relazione alla promozione del territorio regionale",
+              "principio": "Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "b",
+              "nome": "Originalità e carattere innovativo",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "originalità e carattere innovativo",
+              "principio": "Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "sceneggiatura",
+                "cv_regista",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "c",
+              "nome": "Utilizzo di tecnici, maestranze e servizi locali",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "utilizzo di tecnici, maestranze e servizi locali",
+              "principio": "L’art. 9, comma 3, lett. p) chiede una relazione descrittiva «dalla quale si evinca la quota di impegno di tecnici, maestranze e servizi regionali individuati sul territorio anche grazie alla “production guide”» (modello all. p). A rendiconto va presentato l’elenco della troupe con evidenza del personale residente in Friuli Venezia Giulia (art. 13, comma 4, lett. c). Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "d",
+              "nome": "Efficacia: potenzialità di raggiungere il pubblico (prospettive di distribuzione)",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "efficacia, intesa come potenzialità dell’opera di raggiungere il target di pubblico a cui è rivolta (prospettive di distribuzione)",
+              "principio": "Documenti collegati (art. 9, comma 3, lett. g): copia dell’eventuale accordo di distribuzione o di messa in onda, elenco delle opere distribuite negli ultimi 3 anni e piano di distribuzione o sfruttamento commerciale del progetto. Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "distribuzione",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "e",
+              "nome": "Credenziali di produzione, autore, regista, interpreti",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "credenziali di produzione, autore, regista, interpreti",
+              "principio": "Documenti collegati (art. 9, comma 3, lett. e, f, h): profilo breve e curriculum del produttore con note di produzione, profilo breve e curriculum del regista con note di regia, eventuali contratti o lettere di interesse con gli interpreti corredati dei curriculum. Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "cv_societa",
+                "cv_regista",
+                "accordi_cast",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "f",
+              "nome": "Ricaduta economica diretta sul territorio (promozione territoriale finanziaria)",
+              "max": 18,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "ricaduta economica diretta dell’iniziativa sul territorio (promozione territoriale finanziaria)",
+              "principio": "Il dato di riferimento è il preventivo dei costi da sostenere a favore di soggetti con domicilio o residenza fiscale in Friuli Venezia Giulia (all. l, colonna «PREVENTIVO IN FVG»), che è anche la base di calcolo del contributo. Se a consuntivo la spesa sul territorio scende di oltre il 15% il contributo è ridotto in proporzione; oltre il 30% è revocato (art. 15, comma 4 e art. 17, comma 2, lett. b). Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo3",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "g",
+              "nome": "Effetto FVG: giorni di ripresa in regione sul totale",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "“effetto FVG”, inteso come durata delle riprese sul territorio del Friuli - Venezia Giulia in proporzione al numero di giorni di ripresa complessivi",
+              "principio": "Il criterio è definito come rapporto tra giorni di ripresa in Friuli Venezia Giulia e giorni di ripresa complessivi, ma il regolamento non scrive fasce né una formula di conversione in punti. A rendiconto il piano di lavorazione definitivo deve evidenziare con gli ordini del giorno le giornate realmente effettuate in regione (art. 13, comma 4, lett. b).",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "h",
+              "nome": "Impianto produttivo del progetto",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "impianto produttivo del progetto",
+              "principio": "Documenti collegati (art. 9, comma 3): piano finanziario sullo schema FVG Film Commission (all. k, con stato «ottenuto / richiesto / da richiedere» di ogni fonte), preventivo analitico generale e in FVG (all. l), accordi di coproduzione, atti di concessione di altri contributi, documentazione bancaria sull’apporto societario diretto (all. o). Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo3",
+                "coproduzione",
+                "finanziamenti",
+                "referenze_bancarie",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "i",
+              "nome": "Altre caratteristiche che promuovono l’immagine del Friuli Venezia Giulia in Italia e all’estero",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "ogni caratteristica diversa da quelle di cui alle lettere da a) a g), volta a promuovere l’immagine della regione Friuli Venezia Giulia in Italia e all’estero",
+              "principio": "Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "l",
+              "nome": "Applicazione di un protocollo Green",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "applicazione di un protocollo Green (nella Tabella A: «max. 2 punti»)",
+              "principio": "Art. 9, comma 4: alla domanda può essere allegata la dichiarazione di impegno a ottenere la certificazione per la sostenibilità ambientale dell’opera riconosciuta dal soggetto pubblico nazionale competente (marchio Green Film o equivalenti). Pagina ufficiale del Film Fund: l’impegno assunto in domanda vale «2 punti»; se la certificazione non è prodotta a rendiconto il contributo è ridotto del 5 per cento (art. 15, comma 4 bis).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Dichiarazione di impegno a ottenere la certificazione di sostenibilità ambientale (Green Film o equivalente) allegata alla domanda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            },
+            {
+              "id": "m",
+              "nome": "Contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "ottenimento del contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia (nella Tabella A: «2 punti»)",
+              "principio": "Punteggio fisso («2 punti», senza «max.»): spetta se l’opera ha ottenuto il contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia, da dichiarare ai sensi dell’art. 9, comma 3, lett. m). La precisazione «allo sviluppo» è stata aggiunta dal DPReg. 16/1/2026, n. 01/Pres.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia ottenuto e dichiarato"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non ottenuto"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "B",
+      "nome": "Tabella B — Documentari e cortometraggi (art. 5, comma 1, lettere c e d)",
+      "sezioni": [
+        {
+          "id": "T",
+          "nome": "Criteri della Tabella B (lettere a–i)",
+          "max": 100,
+          "obiettivo": "Sostenere opere che favoriscono l’occupazione, lo sviluppo dell’economia territoriale e turistica e la promozione del territorio regionale (art. 1, comma 2).",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Pertinenza in relazione alla promozione del territorio regionale",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "pertinenza in relazione alla promozione del territorio regionale",
+              "principio": "Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "b",
+              "nome": "Utilizzo di tecnici, maestranze e servizi locali",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "utilizzo di tecnici, maestranze e servizi locali",
+              "principio": "L’art. 9, comma 3, lett. p) chiede una relazione descrittiva «dalla quale si evinca la quota di impegno di tecnici, maestranze e servizi regionali individuati sul territorio anche grazie alla “production guide”» (modello all. p). A rendiconto va presentato l’elenco della troupe con evidenza del personale residente in Friuli Venezia Giulia (art. 13, comma 4, lett. c). Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo2",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "c",
+              "nome": "Originalità e carattere innovativo",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "originalità e carattere innovativo",
+              "principio": "Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "sceneggiatura",
+                "cv_regista",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "d",
+              "nome": "Efficacia: prospettive di distribuzione e accordi di coproduzione",
+              "max": 18,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "efficacia, intesa come potenzialità dell’opera di raggiungere il target di pubblico a cui è rivolta (prospettive di distribuzione), presenza di accordi di coproduzione come previsto dall’art. 6 della Legge 220/2016",
+              "principio": "Documenti collegati (art. 9, comma 3, lett. g e j): eventuale accordo di distribuzione o di messa in onda con elenco delle opere distribuite negli ultimi 3 anni, piano di distribuzione o sfruttamento commerciale, eventuali contratti o accordi di coproduzione. Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "distribuzione",
+                "coproduzione",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "e",
+              "nome": "Credenziali di produzione, autore, regista, interpreti",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "credenziali di produzione, autore, regista, interpreti",
+              "principio": "Documenti collegati (art. 9, comma 3, lett. e, f, h): profilo breve e curriculum del produttore con note di produzione, profilo breve e curriculum del regista con note di regia, eventuali contratti o lettere di interesse con gli interpreti corredati dei curriculum. Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "cv_societa",
+                "cv_regista",
+                "accordi_cast",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "f",
+              "nome": "Effetto FVG: giorni di ripresa in regione sul totale",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "“effetto FVG”, inteso come durata delle riprese sul territorio del Friuli -Venezia Giulia in proporzione al numero di giorni di ripresa complessivi",
+              "principio": "Il criterio è definito come rapporto tra giorni di ripresa in Friuli Venezia Giulia e giorni di ripresa complessivi, ma il regolamento non scrive fasce né una formula di conversione in punti. A rendiconto il piano di lavorazione definitivo deve evidenziare con gli ordini del giorno le giornate realmente effettuate in regione (art. 13, comma 4, lett. b).",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "g",
+              "nome": "Impianto produttivo del progetto",
+              "max": 18,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "impianto produttivo del progetto",
+              "principio": "Documenti collegati (art. 9, comma 3): piano finanziario sullo schema FVG Film Commission (all. k, con stato «ottenuto / richiesto / da richiedere» di ogni fonte), preventivo analitico generale e in FVG (all. l), accordi di coproduzione, atti di concessione di altri contributi, documentazione bancaria sull’apporto societario diretto (all. o). Il regolamento indica solo il punteggio massimo: non prevede sotto-criteri, fasce né formule. Il punteggio è attribuito dal Comitato tecnico (art. 11 e art. 12, comma 1).",
+              "documenti": [
+                "modulo3",
+                "coproduzione",
+                "finanziamenti",
+                "referenze_bancarie",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "h",
+              "nome": "Applicazione di un protocollo Green",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "applicazione di un protocollo Green (nella Tabella B: «max. 2 punti»)",
+              "principio": "Art. 9, comma 4: alla domanda può essere allegata la dichiarazione di impegno a ottenere la certificazione per la sostenibilità ambientale dell’opera riconosciuta dal soggetto pubblico nazionale competente (marchio Green Film o equivalenti). Pagina ufficiale del Film Fund: l’impegno assunto in domanda vale «2 punti»; se la certificazione non è prodotta a rendiconto il contributo è ridotto del 5 per cento (art. 15, comma 4 bis).",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Dichiarazione di impegno a ottenere la certificazione di sostenibilità ambientale (Green Film o equivalente) allegata alla domanda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessun impegno"
+                }
+              ],
+              "documenti": [
+                "green_film"
+              ]
+            },
+            {
+              "id": "i",
+              "nome": "Contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "ottenimento del contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli-Venezia Giulia (nella Tabella B: «2 punti»)",
+              "principio": "Punteggio fisso («2 punti», senza «max.»): spetta se l’opera ha ottenuto il contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia, da dichiarare ai sensi dell’art. 9, comma 3, lett. m). La precisazione «allo sviluppo» è stata aggiunta dal DPReg. 16/1/2026, n. 01/Pres.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia ottenuto e dichiarato"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non ottenuto"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda compilata sulla piattaforma regionale Istanze On Line (tipo di soggetto, anagrafica, descrizione del progetto, piano finanziario previsionale, coordinate bancarie, referente), sottoscritta dal legale rappresentante o dal delegato",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "a) Dichiarazione sostitutiva di atto di notorietà, o documento equipollente, con dati identificativi dell’impresa, oggetto sociale e nominativo del legale rappresentante",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "identita",
+      "nome": "b) Copia del documento di identità in corso di validità del legale rappresentante",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "c) Sinossi (max 2 pagine A4, carattere minimo 10, interlinea minima 1,5), trattamento (max 12 pagine, stessi limiti) e sceneggiatura; per documentari e cortometraggi trattamento e sceneggiatura si allegano ove presenti",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "d) Solo opere seriali: soggetto di serie, almeno 2 soggetti di puntata e sceneggiatura di una puntata",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "e) Profilo breve e curriculum professionale del produttore, incluse le note di produzione",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "f) Profilo breve e curriculum professionale del regista, incluse le note di regia",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "g) Copia dell’eventuale accordo di distribuzione o di messa in onda, con elenco delle opere distribuite negli ultimi 3 anni e piano di distribuzione o sfruttamento commerciale del progetto",
+      "obbligo": "punteggio",
+      "criteri": [
+        "d"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "h) Copia di eventuali contratti o lettere di interesse conclusi con gli interpreti, corredata dei loro curriculum",
+      "obbligo": "punteggio",
+      "criteri": [
+        "e"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "i) Eventuale contratto, almeno in forma di opzione, di acquisto dei diritti del soggetto, del trattamento e della sceneggiatura sottoscritto con gli autori",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "j) Copia di eventuali contratti o accordi di coproduzione",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "k) Piano finanziario dell’opera sullo schema FVG Film Commission (all. k: Excel da compilare, salvare in PDF e caricare)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "l) Preventivo analitico dei costi di produzione, generale e in Friuli Venezia Giulia (all. l: Excel da compilare, salvare in PDF e caricare; lo stesso modello serve per il consuntivo FVG)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "m) Dichiarazione da cui risulti l’eventuale concessione del contributo allo sviluppo del Fondo per l’Audiovisivo del Friuli Venezia Giulia",
+      "obbligo": "punteggio",
+      "criteri": [
+        "m",
+        "i"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "n) Eventuali documenti attestanti la concessione di altri contributi nazionali o internazionali",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "o) Documentazione bancaria attestante l’apporto societario diretto (all. o: dichiarazione del legale rappresentante sulla disponibilità finanziaria, con IBAN)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "p) Relazione descrittiva del progetto (all. p, su carta intestata, in PDF): un campo per ciascun criterio di valutazione; deve far emergere la quota di impegno di tecnici, maestranze e servizi regionali",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "p bis) Dichiarazione di accettazione dei criteri, del regolamento e degli obblighi verso FVG Film Commission (all. p_bis)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione attività a fini fiscali (modulistica obbligatoria della pagina ufficiale)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Dichiarazione Reg. UE n. 651/2014 (modulistica obbligatoria della pagina ufficiale)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Delega o procura per la presentazione della domanda, se non la presenta il legale rappresentante",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Dichiarazione di impegno a ottenere la certificazione per la sostenibilità ambientale dell’opera (marchio Green Film o equivalenti) — art. 9, comma 4",
+      "obbligo": "punteggio",
+      "criteri": [
+        "l",
+        "h"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Altro materiale utile alla valutazione: storyboard, moodboard, link Vimeo o simili, lettere di intenti, elenco delle location in Friuli Venezia Giulia — art. 9, comma 4",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "sede",
+      "testo": "Sede legale in Italia, in un Paese dell’Unione Europea o in un Paese extraeuropeo equiparato a condizioni di reciprocità (art. 3, lett. a)"
+    },
+    {
+      "id": "ateco",
+      "testo": "Iscrizione al Registro delle imprese con codice ATECO (o equivalente NACE Rev. 2) primario o secondario 59.11 oppure 59.12 (art. 3, lett. b)"
+    },
+    {
+      "id": "indipendente",
+      "testo": "Produttore indipendente ai sensi dell’art. 3, lettera t), del D.Lgs. 8 novembre 2021, n. 208 (art. 3, lett. c)"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico o coproduttore dell’opera, oppure titolare di un contratto di produzione esecutiva con l’impresa che detiene i diritti (art. 3, lett. d)"
+    },
+    {
+      "id": "regolarita",
+      "testo": "In regola con le norme previdenziali, assistenziali e assicurative, di sicurezza sul lavoro, sui contratti collettivi, sull’inserimento dei disabili, sulle pari opportunità, edilizie, urbanistiche e ambientali (art. 3, lett. e)"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà ai sensi dell’art. 2, par. 1, punto 18 del Reg. (UE) n. 651/2014 (art. 3, lett. f)"
+    },
+    {
+      "id": "esclusioni",
+      "testo": "Non si trova nelle condizioni dell’art. 80, commi 1 e 2, del D.Lgs. 50/2016 (art. 3, lett. g)"
+    },
+    {
+      "id": "tipologia",
+      "testo": "L’opera è una serie di finzione o documentaria di almeno 90 minuti complessivi, un’opera di finzione di almeno 52 minuti, un documentario o un cortometraggio, da realizzare sul territorio regionale, e non rientra tra le opere escluse dall’art. 14, comma 2, della legge 220/2016 (art. 5)"
+    },
+    {
+      "id": "riprese",
+      "testo": "La domanda è presentata prima dell’avvio delle riprese sul territorio regionale (art. 9, comma 1)"
+    },
+    {
+      "id": "due_domande",
+      "testo": "Lo stesso soggetto (produttore principale, minoritario o esecutivo) presenta al massimo due domande sullo stesso bando (art. 9, comma 7)"
+    },
+    {
+      "id": "ripresentazione",
+      "testo": "Una domanda già valutata e non finanziata per la stessa iniziativa è ripresentata una sola volta nell’anno solare, con l’intera documentazione (art. 9, commi 5 e 6)"
+    },
+    {
+      "id": "cumulo",
+      "testo": "Il contributo, sommato agli altri aiuti di Stato, resta entro il 50% del costo complessivo della produzione (art. 6)"
+    },
+    {
+      "id": "rapporti",
+      "testo": "Le spese non derivano da rapporti giuridici tra società, amministratori, soci, coniugi, parenti e affini fino al secondo grado (art. 7); non sono ammesse spese verso imprese associate o collegate né prestazioni di titolare, soci e amministratori (art. 8, comma 2)"
+    },
+    {
+      "id": "accettazione",
+      "testo": "Accettazione del regolamento e impegno a saldare entro 45 giorni dal ricevimento del saldo le spese rimaste insolute sul territorio regionale (all. p_bis)"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "inizio_riprese",
+      "etichetta": "Inizio delle riprese nel territorio regionale",
+      "mesi": 12,
+      "nota": "Art. 17, comma 2, lett. d): il contributo è revocato se le riprese in regione iniziano oltre 12 mesi dalla comunicazione di ammissione a contributo, salvo proroga disposta da FVG Film Commission."
+    }
+  ],
+  "scadenzeNote": [
+    "Rendicontazione: entro il termine e con le modalità indicati nell’atto di concessione e nella nota inviata al beneficiario (art. 13, comma 1); la proroga va chiesta con istanza motivata prima della scadenza, altrimenti il contributo è revocato (art. 13, comma 5 e art. 17, comma 2, lett. c).",
+    "Spese ammissibili: sostenute in Friuli Venezia Giulia dopo la presentazione della domanda e fino a 45 giorni dalla conclusione delle riprese, o della post-produzione se realizzata in regione (art. 8, comma 1).",
+    "Tempi del procedimento: graduatoria entro 30 giorni dalla scadenza della call, approvazione del Direttore generale entro i 10 giorni successivi, concessione entro 15 giorni dall’approvazione (art. 12, commi 2 e 3); saldo liquidato entro 90 giorni dalla ricezione della rendicontazione (art. 15, comma 2).",
+    "Variazioni del progetto: da comunicare tempestivamente; sono approvate con decreto entro 15 giorni e non aumentano mai il contributo (art. 14).",
+    "Entro 30 giorni dall’uscita in sala o dalla messa in onda: deposito di 3 copie dell’opera, del backstage e delle foto di scena presso FVG Film Commission e di una copia presso la Cineteca del Friuli (art. 18, lett. h).",
+    "Fine riprese in regione e conclusione dell’iniziativa: da comunicare con PEC distinte (art. 18, lett. l). Entro 45 giorni dal ricevimento del saldo vanno pagate le spese rimaste insolute sul territorio regionale (all. p_bis)."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 50,
+      "condizione": "Facoltativo, fino al 50% del contributo, con fideiussione bancaria o polizza fideiussoria assicurativa di importo almeno pari alla somma da erogare maggiorata degli interessi; la garanzia non serve per contributi fino a 15.000 euro (art. 16)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 50,
+      "condizione": "Dopo la rendicontazione (fatture verso soggetti con domicilio o residenza fiscale in FVG fino all’ammontare del contributo, consuntivo della spesa complessiva in regione, piano di lavorazione definitivo, elenco troupe residente, certificazione Green se promessa); liquidazione entro 90 giorni dalla ricezione. Senza anticipo il saldo è l’intero contributo (artt. 13 e 15)."
+    }
+  ],
+  "note": [
+    "Punteggio minimo 75 su 100 dal 2026 (prima era 60); non ci sono minimi per singolo criterio. Chi supera la soglia può restare «ammissibile e non finanziabile» se le risorse della call sono esaurite.",
+    "Il contributo non è una percentuale del costo dell’opera ma del preventivo di spesa in Friuli Venezia Giulia, e la percentuale dipende dal punteggio: serie e film 30% fino a 350.000 euro con almeno 90 punti, 25% fino a 250.000 euro tra 81 e 89, 20% fino a 150.000 euro tra 75 e 80; documentari e cortometraggi 40% fino a 40.000 euro con almeno 86 punti, 25% fino a 20.000 euro tra 75 e 85 (Allegato 1).",
+    "Le serie documentarie di almeno 90 minuti complessivi sono valutate con la Tabella A insieme a serie e film di finzione; il documentario singolo e il cortometraggio con la Tabella B.",
+    "Spese ammissibili solo se sostenute in regione: soggiorno della troupe contrattualizzata, noleggi, servizi audio, video e luci, location, scenografia, costumi, catering, casting, produzione esecutiva, personale locale a tempo determinato, post-produzione, preparazione, trasferte e diarie dei lavoratori con residenza fiscale in FVG, certificazione del rendiconto (art. 8, comma 1).",
+    "Non ammissibili, tra le altre: producer’s fee, spese generali, interessi passivi, IVA recuperabile, prestazioni occasionali, compensi con CCNL diversi da quello dell’industria cine-audiovisiva, contributi in natura, spese verso imprese associate o collegate, prestazioni di titolare, soci e amministratori, pedaggi, carburante e titoli di viaggio, spese sotto 100 euro IVA esclusa, spese da conti correnti non indicati in domanda (art. 8, comma 2).",
+    "Non esiste un minimo di spesa in regione espresso in percentuale del contributo. A consuntivo, se la spesa complessiva in FVG è inferiore al preventivo tra il 15% e il 30% il contributo è ridotto in proporzione; oltre il 30% è revocato (art. 15, comma 4 e art. 17, comma 2, lett. b).",
+    "Chi ha dichiarato l’impegno Green e non presenta la certificazione a rendiconto perde il 5% del contributo (art. 15, comma 4 bis).",
+    "Cumulo con altri aiuti di Stato entro il 50% del costo complessivo della produzione (art. 6). Regime di aiuto: art. 54 del Reg. (UE) n. 651/2014; solo per la prima call 2026 le spese sostenute dal 1° gennaio 2026 erano ammesse in regime de minimis (Reg. UE 2023/2831).",
+    "Spareggio: per serie e film prevale il punteggio della lettera a) (pertinenza), poi quello della lettera f) (ricaduta economica); per documentari e cortometraggi la lettera a), poi l’effetto FVG (art. 12, commi 5 e 6).",
+    "Ogni produzione riceve un solo contributo; per le serie può essere finanziata ogni singola serie o edizione annuale (art. 5, comma 2).",
+    "Obblighi durante e dopo le riprese (art. 18): ordine del giorno quotidiano via mail per serie e film, piano di lavorazione ed elenco troupe con i residenti in FVG, eventuale conferenza stampa, accesso al set di un delegato, diritto d’uso gratuito dell’opera per scopi istituzionali, proiezione in regione con regista e un interprete principale, loghi della Regione e della Film Commission nei titoli e nei materiali.",
+    "Sul contributo erogato alle imprese è applicata, ove dovuta, la ritenuta d’acconto del 4% (decreti di concessione 2026)."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Fondo per l’Audiovisivo del Friuli Venezia Giulia — bandi 2026",
+      "url": "https://www.audiovisivofvg.it/bandi/",
+      "descrizione": "Atto distinto, gestito dall’associazione Fondo per l’Audiovisivo del FVG (art. 11 L.R. 21/2006, regolamento DPReg. 196/2015). Tre bandi l’anno (nel 2026: 10/03-01/04, 03/06-30/06, 14/09-08/10) per imprese di produzione indipendenti e professionisti dell’audiovisivo: sostegno a formazione, sviluppo di progetti e produzione/distribuzione; terzo bando 2026 con 535.390,59 euro. Il suo contributo allo sviluppo vale 2 punti nel Film Fund. Regole e criteri non trascritti."
+    },
+    {
+      "nome": "GO-FILM — avviso di manifestazione d’interesse per il territorio goriziano (edizione 2024)",
+      "url": "https://fvgfilmcommission.com/wp-content/uploads/2024/05/AVVISO-GO-FILM-2024-.pdf",
+      "descrizione": "Avviso di PromoTurismoFVG/FVG Film Commission con risorse del Fondo Gorizia della Camera di Commercio Venezia Giulia (150.000 euro per il 2024), riservato a imprese già ritenute idonee nella graduatoria Film Fund che girano almeno il 50% delle riprese regionali nel territorio goriziano; domanda via PEC almeno 20 giorni prima delle riprese. Oggi è citato solo nella versione inglese della pagina Film Fund: non risulta un avviso 2026."
+    },
+    {
+      "nome": "Fondo di co-sviluppo Re-ACT 2026",
+      "url": "https://www.audiovisivofvg.it/2026/10/al-via-la-call-del-fondo-di-co-sviluppo-react-2026/",
+      "descrizione": "Call segnalata nelle notizie del Fondo per l’Audiovisivo del FVG (ottobre 2026); è un fondo di co-sviluppo, non di produzione. Solo il titolo della notizia è stato letto."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "Graduatoria ex verbale della seconda seduta del Comitato tecnico 2026 (24/07/2026)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/08/GRADUATORIA-EX-VERBALE-DELLA-SECONDA-SEDUTA-DEL-COMITATO-TECNICO-2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2026,
+      "titolo": "Graduatoria ex verbale della prima seduta del Comitato tecnico 2026 (31/03/2026)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2026/04/GRADUATORIA-EX-VERBALE-DELLA-PRIMA-SEDUTA-DEL-COMITATO-TECNICO-2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "Graduatoria FVG Film Fund 2025 (tre sedute)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2025/12/GRADUATORIA-FVG-FILM-FUND-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "Graduatoria Film Fund 2024 (tre sedute)",
+      "url": "https://fvgfilmcommission.b-cdn.net/wp-content/uploads/2025/04/GRADUATORIA-FILM-FUND-2024.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "DPReg. 0167/Pres. del 22/12/2022 (testo coordinato), art. 12, comma 1 — procedura a graduatoria",
+        "testo": "I contributi sono concessi da Friuli Venezia Giulia Film Commission tramite procedura valutativa svolta secondo le modalità del procedimento a graduatoria, mediante valutazione delle domande sulla base dei punteggi di cui alle tabelle A e B allegate al presente regolamento, di cui costituiscono parte integrante e sostanziale."
+      },
+      {
+        "riferimento": "Art. 12, comma 4 — punteggio minimo",
+        "testo": "Il punteggio minimo per accedere al contributo non può essere inferiore a settantacinque punti"
+      },
+      {
+        "riferimento": "DPReg. 16/1/2026, n. 01/Pres. (B.U.R. 19/1/2026, S.O. n. 2), art. 3 — innalzamento della soglia",
+        "testo": "Al comma 4 dell’articolo 12 del DPReg. 167/2022 le parole <<sessanta punti>> sono sostituite dalle parole: <<settantacinque punti>>."
+      },
+      {
+        "riferimento": "Tabella A — punteggi per opera seriale di finzione o documentaria e opera di finzione",
+        "testo": "a) pertinenza in relazione alla promozione del territorio regionale; max. 8 punti; b) originalità e carattere innovativo; max.10 punti; c) utilizzo di tecnici, maestranze e servizi locali; max.15 punti; d) efficacia […]; max. 10 punti; e) credenziali […]; max. 10 punti; f) ricaduta economica diretta dell’iniziativa sul territorio […]; max. 18 punti; g) “effetto FVG” […]; max 5 punti; h)impianto produttivo del progetto; max.15 punti; i) ogni caratteristica diversa […]; max. 5 punti; l) applicazione di un protocollo Green; max. 2 punti; m) […] 2 punti TOTALE 100 punti"
+      },
+      {
+        "riferimento": "Tabella B — punteggi per documentari e cortometraggi (sostituita dal DPReg. 8/5/2024, n. 051/Pres.)",
+        "testo": "a) pertinenza in relazione alla promozione del territorio regionale max.15 punti b) utilizzo di tecnici, maestranze e servizi locali max. 5 punti c) originalità e carattere innovativo max. 15 punti d) efficacia […] presenza di accordi di coproduzione come previsto dall’art. 6 della Legge 220/2016 max. 18 punti e) credenziali […] max.15 punti f) “effetto FVG” […] max. 10 punti g) impianto produttivo del progetto max. 18 punti h) applicazione di un protocollo Green max. 2 punti i) ottenimento del contributo allo sviluppo del Fondo per l’Audiovisivo […] 2 punti TOTALE 100 punti"
+      },
+      {
+        "riferimento": "Allegato 1 (sostituito dal DPReg. 16/1/2026, n. 01/Pres.) — misura massima del contributo",
+        "testo": "opera seriale di finzione o documentaria o opera di finzione: punteggio uguale o superiore a 90 punti 30% del preventivo di spesa FVG fino ad un massimo di 350.000,00 euro; punteggio tra 81 e 89 punti 25% […] 250.000,00 euro; punteggio tra 75 e 80 punti 20% […] 150.000,00 euro. documentario e cortometraggio: punteggio uguale o superiore a 86 punti 40% del preventivo di spesa FVG fino ad un massimo di 40.000,00 euro; punteggio tra 75 e 85 punti 25% […] 20.000,00 euro"
+      },
+      {
+        "riferimento": "Art. 16 — anticipazioni",
+        "testo": "I contributi possono essere erogati in via anticipata […] in misura massima del 50 per cento dell’importo totale, previa presentazione di fideiussione bancaria o polizza fideiussoria assicurativa di importo almeno pari alla somma da erogare, maggiorata degli interessi. 2. I contributi di importo pari o inferiore a 15.000 euro possono essere erogati in via anticipata, nel rispetto del limite percentuale di cui al comma 1, senza presentazione di garanzia fideiussoria."
+      },
+      {
+        "riferimento": "Art. 15, comma 4 e art. 17, comma 2, lett. b) — riduzione e revoca per minore spesa in regione",
+        "testo": "Il contributo è rideterminato in misura proporzionale alla variazione percentuale qualora la spesa complessiva sostenuta sul territorio regionale risultante dal consuntivo di spesa […] risulta inferiore alla spesa attestata nel preventivo […] in misura compresa tra il 15 ed il 30 per cento. […] il provvedimento di concessione del contributo è revocato […] qualora: […] b) la spesa complessiva sostenuta sul territorio regionale […] risulta inferiore alla spesa attestata nel preventivo […] in misura superiore al 30 per cento"
+      },
+      {
+        "riferimento": "Pagina ufficiale FVG Film Commission «Film Fund», consultata il 14/11/2026 — prossima call e scadenze",
+        "testo": "La 1a call del Film Fund 2027 apre il 4 gennaio e chiude il 28 febbraio 2027 (alle ore 23:59) […] La domanda di contributo, che deve essere in ogni caso antecedente all’inizio delle riprese, va presentata entro il 28 febbraio, 30 giugno o 30 settembre. Il Comitato tecnico provvede alla valutazione delle domande e redige la graduatoria delle iniziative ammissibili entro 30 giorni dalle scadenze delle call."
+      }
+    ],
+    "dubbi": [
+      "Il testo del «bando Film Fund 2026» approvato con decreto del Direttore generale di PromoTurismoFVG n. 27/26/GEN del 20/01/2026 (citato nel decreto di concessione n. 486/26/GEN) non è pubblicato né sul sito della Film Commission né nella sezione trasparenza di PromoTurismoFVG: date delle call e ripartizione delle risorse sono ricavate dalle notizie ufficiali e dai decreti di concessione, non dal bando.",
+      "Il regolamento elenca solo i criteri con il punteggio massimo: non esistono sotto-criteri, fasce o formule pubblicate, nemmeno per i criteri misurabili («effetto FVG», ricaduta economica, tecnici e maestranze locali), che restano quindi a giudizio del Comitato.",
+      "Il regolamento non raggruppa i criteri in sezioni e non prevede minimi di sezione: la sezione unica «T» da 100 punti è una scelta di trascrizione.",
+      "Criterio Green (lettera l della Tabella A, lettera h della Tabella B): la tabella dice «max. 2 punti», la pagina ufficiale dice che l’impegno in domanda vale «2 punti». È stato trascritto come discreto 2/0: da ricontrollare se il Comitato gradua il punteggio.",
+      "L’art. 12, comma 6, indica come secondo criterio di spareggio per documentari e cortometraggi la «lettera e) della tabella B, riferito all’effetto FVG», ma nella Tabella B vigente (sostituita nel 2024) l’effetto FVG è la lettera f) e la lettera e) sono le credenziali: incoerenza del testo ufficiale.",
+      "La data di apertura della terza call 2026 non è scritta nei testi ufficiali letti (la notizia del 5/8/2026 dice solo che la call «si è aperta» e resta attiva fino al 30 settembre 2026); il 3 agosto 2026 compare soltanto nel riassunto di un motore di ricerca della pagina inglese. La graduatoria della terza call 2026 non risulta pubblicata al 14/11/2026.",
+      "I massimali 2027 sono quelli del regolamento oggi vigente, pubblicato sulla pagina che annuncia la prima call 2027: un nuovo decreto di modifica prima dell’apertura (come avvenne il 16/1/2026) potrebbe cambiarli. Le finestre 2027 con scadenza 30 giugno e 30 settembre derivano dalla regola generale della pagina ufficiale: le date di apertura non sono ancora pubblicate.",
+      "Il termine per la rendicontazione non è nel regolamento: è fissato nell’atto di concessione o nella nota inviata al beneficiario (art. 13, comma 1; decreto n. 486/26/GEN, punto 2), che non sono pubblici.",
+      "Durata massima del cortometraggio e definizione di documentario: il regolamento rinvia alle definizioni dell’art. 2 della legge 220/2016, non lette in questa sessione; la durata massima non è controllata in automatico.",
+      "Regola di calcolo del Comitato (media, somma o consenso) non indicata: l’art. 11 dice solo che le deliberazioni sono prese a maggioranza dei presenti e che a parità prevale il Presidente. Le graduatorie pubblicano soltanto il punteggio complessivo, non quello per criterio.",
+      "Allegato o) (apporto societario diretto): l’art. 9, comma 3, lo elenca senza la parola «eventuale», ma la pagina ufficiale lo colloca tra gli «Altri documenti» e non nella «Modulistica Domanda (obbligatoria)». Trascritto come sempre dovuto.",
+      "La versione inglese della pagina indica per i produttori esteri l’invio dei documenti per posta alla sede di Trieste (fa fede il timbro postale); la versione italiana indica la piattaforma regionale per i produttori italiani. Da confermare con la Film Commission.",
+      "La pagina della Regione FVG sul Film Fund riporta ancora i massimali precedenti (300.000, 200.000, 100.000 euro; 35% e 30% con 30.000 e 10.000 euro per documentari e cortometraggi): non è aggiornata al DPReg. 01/2026.",
+      "Nel decreto n. 486/26/GEN la quota per documentari e cortometraggi della seconda seduta è scritta «32.588,80», ma la somma della graduatoria e il totale del decreto danno 32.588,08: refuso del decreto.",
+      "Le graduatorie 2022 e 2023 linkate sulla pagina ufficiale non sono state lette. Il contributo allo sviluppo del Fondo per l’Audiovisivo FVG e l’avviso GO-FILM sono atti distinti, citati tra gli altri bandi senza trascrizione delle regole.",
+      "Verifica del 14/11/2026: nessun atto di modifica successivo al DPReg. 01/2026 trovato (ricerca web e banca dati Lexview); la pagina ufficiale del Film Fund rinvia ancora al regolamento coordinato pubblicato a gennaio 2026. Un nuovo decreto prima della prima call 2027 (apertura 4 gennaio) resta possibile.",
+      "La pagina ufficiale italiana scrive il criterio m) della Tabella A e i) della Tabella B senza «allo sviluppo»: vale il testo del regolamento modificato dal DPReg. 01/2026, che lo aggiunge.",
+      "Cura della scheda (14/11/2026): criterio i (Tabella A) ricondotto alla valorizzazione del territorio; criteri m (Tabella A) e i (Tabella B) collegati al piano finanziario, perché si provano con l’atto di concessione del contributo allo sviluppo. La percentuale di contributo dipende dal punteggio: i controlli mostrano il valore massimo."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "storicoEdizioni 2025: tolta l’apertura della terza call «dal 18 agosto», non presente in alcun testo ufficiale salvato.",
+      "storicoEdizioni 2024: «dal 15/5/2024 vigono» sostituito con la data di pubblicazione sul B.U.R. (l’entrata in vigore del DPReg. 051/2024 non è nei testi salvati).",
+      "Allegati: il materiale facoltativo dell’art. 9, comma 4 (storyboard, moodboard, elenco location) era classificato come «piano_lavorazione»; riclassificato «altro» (il piano di lavorazione è richiesto solo a rendiconto, art. 13, comma 4, lett. b)."
+    ],
+    "dubbi": [
+      "Criterio Green (Tabella A lett. l, Tabella B lett. h): «max. 2 punti» nel regolamento, «2 punti» per l’impegno sulla pagina ufficiale; trascritto come discreto 2/0.",
+      "Nessun sotto-criterio, fascia o formula nel regolamento: tutti i criteri a giudizio del Comitato; la sezione unica «T» è una scelta di trascrizione.",
+      "Testo del bando 2026 (decreto n. 27/26/GEN) non pubblicato: date delle call ricavate da notizie ufficiali e pagina; apertura della terza call 2026 non scritta nei testi salvati.",
+      "Massimali e finestre 2027 presunti uguali a quelli vigenti: un decreto di modifica prima del 4 gennaio 2027 potrebbe cambiarli.",
+      "Art. 12, comma 6: lo spareggio per documentari e cortometraggi rinvia alla «lettera e)» per l’effetto FVG, che nella Tabella B vigente è la lettera f)."
+    ]
+  }
+}

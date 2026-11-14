@@ -1,0 +1,573 @@
+{
+  "id": "toscana-bando-produzioni-2024-2026",
+  "fondoId": "toscana",
+  "revisione": "2026-11-14",
+  "nome": "Toscana — Bando per la produzione di opere cinematografiche e audiovisive (PR FESR 2021-2027, Azione 1.3.5), edizione 2026 attesa",
+  "nomeBreve": "Toscana · Produzione audiovisiva 2026",
+  "ente": "Regione Toscana — Direzione Beni, Istituzioni e Attività culturali (Settore Spettacolo dal vivo e riprodotto) · gestione di Sviluppo Toscana S.p.A. (organismo intermedio) · accoglienza dei set: Toscana Film Commission (Fondazione Sistema Toscana)",
+  "regione": "Toscana",
+  "territorio": "Toscana",
+  "gentilizio": "toscani",
+  "fonte": "Griglie e regole: Bando Anno 2024, Allegato 1 al decreto dirigenziale n. 25757 del 19/11/2024 (BURT n. 48 del 27/11/2024, Supplemento n. 289), con Allegato 2 «Spese ammissibili e modalità di rendicontazione». Edizione 2026: delibera della Giunta regionale n. 1181 del 28/09/2026, Allegato A «Elementi essenziali».",
+  "stato": "atteso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Sovvenzione a fondo perduto della Regione Toscana (fondi PR FESR 2021-2027) per micro, piccole e medie imprese di produzione che girano in tutto o in parte in Toscana cortometraggi, documentari, lungometraggi di finzione e serie. Procedura valutativa a graduatoria: un Nucleo Tecnico di Valutazione assegna fino a 100 punti di merito più i punteggi premiali; sotto 60 punti il progetto non è agevolabile. Il contributo è una percentuale delle spese sostenute in Toscana, entro un massimale per tipologia, e chi è in posizione utile riceve l’intero importo richiesto fino a esaurimento delle risorse.",
+  "paginaUfficiale": "https://www.regione.toscana.it/it/-/sovvenzioni-a-fondo-perduto-per-la-produzione-di-opere-cinematografiche-e-audiovisive",
+  "fontiUrl": [
+    {
+      "titolo": "DGR n. 1181 del 28/09/2026 — Approvazione degli elementi essenziali del bando produzioni Anno 2026",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5532610&nomeFile=Delibera_n.1181_del_28-09-2026",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 1181 del 28/09/2026 — Allegato A «Elementi essenziali» con Allegato 1 «Criteri di valutazione»",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5532611&nomeFile=Delibera_n.1181_del_28-09-2026-Allegato-A",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Scheda dell’atto DGR 1181/2026 nella banca dati degli atti regionali",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/DettaglioAttiG.xml?codprat=2026DG001436",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 25757 del 19/11/2024 — Allegato 1: Bando Anno 2024",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5445072&nomeFile=Decreto_n.25757_del_19-11-2024-Allegato-1",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 25757 del 19/11/2024 — Allegato 2: Spese ammissibili e modalità di rendicontazione",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5445078&nomeFile=Decreto_n.25757_del_19-11-2024-Allegato-2",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 25757 del 19/11/2024 — Allegato A: Definizioni essenziali",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5445068&nomeFile=Decreto_n.25757_del_19-11-2024-Allegato-A",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 1557 del 29/01/2025 — proroga della scadenza al 05/02/2025",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5453182&nomeFile=Decreto_n.1557_del_29-01-2025",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 21537 del 10/10/2025 — correzione di errori materiali all’Allegato 2 del bando 2024 (codici ATECO dei fornitori, categoria c delle spese)",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5487301",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 14682 del 03/07/2025 — approvazione della graduatoria e concessione dei contributi (bando 2024)",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5475198&nomeFile=Decreto+n.14682+del+03-07-2025",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 14682 del 03/07/2025 — Allegato A: domande ammesse a finanziamento (con punteggio totale)",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5475199&nomeFile=Decreto+n.14682+del+03-07-2025-+Allegato+A+",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 14682 del 03/07/2025 — Allegato B: domande non ammesse a finanziamento",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5475200&nomeFile=Decreto+n.14682+del+03-07-2025-+Allegato+B_+",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto dirigenziale n. 20178 del 14/09/2026 — modifica dei componenti del Nucleo Tecnico di Valutazione",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5530459",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione Toscana — scheda «Sovvenzioni per la produzione di opere cinematografiche e audiovisive» (bando 2024, atti e allegati)",
+      "url": "https://www.regione.toscana.it/it/-/sovvenzioni-a-fondo-perduto-per-la-produzione-di-opere-cinematografiche-e-audiovisive",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Sviluppo Toscana — pagina del Bando Produzioni Cinematografiche 2024",
+      "url": "https://www.sviluppo.toscana.it/bando/produzioni_cinema2024/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Toscana Notizie, 17/10/2024 — «La Regione Toscana investe nel cinema e nell’audiovisivo» (esiti del bando 2023 e annuncio del bando 2024)",
+      "url": "https://www.toscana-notizie.it/-/regione-toscana-investe-nel-cinema-e-nell-audiovisivo",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "La Nazione, 03/10/2026 — annuncio del bando 2026 «entro ottobre» e massimali per tipologia (stampa, fonte secondaria)",
+      "url": "https://www.lanazione.it/cultura-e-spettacoli/cartoon-forum-075e7d32",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Primo bando dell’Azione 1.3.5, approvato con decreto dirigenziale n. 23351/2023 (pubblicato a novembre 2023 secondo Toscana Notizie); graduatoria con decreto n. 13177 del 12/06/2024."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-11-27",
+      "scadenza": "2025-02-05",
+      "nota": "Decreto dirigenziale n. 25757 del 19/11/2024, pubblicato sul BURT n. 48 del 27/11/2024 (Supplemento n. 289). Domande dalle 10:00 del 29/11/2024; scadenza originaria 29/01/2025 ore 16:00, prorogata al 05/02/2025 ore 16:00 (decreto n. 1557 del 29/01/2025)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Nessun bando «anno 2025»: la DGR 1181/2026 richiama come precedenti solo le annualità 2023 e 2024."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Elementi essenziali approvati con DGR n. 1181 del 28/09/2026 (dotazione 4 milioni di euro). Al 14/11/2026 il decreto di approvazione del bando non risulta pubblicato."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2024,
+      "dal": "2024-11-29",
+      "al": "2025-02-05",
+      "nota": "Bando 2024: dalle ore 10:00 del 29/11/2024 alle ore 16:00 del 05/02/2025 (termine prorogato dal 29/01/2025 con decreto n. 1557/2025). Finestra unica, chiusa."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2026,
+    "periodoAtteso": "decreto del bando atteso tra novembre e dicembre 2026; domande probabilmente tra fine 2026 e inizio 2027",
+    "base": "La DGR n. 1181 del 28/09/2026 dà mandato di approvare il bando Anno 2026 con risorse 2027 e 2028. Nel 2024 elementi essenziali, bando e apertura sono arrivati in novembre (scadenza 5 febbraio 2025). La stampa annunciava l’uscita «entro ottobre», non avvenuta: le date sono una stima."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "spesaTerritorioMinPct": 150,
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Nucleo Tecnico di Valutazione (NTV), nominato con atto dirigenziale (per il bando 2024: decreto n. 6837 del 04/04/2025, modificato dal decreto n. 20178 del 14/09/2026) e presieduto dal dirigente del Settore responsabile dell’Azione 1.3.5; Sviluppo Toscana fa da segreteria. Il NTV può chiedere integrazioni e convocare audizioni (produttore, regista ecc.) via PEC. Attribuisce i punteggi di merito secondo le Tabelle 3, 4 e 5, fino a 100/100, più i punteggi premiali. Il bando non indica il numero dei componenti né la regola di calcolo (media, consenso)."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://sft.sviluppo.toscana.it/",
+    "oggetto": "",
+    "regole": [
+      "Domanda solo per via telematica sul Sistema Fondi Toscana (SFT), con accesso tramite SPID, CNS o CIE.",
+      "Domanda in lingua italiana, firmata digitalmente dal legale rappresentante; imposta di bollo di 16,00 euro.",
+      "Dossier di candidatura: sezione online (istanza, scheda tecnica di produzione, piano finanziario) e moduli 3, 4, 5, 6 e 7 da scaricare, compilare e allegare firmati digitalmente.",
+      "Per lo stesso progetto una sola domanda e da una sola impresa della coproduzione; ogni impresa può concorrere per una sola tipologia di intervento (art. 6.2.2).",
+      "Niente soccorso istruttorio per domande tardive, prive di firma digitale o senza i documenti obbligatori; per le integrazioni ammesse il termine è di 10 giorni.",
+      "Assistenza sul bando 2024: produzionicinematografiche@sviluppo.toscana.it; supporto tecnico: supportoproduzionicinematografiche@sviluppo.toscana.it."
+    ]
+  },
+  "categorie": [],
+  "griglie": {},
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Istanza di contributo: sezione anagrafica e dichiarazioni (online su SFT, firma digitale)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Scheda tecnica di produzione, specifica per la tipologia di progetto (online su SFT)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Piano finanziario (online su SFT)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Modulo 3 — Dati del progetto produttivo (Allegato 3)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Modulo 4 — Cast e troupe list (Allegato 4)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Modulo 5 — Industrie tecniche, location in Toscana, imprese toscane (Allegato 5)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Modulo 6 — Budget costo industriale (Allegato 6)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Modulo 7 — Piano di copertura dei costi (Allegato 7)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Soggetto (per le serie: soggetto di serie)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Sceneggiatura secondo le linee guida dell’Allegato D (lungometraggio; serie: almeno la puntata pilota); sceneggiatura o trattamento per il cortometraggio; trattamento per il documentario",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Profilo dei personaggi",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Progetto di serializzazione: formato, durata, genere e struttura degli episodi e della serie, modelli di riferimento (solo opere seriali)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Storyboard (solo opere di animazione)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Curriculum dell’autore della regia",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Curricula degli autori del soggetto e della sceneggiatura",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Curricula di tutti i componenti del cast artistico",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Curricula di tutti i componenti del cast tecnico",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Curriculum della società di produzione proponente e, in caso di coproduzione, compartecipazione o produzione esecutiva, anche dei soggetti coinvolti",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Visura camerale della società proponente (imprese estere: documentazione equipollente con traduzione giurata)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con numero delle settimane di lavorazione e luoghi delle riprese",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratti di coproduzione o compartecipazione internazionale (lungometraggi e serialità)",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Lettere di intenti (cortometraggi), deal memo e/o contratti di pre-acquisto, distribuzione, vendite",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "finanziatori_esterni",
+      "nome": "Accordi con finanziatori esterni alla filiera (tax credit esterno, product placement)",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Bilanci consuntivi degli ultimi due anni del proponente (lungometraggi e serialità)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione che attesta le coperture finanziarie dichiarate nel piano di copertura dei costi",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Attestazione asseverata del revisore legale con relazione tecnica su dimensione d’impresa, affidabilità economico-finanziaria e impresa in difficoltà (in alternativa alle autodichiarazioni)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imprese estere senza sede in Toscana: documentazione equipollente a DURC, visura e codice NACE 59.11",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Relazione artistica del regista e relazione analitica dell’impresa sull’impianto produttivo e sulle potenzialità distributive",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Dichiarazioni d’interesse degli interpreti principali a partecipare all’opera",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Altri materiali artistici (storyboard, moodboard) e curricula di altri autori e professionisti",
+      "obbligo": "consigliato"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "mpmi",
+      "testo": "Micro, piccola o media impresa (Allegato I del Reg. UE 651/2014) di produzione cinematografica e audiovisiva, italiana, europea o extraeuropea"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO 59.11 primario o secondario in visura camerale (imprese estere: NACE Rev. 2 59.11 o equivalente)"
+    },
+    {
+      "id": "anzianita",
+      "testo": "Lungometraggi e serialità: iscrizione al Registro delle imprese da almeno 24 mesi prima della pubblicazione del bando. Cortometraggi e documentari: basta essere costituiti e iscritti, anche da poco"
+    },
+    {
+      "id": "patrimonio",
+      "testo": "Lungometraggi e serialità: patrimonio netto pari o superiore a 40.000 euro negli ultimi due bilanci depositati"
+    },
+    {
+      "id": "sede",
+      "testo": "Sede operativa in Toscana, oppure impegno ad aprire un’unità operativa in Toscana entro la prima domanda di erogazione; da mantenere fino a tre anni dopo il saldo"
+    },
+    {
+      "id": "indipendente",
+      "testo": "Produttore indipendente secondo la definizione dell’Allegato A"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico, coproduttore oppure titolare di un contratto di produzione esecutiva già stipulato; nelle coproduzioni internazionali le imprese italiane detengono almeno il 20% dei diritti (10% con più di due Paesi)"
+    },
+    {
+      "id": "diritti",
+      "testo": "Diritti di elaborazione creativa su sceneggiatura, soggetto o trattamento già acquisiti con contratto o opzione"
+    },
+    {
+      "id": "non_avviato",
+      "testo": "Lavori in Toscana non ancora avviati alla data della domanda: nessun impegno giuridicamente vincolante precedente"
+    },
+    {
+      "id": "accessibilita",
+      "testo": "Impegno a realizzare audiodescrizione e sottotitolazione per le persone con disabilità sensoriale (a pena di decadenza)"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda per progetto e una sola tipologia di intervento per impresa"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Regolarità contributiva (DURC), nessuna procedura concorsuale, non impresa in difficoltà, nessun ordine di recupero pendente (Deggendorf)"
+    },
+    {
+      "id": "revoche",
+      "testo": "Nessuna revoca totale di contributi della Regione Toscana negli ultimi due anni per i casi dell’art. 4.2.5 e nessun debito scaduto verso il bilancio regionale superiore a 5.000 euro"
+    },
+    {
+      "id": "legalita",
+      "testo": "Requisiti del legale rappresentante: precedenti penali, d.lgs. 231/2001, lavoro irregolare, antimafia, antiriciclaggio (titolare effettivo), contrasto alla discriminazione"
+    },
+    {
+      "id": "ccnl",
+      "testo": "Applicazione del contratto collettivo nazionale di lavoro e nessuna delocalizzazione nei due anni precedenti"
+    },
+    {
+      "id": "pec",
+      "testo": "PEC intestata all’impresa come domicilio digitale; firma digitale e identità digitale (SPID, CNS o CIE) per il portale SFT"
+    },
+    {
+      "id": "contenuti",
+      "testo": "Opera non esclusa dal DM 303/2017 (format, reality, talent show, programmi informativi, pubblicità) e priva di apologia di reato, incitamento alla violenza o all’odio razziale, pornografia, lesione dell’immagine della Regione"
+    },
+    {
+      "id": "cumulo",
+      "testo": "Sovvenzione più altri aiuti pubblici entro il 50% dei costi ammissibili dell’opera (60%, 80% o 100% nei casi previsti); nessun doppio finanziamento della stessa spesa con altri fondi europei"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "rinuncia",
+      "etichetta": "Rinuncia senza oneri né sanzioni",
+      "mesi": 3,
+      "giorni": 90,
+      "nota": "Art. 7: entro 90 giorni dalla pubblicazione dell’atto di concessione. Oltre i 90 giorni la rinuncia è causa di revoca (art. 13.1 lett. h)."
+    },
+    {
+      "id": "anticipo",
+      "etichetta": "Richiesta dell’anticipo (facoltativa)",
+      "mesi": 3,
+      "giorni": 90,
+      "nota": "Art. 8.1 tabella 2 e art. 8.2.1: entro 90 giorni dalla concessione, con fideiussione."
+    },
+    {
+      "id": "sal",
+      "etichetta": "Richiesta di erogazione per stato di avanzamento lavori (facoltativa)",
+      "mesi": 9,
+      "giorni": 270,
+      "nota": "Art. 8.1 tabella 2: entro 270 giorni dalla concessione, con spesa rendicontata tra il 40% e il 70% dell’investimento."
+    },
+    {
+      "id": "fine_progetto",
+      "etichetta": "Conclusione del progetto (ultimo pagamento imputato al progetto)",
+      "mesi": 18,
+      "preavvisoGiorni": 15,
+      "nota": "Art. 5.3.2 e art. 9 c. 4 lett. b: a pena di decadenza. Proroga solo in casi eccezionali, non oltre 2 mesi, da chiedere via PEC almeno 15 giorni prima della fine del progetto (almeno 30 giorni negli elementi essenziali 2026)."
+    },
+    {
+      "id": "varianti",
+      "etichetta": "Comunicazione delle variazioni di progetto",
+      "mesi": 17,
+      "nota": "Art. 11.1: entro e non oltre i 30 giorni che precedono la conclusione del progetto. Riduzione della spesa in Toscana fino al 10%: nessuna verifica; oltre il 10% e fino al 20%: riduzione proporzionale; oltre il 20% e fino al 30%: nuovo parere del NTV; oltre il 30%: revoca totale."
+    },
+    {
+      "id": "rendiconto",
+      "etichetta": "Rendicontazione finale e domanda di saldo",
+      "mesi": 20,
+      "nota": "Art. 5.3.2 c. 3 e art. 8.1 tabella 2: entro 60 giorni dalla conclusione del progetto (entro 20 mesi dalla concessione), con almeno il 90% dell’investimento rendicontato, due copie dell’opera in alta risoluzione e cinque foto di scena."
+    }
+  ],
+  "scadenzeNote": [
+    "Sede operativa in Toscana, iscrizione ai registri e fascicolo di progetto da mantenere per i tre anni successivi all’erogazione del saldo (art. 9 c. 3).",
+    "La certificazione ambientale (Green Film o equivalente), se dichiarata, va sottoscritta prima dell’avvio delle riprese e documentata a saldo (art. 5.2 e art. 8.2.3).",
+    "Nei titoli dell’opera e in tutti i materiali promozionali vanno inseriti i loghi della Regione Toscana e dell’Unione europea con la dicitura prevista dall’art. 9 c. 4 lett. i e j."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Facoltativo, da chiedere entro 90 giorni dalla concessione; garanzia fideiussoria bancaria o assicurativa pari al 100% dell’anticipo oltre interessi e spese di recupero, secondo il modello dell’Allegato E (art. 8.2.1)."
+    },
+    {
+      "quota": "acconto",
+      "percentuale": null,
+      "condizione": "Stato di avanzamento lavori facoltativo, entro 270 giorni dalla concessione, con spesa rendicontata tra il 40% e il 70% dell’investimento: il contributo è calcolato applicando l’intensità di aiuto all’investimento ammissibile realizzato, dedotto l’anticipo. Con rendicontazione semplificata l’acconto arriva fino al 40% del contributo (art. 8.1 tabella 2 e art. 8.2.2)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": null,
+      "condizione": "Fino al 100% del contributo, al netto di anticipo e acconto, entro 20 mesi dalla concessione, con rendicontazione ordinaria o asseverata da un revisore legale di almeno il 90% dell’investimento (art. 8.1 tabella 2 e art. 8.2.3)."
+    }
+  ],
+  "note": [
+    "Tipologie e massimali dell’ultimo atto letto: Produzione di lungometraggio di finzione, durata minima 52 minuti, destinato allo sfruttamento cinematografico e/o televisivo (anche VoD e SVoD): fino al 50%, massimo 250.000 euro (2024); Produzione di serialità, durata complessiva pari o superiore a 90 minuti, destinata allo sfruttamento cinematografico e/o televisivo (anche VoD e SVoD): fino al 50%, massimo 200.000 euro (2024); Produzione di documentario, durata complessiva superiore a 20 minuti: fino al 50%, massimo 50.000 euro (2024); Produzione di cortometraggio, durata inferiore o uguale a 20 minuti: fino al 50%, massimo 20.000 euro (2024).",
+    "Edizione 2026 (DGR n. 1181 del 28/09/2026, elementi essenziali): 4 milioni di euro (lungometraggi 1.250.000, serialità 2.000.000, documentari 550.000, cortometraggi 200.000); soglia 60 punti, premiali compresi; fino a 100 punti di merito più i premiali. Massimi di sezione: lungometraggi e serialità qualità 40, impatti in Toscana 30, solidità 30, premiali 8; documentari 45, 15, 20, 20, premiali 8; cortometraggi 40, 30, 10, 20, premiali 6. I punti dei singoli criteri saranno nel bando.",
+    "Griglia del bando 2024 (decreto n. 25757/2024), chiuso: lungometraggi e serialità 50 qualità, 28 impatti in Toscana, 22 solidità; documentari 43, 14, 23, 20; cortometraggi 40, 25, 15, 20; più premialità fino a 10 (8 per i cortometraggi). Soglia 60 premiali compresi, nessun minimo di sezione.",
+    "ATTENZIONE: le griglie simulabili sono quelle del bando 2024. Per il bando 2026 la Giunta ha già cambiato i pesi delle sezioni (vedi edizione2026.confrontoSezioni), ma i punti dei singoli criteri arriveranno solo con il decreto che approva il bando.",
+    "Soglia minima di 60 punti sul totale, premiali compresi; raggiungerla non garantisce il contributo, perché le risorse sono ripartite per tipologia e assegnate in ordine di graduatoria.",
+    "Chi è in posizione utile riceve l’intero contributo richiesto, mai una quota parziale: il primo progetto non coperto per intero resta in graduatoria in attesa di nuove risorse.",
+    "Sono ammissibili solo le spese sostenute in Toscana dal beneficiario, dal giorno successivo alla domanda: personale dipendente e professionisti con partita IVA del settore operanti in Toscana, beni e servizi di fornitori con sede in Toscana, alberghi (massimo 20% delle spese ammissibili), revisore (massimo 10% del progetto e non oltre 5.000 euro), certificazione ambientale, audiodescrizione e sottotitoli.",
+    "Non ammissibili, tra l’altro: producer fee, spese generali, interessi passivi, assicurazioni, imposte e tasse, carburante e pedaggi, consulenze fiscali, notarili e legali, acquisto di attrezzature e beni durevoli, pagamenti in contanti, spese fatturate da soci, amministratori, loro congiunti o imprese collegate.",
+    "Obbligo di spesa in Toscana: almeno il 150% del contributo per lungometraggi e serialità, almeno il 100% per cortometraggi e documentari, a pena di decadenza.",
+    "Se la spesa complessiva sostenuta in Toscana scende di oltre il 30% rispetto a quanto dichiarato il contributo è revocato per intero; tra il 10% e il 20% è ridotto in proporzione.",
+    "Il mancato rispetto dell’impegno alla certificazione ambientale costa il 5% dell’agevolazione; la mancata osservanza degli obblighi di comunicazione il 3% (art. 13.2).",
+    "Il cambio di tipologia o di minutaggio rispetto alla domanda è causa di revoca totale (art. 13.1 lett. k); le variazioni su imprese partecipanti, regista, autori e compagine artistica vanno comunicate e passano dal NTV.",
+    "Nei criteri sui professionisti toscani del bando 2024 contano solo gli iscritti alla Production Guide di Toscana Film Commission alla scadenza del bando: conviene iscrivere cast e troupe prima di presentare domanda.",
+    "L’Allegato 2 del bando 2024 è stato rettificato dal decreto n. 21537 del 10/10/2025: per professionisti con partita IVA e fornitori di licenze non serve più il codice ATECO 59.11/59 ma quello «di riferimento», e la categoria c) comprende le forniture di beni e servizi in Toscana «incluse le voci» elencate (non più «limitatamente alle voci»). Non tocca griglie, punteggi né massimali."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Avvisi di Fondazione Sistema Toscana per festival di cinema e «Vivaio» per manifestazioni cinematografiche (annualità 2026)",
+      "url": "https://www.fondazionesistematoscana.it/",
+      "descrizione": "Sostegno a festival e manifestazioni, non alla produzione di opere: citato dal decreto dirigenziale n. 17616 del 31/07/2026 (approvazione degli elenchi degli ammessi). Non trascritto."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2024,
+      "titolo": "Decreto dirigenziale n. 14682 del 03/07/2025 — graduatoria del bando 2024 (BURT n. 28 del 09/07/2025, parte IV): Allegato A domande ammesse con punteggio totale, Allegato B domande non ammesse con motivo",
+      "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5475199&nomeFile=Decreto+n.14682+del+03-07-2025-+Allegato+A+",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "non_disponibile",
+    "citazioni": [
+      {
+        "riferimento": "Bando 2024, art. 6.3.1 c. 4-5 — punteggio massimo e soglia",
+        "testo": "procede quindi all'attribuzione dei punteggi di merito per ciascun progetto valutato, fino a un massimo di punti 100/100, cui si aggiungono i punteggi premiali previsti per ciascuna tipologia determinando la graduatoria finale dei soggetti beneficiari di contributo. Non saranno in ogni caso agevolabili i progetti che avranno conseguito un punteggio inferiore a 60 sul totale previsto (punteggi premiali compresi), fermo restando che il raggiungimento della già menzionata soglia minima non garantisce la concessione del cofinanziamento"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, Tabella 5 — intestazioni di sezione (lungometraggi e serialità)",
+        "testo": "A QUALITÀ DEL PRODOTTO FINO A 50 […] B PRODUZIONE AUDIOVISIVA - IMPATTI ECONOMICI E OCCUPAZIONALI IN TOSCANA FINO A 28 […] C SOLIDITÀ E SOSTENIBILITÀ ECONOMICO/FINANZIARIA E PRODUTTIVA FINO A 22 […] PUNTEGGIO MASSIMO CRITERI ORDINARI 100 […] PUNTEGGIO MASSIMO CRITERI PREMIALI 10"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, Tabella 5 — criterio 1.1 (scala di giudizio)",
+        "testo": "OTTIMA = punti 15 MOLTO BUONA= PUNTI 12 BUONA = punti 8 DISCRETA = punti 5 SUFFICIENTE = punti 1 INSUFFICIENTE = punti 0 — Originalità della sceneggiatura — Originalità, forza espressiva e carattere distintivo della storia, dei personaggi e della loro rappresentazione. — fino a 15"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, Tabella 5 — criterio 4.5 (fasce di spesa)",
+        "testo": "Spesa sul territorio Toscano — Percentuale delle spese sul territorio toscano rispetto al contributo richiesto e relativo alle spese ammissibili. DA 451 A 500 % 6; DA 391 A 450% 5; DA 331 A 390% 4; DA 271 A 330% 3; DA 211 A 270% 2; DA 151 al 210% 1 — fino a 6"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, nota al criterio 5.3",
+        "testo": "Nel caso in cui un soggetto richiedente presentasse più accordi di coproduzione/compartecipazione con soggetti appartenenti a Paesi dello Spazio Economico Europeo e con la Svizzera e con Paesi non appartenenti allo Spazio Economico Europeo, non si procederà ad un cumulo di punteggi, ma verrà attribuito il punteggio massimo previsto dal criterio 5.3"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, Tabella 4 e Tabella 3 — intestazioni di sezione",
+        "testo": "Tabella 4 (documentario): A QUALITÀ DEL PRODOTTO FINO A 43; B SOGGETTI PROPONENTI E SOGGETTI COINVOLTI FINO A 14; C PRODUZIONE AUDIOVISIVA - IMPATTI ECONOMICI E OCCUPAZIONALI IN TOSCANA FINO A 23; D SOLIDITÀ ECONOMICO/FINANZIARIA DELLE PRODUZIONI FINO A 20. Tabella 3 (cortometraggi): A QUALITÀ DEL PRODOTTO FINO A 40; B REGIA E COMPONENTI TECNICHE E TECNOLOGICHE PREVISTE FINO A 25; C PRODUZIONE AUDIOVISIVA - IMPATTI ECONOMICI IN TOSCANA FINO A 15; D COERENZA TECNICA ED ECONOMICA, FATTIBILITÀ E REALIZZABILITÀ DEL PROGETTO PRODUTTIVO FINO A 20"
+      },
+      {
+        "riferimento": "Bando 2024, art. 5.5 c. 2 e c. 4 — massimali e obbligo di spesa",
+        "testo": "€ 20.000,00 per la Produzione di cortometraggio; € 50.000,00 per la Produzione di documentario; € 250.000,00 per la Produzione di lungometraggio; € 200.000,00 per la Produzione di serialità. […] L’obbligo di spesa a livello territoriale è stabilito per un importo non inferiore al: 100% dell’agevolazione concessa, per i progetti di cortometraggio, e di documentario, 150% dell’agevolazione concessa per i lungometraggi e la serialità."
+      },
+      {
+        "riferimento": "Bando 2024, Allegato 2, par. 3 — intensità",
+        "testo": "Produzione di cortometraggio 50% dei costi ammissibili fino ad un massimo di E. 20.000,00; Produzione di documentario 50% dei costi ammissibili fino ad un massimo di E. 50.000,00; Produzione di lungometraggio 50% dei costi ammissibili fino ad un massimo di E. 250.000,00; Produzione di serialità 50% dei costi ammissibili fino ad un massimo di E. 200.000,00"
+      },
+      {
+        "riferimento": "DGR 1181 del 28/09/2026, Allegato A — criteri di valutazione e soglia (edizione 2026)",
+        "testo": "Il Nucleo Tecnico di Valutazione attribuisce i punteggi di merito per ciascun progetto valutato, fino a un massimo di punti 100/100, cui si aggiungono i punteggi premiali previsti per ciascuna tipologia, determinando la graduatoria dei soggetti beneficiari di contributo. […] Non saranno in ogni caso agevolabili i progetti che avranno conseguito un punteggio inferiore a 60 sul totale previsto (punteggi premiali compresi)"
+      },
+      {
+        "riferimento": "DGR 1181 del 28/09/2026, Allegato A — dotazioni 2026",
+        "testo": "cortometraggi, con una durata inferiore o uguale ai 20 minuti 200.000,00; documentario 550.000,00; lungometraggi di finzione, con una durata minima di 52 minuti 1.250.000,00; serialità, con una durata complessiva pari o superiore ai 90 minuti 2.000.000,00; TOTALE 4.000.000,00"
+      },
+      {
+        "riferimento": "Bando 2024, art. 20, Tabella 5 — criterio 5.3 (testo integrale della riga)",
+        "testo": "5.3 Realizzazione dell’opera in coproduzione internazionale o compartecipazione internazionale* — 1. Con Paesi dello Spazio Economico Europeo e con la Svizzera. 2 — 2. Con Paesi non appartenenti allo Spazio Economico Europeo. 4 (nessun «fino a» per il criterio; sezione C «FINO A 22» = 5.1 fino a 6 + 5.2 fino a 6 + 5.3 + 5.4 4)"
+      }
+    ],
+    "dubbi": [
+      "Scheda informativa: la griglia trascritta è quella del bando 2024, chiuso. Per l’edizione 2026 la DGR 1181/2026 ha già cambiato i massimi di sezione (per esempio lungometraggi e serialità: qualità 50→40, impatti 28→30, solidità 22→30) e i premiali (10→8, 8→6), ma i punti dei singoli criteri non sono ancora pubblicati: una simulazione con la griglia 2024 darebbe punteggi diversi da quelli della commissione 2026. Va resa simulabile appena esce il decreto del bando 2026.",
+      "Bando 2026 non ancora pubblicato al 14/11/2026 (verificato sulla banca dati degli atti regionali, indice aggiornato almeno al 3 novembre 2026, e sui siti di Regione, Sviluppo Toscana e Toscana Film Commission): mancano punti per criterio, scale di giudizio, fasce percentuali, massimali, intensità, date e modulistica 2026. I pesi di sezione 2026 sono diversi da quelli 2024.",
+      "Criterio 5.3 della Tabella 5 (2024): la tabella assegna 2 punti (SEE/Svizzera) e 4 punti (extra SEE) senza indicare il «fino a»; il massimo di 6 è ricavato per differenza dal totale di sezione (22) e dal totale 100. La nota sul «non cumulo» può essere letta anche come massimo 4, nel qual caso il totale reale sarebbe 98. Da chiarire con Sviluppo Toscana.",
+      "Per alcuni criteri qualitativi (regista, società, cast tecnico) la scala del bando 2024 si ferma a «sufficiente» senza prevedere «insufficiente = 0»: non è chiaro se lo zero sia attribuibile.",
+      "Le fasce percentuali sono intere (es. 71%-90%, 91%-100%): il bando non regola i valori con decimali tra due fasce né la spesa territoriale oltre il 400% (documentari) o il 500% (lungometraggi e serialità), qui assimilata alla fascia più alta.",
+      "Cortometraggi, criterio 3.1: le fasce sono percentuali ma la descrizione dice solo «Giorni di riprese in Toscana»; il denominatore (totale dei giorni di ripresa) è dedotto per analogia con le altre tabelle.",
+      "Intensità del contributo: l’Allegato 2 parla di «50% dei costi ammissibili» fino al massimale, mentre l’art. 5.5 c. 3 riferisce il 50% (60%, 80%, 100%) al cumulo di tutti gli aiuti pubblici sui costi dell’opera. Nella graduatoria 2024 i contributi valgono dal 50% all’80% dell’investimento ammesso in Toscana: la percentuale applicata al singolo progetto dipende dalla sua qualifica (opera difficile, coproduzione).",
+      "Massimali 2026 (serie 400.000, lungometraggi 250.000, documentari 50.000, cortometraggi 20.000 euro) letti solo su La Nazione del 03/10/2026: fonte secondaria, non usata nei campi numerici delle categorie.",
+      "Numero dei componenti del NTV e regola di calcolo dei punteggi non indicati nel bando; l’allegato con i nominativi del decreto n. 6837/2025 non è stato consultato.",
+      "Bando 2023 (decreto n. 23351/2023) e relativa graduatoria (decreto n. 13177 del 12/06/2024) non consultati: i dati 2023 vengono dal comunicato Toscana Notizie del 17/10/2024.",
+      "Moduli 3-7 e allegati B, D, E del bando 2024 non scaricati: la struttura dei campi dei moduli non è trascritta."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Tabella 5, criterio 5.3: riformulata l’opzione da 6 punti (SEE + extra SEE) perché il bando non scrive quel valore; segnata come ambigua e aggiunta la citazione letterale della riga.",
+      "Aggiunto alle fonti il decreto n. 21537 del 10/10/2025 (rettifica dell’Allegato 2 del bando 2024), salvato in fonti/toscana, con una nota sulle due correzioni.",
+      "Aggiunto un dubbio esplicito: le griglie sono quelle del bando 2024 e i pesi di sezione 2026 già approvati sono diversi."
+    ],
+    "dubbi": [
+      "Tabella 5, criterio 5.3: massimo 6 ricavato dal totale di sezione 22; la nota sul non cumulo può essere letta come massimo 4 (totale 98).",
+      "Bando 2026 non pubblicato al 14/11/2026 (banca dati atti riconsultata oggi: nessun decreto di approvazione dopo la DGR 1181/2026): punti per criterio, fasce, massimali, intensità e date 2026 non disponibili.",
+      "Le griglie del file sono del bando 2024: con i pesi di sezione 2026 già fissati dalla DGR 1181/2026 la simulazione per il bando 2026 è solo indicativa."
+    ]
+  }
+}

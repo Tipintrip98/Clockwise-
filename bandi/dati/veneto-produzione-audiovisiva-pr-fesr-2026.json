@@ -1,0 +1,1823 @@
+{
+  "id": "veneto-produzione-audiovisiva-pr-fesr-2026",
+  "fondoId": "veneto",
+  "revisione": "2026-11-14",
+  "nome": "Veneto — Bando per la produzione cinematografica e audiovisiva (PR FESR 2021-2027, Azione 1.3.11 Sub C), anno 2026",
+  "nomeBreve": "Veneto · Produzione audiovisiva PR FESR 2026",
+  "ente": "Regione del Veneto — Direzione Beni, Attività Culturali e Sport. Istruttoria, graduatoria e pagamenti: AVEPA (Agenzia Veneta per i Pagamenti, Area Gestione FESR) come organismo intermedio. La Fondazione Veneto Film Commission indica i due esperti della Commissione e affianca le produzioni.",
+  "regione": "Veneto",
+  "territorio": "Veneto",
+  "gentilizio": "veneti",
+  "fonte": "Deliberazione della Giunta Regionale del Veneto n. 285 del 28 aprile 2026, Allegato A (BUR n. 55 del 30 aprile 2026): bando anno 2026 «Erogazione di contributi a favore della produzione cinematografica e audiovisiva», PR Veneto FESR 2021-2027, Azione 1.3.11 Sub C. Modulistica A1-A9 approvata con decreto n. 13284 del 5 maggio 2026 della Direzione Beni, Attività Culturali e Sport.",
+  "stato": "atteso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Regione del Veneto (fondi europei PR FESR 2021-2027) per PMI di produzione indipendenti, italiane ed europee, con codice ATECO 59.11, che girano in tutto o in parte in Veneto lungometraggi, serie, animazione (tipologia A) oppure documentari, cortometraggi e opere XR (tipologia B). Il contributo è una percentuale della spesa ammissibile sostenuta in Veneto (49% o 59%, un punto in più con la certificazione ambientale) entro un massimale. Procedura valutativa a graduatoria: una Commissione Tecnica di Valutazione di tre componenti assegna fino a 90 punti, servono almeno 40 punti e si finanzia in ordine di punteggio fino a esaurimento delle risorse di ciascuna apertura.",
+  "paginaUfficiale": "https://www.regione.veneto.it/web/cultura/por-fesr-cinema",
+  "fontiUrl": [
+    {
+      "titolo": "DGR n. 285 del 28 aprile 2026 — Allegato A, bando anno 2026 (PDF dal Bollettino Ufficiale)",
+      "url": "https://bur.regione.veneto.it/BurvServices/pubblica/Download.aspx?name=Dgr_285_26_AllegatoA_581696.pdf&type=9&storico=False",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "DGR n. 285 del 28 aprile 2026 — testo della deliberazione (BUR n. 55 del 30 aprile 2026)",
+      "url": "https://bur.regione.veneto.it/BurvServices/pubblica/DettaglioDgr.aspx?id=581696",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Portale Bandi della Regione del Veneto — scheda del bando 2026 con Allegato A e modulistica A1-A9",
+      "url": "https://bandi.regione.veneto.it/Public/Dettaglio?idAtto=13057",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A1 — Scheda progetto",
+      "url": "https://bandi.regione.veneto.it/Public/Download?idAllegato=36798",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A4 — Elenco esemplificativo delle spese ammissibili",
+      "url": "https://bandi.regione.veneto.it/Public/Download?idAllegato=36803",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A5 — Certificazione ambientale (dichiarazione d’impegno)",
+      "url": "https://bandi.regione.veneto.it/Public/Download?idAllegato=36804",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Allegato A6 — Referenze bancarie",
+      "url": "https://bandi.regione.veneto.it/Public/Download?idAllegato=36809",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto, Cultura — PR Veneto FESR 2021-2027: bandi per anno ed esiti istruttori",
+      "url": "https://www.regione.veneto.it/web/cultura/por-fesr-cinema",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Cultura Veneto — Contributi PR FESR (bandi 2023-2026 e decreti AVEPA)",
+      "url": "https://www.culturaveneto.it/it/cultura/fondi-per-la-cultura/contributi-pr-fesr",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto AVEPA n. 378 del 28 ottobre 2026 — graduatoria della prima apertura 2026 (copia pubblicata dalla Veneto Film Commission)",
+      "url": "https://venetofilmcommission.com/wp-content/uploads/2026/11/Decreto-n.-378-del-28-ottobre-2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto AVEPA n. 83 del 18 marzo 2026 — graduatoria del secondo sportello del bando 2025",
+      "url": "https://www.culturaveneto.it/uploads/attachments/cmn5ycnm803w55f744sgad51s-decreto-n-83-del-18-marzo-2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Decreto AVEPA n. 617 del 6 novembre 2025 — graduatoria del primo sportello del bando 2025",
+      "url": "https://www.culturaveneto.it/uploads/attachments/cmn64vqgl0cmv3l735mgrbv5k-decreto-n-617-del-6-novembre-2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto — comunicato n. 1909 del 29 ottobre 2026 sui risultati della prima finestra 2026",
+      "url": "https://www.regione.veneto.it/article-detail?articleId=14426114",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto, URP — notizia del 4 maggio 2026 sull’approvazione del bando 2026",
+      "url": "https://www.regione.veneto.it/web/rete-degli-urp-del-veneto/dettaglio-news?articleId=14369709",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Veneto Film Commission — Fondo di Produzione 2026 (linee guida; fa fede il bando)",
+      "url": "https://venetofilmcommission.com/it/fondo/fondo-di-produzione-2026/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto — scheda del bando 2025 (DGR n. 296 del 24/03/2025)",
+      "url": "https://www.regione.veneto.it/web/programmi-comunitari/azione-1311-sub-c-produzione-audiovisiva",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto — scheda del bando 2024 (DGR n. 442 del 30/04/2024)",
+      "url": "https://www.regione.veneto.it/web/programmi-comunitari/bando-1311c-imprese-culturali2024",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Regione del Veneto — scheda del bando 2023 (DGR n. 408 del 07/04/2023)",
+      "url": "https://www.regione.veneto.it/web/programmi-comunitari/bando-1311c-imprese-culturali",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": "2023-05-30",
+      "nota": "Primo bando, DGR n. 408 del 7 aprile 2023. Primo sportello dal 19 aprile al 30 maggio 2023. Dotazione 5.000.000 euro (tipologia A 4.600.000, tipologia B 400.000); contributo 30% (A, fino a 320.000 euro) e 60% (B, fino a 52.500 euro). Dati dalla scheda della Regione, non dal testo del bando."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": "2023-11-14",
+      "nota": "Bando 2023, secondo sportello dal 3 ottobre al 14 novembre 2023."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": "2024-06-18",
+      "nota": "Secondo bando, DGR n. 442 del 30 aprile 2024. Primo sportello dal 7 maggio al 18 giugno 2024. Dotazione 4.000.000 euro (A 3.600.000, B 400.000); contributo 45% (A, fino a 353.250 euro) e 60% (B, fino a 51.000 euro). Dati dalla scheda della Regione, non dal testo del bando."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": "2024-11-19",
+      "nota": "Bando 2024, secondo sportello dall’8 ottobre al 19 novembre 2024."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-05-20",
+      "nota": "Terzo bando, DGR n. 296 del 24 marzo 2025. Primo sportello dall’8 aprile al 20 maggio 2025; graduatoria con decreto AVEPA n. 617 del 6 novembre 2025. Dotazione 6.000.000 euro (A 5.400.000, B 600.000)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-11-18",
+      "nota": "Bando 2025, secondo sportello dal 7 ottobre al 18 novembre 2025; graduatoria con decreto AVEPA n. 83 del 18 marzo 2026."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-04-30",
+      "scadenza": "2026-06-30",
+      "nota": "Quarto bando, DGR n. 285 del 28 aprile 2026 (BUR n. 55 del 30 aprile 2026). Prima apertura dal 12 maggio al 30 giugno 2026; graduatoria con decreto AVEPA n. 378 del 28 ottobre 2026. Dotazione 3.680.000 euro (A 3.300.000, B 380.000)."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-04-30",
+      "scadenza": "2027-02-02",
+      "nota": "Bando 2026, seconda apertura dal 1° dicembre 2026 al 2 febbraio 2027."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-05-12",
+      "al": "2026-06-30",
+      "nota": "Prima apertura: dalle ore 10:00 del 12 maggio 2026 alle ore 17:00 del 30 giugno 2026. Risorse: 1.840.000 euro (A 1.650.000, B 190.000). Chiusa."
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-12-01",
+      "al": "2027-02-02",
+      "nota": "Seconda apertura dello stesso bando 2026: dalle ore 10:00 del 1° dicembre 2026 alle ore 17:00 del 2 febbraio 2027. Risorse: 1.840.000 euro (A 1.650.000, B 190.000), più eventuali economie."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "delibera tra fine marzo e fine aprile, prima apertura tra aprile e giugno",
+    "base": "Cadenza delle quattro edizioni: DGR del 7 aprile 2023, 30 aprile 2024, 24 marzo 2025 e 28 aprile 2026, con prime aperture dal 19 aprile 2023, 7 maggio 2024, 8 aprile 2025 e 12 maggio 2026. Nessun annuncio ufficiale di un bando 2027 trovato al 14 novembre 2026; la prossima finestra certa è la seconda apertura del bando 2026 (1° dicembre 2026 – 2 febbraio 2027)."
+  },
+  "sogliaTotale": 40,
+  "punteggioMassimo": 90,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": 3,
+    "descrizione": "Commissione Tecnica di Valutazione (CTV): un componente interno della Regione del Veneto indicato dalla Direzione Beni, Attività Culturali e Sport, con il ruolo di presidente, e due esperti di produzione cinematografica e audiovisiva indicati dalla Fondazione Veneto Film Commission; nominata dal Dirigente dell’Area Gestione FESR di AVEPA (art. 11 c. 3). Il bando non indica la regola di calcolo (media, somma o consenso): i punteggi sono gradi di giudizio fissi e le graduatorie pubblicate riportano solo totali interi."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://www.regione.veneto.it/web/programmi-comunitari/sistemainformativofondirve",
+    "oggetto": "",
+    "regole": [
+      "La domanda si compila e si presenta solo per via telematica sul sistema Fondi.RVE della Regione del Veneto, previo accreditamento (art. 10 c. 1-2).",
+      "In Fondi.RVE i moduli sono due: «Lungometraggi di finzione, serialità, animazione» oppure «Doc, short e XR». La scelta non si può cambiare dopo la presentazione (art. 10 c. 3).",
+      "Chi allega l’allegato A5 (impegno alla certificazione ambientale) deve selezionare l’intervento con percentuale maggiorata (art. 10 c. 3).",
+      "Dopo la conferma si scarica da Fondi.RVE il PDF della domanda, lo firma digitalmente il legale rappresentante senza rinominarlo e lo si allega tra i documenti obbligatori (art. 10 c. 5).",
+      "Tutti gli allegati vanno convertiti in PDF prima del caricamento (art. 10 c. 7).",
+      "Imposta di bollo di 16,00 euro: numero seriale e data della marca nel riquadro di Fondi.RVE, oppure modello F24 quietanzato allegato (art. 10 c. 10).",
+      "Una sola domanda per ciascuna tipologia di intervento in ogni apertura; in coproduzione una sola domanda per progetto, da una sola impresa (art. 4 c. 2-3).",
+      "I documenti obbligatori non si possono integrare dopo l’invio. I documenti «necessari ai fini della valutazione» non escludono se mancano, ma il relativo punteggio non viene attribuito; nessuna integrazione successiva alla chiusura può aumentare il punteggio (art. 10 c. 6 e 13, art. 11 c. 7).",
+      "I documenti sui requisiti di un richiedente estero vanno accompagnati da traduzione certificata o giurata in italiano (art. 10 c. 9).",
+      "Per i chiarimenti chiesti in istruttoria il termine di risposta è di 10 giorni (art. 10 c. 14)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "lungometraggio",
+      "nome": "Tipologia A — Lungometraggi di finzione o di animazione",
+      "griglia": "A",
+      "soglie": {
+        "A": 2,
+        "D": 2
+      },
+      "contributo": {
+        "percentuale": 49,
+        "massimali": {
+          "2026": 245000
+        },
+        "nota": "Percentuale calcolata su: spesa ammessa a contributo, cioè la spesa ammissibile sostenuta in Veneto (non il costo di produzione)."
+      },
+      "dotazione": {
+        "2026": 3300000
+      },
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "serialita",
+      "nome": "Tipologia A — Serialità (finzione, documentaria, docufiction, animazione)",
+      "griglia": "A",
+      "soglie": {
+        "A": 2,
+        "D": 2
+      },
+      "contributo": {
+        "percentuale": 49,
+        "massimali": {
+          "2026": 343000
+        },
+        "nota": "Percentuale calcolata su: spesa ammessa a contributo, cioè la spesa ammissibile sostenuta in Veneto (non il costo di produzione)."
+      },
+      "dotazione": {
+        "2026": 3300000
+      },
+      "durataMin": 90,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentario",
+      "nome": "Tipologia B — Documentari",
+      "griglia": "B",
+      "soglie": {
+        "A": 2,
+        "D": 2
+      },
+      "contributo": {
+        "percentuale": 59,
+        "massimali": {
+          "2026": 35400
+        },
+        "nota": "Percentuale calcolata su: spesa ammessa a contributo, cioè la spesa ammissibile sostenuta in Veneto (non il costo di produzione)."
+      },
+      "dotazione": {
+        "2026": 380000
+      },
+      "durataMin": 30,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "cortometraggio",
+      "nome": "Tipologia B — Cortometraggi di finzione, animazione e live action",
+      "griglia": "B",
+      "soglie": {
+        "A": 2,
+        "D": 2
+      },
+      "contributo": {
+        "percentuale": 59,
+        "massimali": {
+          "2026": 35400
+        },
+        "nota": "Percentuale calcolata su: spesa ammessa a contributo, cioè la spesa ammissibile sostenuta in Veneto (non il costo di produzione)."
+      },
+      "dotazione": {
+        "2026": 380000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "xr",
+      "nome": "Tipologia B — XR (Realtà Estesa): VR, AR, MR",
+      "griglia": "B",
+      "soglie": {
+        "A": 2,
+        "D": 2
+      },
+      "contributo": {
+        "percentuale": 59,
+        "massimali": {
+          "2026": 35400
+        },
+        "nota": "Percentuale calcolata su: spesa ammessa a contributo, cioè la spesa ammissibile sostenuta in Veneto (non il costo di produzione)."
+      },
+      "dotazione": {
+        "2026": 380000
+      },
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    }
+  ],
+  "griglie": {
+    "A": {
+      "id": "A",
+      "nome": "Lungometraggi di finzione, serialità e animazione (tipologia A)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Affidabilità finanziaria ed esperienza gestionale del soggetto proponente",
+          "max": 12,
+          "obiettivo": "Criterio A della griglia.",
+          "criteri": [
+            {
+              "id": "a.1",
+              "nome": "Idoneità tecnica e capacità finanziaria, economica e patrimoniale del proponente",
+              "max": 12,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Idoneità tecnica del potenziale beneficiario e capacità finanziaria economica e patrimoniale da valutare sulla base del company profile (numero e qualità delle produzioni realizzate, partecipazione a festival di rilievo nazionale e internazionale, premi ottenuti, ecc.).",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Un punteggio pari a zero in questo criterio rende la produzione non ammissibile (art. 11 c. 9). Nota: tra «ottima» (12) e «molto buona» (8) il salto è di 4 punti.",
+              "valori": [
+                {
+                  "punti": 12,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Spesa sul territorio",
+          "max": 10,
+          "obiettivo": "Criterio B della griglia.",
+          "criteri": [
+            {
+              "id": "b.1",
+              "nome": "Rilevanza della spesa ammissibile in Veneto",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rilevanza della spesa ammissibile in Veneto.",
+              "principio": "La griglia indica importi puntuali («Euro 1.200.000,00 = punti 6» ecc.) senza dire «almeno»: qui ogni importo è letto come soglia minima della fascia. Sotto 150.000 euro la domanda non è ammissibile (anche art. 8 c. 3). Il punteggio è riverificato a saldo sulla spesa rendicontata (art. 11 c. 10).",
+              "metrica": "spesaTerritorioEuro",
+              "unita": "euro",
+              "peso": 1,
+              "fasce": [
+                {
+                  "da": 1200000,
+                  "punti": 6,
+                  "etichetta": "Euro 1.200.000,00"
+                },
+                {
+                  "da": 1000000,
+                  "punti": 5,
+                  "etichetta": "Euro 1.000.000,00"
+                },
+                {
+                  "da": 800000,
+                  "punti": 4,
+                  "etichetta": "Euro 800.000,00"
+                },
+                {
+                  "da": 500000,
+                  "punti": 3,
+                  "etichetta": "Euro 500.000,00"
+                },
+                {
+                  "da": 300000,
+                  "punti": 2,
+                  "etichetta": "Euro 300.000,00"
+                },
+                {
+                  "da": 200000,
+                  "punti": 1,
+                  "etichetta": "Euro 200.000,00"
+                },
+                {
+                  "da": 150000,
+                  "punti": 0,
+                  "etichetta": "Euro 150.000,00"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Meno di Euro 150.000,00: domanda non ammissibile"
+                }
+              ]
+            },
+            {
+              "id": "b.2",
+              "nome": "Impiego di personale residente in Veneto previsto dall’allegato A1",
+              "max": 4,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Impiego di personale residente in Veneto previsto dall’allegato A1.",
+              "principio": "Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Ruoli elencati nell’allegato A1 alla voce «Personale residente in Veneto» (allegare le note di intenti sottoscritte): aiuto regista, organizzatore, direttore di produzione, direttore della fotografia, location manager, operatore alla macchina, assistente operatore, fonico, costumista, scenografo, fotografo di scena, data manager, digital imaging technician, segretario di edizione, ispettore di produzione, capo truccatore, capo parrucchiere, capo macchinista, capo elettricista, operatore drone, montatore, compositore delle musiche, sviluppo visivo, autore della grafica, storyboard, lay-out – animatics, animation, modelling & lighting, color, composite, effetti speciali visivi, creative technologist, vfx artist. Il punteggio è riverificato a saldo (art. 11 c. 10). Il numero lo legge dai documenti la commissione simulata: il totale dei professionisti veneti dichiarato nei Dati chiave può essere più alto di quello che dà punteggio.",
+              "metrica": "professionistiTerritorio",
+              "unita": "numero",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 5,
+                  "punti": 4,
+                  "etichetta": "> 5"
+                },
+                {
+                  "da": 1,
+                  "punti": 2,
+                  "etichetta": "da 1 a 5"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "non presente"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ],
+              "giudizio": true
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Sostenibilità finanziaria e solidità produttiva",
+          "max": 14,
+          "obiettivo": "Criterio C della griglia.",
+          "criteri": [
+            {
+              "id": "c.1",
+              "nome": "Potenziale di diffusione e fruizione dell’opera",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "distribuzione",
+              "descrizione": "Potenziale di diffusione e fruizione dell’opera a livello nazionale o internazionale nelle sale cinematografiche, nelle emittenti televisive (anche VoD o SVoD) da valutarsi sulla base del contratto, o altro accordo di distribuzione o deal memo e dei company profile delle società di distribuzione e/o del broadcaster.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "c.2",
+              "nome": "Sostenibilità finanziaria della proposta produttiva",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Sostenibilità finanziaria della proposta produttiva da valutarsi in ragione della percentuale di risorse finanziarie disponibili rispetto alla spesa richiesta a sostegno.",
+              "principio": "Contano solo i finanziamenti comprovati da documentazione ufficiale sottoscritta (art. 10 c. 6): provvedimenti di concessione di enti pubblici, accordi datati e firmati con coproduttori, terzi finanziatori, broadcaster e distributori con la quota di copertura, referenze bancarie sul modello A6 per l’apporto societario diretto, idoneità (o richiesta di idoneità provvisoria) al tax credit della DG Cinema – MiC, contratti registrati con imprese esterne al settore. Il bando non dice se tra le risorse si conta anche il contributo richiesto.",
+              "calcolo": "Risorse finanziarie disponibili e documentate ÷ spesa richiesta a sostegno: 60% = punti 4; 55% = punti 2; 50% = punti 1; < 50% o assenza di documentazione a supporto della valutazione = punti 0.",
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie",
+                "coproduzione",
+                "distribuzione",
+                "finanziatori_esterni",
+                "produttore_esecutivo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Qualità, originalità e innovatività",
+          "max": 38,
+          "obiettivo": "Criterio D della griglia.",
+          "criteri": [
+            {
+              "id": "d.1",
+              "nome": "Originalità della proposta e qualità della sceneggiatura",
+              "max": 20,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della proposta e qualità della sceneggiatura. Presupposto, forza e carattere distintivo dell’idea, potenziale drammatico del progetto.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi.",
+              "valori": [
+                {
+                  "punti": 20,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 16,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 12,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "d.2",
+              "nome": "Credenziali del regista sul piano nazionale o internazionale",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali del regista sul piano nazionale o internazionale.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Serve la nota d’intenti sottoscritta dal regista (art. 10 c. 6). Il punteggio è riverificato a saldo (art. 11 c. 10).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ],
+              "richiede": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "d.3",
+              "nome": "Credenziali del personale tecnico e artistico",
+              "max": 8,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Valore complessivo delle credenziali di: aiuto regista, direttore della fotografia, interpreti, compositore delle musiche, montatore, costumista, scenografo, autore delle grafiche, sound designer.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Servono le note d’intenti sottoscritte dalle figure elencate (art. 10 c. 6). In questa griglia la scala parte da «molto buona» (8): non esiste il grado «ottima».",
+              "valori": [
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_artistico",
+                "cv_tecnico",
+                "accordi_cast"
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Capacità di sviluppare collaborazioni a livello internazionale",
+          "max": 5,
+          "obiettivo": "Criterio E della griglia.",
+          "criteri": [
+            {
+              "id": "e.1",
+              "nome": "Coproduzione internazionale",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Coproduzione internazionale (coproduttore con quota non inferiore al 10% del costo della copia campione) da valutarsi sulla base del contratto, o altro accordo di distribuzione o deal memo e del company profile dei co-produttori coinvolti.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. La scala ha quattro gradi: «buona» vale 5 punti. Documenti (art. 10 c. 6): contratto o altro accordo di coproduzione internazionale o deal memo, con l’eventuale company profile del coproduttore.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Promozione della regione nei suoi aspetti artistici e paesaggistici e valorizzazione dei prodotti tipici locali e delle eccellenze del territorio",
+          "max": 10,
+          "obiettivo": "Criterio F della griglia.",
+          "criteri": [
+            {
+              "id": "f.1",
+              "nome": "Valorizzazione del patrimonio ambientale, artistico, architettonico, archeologico ed enogastronomico",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità della produzione di rappresentare un’occasione per valorizzare il patrimonio ambientale, artistico, architettonico, archeologico ed enogastronomico. Da valutare sulla base dei contenuti della sceneggiatura, della percentuale delle riprese in location di interesse artistico o paesaggistico nonché del potenziale di diffusione a livello nazionale o internazionale. Qualora la produzione abbia conseguito un punteggio pari a 8 (molto buona), potrà essere assegnato un ulteriore punteggio pari a punti 2, nel caso di una percentuale di giornate di riprese pari ad almeno il 40% del loro complessivo sul territorio del Veneto, realizzate al di fuori del centro storico della città di Venezia.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Premio territoriale: chi ottiene 8 («molto buona») può ricevere altri 2 punti se almeno il 40% delle giornate di riprese in Veneto è girato fuori dal centro storico di Venezia; il massimo resta 10. L’allegato A1 chiede l’elenco delle location venete e la percentuale di riprese fuori dal centro storico di Venezia.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2",
+                "piano_lavorazione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "nome": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR)",
+          "max": 1,
+          "obiettivo": "Coerenza con la strategia macroregionale EUSAIR.",
+          "criteri": [
+            {
+              "id": "g.1",
+              "nome": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR)",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "In linea con la strategia indicata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coerenza con la strategia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "B",
+      "nome": "Doc, short e XR (tipologia B)",
+      "sezioni": [
+        {
+          "id": "A",
+          "nome": "Affidabilità finanziaria ed esperienza gestionale del soggetto proponente",
+          "max": 12,
+          "obiettivo": "Criterio A della griglia.",
+          "criteri": [
+            {
+              "id": "a.1",
+              "nome": "Idoneità tecnica e capacità finanziaria, economica e patrimoniale del proponente",
+              "max": 12,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Idoneità tecnica del potenziale beneficiario e capacità finanziaria economica e patrimoniale da valutare sulla base del company profile (numero e qualità delle produzioni realizzate, partecipazione a festival di rilievo nazionale e internazionale, premi ottenuti, ecc.).",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Un punteggio pari a zero in questo criterio rende la produzione non ammissibile (art. 11 c. 9). Nota: tra «ottima» (12) e «molto buona» (8) il salto è di 4 punti.",
+              "valori": [
+                {
+                  "punti": 12,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B",
+          "nome": "Spesa sul territorio",
+          "max": 10,
+          "obiettivo": "Criterio B della griglia.",
+          "criteri": [
+            {
+              "id": "b.1",
+              "nome": "Rilevanza della spesa ammissibile in Veneto",
+              "max": 4,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rilevanza della spesa ammissibile in Veneto.",
+              "principio": "La griglia indica importi puntuali («Euro 50.000,00 = punti 4» ecc.) senza dire «almeno»: qui ogni importo è letto come soglia minima della fascia. Sotto 20.000 euro la domanda non è ammissibile (anche art. 8 c. 3). Il punteggio è riverificato a saldo sulla spesa rendicontata (art. 11 c. 10).",
+              "metrica": "spesaTerritorioEuro",
+              "unita": "euro",
+              "peso": 1,
+              "fasce": [
+                {
+                  "da": 50000,
+                  "punti": 4,
+                  "etichetta": "Euro 50.000,00"
+                },
+                {
+                  "da": 40000,
+                  "punti": 3,
+                  "etichetta": "Euro 40.000,00"
+                },
+                {
+                  "da": 30000,
+                  "punti": 1,
+                  "etichetta": "Euro 30.000,00"
+                },
+                {
+                  "da": 20000,
+                  "punti": 0,
+                  "etichetta": "Euro 20.000,00"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Meno di Euro 20.000,00: domanda non ammissibile"
+                }
+              ]
+            },
+            {
+              "id": "b.2",
+              "nome": "Impiego di personale residente in Veneto previsto dall’allegato A1",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Impiego di personale residente in Veneto previsto dall’allegato A1.",
+              "principio": "Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Ruoli elencati nell’allegato A1 alla voce «Personale residente in Veneto» (allegare le note di intenti sottoscritte): aiuto regista, organizzatore, direttore di produzione, direttore della fotografia, location manager, operatore alla macchina, assistente operatore, fonico, costumista, scenografo, fotografo di scena, data manager, digital imaging technician, segretario di edizione, ispettore di produzione, capo truccatore, capo parrucchiere, capo macchinista, capo elettricista, operatore drone, montatore, compositore delle musiche, sviluppo visivo, autore della grafica, storyboard, lay-out – animatics, animation, modelling & lighting, color, composite, effetti speciali visivi, creative technologist, vfx artist. Il punteggio è riverificato a saldo (art. 11 c. 10). Il numero lo legge dai documenti la commissione simulata: il totale dei professionisti veneti dichiarato nei Dati chiave può essere più alto di quello che dà punteggio.",
+              "metrica": "professionistiTerritorio",
+              "unita": "numero",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 10,
+                  "punti": 6,
+                  "etichetta": "> 10"
+                },
+                {
+                  "da": 7,
+                  "punti": 4,
+                  "etichetta": "da 7 a 10"
+                },
+                {
+                  "da": 4,
+                  "punti": 3,
+                  "etichetta": "da 4 a 6"
+                },
+                {
+                  "da": 1,
+                  "punti": 1,
+                  "etichetta": "da 1 a 3"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "non presente"
+                }
+              ],
+              "richiede": [
+                "accordi_cast"
+              ],
+              "giudizio": true
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "nome": "Sostenibilità finanziaria e solidità produttiva",
+          "max": 12,
+          "obiettivo": "Criterio C della griglia.",
+          "criteri": [
+            {
+              "id": "c.1",
+              "nome": "Potenziale di diffusione e fruizione dell’opera",
+              "max": 8,
+              "tipo": "discreto",
+              "famiglia": "distribuzione",
+              "descrizione": "Potenziale di diffusione e fruizione dell’opera a livello nazionale o internazionale nelle sale cinematografiche, nelle emittenti televisive (anche VoD o SVoD) da valutarsi sulla base del contratto, o altro accordo di distribuzione o deal memo e dei company profile delle società di distribuzione e/o del broadcaster.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. In questa griglia la scala parte da «molto buona» (8): non esiste il grado «ottima».",
+              "valori": [
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "c.2",
+              "nome": "Sostenibilità finanziaria della proposta produttiva",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Sostenibilità finanziaria della proposta produttiva da valutarsi in ragione della percentuale di risorse finanziarie disponibili rispetto alla spesa richiesta a sostegno.",
+              "principio": "Contano solo i finanziamenti comprovati da documentazione ufficiale sottoscritta (art. 10 c. 6): provvedimenti di concessione di enti pubblici, accordi datati e firmati con coproduttori, terzi finanziatori, broadcaster e distributori con la quota di copertura, referenze bancarie sul modello A6 per l’apporto societario diretto, idoneità (o richiesta di idoneità provvisoria) al tax credit della DG Cinema – MiC, contratti registrati con imprese esterne al settore. Il bando non dice se tra le risorse si conta anche il contributo richiesto.",
+              "calcolo": "Risorse finanziarie disponibili e documentate ÷ spesa richiesta a sostegno: 50% = punti 4; 30% = punti 2; 25% = punti 0; < 25% o assenza di documentazione a supporto della valutazione = punti 0.",
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie",
+                "coproduzione",
+                "distribuzione",
+                "finanziatori_esterni",
+                "produttore_esecutivo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "nome": "Qualità, originalità e innovatività",
+          "max": 40,
+          "obiettivo": "Criterio D della griglia.",
+          "criteri": [
+            {
+              "id": "d.1",
+              "nome": "Originalità della proposta produttiva e qualità della sceneggiatura",
+              "max": 20,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della proposta produttiva e qualità della sceneggiatura. Presupposto, forza e carattere distintivo dell’idea, potenziale drammatico del progetto.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Per i documentari si valutano sinossi, trattamento e dossier di ricerca; per le opere XR soggetto/sviluppo e trattamento visivo e tecnologico (art. 10 c. 6).",
+              "valori": [
+                {
+                  "punti": 20,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 16,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 12,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "d.2",
+              "nome": "Credenziali del regista o del XR creator sul piano nazionale o internazionale",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali del regista o del XR creator sul piano nazionale o internazionale.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Serve la nota d’intenti sottoscritta dal regista (art. 10 c. 6). Il punteggio è riverificato a saldo (art. 11 c. 10).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ],
+              "richiede": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "d.3",
+              "nome": "Credenziali del personale tecnico e artistico",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Valore complessivo delle credenziali di: aiuto regista, direttore della fotografia, interpreti, compositore delle musiche, montatore, costumista, scenografo, autore delle grafiche, sound designer.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Asterisco della griglia (art. 11 c. 6): «Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1». Servono le note d’intenti sottoscritte dalle figure elencate (art. 10 c. 6).",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_artistico",
+                "cv_tecnico",
+                "accordi_cast"
+              ],
+              "richiede": [
+                "accordi_cast"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "nome": "Capacità di sviluppare collaborazioni a livello internazionale",
+          "max": 5,
+          "obiettivo": "Criterio E della griglia.",
+          "criteri": [
+            {
+              "id": "e.1",
+              "nome": "Produzione o coproduzione internazionale",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Produzione o coproduzione internazionale (coproduttore con quota non inferiore al 10% del costo della copia campione) da valutarsi sulla base del contratto, o altro accordo di distribuzione o deal memo e del company profile di co-produttori coinvolti.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. La scala ha quattro gradi: «buona» vale 5 punti. Documenti (art. 10 c. 6): contratto o altro accordo di coproduzione internazionale o deal memo, con l’eventuale company profile del coproduttore.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "coproduzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "nome": "Promozione della regione nei suoi aspetti artistici e paesaggistici e valorizzazione dei prodotti tipici locali e delle eccellenze del territorio",
+          "max": 10,
+          "obiettivo": "Criterio F della griglia.",
+          "criteri": [
+            {
+              "id": "f.1",
+              "nome": "Valorizzazione del patrimonio ambientale, artistico, architettonico, archeologico ed enogastronomico",
+              "max": 10,
+              "tipo": "discreto",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità della produzione di rappresentare un’occasione per valorizzare il patrimonio ambientale, artistico, architettonico, archeologico ed enogastronomico. Da valutare sulla base dei contenuti della sceneggiatura, della percentuale delle riprese in location di interesse artistico o paesaggistico nonché del potenziale di diffusione a livello nazionale o internazionale. Qualora la produzione abbia conseguito un punteggio pari a 8 (molto buona), potrà essere assegnato un ulteriore punteggio pari a punti 2, nel caso di una percentuale di riprese pari ad almeno il 40% del loro complessivo sul territorio del Veneto, realizzate al di fuori del centro storico della città di Venezia.",
+              "principio": "Giudizio della Commissione per gradi fissi, senza valori intermedi. Premio territoriale: chi ottiene 8 («molto buona») può ricevere altri 2 punti se almeno il 40% delle riprese in Veneto è girato fuori dal centro storico di Venezia; il massimo resta 10. L’allegato A1 chiede l’elenco delle location venete e la percentuale di riprese fuori dal centro storico di Venezia.",
+              "valori": [
+                {
+                  "punti": 10,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 8,
+                  "etichetta": "molto buona"
+                },
+                {
+                  "punti": 6,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2",
+                "piano_lavorazione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "nome": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR)",
+          "max": 1,
+          "obiettivo": "Coerenza con la strategia macroregionale EUSAIR.",
+          "criteri": [
+            {
+              "id": "g.1",
+              "nome": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR)",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "In linea con la strategia indicata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna coerenza con la strategia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda di sostegno generata da Fondi.RVE, in PDF firmato digitalmente dal legale rappresentante",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ],
+      "unico": true
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Scheda progetto (allegato A1)",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ],
+      "unico": true
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Lungometraggi, serialità e animazione: soggetto e sceneggiatura (o sceneggiatura della puntata pilota). Documentari: sinossi, trattamento, dossier di ricerca e link dell’eventuale teaser. Cortometraggi: soggetto e sceneggiatura. XR: soggetto/sviluppo, trattamento visivo e tecnologico",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Polizza catastrofale (L. 213/2023, art. 1 commi 101-111) oppure dichiarazione motivata di esenzione sul modello A9",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imposta di bollo da 16,00 euro: estremi della marca in Fondi.RVE oppure F24 quietanzato",
+      "obbligo": "sempre",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Company profile della società richiedente (deve dare evidenza anche dei requisiti di produttore indipendente e di produttore unico, coproduttore o produttore esecutivo)",
+      "obbligo": "punteggio",
+      "criteri": [
+        "a.1"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "accordi_cast",
+      "nome": "Note di intenti sottoscritte dal personale residente in Veneto indicato nell’allegato A1",
+      "obbligo": "punteggio",
+      "criteri": [
+        "b.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratto, altro accordo di distribuzione o deal memo, con il company profile delle società di distribuzione e/o del broadcaster",
+      "obbligo": "punteggio",
+      "criteri": [
+        "c.1",
+        "c.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Documentazione sulla sostenibilità finanziaria: provvedimenti di concessione di contributi di enti sovranazionali, nazionali o regionali; idoneità o richiesta di idoneità provvisoria al tax credit della DG Cinema – MiC",
+      "obbligo": "punteggio",
+      "criteri": [
+        "c.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "Nota di referenze bancarie sul modello A6, se il piano finanziario prevede un apporto societario diretto del richiedente",
+      "obbligo": "punteggio",
+      "criteri": [
+        "c.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "finanziatori_esterni",
+      "nome": "Contratti registrati all’Agenzia delle Entrate sottoscritti con imprese esterne al settore",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "c.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Contratto, altro accordo di coproduzione nazionale o internazionale o deal memo, con l’eventuale company profile del coproduttore",
+      "obbligo": "punteggio",
+      "criteri": [
+        "c.2",
+        "e.1"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "produttore_esecutivo",
+      "nome": "Contratto di produzione esecutiva",
+      "obbligo": "se_dichiarato",
+      "criteri": [
+        "c.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Nota d’intenti sottoscritta dal regista",
+      "obbligo": "punteggio",
+      "criteri": [
+        "d.2"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Note d’intenti sottoscritte da aiuto regista, direttore della fotografia, interpreti, compositore delle musiche, montatore, costumista, scenografo, autore delle grafiche, sound designer",
+      "obbligo": "punteggio",
+      "criteri": [
+        "d.3"
+      ],
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Dichiarazione d’impegno a ottenere una certificazione ambientale, Green Film o altra (allegato A5): serve per il contributo maggiorato",
+      "obbligo": "se_dichiarato",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imprese senza obbligo di deposito del bilancio: ultime due dichiarazioni dei redditi e dichiarazioni IVA; imprese neocostituite: situazione economica e patrimoniale di periodo",
+      "obbligo": "se_dichiarato",
+      "formati": [
+        "pdf"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imprese con sede legale in altro Stato UE: documentazione equivalente alla visura camerale, con traduzione certificata o giurata",
+      "obbligo": "se_dichiarato",
+      "formati": [
+        "pdf"
+      ]
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "pmi",
+      "testo": "Micro, piccola o media impresa (Allegato I Reg. UE 651/2014); esclusi persone fisiche, fondazioni, istituti, università, associazioni, liberi professionisti e lavoratori autonomi"
+    },
+    {
+      "id": "registro",
+      "testo": "Impresa regolarmente costituita, iscritta e attiva nel Registro delle Imprese (o registro equivalente di un altro Stato UE)"
+    },
+    {
+      "id": "ateco",
+      "testo": "Codice ATECO 2025 J 59.11, primario o secondario (o NACE J 59.11), verificato solo sulla visura camerale"
+    },
+    {
+      "id": "sede",
+      "testo": "Sede legale o unità operativa in Italia o in un altro Stato membro UE (se manca l’unità operativa, va aperta e comunicata ad AVEPA entro la prima domanda di pagamento)"
+    },
+    {
+      "id": "indipendente",
+      "testo": "Produttore indipendente: non controllato da o collegato a emittenti e, su tre anni, non destina almeno il 90% della produzione a una sola emittente"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico o coproduttore dell’opera, oppure titolare di un contratto di produzione esecutiva con la società di produzione"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà (art. 2 punto 18 Reg. UE 651/2014)"
+    },
+    {
+      "id": "procedure",
+      "testo": "Nessun fallimento, liquidazione (anche volontaria), concordato o procedura equivalente in corso"
+    },
+    {
+      "id": "regolarita",
+      "testo": "Regolarità contributiva, previdenziale e assistenziale (INPS, INAIL, casse professionali), al più tardi entro 45 giorni dalla chiusura dell’apertura"
+    },
+    {
+      "id": "antimafia",
+      "testo": "Posizione regolare rispetto alla normativa antimafia, se il contributo concedibile supera 150.000 euro"
+    },
+    {
+      "id": "polizza",
+      "testo": "Polizza contro i danni da calamità naturali ed eventi catastrofali (L. 213/2023), se l’impresa vi è tenuta"
+    },
+    {
+      "id": "avvio",
+      "testo": "Lavori in Veneto non ancora avviati: nessun contratto con le figure chiave (segretaria di edizione, operatore/assistente operatore, fonico, capo truccatore, capo parrucchiere, capo elettricista, capo macchinista) né per noleggi e servizi prima della domanda"
+    },
+    {
+      "id": "non_completato",
+      "testo": "Progetto non materialmente completato o pienamente attuato prima della domanda"
+    },
+    {
+      "id": "spesa_minima",
+      "testo": "Spesa ammissibile in Veneto di almeno 150.000 euro (tipologia A) o 20.000 euro (tipologia B)"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda per tipologia di intervento in questa apertura; in coproduzione una sola domanda per progetto"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera non è un format televisivo (reality, talent show, factual entertainment) e non fa apologia di reato, non incita alla violenza o all’odio razziale, non è pornografica e non lede l’immagine della Regione del Veneto"
+    },
+    {
+      "id": "cumulo",
+      "testo": "Nessun cumulo con agevolazioni PNRR; cumulo con altri aiuti entro il 50% (60% produzioni transfrontaliere, 100% film difficili e coproduzioni con Paesi DAC)"
+    },
+    {
+      "id": "firma",
+      "testo": "Domanda firmata digitalmente dal legale rappresentante e presentata su Fondi.RVE entro le ore 17:00 dell’ultimo giorno dell’apertura"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "stabilita",
+      "etichetta": "Mantenimento dei requisiti di iscrizione, codice ATECO e sede dopo il saldo",
+      "mesi": 36,
+      "decorrenza": "erogazione del saldo",
+      "nota": "Art. 4 c. 1 lett. b), c), d) e art. 13 c. 1 lett. i): per i 3 anni successivi al pagamento del saldo. Documentazione da conservare per 10 anni (art. 13 c. 1 lett. d)."
+    }
+  ],
+  "scadenzeNote": [
+    "La graduatoria è approvata da AVEPA entro 120 giorni dalla chiusura di ciascuna apertura e pubblicata sul BUR (art. 12 c. 1-2).",
+    "Prima dell’inizio delle riprese vanno comunicate ad AVEPA e alla Fondazione Veneto Film Commission la data di inizio e la location; alla Film Commission vanno trasmessi piano di lavorazione, ordini del giorno e lista definitiva delle location (art. 13 c. 2 lett. c-d).",
+    "L’istruttoria della domanda di pagamento, liquidazione compresa, si chiude entro 80 giorni dalla presentazione (art. 16 c. 18).",
+    "Domanda di anticipo (facoltativa): Art. 15 e art. 16 c. 3: dal 30° giorno ed entro 120 giorni dalla pubblicazione sul BUR del decreto di finanziabilità. Anticipo pari al 40% del sostegno concesso, con fideiussione sul 100% dell’importo anticipato.",
+    "Conclusione del progetto: attività realizzate, spese sostenute e pagate: Art. 15: data di calendario fissa, non un numero di mesi dalla concessione. Prima apertura entro il 28 marzo 2028, seconda apertura entro il 31 ottobre 2028. Oltre il termine: decadenza totale (art. 18 c. 3 lett. a).",
+    "Domanda di saldo con rendicontazione, link di visione dell’opera e materiali di comunicazione: Art. 15 e art. 16 c. 3: dal 120° giorno dalla pubblicazione sul BUR del decreto di finanziabilità ed entro le ore 17:00 del 28 marzo 2028 (prima apertura) o del 31 ottobre 2028 (seconda apertura). L’art. 14 c. 1 indica invece il 31 marzo 2028 per la prima apertura. In ritardo: riduzione dell’1% al giorno fino a 20 giorni, poi decadenza totale.",
+    "Consegna alla Regione di tre copie dell’opera su supporto digitale: Art. 13 c. 2 lett. l): entro i termini della domanda di saldo, alla Direzione Beni, Attività Culturali e Sport.",
+    "Comunicazione ad AVEPA di variazioni societarie, rinuncia o procedure concorsuali: Art. 13 c. 1 lett. b) e c): via PEC a protocollo@cert.avepa.it entro 30 giorni."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Facoltativo. Pari al 40% del sostegno concesso, con garanzia fideiussoria di banca, assicurazione o Confidi a copertura del 100% dell’importo anticipato, sullo schema AVEPA; domanda dal 30° giorno ed entro 120 giorni dalla pubblicazione sul BUR del decreto di finanziabilità (art. 16 c. 3)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "percentualeDerivata": true,
+      "condizione": "Obbligatorio. Il bando non indica una percentuale: il saldo è la parte restante del sostegno (60% se è stato chiesto l’anticipo, altrimenti l’intero contributo), rideterminata sulle spese ammissibili effettivamente sostenute, pagate e riconosciute. Servono relazione finale (allegato A8), fatture e quietanze, piano di produzione e delle lavorazioni in Veneto, elenco troupe e cast definitivo, elenco delle location venete, copia della certificazione ambientale se dichiarata…"
+    }
+  ],
+  "note": [
+    "Punteggio massimo 90 (non 100). Entrano in graduatoria solo i progetti con almeno 40 punti; è escluso chi ottiene zero nel criterio a.1 oppure nella somma d.1 + d.2 + d.3.",
+    "Il contributo si calcola sulla spesa ammissibile sostenuta in Veneto, non sul costo di produzione: tipologia A 49% fino a 245.000 euro (lungometraggi) o 343.000 euro (serialità); tipologia B 59% fino a 35.400 euro.",
+    "Con la dichiarazione d’impegno a una certificazione ambientale (allegato A5, Green Film o altra) le percentuali salgono al 50% (A, fino a 250.000 o 350.000 euro) e al 60% (B, fino a 36.000 euro); la certificazione va prodotta al saldo, altrimenti il contributo si riduce.",
+    "Spesa minima ammissibile in Veneto, a pena di inammissibilità e di decadenza a consuntivo: 150.000 euro (tipologia A), 20.000 euro (tipologia B).",
+    "Si finanzia in ordine di graduatoria fino a esaurimento delle risorse dell’apertura; l’ultimo progetto utile riceve solo la quota residua ma deve realizzare il progetto per intero. A parità di punti prevale il punteggio a.1, poi la spesa ammissibile in Veneto più alta.",
+    "Spese ammissibili (art. 6): a) personale dipendente residente in Veneto a costi standard; b) professionisti e imprese del settore residenti o con sede operativa in Veneto; c) servizi esterni e noleggi da soggetti veneti; d) affitto di teatri e location; e) ricettività, entro il 30% di a+b+c+d; f) costi indiretti forfettari al 7% di a-e. Per a) e b) le attività fuori Veneto valgono fino al 50% del totale a+b.",
+    "Non ammissibili, tra le altre: spese precedenti alla domanda, personale veneto contrattualizzato prima della domanda, compenso del produttore (producer’s fee), spese generali, ristorazione, carburante e viaggi, acquisto di costumi, materiale di scena e attrezzature, assicurazioni, fatture sotto 200 euro di imponibile, pagamenti in contanti.",
+    "A saldo la Commissione riverifica i punteggi b.1 (spesa in Veneto), b.2 (personale residente) e d.2 (regista): se il totale scende sotto 40 o sotto il punteggio dell’ultimo progetto finanziato, il contributo decade per intero.",
+    "A consuntivo: spesa riconosciuta sotto il 50% di quella ammessa (o sotto i minimi) comporta la decadenza totale; tra il 60% e il 70% riduzione del 2%, tra il 50% e il 60% riduzione del 5%. Compensazioni tra categorie di spesa entro il 20% del costo dell’operazione.",
+    "Cumulo (art. 9): con altri aiuti entro il 50% (60% produzioni transfrontaliere, 100% film difficili); il tax credit è cumulabile entro questi limiti; nessun cumulo con il PNRR.",
+    "Obblighi di comunicazione (art. 13 c. 2): nei titoli di testa e di coda e su tutti i materiali il logo a barra della Regione del Veneto, la dicitura «con il contributo di» con il logo PR FESR del Veneto 2021-2027 e l’indicazione dell’Azione 1.3.11 Sub C, e la dicitura «con il sostegno di» con il logo della Fondazione Veneto Film Commission; anteprima dei titoli ad AVEPA e Regione prima della copia definitiva. Riduzioni: 1% o 3% per gli obblighi di informazione e pubblicità non rispettati, 2% per la mancata comunicazione dell’avvio delle riprese o per i loghi mancanti nei titoli (art. 18 c. 4).",
+    "I documenti che danno punteggio (company profile, note di intenti firmate, accordi di distribuzione e coproduzione, prove dei finanziamenti) non sono obbligatori, ma senza di essi il punteggio del criterio non viene attribuito: senza company profile il criterio a.1 vale zero e la domanda è esclusa."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Fondazione Veneto Film Commission — Fondo di Sviluppo 2026",
+      "url": "https://venetofilmcommission.com/it/fondo/fondo-di-sviluppo-2026/",
+      "descrizione": "Atto distinto, per lo sviluppo e non per la produzione: 100.000 euro per imprese con sede legale o operativa in Veneto; contributo a fondo perduto fino al 50% delle spese di sviluppo, da 10.000 a 20.000 euro per progetto; domande via PEC dal 1° settembre alle 17:00 del 13 ottobre 2026 (comunicato della Regione n. 1505 del 31 agosto 2026). Bando non letto."
+    },
+    {
+      "nome": "Fondazione Veneto Film Commission — Fondo Location Scouting",
+      "url": "https://venetofilmcommission.com/it/fondo-location-scouting/",
+      "descrizione": "Voce presente nel menù «Fondi» del sito della Film Commission; pagina e regolamento non consultati."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "Decreto AVEPA n. 378 del 28 ottobre 2026 — bando 2026 (DGR 285/2026), prima apertura: graduatoria delle domande ammissibili ed elenco delle non ammissibili",
+      "url": "https://www.avepa.it/amministrazione-trasparente/sovvenzioni-contributi-sussidi-vantaggi-economici/atti-di-concessione/2026/decreto-n-378-del-28-ottobre-2026.pdf/@@download/file",
+      "urlCopiaConsultata": "https://venetofilmcommission.com/wp-content/uploads/2026/11/Decreto-n.-378-del-28-ottobre-2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false,
+      "stessaGriglia": true,
+      "statistiche": {
+        "A": {
+          "domandePresentate": 23,
+          "nonAmmissibili": 6,
+          "rinunce": 1,
+          "inGraduatoria": 16,
+          "finanziate": 7,
+          "ultimoFinanziato": 55,
+          "punteggi": [
+            74,
+            69,
+            61,
+            59,
+            59,
+            57,
+            55,
+            55,
+            54,
+            53,
+            53,
+            48,
+            45,
+            45,
+            40,
+            40
+          ],
+          "contributiConcessi": 1650000
+        },
+        "B": {
+          "domandePresentate": 28,
+          "nonAmmissibili": 6,
+          "rinunce": 0,
+          "inGraduatoria": 22,
+          "finanziate": 6,
+          "ultimoFinanziato": 53,
+          "punteggi": [
+            62,
+            57,
+            54,
+            54,
+            54,
+            53,
+            52,
+            52,
+            51,
+            51,
+            51,
+            49,
+            49,
+            47,
+            47,
+            46,
+            44,
+            41,
+            41,
+            40,
+            40,
+            40
+          ],
+          "contributiConcessi": 190000
+        }
+      },
+      "nota": "Solo punteggi totali. In entrambe le tipologie l’ultima domanda finanziata lo è solo in parte, per esaurimento delle risorse."
+    },
+    {
+      "anno": 2025,
+      "titolo": "Decreto AVEPA n. 83 del 18 marzo 2026 — bando 2025 (DGR 296/2025), secondo sportello",
+      "url": "https://www.culturaveneto.it/uploads/attachments/cmn5ycnm803w55f744sgad51s-decreto-n-83-del-18-marzo-2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false,
+      "stessaGriglia": null,
+      "statistiche": {
+        "A": {
+          "inGraduatoria": 16,
+          "finanziate": 8,
+          "ultimoFinanziato": 50,
+          "punteggi": [
+            59,
+            53,
+            52,
+            52,
+            51,
+            51,
+            50,
+            50,
+            50,
+            49,
+            46,
+            45,
+            43,
+            43,
+            41,
+            40
+          ]
+        },
+        "B": {
+          "inGraduatoria": 15,
+          "finanziate": 6,
+          "ultimoFinanziato": 47,
+          "punteggi": [
+            55,
+            52,
+            50,
+            49,
+            49,
+            47,
+            46,
+            45,
+            44,
+            44,
+            44,
+            43,
+            41,
+            41,
+            40
+          ]
+        }
+      },
+      "nota": "Edizione precedente: la griglia del bando 2025 non è stata trascritta né confrontata con quella del 2026 (anche lì il minimo era 40 punti)."
+    },
+    {
+      "anno": 2025,
+      "titolo": "Decreto AVEPA n. 617 del 6 novembre 2025 — bando 2025 (DGR 296/2025), primo sportello",
+      "url": "https://www.culturaveneto.it/uploads/attachments/cmn64vqgl0cmv3l735mgrbv5k-decreto-n-617-del-6-novembre-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false,
+      "stessaGriglia": null,
+      "statistiche": {
+        "A": {
+          "inGraduatoria": 13,
+          "finanziate": 10,
+          "ultimoFinanziato": 45,
+          "punteggi": [
+            63,
+            62,
+            57,
+            50,
+            50,
+            49,
+            49,
+            49,
+            47,
+            45,
+            43,
+            41,
+            41
+          ]
+        },
+        "B": {
+          "inGraduatoria": 13,
+          "finanziate": 6,
+          "ultimoFinanziato": 53,
+          "punteggi": [
+            63,
+            56,
+            56,
+            55,
+            55,
+            53,
+            52,
+            50,
+            49,
+            48,
+            46,
+            45,
+            43
+          ]
+        }
+      },
+      "nota": "Edizione precedente: la griglia del bando 2025 non è stata trascritta né confrontata con quella del 2026."
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Allegato A alla DGR 285/2026, art. 11 c. 6 — griglia «Lungometraggi di finzione, serialità e animazione» (pagg. 18-19)",
+        "testo": "Lungometraggi di finzione, serialità e animazione — Punt. Massimo 90. Criterio A – Affidabilità finanziaria ed esperienza gestionale del soggetto proponente. 12 […] Criterio B – Spesa sul territorio. 10 […] Criterio C – Sostenibilità finanziaria e solidità produttiva. 14 […] Criterio D – Qualità, originalità e innovatività. 38 […] Criterio E - Capacità di sviluppare collaborazioni a livello internazionale. 5 […] Criterio F - Promozione della regione nei suoi aspetti artistici e paesaggistici […] 10 […] Criterio G - Sinergia con azioni interregionali, transfrontaliere, transnazionali (EUSAIR) 1"
+      },
+      {
+        "riferimento": "Art. 11 c. 6, griglia A, criteri a.1 e b.1 (pag. 18)",
+        "testo": "a.1 […] ottima = punti 12 molto buona = punti 8 buona = punti 6 discreta = punti 4 sufficiente = punti 2 insufficiente = punti 0 […] b.1 Rilevanza della spesa ammissibile in Veneto. Euro 1.200.000,00 = punti 6 Euro 1.000.000,00 = punti 5 Euro 800.000,00 = punti 4 Euro 500.000,00 = punti 3 Euro 300.000,00 = punti 2 Euro 200.000,00 = punti 1 Euro 150.000,00 = punti 0 < Euro 150.000,00 domanda non ammissibile […] b.2 Impiego di personale residente in Veneto previsto dall’allegato A1 * > 5 = punti 4 da 1 a 5 = punti 2 non presente = punti 0"
+      },
+      {
+        "riferimento": "Art. 11 c. 6, griglia A, criteri c.2, d.1, d.3 ed e.1 (pagg. 18-19)",
+        "testo": "c.2 […] 60% = punti 4 55% = punti 2 50% = punti 1 < 50% o assenza di documentazione a supporto della valutazione = punti 0 […] d.1 […] ottima = punti 20 molto buona = punti 16 buona = punti 12 discreta = punti 8 sufficiente = punti 4 insufficiente = punti 0 […] d.3 […] molto buona = punti 8 buona = punti 6 discreta = punti 4 sufficiente = punti 2 insufficiente = punti 0 […] e.1 […] buona = punti 5 discreta = punti 4 sufficiente = punti 2 insufficiente = punti 0"
+      },
+      {
+        "riferimento": "Art. 11 c. 6 — griglia «Doc, short e XR» (pagg. 19-21)",
+        "testo": "Doc, short e XR — Punt. massimo 90. Criterio A […] 12 […] Criterio B - Spesa sul territorio. 10 […] b.1 […] Euro 50.000,00 = punti 4 Euro 40.000,00 = punti 3 Euro 30.000,00 = punti 1 Euro 20.000,00 = punti 0 < Euro 20.000,00 domanda non ammissibile […] b.2 […] >10 = punti 6 da 7 a 10 = punti 4 da 4 a 6 = punti 3 da 1 a 3 = punti 1 non presente = punti 0 […] Criterio C […] 12 […] c.2 […] 50% = punti 4 30% = punti 2 25% = punti 0 […] Criterio D […] 40 […] Criterio E […] 5 […] Criterio F […] 10 […] Criterio G […] 1"
+      },
+      {
+        "riferimento": "Art. 11 c. 6 — rating di legalità e nota con asterisco (pag. 19)",
+        "testo": "Conseguimento da parte dell’impresa proponente del “rating di legalità” 0 - Il soggetto proponente ha conseguito il “rating di legalità”: punti 0 - Il soggetto proponente non ha i requisiti per richiedere il “rating di legalità”: punti 0 - Il soggetto proponente, pur avendo i requisiti, non ha conseguito il “rating di legalità”: punti -1 * Il punteggio verrà attribuito solo se la proposta produttiva è completa delle note di intenti sottoscritte dal personale tecnico e artistico specificato nel modello di proposta progettuale allegato A1"
+      },
+      {
+        "riferimento": "Art. 11 c. 8 e c. 9 — soglie (pagg. 21-22)",
+        "testo": "8. Sono valutabili ammissibili alla graduatoria utile alla concessione del sostegno i progetti che ottengano un punteggio minimo complessivo di 40 punti. 9. Non sono considerate ammissibili le produzioni a cui verrà attribuito un punteggio pari a zero in relazione al criterio a.1 “affidabilità finanziaria”o in relazione alla somma dei criteri del gruppo D \"qualità, originalità e innovatività” (d.1 + d.2 + d.3)."
+      },
+      {
+        "riferimento": "Art. 8 c. 2 — percentuali e massimali (pag. 11)",
+        "testo": "in ragione di una percentuale del 49% della spesa ammessa a contributo nel caso di interventi afferenti alla tipologia A: - entro il limite di Euro 245.000,00 nel caso di lungometraggi di finzione o di animazione; - entro il limite di Euro 343.000,00 nel caso di serialità (finzione, documentaria, docufiction, animazione); in ragione di una percentuale del 59% della spesa ammessa a contributo, entro il limite massimo di Euro 35.400,00 nel caso di interventi afferenti alla tipologia B “doc, short e XR”"
+      },
+      {
+        "riferimento": "Art. 8 c. 3 e c. 4 — spesa minima e maggiorazione con certificazione ambientale (pag. 12)",
+        "testo": "una spesa minima ammissibile sul territorio della regione Veneto: di Euro 150.000,00 nel caso di interventi afferenti alla tipologia A […] di Euro 20.000,00 nel caso interventi afferenti alla tipologia B “doc, short e XR”. […] interventi tipologia A • contributo = 50% della spesa ammissibile; - lungometraggi di finzione o di animazione - contributo massimo Euro 250.000,00; - serialità (finzione, documentaria, docufiction, animazione) - contributo massimo Euro 350.000,00; interventi tipologia B • contributo = 60% della spesa ammissibile - contributo massimo Euro 36.000,00"
+      },
+      {
+        "riferimento": "Art. 10 c. 3 — aperture (pag. 13)",
+        "testo": "Prima apertura dalle ore 10.00 del 12 maggio 2026 Alle ore 17.00 del 30 giugno 2026 Seconda apertura dalle ore 10.00 del 1 dicembre 2026 Alle ore 17.00 del 2 febbraio 2027"
+      },
+      {
+        "riferimento": "Art. 11 c. 1 e c. 3 — procedura e Commissione (pag. 17)",
+        "testo": "Le agevolazioni di cui al presente bando sono concesse sulla base di procedura valutativa con procedimento a graduatoria. […] È prevista una Commissione Tecnica di Valutazione (di seguito “CTV”) composta da un componente interno della Regione del Veneto indicato dalla Direzione Beni Attività Culturali e Sport, con il ruolo di presidente, da due componenti esperti in materia di produzione cinematografica e audiovisiva indicati dalla Fondazione Veneto Film Commission."
+      },
+      {
+        "riferimento": "Art. 2 c. 1 — dotazione (pag. 3)",
+        "testo": "La dotazione finanziaria complessiva del presente bando è pari ad Euro 3.680.000,00 - (tremilioni seicentottantamila,00) di cui Euro 3.300.000,00 (tremilionitrecentomila,00) per opere afferenti alla categoria “lungometraggi di finzione o animazione”, serialità (finzione, documentaria, docufiction, animazione)”; Euro 380.000,00 (trecentottantamila,00) per opere afferenti alla categoria “doc, short e XR (Realtà Estesa): VR (Virtual reality), AR (Augmented Reality), MR (Mixed Reality)”."
+      }
+    ],
+    "dubbi": [
+      "Criteri b.1 e c.2: la griglia scrive valori puntuali («Euro 1.200.000,00 = punti 6», «60% = punti 4») senza «almeno» o «da… a…». Li ho codificati come soglie minime di fascia (da quel valore in su): interpretazione ragionevole ma non scritta nel bando.",
+      "Criterio c.2: si misura sulle risorse finanziarie disponibili rispetto alla spesa richiesta a sostegno, non sul costo di produzione: lo valuta la commissione simulata applicando le soglie del bando. Il bando non dice se tra le risorse si conta anche il contributo richiesto.",
+      "Soglie di sezione: il bando non ha minimi di sezione, ma esclude chi ha zero in a.1 o nella somma d.1+d.2+d.3 (art. 11 c. 9). La regola è resa come minimo di 2 punti nelle sezioni A e D, il primo grado diverso da zero delle scale del bando.",
+      "Rating di legalità: la penalità di −1 si applica se l’impresa, pur avendo i requisiti, non ha conseguito il rating.",
+      "Criterio f.1: il premio di 2 punti scatta solo se il giudizio è 8 («molto buona») e almeno il 40% delle riprese in Veneto è fuori dal centro storico di Venezia; è facoltativo («potrà essere assegnato») e va gestito a parte.",
+      "I criteri di giudizio usano gradi fissi (per esempio 12-8-6-4-2-0 per a.1) e la simulazione ammette solo quelli. Alcune scale non hanno «ottima» (d.3 della griglia A, c.1 della griglia B) e in e.1 il grado più alto è «buona» = 5.",
+      "Il bando non dice come i tre commissari arrivano al punteggio (media o consenso). Le graduatorie pubblicate mostrano solo totali interi.",
+      "Termine della prima apertura per conclusione e saldo: l’art. 15 e l’art. 16 dicono 28 marzo 2028, l’art. 14 c. 1 dice 31 marzo 2028. Ho usato il 28 marzo. La pagina di sintesi della Veneto Film Commission riporta 31/03/2028 e, per la seconda apertura, 30/09/2029, in contrasto con il bando (31 ottobre 2028).",
+      "Scadenze: il bando usa date di calendario fisse e termini in giorni dalla pubblicazione sul BUR, non mesi dalla concessione: sono nelle note sulle scadenze.",
+      "Erogazione: il 40% dell’anticipo è nel bando; il 60% del saldo è ricavato per differenza, il bando non lo scrive.",
+      "Cortometraggi: la durata massima di 30 minuti è inclusiva e non è controllata in automatico. Per la serialità i 90 minuti sono la durata complessiva.",
+      "La dotazione indicata in ogni categoria è quella dell’intera tipologia (A o B), condivisa tra le categorie e divisa in due aperture da 1.650.000 e 190.000 euro: non va sommata.",
+      "Il testo di e.1 parla di «contratto, o altro accordo di distribuzione» per valutare la coproduzione: probabile refuso per «coproduzione», trascritto com’è.",
+      "Graduatorie 2025 (decreti AVEPA 617/2025 e 83/2026): appartengono al bando 2025, la cui griglia non è stata letta; non vanno usate per tarare la simulazione prima di aver confrontato le due griglie.",
+      "Decreto AVEPA 378/2026: nel testo estratto dal PDF la colonna dello stato (F, F*, NF) è sfasata di una riga; il numero dei progetti finanziati (7 e 6) viene dalla parte narrativa del decreto e dagli importi concessi.",
+      "Edizioni 2023, 2024 e 2025: date, dotazioni e massimali vengono dalle schede sul sito della Regione, non dai testi delle delibere, che non ho scaricato.",
+      "Bando 2027: nessun annuncio trovato. Il periodo atteso è solo una proiezione della cadenza degli anni scorsi; il programma FESR 2021-2027 è agli ultimi anni e le risorse sono scese da 6 a 3,68 milioni.",
+      "Edizione 2025: la spesa minima in Veneto (200.000 euro per la tipologia A, 20.000 per la B) indicata in una versione precedente della scheda non compare né nella pagina della Regione né nei decreti AVEPA salvati: è stata tolta dallo storico.",
+      "Il minimo di 2 punti nelle sezioni A e D equivale alla regola «punteggio pari a zero» solo finché i punteggi restano i gradi fissi del bando; con medie non intere tra commissari vale la regola letterale (escluso solo chi ha zero).",
+      "Cura della scheda (14/11/2026): il rating di legalità è una penalità di 1 punto (non più una sezione a zero punti); b.2 conta solo le figure dell’allegato A1 con nota d’intenti firmata e lo valuta la commissione simulata; g.1 (EUSAIR) è ricondotto alla cooperazione internazionale. Punteggio massimo 90, come la somma della griglia."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Storico edizioni 2025: tolta la spesa minima in Veneto (200.000 euro A / 20.000 euro B), non confermata da nessuna fonte salvata.",
+      "Fonte: aggiunto il numero del decreto che approva la modulistica (n. 13284 del 5 maggio 2026, leggibile su tutti gli allegati A1, A4, A5, A6); tolto il relativo dubbio."
+    ],
+    "dubbi": [
+      "b.1 e c.2: i valori puntuali della griglia («Euro 1.200.000,00 = punti 6», «60% = punti 4») sono letti come soglie minime di fascia; il bando non scrive «almeno».",
+      "c.2: metrica «risorse disponibili ÷ spesa richiesta a sostegno» non presente nello schema; il bando non dice se il contributo richiesto si conti tra le risorse.",
+      "Soglie A = 2 e D = 2 traducono la regola «zero in a.1 o in d.1+d.2+d.3 = esclusione» (art. 11 c. 9); non sono minimi scritti nel bando.",
+      "Rating di legalità: penalità di −1 codificata come sezione R con massimo 0.",
+      "Saldo al 60%: ricavato per differenza dall’anticipo del 40%, il bando non lo scrive.",
+      "Termine prima apertura per conclusione e saldo: 28 marzo 2028 negli artt. 15-16, 31 marzo 2028 nell’art. 14 c. 1.",
+      "Nessuna rettifica, proroga o FAQ sul bando 2026 trovata (pagina della Regione aggiornata al 6 novembre 2026, BUR consultato); nessun bando 2027 annunciato."
+    ]
+  },
+  "penalita": [
+    {
+      "id": "legalita",
+      "testo": "L’impresa ha i requisiti per richiedere il rating di legalità ma non l’ha conseguito",
+      "punti": 1
+    }
+  ]
+}

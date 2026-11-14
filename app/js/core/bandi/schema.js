@@ -41,7 +41,7 @@ export const METRICHE = {
 export const TIPI_ALLEGATO = ['modulo1', 'modulo2', 'modulo3', 'identita', 'sceneggiatura', 'cv_societa', 'cv_regista', 'cv_autori', 'cv_artistico', 'cv_tecnico',
   'accordi_cast', 'coproduzione', 'distribuzione', 'finanziamenti', 'referenze_bancarie', 'finanziatori_esterni', 'produttore_esecutivo', 'green_film', 'piano_lavorazione', 'altro'];
 export const STATI = { aperto: 'Aperto', chiuso: 'Chiuso', atteso: 'Atteso', sospeso: 'Sospeso', non_trovato: 'Non attivo' };
-export const TIPI_VALUTAZIONE = { punteggio: 'Commissione con griglia a punti', automatico: 'Automatico', sportello: 'A sportello', misto: 'Misto', nessuna: 'Nessun bando attivo' };
+export const TIPI_VALUTAZIONE = { punteggio: 'Commissione con griglia a punti', automatico: 'Automatico', sportello: 'A sportello', misto: 'Misto', selettiva: 'Selettiva senza punteggio', nessuna: 'Nessun bando attivo' };
 const OBBLIGHI = ['sempre', 'se_dichiarato', 'punteggio', 'consigliato', 'green'];
 
 /* ------------------------------------------------------------------ pulizia */

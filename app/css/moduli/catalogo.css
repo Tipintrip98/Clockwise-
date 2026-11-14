@@ -179,3 +179,6 @@ summary.cat-articolo { color: var(--ink); font-weight: 500; }
   .cat-colonna, .cat-indietro, .cat-sintesi, .sb-velo { display: none !important; }
   .catalogo { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* indirizzi PEC e URL lunghi vanno a capo invece di allargare la pagina */
+.cat-prosa, .cat-numeri .num, .panel dd, .panel td, .notice { overflow-wrap: anywhere; }

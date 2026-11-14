@@ -231,8 +231,9 @@ test('gruppi: regioni in ordine alfabetico, poi Italia, poi Europa, poi i bandi 
 test('gruppi: elenco vuoto, un solo bando, tanti bandi', () => {
   assert.deepEqual(raggruppaPerRegione([]), []);
   assert.deepEqual(raggruppaPerRegione(null), []);
-  const uno = raggruppaPerRegione(catalogo());
-  assert.equal(uno[0].titolo, 'Sicilia');
+  const uno = raggruppaPerRegione(catalogo().slice(0, 1));
+  assert.equal(uno.length, 1);
+  assert.equal(raggruppaPerRegione(catalogo()).find((g) => g.titolo === 'Sicilia')?.voci[0].id, 'sicilia-2025-2027');
   const tanti = Array.from({ length: 30 }, (_, i) => ({ id: `b${i}`, nome: `Bando ${String(i).padStart(2, '0')}`, regione: `Regione ${String.fromCharCode(65 + (i % 10))}`, simulabile: i % 3 !== 0 }));
   const g = raggruppaPerRegione(tanti);
   assert.equal(g.length, 10);

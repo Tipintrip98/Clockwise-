@@ -1,0 +1,1315 @@
+{
+  "id": "trentino-film-fund-2026",
+  "fondoId": "trentino",
+  "revisione": "2026-11-14",
+  "nome": "Trentino — Film Fund della Trentino Film Commission (Fondo per il settore cinematografico e audiovisivo, L.P. 15/2007 art. 21) — call 2026",
+  "nomeBreve": "Trentino · Film Fund 2026",
+  "ente": "Provincia autonoma di Trento, Servizio Attività e produzione culturale (approva le graduatorie) · Trentino Sviluppo S.p.A. — Area Film Commission (riceve e istruisce le domande, determina ed eroga i contributi) · Comitato tecnico-scientifico della Trentino Film Commission (valuta i progetti)",
+  "regione": "Trentino-Alto Adige (Provincia autonoma di Trento)",
+  "territorio": "Trentino (provincia di Trento)",
+  "gentilizio": "trentini",
+  "fonte": "Criteri per la ripartizione del fondo dedicato al settore cinematografico e audiovisivo (art. 21, c. 4, L.P. 15/2007): deliberazione della Giunta provinciale n. 1827 del 21 ottobre 2016, modificata con n. 268 del 27 febbraio 2020 e n. 2402 del 30 dicembre 2021 (massimale cinema e TV a 400.000 euro); testo vigente sul sito della Trentino Film Commission (versione di giugno 2023, con la piattaforma Agorà), con Allegati 1, 2 e 4",
+  "stato": "sospeso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Provincia autonoma di Trento per film, serie TV, documentari, produzioni locali e format di editori televisivi locali. Non è un bando annuale ma un regolamento permanente con tre scadenze l’anno: il Comitato tecnico-scientifico della Trentino Film Commission assegna fino a 100 punti con una griglia diversa per ogni tipologia di richiedente, sono ammessi i progetti con almeno 65 punti e il contributo concesso è la quota del contributo richiesto pari al punteggio ottenuto. Per cinema e TV 25 punti dipendono da una tabella automatica sulla spesa in Trentino rispetto al contributo e 5 punti dalla certificazione Green Film.",
+  "paginaUfficiale": "https://www.trentinofilmcommission.it/it/film-fund/",
+  "fontiUrl": [
+    {
+      "titolo": "Trentino Film Commission — Film Fund (testo dei Criteri, moduli, scadenze, determinazioni)",
+      "url": "https://www.trentinofilmcommission.it/it/film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri Film Fund — Criteri per la ripartizione del fondo dedicato al settore cinematografico e audiovisivo (PDF, 15 pagine)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2023/06/Criteri-Fondo-Audiovisivo-TFC.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri, Allegato 1 — Elenco spese ammissibili",
+      "url": "http://www.trentinofilmcommission.it/wp-content/uploads/2017/05/Allegato_1_-_Elenco_spese_ammissibili.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri, Allegato 2 — Schema ricaduta-punteggio",
+      "url": "http://www.trentinofilmcommission.it/wp-content/uploads/2017/05/Allegato_2_-_Schema_ricaduta_-_punteggio.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri, Allegato 3 — Disciplinare Green Film, edizione 3 (2024)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2024/09/Disciplinare_GreenFilm_Edizione_3_2024.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri, Allegato 4 — Tabella assegnazione punteggio Green Film",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2024/09/Allegato-4_Tabella-punteggio-Green-Film.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Criteri, Allegato 5 — Domanda di rilascio del marchio Green Film",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/02/Allegato-5-Richiesta-certificazione-Green-Film.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica per la richiesta di contributo alla produzione (zip: moduli A, B, C e informativa privacy)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/01/Modulistica-richiesta-contributo-produzione-.zip",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Istruzioni d’uso della piattaforma Agorà con SPID",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2023/06/Istruzioni_uso_AgoraSPID.pdf",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione del Dirigente n. 6554 del 19 giugno 2026 — graduatoria I call 2026",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/07/Determina-n-6554-del-19_06_2026_I-call-2026.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione del Dirigente n. 8722 del 7 agosto 2026 — graduatoria II call 2026",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/08/determina-8722-del-07.08.2026_II-call.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione del Dirigente n. 9901 del 9 settembre 2025 — graduatoria I call 2025",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/09/determina-9901-del-09.09.2025_I-call-2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione del Dirigente n. 11261 del 14 ottobre 2025 — graduatoria II call 2025",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/10/determina-11261-del-14.10.2025_II-call-2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Determinazione del Dirigente n. 13335 del 26 novembre 2025 — graduatoria III call 2025",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/12/determina-13335-del-26.11.2025_III-call-2025.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Italy for Movies — Trentino Film Fund (scheda del portale nazionale: sessioni 2026, stato «Closed»)",
+      "url": "https://www.italyformovies.com/bandi/detail/39/trentino-film-fund",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Provincia autonoma di Trento, comunicato n. 311 del 10 febbraio 2026 — «Il 2025 di Film Commission: 18 produzioni finanziate, 6 milioni spesi sul territorio»",
+      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Il-2025-di-Film-Commission-18-produzioni-finanziate-6-milioni-spesi-sul-territorio",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Provincia autonoma di Trento, comunicato n. 3781 del 30 dicembre 2021 — «Trentino Film Commission: arriva il Comitato di Programmazione» (la Giunta modifica i Criteri: massimale per le produzioni audiovisive da 200.000 a 400.000 euro)",
+      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Trentino-Film-Commission-arriva-il-Comitato-di-Programmazione",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Trentino Film Commission — Film Fund, pagina in inglese (riepilogo: massimali, spesa minima 150% e 120%, scadenze 2026)",
+      "url": "https://www.trentinofilmcommission.it/en/film-fund/",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": "2026-03-03",
+      "nota": "I call 2026: domande presentate dal 24 settembre 2025 al 3 marzo 2026; Comitato del 7 maggio 2026; graduatoria approvata con determinazione n. 6554 del 19 giugno 2026 (modificata con n. 8007 del 23 luglio 2026); importo ammissibile 219.093,60 euro."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": "2026-06-09",
+      "nota": "II call 2026: domande dal 4 marzo al 9 giugno 2026; Comitato del 21 luglio 2026; determinazione n. 8722 del 7 agosto 2026; ammissibili 720.923,68 euro contro 480.710,15 disponibili: finanziate per intero le posizioni 1-8, la 9 solo per 117.665,56 euro, le altre rinviate a nuove risorse."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": null,
+      "scadenza": "2026-09-22",
+      "nota": "III call 2026: scadenza del 22 settembre indicata sul sito; al 14 novembre 2026 la graduatoria non è pubblicata e la presentazione di nuove domande risulta sospesa (ultima modifica della pagina: 6 ottobre 2026)."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-03-20",
+      "nota": "I call 2025: domande dal 27 settembre 2024 al 20 marzo 2025; Comitato del 29 maggio 2025; determinazione n. 9901 del 9 settembre 2025; importo ammissibile 427.915,94 euro."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-06-12",
+      "nota": "II call 2025: domande dal 21 marzo al 12 giugno 2025; Comitato del 22 luglio 2025; determinazione n. 11261 del 14 ottobre 2025; importo ammissibile 495.422,87 euro."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": null,
+      "scadenza": "2025-09-23",
+      "nota": "III call 2025: domande dal 13 giugno al 23 settembre 2025; Comitato del 28 ottobre 2025; determinazione n. 13335 del 26 novembre 2025 (modificata con n. 13667 del 3 dicembre 2025); ammissibili 941.856,90 euro, finanziati 616.393,08; 325.463,82 euro rinviati alle risorse 2026."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Tre call: determinazioni n. 8611 dell’8 agosto 2024 (I call), n. 9428 del 30 agosto 2024 (II call) e n. 14513 del 20 dicembre 2024 (III call), elencate sulla pagina ufficiale; non lette in questa sessione."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": null,
+      "scadenza": null,
+      "nota": "Tre call: determinazioni n. 6867 del 23 giugno 2023, n. 8704 dell’8 agosto 2023 e n. 12976 del 29 novembre 2023, elencate sulla pagina ufficiale; non lette in questa sessione. La pagina elenca determinazioni per tutte le annualità dal 2011."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2025,
+      "dal": "2024-09-27",
+      "al": "2025-03-20",
+      "nota": "I call 2025 (periodo indicato nella determinazione n. 9901/2025)"
+    },
+    {
+      "anno": 2025,
+      "dal": "2025-03-21",
+      "al": "2025-06-12",
+      "nota": "II call 2025 (determinazione n. 11261/2025)"
+    },
+    {
+      "anno": 2025,
+      "dal": "2025-06-13",
+      "al": "2025-09-23",
+      "nota": "III call 2025 (determinazione n. 13335/2025)"
+    },
+    {
+      "anno": 2026,
+      "dal": "2025-09-24",
+      "al": "2026-03-03",
+      "nota": "I call 2026 (determinazione n. 6554/2026)"
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-03-04",
+      "al": "2026-06-09",
+      "nota": "II call 2026 (determinazione n. 8722/2026)"
+    },
+    {
+      "anno": 2026,
+      "dal": null,
+      "al": "2026-09-22",
+      "nota": "III call 2026: la scadenza del 22 settembre è scritta sul sito; la data di apertura non è scritta in nessun atto (nelle call precedenti la finestra parte dal giorno dopo la scadenza precedente: sarebbe il 10 giugno 2026). Graduatoria non ancora pubblicata."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "prima scadenza a marzo 2027, poi giugno e settembre; date non annunciate, domande al momento sospese",
+    "base": "Previsione sulla cadenza delle annualità precedenti: tre scadenze l’anno fissate dal Comitato e pubblicate sul sito (2025: 20 marzo, 12 giugno, 23 settembre; 2026: 3 marzo, 9 giugno, 22 settembre). La pagina ufficiale, modificata il 6 ottobre 2026, dice che la presentazione delle domande è sospesa, senza indicarne il motivo né la durata."
+  },
+  "sogliaTotale": 65,
+  "punteggioMassimo": 100,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": null,
+    "descrizione": "Comitato tecnico-scientifico della Trentino Film Commission, di nomina provinciale, con modalità di funzionamento definite dalla deliberazione della Giunta provinciale n. 576 del 1° aprile 2011. Si riunisce di norma ogni tre mesi, esamina le domande arrivate entro le scadenze, assegna a ogni criterio un punteggio numerico, propone la graduatoria di merito e determina l’entità dei contributi; la graduatoria è approvata con determinazione del Dirigente del Servizio Attività e produzione culturale, di norma entro 30 giorni dalla riunione. I Criteri non indicano il numero dei componenti né la regola di calcolo (media, consenso)."
+  },
+  "invio": {
+    "canale": "piattaforma Agorà (accesso con SPID) oppure PEC",
+    "indirizzo": "https://agoraspid.trentinosviluppo.it/",
+    "pec": "segreteria@pec.trentinosviluppo.it",
+    "oggetto": "",
+    "regole": [
+      "Tre modalità ammesse (art. 4.3): piattaforma digitale Agorà; PEC a segreteria@pec.trentinosviluppo.it; qualsiasi altro mezzo previsto dall’ordinamento che garantisca trasmissione e ricezione (art. 8 L.P. 23/1992).",
+      "La pagina ufficiale indirizza alla piattaforma Agorà: si accede con SPID come persona fisica e si associa il profilo all’impresa come legale rappresentante o delegato.",
+      "Destinatario: Trentino Sviluppo S.p.A., Area Film Commission, via Fortunato Zeni 8, 38068 Rovereto (TN).",
+      "Domanda sui moduli ufficiali (A domanda con marca da bollo da € 16,00, B dichiarazione di impegno, C scheda del progetto) con la documentazione dell’art. 5 per la propria tipologia.",
+      "La domanda va presentata prima dell’avvio dei lavori del progetto ed entro la scadenza fissata dal Comitato e pubblicata sul sito.",
+      "Soggetto/sceneggiatura o trattamento, presentazione del produttore e curricula, elenco troupe e cast, preventivo, piano finanziario, dichiarazione di impegno e documento di identità devono essere completi e definitivi entro la scadenza; accordi di coproduzione e distribuzione, presentazione del distributore, altra documentazione di supporto e dichiarazione Green Film si possono integrare entro i 5 giorni successivi."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "cinema-tv",
+      "nome": "Produzioni Cinematografiche e Televisive (film, serie e altre opere per sala, TV, multimedia e home video girate in provincia di Trento)",
+      "griglia": "cinetv",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 400000,
+          "2026": 400000
+        },
+        "nota": "50% è il tetto dell’art. 7.2: il contributo richiesto, sommato agli altri contributi pubblici, non può superare il 50% dei costi complessivi di produzione (100% per le opere audiovisive difficili, art. 7.4). Non è una percentuale applicata al costo: l’importo concesso è il contributo richiesto moltiplicato per il punteggio in centesimi (art. 8.6)."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "documentario",
+      "nome": "Produzioni di Documentario (opere audiovisive e/o multimediali realizzate in provincia di Trento)",
+      "griglia": "documentario",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 40000,
+          "2026": 40000
+        },
+        "nota": "50% è il tetto dell’art. 7.2: il contributo richiesto, sommato agli altri contributi pubblici, non può superare il 50% dei costi complessivi di produzione (100% per le opere audiovisive difficili, art. 7.4). Non è una percentuale applicata al costo: l’importo concesso è il contributo richiesto moltiplicato per il punteggio in centesimi (art. 8.6)."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "produzioni-locali",
+      "nome": "Produzioni Locali (professionisti e società con sede operativa in provincia di Trento, per opere realizzate in Italia e/o all’estero)",
+      "griglia": "locali",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 50000,
+          "2026": 50000
+        },
+        "nota": "50% è il tetto dell’art. 7.2: il contributo richiesto, sommato agli altri contributi pubblici, non può superare il 50% dei costi complessivi di produzione (100% per le opere audiovisive difficili, art. 7.4). Non è una percentuale applicata al costo: l’importo concesso è il contributo richiesto moltiplicato per il punteggio in centesimi (art. 8.6)."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "editori-tv-locali",
+      "nome": "Editori Televisivi Locali (fiction e format televisivi inediti di carattere non giornalistico)",
+      "griglia": "editoritv",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 50,
+        "massimali": {
+          "2025": 50000,
+          "2026": 50000
+        },
+        "nota": "50% è il tetto dell’art. 7.2: il contributo richiesto, sommato agli altri contributi pubblici, non può superare il 50% dei costi complessivi di produzione (100% per le opere audiovisive difficili, art. 7.4). Non è una percentuale applicata al costo: l’importo concesso è il contributo richiesto moltiplicato per il punteggio in centesimi (art. 8.6)."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": false,
+      "testoQualita": "trattamento"
+    }
+  ],
+  "griglie": {
+    "cinetv": {
+      "id": "cinetv",
+      "nome": "Art. 8.6.1 — Produzioni Cinematografiche e Televisive",
+      "sezioni": [
+        {
+          "id": "V",
+          "nome": "Criteri di valutazione (art. 8.6.1)",
+          "max": 100,
+          "obiettivo": "I Criteri non raggruppano i punteggi in sezioni e non prevedono minimi parziali: conta solo la soglia complessiva di 65 punti su 100.",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Contenuti del soggetto",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Contenuti del soggetto (max 10 punti).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "b",
+              "nome": "Credenziali di produzione, autore, regista, interpreti",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali produzione, autore, regista, interpreti (max 20 punti).",
+              "documenti": [
+                "cv_societa",
+                "cv_regista",
+                "cv_artistico",
+                "accordi_cast"
+              ]
+            },
+            {
+              "id": "c",
+              "nome": "Settimane di lavorazione previste e ricaduta economica diretta sul territorio provinciale",
+              "max": 25,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Numero di settimane di preparazione, riprese, post-produzione previste e ricaduta economica diretta sul territorio provinciale (vedi Allegato 2) (max 25 punti). L’Allegato 2 assegna il punteggio in base al rapporto percentuale tra la spesa sul territorio e il contributo richiesto: 1 punto dal 150% al 154,9%, poi 1 punto in più ogni 5 punti percentuali, fino a 25 punti dal 270% in su.",
+              "principio": "A rendiconto, se la spesa sul territorio provinciale è inferiore a quella preventivata (ma almeno pari al 150% del contributo concesso), TFC ricalcola il punteggio con la percentuale effettiva secondo l’Allegato 2 e ridetermina il contributo; sotto il 150% il contributo è revocato per intero; se il nuovo punteggio totale scende sotto 65 il contributo è revocato per intero (art. 10.5).",
+              "metrica": "spesaSicilia",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "da": 270,
+                  "punti": 25,
+                  "etichetta": "≥ 270% del contributo richiesto"
+                },
+                {
+                  "da": 265,
+                  "punti": 24,
+                  "etichetta": "265% – 269,9%"
+                },
+                {
+                  "da": 260,
+                  "punti": 23,
+                  "etichetta": "260% – 264,9%"
+                },
+                {
+                  "da": 255,
+                  "punti": 22,
+                  "etichetta": "255% – 259,9%"
+                },
+                {
+                  "da": 250,
+                  "punti": 21,
+                  "etichetta": "250% – 254,9%"
+                },
+                {
+                  "da": 245,
+                  "punti": 20,
+                  "etichetta": "245% – 249,9%"
+                },
+                {
+                  "da": 240,
+                  "punti": 19,
+                  "etichetta": "240% – 244,9%"
+                },
+                {
+                  "da": 235,
+                  "punti": 18,
+                  "etichetta": "235% – 239,9%"
+                },
+                {
+                  "da": 230,
+                  "punti": 17,
+                  "etichetta": "230% – 234,9%"
+                },
+                {
+                  "da": 225,
+                  "punti": 16,
+                  "etichetta": "225% – 229,9%"
+                },
+                {
+                  "da": 220,
+                  "punti": 15,
+                  "etichetta": "220% – 224,9%"
+                },
+                {
+                  "da": 215,
+                  "punti": 14,
+                  "etichetta": "215% – 219,9%"
+                },
+                {
+                  "da": 210,
+                  "punti": 13,
+                  "etichetta": "210% – 214,9%"
+                },
+                {
+                  "da": 205,
+                  "punti": 12,
+                  "etichetta": "205% – 209,9%"
+                },
+                {
+                  "da": 200,
+                  "punti": 11,
+                  "etichetta": "200% – 204,9%"
+                },
+                {
+                  "da": 195,
+                  "punti": 10,
+                  "etichetta": "195% – 199,9%"
+                },
+                {
+                  "da": 190,
+                  "punti": 9,
+                  "etichetta": "190% – 194,9%"
+                },
+                {
+                  "da": 185,
+                  "punti": 8,
+                  "etichetta": "185% – 189,9%"
+                },
+                {
+                  "da": 180,
+                  "punti": 7,
+                  "etichetta": "180% – 184,9%"
+                },
+                {
+                  "da": 175,
+                  "punti": 6,
+                  "etichetta": "175% – 179,9%"
+                },
+                {
+                  "da": 170,
+                  "punti": 5,
+                  "etichetta": "170% – 174,9%"
+                },
+                {
+                  "da": 165,
+                  "punti": 4,
+                  "etichetta": "165% – 169,9%"
+                },
+                {
+                  "da": 160,
+                  "punti": 3,
+                  "etichetta": "160% – 164,9%"
+                },
+                {
+                  "da": 155,
+                  "punti": 2,
+                  "etichetta": "155% – 159,9%"
+                },
+                {
+                  "da": 150,
+                  "punti": 1,
+                  "etichetta": "150% – 154,9%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Sotto il 150%: manca il requisito minimo di spesa (art. 5.1.1 lett. d); l’Allegato 2 non prevede punti"
+                }
+              ]
+            },
+            {
+              "id": "d",
+              "nome": "Valorizzazione e promozione del patrimonio della provincia di Trento",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di valorizzare e promuovere il patrimonio geografico, ambientale, culturale, storico e turistico della provincia di Trento (max 20 punti).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "e",
+              "nome": "Prospettive di distribuzione dell’opera",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Prospettive di distribuzione dell’opera risultanti da contratti o da altra documentazione (max 20 punti).",
+              "documenti": [
+                "distribuzione"
+              ]
+            },
+            {
+              "id": "f",
+              "nome": "Punteggio Green Film stimato",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "sostenibilita",
+              "descrizione": "Il punteggio stimato nella dichiarazione di impegno all’ottenimento della certificazione ambientale in relazione al numero di giorni di permanenza sul territorio trentino come da disciplinare di sostenibilità ambientale Green Film (Allegato 3) e relativa tabella (Allegato 4) (max 5 punti).",
+              "principio": "Se la certificazione Green Film non viene rilasciata, o viene rilasciata con un punteggio inferiore a quello stimato e dichiarato, TFC ricalcola il punteggio sui Green points effettivi secondo l’Allegato 4 e ridetermina il contributo; se il nuovo punteggio totale scende sotto 65 il contributo è revocato per intero (art. 10.5).",
+              "calcolo": "Tabella dell’Allegato 4: i punti dipendono dai Green points stimati e dalla permanenza sul territorio. Con almeno 4 settimane: 25-29 Green points = 1; 30-34 = 2; 35-39 = 3; 40-44 = 4; da 45 in su = 5. Con 3 settimane: 25-29 = 0; 30-34 = 1; 35-39 = 2; 40-44 = 3; 45-49 = 4; da 50 in su = 5. Con meno di 3 settimane: 25-34 = 0; 35-39 = 1; 40-44 = 2; 45-49 = 3; 50-54 = 4; 55-65 = 5. La dichiarazione di impegno è «eventuale» (art. 5.1.1 lett. l): senza di essa non c’è un punteggio stimato da valutare. L’Allegato 5 precisa che le settimane sono quelle di riprese in Trentino e che per il marchio servono almeno 25 Green points con 4 o più settimane, 30 con almeno 3 settimane e meno di 4, 35 con meno di 3 settimane: sotto queste soglie la tabella dà 0 punti.",
+              "documenti": [
+                "green_film"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "documentario": {
+      "id": "documentario",
+      "nome": "Art. 8.6.2 — Produzioni di Documentario",
+      "sezioni": [
+        {
+          "id": "V",
+          "nome": "Criteri di valutazione (art. 8.6.2)",
+          "max": 100,
+          "obiettivo": "I Criteri non raggruppano i punteggi in sezioni e non prevedono minimi parziali: conta solo la soglia complessiva di 65 punti su 100.",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Contenuti del soggetto",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Contenuti del soggetto (max 20 punti).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "b",
+              "nome": "Credenziali di produzione, autore, regista, interpreti",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali produzione, autore, regista, interpreti (max 10 punti).",
+              "documenti": [
+                "cv_societa",
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "c",
+              "nome": "Promozione del patrimonio della provincia di Trento",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di promuovere il patrimonio geografico, ambientale, culturale, storico e turistico della provincia di Trento (max 20 punti).",
+              "documenti": [
+                "sceneggiatura",
+                "modulo3"
+              ]
+            },
+            {
+              "id": "d",
+              "nome": "Ricaduta economica diretta sul territorio provinciale",
+              "max": 20,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Ricaduta economica diretta sul territorio provinciale (vedi Allegato 2) (max 20 punti). L’Allegato 2 assegna il punteggio in base al rapporto percentuale tra la spesa sul territorio e il contributo richiesto: 1 punto dal 120% al 129,9%, poi 1 punto in più ogni 10 punti percentuali, fino a 20 punti dal 310% in su.",
+              "principio": "A rendiconto, se la spesa sul territorio provinciale è inferiore a quella preventivata (ma almeno pari al 120% del contributo concesso), TFC ricalcola il punteggio con la percentuale effettiva e ridetermina il contributo; sotto il 120% il contributo è revocato per intero; se il nuovo punteggio totale scende sotto 65 il contributo è revocato per intero (art. 10.6).",
+              "metrica": "spesaSicilia",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "da": 310,
+                  "punti": 20,
+                  "etichetta": "≥ 310% del contributo richiesto"
+                },
+                {
+                  "da": 300,
+                  "punti": 19,
+                  "etichetta": "300% – 309,9%"
+                },
+                {
+                  "da": 290,
+                  "punti": 18,
+                  "etichetta": "290% – 299,9%"
+                },
+                {
+                  "da": 280,
+                  "punti": 17,
+                  "etichetta": "280% – 289,9%"
+                },
+                {
+                  "da": 270,
+                  "punti": 16,
+                  "etichetta": "270% – 279,9%"
+                },
+                {
+                  "da": 260,
+                  "punti": 15,
+                  "etichetta": "260% – 269,9%"
+                },
+                {
+                  "da": 250,
+                  "punti": 14,
+                  "etichetta": "250% – 259,9%"
+                },
+                {
+                  "da": 240,
+                  "punti": 13,
+                  "etichetta": "240% – 249,9%"
+                },
+                {
+                  "da": 230,
+                  "punti": 12,
+                  "etichetta": "230% – 239,9%"
+                },
+                {
+                  "da": 220,
+                  "punti": 11,
+                  "etichetta": "220% – 229,9%"
+                },
+                {
+                  "da": 210,
+                  "punti": 10,
+                  "etichetta": "210% – 219,9%"
+                },
+                {
+                  "da": 200,
+                  "punti": 9,
+                  "etichetta": "200% – 209,9%"
+                },
+                {
+                  "da": 190,
+                  "punti": 8,
+                  "etichetta": "190% – 199,9%"
+                },
+                {
+                  "da": 180,
+                  "punti": 7,
+                  "etichetta": "180% – 189,9%"
+                },
+                {
+                  "da": 170,
+                  "punti": 6,
+                  "etichetta": "170% – 179,9%"
+                },
+                {
+                  "da": 160,
+                  "punti": 5,
+                  "etichetta": "160% – 169,9%"
+                },
+                {
+                  "da": 150,
+                  "punti": 4,
+                  "etichetta": "150% – 159,9%"
+                },
+                {
+                  "da": 140,
+                  "punti": 3,
+                  "etichetta": "140% – 149,9%"
+                },
+                {
+                  "da": 130,
+                  "punti": 2,
+                  "etichetta": "130% – 139,9%"
+                },
+                {
+                  "da": 120,
+                  "punti": 1,
+                  "etichetta": "120% – 129,9%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Sotto il 120%: manca il requisito minimo di spesa (art. 5.1.2 lett. d); l’Allegato 2 non prevede punti"
+                }
+              ]
+            },
+            {
+              "id": "e",
+              "nome": "Accordi di co-produzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "internazionale",
+              "descrizione": "Accordi di co-produzione, con realtà locali, nazionali e/o internazionali (max 10 punti).",
+              "documenti": [
+                "coproduzione"
+              ]
+            },
+            {
+              "id": "f",
+              "nome": "Prospettive e accordi di distribuzione",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Prospettive di distribuzione dell’opera e, qualora presenti, accordi di distribuzione (max 20 punti).",
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "locali": {
+      "id": "locali",
+      "nome": "Art. 8.6.3 — Produzioni Locali",
+      "sezioni": [
+        {
+          "id": "V",
+          "nome": "Criteri di valutazione (art. 8.6.3)",
+          "max": 100,
+          "obiettivo": "I Criteri non raggruppano i punteggi in sezioni e non prevedono minimi parziali: conta solo la soglia complessiva di 65 punti su 100.",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Contenuti e grado di sviluppo del soggetto",
+              "max": 30,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Contenuti e grado di sviluppo del soggetto (max 30 punti).",
+              "documenti": [
+                "sceneggiatura"
+              ]
+            },
+            {
+              "id": "b",
+              "nome": "Credenziali di produzione, autore, regista, interpreti",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali produzione, autore, regista, interpreti (max 10 punti).",
+              "documenti": [
+                "cv_societa",
+                "cv_regista",
+                "cv_artistico"
+              ]
+            },
+            {
+              "id": "c",
+              "nome": "Impianto produttivo del progetto",
+              "max": 40,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Impianto produttivo del progetto (max 40 punti). Per «impianto produttivo del progetto» si intende la valutazione della fattibilità dell’opera, anche in relazione all’importo richiesto, la presenza di co-produttori nazionali e/o internazionali, la partecipazione a bandi nazionali e/o internazionali, la capacità di costruire sul territorio provinciale dinamiche di sviluppo economico, creando o consolidando filiere di know-how nel settore, con il coinvolgimento di professionisti locali con elevata qualità tecnico-professionale.",
+              "documenti": [
+                "coproduzione",
+                "finanziamenti",
+                "altro"
+              ]
+            },
+            {
+              "id": "d",
+              "nome": "Prospettive e accordi di distribuzione, mercati e pitching",
+              "max": 20,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Prospettive di distribuzione dell’opera e, qualora presenti, accordi di distribuzione risultanti da contratti o da altra documentazione e/o attestati di partecipazione dell’opera a mercati professionali, pitching nazionali e internazionali (max 20 punti).",
+              "documenti": [
+                "distribuzione",
+                "altro"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "editoritv": {
+      "id": "editoritv",
+      "nome": "Art. 8.6.4 — Editori Televisivi Locali",
+      "sezioni": [
+        {
+          "id": "V",
+          "nome": "Criteri di valutazione (art. 8.6.4)",
+          "max": 100,
+          "obiettivo": "I Criteri non raggruppano i punteggi in sezioni e non prevedono minimi parziali: conta solo la soglia complessiva di 65 punti su 100.",
+          "criteri": [
+            {
+              "id": "a",
+              "nome": "Contenuti del soggetto",
+              "max": 30,
+              "tipo": "qualitativo",
+              "famiglia": "scrittura",
+              "descrizione": "Contenuti del soggetto (max 30 punti)."
+            },
+            {
+              "id": "b",
+              "nome": "Credenziali dell’editore",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "societa",
+              "descrizione": "Credenziali editore (max 10 punti)."
+            },
+            {
+              "id": "c",
+              "nome": "Promozione del patrimonio della provincia di Trento",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Capacità di promuovere il patrimonio ambientale, culturale, storico e turistico della provincia di Trento (max 10 punti)."
+            },
+            {
+              "id": "d",
+              "nome": "Innovazione e rinnovamento nello stile e nella forma",
+              "max": 15,
+              "tipo": "qualitativo",
+              "famiglia": "visione",
+              "descrizione": "Innovazione e rinnovamento nello stile e nella forma (max 15 punti)."
+            },
+            {
+              "id": "e",
+              "nome": "Accordi di distribuzione",
+              "max": 10,
+              "tipo": "qualitativo",
+              "famiglia": "distribuzione",
+              "descrizione": "Accordi di distribuzione, con realtà locali, nazionali e/o internazionali (max 10 punti)."
+            },
+            {
+              "id": "f",
+              "nome": "Sviluppo economico e filiere di know-how sul territorio",
+              "max": 25,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Capacità di costruire sul territorio provinciale dinamiche di sviluppo economico, con elevata qualità tecnico-professionale, creando o consolidando filiere di know-how nel settore con il coinvolgimento di professionisti locali (max 25 punti)."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Modulo A — Domanda di contributo alla Produzione (L.P. 15/2007, art. 21), con marca da bollo da € 16,00 e dichiarazioni su tipologia di beneficiario, impresa unica, de minimis e altri aiuti di Stato",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Modulo B — Dichiarazione di impegno (codice modulo 003373): termini di avvio e rendicontazione, norme su sicurezza, lavoro, contratti collettivi e ambiente, obblighi di comunicazione dell’art. 12",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Modulo C — Scheda del progetto (codice modulo 003374): regia, produzione, capi reparto e cast con residenza, tipologia, settimane di preparazione/riprese/post-produzione complessive e in Trentino, location trentine, date di lavorazione",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Soggetto e sceneggiatura dell’opera (art. 5.1.1 lett. a); per i documentari il trattamento (5.1.2 lett. a); per le Produzioni Locali trattamento e/o sceneggiatura (5.1.3 lett. a); per gli Editori Televisivi Locali descrizione dettagliata e articolata del progetto (5.1.4 lett. a)",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Presentazione del produttore (dell’editore per gli Editori Televisivi Locali)",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Curriculum vitae del regista",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Curriculum vitae degli interpreti principali (per i documentari e gli editori TV: degli eventuali interpreti; per gli editori TV anche delle altre realtà coinvolte)",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Elenco troupe e cast, oppure dichiarazione di impegno da cui risulti la quota di maestranze tecniche locali richiesta (20% della troupe per cinema e TV; almeno due maestranze o co-produzione con una Produzione Locale per i documentari)",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Preventivo dettagliato delle spese (Allegato 1), datato e firmato: spesa in Trentino pari ad almeno il 150% del contributo richiesto per cinema e TV, il 120% per i documentari; nessun minimo per le Produzioni Locali; per gli Editori TV almeno il 50% del contributo a soggetti locali",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Piano finanziario preventivo dell’intero progetto, con data e firma del legale rappresentante, conforme ai limiti dell’art. 7",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "identita",
+      "nome": "Copia del documento di identità del legale rappresentante in corso di validità",
+      "obbligo": "sempre",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Solo Produzioni Locali ed Editori Televisivi Locali: relazione illustrativa della capacità del progetto di costruire sul territorio provinciale dinamiche di sviluppo economico, creando o consolidando filiere di know-how, anche con il coinvolgimento di professionisti locali",
+      "obbligo": "sempre",
+      "categorie": [
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Solo Editori Televisivi Locali: dettagli relativi alla programmazione del progetto proposto",
+      "obbligo": "sempre",
+      "categorie": [
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "coproduzione",
+      "nome": "Accordi di coproduzione e di produzione esecutiva, ove esistenti al momento della domanda (integrabili entro 5 giorni dalla scadenza)",
+      "obbligo": "se_dichiarato",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Contratti e/o lettere di interesse di distribuzione o di messa in onda e presentazione del distributore, ove esistenti (integrabili entro 5 giorni dalla scadenza)",
+      "obbligo": "punteggio",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "finanziatori_esterni",
+      "nome": "Ogni altra documentazione che attesti quanto dichiarato nel piano finanziario e nell’elenco del cast: accordi di sponsorizzazione, product placement, tax credit, accordi con gli attori (integrabile entro 5 giorni dalla scadenza)",
+      "obbligo": "se_dichiarato",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Solo Produzioni Locali: attestati di partecipazione del progetto a mercati professionali e/o pitching forum nazionali e internazionali; ammissione del progetto a bandi nazionali e internazionali, ove esistenti",
+      "obbligo": "punteggio",
+      "categorie": [
+        "produzioni-locali"
+      ]
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Solo cinema e TV: eventuale dichiarazione d’impegno a ottenere la certificazione Green Film, con il punteggio stimato in base al disciplinare (Allegato 3); la domanda di rilascio del marchio è l’Allegato 5",
+      "obbligo": "punteggio",
+      "categorie": [
+        "cinema-tv"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Breve scheda riepilogativa del progetto articolata in base ai criteri di valutazione dell’art. 8 (art. 5.4: i richiedenti «sono invitati» a presentarla)",
+      "obbligo": "consigliato",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    },
+    {
+      "tipo": "altro",
+      "nome": "Imprese con sede legale all’estero: dati identificativi dell’impresa e dichiarazione sostitutiva di iscrizione presso l’ente omologo alla Camera di Commercio (art. 5.2)",
+      "obbligo": "se_dichiarato",
+      "categorie": [
+        "cinema-tv",
+        "documentario",
+        "produzioni-locali",
+        "editori-tv-locali"
+      ]
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "beneficiario",
+      "testo": "Il richiedente rientra in una delle tipologie dell’art. 3.1: società di produzione audiovisiva indipendente (cinema/TV o documentario), Produzione Locale o Editore televisivo con sede operativa in provincia di Trento"
+    },
+    {
+      "id": "prima-dei-lavori",
+      "testo": "La domanda è presentata prima dell’avvio dei lavori relativi al progetto (art. 4.4); contano solo le spese sostenute dopo la presentazione della domanda (Allegato 1)"
+    },
+    {
+      "id": "spesa-minima",
+      "testo": "Il preventivo prevede in provincia di Trento una spesa ammissibile pari ad almeno il 150% del contributo richiesto (cinema e TV) o il 120% (documentari), esclusi personale a tempo indeterminato e spese di investimento"
+    },
+    {
+      "id": "tetto-spesa",
+      "testo": "L’obbligo di spesa sul territorio provinciale non supera il 50% del costo totale di produzione (art. 6.2)"
+    },
+    {
+      "id": "maestranze",
+      "testo": "Cinema e TV: almeno il 20% della troupe durante le riprese in Trentino (escluse le figurazioni) è composto da maestranze tecniche domiciliate e operanti in provincia di Trento. Documentari: almeno due maestranze locali oppure co-produzione con una Produzione Locale"
+    },
+    {
+      "id": "aiuti-pubblici",
+      "testo": "Il contributo richiesto, sommato agli altri contributi pubblici, non supera il 50% dei costi complessivi di produzione (100% per le opere audiovisive difficili) e, con i contributi privati, non supera il costo totale dell’opera (art. 7.2, 7.4 e 7.5)"
+    },
+    {
+      "id": "no-altri-pat",
+      "testo": "Sugli stessi costi non sono richiesti contributi ad altre strutture della Provincia autonoma di Trento o su altre leggi provinciali di settore (art. 7.3)"
+    },
+    {
+      "id": "contenuti",
+      "testo": "L’opera non ha carattere pubblicitario, razzista o in palese contrasto con la pubblica morale e decenza e non è commissionata da altre Strutture o enti strumentali della Provincia (art. 7.1)"
+    },
+    {
+      "id": "tre-volte",
+      "testo": "Lo stesso progetto (stesso soggetto, format e/o trattamento o sceneggiatura) non è già stato presentato a TFC tre volte (art. 7.7)"
+    },
+    {
+      "id": "difficolta",
+      "testo": "L’impresa non è in difficoltà (art. 2, par. 1, punto 18, Reg. UE 651/2014) e non è destinataria di un ordine di recupero per aiuti illegali e incompatibili (art. 3.2)"
+    },
+    {
+      "id": "valenza-culturale",
+      "testo": "L’opera raggiunge almeno 3 punti su 10 nella pre-valutazione della valenza culturale (art. 8.2-8.3); altrimenti il contributo può essere concesso solo in regime «de minimis» (art. 8.4)"
+    },
+    {
+      "id": "lavoro-ambiente",
+      "testo": "Impegno a rispettare norme su sicurezza, condizioni di lavoro, previdenza e assicurazioni, ad applicare integralmente i contratti collettivi nazionali e provinciali e ad assolvere gli oneri ambientali locali, compresa la corretta gestione dei rifiuti"
+    },
+    {
+      "id": "bollo",
+      "testo": "Domanda sul modulo ufficiale con marca da bollo da € 16,00 (Modulo A) e documentazione obbligatoria completa entro il termine di presentazione"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "avvio-riprese",
+      "etichetta": "Avvio delle riprese",
+      "mesi": 9,
+      "nota": "Art. 10.2 n. 1: entro 9 mesi dalla data della deliberazione di approvazione del contributo. Oltre il termine: revoca totale (art. 10.4). Proroghe su motivata richiesta nei limiti della deliberazione della Giunta provinciale n. 1980 del 14 settembre 2007 (art. 10.3)."
+    },
+    {
+      "id": "realizzazione-rendiconto",
+      "etichetta": "Realizzazione dell’opera e rendicontazione complessiva",
+      "mesi": 33,
+      "nota": "Art. 10.2 n. 2: «entro due anni dal termine di avvio». 33 mesi = 9 mesi del termine di avvio + 24 mesi; se per «termine di avvio» si intende la data effettiva di inizio riprese, il termine scade prima. Oltre il termine: revoca totale (art. 10.4)."
+    }
+  ],
+  "erogazione": [
+    {
+      "quota": "primo acconto",
+      "percentuale": 30,
+      "condizione": "All’approvazione della domanda di contributo. Oltre 1.000,00 euro serve una fideiussione a prima richiesta, bancaria o assicurativa, sul fac-simile TFC, pari al 30% del contributo concesso e con durata non inferiore ai termini di realizzazione e rendicontazione complessiva (art. 11.1 lett. a)."
+    },
+    {
+      "quota": "secondo acconto",
+      "percentuale": 50,
+      "condizione": "Dopo la RENDICONTAZIONE LOCALE (per le Produzioni Locali: dopo la RENDICONTAZIONE PARZIALE), con fideiussione a prima richiesta pari al 50% del contributo concesso (art. 11.1 lett. b e c)."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 20,
+      "condizione": "Dopo la RENDICONTAZIONE COMPLESSIVA e l’assolvimento degli ulteriori obblighi dell’art. 12 (art. 11.1 lett. d)."
+    }
+  ],
+  "note": [
+    "Soglia di ammissione: 65 punti su 100. Non ci sono punteggi minimi per singolo criterio.",
+    "Il contributo concesso è pari al contributo richiesto moltiplicato per il punteggio: con 65 punti si riceve il 65% della richiesta, con 100 punti il 100% (art. 8.6). Gli importi delle graduatorie 2026 sono compatibili con questa regola (per esempio 78 punti e 312.000 euro, cioè il 78% del massimale di 400.000), ma le graduatorie non pubblicano il contributo richiesto.",
+    "Prima dei 100 punti c’è una pre-valutazione della valenza culturale: cinque parametri da 0 a 2 punti ciascuno, minimo 3 su 10. Sotto questa soglia il contributo può essere concesso solo in «de minimis» (art. 8.2-8.4).",
+    "Spesa minima in provincia di Trento: 150% del contributo per cinema e TV, 120% per i documentari; nessun minimo per le Produzioni Locali; per gli Editori Televisivi Locali almeno il 50% del contributo va speso in attività di Produzioni Locali e/o Professionisti. A rendiconto, sotto il 150% (o il 120%) il contributo è revocato per intero; sopra il minimo ma sotto il preventivato il punteggio è ricalcolato con l’Allegato 2 e il contributo ridotto in proporzione (art. 10.5, 10.6 e 10.8).",
+    "L’obbligo di spesa sul territorio non può superare il 50% del costo totale di produzione (art. 6.2); il 20% del bilancio totale può essere speso in un altro Paese dell’Unione europea senza riduzione del contributo (art. 6.3).",
+    "Spese ammissibili per la ricaduta (Allegato 1): fatture di società con sede legale e/o operativa in provincia di Trento o di ditte individuali e persone fisiche residenti in provincia, al netto dell’IVA, sostenute dopo la domanda; onorari di personale residente in provincia (o nato in Trentino); tutte le diarie nelle giornate di ripresa in Trentino. Non ammissibili: ricariche telefoniche, carburante, pedaggi autostradali, spese di investimento, personale a tempo indeterminato.",
+    "Il fondo non è ripartito per scadenza né per categoria di beneficiari (art. 2.5): le graduatorie sono finanziate in ordine di punteggio fino a esaurimento delle risorse dell’anno; i progetti ammessi ma non finanziati hanno priorità sulle risorse aggiuntive dell’anno o su quelle dell’anno successivo (art. 9.3).",
+    "Massimali: 400.000 euro per cinema e TV, 40.000 per i documentari, 50.000 per le Produzioni Locali, 50.000 per gli Editori Televisivi Locali (art. 6.1). In ogni caso il contributo non può superare il 50% del costo totale dell’opera: a rendiconto viene ridotto entro quel limite (art. 10.10).",
+    "Ogni variazione rispetto alla domanda va comunicata per iscritto a TFC (raccomandata o PEC); entro 7 giorni lavorativi TFC può chiedere una rivalutazione del punteggio da parte del Comitato, con rideterminazione o revoca. Le variazioni non comunicate di elementi valutati (attori, co-produttori, sceneggiatura) comportano la revoca totale (art. 5.6 e 10.11).",
+    "Lo stesso progetto può essere presentato al massimo tre volte (art. 7.7).",
+    "Obblighi dopo la concessione (art. 12): dicitura «in collaborazione con» e logo Trentino Film Commission in titoli di testa e di coda e su tutti i materiali; conferenza stampa sul territorio provinciale; diritti gratuiti su trailer e almeno cinque foto di scena; deposito di una copia dell’opera presso Format — Centro Audiovisivi della Provincia; presenza sul set di personale TFC.",
+    "Erogazione: 30% all’approvazione, 50% dopo la rendicontazione locale (parziale per le Produzioni Locali), 20% a saldo. Sopra i 1.000 euro ogni acconto richiede una fideiussione a prima richiesta di pari importo; il primo acconto può essere unito al secondo, con fideiussione pari all’80% del contributo (art. 11.1 e 11.2). Gli importi sono attualizzati al momento dell’erogazione (art. 11.3).",
+    "Risorse: 2.086.067,24 euro nel 2025 (1.736.067,24 iniziali più 350.000 a ottobre) e 1.000.000 euro nel 2026, formazione compresa. Nel 2026 il fondo non è bastato: la II call ammetteva 720.923,68 euro contro 480.710,15 disponibili e l’ultimo progetto finanziato lo è stato solo in parte.",
+    "Al 14 novembre 2026 la pagina ufficiale riporta: «La presentazione delle domande di contributo è al momento sospesa». Le tre scadenze 2026 (3 marzo, 9 giugno, 22 settembre) sono passate e le date 2027 non sono pubblicate.",
+    "Pre-valutazione della valenza culturale (art. 8.2-8.4), separata dai 100 punti e non simulata: cinque parametri da 0 a 2 punti (identità europea; temi sociali, familiari e giovanili; ambiente; attualità, cronaca o storia di interesse locale o europeo; adattamento di opere letterarie, musicali o teatrali). Con almeno 3 punti su 10 l’aiuto è concesso in base al Reg. (UE) 651/2014; sotto i 3 punti solo come «de minimis» (Reg. UE 1407/2013).",
+    "Il minimo di spesa in provincia di Trento cambia con la categoria: 150% del contributo per cinema e TV (art. 5.1.1 lett. d e 10.5), 120% per i documentari (art. 5.1.2 lett. d e 10.6), nessun minimo per le Produzioni Locali, e per gli Editori Televisivi Locali almeno il 50% del contributo speso in attività di Produzioni Locali e/o Professionisti (art. 5.1.4 lett. d e 10.8). Il controllo automatico della spesa minima non è attivo per questo bando: i minimi pesano nelle fasce dei criteri c) (cinema e TV) e d) (documentari) e nei requisiti da confermare."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Contributi alla Formazione (stessi Criteri, art. 3.1 lett. e e art. 8.6.5)",
+      "url": "https://www.trentinofilmcommission.it/it/film-fund/",
+      "descrizione": "Per professionisti e aspiranti professionisti domiciliati e operanti in provincia di Trento che partecipano a corsi di formazione o a mercati professionali: fino a 5.000 euro e al massimo il 50% delle spese ammissibili, tre volte al massimo nello stesso anno solare. Criteri: credenziali del richiedente (max 30), valore del momento formativo o di mercato professionale (max 40), rapporto costo/efficacia (max 30). Non riguarda la produzione di opere."
+    },
+    {
+      "nome": "FORWARD — Trentino Producers Lab",
+      "url": "https://trentinofilmcommission.it/wp-content/uploads/2025/02/Regolamento_FORWARD-2025.pdf",
+      "descrizione": "Percorso di formazione e mentoring per giovani produttrici e produttori, con regolamento proprio (edizione 2025 trovata in rete; non analizzato in questa sessione). Non è un contributo alla produzione."
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "II call 2026 — graduatoria dei progetti ammissibili e non approvati (determinazione n. 8722 del 7 agosto 2026)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/08/determina-8722-del-07.08.2026_II-call.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2026,
+      "titolo": "I call 2026 — graduatoria dei progetti ammissibili e non approvati (determinazione n. 6554 del 19 giugno 2026)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2026/07/Determina-n-6554-del-19_06_2026_I-call-2026.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "III call 2025 — graduatoria (determinazione n. 13335 del 26 novembre 2025)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/12/determina-13335-del-26.11.2025_III-call-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "II call 2025 — graduatoria (determinazione n. 11261 del 14 ottobre 2025)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/10/determina-11261-del-14.10.2025_II-call-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "I call 2025 — graduatoria (determinazione n. 9901 del 9 settembre 2025)",
+      "url": "https://www.trentinofilmcommission.it/wp-content/uploads/2025/09/determina-9901-del-09.09.2025_I-call-2025.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Criteri, art. 8.6 (soglia e regola del contributo)",
+        "testo": "Ad ogni criterio, come di seguito indicato, si assegna un punteggio espresso in valori numerici. Sono ammessi a contributo, nei limiti delle risorse disponibili a bilancio sul fondo, i progetti che raggiungono la SOGLIA DI AMMISSIONE di almeno 65 punti su 100. L’importo del contributo assegnato ha una corrispondenza diretta con il punteggio ottenuto dal progetto in fase di valutazione e potrà quindi variare dal 65% al 100% del contributo richiesto."
+      },
+      {
+        "riferimento": "Criteri, art. 8.6.1 (Produzioni Cinematografiche e Televisive)",
+        "testo": "a) contenuti del soggetto (max 10 punti) b) credenziali produzione, autore, regista, interpreti (max 20 punti) c) numero di settimane di preparazione, riprese, post-produzione, previste e ricaduta economica diretta sul territorio provinciale (vedi Allegato 2) (max 25 punti) d) capacità di valorizzare e promuovere il patrimonio […] della provincia di Trento (max 20 punti) e) prospettive di distribuzione dell’opera […] (max 20 punti) f) il punteggio stimato nella dichiarazione di impegno all’ottenimento della certificazione ambientale […] (max 5 punti)"
+      },
+      {
+        "riferimento": "Criteri, art. 8.6.2 (Produzioni di Documentario)",
+        "testo": "a) contenuti del soggetto (max 20 punti) b) credenziali produzione, autore, regista, interpreti (max 10 punti) c) capacità di promuovere il patrimonio geografico, ambientale, culturale, storico e turistico della provincia di Trento (max 20 punti) d) ricaduta economica diretta sul territorio provinciale (vedi Allegato 2) (max 20 punti) e) accordi di co-produzione, con realtà locali, nazionali e/o internazionali (max 10 punti) f) prospettive di distribuzione dell’opera e, qualora presenti, accordi di distribuzione (max 20 punti)"
+      },
+      {
+        "riferimento": "Criteri, art. 8.6.3 (Produzioni Locali)",
+        "testo": "a) contenuti e grado di sviluppo del soggetto (max 30 punti) b) credenziali produzione, autore, regista, interpreti (max 10 punti) c) impianto produttivo del progetto* (max 40 punti) d) prospettive di distribuzione dell’opera […] (max 20 punti)"
+      },
+      {
+        "riferimento": "Criteri, art. 8.6.4 (Editori Televisivi Locali)",
+        "testo": "a) contenuti del soggetto (max 30 punti) b) credenziali editore (max 10 punti) c) capacità di promuovere il patrimonio […] (max 10 punti) d) innovazione e rinnovamento nello stile e nella forma (max 15 punti) e) accordi di distribuzione […] (max 10 punti) f) capacità di costruire sul territorio provinciale dinamiche di sviluppo economico […] (max 25 punti)."
+      },
+      {
+        "riferimento": "Allegato 2 — Tabella ricaduta-punteggio",
+        "testo": "Produzioni Cinematografiche e Televisive — La spesa sul territorio corrisponde al 150% - 154,9% del contributo richiesto: 1; 155% - 159,9%: 2; 160% - 164,9%: 3; […] 260% - 264,9%: 23; 265% - 269,9%: 24; ≥270%: 25. Produzioni di Documentario — 120% - 129,9%: 1; 130% - 139,9%: 2; […] 290% - 299,9%: 18; 300% - 309,9%: 19; ≥310%: 20."
+      },
+      {
+        "riferimento": "Allegato 4 — Tabella assegnazione punteggio Green Film",
+        "testo": "Permanenza sul territorio: ≥ 4 settimane / 3 settimane / < 3 settimane. Green points 25 - 29: 1 / 0 / 0; 30 - 34: 2 / 1 / 0; 35 - 39: 3 / 2 / 1; 40 - 44: 4 / 3 / 2; 45 - 49: 5 / 4 / 3; 50 - 54: 5 / 5 / 4; 55 - 65: 5 / 5 / 5."
+      },
+      {
+        "riferimento": "Criteri, art. 8.3 (pre-valutazione)",
+        "testo": "Affinché un progetto possa essere valutato e considerato di valenza culturale, è necessario che totalizzi almeno 3 punti su 10, considerando che per ognuno dei predetti parametri si possono attribuire un massimo di 2 punti."
+      },
+      {
+        "riferimento": "Criteri, art. 6.1 e 6.2 (massimali)",
+        "testo": "a) per le Produzioni Cinematografiche e Televisive - fino a un massimo di € 400.000,00 b) per le Produzioni di Documentario - fino a un massimo di € 40.000,00 c) per le Produzioni Locali - fino a un massimo di € 50.000,00 d) per gli Editori Televisivi locali - fino a un massimo di € 50.000,00 […] 6.2. La determinazione del contributo concesso è effettuata tenendo conto che l’obbligo di spesa sul territorio provinciale non può in ogni caso superare il 50% del costo totale di produzione."
+      },
+      {
+        "riferimento": "Criteri, art. 10.2 e 11.1 (termini ed erogazione)",
+        "testo": "1) Termine di avvio delle riprese: entro 9 mesi dalla data della deliberazione di approvazione del contributo da parte della Giunta Provinciale; 2) Termine di REALIZZAZIONE DELL’OPERA e di RENDICONTAZIONE COMPLESSIVA delle attività: entro due anni dal termine di avvio. […] a) primo acconto […]: 30% all’approvazione della domanda di contributo. […] b) secondo acconto […]: 50% subordinatamente alla RENDICONTAZIONE LOCALE […] d) saldo […]: rimanente 20% subordinatamente alla RENDICONTAZIONE COMPLESSIVA"
+      },
+      {
+        "riferimento": "Pagina ufficiale Film Fund, 14 novembre 2026 (ultima modifica 6 ottobre 2026)",
+        "testo": "FILM FUND DEADLINE — LA PRESENTAZIONE DELLE DOMANDE DI CONTRIBUTO E’ AL MOMENTO SOSPESA"
+      },
+      {
+        "riferimento": "Home page trentinofilmcommission.it, 14 novembre 2026",
+        "testo": "FILM FUND DEADLINE 2026 — Avvio istruttorie nuove richieste di contributo 2026: 3 Marzo / 9 Giugno / 22 Settembre"
+      }
+    ],
+    "dubbi": [
+      "Stato «sospeso»: la pagina ufficiale (ultima modifica il 6 ottobre 2026) dice che la presentazione delle domande è al momento sospesa, ma non spiega perché né fino a quando. Non ho trovato comunicati o deliberazioni che lo motivino: può dipendere dall’esaurimento delle risorse 2026 (la II call ammetteva 720.923,68 euro contro 480.710,15 disponibili) oppure da una revisione dei Criteri. Da ricontrollare prima di far presentare una domanda.",
+      "Le scadenze 2027 non sono pubblicate: la previsione (marzo, giugno, settembre) si basa solo sulla cadenza 2025 e 2026.",
+      "La graduatoria della III call 2026 (scadenza 22 settembre 2026) non è ancora sulla pagina ufficiale. La data di apertura di quella finestra non è scritta in nessun atto e non è indicata (nelle call precedenti la finestra parte dal giorno dopo la scadenza precedente, quindi sarebbe il 10 giugno 2026).",
+      "Criterio c) cinema e TV (25 punti): il titolo cita anche il «numero di settimane di preparazione, riprese, post-produzione», ma l’Allegato 2 lega i punti solo al rapporto spesa sul territorio ÷ contributo richiesto. L’ho trascritto come criterio a fasce sulla sola spesa; non è scritto se il Comitato possa correggere il punteggio in base alle settimane.",
+      "Allegato 2: sotto il 150% (120% per i documentari) la tabella non prevede punti e il preventivo non rispetta il minimo dell’art. 5.1; la fascia vale 0 punti, ma di fatto la domanda non è ammissibile.",
+      "I Criteri non dividono i 100 punti in sezioni: ogni griglia ha un’unica sezione «V» da 100 punti, senza soglie parziali.",
+      "Percentuale di contributo: i Criteri non fissano una percentuale sul costo. Ho indicato 50 perché è il tetto di cumulo degli aiuti pubblici (art. 7.2, 100% per le opere difficili). Dall’art. 6.2 (obbligo di spesa territoriale non oltre il 50% del costo totale) si ricava che per cinema e TV il contributo non può superare circa un terzo del costo (50% ÷ 150%) e per i documentari circa il 41,7% (50% ÷ 120%): è una deduzione aritmetica, non una frase dell’atto.",
+      "Termine di realizzazione e rendicontazione: «entro due anni dal termine di avvio». Ho indicato 33 mesi dalla concessione (9 + 24); se il termine decorre dall’avvio effettivo delle riprese è più breve. Il Modulo B parla di 9 mesi «dalla data di concessione del contributo», i Criteri di 9 mesi «dalla deliberazione di approvazione del contributo da parte della Giunta provinciale», mentre oggi le graduatorie sono approvate con determinazione del Dirigente.",
+      "Il PDF dei Criteri sul sito non riporta numero e data delle deliberazioni. Dalle determinazioni: n. 1827 del 21 ottobre 2016, modificata con n. 268 del 27 febbraio 2020; le stesse richiamano il punto 3 della n. 2402 del 30 dicembre 2021, con cui (comunicato n. 3781/2021 della Provincia) il massimale è passato da 200.000 a 400.000 euro. Il testo delle tre deliberazioni non è stato letto. Il PDF vigente è di giugno 2023 («modifiche piattaforma Agorà»): l’atto che lo ha aggiornato non è individuato; rispetto al 2022 cambia solo l’art. 4.",
+      "Composizione del Comitato tecnico-scientifico e regola di calcolo dei punteggi non sono nei Criteri (rinviano alla deliberazione n. 576 del 1° aprile 2011, non letta).",
+      "Le graduatorie pubblicano solo il punteggio totale e il contributo concedibile, non i punteggi per criterio.",
+      "Il portale Italy for Movies indica l’8 giugno 2026 per la seconda sessione; il sito ufficiale e la determinazione n. 8722/2026 indicano il 9 giugno: ho usato la data ufficiale.",
+      "Durata minima o massima delle opere: i Criteri non la fissano (nelle graduatorie compaiono anche cortometraggi e programmi TV tra le «produzioni cinema/TV» e le «produzioni locali»).",
+      "La dotazione non è ripartita per categoria e comprende la formazione. Il 2025 è stato corretto in 2.086.067,24 euro (1.736.067,24 più 350.000 della deliberazione n. 1653 del 31 ottobre 2025). Nella determinazione n. 8722/2026 i conti non tornano del tutto: indica 480.710,15 euro disponibili, ma la quota finanziata della posizione 9 (117.665,56) corrisponde a 455.442,58 euro. La dotazione 2027 non è nota.",
+      "Spesa minima: il minimo cambia con la categoria (150% del contributo per cinema e TV, 120% per i documentari, nessuno per le Produzioni Locali, 50% a soggetti locali per gli Editori TV). Il controllo automatico della spesa minima non scatta: restano le fasce dei criteri c) e d) e il requisito da confermare a mano.",
+      "Regola del contributo: «contributo = richiesta × punteggio ÷ 100» (art. 8.6), confermata dalle graduatorie 2025-2026 (per esempio 66 punti e 6.600, 25.740, 26.400 euro; 65 punti e 143.000 euro). La stima del contributo mostrata dal programma non applica questa riduzione e può risultare fino al 35% più alta del reale.",
+      "Opere audiovisive difficili: il cumulo degli aiuti pubblici può arrivare al 100% (art. 7.2 e 7.4), ma l’art. 10.10 riduce comunque il contributo al 50% del costo totale; la percentuale indicata resta 50 per tutte le categorie.",
+      "Cura della scheda (14/11/2026): fondo sospeso dal 6 ottobre 2026; la griglia è quella dei Criteri vigenti e resta simulabile, ma prima di presentare domanda va verificato che la nuova call usi gli stessi Criteri."
+    ]
+  },
+  "verifica": {
+    "esito": "corretta",
+    "data": "2026-11-14",
+    "correzioni": [
+      "Dotazione 2025 corretta da 1.736.067,24 a 2.086.067,24 euro: la deliberazione n. 1653 del 31 ottobre 2025 ha aggiunto 350.000 euro al Piano 2025 (determinazione n. 13335/2025).",
+      "Fonte completata: i Criteri sono stati modificati anche con la deliberazione n. 2402 del 30 dicembre 2021 (massimale cinema e TV da 200.000 a 400.000 euro, comunicato n. 3781/2021) e il PDF vigente è la versione di giugno 2023; aggiunto il comunicato tra le fonti e salvato in fonti/trentino/.",
+      "Spesa minima sul territorio a livello di bando portata da 150 a 0: il 150% vale solo per cinema e TV (120% documentari, nessun minimo per le Produzioni Locali, 50% a soggetti locali per gli Editori TV) e il programma lo avrebbe applicato a tutte le categorie. I valori restano in ogni categoria e nella nuova nota «spesaTerritorioMinNota».",
+      "Finestra III call 2026: tolta la data di apertura del 10 giugno 2026, che era dedotta e non scritta in un atto; resta la scadenza del 22 settembre 2026.",
+      "Storico: nella II call 2026 aggiunta la quota finanziata della posizione 9 (117.665,56 euro); note riportate entro i 300 caratteri letti dal programma.",
+      "Accorciati i testi che il programma avrebbe troncato (prossima edizione, allegato «preventivo») e scritta nel nome degli allegati la categoria a cui si applicano, perché il programma non legge il campo «categorie» degli allegati.",
+      "Criterio Green Film: aggiunte al calcolo le soglie dell’Allegato 5 (25, 30 e 35 Green points secondo le settimane di riprese in Trentino).",
+      "Note: aggiunte erogazione e risorse 2025-2026 (i campi «erogazioneNote» e «dotazioneComplessiva» non sono letti dal programma) e il tetto del 50% del costo totale dell’art. 10.10."
+    ],
+    "dubbi": [
+      "Griglie, soglia di 65 punti, massimali, tabelle degli Allegati 2 e 4, pre-valutazione, termini ed erogazione coincidono con il testo ufficiale salvato; le somme tornano a 100 per tutte e quattro le griglie.",
+      "Il fondo è sospeso dal 6 ottobre 2026 senza motivo dichiarato: nessuna nuova edizione né atto di modifica trovato al 14 novembre 2026 (pagina ufficiale riscaricata, identica alla copia salvata). Le date 2027 sono una previsione.",
+      "Il programma oggi non gestisce due regole di questo bando: il contributo pari alla richiesta moltiplicata per il punteggio in centesimi e il minimo di spesa diverso per categoria. Vanno aggiunte al motore prima di mostrare stime di contributo e controlli di ammissibilità.",
+      "Le deliberazioni n. 1827/2016, n. 268/2020 e n. 2402/2021 non sono state lette nel testo originale: numeri e date vengono dalle determinazioni 2025-2026 e dal comunicato n. 3781/2021. L’atto dell’aggiornamento di giugno 2023 non è individuato.",
+      "Art. 6.2: l’obbligo di spesa territoriale non può superare il 50% del costo totale; se ne ricaverebbe un contributo massimo di un terzo del costo per cinema e TV e del 41,7% per i documentari, ma l’atto non lo scrive. Resta 50% (art. 7.2 e 10.10).",
+      "Termine di realizzazione: 33 mesi dalla concessione è la lettura letterale di «due anni dal termine di avvio» (9 + 24 mesi); se si conta dall’avvio effettivo delle riprese è più breve.",
+      "Criterio c) cinema e TV: il titolo cita anche le settimane di lavorazione, ma l’Allegato 2 e l’art. 10.5 legano i 25 punti solo al rapporto tra spesa in Trentino e contributo richiesto.",
+      "Composizione del Comitato e regola di calcolo dei punteggi non sono nei Criteri; le graduatorie pubblicano solo il totale, non i punteggi per criterio."
+    ]
+  },
+  "scadenzeNote": []
+}

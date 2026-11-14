@@ -1,0 +1,2519 @@
+{
+  "id": "piemonte-film-tv-fund-2026",
+  "fondoId": "piemonte",
+  "revisione": "2026-11-14",
+  "nome": "Piemonte — Piemonte Film TV Fund 2026 (PR FESR 2021-2027, «Aiuti a imprese cinematografiche e audiovisive»)",
+  "nomeBreve": "Piemonte · Film TV Fund 2026",
+  "ente": "Regione Piemonte — Direzione Cultura, Turismo, Sport e Commercio, Settore Promozione delle Attività Culturali (Responsabile di Gestione); controlli di I livello del Settore Promozione dei beni librari e archivistici, editoria ed istituti culturali. Misura del Programma Regionale FESR Piemonte 2021-2027 gestita dalla Regione.",
+  "regione": "Piemonte",
+  "territorio": "Piemonte",
+  "gentilizio": "piemontesi",
+  "fonte": "Bando «Aiuti a imprese cinematografiche e audiovisive» – Piemonte Film Tv Fund anno 2026 (PR FESR Piemonte 2021/2027, Priorità I, Obiettivo specifico 1.3, Azione I.1iii.1), approvato con D.D. n. 145/A2003D/2026 del 14/04/2026 (B.U.R. n. 15 del 16/04/2026) in attuazione della scheda di misura 2026-2027 approvata con D.G.R. n. 5-2390 del 30/03/2026; dotazione della seconda sessione integrata con D.D. n. 417/A2003D/2026 del 02/09/2026.",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto della Regione Piemonte (fondi FESR) per micro, piccole e medie imprese di produzione indipendenti che realizzano in Piemonte lungometraggi, film TV e serie di finzione o di animazione; documentari e cortometraggi sono esclusi. Il contributo, da 50.000 euro fino a 150.000, 300.000 o 400.000 euro secondo la tipologia, è una percentuale delle sole spese sostenute in Piemonte (70% del personale dipendente dei CCNL di settore, 40% delle altre voci). Due sessioni l’anno su piattaforma FINDOM: un Comitato di Valutazione assegna fino a 100 punti (più 2 di premialità) e servono almeno 50 punti; i contributi vanno dal punteggio più alto fino a esaurimento dei fondi.",
+  "paginaUfficiale": "https://www.regione.piemonte.it/web/temi/fondi-progetti-europei/fondo-europeo-sviluppo-regionale-fesr/programma-regionale-fesr-2021-2027/piemonte-film-tv-fund",
+  "fontiUrl": [
+    {
+      "titolo": "Bando Piemonte Film Tv Fund 2026 (testo integrale, 53 pagine)",
+      "url": "https://bandi.regione.piemonte.it/system/files/bando%20PFTF%202026_2.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Bando Piemonte Film Tv Fund 2026 – copia pubblicata nella pagina della prima sessione (file identico)",
+      "url": "https://bandi.regione.piemonte.it/system/files/bando%20PFTF%202026_1.pdf",
+      "tipo": "avviso",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina del bando – Piemonte Film Tv Fund 2026, seconda sessione",
+      "url": "https://bandi.regione.piemonte.it/contributi-finanziamenti/piemonte-film-tv-fund-2026-seconda-sessione",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Pagina del bando – Piemonte Film Tv Fund 2026, prima sessione",
+      "url": "https://bandi.regione.piemonte.it/contributi-finanziamenti/piemonte-film-tv-fund-2026-prima-sessione",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.G.R. 30 marzo 2026, n. 5-2390 – scheda di misura Piemonte Film TV Fund per gli anni 2026 e 2027",
+      "url": "https://bandi.regione.piemonte.it/system/files/Deliberazione%20della%20Giunta%20Regionale%2030%20marzo%202026%2C%20n.%205-2390%20BUR.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 28 luglio 2026, n. 359 – graduatoria, assegnazione dei contributi e dinieghi della prima sessione 2026",
+      "url": "https://bandi.regione.piemonte.it/system/files/dd%20359%20sul%20Bollettino.pdf",
+      "tipo": "graduatoria",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "D.D. 2 settembre 2026, n. 417 – incremento della dotazione della seconda sessione 2026",
+      "url": "https://bandi.regione.piemonte.it/system/files/D.D.%202%20settembre%202026%2C%20n.%20417_0.pdf",
+      "tipo": "decreto",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Presentazione ufficiale del bando Piemonte Film Tv Fund 2026 (slide)",
+      "url": "https://bandi.regione.piemonte.it/system/files/presentazione%20bando%20PFTF%202026_0.pdf",
+      "tipo": "faq",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica: Allegato 1b Application Form Finzione",
+      "url": "https://bandi.regione.piemonte.it/system/files/Allegato%201b_Application_Form_Finzione_5.xls",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica: Allegato 1b Application Form Animazione",
+      "url": "https://bandi.regione.piemonte.it/system/files/Allegato%201b_Application_Form_Animazione_5.xls",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica: Allegato 1c Piano finanziario",
+      "url": "https://bandi.regione.piemonte.it/system/files/Allegato%201c_Piano_finanziario_5.xls",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Modulistica: Allegato 1d Costi di produzione",
+      "url": "https://bandi.regione.piemonte.it/system/files/Allegato%201d_Costi%20di%20produzione_5.xls",
+      "tipo": "modulistica",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Scheda informativa Regione Piemonte – Piemonte Film TV Fund (elenco di tutte le edizioni e degli atti)",
+      "url": "https://www.regione.piemonte.it/web/temi/fondi-progetti-europei/fondo-europeo-sviluppo-regionale-fesr/programma-regionale-fesr-2021-2027/piemonte-film-tv-fund",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    },
+    {
+      "titolo": "Film Commission Torino Piemonte – Film Funds",
+      "url": "https://www.fctp.it/film-funds.php",
+      "tipo": "pagina",
+      "consultato": "2026-11-14"
+    }
+  ],
+  "storicoEdizioni": [
+    {
+      "anno": 2023,
+      "pubblicato": "2023-04-20",
+      "scadenza": "2023-06-06",
+      "nota": "Prima sessione: domande dal 02/05/2023 ore 9 al 06/06/2023 ore 12. Bando approvato con D.D. n. 89 del 19/04/2023 (B.U.R. n. 16 del 20/04/2023, s.o. n. 4). Esito: D.D. n. 248 del 02/08/2023, poi rettificata."
+    },
+    {
+      "anno": 2023,
+      "pubblicato": "2023-04-20",
+      "scadenza": "2023-10-10",
+      "nota": "Seconda sessione: domande dal 04/09/2023 al 10/10/2023 ore 12. Esito: D.D. n. 420 del 07/12/2023."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-02-01",
+      "scadenza": "2024-03-18",
+      "nota": "Prima sessione: domande dal 12/02/2024 al 18/03/2024 ore 12. Bando approvato con D.D. n. 20 dell’01/02/2024 (B.U.R. n. 5 dell’01/02/2024, s.o. n. 4), rettificato con D.D. n. 29 del 07/02/2024. Esito: D.D. n. 137 del 09/05/2024."
+    },
+    {
+      "anno": 2024,
+      "pubblicato": "2024-02-01",
+      "scadenza": "2024-10-10",
+      "nota": "Seconda sessione: domande dal 02/09/2024 al 10/10/2024 ore 12. Esito: D.D. n. 380 del 03/12/2024."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-02-06",
+      "scadenza": "2025-03-17",
+      "nota": "Prima sessione: domande dal 10/02/2025 al 17/03/2025 ore 12. Bando approvato con D.D. n. 14 del 30/01/2025 (B.U.R. n. 6 del 06/02/2025). Esito: D.D. n. 141 del 14/05/2025."
+    },
+    {
+      "anno": 2025,
+      "pubblicato": "2025-02-06",
+      "scadenza": "2025-10-13",
+      "nota": "Seconda sessione: domande dal 01/09/2025 al 13/10/2025 ore 12. Esito: D.D. n. 632 del 05/12/2025."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-04-16",
+      "scadenza": "2026-05-15",
+      "nota": "Prima sessione: domande dal 17/04/2026 ore 9 al 15/05/2026 ore 12; dotazione 4.000.000 euro. Bando approvato con D.D. n. 145 del 14/04/2026 (B.U.R. n. 15 del 16/04/2026). 28 domande, 25 ammesse alla valutazione, 24 in graduatoria (una ritirata), 13 finanziate."
+    },
+    {
+      "anno": 2026,
+      "pubblicato": "2026-04-16",
+      "scadenza": "2026-10-02",
+      "nota": "Seconda sessione: domande dal 31/08/2026 ore 9 al 02/10/2026 ore 12; dotazione 3.000.000 euro portata a 3.920.987,62 con D.D. n. 417 del 02/09/2026. Al 14/11/2026 la pagina del bando è nello stato «Scaduto» e l’esito non è ancora pubblicato."
+    }
+  ],
+  "finestre": [
+    {
+      "anno": 2026,
+      "dal": "2026-04-17",
+      "al": "2026-05-15",
+      "nota": "Prima sessione: dalle ore 09.00 del 17/04/2026 alle ore 12.00 del 15/05/2026 (dotazione 4.000.000 euro)."
+    },
+    {
+      "anno": 2026,
+      "dal": "2026-08-31",
+      "al": "2026-10-02",
+      "nota": "Seconda sessione: dalle ore 09.00 del 31/08/2026 alle ore 12.00 del 02/10/2026 (dotazione 3.000.000 euro, portata a 3.920.987,62 con D.D. n. 417 del 02/09/2026)."
+    }
+  ],
+  "prossimaEdizione": {
+    "anno": 2027,
+    "periodoAtteso": "bando tra fine gennaio e metà aprile 2027, con due sessioni",
+    "base": "Scheda di misura 2026-2027 (D.G.R. n. 5-2390/2026): 12 milioni per i due anni, 5 per il 2027 secondo la presentazione ufficiale. Dal 2023 ogni edizione ha avuto due sessioni: la prima aperta tra febbraio e maggio, la seconda tra fine agosto e metà ottobre. Al 14/11/2026 il bando 2027 non è pubblicato: criteri e percentuali potrebbero cambiare."
+  },
+  "sogliaTotale": 50,
+  "punteggioMassimo": 102,
+  "spesaTerritorioMinPct": 0,
+  "commissione": {
+    "componenti": 5,
+    "descrizione": "Comitato di Valutazione nominato con atto specifico (par. 3.2.3): il Responsabile di Gestione, che lo coordina; un funzionario del Settore Promozione delle Attività Culturali; tre esperti del comparto cinema, ciascuno competente in almeno una delle aree: produzione, finanziamenti e sostenibilità economica; progetti di finzione; progetti di animazione. Nella prima seduta il Comitato adotta un proprio regolamento di funzionamento: il bando non dice se il punteggio è una media, una somma o un giudizio collegiale. Per il 2026 il Comitato è stato costituito con D.D. n. 260 del 12/06/2026 e ha valutato la prima sessione il 03/07/2026."
+  },
+  "invio": {
+    "canale": "piattaforma",
+    "indirizzo": "https://servizi.regione.piemonte.it/catalogo/bandi-cultura-turismo-sport-finanziamenti-domande",
+    "oggetto": "",
+    "regole": [
+      "Domanda compilata sul modulo telematico del sistema «FINanziamenti DOMande» (FINDOM), entro le ore 12.00 dell’ultimo giorno della sessione.",
+      "Il PDF della domanda generato dal sistema va firmato digitalmente dal legale rappresentante (o da un delegato interno all’azienda con poteri di firma) e ricaricato insieme agli allegati obbligatori.",
+      "Firma digitale CAdES (.p7m) su domanda e allegati: senza firma riconosciuta la domanda decade.",
+      "Marca da bollo da 16,00 euro: annullata e conservata in originale; si allega la copia con il numero seriale.",
+      "Una sola domanda per sessione; una nuova domanda vale solo se dichiara di annullare e sostituire la precedente. La stessa impresa può però essere produttore principale di un progetto e produttore minoritario o esecutivo di un altro nella stessa sessione.",
+      "I documenti in lingua diversa dall’italiano vanno presentati con traduzione asseverata.",
+      "Richieste di integrazione: risposta entro 10 giorni via PEC, altrimenti la domanda non è ammessa.",
+      "Il protocollo di sviluppo sostenibile sottoscritto va inviato via PEC a attivitaculturali@cert.regione.piemonte.it prima dell’avvio delle riprese (o delle lavorazioni, per l’animazione)."
+    ]
+  },
+  "categorie": [
+    {
+      "id": "lungometraggio-finzione",
+      "nome": "Lungometraggi di finzione a principale sfruttamento cinematografico",
+      "griglia": "finzione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 300000,
+          "2027": 300000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "opera-singola-finzione",
+      "nome": "Opere di finzione singole televisive e web (film TV), anche SVOD",
+      "griglia": "finzione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 300000,
+          "2027": 300000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "serie-finzione",
+      "nome": "Opere di finzione seriali televisive e web (serie TV), anche SVOD",
+      "griglia": "finzione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 400000,
+          "2027": 400000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": null,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "sceneggiatura"
+    },
+    {
+      "id": "lungometraggio-animazione",
+      "nome": "Lungometraggi di animazione a principale sfruttamento cinematografico (durata minima 52 minuti)",
+      "griglia": "animazione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 400000,
+          "2027": 400000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": 52,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "opera-singola-animazione",
+      "nome": "Opere di animazione singole televisive e web, anche SVOD (durata minima 24 minuti)",
+      "griglia": "animazione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 150000,
+          "2027": 150000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": 24,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    },
+    {
+      "id": "serie-animazione",
+      "nome": "Opere di animazione seriali televisive e web, anche SVOD (durata minima 24 minuti)",
+      "griglia": "animazione",
+      "soglie": {},
+      "contributo": {
+        "percentuale": 40,
+        "massimali": {
+          "2026": 400000,
+          "2027": 400000
+        },
+        "nota": "40% delle spese ammissibili sostenute in Piemonte, non del costo di produzione (70% per il personale dipendente residente dei CCNL G111, G121 e G131, a costi standard); contributo minimo 50.000 euro."
+      },
+      "dotazione": {},
+      "durataMin": 24,
+      "durataMaxEsclusa": null,
+      "greenFilm": true,
+      "testoQualita": "trattamento"
+    }
+  ],
+  "griglie": {
+    "finzione": {
+      "id": "finzione",
+      "nome": "Progetti di finzione (lungometraggi, opere singole e seriali televisive e web)",
+      "sezioni": [
+        {
+          "id": "1",
+          "nome": "Chiarezza della definizione degli obiettivi e loro coerenza con quelli indicati nel PR e nei bandi attuativi",
+          "max": 4,
+          "obiettivo": "Note di regia e note di produzione.",
+          "criteri": [
+            {
+              "id": "1",
+              "nome": "Note di regia e note di produzione",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "visione",
+              "descrizione": "Articolazione, chiarezza e approfondimento delle note di regia e delle note di produzione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreto = 2; buono = 3; ottimo = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreto"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "nome": "Innovatività delle tecnologie introdotte per effetto del progetto proposto e della capacità di quest’ultimo di innalzare il livello di competitività dell’impresa proponente",
+          "max": 27,
+          "obiettivo": "Originalità e qualità del progetto, credenziali di autori, regista, interpreti (o autori della grafica) e capi reparto.",
+          "criteri": [
+            {
+              "id": "2a",
+              "nome": "Originalità del progetto",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "2b",
+              "nome": "Qualità del progetto",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, capacità di elaborazione drammaturgica, sviluppo e approfondimento dei personaggi, dei dialoghi, e coerenza tra le diverse componenti (idea, struttura, personaggi e dialoghi).",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4; eccellente = 5.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "eccellente"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "2c",
+              "nome": "Credenziali degli autori del soggetto e degli sceneggiatori",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali degli autori del soggetto e degli sceneggiatori.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "2d",
+              "nome": "Credenziali del regista sul piano nazionale e internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali del regista sul piano nazionale e internazionale.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "2e",
+              "nome": "Credenziali degli attori principali",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali degli attori principali sul piano nazionale e internazionale.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 5. La scala del bando passa da 3 (ottimo) a 5 (di chiara fama internazionale): il valore 4 non è previsto.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_artistico"
+              ]
+            },
+            {
+              "id": "2f",
+              "nome": "Regista alla sua opera prima o seconda",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "formazione",
+              "descrizione": "Regista alla sua opera prima o seconda: no = 0; opera seconda = 1; opera prima = 2.",
+              "principio": "Definizioni dell’Allegato 3 del bando: opera prima = regista esordiente che non ha mai diretto un lungometraggio distribuito nelle sale italiane o estere; opera seconda = regista che ne ha diretto al massimo uno.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Opera prima"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Opera seconda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "No"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "2g",
+              "nome": "Valore complessivo delle credenziali dei capi reparto",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Valore complessivo delle credenziali di: casting director (no AOSM), direttore della fotografia, compositori delle musiche originali, montatore, costumista, scenografo e coordinatore post produzione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3. I curriculum di queste figure sono documentazione facoltativa ai fini della valutazione di merito (par. 3.1.2).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_tecnico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "nome": "Capacità del progetto di favorire una ottimizzazione dei costi di gestione e una maggiore efficienza e integrazione dei processi aziendali interni e/o di filiera",
+          "max": 5,
+          "obiettivo": "Quota della post-produzione investita in Piemonte.",
+          "criteri": [
+            {
+              "id": "3",
+              "nome": "Post-produzione: investimento in Piemonte sul complessivo",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post produzione. Rapporto fra investimento in Piemonte e investimento complessivo.",
+              "calcolo": "Rapporto percentuale tra l’investimento per la post-produzione in Piemonte e l’investimento complessivo per la post-produzione: inferiore al 30% = 0; dal 30 al 50% = 1; dal 51 al 70% = 3; oltre il 70% = 5.",
+              "documenti": [
+                "modulo3",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "nome": "Capacità del progetto di sviluppare nuove aree strategiche, anche con riferimento alle proprie performance ambientali e sociali",
+          "max": 6,
+          "obiettivo": "Riprese diffuse sul territorio fuori Torino e valorizzazione del patrimonio piemontese.",
+          "criteri": [
+            {
+              "id": "4a",
+              "nome": "Riprese in Piemonte a oltre 40 km dal capoluogo di regione",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Finzione – Rapporto fra i giorni di ripresa complessivi in Piemonte e i giorni di ripresa effettuati nel territorio piemontese a oltre 40 Km dal capoluogo di regione.",
+              "calcolo": "Quota percentuale dei giorni di ripresa in Piemonte effettuati a oltre 40 km da Torino sul totale dei giorni di ripresa in Piemonte: presente ma inferiore al 10% = 0; dall’11 al 30% = 1; dal 31 al 50% = 2; oltre il 50% = 3.",
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            },
+            {
+              "id": "4c",
+              "nome": "Visibilità e valorizzazione del patrimonio del Piemonte",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Ricaduta della produzione in termini di visibilità e potenziale valorizzazione del patrimonio culturale, artistico, storico, ambientale e paesaggistico del Piemonte.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima con esplicita ambientazione in Piemonte = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima con esplicita ambientazione in Piemonte"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "nome": "Capacità del progetto di rafforzare la posizione all’impresa nel mercato o filiera di riferimento o di favorire il suo ingresso in nuovi mercati e filiere",
+          "max": 6,
+          "obiettivo": "Accordi di coproduzione e di distribuzione.",
+          "criteri": [
+            {
+              "id": "5a",
+              "nome": "Accordi di coproduzione",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Rilevanza quantitativa e qualitativa degli accordi di coproduzione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "coproduzione",
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "5b",
+              "nome": "Accordi di distribuzione dell’opera",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "distribuzione",
+              "descrizione": "Rilevanza quantitativa e qualitativa degli accordi di distribuzione dell’opera.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "nome": "Capacità del progetto di contribuire al rafforzamento dimensionale del proponente",
+          "max": 3,
+          "obiettivo": "Radicamento in Piemonte del soggetto proponente.",
+          "criteri": [
+            {
+              "id": "6",
+              "nome": "Soggetto proponente con sede legale in Piemonte",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Soggetto proponente con sede legale in Piemonte: non presente = 0; produttore esecutivo e coproduttore = 2; produttore principale = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Proponente con sede legale in Piemonte: produttore principale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Proponente con sede legale in Piemonte: produttore esecutivo e coproduttore"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non presente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "nome": "Capacità del progetto di azionare ricadute positive in termini occupazionali",
+          "max": 31,
+          "obiettivo": "Spesa, giornate e occupazione sul territorio piemontese.",
+          "criteri": [
+            {
+              "id": "7a",
+              "nome": "Rilevanza dell’investimento in Piemonte",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rilevanza dell’investimento in Piemonte (budget costi ammissibili in Piemonte, vedi paragrafo 2.5.1).",
+              "metrica": "spesaTerritorioEuro",
+              "unita": "euro",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 1250000,
+                  "punti": 6,
+                  "etichetta": "Superiore a 1.250.000,00 euro"
+                },
+                {
+                  "da": 1000001,
+                  "punti": 5,
+                  "etichetta": "Da 1.000.001 a 1.250.000 euro"
+                },
+                {
+                  "da": 750001,
+                  "punti": 4,
+                  "etichetta": "Da 750.001 a 1 milione di euro"
+                },
+                {
+                  "da": 500001,
+                  "punti": 3,
+                  "etichetta": "Da 500.001 a 750.000 euro"
+                },
+                {
+                  "da": 300001,
+                  "punti": 2,
+                  "etichetta": "Da 300.001 a 500.000 euro"
+                },
+                {
+                  "da": 200001,
+                  "punti": 1,
+                  "etichetta": "Da 200.001 a 300.000 euro"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino a 200.000 euro"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            },
+            {
+              "id": "7b",
+              "nome": "Rapporto tra investimento in Piemonte e investimento complessivo",
+              "max": 3,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra investimento in Piemonte e investimento complessivo.",
+              "metrica": "spesaTerritorioSuCosto",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 70,
+                  "punti": 3,
+                  "etichetta": "Oltre 70%"
+                },
+                {
+                  "da": 31,
+                  "punti": 2,
+                  "etichetta": "Da 31 a 70%"
+                },
+                {
+                  "da": 11,
+                  "punti": 1,
+                  "etichetta": "Dall’11 al 30%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino al 10%"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            },
+            {
+              "id": "7c",
+              "nome": "Personale residente in Piemonte nella componente artistica",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Coinvolgimento di personale residente in Piemonte nella componente artistica. Categorie: Autori/Sceneggiatori (almeno uno tra gli autori/sceneggiatori); Attori principali (almeno uno tra gli attori principali); Regia.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Tutte le categorie"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "Due categorie rappresentate"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Una categoria rappresentata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non presente"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7d",
+              "nome": "Capi reparto e figure di rilievo della troupe residenti in Piemonte",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Coinvolgimento di personale residente in Piemonte nella troupe delle seguenti figure professionali – capi-reparto o figure di rilevante importanza: aiuto regista, organizzatore, casting director (no AOSM), direttore di produzione, direttore della fotografia, operatore alla macchina, fonico, costumista, scenografo, capo truccatore, capo parrucchiere, capo macchinista, capo elettricista, montatore, compositore delle musiche originali e coordinatore di post produzione.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Otto o più figure professionali presenti"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "Da cinque a sette figure professionali presenti"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "Quattro figure professionali presenti"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Tre figure professionali presenti"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Due figure professionali presenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna o una sola figura professionale"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7e",
+              "nome": "Maestranze tecniche residenti in Piemonte sul totale",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra maestranze tecniche residenti in Piemonte e maestranze tecniche totali (ad esclusione di giornalieri, generici, figurazioni ed attori).",
+              "metrica": "tecniciSiciliani",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 70,
+                  "punti": 6,
+                  "etichetta": "Oltre il 70%"
+                },
+                {
+                  "da": 41,
+                  "punti": 4,
+                  "etichetta": "Da 41 a 70%"
+                },
+                {
+                  "da": 11,
+                  "punti": 2,
+                  "etichetta": "Dall’11 al 40%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino al 10%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7f",
+              "nome": "Giorni di ripresa in Piemonte rispetto al complessivo",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra giorni di lavorazione previsti in Piemonte e giorni di riprese complessivi. Finzione: giorni di ripresa in Piemonte rispetto al complessivo.",
+              "metrica": "ripreseTerritorioPct",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 70,
+                  "punti": 6,
+                  "etichetta": "Oltre il 70%"
+                },
+                {
+                  "da": 31,
+                  "punti": 4,
+                  "etichetta": "Da 31 a 70%"
+                },
+                {
+                  "da": 11,
+                  "punti": 2,
+                  "etichetta": "Dall’11 al 30%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino al 10%"
+                }
+              ],
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "nome": "Capacità organizzativa tecnica e gestionale del beneficiario in relazione agli obiettivi ed al contenuto dell’intervento",
+          "max": 7,
+          "obiettivo": "Esperienza pregressa e capacità organizzativa della società.",
+          "criteri": [
+            {
+              "id": "8a",
+              "nome": "Curriculum società",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Esperienza pregressa e capacità organizzativa: curriculum società.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; eccellente = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "eccellente"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "8b",
+              "nome": "Struttura organizzativa",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Esperienza pregressa e capacità organizzativa: struttura organizzativa.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "nome": "Sostenibilità economica in rapporto agli impegni assunti nel programma di attività finanziato",
+          "max": 4,
+          "obiettivo": "Solidità dei bilanci della società (score card dell’Allegato 4).",
+          "criteri": [
+            {
+              "id": "9",
+              "nome": "Analisi dei bilanci mediante score card",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Analisi dei bilanci mediante score card (Allegato 4 del bando), sugli ultimi due esercizi approvati.",
+              "calcolo": "Punteggio totale della score card (da 0 a 17): 0-5 punti = 0; 6-9 punti = 1; 10-12 punti = 2; 13-14 punti = 3; 15-17 punti = 4.",
+              "documenti": [
+                "altro"
+              ],
+              "principio": "Score card dell’Allegato 4: per ciascuno dei cinque indici di bilancio (redditività dei ricavi, copertura degli interessi, indebitamento e altri) si calcola la media ponderata degli ultimi due esercizi approvati (peso 0,4 al penultimo e 0,6 all’ultimo) e si assegnano da 0 a 3 punti; si aggiunge 1 punto per ciascuno dei parametri DSO e DPO, per un totale da 0 a 17. I bilanci vanno caricati tra i documenti «Altro»."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "nome": "Qualità economico-finanziaria del progetto in termini di miglior rapporto tra costi e benefici che si intende ottenere per effetto del progetto",
+          "max": 3,
+          "obiettivo": "Congruità del budget.",
+          "criteri": [
+            {
+              "id": "10",
+              "nome": "Congruità dei costi rispetto al progetto",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Congruità dei costi rispetto al progetto.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "nome": "Capacità economico-finanziaria del beneficiario in termini di disponibilità di risorse necessarie a coprire i costi di gestione degli investimenti previsti",
+          "max": 4,
+          "obiettivo": "Disponibilità delle risorse per coprire i costi del progetto.",
+          "criteri": [
+            {
+              "id": "11",
+              "nome": "Capacità economico-finanziaria del beneficiario",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Capacità economico-finanziaria del beneficiario in termini di disponibilità di risorse necessarie a coprire i costi di gestione degli investimenti previsti.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: inadeguata = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "inadeguata"
+                }
+              ],
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P",
+          "nome": "Criteri di premialità (fuori dalla scala di 100)",
+          "max": 2,
+          "obiettivo": "Rilevanza della componente femminile o giovanile nella partecipazione finanziaria al capitale sociale: i punti si aggiungono dopo il controllo della soglia di 50 su 100.",
+          "criteri": [
+            {
+              "id": "P1",
+              "nome": "Partecipazione femminile al capitale sociale pari o superiore al 30%",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Partecipazione femminile al capitale sociale pari o superiore al 30% (criterio di premialità «assente/presente»).",
+              "principio": "Si verifica sulla compagine societaria del proponente alla data della domanda (visura camerale).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Presente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            },
+            {
+              "id": "P2",
+              "nome": "Partecipazione giovanile (di età pari o inferiore a 35 anni) al capitale sociale pari o superiore al 30%",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Partecipazione giovanile (di età pari o inferiore a 35 anni) al capitale sociale pari o superiore al 30% (criterio di premialità «assente/presente»).",
+              "principio": "Si verifica sulla compagine societaria del proponente alla data della domanda (visura camerale).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Presente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "animazione": {
+      "id": "animazione",
+      "nome": "Progetti di animazione (lungometraggi, opere singole e seriali televisive e web)",
+      "sezioni": [
+        {
+          "id": "1",
+          "nome": "Chiarezza della definizione degli obiettivi e loro coerenza con quelli indicati nel PR e nei bandi attuativi",
+          "max": 4,
+          "obiettivo": "Note di regia e note di produzione.",
+          "criteri": [
+            {
+              "id": "1",
+              "nome": "Note di regia e note di produzione",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "visione",
+              "descrizione": "Articolazione, chiarezza e approfondimento delle note di regia e delle note di produzione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreto = 2; buono = 3; ottimo = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreto"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "nome": "Innovatività delle tecnologie introdotte per effetto del progetto proposto e della capacità di quest’ultimo di innalzare il livello di competitività dell’impresa proponente",
+          "max": 27,
+          "obiettivo": "Originalità e qualità del progetto, credenziali di autori, regista, interpreti (o autori della grafica) e capi reparto.",
+          "criteri": [
+            {
+              "id": "2a",
+              "nome": "Originalità del progetto",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Originalità della storia, solidità, tono e ritmo della struttura narrativa.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "2b",
+              "nome": "Qualità del progetto",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "scrittura",
+              "descrizione": "Qualità della scrittura, bibbia grafica e letteraria, qualità dell’approccio visivo, dell’artwork e dell’approccio grafico.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4; eccellente = 5.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "eccellente"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "modulo2"
+              ]
+            },
+            {
+              "id": "2c",
+              "nome": "Credenziali degli autori del soggetto e degli sceneggiatori",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali degli autori del soggetto e degli sceneggiatori.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_autori"
+              ]
+            },
+            {
+              "id": "2d",
+              "nome": "Credenziali del regista sul piano nazionale e internazionale",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali del regista sul piano nazionale e internazionale.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "2e",
+              "nome": "Credenziali degli autori della grafica principali",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "artistica",
+              "descrizione": "Credenziali degli autori della grafica principali sul piano nazionale e internazionale.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; di chiara fama internazionale = 5. La scala del bando passa da 3 (ottimo) a 5 (di chiara fama internazionale): il valore 4 non è previsto.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "di chiara fama internazionale"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_artistico"
+              ]
+            },
+            {
+              "id": "2f",
+              "nome": "Regista alla sua opera prima o seconda",
+              "max": 2,
+              "tipo": "discreto",
+              "famiglia": "formazione",
+              "descrizione": "Regista alla sua opera prima o seconda: no = 0; opera seconda = 1; opera prima = 2.",
+              "principio": "Definizioni dell’Allegato 3 del bando: opera prima = regista esordiente che non ha mai diretto un lungometraggio distribuito nelle sale italiane o estere; opera seconda = regista che ne ha diretto al massimo uno.",
+              "valori": [
+                {
+                  "punti": 2,
+                  "etichetta": "Opera prima"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Opera seconda"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "No"
+                }
+              ],
+              "documenti": [
+                "cv_regista"
+              ]
+            },
+            {
+              "id": "2g",
+              "nome": "Valore complessivo delle credenziali dei capi reparto",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "tecnica",
+              "descrizione": "Credenziali del direttore compositing e VFX (effetti speciali), compositori delle musiche originali, supervisore storyboard e supervisore animazione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3. I curriculum di queste figure sono documentazione facoltativa ai fini della valutazione di merito (par. 3.1.2).",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_tecnico"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "nome": "Capacità del progetto di favorire una ottimizzazione dei costi di gestione e una maggiore efficienza e integrazione dei processi aziendali interni e/o di filiera",
+          "max": 5,
+          "obiettivo": "Quota della post-produzione investita in Piemonte.",
+          "criteri": [
+            {
+              "id": "3",
+              "nome": "Post-produzione: investimento in Piemonte sul complessivo",
+              "max": 5,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Fase di post produzione. Rapporto fra investimento in Piemonte e investimento complessivo.",
+              "calcolo": "Rapporto percentuale tra l’investimento per la post-produzione in Piemonte e l’investimento complessivo per la post-produzione: inferiore al 30% = 0; dal 30 al 50% = 1; dal 51 al 70% = 3; oltre il 70% = 5.",
+              "documenti": [
+                "modulo3",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "nome": "Capacità del progetto di sviluppare nuove aree strategiche, anche con riferimento alle proprie performance ambientali e sociali",
+          "max": 6,
+          "obiettivo": "Presenza femminile e giovanile nel personale di produzione piemontese e valorizzazione del patrimonio piemontese.",
+          "criteri": [
+            {
+              "id": "4b",
+              "nome": "Componente femminile o under 35 nel personale di produzione residente in Piemonte",
+              "max": 3,
+              "tipo": "qualitativo",
+              "famiglia": "sostenibilita",
+              "descrizione": "Animazione – Rilevanza della componente femminile o under 35 nel personale di produzione residente in Piemonte.",
+              "calcolo": "Quota percentuale di donne o under 35 nel personale di produzione residente in Piemonte: dal 20 al 30% = 1; dal 31 al 50% = 2; oltre il 50% = 3 (sotto il 20% il bando non prevede punti).",
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "4c",
+              "nome": "Visibilità e valorizzazione del patrimonio del Piemonte",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "territorio_contenuto",
+              "descrizione": "Ricaduta della produzione in termini di visibilità e potenziale valorizzazione del patrimonio culturale, artistico, storico, ambientale e paesaggistico del Piemonte.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima con esplicita ambientazione in Piemonte = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima con esplicita ambientazione in Piemonte"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "sceneggiatura",
+                "piano_lavorazione",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "nome": "Capacità del progetto di rafforzare la posizione all’impresa nel mercato o filiera di riferimento o di favorire il suo ingresso in nuovi mercati e filiere",
+          "max": 6,
+          "obiettivo": "Accordi di coproduzione e di distribuzione.",
+          "criteri": [
+            {
+              "id": "5a",
+              "nome": "Accordi di coproduzione",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "internazionale",
+              "descrizione": "Rilevanza quantitativa e qualitativa degli accordi di coproduzione.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "coproduzione",
+                "finanziamenti"
+              ]
+            },
+            {
+              "id": "5b",
+              "nome": "Accordi di distribuzione dell’opera",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "distribuzione",
+              "descrizione": "Rilevanza quantitativa e qualitativa degli accordi di distribuzione dell’opera.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "distribuzione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "nome": "Capacità del progetto di contribuire al rafforzamento dimensionale del proponente",
+          "max": 3,
+          "obiettivo": "Radicamento in Piemonte del soggetto proponente.",
+          "criteri": [
+            {
+              "id": "6",
+              "nome": "Soggetto proponente con sede legale in Piemonte",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Soggetto proponente con sede legale in Piemonte: non presente = 0; produttore esecutivo e coproduttore = 2; produttore principale = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "Proponente con sede legale in Piemonte: produttore principale"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Proponente con sede legale in Piemonte: produttore esecutivo e coproduttore"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non presente"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "nome": "Capacità del progetto di azionare ricadute positive in termini occupazionali",
+          "max": 31,
+          "obiettivo": "Spesa, giornate e occupazione sul territorio piemontese.",
+          "criteri": [
+            {
+              "id": "7a",
+              "nome": "Rilevanza dell’investimento in Piemonte",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rilevanza dell’investimento in Piemonte (budget costi ammissibili in Piemonte, vedi paragrafo 2.5.1).",
+              "metrica": "spesaTerritorioEuro",
+              "unita": "euro",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 1250000,
+                  "punti": 6,
+                  "etichetta": "Superiore a 1.250.000,00 euro"
+                },
+                {
+                  "da": 1000001,
+                  "punti": 5,
+                  "etichetta": "Da 1.000.001 a 1.250.000 euro"
+                },
+                {
+                  "da": 750001,
+                  "punti": 4,
+                  "etichetta": "Da 750.001 a 1 milione di euro"
+                },
+                {
+                  "da": 500001,
+                  "punti": 3,
+                  "etichetta": "Da 500.001 a 750.000 euro"
+                },
+                {
+                  "da": 300001,
+                  "punti": 2,
+                  "etichetta": "Da 300.001 a 500.000 euro"
+                },
+                {
+                  "da": 200001,
+                  "punti": 1,
+                  "etichetta": "Da 200.001 a 300.000 euro"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino a 200.000 euro"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            },
+            {
+              "id": "7b",
+              "nome": "Rapporto tra investimento in Piemonte e investimento complessivo",
+              "max": 3,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra investimento in Piemonte e investimento complessivo.",
+              "metrica": "spesaTerritorioSuCosto",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 70,
+                  "punti": 3,
+                  "etichetta": "Oltre 70%"
+                },
+                {
+                  "da": 31,
+                  "punti": 2,
+                  "etichetta": "Da 31 a 70%"
+                },
+                {
+                  "da": 11,
+                  "punti": 1,
+                  "etichetta": "Dall’11 al 30%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino al 10%"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            },
+            {
+              "id": "7c",
+              "nome": "Personale residente in Piemonte nella componente artistica",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Coinvolgimento di personale residente in Piemonte nella componente artistica. Categorie: Autori/Sceneggiatori (almeno uno tra gli autori/sceneggiatori); Autori della grafica (almeno uno tra i principali); Regia.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Tutte le categorie"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "Due categorie rappresentate"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Una categoria rappresentata"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Non presente"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7d",
+              "nome": "Capi reparto e figure di rilievo della troupe residenti in Piemonte",
+              "max": 5,
+              "tipo": "discreto",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Coinvolgimento di personale residente in Piemonte nella troupe delle seguenti figure professionali – capi reparto o figure di rilevante importanza: aiuto regista, direttore di produzione, montatore, compositore delle musiche originali, supervisore animazione, supervisore storyboard, direttore compositing e VFX, supervisore scenografie, supervisore design, supervisore layout, supervisore rigging, modelling 3D, supervisore texture, supervisore lighting, supervisore rendering e supervisore pipeline.",
+              "valori": [
+                {
+                  "punti": 5,
+                  "etichetta": "Otto o più figure professionali presenti"
+                },
+                {
+                  "punti": 4,
+                  "etichetta": "Da cinque a sette figure professionali presenti"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "Quattro figure professionali presenti"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "Tre figure professionali presenti"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "Due figure professionali presenti"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Nessuna o una sola figura professionale"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7e",
+              "nome": "Maestranze tecniche residenti in Piemonte sul totale",
+              "max": 6,
+              "tipo": "fasce",
+              "famiglia": "ricaduta_lavoro",
+              "descrizione": "Rapporto tra maestranze tecniche residenti in Piemonte e maestranze tecniche totali (ad esclusione di giornalieri, generici, figurazioni ed attori).",
+              "metrica": "tecniciSiciliani",
+              "unita": "pct",
+              "peso": 1,
+              "fasce": [
+                {
+                  "oltre": 70,
+                  "punti": 6,
+                  "etichetta": "Oltre il 70%"
+                },
+                {
+                  "da": 41,
+                  "punti": 4,
+                  "etichetta": "Da 41 a 70%"
+                },
+                {
+                  "da": 11,
+                  "punti": 2,
+                  "etichetta": "Dall’11 al 40%"
+                },
+                {
+                  "da": 0,
+                  "punti": 0,
+                  "etichetta": "Fino al 10%"
+                }
+              ],
+              "documenti": [
+                "modulo2"
+              ]
+            },
+            {
+              "id": "7f",
+              "nome": "Lavorazioni di animazione realizzate in Piemonte",
+              "max": 6,
+              "tipo": "qualitativo",
+              "famiglia": "ricaduta_spesa",
+              "descrizione": "Rapporto tra giorni di lavorazione previsti in Piemonte e giorni di riprese complessivi. Animazione, alternativamente: 1- Realizzazione del design/model pack del lungometraggio o la realizzazione del design/model pack degli episodi della serie; 2- Realizzazione degli storyboard degli episodi della serie o della durata del lungometraggio calcolata in minuti; 3- Realizzazione dell’animazione degli episodi della serie o della durata del lungometraggio calcolata in minuti; 4- Realizzazione del lighting e/o del rendering e/o del compositing e/o della color correction degli episodi della serie della durata del lungometraggio calcolata in minuti.",
+              "calcolo": "Quota percentuale della lavorazione scelta realizzata in Piemonte (episodi della serie o minuti del lungometraggio). Testo letterale del bando: fino al 30% = punti 0; dal 21 al 30% = punti 2; dal 31 al 70% = punti 4; oltre il 70% = punti 6. La prima fascia è in contraddizione con la seconda (probabile refuso per «fino al 20%», che è anche la soglia minima di ammissibilità del par. 2.2.2): da verificare con la Regione.",
+              "documenti": [
+                "piano_lavorazione"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "nome": "Capacità organizzativa tecnica e gestionale del beneficiario in relazione agli obiettivi ed al contenuto dell’intervento",
+          "max": 7,
+          "obiettivo": "Esperienza pregressa e capacità organizzativa della società.",
+          "criteri": [
+            {
+              "id": "8a",
+              "nome": "Curriculum società",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Esperienza pregressa e capacità organizzativa: curriculum società.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3; eccellente = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "eccellente"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa"
+              ]
+            },
+            {
+              "id": "8b",
+              "nome": "Struttura organizzativa",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "societa",
+              "descrizione": "Esperienza pregressa e capacità organizzativa: struttura organizzativa.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buona = 2; ottima = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "cv_societa",
+                "modulo2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "nome": "Sostenibilità economica in rapporto agli impegni assunti nel programma di attività finanziato",
+          "max": 4,
+          "obiettivo": "Solidità dei bilanci della società (score card dell’Allegato 4).",
+          "criteri": [
+            {
+              "id": "9",
+              "nome": "Analisi dei bilanci mediante score card",
+              "max": 4,
+              "tipo": "qualitativo",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Analisi dei bilanci mediante score card (Allegato 4 del bando), sugli ultimi due esercizi approvati.",
+              "calcolo": "Punteggio totale della score card (da 0 a 17): 0-5 punti = 0; 6-9 punti = 1; 10-12 punti = 2; 13-14 punti = 3; 15-17 punti = 4.",
+              "documenti": [
+                "altro"
+              ],
+              "principio": "Score card dell’Allegato 4: per ciascuno dei cinque indici di bilancio (redditività dei ricavi, copertura degli interessi, indebitamento e altri) si calcola la media ponderata degli ultimi due esercizi approvati (peso 0,4 al penultimo e 0,6 all’ultimo) e si assegnano da 0 a 3 punti; si aggiunge 1 punto per ciascuno dei parametri DSO e DPO, per un totale da 0 a 17. I bilanci vanno caricati tra i documenti «Altro»."
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "nome": "Qualità economico-finanziaria del progetto in termini di miglior rapporto tra costi e benefici che si intende ottenere per effetto del progetto",
+          "max": 3,
+          "obiettivo": "Congruità del budget.",
+          "criteri": [
+            {
+              "id": "10",
+              "nome": "Congruità dei costi rispetto al progetto",
+              "max": 3,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Congruità dei costi rispetto al progetto.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: insufficiente = 0; sufficiente = 1; buono = 2; ottimo = 3.",
+              "valori": [
+                {
+                  "punti": 3,
+                  "etichetta": "ottimo"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "buono"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "insufficiente"
+                }
+              ],
+              "documenti": [
+                "modulo3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "nome": "Capacità economico-finanziaria del beneficiario in termini di disponibilità di risorse necessarie a coprire i costi di gestione degli investimenti previsti",
+          "max": 4,
+          "obiettivo": "Disponibilità delle risorse per coprire i costi del progetto.",
+          "criteri": [
+            {
+              "id": "11",
+              "nome": "Capacità economico-finanziaria del beneficiario",
+              "max": 4,
+              "tipo": "discreto",
+              "famiglia": "piano_finanziario",
+              "descrizione": "Capacità economico-finanziaria del beneficiario in termini di disponibilità di risorse necessarie a coprire i costi di gestione degli investimenti previsti.",
+              "principio": "Giudizio del Comitato di Valutazione sulla scala del bando: inadeguata = 0; sufficiente = 1; discreta = 2; buona = 3; ottima = 4.",
+              "valori": [
+                {
+                  "punti": 4,
+                  "etichetta": "ottima"
+                },
+                {
+                  "punti": 3,
+                  "etichetta": "buona"
+                },
+                {
+                  "punti": 2,
+                  "etichetta": "discreta"
+                },
+                {
+                  "punti": 1,
+                  "etichetta": "sufficiente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "inadeguata"
+                }
+              ],
+              "documenti": [
+                "finanziamenti",
+                "referenze_bancarie"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P",
+          "nome": "Criteri di premialità (fuori dalla scala di 100)",
+          "max": 2,
+          "obiettivo": "Rilevanza della componente femminile o giovanile nella partecipazione finanziaria al capitale sociale: i punti si aggiungono dopo il controllo della soglia di 50 su 100.",
+          "criteri": [
+            {
+              "id": "P1",
+              "nome": "Partecipazione femminile al capitale sociale pari o superiore al 30%",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Partecipazione femminile al capitale sociale pari o superiore al 30% (criterio di premialità «assente/presente»).",
+              "principio": "Si verifica sulla compagine societaria del proponente alla data della domanda (visura camerale).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Presente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            },
+            {
+              "id": "P2",
+              "nome": "Partecipazione giovanile (di età pari o inferiore a 35 anni) al capitale sociale pari o superiore al 30%",
+              "max": 1,
+              "tipo": "discreto",
+              "famiglia": "sostenibilita",
+              "descrizione": "Partecipazione giovanile (di età pari o inferiore a 35 anni) al capitale sociale pari o superiore al 30% (criterio di premialità «assente/presente»).",
+              "principio": "Si verifica sulla compagine societaria del proponente alla data della domanda (visura camerale).",
+              "valori": [
+                {
+                  "punti": 1,
+                  "etichetta": "Presente"
+                },
+                {
+                  "punti": 0,
+                  "etichetta": "Assente"
+                }
+              ],
+              "documenti": [
+                "altro"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allegati": [
+    {
+      "tipo": "modulo1",
+      "nome": "Domanda di contributo generata da FINDOM, firmata digitalmente (.p7m), con le dichiarazioni sui requisiti",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "identita",
+      "nome": "Allegato 1a – Delega del legale rappresentante con documento d’identità (solo se firma un delegato)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Copia della marca da bollo da 16,00 euro annullata, con numero seriale",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo2",
+      "nome": "Allegato 1b – Application Form (Finzione oppure Animazione)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "finanziamenti",
+      "nome": "Allegato 1c – Piano finanziario dell’opera, con i documenti che provano la copertura minima del 30% del costo a copia campione",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "distribuzione",
+      "nome": "Prospettive distributive: contratto di distribuzione, deal memo o lettera di impegno, oppure contratto di pre-acquisto, coproduzione o attivazione con broadcaster o piattaforma SVOD/VOD",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "modulo3",
+      "nome": "Allegato 1d – Costi di produzione (budget sopra e sotto la linea, con i costi sostenuti in Piemonte)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "piano_lavorazione",
+      "nome": "Piano di lavorazione con le giornate di ripresa in Piemonte e quelle a oltre 40 km da Torino (per l’animazione: giornate di lavorazione in Piemonte)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Cronoprogramma del progetto (inizio lavori, inizio/fine riprese o lavorazioni, inizio/fine attività in Piemonte)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "sceneggiatura",
+      "nome": "Sceneggiatura (finzione) oppure bibbia grafica e letteraria (animazione)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_societa",
+      "nome": "Curriculum e filmografia del produttore",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_autori",
+      "nome": "Curriculum e filmografia di sceneggiatori o autori",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_regista",
+      "nome": "Curriculum e filmografia del regista",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_artistico",
+      "nome": "Curriculum e filmografia degli attori principali (finzione) o degli autori della grafica (animazione)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "referenze_bancarie",
+      "nome": "Allegato 1e – Attestazione bancaria di disponibilità (se l’apporto societario diretto, o quello dei coproduttori/produttori associati, serve a raggiungere il 30% di copertura)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "produttore_esecutivo",
+      "nome": "Contratto ufficiale con la società di produzione e ultimi due bilanci approvati del produttore principale (se il richiedente è produttore esecutivo)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 1f – Dichiarazione dimensionamento PMI (se ci sono imprese collegate, controllate o controllanti)",
+      "obbligo": "se_dichiarato"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegati 1g e 1h – Dichiarazioni antimafia (quella dei familiari conviventi solo per contributi oltre 150.000 euro)",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Allegato 1i – Dichiarazione sul cumulo di aiuti",
+      "obbligo": "sempre"
+    },
+    {
+      "tipo": "cv_tecnico",
+      "nome": "Curriculum in un unico file dei capi reparto (finzione: direttore della fotografia, scenografo, costumista, montatore, autore delle musiche, coordinatore della post-produzione; animazione: direttore compositing e VFX, autore delle musiche, supervisore storyboard, supervisore animazione)",
+      "obbligo": "punteggio"
+    },
+    {
+      "tipo": "altro",
+      "nome": "Storyboard, moodboard, teaser e altri materiali artistici e grafici (anche tramite link)",
+      "obbligo": "consigliato"
+    },
+    {
+      "tipo": "green_film",
+      "nome": "Protocollo disciplinare di sviluppo sostenibile per la certificazione della produzione, da sottoscrivere prima delle riprese o delle lavorazioni e inviare via PEC (audit finale positivo in rendicontazione)",
+      "obbligo": "sempre"
+    }
+  ],
+  "requisiti": [
+    {
+      "id": "pmi",
+      "testo": "Micro, piccola o media impresa secondo l’allegato 1 del Reg. (UE) 651/2014"
+    },
+    {
+      "id": "anzianita",
+      "testo": "Costituita da almeno due anni alla data della domanda, con almeno due bilanci chiusi e approvati"
+    },
+    {
+      "id": "registro",
+      "testo": "Iscritta al Registro delle Imprese (o a un registro equivalente in uno Stato UE o equiparato)"
+    },
+    {
+      "id": "sede",
+      "testo": "Sede legale o unità locale in Piemonte, oppure impegno ad aprire un’unità locale (risultante da visura) entro il pagamento del contributo"
+    },
+    {
+      "id": "indipendente",
+      "testo": "Produttore indipendente (L. 220/2016, art. 2; D.Lgs. 208/2021, art. 3)"
+    },
+    {
+      "id": "ruolo",
+      "testo": "Produttore unico o coproduttore dell’opera, oppure titolare di un contratto di produzione esecutiva con la società di produzione"
+    },
+    {
+      "id": "ateco",
+      "testo": "Attività con codice ATECO 2007 J 59.11 (NACE J 59.11 o equivalente extraeuropeo)"
+    },
+    {
+      "id": "non_avviato",
+      "testo": "Produzione in Piemonte non ancora avviata e nessun impegno giuridicamente vincolante firmato prima della domanda (effetto di incentivazione, pena la revoca totale)"
+    },
+    {
+      "id": "difficolta",
+      "testo": "Non è impresa in difficoltà, né in liquidazione volontaria, scioglimento, cessazione o inattività"
+    },
+    {
+      "id": "regolarita",
+      "testo": "In regola con CCNL e obblighi contributivi, sicurezza sul lavoro, L. 68/1999, antimafia, clausola Deggendorf, assicurazione contro le calamità; nessuna sanzione interdittiva o condanna ostativa; nessuna revoca non restituita su questa misura"
+    },
+    {
+      "id": "tipologia",
+      "testo": "L’opera rientra nelle sei tipologie ammesse: non è un documentario, un cortometraggio, un format, reality, talent o game, né un prodotto informativo o pubblicitario"
+    },
+    {
+      "id": "copertura30",
+      "testo": "Copertura finanziaria documentata di almeno il 30% del costo a copia campione, senza contare il tax credit interno"
+    },
+    {
+      "id": "distribuzione",
+      "testo": "Contratto di distribuzione, deal memo o lettera di impegno, oppure contratto di pre-acquisto, coproduzione o attivazione con broadcaster o piattaforma (la sola lettera di interesse non basta)"
+    },
+    {
+      "id": "lavorazione_minima",
+      "testo": "Finzione: almeno 10 giorni di riprese in Piemonte. Animazione: in Piemonte almeno una lavorazione tra design/model pack, storyboard, animazione, lighting/rendering/compositing/color correction per almeno il 20% degli episodi o della durata"
+    },
+    {
+      "id": "valenza_culturale",
+      "testo": "Valenza culturale: ricorrono almeno due delle sei condizioni del par. 3.2.2"
+    },
+    {
+      "id": "contributo_minimo",
+      "testo": "Il contributo calcolato sulle spese in Piemonte non è inferiore a 50.000 euro"
+    },
+    {
+      "id": "unica",
+      "testo": "Una sola domanda in questa sessione"
+    },
+    {
+      "id": "firma",
+      "testo": "Domanda e allegati firmati digitalmente in formato CAdES (.p7m) e marca da bollo da 16 euro annullata"
+    },
+    {
+      "id": "protocollo_green",
+      "testo": "Impegno a sottoscrivere il protocollo di sviluppo sostenibile prima dell’avvio delle riprese o delle lavorazioni (rispetto del principio DNSH)"
+    }
+  ],
+  "scadenze": [
+    {
+      "id": "anticipo",
+      "etichetta": "Richiesta dell’anticipo del 40% con fideiussione (facoltativa)",
+      "mesi": 2,
+      "giorni": 60,
+      "nota": "Par. 3.3.2 e 3.6: entro 60 giorni dalla data della lettera di concessione del contributo, salvo proroga motivata approvata dal Responsabile di Gestione."
+    },
+    {
+      "id": "rendiconto_finzione",
+      "etichetta": "Rendicontazione finale e fine progetto – progetti di finzione",
+      "mesi": 18,
+      "nota": "Par. 2.3.1, 3.4, 3.5 e 3.6: entro 18 mesi dalla data del provvedimento di concessione, pena la revoca, salvo proroghe concesse dal Responsabile di Gestione."
+    },
+    {
+      "id": "rendiconto_animazione",
+      "etichetta": "Rendicontazione finale e fine progetto – progetti di animazione",
+      "mesi": 24,
+      "nota": "Par. 2.3.1 e 3.6 (e presentazione ufficiale): entro 24 mesi dal provvedimento di concessione. I par. 3.4 e 3.5 dello stesso bando riportano invece 30 mesi: termine da confermare con la Regione."
+    }
+  ],
+  "scadenzeNote": [
+    "Protocollo di sviluppo sostenibile: da sottoscrivere e inviare via PEC prima dell’avvio delle riprese (finzione) o delle lavorazioni (animazione) in Piemonte.",
+    "Osservazioni e opposizioni alla graduatoria: entro 20 giorni dalla pubblicazione.",
+    "Istruttoria: entro 30 giorni dalla chiusura della sessione, più 30 giorni di sospensione per le integrazioni.",
+    "Variazioni dei dati della domanda: da comunicare possibilmente entro 10 giorni e comunque non oltre 30.",
+    "Fideiussione dell’anticipo: durata 18 mesi (24 per l’animazione) dalla lettera di concessione, con proroga automatica fino a tre semestri."
+  ],
+  "erogazione": [
+    {
+      "quota": "anticipo",
+      "percentuale": 40,
+      "condizione": "Facoltativo: richiesta sul Gestionale Finanziamenti entro 60 giorni dalla lettera di concessione, con fideiussione o polizza assicurativa irrevocabile di pari importo secondo lo schema dell’Allegato 1j."
+    },
+    {
+      "quota": "saldo",
+      "percentuale": 60,
+      "condizione": "Dopo la rendicontazione finale e l’esito positivo del controllo di I livello. Senza anticipo il contributo è liquidato in un’unica soluzione (100%) a saldo. Prima del pagamento deve risultare attiva in visura un’unità locale in Piemonte."
+    }
+  ],
+  "note": [
+    "Il contributo non è una percentuale del costo del film: è il 70% delle spese per personale dipendente residente in Piemonte dei CCNL di settore (a costi standard) più il 40% delle altre spese ammissibili sostenute in Piemonte (altro personale dipendente, professionisti con partita IVA residenti, fornitori con sede in Piemonte). Il tetto mostrato nei controlli usa l’aliquota ordinaria del 40% e va letto come indicativo.",
+    "Importi: minimo 50.000 euro; massimo 150.000 euro per le opere di animazione singole, 300.000 euro per lungometraggi di finzione e opere di finzione singole, 400.000 euro per lungometraggi di animazione e per le serie di finzione e di animazione. I costi «sopra la linea» sono imputabili fino a 100.000 euro (IVA esclusa).",
+    "Punteggio minimo 50 su 100, misurato sui criteri da 1 a 11; non ci sono minimi per singolo criterio. I 2 punti di premialità (sezione P: capitale sociale femminile o giovanile almeno al 30%) si aggiungono dopo il controllo della soglia, fino a 102.",
+    "I contributi sono assegnati dal punteggio più alto fino a esaurimento delle risorse; a parità di punteggio precede il progetto con il maggior investimento ammissibile in Piemonte. L’importo non dipende dal punteggio. Nella prima sessione 2026 l’ultimo progetto finanziato (61 punti) ha ricevuto un contributo parziale per esaurimento dei fondi e 11 progetti sopra soglia (da 60 a 53 punti) non sono stati finanziati.",
+    "Il 25% della dotazione è riservato alle micro e piccole imprese (art. 8, comma 5, D.Lgs. 184/2025).",
+    "Non esiste una spesa minima in Piemonte espressa in percentuale del contributo: valgono i requisiti dei 10 giorni di riprese (o del 20% di una lavorazione per l’animazione) e il contributo minimo di 50.000 euro.",
+    "Sono ammissibili solo le spese sostenute dopo la domanda, per attività svolte in Piemonte, intestate e pagate dal beneficiario, con codice domanda e CUP nelle causali. Non sono ammissibili, tra l’altro: producer fee, spese generali, oneri finanziari, IVA recuperabile, rimborsi e note spese, diarie, prestazioni occasionali, personale in somministrazione, forniture sotto i 150 euro, spese verso imprese collegate.",
+    "A consuntivo la spesa in Piemonte può scendere fino al 10% senza conseguenze; tra il 10% e il 30% in meno scatta la revoca parziale per la quota eccedente il 10%; oltre il 30% in meno il contributo è revocato per intero.",
+    "Le variazioni di progetto che toccano elementi valutati vanno chieste via PEC prima della rendicontazione; non sono ammesse se il punteggio ricalcolato porterebbe il progetto fuori dalla graduatoria dei finanziati.",
+    "Cumulo: intensità massima di aiuto del 50% (60% per le produzioni transfrontaliere, 80% per le opere difficili, 100% per le coproduzioni con Paesi DAC); gli obblighi di spesa territoriale in Italia non possono superare l’80% del budget; il tax credit interno è cumulabile entro questi limiti.",
+    "Obblighi principali: copia campione con sottotitolazione intralinguistica e audiodescrizione, audit finale positivo del protocollo di sostenibilità, cartello nei titoli e loghi PR FESR, conferenza stampa e anteprima in Piemonte, contabilità separata, conservazione dei documenti per 10 anni. Il mancato rispetto degli obblighi di comunicazione può costare fino al 3% del contributo."
+  ],
+  "altriBandi": [
+    {
+      "nome": "Piemonte Doc Film Fund (Film Commission Torino Piemonte)",
+      "url": "https://www.fctp.it/info_pdff.php",
+      "descrizione": "Atto distinto di Film Commission Torino Piemonte per lo sviluppo e la produzione di documentari. Bando con scadenza 15/09/2026 (domande dal 17/07/2026 ore 12 sulla piattaforma app.fctp.it), dotazione della sessione 250.000 euro; contributo fino al 50% del budget della fase, da 5.000 a 20.000 euro per lo sviluppo e da 5.000 a 60.000 euro per la produzione (massimo 70.000 euro complessivi per progetto). Valutazione a punteggio di una Commissione: minimo 55 punti su 112. Griglia non trascritta in questa scheda."
+    },
+    {
+      "nome": "Short Film Fund (Film Commission Torino Piemonte, con Fondazione CRT)",
+      "url": "https://www.fctp.it/info_short.php",
+      "descrizione": "Atto distinto per i cortometraggi. Bando con scadenza 15/09/2026 (domande dal 17/07/2026 ore 12 sulla piattaforma app.fctp.it), dotazione della sessione 60.000 euro; contributo fino al 50% del budget, da 10.000 a 30.000 euro. Valutazione a punteggio: minimo 55 punti su 112. Il bando annuncia una seconda sessione con scadenza a dicembre 2026. Griglia non trascritta in questa scheda. Testo: https://www.fctp.it/media/docs/Short_Film_Fund_-_15_settembre_2026_20260717130531.pdf"
+    },
+    {
+      "nome": "Piemonte Film Tv Development Fund (Film Commission Torino Piemonte, con Fondazione Compagnia di San Paolo e Regione Piemonte)",
+      "url": "https://www.fctp.it/piemonte_film_tv_development_fund.php",
+      "descrizione": "Atto distinto per lo sviluppo (non la produzione) di lungometraggi, film TV e serie, riservato a imprese indipendenti con sede legale o operativa in Piemonte. Bando con scadenza 15/09/2026, dotazione della sessione 150.000 euro; contributo fino al 50% del budget di sviluppo, da 10.000 a 50.000 euro. Valutazione a punteggio: minimo 55 punti su 112. Griglia non trascritta in questa scheda. Testo: https://www.fctp.it/media/docs/Piemonte_Film_Tv_Development_Fund_-_15_settembre_2026_20260717122409.pdf"
+    }
+  ],
+  "esitiPubblici": [
+    {
+      "anno": 2026,
+      "titolo": "D.D. n. 359 del 28/07/2026 – graduatoria e assegnazione dei contributi, prima sessione 2026 (24 progetti, punteggi totali da 76 a 53; finanziati i primi 13, fino a 61 punti)",
+      "url": "https://bandi.regione.piemonte.it/system/files/dd%20359%20sul%20Bollettino.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "D.D. n. 632 del 05/12/2025 – esito della seconda sessione 2025",
+      "url": "https://bandi.regione.piemonte.it/system/files/D.D.%205%20dicembre%202025%2C%20n.%20632%20-%20esito.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2025,
+      "titolo": "D.D. n. 141 del 14/05/2025 – esito della prima sessione 2025",
+      "url": "https://bandi.regione.piemonte.it/system/files/D.D.%2014%20maggio%202025%2C%20n.%20141%20-%20Esito.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    },
+    {
+      "anno": 2024,
+      "titolo": "D.D. n. 380 del 03/12/2024 – esito della seconda sessione 2024",
+      "url": "https://bandi.regione.piemonte.it/system/files/D.D.%203%20dicembre%202024%2C%20n.%20380.pdf",
+      "contienePunteggi": true,
+      "perSezione": false
+    }
+  ],
+  "affidabilita": {
+    "griglia": "testo_ufficiale",
+    "citazioni": [
+      {
+        "riferimento": "Par. 3.2.4 «Punteggi e graduatoria» (pag. 25)",
+        "testo": "Accedono alla graduatoria utile alla concessione dei contributi i progetti che hanno ottenuto, con riferimento alla valutazione di merito e tecnico finanziaria, un punteggio pari o superiore a 50 punti su scala di 100 (come da tabella di cui al paragrafo 3.2.3) oltre a punti ottenuti per eventuali premialità. In caso di non raggiungimento del punteggio minimo di 50 punti complessivi, il progetto non viene ammesso a contributo."
+      },
+      {
+        "riferimento": "Par. 3.2.3, tabella dei criteri – criteri 1 e 2 a)-b) (pag. 19; testo ricomposto dalle celle della tabella)",
+        "testo": "Articolazione, chiarezza e approfondimento delle note di regia e delle note di produzione 0 -4 insufficiente = 0 sufficiente = 1 discreto = 2 buono = 3 ottimo = 4 […] a) Originalità del progetto Originalità della storia, solidità, tono e ritmo della struttura narrativa 0–4 insufficiente = 0 sufficiente = 1 discreta = 2 buona = 3 ottima = 4 b) Qualità del progetto 0–5"
+      },
+      {
+        "riferimento": "Par. 3.2.3, tabella dei criteri – criterio 7 a)-b) (pag. 22; testo ricomposto dalle celle della tabella)",
+        "testo": "a) Rilevanza dell’investimento in Piemonte (budget costi ammissibili in Piemonte, vedi paragrafo 2.5.1) 0–6 fino a 200.000 euro = 0 da 200.001 a euro a 300.000 euro = 1 da 300.001 euro a 500.000 euro = 2 da 500.001 euro a 750.000 euro = 3 da 750.001 euro e 1 milione di euro = 4 da 1.000.001 euro e 1.250.000 di euro = 5 superiore a 1.250.000,00 di euro = 6 b) Rapporto tra investimento in Piemonte e investimento complessivo 0-3 fino al 10% = 0 dall’11 al 30% = 1 da 31 a 70% = 2 oltre 70% = 3"
+      },
+      {
+        "riferimento": "Par. 3.2.3, tabella dei criteri – criterio 9, totali e premialità (pagg. 23-24; testo ricomposto dalle celle della tabella)",
+        "testo": "Analisi dei bilanci mediante score card 0-5 punti = 0 6-9 punti = 1 10-12 punti = 2 13-14 punti = 3 15-17 punti = 4 […] Totale 100 Criteri di premialità Assente/presente Punteggio 0/2 […] Partecipazione femminile al capitale sociale pari o superiore al 30% 1 Partecipazione giovanile (di età pari o inferiore a 35 anni) al capitale sociale pari o superiore al 30% 1 Totale 2 TOTALE COMPLESSIVO 102"
+      },
+      {
+        "riferimento": "Par. 2.6 «Tipologia dell’agevolazione» (pag. 13) – importi (elenco puntato reso in linea)",
+        "testo": "Il contributo relativo alla domanda di finanziamento non può essere in ogni caso: inferiore a Euro 50.000,00; superiore a Euro 150.000,00 per le opere di animazione singole televisive e web; superiore a Euro 300.000,00 euro per lungometraggi di finzione e opere di finzione singole televisive e web; superiore a Euro 400.000,00 per lungometraggi di animazione, opere di animazione seriali, televisive e web e opere di finzione seriali, televisive e web."
+      },
+      {
+        "riferimento": "Par. 2.6 (pag. 13) – percentuali",
+        "testo": "a) 70% dei costi ammissibili relativi al personale dipendente residente in Piemonte di cui ai CCNL indicati al punto 1.1 del paragrafo 2.5.1; b) 40% dei costi ammissibili relativi al personale dipendente residente in Piemonte di cui al punto 1.2 del paragrafo 2.5.1; c) 40% dei costi ammissibili relativi ai professionisti del settore cinematografico con partita iva residente in Piemonte […]; d) 40% dei costi ammissibili relativi ai fornitori di beni e servizi, con sede legale o operativa in Piemonte"
+      },
+      {
+        "riferimento": "Par. 3.1 «Come presentare la domanda» (pag. 15)",
+        "testo": "La domanda deve essere inviata nel rispetto della seguente scansione temporale: dalle ore 09.00 del 17/04/2026 alle ore 12.00 del 15/05/2026 dalle ore 09.00 del 31/08/2026 alle ore 12.00 del 02/10/2026"
+      },
+      {
+        "riferimento": "Par. 2.2.2 «Condizioni specifiche di ammissibilità dei progetti» (pagg. 7-8)",
+        "testo": "a) copertura finanziaria minima del 30% del “costo a copia campione” (la percentuale non deve includere l’eventuale quota riconosciuta a titolo di tax credit interno) […] b) essere in possesso di contratti di distribuzione, deal memo o lettera di impegno per la distribuzione o un contratto di pre-acquisto o coproduzione o di attivazione con un broadcaster o una piattaforma SVOD o VOD. […] c) piano di lavorazione che preveda: - per la finzione, un minimo di 10 giorni di riprese in Piemonte"
+      },
+      {
+        "riferimento": "Par. 3.2.3 – Comitato di Valutazione (pag. 19)",
+        "testo": "il Responsabile di Gestione si avvale di un Comitato di Valutazione, nominato con specifico atto, costituito da: - il Responsabile di Gestione, che ne cura anche il coordinamento; - un funzionario del Settore Promozione delle Attività Culturali […]; - tre esperti del comparto cinema […]. In sede di prima seduta il Comitato di Valutazione adotta il regolamento disciplinante le modalità di funzionamento."
+      },
+      {
+        "riferimento": "Par. 3.3.2 «Modalità di erogazione dell’agevolazione» (pagg. 26-27)",
+        "testo": "a) in un'unica soluzione, a seguito dell’approvazione della rendicontazione finale presentata dal beneficiario […] b) oppure in due soluzioni, comprendenti: i) liquidazione di un anticipo pari al 40% del contributo concesso; per la liquidazione dell’anticipo, entro 60 giorni […] dalla data della lettera di concessione del contributo, è necessario attivare la procedura […] ii) liquidazione della rimanente quota a titolo di saldo del contributo concesso, a seguito della presentazione della rendicontazione finale"
+      },
+      {
+        "riferimento": "Par. 2.3.1 «Durata del progetto» (pag. 8)",
+        "testo": "Le imprese beneficiarie sono tenute a consegnare alla Regione Piemonte la rendicontazione finale entro 18 mesi dalla data del provvedimento di concessione del contributo, pena la revoca del contributo stesso (salvo eventuali proroghe richieste e concesse dal Responsabile di Gestione). Per i progetti di animazione la consegna della rendicontazione finale deve avvenire entro 24 mesi dal provvedimento di concessione"
+      },
+      {
+        "riferimento": "Par. 1.4 «Dotazione finanziaria» (pag. 4)",
+        "testo": "Il presente bando mette a disposizione per l’annualità 2026 la somma di Euro 7.000.000,00 in due sessioni: a. prima sessione, con una dotazione finanziaria pari a Euro 4.000.000,00; b. seconda sessione, con una dotazione finanziaria pari a Euro 3.000.000,00. In applicazione dell’art. 8, comma 5, del Decreto Legislativo n. 184 del 27/11/2025, “Codice degli incentivi”, il 25% della suddetta dotazione è riservato alle micro e piccole imprese."
+      }
+    ],
+    "dubbi": [
+      "Nel PDF del bando la colonna «Fascia di punteggio» è disallineata rispetto ai sotto-criteri 2c-2g e 7c-7f. I massimi sono stati attribuiti seguendo l’ordine delle fasce e le scale di valori scritte accanto a ciascun sotto-criterio (2c = 4, 2d = 4, 2e = 5, 2f = 2, 2g = 3; 7c = 5, 7d = 5, 7e = 6, 7f = 6): così la somma è esattamente 100, come dichiarato dal bando.",
+      "Criterio 2e (attori principali / autori della grafica): la scala scritta nel bando è 0, 1, 2, 3 e poi 5 per «di chiara fama internazionale»; il valore 4 non esiste. Trascritto com’è.",
+      "Criterio 4a (finzione): il testo dice «Rapporto fra i giorni di ripresa complessivi in Piemonte e i giorni di ripresa effettuati […] a oltre 40 Km dal capoluogo»; è stato interpretato come quota dei giorni oltre 40 km da Torino sul totale dei giorni in Piemonte. La prima fascia è «presente ma inferiore al 10% = 0», la seconda parte dall’11%: il 10% esatto non è disciplinato.",
+      "Criterio 4b (animazione): le fasce partono dal 20%; sotto il 20% si è assunto 0 punti perché il bando non lo dice.",
+      "Criterio 7f per l’animazione: il bando scrive «fino al 30% = punti 0» e subito dopo «dal 21 al 30% = punti 2». È una contraddizione (probabile refuso per «fino al 20%»): da chiarire con la Regione prima di usare il valore.",
+      "Rendicontazione dei progetti di animazione: 24 mesi nei par. 2.3.1 e 3.6 e nella presentazione ufficiale, 30 mesi nei par. 3.4 e 3.5 dello stesso bando. In «scadenze» è indicato 24.",
+      "Premialità: i 2 punti (sezione P) sono fuori dalla scala di 100 e la soglia di 50 è «su scala di 100», cioè sui criteri da 1 a 11. Non è chiaro se i punteggi pubblicati nelle graduatorie includano la premialità.",
+      "Il bando non dice come il Comitato combina i giudizi dei cinque componenti (media, somma, consenso): lo stabilisce un regolamento interno che non è pubblicato.",
+      "L’aliquota del 40% si applica alle sole spese ammissibili in Piemonte, non al costo di produzione; il personale dipendente dei CCNL G111, G121 e G131 è coperto al 70% a costi standard. Il contributo reale dipende dalla composizione della spesa in Piemonte e va calcolato voce per voce.",
+      "Criteri calcolati dai dati del dossier (corrispondenza scelta in trascrizione): 7a = spesa ammissibile in Piemonte in euro; 7b = spesa in Piemonte ÷ costo complessivo; 7e = quota di tecnici residenti in Piemonte (esclusi giornalieri, generici, figurazioni e attori); 7f finzione = giorni di ripresa in Piemonte ÷ giorni totali. I criteri 3, 4a, 4b, 7f animazione e 9 non hanno un dato corrispondente: li valuta la commissione simulata applicando la regola scritta nel bando.",
+      "Le fasce percentuali sono scritte per numeri interi (per esempio «fino al 10%» e «dall’11 al 30%»): i valori intermedi, come 10,5%, non sono disciplinati. Sono state trascritte con soglia inclusa sul numero iniziale della fascia.",
+      "Criterio 6: «produttore esecutivo e coproduttore = 2» è ambiguo (non è chiaro se basti uno dei due ruoli); non esiste il valore 1.",
+      "Score card (Allegato 4): nel terzo indice «DEBITI FINANZIARI NETTI /» il denominatore non è leggibile nel PDF. Inoltre l’allegato chiede almeno 5/17 per una «positiva valutazione», mentre il criterio 9 dà 0 punti da 0 a 5: non è chiaro se un totale sotto 5 comporti l’esclusione.",
+      "L’Allegato 5 (tabella dei costi standard orari del personale) nel PDF è un’immagine e non è stato trascritto: serve per calcolare la quota al 70%.",
+      "Durata minima di 24 minuti per le opere di animazione seriali: il bando non precisa se si riferisce al singolo episodio o alla durata complessiva. Per la finzione non è indicata alcuna durata minima.",
+      "Seconda sessione 2026 (chiusa il 02/10/2026): al 14/11/2026 l’esito non risulta pubblicato. Negli anni precedenti l’esito della seconda sessione è uscito tra il 3 e il 7 dicembre.",
+      "Edizione 2027: non ancora pubblicata. I massimali per il 2027 sono quelli della scheda di misura 2026-2027 (D.G.R. n. 5-2390); la cifra di 5 milioni per il 2027 viene dalla presentazione ufficiale e dal comunicato della Regione, mentre la D.G.R. indica solo i 12 milioni complessivi. Griglia, percentuali e finestre del 2027 vanno ricontrollate quando uscirà il bando.",
+      "Gli esiti 2023 e della prima sessione 2024 non sono stati aperti; degli altri esiti pubblici è stato verificato che riportano il punteggio totale per progetto, non per criterio.",
+      "I tre fondi di Film Commission Torino Piemonte (Doc Film Fund, Short Film Fund, Development Fund) sono atti distinti con una propria griglia (soglia 55 su 112), non trascritta: documentari e cortometraggi non si possono simulare con questa scheda.",
+      "Verifica indipendente del 14/11/2026: confrontata la griglia con il testo del bando salvato; nessun numero da correggere. Ricerca di modifiche successive: nessuna rettifica, proroga o FAQ sul bando 2026 al 14/11/2026.",
+      "Cura della scheda (14/11/2026): i criteri con una scala di giudizio scritta nel bando sono trattati come punteggi fissi (nessun valore intermedio); la premialità è stata portata nella griglia come sezione P, con la soglia misurata sulle sezioni 1-11 e punteggio massimo 102 (100 + 2)."
+    ]
+  },
+  "verifica": {
+    "esito": "confermata",
+    "data": "2026-11-14",
+    "correzioni": [],
+    "dubbi": [
+      "Criterio 7f animazione: il testo del bando dice «fino al 30% = punti 0» e poi «dal 21 al 30% = punti 2»; nella scheda è applicata la seconda fascia (21-30% = 2), ma la Regione non ha pubblicato rettifiche o FAQ che lo chiariscano.",
+      "Criterio 4b animazione: sotto il 20% il bando non assegna punti; lo 0 è un’assunzione della scheda.",
+      "Criterio 4a finzione: il testo parla di «rapporto fra i giorni di ripresa complessivi in Piemonte e i giorni […] a oltre 40 Km»; la scheda lo legge come quota dei giorni oltre 40 km da Torino sul totale dei giorni in Piemonte.",
+      "Rendicontazione dell’animazione: 24 mesi ai par. 2.3.1 e 3.6, 30 mesi ai par. 3.4 e 3.5 dello stesso bando.",
+      "Seconda sessione 2026 chiusa il 02/10/2026: al 14/11/2026 la graduatoria non è pubblicata. Il bando 2027 non è uscito (la pagina …-2027-prima-sessione risponde 404): griglia e percentuali 2027 vanno ricontrollate quando sarà pubblicato.",
+      "Il protocollo di sostenibilità (allegato «green_film», obbligo «sempre») non va allegato alla domanda: è obbligatorio pena esclusione dai benefici, ma si sottoscrive e si invia via PEC prima delle riprese o delle lavorazioni."
+    ]
+  },
+  "sogliaSuSezioni": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+  ]
+}
