@@ -295,26 +295,41 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
       raggiungibile: soglia == null ? true : punti + daValutare >= soglia,
     };
   });
-  const totale = r1(sezioni.reduce((a, s) => a + s.punti, 0));
-  const min = r1(sezioni.reduce((a, s) => a + s.min, 0));
-  const max = r1(sezioni.reduce((a, s) => a + s.max, 0));
-  const rigoroso = r1(sezioni.reduce((a, s) => a + s.rigoroso, 0));
+  // penalità del bando (es. −1 senza rating di legalità): si applicano quando il dossier le conferma
+  const penalita = (bando.penalita || []).filter((x) => dati.penalita?.[x.id]).map((x) => ({ ...x }));
+  const meno = penalita.reduce((a, x) => a + x.punti, 0);
+  const totale = r1(sezioni.reduce((a, s) => a + s.punti, 0) + meno);
+  const min = r1(sezioni.reduce((a, s) => a + s.min, 0) + meno);
+  const max = r1(sezioni.reduce((a, s) => a + s.max, 0) + meno);
+  const rigoroso = r1(sezioni.reduce((a, s) => a + s.rigoroso, 0) + meno);
+  // soglia complessiva: sull'intero punteggio oppure solo sulle sezioni indicate dal bando
+  const suSezioni = bando.sogliaSuSezioni?.length ? new Set(bando.sogliaSuSezioni) : null;
+  const perSoglia = (k) => (suSezioni ? r1(sezioni.filter((s) => suSezioni.has(s.id)).reduce((a, s) => a + s[k], 0) + meno) : { punti: totale, min, rigoroso }[k]);
   const completo = sezioni.every((s) => s.completo);
   const sotto = sezioni.filter((s) => !s.superata);
   const motivi = [];
   if (completo) {
-    if (totale < bando.sogliaTotale) motivi.push(`Punteggio complessivo ${fmt(totale)} sotto la soglia di ${bando.sogliaTotale}.`);
+    if (perSoglia('punti') < bando.sogliaTotale) motivi.push(suSezioni ? `Punteggio delle sezioni ${[...suSezioni].join(', ')} ${fmt(perSoglia('punti'))} sotto la soglia di ${bando.sogliaTotale}.` : `Punteggio complessivo ${fmt(totale)} sotto la soglia di ${bando.sogliaTotale}.`);
     for (const s of sotto) motivi.push(`Sezione ${s.id} a ${fmt(s.punti)}: minimo richiesto ${s.soglia}.`);
   }
+  // soglie combinate: somme di criteri o di sezioni con un minimo proprio
+  const tuttiCriteri = sezioni.flatMap((s) => s.criteri);
+  const combinate = (categoria.soglieCombinate || bando.soglieCombinate || []).map((sc) => {
+    const parti = [...sc.criteri.map((id) => tuttiCriteri.find((c) => c.id === id)), ...sc.sezioni.map((id) => sezioni.find((s) => s.id === id))].filter(Boolean);
+    const somma = (k) => r1(parti.reduce((a, x) => a + (x[k] ?? x.punti ?? 0), 0));
+    const nome = sc.etichetta || [...sc.criteri.map((c) => `criterio ${c}`), ...sc.sezioni.map((x) => `sezione ${x}`)].join(' + ');
+    return { ...sc, nome, punti: somma('punti'), min: somma('min'), rigoroso: somma('rigoroso'), completa: parti.every((x) => x.punti != null), superata: somma('punti') >= sc.minimo };
+  });
+  if (completo) for (const sc of combinate) if (!sc.superata) motivi.push(`${sc.nome}: ${fmt(sc.punti)}, minimo richiesto ${fmt(sc.minimo)}.`);
   let esito = 'parziale';
   // «a rischio»: sopra le soglie nella lettura attesa, sotto nella più severa tra i commissari o in quella rigorosa
-  const fragile = (k) => (k === 'min' ? min : rigoroso) < bando.sogliaTotale || sezioni.some((s) => s.soglia != null && s[k] < s.soglia);
+  const fragile = (k) => combinate.some((sc) => sc[k] < sc.minimo) || perSoglia(k) < bando.sogliaTotale || sezioni.some((s) => s.soglia != null && s[k] < s.soglia);
   if (completo) esito = motivi.length ? 'sotto_soglia' : (fragile('min') || fragile('rigoroso') ? 'a_rischio' : 'ammissibile');
   const sezioniFragili = completo && !motivi.length ? sezioni.filter((s) => s.soglia != null && s.rigoroso < s.soglia && s.punti >= s.soglia).map((s) => s.id) : [];
   const irraggiungibili = sezioni.filter((s) => !s.raggiungibile);
   return {
     categoria: categoria.nome, sogliaTotale: bando.sogliaTotale, massimo: bando.punteggioMassimo || 100,
-    sezioni, totale, min, max, rigoroso, sezioniFragili, completo, esito, motivi,
+    sezioni, totale, min, max, rigoroso, sezioniFragili, completo, esito, motivi, penalita, combinate, totaleSoglia: perSoglia('punti'), sogliaSuSezioni: suSezioni ? [...suSezioni] : null,
     bloccanti: irraggiungibili.map((s) => `Sezione ${s.id}: anche con il massimo nei criteri ancora da valutare non si raggiunge il minimo di ${s.soglia}.`),
   };
 }

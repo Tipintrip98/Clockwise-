@@ -130,6 +130,9 @@ tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; f
   .gst-libera-mia > .gst-libera-stato { padding-bottom: 0; }
 }
 @media (max-width: 680px) {
+  .gst-kpi-griglia { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .gst-kpi { padding: 10px 11px; }
+  .gst-kpi-v { font-size: 1.06rem; }
   .gst-adesso { grid-template-columns: minmax(0, 1fr); }
   .gst-conto { text-align: left; display: flex; gap: 4px 10px; align-items: baseline; flex-wrap: wrap; }
   .gst-conto-n { font-size: 2.1rem; }

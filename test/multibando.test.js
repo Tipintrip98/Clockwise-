@@ -221,3 +221,30 @@ test('registro dei bandi: la Sicilia c’è sempre, il catalogo è ordinato e se
   assert.equal(tutti.length, BANDI_PREDEFINITI.length + SCHEDE_BANDI.length);
   for (const b of BANDI_PREDEFINITI) assert.ok(b.simulabile !== false && b.verificato !== false, `simulabile e verificato: ${b.id}`);
 });
+
+test('soglia su alcune sezioni e penalità', () => {
+  const b = preparaBando({ ...INVENTATO, sogliaSuSezioni: ['1', '3'], sogliaTotale: 50, penalita: [{ id: 'legalita', testo: 'Senza rating di legalità', punti: 1 }] });
+  const giudizi = { a: [{ commissario: 'x', punteggio: 20, rigoroso: 20 }], b: [{ commissario: 'x', punteggio: 15, rigoroso: 15 }], e: [{ commissario: 'x', punteggio: 9, rigoroso: 9 }], f: [{ commissario: 'x', punteggio: 4, rigoroso: 4 }] };
+  const d = dati();
+  let r = componiRisultato(b, 'lungometraggi', d, giudizi);
+  assert.equal(r.totaleSoglia, 48); // 20+15+9+4: la sezione 2 non conta per la soglia
+  assert.equal(r.esito, 'sotto_soglia');
+  assert.match(r.motivi[0], /sezioni 1, 3/);
+  d.penalita = { legalita: true };
+  r = componiRisultato(b, 'lungometraggi', d, giudizi);
+  assert.equal(r.totale, 48 + 18 - 1);
+  assert.equal(r.penalita.length, 1);
+  assert.ok(validaBando(sanificaBando({ ...INVENTATO, sogliaSuSezioni: ['9'] })).errori.some((e) => /inesistente/.test(e)));
+});
+
+test('soglie combinate su criteri e sezioni', () => {
+  const b = preparaBando({ ...INVENTATO, soglieCombinate: [{ etichetta: 'Sceneggiatura + piano', criteri: ['a', 'e'], minimo: 30 }, { sezioni: ['1', '3'], minimo: 40 }] });
+  const giudizi = (a) => ({ a: [{ commissario: 'x', punteggio: a, rigoroso: a }], b: [{ commissario: 'x', punteggio: 15, rigoroso: 15 }], e: [{ commissario: 'x', punteggio: 9, rigoroso: 9 }], f: [{ commissario: 'x', punteggio: 4, rigoroso: 4 }] });
+  let r = componiRisultato(b, 'lungometraggi', dati(), giudizi(18));
+  assert.equal(r.combinate[0].punti, 27);
+  assert.equal(r.esito, 'sotto_soglia');
+  assert.ok(r.motivi.some((m) => /Sceneggiatura \+ piano: 27/.test(m)));
+  r = componiRisultato(b, 'lungometraggi', dati(), giudizi(24));
+  assert.ok(r.combinate.every((x) => x.superata));
+  assert.ok(validaBando(sanificaBando({ ...INVENTATO, soglieCombinate: [{ criteri: ['zz'], minimo: 3 }] })).errori.some((e) => /inesistente/.test(e)));
+});

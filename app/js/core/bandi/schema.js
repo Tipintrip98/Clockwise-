@@ -62,6 +62,11 @@ const mappaNumeri = (o, max = 40) => {
   return out;
 };
 
+const soglieComb = (v) => elenco(v, 20).map((x) => ({
+  etichetta: testo(x?.etichetta, 200), minimo: numero(x?.minimo) ?? 0,
+  criteri: elenco(x?.criteri, 40).map((c) => testo(c, 24)).filter(Boolean), sezioni: elenco(x?.sezioni, 20).map((c) => testo(c, 12)).filter(Boolean),
+})).filter((x) => x.minimo > 0 && (x.criteri.length || x.sezioni.length));
+
 function sanificaCriterio(c) {
   const tipo = ['qualitativo', 'discreto', 'fasce'].includes(c?.tipo) ? c.tipo : 'qualitativo';
   const out = {
@@ -104,6 +109,12 @@ export function sanificaBando(g) {
     finestre: elenco(b.finestre, 30).map((f) => ({ anno: numero(f?.anno), dal: data(f?.dal), al: data(f?.al), ...(f?.nota ? { nota: testo(f.nota, 300) } : {}) })).filter((f) => f.anno && f.al),
     prossimaEdizione: b.prossimaEdizione && numero(b.prossimaEdizione.anno) ? { anno: numero(b.prossimaEdizione.anno), periodoAtteso: testo(b.prossimaEdizione.periodoAtteso, 120), base: testo(b.prossimaEdizione.base, 400) } : null,
     sogliaTotale: numero(b.sogliaTotale) ?? 0, punteggioMassimo: numero(b.punteggioMassimo) ?? 100,
+    // Soglia complessiva calcolata solo su alcune sezioni (es. A-E, esclusa una sezione di premialità).
+    sogliaSuSezioni: elenco(b.sogliaSuSezioni, 20).map((x) => testo(x, 12)).filter(Boolean),
+    // Penalità che si sottraggono al totale se il dossier ricade nella condizione (es. rating di legalità assente).
+    // Minimi su somme di criteri o di sezioni (es. «criteri 1+5 almeno 25», «A+B almeno 40»); valgono per tutte le categorie salvo categorie[].soglieCombinate.
+    soglieCombinate: soglieComb(b.soglieCombinate),
+    penalita: elenco(b.penalita, 20).map((x, i) => ({ id: slug(x?.id, 40) || `p${i + 1}`, testo: testo(x?.testo, 400), punti: -Math.abs(numero(x?.punti) ?? 0) })).filter((x) => x.testo && x.punti < 0),
     spesaTerritorioMinPct: numero(b.spesaTerritorioMinPct) ?? 0, spesaTerritorioMinSuCostoPct: numero(b.spesaTerritorioMinSuCostoPct) ?? 0,
     producerFeeMaxPct: numero(b.producerFeeMaxPct), consuntivoMinPct: numero(b.consuntivoMinPct), regolaContributo: b.regolaContributo === 'proporzionale_al_primo' ? 'proporzionale_al_primo' : 'pieno',
     commissione: { componenti: numero(b.commissione?.componenti), descrizione: testo(b.commissione?.descrizione, 1500) },
@@ -115,6 +126,7 @@ export function sanificaBando(g) {
       dotazione: mappaNumeri(c?.dotazione),
       durataMin: numero(c?.durataMin), durataMaxEsclusa: numero(c?.durataMaxEsclusa), greenFilm: c?.greenFilm === true,
       testoQualita: c?.testoQualita === 'trattamento' ? 'trattamento' : 'sceneggiatura',
+      ...(Array.isArray(c?.soglieCombinate) ? { soglieCombinate: soglieComb(c.soglieCombinate) } : {}),
     })),
     griglie: {},
     allegati: elenco(b.allegati, 60).map((a) => ({ tipo: TIPI_ALLEGATO.includes(a?.tipo) ? a.tipo : 'altro', nome: testo(a?.nome, 300), obbligo: OBBLIGHI.includes(a?.obbligo) ? a.obbligo : 'consigliato', ...(Array.isArray(a?.criteri) ? { criteri: a.criteri.map((x) => testo(x, 24)) } : {}), ...(Array.isArray(a?.formati) ? { formati: a.formati.map((x) => testo(x, 8)) } : {}), ...(a?.unico ? { unico: true } : {}) })).filter((a) => a.nome),
@@ -209,6 +221,11 @@ export function validaBando(b) {
       if (c.contributo.percentuale < 0 || c.contributo.percentuale > 100) errori.push(`Categoria «${c.nome}»: percentuale di contributo fuori scala.`);
     }
   }
+  for (const sc of [...(b?.soglieCombinate || []), ...(b?.categorie || []).flatMap((c) => c.soglieCombinate || [])]) {
+    for (const cid of sc.criteri) if (!griglie.some((g) => g.sezioni.some((x) => x.criteri.some((k) => k.id === cid)))) errori.push(`Soglia combinata su un criterio inesistente (${cid}).`);
+    for (const sid of sc.sezioni) if (!griglie.some((g) => g.sezioni.some((x) => x.id === sid))) errori.push(`Soglia combinata su una sezione inesistente (${sid}).`);
+  }
+  for (const sid of b?.sogliaSuSezioni || []) if (!griglie.some((g) => g.sezioni.some((x) => x.id === sid))) errori.push(`Soglia su una sezione inesistente (${sid}).`);
   for (const f of b?.finestre || []) if (f.dal && f.al && f.dal > f.al) errori.push(`Finestra ${f.anno}: la data di apertura segue quella di chiusura.`);
   const simulabile = haGriglia && !errori.length && b.tipoValutazione !== 'automatico' && b.tipoValutazione !== 'nessuna';
   return { ok: !errori.length, simulabile, errori, avvisi };
