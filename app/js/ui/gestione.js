@@ -28,7 +28,7 @@ export function schedaGestione(corpo, p, bando, mostra) {
   p.gestione = assicuraGestione(p.gestione);
   p.legale = p.legale || { domande: [], contratti: null, bozze: [], dataDecreto: '' };
   const contesto = { p, bando, mostra, g: p.gestione, leg: p.legale, terr: bando.territorio || 'regione' };
-  const area = h('div.stack');
+  const area = h('div.stack.gst');
   const { barra, apri } = sottoNavigazione('gestione', SEZIONI, area, contesto);
   metti(corpo, barra, area,
     h('p.muted.small.gst-piede', 'Termini, quote e minimi vengono dal bando in uso; dove il programma non ha il dato lo dice e rimanda all’avviso. Fanno fede l’avviso, il decreto di concessione e le comunicazioni dell’ente.'));
@@ -564,13 +564,14 @@ function vistaRendiconto(area, ctx, apri) {
         h('div.spread', h('h2', 'Consuntivo contro preventivo'),
           h('span.tag', r.origine === 'preventivo' ? 'Preventivo: da Produzione › Preventivo' : r.origine === 'dati' ? 'Preventivo: solo il totale dei Dati chiave' : 'Preventivo non disponibile')),
         r.origine !== 'preventivo' ? h('div.notice', 'Per il confronto voce per voce serve il preventivo. ', h('button.btn.s', { type: 'button', onclick: () => { S.sotto.produzione = 'preventivo'; mostra('produzione'); } }, 'Apri il preventivo →')) : null,
-        vociMostrate.length ? h('div.tablewrap', h('table.gst-consuntivo',
+        vociMostrate.length ? h('div.tablewrap.gst-schede', h('table.gst-consuntivo',
           h('thead', h('tr', h('th', 'Voce'), h('th.r', 'Preventivo'), h('th.r', 'Consuntivo'), h('th.r', 'Scostamento'), h('th.r', `Ammissibile in ${terr}`))),
           h('tbody', vociMostrate.map((v) => h('tr',
-            h('td', v.id ? [h('strong', v.id), ` ${v.nome}`] : h('span.tag.warn', 'Senza voce'), v.righe ? h('div.muted.small', `${fmt(v.righe, 0)} ${v.righe === 1 ? 'spesa' : 'spese'}`) : null),
-            h('td.r.num', v.preventivo == null ? '—' : soldi(v.preventivo)), h('td.r.num', soldi(v.consuntivo)), h('td.r.num', scostamento(v)), h('td.r.num', soldi(v.territorio))))),
-          h('tfoot', h('tr', h('td', h('strong', 'Totale')), h('td.r.num', r.totali.preventivo == null ? '—' : soldi(r.totali.preventivo)), h('td.r.num', h('strong', soldi(r.totali.consuntivo))),
-            h('td.r.num', r.totali.scostamento == null ? '—' : `${r.totali.scostamento > 0 ? '+' : ''}${soldi(r.totali.scostamento)}`), h('td.r.num', soldi(r.spesaTerritorio))))))
+            h('td.gst-c-voce-nome', v.id ? [h('strong', v.id), ` ${v.nome}`] : h('span.tag.warn', 'Senza voce'), v.righe ? h('div.muted.small', `${fmt(v.righe, 0)} ${v.righe === 1 ? 'spesa' : 'spese'}`) : null),
+            h('td.r.num', { dataset: { et: 'Preventivo' } }, v.preventivo == null ? '—' : soldi(v.preventivo)), h('td.r.num', { dataset: { et: 'Consuntivo' } }, soldi(v.consuntivo)),
+            h('td.r.num', { dataset: { et: 'Scostamento' } }, scostamento(v)), h('td.r.num', { dataset: { et: `In ${terr}` } }, soldi(v.territorio))))),
+          h('tfoot', h('tr', h('td.gst-c-voce-nome', h('strong', 'Totale')), h('td.r.num', { dataset: { et: 'Preventivo' } }, r.totali.preventivo == null ? '—' : soldi(r.totali.preventivo)), h('td.r.num', { dataset: { et: 'Consuntivo' } }, h('strong', soldi(r.totali.consuntivo))),
+            h('td.r.num', { dataset: { et: 'Scostamento' } }, r.totali.scostamento == null ? '—' : `${r.totali.scostamento > 0 ? '+' : ''}${soldi(r.totali.scostamento)}`), h('td.r.num', { dataset: { et: `In ${terr}` } }, soldi(r.spesaTerritorio))))))
           : h('p.muted.small', 'Nessuna spesa registrata e nessun preventivo: la tabella si riempie dal Registro spese.'),
         g.ivaCosto ? h('p.muted.small', 'Importi con l’IVA non recuperabile, come scelto nel Registro spese.') : h('p.muted.small', 'Importi IVA esclusa, come nel budget del dossier.')),
 
@@ -648,7 +649,7 @@ function vistaPunteggio(area, ctx, apri) {
       h('div.panel.stack',
         h('div.spread', h('div', h('h2', 'Dati effettivi'), h('p.muted.small', 'Accanto a ogni campo il valore dichiarato nel dossier.')),
           vuoti.length ? h('button.btn.s', { type: 'button', id: 'gst-copia-dichiarati', onclick: () => { for (const k of vuoti) { const [gruppo, c] = k.split('.'); eff[gruppo][c] = leggi(p.dati, k); } cambia(); toast('Valori dichiarati copiati: correggi quelli cambiati'); } }, 'Parti dai valori dichiarati') : null),
-        h('div.grid.w', numerici.map((k) => {
+        h('div.grid.w.gst-effettivi', numerici.map((k) => {
           const [gruppo, c] = k.split('.');
           const dich = leggi(p.dati, k), id = `gst-eff-${gruppo}-${c}`;
           const sbagliato = incongrui.some((x) => x.territorio === k || x.totale === k);
@@ -656,7 +657,7 @@ function vistaPunteggio(area, ctx, apri) {
             h('input', { id, type: 'number', min: '0', step: '1', inputmode: 'numeric', value: eff[gruppo][c] ?? '', 'aria-invalid': sbagliato ? 'true' : null, onchange: (e) => { eff[gruppo][c] = e.target.value === '' ? null : Math.max(0, Number(e.target.value)); cambia(); } }),
             h('span', dich == null ? 'non dichiarato' : `dichiarato: ${fmt(dich, 0)}`));
         })),
-        incongrui.length ? h('div.notice.bad', { role: 'alert' }, h('strong', 'Da correggere: '), incongrui.map((x) => `${etichettaCampo(x.territorio).toLowerCase()} (${fmt(x.valoreTerritorio, 0)}) più alti del totale (${fmt(x.valoreTotale, 0)})`).join('; '), '. Con questi numeri la percentuale supererebbe il 100%.') : null,
+        incongrui.length ? h('div.notice.bad', { role: 'alert' }, h('strong', 'Da correggere: '), incongrui.map((x) => `${etichettaCampo(x.territorio).replace(/^./, (c) => c.toLowerCase())} (${fmt(x.valoreTerritorio, 0)}) più alti del totale (${fmt(x.valoreTotale, 0)})`).join('; '), '. Con questi numeri la percentuale supererebbe il 100%.') : null,
         campi.includes('spesa') ? h('div.grid.w',
           h('div.field', h('span', `Spesa ammissibile in ${terr}, dal registro`), h('div.gst-kpi-v', g.spese.length ? soldi(r.spesaTerritorio) : '—'), h('span', `dichiarata: ${euro(p.dati.economici?.spesaSicilia)}`)),
           campoImporto('Oppure indicala a mano €', eff.spesaTerritorio, (n) => { eff.spesaTerritorio = n; cambia(); }, { id: 'gst-eff-spesa', placeholder: 'se il registro non è completo' }, 'Se compilato, vale questo al posto del registro.')) : null,
@@ -670,7 +671,7 @@ function vistaPunteggio(area, ctx, apri) {
           h('tbody', esito.criteri.map((c) => {
             const [classe, etichetta] = STATO[c.stato];
             return h('tr',
-              h('td', { dataset: { et: 'Criterio' } }, h('strong', c.id), ` ${c.nome}`, h('div.muted.small', `fino a ${fmt(c.max)} punti`)),
+              h('td.gst-c-voce-nome', h('strong', c.id), ` ${c.nome}`, h('div.muted.small', `fino a ${fmt(c.max)} punti`)),
               h('td', { dataset: { et: 'Dichiarato' } }, h('span.num', c.dichiarato.valore), c.dichiarato.dettaglio && h('div.muted.small', c.dichiarato.dettaglio), c.dichiarato.fascia && h('div.muted.small', c.dichiarato.fascia)),
               h('td', { dataset: { et: 'Effettivo' } }, h('span.num', c.effettivo.valore), c.effettivo.dettaglio && h('div.muted.small', c.effettivo.dettaglio), c.effettivo.fascia && h('div.muted.small', c.effettivo.fascia)),
               h('td.r.num', { dataset: { et: 'Punti' } }, c.dichiarato.punti == null ? '—' : fmt(c.dichiarato.punti), ' → ', c.effettivo.punti == null ? '—' : h('strong', fmt(c.effettivo.punti))),

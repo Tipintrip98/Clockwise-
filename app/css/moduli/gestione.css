@@ -131,6 +131,9 @@ tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; f
 }
 @media (max-width: 680px) {
   .gst-kpi-griglia { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .grid.gst-effettivi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gst .btn { white-space: normal; max-width: 100%; }
+  .gst-effettivi .field > span:first-child { min-height: 2.4em; }
   .gst-kpi { padding: 10px 11px; }
   .gst-kpi-v { font-size: 1.06rem; }
   .gst-adesso { grid-template-columns: minmax(0, 1fr); }
@@ -146,7 +149,11 @@ tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; f
 
   /* tabelle a schede: una scheda per riga, ogni cella con la sua etichetta */
   .gst-schede { max-height: none; border: 0; background: transparent; box-shadow: none; overflow: visible; }
-  .gst-schede table, .gst-schede tbody, .gst-schede tr, .gst-schede td, .gst-schede tbody th { display: block; width: auto; }
+  .gst-schede table, .gst-schede tbody, .gst-schede tfoot, .gst-schede tr, .gst-schede td, .gst-schede tbody th { display: block; width: auto; }
+  .gst-schede tfoot tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 14px; margin-top: 10px; padding: 12px 14px; border-radius: var(--r-s); background: var(--surface-2); }
+  .gst-schede tfoot td { padding: 0; border: 0; background: transparent; text-align: left; }
+  .gst-schede tfoot td[data-et]::before { content: attr(data-et); display: block; font-size: .68rem; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .gst-schede .gst-c-voce-nome { grid-column: 1 / -1; }
   .gst-schede thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .gst-schede tbody { display: flex; flex-direction: column; gap: 10px; }
   .gst-schede tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
