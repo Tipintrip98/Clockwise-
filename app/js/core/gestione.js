@@ -924,7 +924,11 @@ export function campiDaConfermare(criteri) {
   return [...CAMPI_EFFETTIVI.map(([k]) => k), 'spesa', 'costo'].filter((k) => tutti.has(k));
 }
 
-/** Dati a consuntivo nella stessa forma dei Dati chiave: giorni e professionisti effettivi, spesa e costo dal registro. */
+/**
+ * Dati a consuntivo nella stessa forma dei Dati chiave: giorni e professionisti effettivi, spesa e costo dal registro.
+ * Il contributo resta quello richiesto: i criteri della griglia sono scritti su quello (es. Sicilia 4.5, «rispetto al
+ * contributo richiesto»), mentre il minimo di spesa per la revoca si misura sul concesso nel rendiconto.
+ */
 export function datiConsuntivo({ dati, effettivi = {}, spesaTerritorio = null, costoConsuntivo = null }) {
   const e = dati?.economici || {};
   return {
@@ -933,6 +937,17 @@ export function datiConsuntivo({ dati, effettivi = {}, spesaTerritorio = null, c
     professionisti: Object.fromEntries(Object.keys(dati?.professionisti || {}).map((k) => [k, num(effettivi.professionisti?.[k])])),
     economici: { ...e, spesaSicilia: num(effettivi.spesaTerritorio) ?? num(spesaTerritorio), costoProduzione: num(costoConsuntivo) || null },
   };
+}
+
+/** Coppie in cui il valore nel territorio supera il totale (giorni o professionisti): sono errori di battitura, la percentuale supererebbe il 100%. */
+export function incongruenzeEffettivi(effettivi = {}) {
+  const out = [];
+  for (const [tot, terr] of [['giorni.prepTot', 'giorni.prepSicilia'], ['giorni.ripreseTot', 'giorni.ripreseSicilia'], ['giorni.postTot', 'giorni.postSicilia'], ['professionisti.artTot', 'professionisti.artSicilia'], ['professionisti.crewTot', 'professionisti.crewSicilia']]) {
+    const leggi = (k) => { const [g, c] = k.split('.'); return num(effettivi?.[g]?.[c]); };
+    const t = leggi(tot), n = leggi(terr);
+    if (t != null && n != null && n > t) out.push({ totale: tot, territorio: terr, valoreTotale: t, valoreTerritorio: n });
+  }
+  return out;
 }
 
 /**
@@ -1011,10 +1026,11 @@ const calendario = (giorniLavorativi) => Math.max(1, Math.ceil((giorniLavorativi
  * Proposta di date a partire dal primo giorno di riprese e dai giorni di lavorazione dei Dati chiave
  * (giorni lavorativi portati a giorni di calendario su settimane di cinque giorni). È un punto di partenza da correggere.
  */
-export function proponiCronoprogramma({ inizioRiprese, giorni = {}, sviluppoGiorni = 90, consegnaGiorni = 30, uscitaDopoGiorni = 120 }) {
+export function proponiCronoprogramma({ inizioRiprese, fineRiprese: fineNota = '', giorni = {}, sviluppoGiorni = 90, consegnaGiorni = 30, uscitaDopoGiorni = 120 }) {
   if (!eData(inizioRiprese)) return null;
   const prep = calendario(num(giorni.prepTot) || 20), riprese = calendario(num(giorni.ripreseTot) || 20), post = calendario(num(giorni.postTot) || 40);
-  const fineRiprese = aggiungiGiorni(inizioRiprese, riprese - 1);
+  // una fine delle riprese già indicata (in Tappe e scadenze) si tiene: le fasi successive partono da lì
+  const fineRiprese = eData(fineNota) && fineNota >= inizioRiprese ? fineNota : aggiungiGiorni(inizioRiprese, riprese - 1);
   const inizioPrep = aggiungiGiorni(inizioRiprese, -prep), inizioPost = aggiungiGiorni(fineRiprese, 1);
   const finePost = aggiungiGiorni(inizioPost, post - 1), inizioConsegna = aggiungiGiorni(finePost, 1);
   const fineConsegna = aggiungiGiorni(inizioConsegna, consegnaGiorni - 1), uscita = aggiungiGiorni(fineConsegna, uscitaDopoGiorni);

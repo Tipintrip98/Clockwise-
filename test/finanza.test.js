@@ -8,7 +8,7 @@ import {
   aggiungiMesi, differenzaMesi, etichettaMese, meseDaData, mesiDaGiorni, calendarioProposto, calendarioInUso, tappeCalendario,
   distribuisciUscite, curvaDaPreventivo, tempisticaProposta, quoteBandoProposte, quoteSenzaAnticipo, incassiFonte, pianoDiCassa, csvCassa,
   condizioniRecupero, cascataRecupero, puntoDiPareggio, scenariRecupero, recuperoDalPiano, indicatori, giudizioPiano, finanzaVuota, preparaFinanza,
-  preventivoDelDossier,
+  preventivoDelDossier, applicaSceltaAiuti, risorseEstereSulCosto, ingressoTaxCredit,
 } from '../app/js/core/finanza.js';
 import { REGOLE, FONTI, elencoRegole, regola, statoRegola, avvertenzaRegola, fonteRegola, regoleIncerte, AGGIORNATO_AL } from '../app/js/core/finanza-regole.js';
 import { totaliPreventivo } from '../app/js/core/preventivo.js';
@@ -591,4 +591,44 @@ test('dati della scheda: dossier nuovo e dossier salvati prima', () => {
   assert.equal(g.cassa.mesi.prep, 4);
   assert.equal(g.cassa.mesi.post, null);
   assert.ok(g.recupero.ricavi.atteso && 'sala' in g.recupero.ricavi.atteso);
+});
+
+test('scelte «conta come aiuto» per chiave di riga e risorse estere', () => {
+  const piano = [...PIANO, { voce: '2.4', importo: 50000 }];
+  const con = applicaSceltaAiuti(piano, { '2.4#0': true, '1.2#0': false, 'x#9': true });
+  assert.equal(con[5].aiuto, true);
+  assert.equal(con[1].aiuto, false);
+  assert.equal(con[0].aiuto, undefined);
+  assert.equal(piano[5].aiuto, undefined, 'il piano del dossier non cambia');
+  assert.equal(intensitaAiuti({ piano: con, costo: 520000 }).aiuti, 170000);
+  assert.deepEqual(applicaSceltaAiuti(null, {}), []);
+  const e = risorseEstereSulCosto([{ voce: '3.1', importo: 300 }, { voce: '6.1', importo: 100 }, { voce: '8.1', importo: 100 }, { voce: '2.2', importo: 500 }], 1000);
+  assert.deepEqual(e, { importo: 500, pct: 50 });
+  assert.equal(risorseEstereSulCosto(PIANO, 0).pct, null);
+});
+
+test('ingresso del calcolatore: utente, poi preventivo, poi dossier', () => {
+  const base = ingressoTaxCredit({ dati: { ...DATI, tipologiaOpera: 'Film di produzione cinematografica' } });
+  assert.equal(base.opera, 'film');
+  assert.equal(base.costoComplessivo, 470000);
+  assert.equal(base.origine.costoComplessivo, 'dossier');
+  assert.equal(base.producerFee, 30000);
+  assert.equal(base.sopraLaLinea, null);
+  assert.equal(base.coperturaSenzaCredito, 370000);
+  assert.equal(base.apportoProduttore, 80000);
+  assert.equal(base.altriAiuti, 120000);
+  assert.equal(base.risorseEsterePct, null);
+  const prev = totaliPreventivo([{ voce: 'A.1.1', costo: 60000 }, { voce: 'A.4.1', costo: 380000 }, { voce: 'A.9.1', costo: 25000 }]);
+  const conPrev = ingressoTaxCredit({ dati: DATI, preventivo: prev, scelte: { producerFee: 20000, opera: 'tv' } });
+  assert.equal(conPrev.costoComplessivo, 465000);
+  assert.equal(conPrev.origine.costoComplessivo, 'preventivo');
+  assert.equal(conPrev.sopraLaLinea, 60000);
+  assert.equal(conPrev.producerFee, 20000);
+  assert.equal(conPrev.origine.producerFee, 'utente');
+  assert.equal(conPrev.opera, 'tv');
+  const vuoto = ingressoTaxCredit({ dati: {} });
+  assert.equal(vuoto.costoComplessivo, null);
+  assert.equal(vuoto.coperturaSenzaCredito, null);
+  assert.equal(calcolaTaxCredit(vuoto).valido, false);
+  assert.equal(ingressoTaxCredit({ dati: DATI, categoria: 'Documentari' }).opera, 'documentario_cinema');
 });

@@ -265,6 +265,21 @@ export function limiteAiuti({ coproduzione = 'nessuna', categoria = '', costo = 
 export const aiutoPredefinito = (riga) => gruppoFonte(riga?.voce) === 'pubblico';
 export const contaComeAiuto = (riga) => (typeof riga?.aiuto === 'boolean' ? riga.aiuto : aiutoPredefinito(riga));
 
+/**
+ * Piano con le scelte «conta come aiuto» fatte nella scheda Finanza (salvate per chiave di riga, non nel dossier:
+ * così una nuova lettura del Modulo III non le cancella). Le scelte uguali al predefinito non cambiano nulla.
+ */
+export function applicaSceltaAiuti(piano, scelte = {}) {
+  const chiavi = chiaviRighe(piano);
+  return (piano || []).map((r, i) => (typeof scelte?.[chiavi[i]] === 'boolean' ? { ...r, aiuto: scelte[chiavi[i]] } : r));
+}
+
+/** Quota del costo coperta da risorse estere (voci 3.x, 6.1 e 8.1 del Modulo III): decide i tetti maggiorati del tax credit. */
+export function risorseEstereSulCosto(piano, costo) {
+  const estere = importoVoci(piano, (v) => /^3\./.test(v) || v === '6.1' || v === '8.1');
+  return { importo: estere, pct: pct(estere, num(costo) != null && costo > 0 ? costo : null) };
+}
+
 /** Punti percentuali sotto il limite entro i quali si avvisa che ci si sta avvicinando (scelta del programma, non della norma). */
 export const MARGINE_ATTENZIONE_PUNTI = 5;
 
@@ -524,6 +539,45 @@ export function calcolaTaxCredit(ingresso = {}) {
     creditoTeorico, tettoOpera, tettoAnnuo, residuoAnnuo, regolaOpera, regolaAnnuo, risorseEstere: estere,
     credito: cent(credito), creditoCompatibile: cent(creditoCompatibile), limitatoDa, sulCosto: pct(credito, C),
     quote, controlli,
+  };
+}
+
+/**
+ * Ingresso del calcolatore: i valori scritti dall'utente dove ci sono, altrimenti quelli del preventivo, poi quelli del dossier.
+ * `origine` dice da dove viene ogni importo ('utente' | 'preventivo' | 'dossier' | 'piano' | null).
+ * Copertura senza credito = fonti del piano diverse dal tax credit (1.2); apporto del produttore = voce 2.1;
+ * altri aiuti = aiuti pubblici del piano esclusa la voce 1.2.
+ */
+export function ingressoTaxCredit({ dati = {}, scelte = {}, preventivo = null, piano = dati.piano, limitePct = null, categoria = '' } = {}) {
+  const e = dati.economici || {};
+  const prev = vociTaxCreditDaPreventivo(preventivo);
+  const origine = {};
+  const da = (k, ...alternative) => {
+    if (num(scelte[k]) != null) { origine[k] = 'utente'; return scelte[k]; }
+    for (const [fonte, v] of alternative) if (num(v) != null) { origine[k] = fonte; return v; }
+    origine[k] = null;
+    return null;
+  };
+  const costoComplessivo = da('costoComplessivo', ['preventivo', prev?.costoComplessivo || null], ['dossier', num(e.costoProduzione) > 0 ? e.costoProduzione : null]);
+  const estere = risorseEstereSulCosto(piano, costoComplessivo);
+  const righe = righeConImporto(piano);
+  return {
+    opera: scelte.opera || operaTaxCreditProposta({ categoria, tipologia: dati.tipologiaOpera, animazione: dati.animazione }),
+    impresa: scelte.impresa || 'indipendente', maggiorata: !!scelte.maggiorata, seriale: !!scelte.seriale,
+    costoComplessivo,
+    sopraLaLinea: da('sopraLaLinea', ['preventivo', prev?.sopraLaLinea]),
+    oneri: da('oneri', ['preventivo', prev?.oneri]),
+    producerFee: da('producerFee', ['preventivo', prev?.producerFee], ['dossier', e.producerFee]),
+    speseGenerali: da('speseGenerali', ['preventivo', prev?.speseGenerali]),
+    nonEleggibili: da('nonEleggibili'),
+    risorseEsterePct: da('risorseEsterePct', ['piano', estere.importo > 0 ? estere.pct : null]),
+    creditiAnno: da('creditiAnno'),
+    durataMin: num(dati.durataMin),
+    coperturaSenzaCredito: righe.length ? cent(somma(righe.filter((r) => normalizzaVoce(r.voce) !== '1.2'), (r) => r.importo)) : null,
+    apportoProduttore: righe.length ? importoVoci(piano, (v) => v === '2.1') : null,
+    altriAiuti: righe.length ? cent(somma(righe.filter((r) => normalizzaVoce(r.voce) !== '1.2' && contaComeAiuto(r)), (r) => r.importo)) : null,
+    limiteAiutiPct: limitePct,
+    origine,
   };
 }
 
@@ -1030,7 +1084,7 @@ const RICAVI_VUOTI = () => Object.fromEntries(SCENARI_RICAVO.map((s) => [s.id, O
 export function finanzaVuota() {
   return {
     scenari: [],
-    aiuti: { coproduzione: 'nessuna', categoria: null, dichiarata: false, costoBase: null },
+    aiuti: { coproduzione: 'nessuna', categoria: null, dichiarata: false, costoBase: null, righe: {} },
     taxCredit: { opera: null, impresa: 'indipendente', maggiorata: false, seriale: false, costoComplessivo: null, sopraLaLinea: null, oneri: null, producerFee: null, speseGenerali: null, nonEleggibili: null, risorseEsterePct: null, creditiAnno: null },
     cassa: { inizio: '', mesi: { prep: null, riprese: null, post: null }, modoUscite: 'curva', curva: { prep: null, riprese: null, post: null }, pesi: {}, tempi: {}, quote: null, taxCredit: { primaPct: null, ritardoPrima: null, ritardoSaldo: null, assorbimento: null }, tasso: null, commissione: null },
     recupero: { ricavi: RICAVI_VUOTI(), quotaNoleggioPct: null, commissioneSalaPct: null, commissioneVenditePct: null, premioPct: null, speseLancio: null, minimoGarantito: null, debiti: null, investitori: null, differiti: null, quotaProduttorePct: null, daRecuperare: null },

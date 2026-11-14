@@ -11,7 +11,7 @@ import {
   STATI_QUOTA, quoteDaBando, quoteInUso, pianoErogazione, costoFideiussione, mesiFideiussione,
   VOCI_SPESA, MEZZI, PROBLEMI, FILTRI_STATO, nomeVoce, nomeMezzo, nuovaSpesa, problemiSpesa, eBloccante, filtraSpese, ordinaSpese,
   numeroItaliano, voceDaDescrizione, leggiCsv, importaSpese, senzaDoppioni, csvRegistro, csvMatrice,
-  rendiconto, CAMPI_EFFETTIVI, criteriQuantitativi, campiDaConfermare, datiConsuntivo, punteggioDaMantenere,
+  rendiconto, CAMPI_EFFETTIVI, criteriQuantitativi, campiDaConfermare, datiConsuntivo, incongruenzeEffettivi, punteggioDaMantenere,
   fasiCronoprogramma, impostaFase, proponiCronoprogramma, segniCronoprogramma, geometriaGantt, controlliCronoprogramma, csvCronoprogramma,
 } from '../core/gestione.js';
 
@@ -627,6 +627,8 @@ function vistaPunteggio(area, ctx, apri) {
     const etichettaCampo = (k) => nomiCampi[k].replace('nel territorio', `in ${terr}`).replace('del territorio', `di ${terr}`);
     const numerici = campi.filter((k) => k.includes('.'));
     const vuoti = numerici.filter((k) => leggi(eff, k) == null && leggi(p.dati, k) != null);
+    const incongrui = incongruenzeEffettivi(eff);
+    const richiesto = p.dati.economici?.contributoRichiesto;
 
     if (!criteri.length) {
       metti(svuota(area), h('div.panel.stack', intro('Punteggio da mantenere', 'I parametri che hanno generato punteggio vanno rispettati a consuntivo.'),
@@ -649,13 +651,17 @@ function vistaPunteggio(area, ctx, apri) {
         h('div.grid.w', numerici.map((k) => {
           const [gruppo, c] = k.split('.');
           const dich = leggi(p.dati, k), id = `gst-eff-${gruppo}-${c}`;
+          const sbagliato = incongrui.some((x) => x.territorio === k || x.totale === k);
           return h('label.field', { for: id }, h('span', etichettaCampo(k)),
-            h('input', { id, type: 'number', min: '0', step: '1', inputmode: 'numeric', value: eff[gruppo][c] ?? '', onchange: (e) => { eff[gruppo][c] = e.target.value === '' ? null : Math.max(0, Number(e.target.value)); cambia(); } }),
+            h('input', { id, type: 'number', min: '0', step: '1', inputmode: 'numeric', value: eff[gruppo][c] ?? '', 'aria-invalid': sbagliato ? 'true' : null, onchange: (e) => { eff[gruppo][c] = e.target.value === '' ? null : Math.max(0, Number(e.target.value)); cambia(); } }),
             h('span', dich == null ? 'non dichiarato' : `dichiarato: ${fmt(dich, 0)}`));
         })),
+        incongrui.length ? h('div.notice.bad', { role: 'alert' }, h('strong', 'Da correggere: '), incongrui.map((x) => `${etichettaCampo(x.territorio).toLowerCase()} (${fmt(x.valoreTerritorio, 0)}) più alti del totale (${fmt(x.valoreTotale, 0)})`).join('; '), '. Con questi numeri la percentuale supererebbe il 100%.') : null,
         campi.includes('spesa') ? h('div.grid.w',
           h('div.field', h('span', `Spesa ammissibile in ${terr}, dal registro`), h('div.gst-kpi-v', g.spese.length ? soldi(r.spesaTerritorio) : '—'), h('span', `dichiarata: ${euro(p.dati.economici?.spesaSicilia)}`)),
-          campoImporto('Oppure indicala a mano €', eff.spesaTerritorio, (n) => { eff.spesaTerritorio = n; cambia(); }, { id: 'gst-eff-spesa', placeholder: 'se il registro non è completo' }, 'Se compilato, vale questo al posto del registro.')) : null),
+          campoImporto('Oppure indicala a mano €', eff.spesaTerritorio, (n) => { eff.spesaTerritorio = n; cambia(); }, { id: 'gst-eff-spesa', placeholder: 'se il registro non è completo' }, 'Se compilato, vale questo al posto del registro.')) : null,
+        campi.includes('spesa') && g.contributoConcesso != null && richiesto != null && Math.abs(g.contributoConcesso - richiesto) > 0.5
+          ? h('p.muted.small.gst-intro', `Il criterio si calcola sul contributo richiesto (${euro(richiesto)}), come nella valutazione della domanda; il minimo di spesa nel Rendiconto si misura invece sul contributo concesso (${euro(g.contributoConcesso)}).`) : null),
 
       h('div.panel.stack',
         h('h2', 'Criteri ricalcolati'),
@@ -688,7 +694,7 @@ const COLORE_SEGNO = { rosso: 'var(--bad)', giallo: 'var(--signal)', verde: 'var
 /** Diagramma di Gantt disegnato alla larghezza disponibile: sotto i 560 px i nomi delle fasi vanno sopra le barre. */
 function gantt(geo, larghezza, idTabella) {
   const stretto = larghezza < 560;
-  const sinistra = stretto ? 4 : 132, destra = 12, alto = 46, riga = stretto ? 44 : 34, barra = 16;
+  const sinistra = stretto ? 4 : 132, destra = 12, alto = 58, riga = stretto ? 44 : 34, barra = 16;
   const utile = Math.max(120, larghezza - sinistra - destra);
   const altezza = alto + geo.barre.length * riga + 10;
   const x = (f) => sinistra + f * utile;
@@ -726,8 +732,8 @@ function gantt(geo, larghezza, idTabella) {
     }),
     // oggi
     geo.oggi != null && [
-      s('line', { x1: x(geo.oggi), y1: alto - 6, x2: x(geo.oggi), y2: altezza - 4, stroke: 'var(--ink)', 'stroke-width': 1.5, 'stroke-dasharray': '3 3' }),
-      s('text', { x: x(geo.oggi), y: alto - 9, ...testo, fill: 'var(--ink)', 'font-weight': 600, 'text-anchor': geo.oggi > 0.92 ? 'end' : geo.oggi < 0.08 ? 'start' : 'middle' }, 'oggi'),
+      s('line', { x1: x(geo.oggi), y1: alto - 2, x2: x(geo.oggi), y2: altezza - 4, stroke: 'var(--ink)', 'stroke-width': 1.5, 'stroke-dasharray': '3 3' }),
+      s('text', { x: x(geo.oggi), y: alto - 5, ...testo, fill: 'var(--ink)', 'font-weight': 600, stroke: 'var(--surface)', 'stroke-width': 4, 'paint-order': 'stroke', 'text-anchor': geo.oggi > 0.92 ? 'end' : geo.oggi < 0.08 ? 'start' : 'middle' }, 'oggi'),
     ],
     // scadenze: linea e numero, spiegati nella legenda sotto il diagramma
     geo.segni.map((g, i) => s('g', {},
@@ -758,11 +764,11 @@ function vistaCrono(area, ctx, apri) {
 
   function proponi() {
     const inizio = g.tappe.inizioRiprese.data;
-    const proposta = proponiCronoprogramma({ inizioRiprese: inizio, giorni: p.dati.giorni });
+    const proposta = proponiCronoprogramma({ inizioRiprese: inizio, fineRiprese: g.tappe.fineRiprese.data, giorni: p.dati.giorni });
     if (!proposta) { toast('Indica prima il giorno d’inizio delle riprese.'); document.getElementById('gst-fase-riprese-dal')?.focus(); return; }
     for (const [id, d] of Object.entries(proposta)) { impostaFase(g, id, 'dal', d.dal); impostaFase(g, id, 'al', d.al); }
     cambia();
-    toast('Date proposte dalle giornate dei Dati chiave: correggile dove serve');
+    toast(eData(g.tappe.fineRiprese.data) && g.tappe.fineRiprese.data >= inizio ? 'Date proposte dalle riprese indicate e dalle giornate dei Dati chiave: correggile dove serve' : 'Date proposte dalle giornate dei Dati chiave: correggile dove serve');
   }
 
   function disegnaSotto() {

@@ -23,7 +23,7 @@
   --marchio-1: #6883FF; --marchio-2: #1F35C9; --marchio-lancetta: #FFC233;
   /* stato */
   --signal: #C98300; --signal-bright: #FFC233;
-  --ok: #15803D; --ok-soft: #DDF5E4; --warn: #8A5A00; --warn-soft: #FFF0C7; --bad: #C01F30; --bad-soft: #FDE4E5; --idle: #5E6A7C; --idle-soft: #E8ECF2;
+  --ok: #137838; --ok-soft: #DDF5E4; --warn: #8A5A00; --warn-soft: #FFF0C7; --bad: #C01F30; --bad-soft: #FDE4E5; --idle: #5E6A7C; --idle-soft: #E8ECF2;
   /* tinte d'identità: stessa luminosità, ordine verificato per chi non distingue bene i colori */
   --tinta-cobalto: #2E48E9; --tinta-cobalto-soft: #E8ECFF;
   --tinta-magenta: #B31E7D; --tinta-magenta-soft: #FBE6F2;
@@ -548,7 +548,7 @@ dl.guida dd { margin: 0; color: var(--ink-2); }
     --accent: #2E48E9 !important; --accent-ink: #FFFFFF !important; --accent-soft: #E8ECFF !important; --accent-line: #BFC9FA !important; --accent-bright: #5873FF !important;
     --accent-fill: #2E48E9 !important; --accent-fill-ink: #FFFFFF !important;
     --signal: #C98300 !important; --signal-bright: #FFC233 !important;
-    --ok: #15803D !important; --ok-soft: #DDF5E4 !important; --warn: #8A5A00 !important; --warn-soft: #FFF0C7 !important; --bad: #C01F30 !important; --bad-soft: #FDE4E5 !important; --idle: #5E6A7C !important; --idle-soft: #E8ECF2 !important;
+    --ok: #137838 !important; --ok-soft: #DDF5E4 !important; --warn: #8A5A00 !important; --warn-soft: #FFF0C7 !important; --bad: #C01F30 !important; --bad-soft: #FDE4E5 !important; --idle: #5E6A7C !important; --idle-soft: #E8ECF2 !important;
     --tinta-cobalto: #2E48E9 !important; --tinta-cobalto-soft: #E8ECFF !important; --tinta-magenta: #B31E7D !important; --tinta-magenta-soft: #FBE6F2 !important; --tinta-azzurro: #0076B6 !important; --tinta-azzurro-soft: #DEF0FA !important;
     --tinta-arancio: #BC4A00 !important; --tinta-arancio-soft: #FFEADB !important; --tinta-teal: #03816A !important; --tinta-teal-soft: #DBF3EC !important; --tinta-viola: #7D31DE !important; --tinta-viola-soft: #F0E7FF !important; --tinta-ink: #FFFFFF !important;
     --shadow-1: none !important; --shadow: none !important; --shadow-3: none !important; color-scheme: light !important; }

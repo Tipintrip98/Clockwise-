@@ -12,7 +12,7 @@ import {
   numeroItaliano, dataDaTesto, siNo, voceDaTesto, voceDaDescrizione, mezzoDaTesto, leggiCsv, campoDiColonna, mappaColonne, importaSpese, senzaDoppioni,
   csvRegistro, csvMatrice,
   preventivoPerVoce, rendiconto,
-  criteriQuantitativi, campiDaConfermare, datiConsuntivo, punteggioDaMantenere,
+  criteriQuantitativi, campiDaConfermare, datiConsuntivo, incongruenzeEffettivi, punteggioDaMantenere,
   FASI, fasiCronoprogramma, impostaFase, proponiCronoprogramma, segniCronoprogramma, geometriaGantt, controlliCronoprogramma, csvCronoprogramma,
 } from '../app/js/core/gestione.js';
 import { scadenzario } from '../app/js/core/legale.js';
@@ -963,6 +963,15 @@ test('punteggio: i dati a consuntivo hanno la forma dei Dati chiave', () => {
   assert.equal(DATI.giorni.ripreseTot, 28); // i dichiarati non vengono toccati
 });
 
+test('punteggio: valori nel territorio più alti del totale segnalati come incongruenze', () => {
+  assert.deepEqual(incongruenzeEffettivi({}), []);
+  assert.deepEqual(incongruenzeEffettivi(effettiviUguali()), []);
+  const r = incongruenzeEffettivi({ giorni: { prepTot: 10, prepSicilia: 24, ripreseTot: 20, ripreseSicilia: 20, postTot: null, postSicilia: 5 }, professionisti: { crewTot: 3, crewSicilia: 4 } });
+  assert.deepEqual(r.map((x) => x.territorio), ['giorni.prepSicilia', 'professionisti.crewSicilia']); // uguale al totale va bene, un totale vuoto non si confronta
+  assert.equal(r[0].valoreTotale, 10);
+  assert.equal(r[0].valoreTerritorio, 24);
+});
+
 test('punteggio: parametri confermati, nessun punto perso', () => {
   const r = confronto(effettiviUguali());
   assert.equal(r.persi, 0);
@@ -1080,6 +1089,10 @@ test('cronoprogramma: proposta dalle giornate dei Dati chiave', () => {
   // le fasi si susseguono senza buchi né sovrapposizioni
   for (const [a, b] of [['sviluppo', 'preparazione'], ['preparazione', 'riprese'], ['riprese', 'post'], ['post', 'consegna']]) assert.equal(aggiungiGiorni(p[a].al, 1), p[b].dal);
   assert.equal(proponiCronoprogramma({ inizioRiprese: '', giorni: DATI.giorni }), null);
+  const conFine = proponiCronoprogramma({ inizioRiprese: '2027-03-01', fineRiprese: '2027-04-30', giorni: DATI.giorni });
+  assert.deepEqual(conFine.riprese, { dal: '2027-03-01', al: '2027-04-30' }); // la fine già indicata non si cambia
+  assert.equal(conFine.post.dal, '2027-05-01');
+  assert.equal(proponiCronoprogramma({ inizioRiprese: '2027-03-01', fineRiprese: '2027-02-01', giorni: DATI.giorni }).riprese.al, p.riprese.al); // fine prima dell'inizio: ignorata
   assert.deepEqual(proponiCronoprogramma({ inizioRiprese: '2028-02-01', giorni: {} }).riprese, { dal: '2028-02-01', al: '2028-02-28' }); // senza giornate: 20 lavorative
 });
 
