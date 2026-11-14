@@ -240,9 +240,9 @@ export function apriSceltaBando({ alTermine, primoAvvio = false, bandoId = null 
       const a = anni.find((x) => x.anno === st.anno) || anni[0];
       const giorni = a.condizione === 'aperta' ? giorniTra(oggi, a.al) : null;
       metti(svuota(notaAnno),
-        a.condizione === 'prevista' ? h('div.notice.info', h('strong', `Edizione ${a.anno} ${NOTA_PREVISTA}.`), a.nota ? ` ${maiuscola(a.nota)}.` : '')
-          : a.condizione === 'aperta' ? h('div.notice.ok', h('strong', `Finestra ${a.anno} aperta`), `${a.dal ? ` dal ${dataEstesa(a.dal)}` : ''} al ${dataEstesa(a.al)}${giorni != null ? ` — ${giorni === 0 ? 'scade oggi' : giorni === 1 ? 'manca 1 giorno' : `mancano ${giorni} giorni`}` : ''}.${a.nota ? ` ${maiuscola(a.nota)}.` : ''}`)
-            : a.condizione === 'futura' ? h('div.notice', h('strong', `La finestra ${a.anno} apre il ${dataEstesa(a.dal)}`), ` e chiude il ${dataEstesa(a.al)}.${a.nota ? ` ${maiuscola(a.nota)}.` : ''}`)
+        a.condizione === 'prevista' ? h('div.notice.info', h('strong', `Edizione ${a.anno} ${NOTA_PREVISTA}.`), a.nota ? ` ${maiuscola(a.nota).replace(/\.+$/, '')}.` : '')
+          : a.condizione === 'aperta' ? h('div.notice.ok', h('strong', `Finestra ${a.anno} aperta`), `${a.dal ? ` dal ${dataEstesa(a.dal)}` : ''} al ${dataEstesa(a.al)}${giorni != null ? ` — ${giorni === 0 ? 'scade oggi' : giorni === 1 ? 'manca 1 giorno' : `mancano ${giorni} giorni`}` : ''}.${a.nota ? ` ${maiuscola(a.nota).replace(/\.+$/, '')}.` : ''}`)
+            : a.condizione === 'futura' ? h('div.notice', h('strong', `La finestra ${a.anno} apre il ${dataEstesa(a.dal)}`), ` e chiude il ${dataEstesa(a.al)}.${a.nota ? ` ${maiuscola(a.nota).replace(/\.+$/, '')}.` : ''}`)
               : a.condizione === 'chiusa' ? h('div.notice', h('strong', `La finestra ${a.anno} è chiusa dal ${dataEstesa(a.al)}. `), 'Puoi simulare lo stesso: serve, ad esempio, a confrontare un dossier già presentato con il punteggio ricevuto.')
                 : h('div.notice', 'Le date di questa edizione non sono note: controlla la pagina ufficiale del bando.'));
       metti(svuota(categorie), b.categorie.map((cat) => {
@@ -467,6 +467,6 @@ export function sceltaNelDossier(p, bando) {
   const campo = (etichetta, select) => h('label.field', { for: select.id }, h('span', etichetta), select);
   return h('div.stack-s.cat-dossier',
     h('div.grid.w', campo('Bando', selBando), campo('Categoria dell’opera', selCategoria), campo('Finestra', selAnno)),
-    annoScelto?.prevista ? h('div.notice.info.small', h('strong', `Edizione ${annoScelto.anno} ${NOTA_PREVISTA}.`), annoScelto.nota ? ` ${maiuscola(annoScelto.nota)}.` : '') : null,
+    annoScelto?.prevista ? h('div.notice.info.small', h('strong', `Edizione ${annoScelto.anno} ${NOTA_PREVISTA}.`), annoScelto.nota ? ` ${maiuscola(annoScelto.nota).replace(/\.+$/, '')}.` : '') : null,
     conferma);
 }

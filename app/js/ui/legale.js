@@ -6,12 +6,16 @@ import { sottoNavigazione } from './sezioni.js';
 
 const IDONEO = { si: ['ok', 'Regge così com’è'], parziale: ['warn', 'Da sistemare'], no: ['bad', 'Non produce effetto'] };
 const FIRMA = { si: 'firmato', no: 'non firmato', non_verificabile: 'firma non verificabile dal testo' };
-const ESEMPI = [
-  'Il tax credit conta nella copertura finanziaria del criterio 5.1?',
-  'Posso iniziare le riprese prima della graduatoria?',
-  'Quali spese sostenute in Sicilia sono ammissibili?',
-  'Che cosa succede se a consuntivo spendo meno del previsto?',
-];
+// Domande d'esempio adattate al bando in uso: territorio e criterio sulla copertura finanziaria, se c'è.
+const esempi = (bando) => {
+  const copertura = Object.values(bando?.griglie || {}).flatMap((g) => g.sezioni.flatMap((x) => x.criteri)).find((c) => c.metrica === 'copertura');
+  return [
+    copertura ? `Il tax credit conta nella copertura finanziaria del criterio ${copertura.id}?` : 'Il tax credit conta nella copertura finanziaria del progetto?',
+    'Posso iniziare le riprese prima della graduatoria?',
+    `Quali spese sostenute in ${bando?.territorio || 'regione'} sono ammissibili?`,
+    'Che cosa succede se a consuntivo spendo meno del previsto?',
+  ];
+};
 const dataIt = (d) => d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
 const intro = (titolo, testo) => h('div', h('h2', titolo), h('p.muted', { style: { maxWidth: '75ch', marginTop: '4px' } }, testo));
 
@@ -66,7 +70,7 @@ function vistaChiedi(area, { p, bando, llm, leg, opzioni }) {
     intro('Chiedi al bando', 'Risposte fondate sul testo ufficiale dell’avviso, con l’articolo citato accanto a ogni affermazione e applicate ai dati di questo dossier.'),
     campo,
     h('div', h('button.btn.primary', { type: 'button', id: 'btn-chiedi', disabled: !llm, onclick: (e) => chiedi(e.currentTarget) }, 'Chiedi')),
-    !leg.domande.length && h('div.stack-s', h('div.label', 'Per esempio'), h('div.row', ESEMPI.map((e) => h('button.btn.s.wrap', { type: 'button', onclick: () => { campo.value = e; campo.focus(); } }, e)))),
+    !leg.domande.length && h('div.stack-s', h('div.label', 'Per esempio'), h('div.row', esempi(bando).map((e) => h('button.btn.s.wrap', { type: 'button', onclick: () => { campo.value = e; campo.focus(); } }, e)))),
     elenco));
   disegna();
 }

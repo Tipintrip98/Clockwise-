@@ -125,7 +125,7 @@ export function schedaCruscotto(corpo, p, bando, mostra) {
         h('button.btn.s', { type: 'button', onclick: () => mostra(x.scheda) }, `Apri ${NOMI_SCHEDA[x.scheda] || 'scheda'} →`)))),
       st.problemi.length > 6 ? h('div', h('button.btn.s.ghost', { type: 'button', onclick: () => { tutti = !tutti; disegnaProblemi(); } }, tutti ? 'Mostra meno' : `Mostra tutti i ${st.problemi.length}`)) : null)
       : h('div.panel', !p.documenti.length
-        ? h('div.notice', h('strong', 'Nessun problema nei numeri. '), 'I controlli su allegati, formati e coerenza con il Modulo III partono quando carichi i documenti.')
+        ? h('div.notice', h('strong', 'Nessun problema nei numeri. '), 'I controlli su allegati, formati e coerenza tra moduli e allegati partono quando carichi i documenti.')
         : h('div.notice.ok', h('strong', 'Nessun problema rilevato dai controlli automatici. '), st.daConfermare ? `Restano ${st.daConfermare} requisiti da confermare a mano nei Dati chiave.` : 'Requisiti confermati.')));
   };
 

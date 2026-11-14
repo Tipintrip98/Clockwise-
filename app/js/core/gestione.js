@@ -986,7 +986,7 @@ export function punteggioDaMantenere({ bando, categoriaId, dati, consuntivo, pun
   const primaTot = suSezioni ? (noteTutte ? r1(suSezioni.reduce((a, id) => a + punteggi.sezioni[id], 0)) : null) : num(punteggi?.totale);
   const persiTot = suSezioni ? r1(criteri.filter((c) => suSezioni.includes(c.sezione) && c.differenza != null).reduce((a, c) => a + Math.max(0, -c.differenza), 0)) : persi;
   const dopoTot = primaTot == null ? null : r1(primaTot - persiTot);
-  const totale = { prima: primaTot, dopo: dopoTot, soglia: num(bando?.sogliaTotale), sotto: dopoTot != null && num(bando?.sogliaTotale) != null && dopoTot < bando.sogliaTotale, sezioni: suSezioni ? [...suSezioni] : null };
+  const totale = { prima: primaTot, dopo: dopoTot, soglia: num(bando?.sogliaTotale), sotto: dopoTot != null && num(bando?.sogliaTotale) != null && dopoTot < bando.sogliaTotale, ...(suSezioni ? { sezioni: [...suSezioni] } : {}) };
   const sottoSoglia = [...sezioni.filter((s) => s.sotto).map((s) => `sezione ${s.id} a ${s.dopo.toLocaleString('it-IT')} (minimo ${s.soglia})`), ...(totale.sotto ? [`${totale.sezioni ? `sezioni ${totale.sezioni.join(', ')}` : 'totale'} a ${totale.dopo.toLocaleString('it-IT')} (minimo ${totale.soglia})`] : [])];
   const citazioni = citaBando(bando, 'punteggio', 3);
   let rischio = 'da_completare', sintesi = 'Inserisci i dati effettivi per ricalcolare i criteri.';

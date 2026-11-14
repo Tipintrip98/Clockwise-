@@ -128,7 +128,7 @@ export function controlliPiano(dati) {
   const euro = (n) => `${Math.round(n).toLocaleString('it-IT')} €`;
   const esiti = [];
   if (s.costo == null) esiti.push({ id: 'costo', esito: 'da_verificare', titolo: 'Manca il costo di produzione', dettaglio: 'Senza il costo non si possono calcolare scoperto, copertura e intensità degli aiuti.', azione: 'Inseriscilo nella scheda Dati chiave.' });
-  if (!s.righe) esiti.push({ id: 'vuoto', esito: 'da_verificare', titolo: 'Il piano finanziario è vuoto', dettaglio: 'Nessuna fonte con un importo.', azione: 'Carica il Modulo III o aggiungi le fonti nei Dati chiave.' });
+  if (!s.righe) esiti.push({ id: 'vuoto', esito: 'da_verificare', titolo: 'Il piano finanziario è vuoto', dettaglio: 'Nessuna fonte con un importo.', azione: 'Aggiungi le fonti nei Dati chiave (o carica il Modulo III, per i bandi siciliani).' });
   if (s.costo != null && s.righe) {
     if (s.scoperto > TOLLERANZA_EURO) esiti.push({ id: 'scoperto', esito: 'critico', titolo: `Mancano ${euro(s.scoperto)} per coprire il costo`, dettaglio: `Fonti ${euro(s.totale)} contro un costo di ${euro(s.costo)}: nel Modulo III la differenza tra budget e piano finanziario deve essere zero.` });
     else if (s.eccedenza > TOLLERANZA_EURO) esiti.push({ id: 'eccedenza', esito: 'attenzione', titolo: `Le fonti superano il costo di ${euro(s.eccedenza)}`, dettaglio: `Fonti ${euro(s.totale)} contro un costo di ${euro(s.costo)}: riduci una fonte o aggiorna il costo, la differenza deve essere zero.` });

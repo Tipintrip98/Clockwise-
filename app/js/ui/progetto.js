@@ -24,7 +24,7 @@ const STRUMENTI = [['produzione', 'Produzione'], ['finanza', 'Finanza'], ['gesti
 const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, finanza: schedaFinanza, gestione: schedaGestione, legale: schedaLegale };
 // Suggerimenti mostrati la prima volta che si apre una scheda.
 const DRITTE = {
-  documenti: ['Trascina tutti i file insieme.', 'Il tipo di ciascun documento viene riconosciuto dal nome e puoi correggerlo nella tabella. Il Modulo III in Excel compila da solo i Dati chiave.'],
+  documenti: ['Trascina tutti i file insieme.', 'Il tipo di ciascun documento viene riconosciuto dal nome e puoi correggerlo nella tabella. Per i bandi siciliani il Modulo III in Excel compila da solo i Dati chiave.'],
   dati: ['I punti a destra si aggiornano mentre scrivi.', 'Prova a cambiare un numero per vedere quanto vale salire di fascia: il file originale non viene toccato.'],
   valutazione: ['Per una prima prova basta un commissario.', 'Costa una frazione delle letture. Per la stima da usare prima dell’invio scegli tre commissari: il punteggio è la media, come nella Commissione vera.'],
   report: ['Apri un criterio per leggere le motivazioni.', 'In fondo alla pagina puoi inserire il punteggio reale di un dossier già presentato: serve a misurare quanto la stima è vicina e a tararla.'],
@@ -128,7 +128,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
     onclick: () => ingresso.click(), onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ingresso.click(); } },
     ondragover: (e) => { e.preventDefault(); zona.classList.add('over'); }, ondragleave: () => zona.classList.remove('over'),
     ondrop: (e) => { e.preventDefault(); zona.classList.remove('over'); aggiungi(e.dataTransfer.files); },
-  }, h('strong', 'Trascina qui i documenti del dossier'), h('span.muted', 'Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento · PDF, DOCX, XLS'), h('span.btn.s', 'Scegli i file'));
+  }, h('strong', 'Trascina qui i documenti del dossier'), h('span.muted', 'Moduli di domanda, sceneggiatura, curriculum, contratti, deal memo, lettere di intento · PDF, DOCX, XLS'), h('span.btn.s', 'Scegli i file'));
 
   const daLeggere = () => p.documenti.filter((d) => d.scansione && !d.testo && d.tipo !== 'identita');
   let lettura = null; // { controller, nome, fatte, totale }
@@ -202,7 +202,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
       elencoControlli(allegati)));
     const altri = [...controlliFormato(bando, p.documenti), ...controlliIncrociati(bando, p)];
     if (altri.length) lista.append(h('div.panel', { style: { marginTop: '16px' } },
-      h('div.spread', h('h2', 'Formato dei file e coerenza con il Modulo III'), h(`span.tag.${altri.some((c) => c.esito === 'critico') ? 'bad' : altri.some((c) => c.esito === 'attenzione') ? 'warn' : 'ok'}`, altri.some((c) => c.esito !== 'ok') ? `${altri.filter((c) => c.esito !== 'ok').length} da sistemare` : 'A posto')),
+      h('div.spread', h('h2', 'Formato dei file e coerenza dei moduli'), h(`span.tag.${altri.some((c) => c.esito === 'critico') ? 'bad' : altri.some((c) => c.esito === 'attenzione') ? 'warn' : 'ok'}`, altri.some((c) => c.esito !== 'ok') ? `${altri.filter((c) => c.esito !== 'ok').length} da sistemare` : 'A posto')),
       elencoControlli(altri)));
   }
 
@@ -290,8 +290,8 @@ function schedaDati(corpo, p, bando, mostra) {
 
   const modulo = h('div.stack',
     origine?.tipo === 'modulo3' ? h('div.notice.ok', h('strong', 'Dati letti dal Modulo III '), `«${origine.file}». Puoi correggerli qui per simulare scenari diversi: il file originale non viene modificato.`)
-      : origine?.tipo === 'claude' ? h('div.notice.info', h('strong', 'Dati compilati da Claude dai documenti. '), 'Controlla ogni valore: i punti della sezione C dipendono da questi numeri.')
-        : h('div.notice', h('strong', 'Carica il Modulo III (.xls) nella scheda Documenti '), 'per compilare questi dati in automatico, oppure inseriscili a mano.',
+      : origine?.tipo === 'claude' ? h('div.notice.info', h('strong', 'Dati compilati da Claude dai documenti. '), 'Controlla ogni valore: i punti dei criteri calcolati dai numeri dipendono da questi dati.')
+        : h('div.notice', bando.regione === 'Sicilia' ? h('strong', 'Carica il Modulo III (.xls) nella scheda Documenti ') : h('strong', 'Inserisci questi dati a mano '), bando.regione === 'Sicilia' ? 'per compilare questi dati in automatico, oppure inseriscili a mano.' : 'dai moduli di domanda del bando, oppure falli compilare a Claude dai documenti caricati.',
           llm && p.documenti.some((x) => x.testo) ? h('div', { style: { marginTop: '8px' } }, h('button.btn.s', { type: 'button', onclick: (e) => compila(e.currentTarget) }, 'Compila con Claude dai documenti caricati')) : null),
     origine?.avvisi?.length ? h('div.notice.warn', h('strong', origine.tipo === 'modulo3' ? 'Da controllare nel Modulo III:' : 'Note di Claude:'), h('ul', { style: { margin: '6px 0 0', paddingLeft: '18px' } }, origine.avvisi.map((a) => h('li', a)))) : null,
     statoEstr,
@@ -301,7 +301,7 @@ function schedaDati(corpo, p, bando, mostra) {
     h('div.panel.stack', h('h2', 'Giorni di lavorazione'),
       h('div.grid', n('Pre-produzione, totale', d.giorni, 'prepTot'), n(`Pre-produzione in ${terr}`, d.giorni, 'prepSicilia'), n('Riprese, totale', d.giorni, 'ripreseTot'), n(`Riprese in ${terr}`, d.giorni, 'ripreseSicilia'), n('Post-produzione, totale', d.giorni, 'postTot'), n(`Post-produzione in ${terr}`, d.giorni, 'postSicilia'))),
     h('div.panel.stack', h('h2', 'Cast e troupe'),
-      h('p.muted.small', `Solo le figure elencate nel Modulo III; “${terr}” = nati o residenti da almeno sei mesi. Figuranti e comparse non contano.`),
+      h('p.muted.small', `Solo le figure elencate nei moduli di domanda; “${terr}” = nati o residenti da almeno sei mesi. Figuranti e comparse non contano.`),
       h('div.grid', n('Componente artistica, totale', d.professionisti, 'artTot'), n(`Artistici di ${terr}`, d.professionisti, 'artSicilia'), n('Cast tecnico, totale', d.professionisti, 'crewTot'), n(`Tecnici di ${terr}`, d.professionisti, 'crewSicilia'))),
     h('div.panel.stack', h('h2', 'Budget e contributo'),
       h('div.grid.w', n('Costo di produzione €', d.economici, 'costoProduzione'), n('Costo ammissibile €', d.economici, 'costoAmmissibile'), n('Contributo richiesto €', d.economici, 'contributoRichiesto'), n(`Spesa ammissibile in ${terr} €`, d.economici, 'spesaSicilia'), n('Producer fee €', d.economici, 'producerFee'))),
@@ -309,7 +309,7 @@ function schedaDati(corpo, p, bando, mostra) {
       h('p.muted.small', 'Per ogni fonte indica il documento che la sostiene ed è allegato al dossier. Le risorse proprie contano solo con referenze bancarie; tax credit e contributi pubblici solo se già concessi con atto formale.'),
       pianoEl,
       h('label.check', h('input', { id: 'chk-riprese', type: 'checkbox', checked: d.ripreseIniziate, onchange: (e) => { d.ripreseIniziate = e.target.checked; aggiorna(); } }),
-        h('span', `Le riprese in ${terr} sono già iniziate (dopo l’invio dell’istanza): il criterio 5.1 vale il massimo`))),
+        h('span', `Le riprese in ${terr} sono già iniziate (dopo l’invio dell’istanza)`, (() => { const c = getGriglia(bando, p.categoriaId).sezioni.flatMap((x) => x.criteri).find((x) => x.fasce?.some((f) => f.flag === 'ripreseIniziate')); return c ? `: il criterio ${c.id} vale il massimo` : ''; })()))),
     h('div.panel.stack', h('h2', 'Requisiti da confermare'),
       h('p.muted.small', 'Il software non può verificarli dai documenti: spuntali quando li hai controllati.'),
       (bando.requisiti || []).map((r) => h('label.check', h('input', { id: `req-${r.id}`, type: 'checkbox', checked: !!d.requisiti[r.id], onchange: (e) => { d.requisiti[r.id] = e.target.checked; salvaPresto(); } }), h('span', r.testo)))),
