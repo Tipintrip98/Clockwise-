@@ -459,7 +459,7 @@ export const REGOLE = [
     tutti: [['documento_distribuzione_allegato', '=', false], ['distribuzione_dichiarata', '=', false]], almenoUno: [],
     attesa: [0, 0], rigorosa: [0, 0],
     perche: 'Zero in entrambe le letture. È il criterio con il miglior rapporto tra sforzo e punti: un solo documento firmato vale l’intero punteggio.',
-    evidenza: 'Regola del bando.' },
+    evidenza: 'Regola del bando: senza un accordo di distribuzione il criterio vale zero.' },
 
   /* --- internazionale: coproduzioni e circolazione all'estero */
   { id: 'internazionale-coproduzione-firmata-controparti-rilevanti', famiglia: 'internazionale', forza: 'debole', riscontro: 'bando',
@@ -509,7 +509,7 @@ export const REGOLE = [
     tutti: [['accordo_coproduzione_estera_firmato', '=', false], ['documento_coproduzione_estera_allegato', '=', false], ['distribuzione_internazionale_firmata', '=', false], ['coproduzione_estera_dichiarata', '=', false]], almenoUno: [],
     attesa: [0, 0], rigorosa: [0, 0],
     perche: 'Zero in entrambe le letture. Non va compensato con considerazioni sul potenziale estero dell’opera, che il criterio non misura.',
-    evidenza: 'Regola del bando.' },
+    evidenza: 'Regola del bando: senza coproduttori esteri né vendite all’estero il criterio vale zero.' },
 
   /* --- generica: famiglie per cui non c'è alcun caso reale (ricadute valutate a giudizio, sostenibilità, formazione, altro) */
   { id: 'generica-con-documenti', famiglia: 'generica', forza: 'debole', riscontro: 'estrapolazione',

@@ -183,3 +183,4 @@ tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; f
 @media print {
   .gst-tappa-campi input, .gst-modulo, .gst-rapida, .gst-filtri { break-inside: avoid; }
 }
+.gst-modulo input[list]::-webkit-calendar-picker-indicator { opacity: .45; }

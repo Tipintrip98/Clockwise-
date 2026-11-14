@@ -3,6 +3,7 @@ import { componiRisultato, getCategoria, getGriglia, elencoCriteri, verificheAmm
   statisticheEsiti, posizioneEsiti, storicoFinanziamento, previsioneStatistica, stimaContributo, r1 } from './scoring.js';
 import { valutazioniPerCriterio } from './engine.js';
 import { statoInvio, controlliFormato, controlliIncrociati } from './invio.js';
+import { taraturaDossier } from './ragionamento.js';
 
 /** Interventi ordinati per punti recuperabili: prima i blocchi di ammissibilità, poi numeri e contenuti. */
 export function pianoMiglioramento(p, bando, ris, controlli) {
@@ -74,5 +75,6 @@ export function raccogliReport(bando, p, oggi = new Date()) {
     reale: confrontoConReale(ris, p.reale),
     contributo: { richiesto: richiesto ?? null, primo, stima: stimaContributo(richiesto, ris.totale, primo, bando.regolaContributo || 'pieno') },
     metriche: calcolaMetriche(p.dati, bando), copertura: coperturaPiano(p.dati),
+    taratura: (() => { try { return taraturaDossier(bando, p, ris); } catch { return null; } })(),
   };
 }

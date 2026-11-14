@@ -290,6 +290,30 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
     }
   }
 
+  // riquadro della taratura sui casi reali (core/ragionamento.js): fasce attese per criterio e scostamenti dei commissari
+  const tar = R.taratura;
+  if (tar) {
+    const fascia = (f) => (f.min === f.max ? num(f.min) : `${num(f.min)} – ${num(f.max)}`);
+    P.sotto('Taratura sui casi reali', `regole ${tar.versione}${tar.daValutazione ? ' · fasce usate nella valutazione' : ''}`);
+    const sc = tar.scostamenti;
+    if (sc) {
+      P.testo(sc.sintesi, { corpo: 9.5, peso: 'bold', colore: sc.fuori ? AVVISO : OK });
+      P.tabella([{ t: 'Criterio', w: 46 }, { t: 'Commissari', w: 14, a: 'r', peso: 'bold' }, { t: 'Fascia attesa', w: 18, a: 'r' }, { t: 'Rigorosa', w: 16, a: 'r' }, { t: 'Esito', w: 18 }],
+        sc.criteri.map((x) => ({ celle: [`${x.id} · ${x.nome}`, num(x.media), fascia(x.atteso), fascia(x.rigoroso), x.stato === 'dentro' ? 'Nella fascia' : `${x.stato === 'sopra' ? 'Sopra' : 'Sotto'} di ${num(Math.abs(x.scarto))}`],
+          colori: [null, null, MUTO, MUTO, x.stato === 'dentro' ? OK : x.gravita === 'marcato' ? MALE : AVVISO] })));
+      for (const x of sc.criteri.filter((y) => y.stato !== 'dentro')) P.testo(`${x.id}: ${x.spiegazione}`, { corpo: 8.5, colore: MUTO });
+      if (tar.cambiate) P.testo('Documenti o dati sono cambiati dopo la valutazione: le fasce sono quelle usate allora.', { corpo: 8.5, colore: AVVISO });
+    } else if (tar.stima) {
+      const s = tar.stima;
+      P.testo(`Stima dalle regole, senza lettura dei documenti: ${num(s.totale)} punti (da ${num(s.min)} a ${num(s.max)}; lettura rigorosa ${num(s.rigoroso)}).`, { corpo: 9.5, peso: 'bold' });
+      P.tabella([{ t: 'Sezione', w: 50 }, { t: 'Stima', w: 14, a: 'r', peso: 'bold' }, { t: 'Da – a', w: 20, a: 'r' }, { t: 'Rigorosa', w: 14, a: 'r' }, { t: 'Minimo', w: 14, a: 'r' }],
+        s.sezioni.map((x) => ({ celle: [`${x.id} · ${x.nome}`, num(x.punti), `${num(x.min)} – ${num(x.max)}`, num(x.rigoroso), x.soglia == null ? '—' : num(x.soglia)], colori: [null, x.superata ? OK : MALE, MUTO, x.fragile ? AVVISO : MUTO, null] })));
+      for (const b of s.bloccanti) P.testo(b, { corpo: 8.5, colore: MALE });
+    }
+    P.testo('Le fasce vengono dai fatti verificabili del dossier (allegati, firme, piano finanziario, figure dichiarate) e da regole ricavate dal confronto tra simulazioni e punteggi reali della Commissione. I punteggi dei commissari non vengono corretti: una media fuori fascia va letta nella motivazione.', { corpo: 8, colore: MUTO });
+    P.testo(`Limiti principali: ${tar.limiti.slice(0, 3).join(' ')}`, { corpo: 8, colore: MUTO });
+  }
+
   /* ---------------------------------------------------------------- 3. ammissibilità */
   P.titolo('3. Ammissibilità, allegati e coerenza');
   const ordine = ['critico', 'attenzione', 'da_verificare', 'ok'];

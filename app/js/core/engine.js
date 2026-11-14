@@ -1,8 +1,9 @@
 // Orchestrazione della valutazione: commissari simulati per sezione, verifica formale, aggregazione.
-import { getGriglia } from './scoring.js';
+import { getGriglia, componiRisultato } from './scoring.js';
 import { documentiPerSezione, byteLen } from './docs.js';
 import { PROFILI, promptSezione, promptVerifica, promptEstrazione, promptCondensa, promptBando, normalizzaBando } from './prompts.js';
 import { stimaByte, ErroreLlm } from './llm.js';
+import { ancoreTaratura, testoAncore, ancoreCompatte, scostamenti } from './ragionamento.js';
 
 const UNICO = { id: 'unico', nome: 'Commissario', descrizione: 'esperto con competenze trasversali su scrittura, produzione e politiche territoriali, abituato a valutare istanze per fondi regionali.' };
 
@@ -109,6 +110,10 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
     val.verifica = precedente.verifica || null;
   }
   for (const s of saltate) val.note.push(`Sezione ${s.id} non valutata: nessun documento leggibile caricato per i suoi criteri.`);
+  // taratura sui casi reali (core/ragionamento.js): fasce attese per ogni criterio, passate a Claude come ancore.
+  // Un errore qui non deve mai fermare la valutazione: si procede senza ancore e lo si annota.
+  let ancore = null;
+  try { ancore = ancoreTaratura(bando, progetto.categoriaId, progetto); } catch (e) { val.note.push(`Taratura non applicata: ${e?.message || 'errore nel calcolo delle fasce'}.`); }
   const limita = semaforo(llm.paralleli || 2);
   const conta = (r) => {
     val.uso.chiamate++;
@@ -138,7 +143,8 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
     if (!daFare.length) continue;
     lavori.push((async () => {
       let docs = documentiPerSezione(progetto.documenti, sez);
-      const costruisci = (d, commissario = daFare[0].commissario) => promptSezione({ bando, categoriaId: progetto.categoriaId, anno: progetto.anno, sezione: sez, documenti: d, dati: progetto.dati, commissario });
+      const brano = ancore ? testoAncore(ancore, sez) : '';
+      const costruisci = (d, commissario = daFare[0].commissario) => promptSezione({ bando, categoriaId: progetto.categoriaId, anno: progetto.anno, sezione: sez, documenti: d, dati: progetto.dati, commissario, ancore: brano });
       try {
         docs = await limita(() => rientraNelLimite({ costruisci, documenti: docs, llm, opzioni, signal, onNota: (n) => { val.note.push(n); onEvento({ nota: n }); } }));
       } catch (e) {
@@ -183,6 +189,13 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
   }
   await Promise.all(lavori);
   val.interrotta = !!signal?.aborted;
+  // esito della taratura: fasce usate e criteri in cui la media dei commissari ne esce (si segnala, non si corregge)
+  if (ancore) {
+    try {
+      const ris = componiRisultato(bando, progetto.categoriaId, progetto.dati, valutazioniPerCriterio(val));
+      val.taratura = { ...ancoreCompatte(ancore), scostamenti: scostamenti(ris, ancore) };
+    } catch (e) { val.note.push(`Controllo della taratura non riuscito: ${e?.message || 'errore'}.`); }
+  }
   return val;
 }
 

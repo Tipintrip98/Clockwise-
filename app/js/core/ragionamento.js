@@ -247,15 +247,22 @@ export function fattiDossier(bando, progetto) {
   // --- società
   const cvSoc = DOC(docs, 'cv_societa');
   const fontiSoc = [...modulo2.map((d) => ({ ...d, testo: sezioneModulo(d.testo, /(?:II\.?\s*5|opere prodotte|impresa)/i, /\n\s*(?:II\.?\s*6|professionisti)/i) })).filter((d) => d.testo), ...cvSoc];
+  const RE_FONDAZIONE = /(?:costituit[ao]|fondat[ao]|anno di costituzione|nata|attiva dal)\D{0,25}((?:19|20)\d\d)/i;
   if (fontiSoc.length) {
-    const titoli = new Set();
-    for (const d of fontiSoc) for (const riga of String(d.testo).split('\n')) {
-      const anni = tutte(/\b(19\d\d|20\d\d)\b/g, riga).map((m) => Number(m[1]));
-      if (anni.some((a) => a >= anno - 5 && a <= anno)) titoli.add(minuscolo(riga).replace(/\s+/g, ' ').trim().slice(0, 80));
+    // righe con un anno del quinquennio, fonte per fonte (modulo e curriculum ripetono le stesse opere): vale la fonte più ricca
+    let opere = 0;
+    for (const d of fontiSoc) {
+      const titoli = new Set();
+      for (const riga of String(d.testo).split('\n')) {
+        if (RE_FONDAZIONE.test(riga)) continue;
+        const anni = tutte(/\b(19\d\d|20\d\d)\b/g, riga).map((m) => Number(m[1]));
+        if (anni.some((a) => a >= anno - 5 && a <= anno)) titoli.add(minuscolo(riga).replace(/\s+/g, ' ').trim().slice(0, 80));
+      }
+      opere = Math.max(opere, titoli.size);
     }
-    metti('opere_societa_quinquennio', titoli.size, `${titoli.size} righe con un’opera degli anni ${anno - 5}-${anno} nei moduli o nel curriculum`);
+    metti('opere_societa_quinquennio', opere, `${opere} opere degli ultimi cinque anni nei moduli o nel curriculum`);
   } else metti('opere_societa_quinquennio', null, 'né curriculum della società né sezione del Modulo II sulle opere prodotte');
-  const fondazione = [...modulo2, ...cvSoc].map((d) => /(?:costituit[ao]|fondat[ao]|anno di costituzione|nata|attiva dal)\D{0,25}((?:19|20)\d\d)/i.exec(d.testo)).find(Boolean);
+  const fondazione = [...modulo2, ...cvSoc].map((d) => RE_FONDAZIONE.exec(d.testo)).find(Boolean);
   metti('anni_attivita_societa', fondazione ? Math.max(0, anno - Number(fondazione[1])) : null, fondazione ? `costituita nel ${fondazione[1]}` : 'anno di costituzione non trovato');
   const socRilievo = cvSoc.find((d) => prova(LESSICO.premiMaggiori, d.testo) || prova(LESSICO.festivalMaggiori, d.testo) || prova(LESSICO.uscitaNazionale, d.testo) || prova(LESSICO.emittenti, d.testo));
   metti('societa_riconoscimenti_rilievo', socRilievo ? true : null, socRilievo ? `indizio: «${socRilievo.nome}» cita festival, premi, uscite in sala o emittenti nazionali` : 'giudizio: da verificare sul curriculum');
@@ -365,6 +372,17 @@ export function fattiDossier(bando, progetto) {
 export function domandeAperte(fatti, famiglie = null) {
   const usati = new Set(REGOLE.filter((r) => !famiglie || famiglie.includes(r.famiglia)).flatMap((r) => [...r.tutti, ...r.almenoUno].map((c) => c[0])));
   return Object.entries(FATTI).filter(([k, f]) => f.domanda && usati.has(k) && fatti.valori[k] == null).map(([k, f]) => ({ fatto: k, domanda: f.domanda, origine: fatti.origini[k] }));
+}
+
+/**
+ * Tutte le domande chiuse sui fatti di giudizio che contano per le famiglie date, con lo stato attuale:
+ * { fatto, domanda, valore (true/false/null), origine, confermato }. Servono a far rispondere il produttore.
+ */
+export function domandeTaratura(fatti, famiglie, confermati = {}) {
+  const usati = new Set(REGOLE.filter((r) => famiglie.includes(r.famiglia)).flatMap((r) => [...r.tutti, ...r.almenoUno].map((c) => c[0])));
+  return Object.entries(FATTI).filter(([k, f]) => f.domanda && usati.has(k)).map(([k, f]) => ({
+    fatto: k, domanda: f.domanda, valore: fatti.valori[k] ?? null, origine: fatti.origini[k] || '', confermato: typeof confermati?.[k] === 'boolean',
+  })).sort((a, b) => Number(b.valore == null) - Number(a.valore == null)); // prima quelle ancora senza risposta
 }
 
 /* ================================================================== 2. regole */
@@ -698,5 +716,29 @@ export function stimaDaRegole(bando, categoriaId, progetto, ancorePronte = null)
     fiducia: fiducie.includes('bassa') ? 'bassa' : fiducie.includes('media') ? 'media' : fiducie.length ? 'alta' : null,
     criteriBassaFiducia: Object.values(anc.criteri).filter((a) => a.fiducia === 'bassa').length,
     domande: anc.domande,
+  };
+}
+
+/* ================================================================== per il report */
+
+/**
+ * Tutto ciò che Report, cruscotto e PDF mostrano della taratura, a partire dal risultato già composto.
+ * Se la valutazione ha salvato le sue ancore si usano quelle (sono le fasce che Claude ha visto); `cambiate` dice se i fatti
+ * del dossier, ricalcolati ora, portano a fasce diverse. Senza valutazione c’è la stima dalle regole.
+ */
+export function taraturaDossier(bando, p, ris) {
+  const vive = ancoreTaratura(bando, p.categoriaId, p);
+  const salvate = p.valutazione?.taratura;
+  const valide = salvate?.criteri && salvate.categoriaId === p.categoriaId && salvate.bandoId === bando.id;
+  const ancore = valide ? salvate : ancoreCompatte(vive);
+  const valutato = (ris?.sezioni || []).some((s) => s.criteri.some((c) => c.fonte === 'commissione'));
+  const firma = (a) => JSON.stringify(Object.values(a.criteri).map((c) => [c.id, c.atteso, c.rigoroso]));
+  return {
+    versione: ancore.versione, ancore, vive, daValutazione: !!valide,
+    cambiate: !!valide && firma(salvate) !== firma(ancoreCompatte(vive)),
+    scostamenti: valutato ? scostamenti(ris, ancore) : null,
+    stima: valutato ? null : stimaDaRegole(bando, p.categoriaId, p, vive),
+    domande: vive.domande, limiti: LIMITI,
+    tutteLeDomande: domandeTaratura(vive.fatti, [...new Set(Object.values(vive.criteri).map((a) => a.famiglia))], p.fattiConfermati),
   };
 }
