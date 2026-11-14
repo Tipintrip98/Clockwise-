@@ -1,6 +1,6 @@
-// Area di lavoro di un dossier: Documenti, Dati chiave, Valutazione, Report.
+// Area di lavoro di un dossier: Cruscotto, Documenti, Dati chiave, Valutazione, Report, più gli strumenti.
 import { h, metti, svuota, fmt, euro, toast, dimensione, campoNumero, campoTesto, scelta, elencoControlli, bottoneConferma } from './dom.js';
-import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello } from './app.js';
+import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello, dritaVista, guidaInCorso } from './app.js';
 import { TIPI, tipoPerId, estraiTesto, riconosciTipo } from '../core/docs.js';
 import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti } from '../core/scoring.js';
 import { MODELLI, IMPEGNI } from '../core/llm.js';
@@ -9,10 +9,30 @@ import { nuovoId } from '../core/store.js';
 import { schedaReport } from './report.js';
 import { schedaProduzione } from './produzione.js';
 import { schedaLegale } from './legale.js';
+import { schedaCruscotto } from './cruscotto.js';
+import { suggerimento } from './tutorial.js';
+import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 
-// Le prime quattro sono i passi della valutazione; Produzione e Legale sono strumenti di lavoro sul dossier.
+// Il cruscotto riassume lo stato; le quattro schede numerate sono i passi della valutazione;
+// Produzione e Legale sono strumenti di lavoro sul dossier.
 const SCHEDE = [['documenti', 'Documenti'], ['dati', 'Dati chiave'], ['valutazione', 'Valutazione'], ['report', 'Report']];
 const STRUMENTI = [['produzione', 'Produzione'], ['legale', 'Legale']];
+const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, legale: schedaLegale };
+// Suggerimenti mostrati la prima volta che si apre una scheda.
+const DRITTE = {
+  documenti: ['Trascina tutti i file insieme.', 'Il tipo di ciascun documento viene riconosciuto dal nome e puoi correggerlo nella tabella. Il Modulo III in Excel compila da solo i Dati chiave.'],
+  dati: ['I punti a destra si aggiornano mentre scrivi.', 'Prova a cambiare un numero per vedere quanto vale salire di fascia: il file originale non viene toccato.'],
+  valutazione: ['Per una prima prova basta un commissario.', 'Costa una frazione delle letture. Per la stima da usare prima dell’invio scegli tre commissari: il punteggio è la media, come nella Commissione vera.'],
+  report: ['Apri un criterio per leggere le motivazioni.', 'In fondo alla pagina puoi inserire il punteggio reale di un dossier già presentato: serve a misurare quanto la stima è vicina e a tararla.'],
+  produzione: ['Si parte dallo spoglio.', 'Piano di lavorazione, ordine del giorno, storyboard e adempimenti si riempiono dalle scene lette nella sceneggiatura. Il preventivo è indipendente: puoi importarlo subito.'],
+  legale: ['Ogni risposta cita l’articolo dell’avviso.', 'Apri il testo ufficiale e controlla il punto indicato prima di decidere: è un supporto, non un parere legale.'],
+};
+
+// Ciò che del Modulo III serve ai controlli incrociati (accordi dichiarati, nominativi, date).
+function estrattoModulo(m) {
+  const d = m.dati || {};
+  return { accordi: m.accordi || {}, proponente: d.proponente || '', regia: d.regia || '', dataInizioRiprese: d.dataInizioRiprese || '', dataFineRiprese: d.dataFineRiprese || '', elencoArtistico: d.elencoArtistico || [], elencoTecnico: d.elencoTecnico || [] };
+}
 
 export function vistaProgetto(main) {
   const p = S.progetto;
@@ -22,9 +42,13 @@ export function vistaProgetto(main) {
     S.scheda = id;
     for (const b of barra.children) b.setAttribute('aria-selected', String(b.dataset.id === id));
     svuota(corpo);
-    ({ documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, legale: schedaLegale })[id](corpo, p, bando, mostra);
+    const dritta = DRITTE[id] && !guidaInCorso() ? suggerimento(id, S.guida.dritte, DRITTE[id][0], DRITTE[id][1], dritaVista) : null;
+    if (dritta) corpo.append(dritta);
+    (VISTE[id] || VISTE.cruscotto)(corpo, p, bando, mostra);
+    window.scrollTo(0, 0);
   };
   const barra = h('div.tabs', { role: 'tablist' },
+    h('button', { type: 'button', role: 'tab', dataset: { id: 'cruscotto' }, onclick: () => mostra('cruscotto') }, 'Cruscotto'),
     SCHEDE.map(([id, nome], i) => h('button', { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, h('span.n', String(i + 1)), nome)),
     STRUMENTI.map(([id, nome], i) => h(`button${i === 0 ? '.sep' : ''}`, { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, nome)));
   const cambiaBando = (id) => {
@@ -42,7 +66,7 @@ export function vistaProgetto(main) {
         scelta('Categoria dell’opera', bando.categorie.map((c) => ({ id: c.id, nome: c.nome })), p.categoriaId, (v) => { p.categoriaId = v; p.valutazione = null; salva().then(() => mostra(S.scheda)); }, { id: 'sel-categoria' }),
         scelta('Finestra', (bando.finestre?.length ? bando.finestre.map((f) => f.anno) : [p.anno]).map((a) => ({ id: a, nome: String(a) })), p.anno, (v) => { p.anno = Number(v); salva().then(() => mostra(S.scheda)); }, { id: 'sel-anno' }))),
     barra, corpo);
-  mostra(S.scheda);
+  mostra(VISTE[S.scheda] ? S.scheda : 'cruscotto');
 }
 
 /* ------------------------------------------------------------------ Documenti */
@@ -73,7 +97,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
         const r = await estraiTesto(file);
         Object.assign(doc, { testo: r.testo, pagine: r.pagine, avvisi: r.avvisi });
         doc.tipo = r.modulo3 ? 'modulo3' : riconosciTipo(file.name, r.testo);
-        if (r.modulo3) { unisciDatiModulo(p, r.modulo3.dati); p.origineDati = { tipo: 'modulo3', file: file.name, avvisi: r.modulo3.avvisi }; letto3 = file.name; }
+        if (r.modulo3) { unisciDatiModulo(p, r.modulo3.dati); p.modulo3 = estrattoModulo(r.modulo3); p.origineDati = { tipo: 'modulo3', file: file.name, avvisi: r.modulo3.avvisi }; letto3 = file.name; }
       } catch (e) {
         doc.avvisi.push(`Impossibile leggere il file: ${e.message}`);
         doc.tipo = riconosciTipo(file.name, '');
@@ -105,7 +129,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
           h('td.fname', d.nome, d.avvisi.map((a) => h('div.small', { style: { color: 'var(--warn)', fontWeight: 400 } }, a))),
           h('td', scelta(null, TIPI, d.tipo, (v) => { d.tipo = v; if (v === 'identita') d.testo = ''; salva().then(disegna); }, { id: `tipo-${d.id}` })),
           h('td.r.num.small', d.tipo === 'identita' ? 'non letto' : d.testo ? `${d.pagine ? `${d.pagine} pag. · ` : ''}${fmt(d.testo.length / 1000, 0)}k caratteri` : dimensione(d.dimensione)),
-          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); salva().then(disegna); } }, 'Rimuovi'))))))));
+          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); if (!p.documenti.some((x) => x.tipo === 'modulo3')) p.modulo3 = null; salva().then(disegna); } }, 'Rimuovi'))))))));
     }
     const allegati = verificheAmmissibilita(bando, p.categoriaId, p.anno, p.dati, p.documenti.map((d) => d.tipo)).filter((c) => c.id.startsWith('all_'));
     const mancanti = allegati.filter((c) => c.esito === 'critico').length;
@@ -113,6 +137,10 @@ function schedaDocumenti(corpo, p, bando, mostra) {
       h('div.spread', h('h2', 'Allegati previsti dal bando'), h(`span.tag.${mancanti ? 'bad' : 'ok'}`, mancanti ? `${mancanti} obbligatori mancanti` : 'Obbligatori presenti')),
       h('p.muted.small', { style: { margin: '4px 0 8px' } }, 'Il tipo viene riconosciuto dal nome del file: correggilo nella tabella se è sbagliato.'),
       elencoControlli(allegati)));
+    const altri = [...controlliFormato(bando, p.documenti), ...controlliIncrociati(bando, p)];
+    if (altri.length) lista.append(h('div.panel', { style: { marginTop: '16px' } },
+      h('div.spread', h('h2', 'Formato dei file e coerenza con il Modulo III'), h(`span.tag.${altri.some((c) => c.esito === 'critico') ? 'bad' : altri.some((c) => c.esito === 'attenzione') ? 'warn' : 'ok'}`, altri.some((c) => c.esito !== 'ok') ? `${altri.filter((c) => c.esito !== 'ok').length} da sistemare` : 'A posto')),
+      elencoControlli(altri)));
   }
 
   metti(corpo, h('div.stack', ingresso, zona, stato, tabella, lista,

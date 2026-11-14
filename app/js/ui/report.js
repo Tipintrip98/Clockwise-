@@ -2,7 +2,8 @@
 import { h, metti, svuota, fmt, euro, toast, elencoControlli, salvaFile, copiaTesto, nomeFilePulito } from './dom.js';
 import { S, risultatoDi, salvaPresto, nomeModello, aggiungiConoscenza } from './app.js';
 import { quadrante, barreSezioni } from './grafici.js';
-import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, r1 } from '../core/scoring.js';
+import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, storicoFinanziamento, r1 } from '../core/scoring.js';
+import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 
 const TITOLI = {
   ammissibile: 'Sopra tutte le soglie',
@@ -80,6 +81,7 @@ export function schedaReport(corpo, p, bando) {
   if (!p.documenti.length) {
     controlli = [{ id: 'all_nessuno', esito: 'da_verificare', titolo: 'Allegati del dossier', dettaglio: 'Nessun file caricato: aggiungi i documenti nella scheda Documenti per verificare gli allegati obbligatori.' }, ...controlli.filter((c) => !c.id.startsWith('all_'))];
   }
+  controlli = [...controlli, ...controlliFormato(bando, p.documenti), ...controlliIncrociati(bando, p)];
   const val = p.valutazione;
   const piano = pianoMiglioramento(p, bando, ris, controlli);
   const conta = (e) => controlli.filter((c) => c.esito === e).length;
@@ -166,6 +168,7 @@ function confrontoGraduatoria(st, ris, bando, p) {
   const pos = ris.completo && ris.esito !== 'sotto_soglia' ? posizioneEsiti(bando, p.categoriaId, ris.totale) : null;
   const causa = Object.entries(st.esclusiPer).sort((a, b) => b[1] - a[1])[0];
   const esclusi = st.valutati - st.ammissibili;
+  const storico = storicoFinanziamento(bando, p.categoriaId);
   return h('section',
     h('div.sec-h', h('h3', `Confronto con la graduatoria reale ${st.anno}`)),
     h('div.panel.stack',
@@ -182,6 +185,7 @@ function confrontoGraduatoria(st, ris, bando, p) {
             h('td.r.num', s.completo ? h('strong', { style: { color: s.punti >= d.mediana ? 'var(--ok)' : 'var(--warn)' } }, fmt(s.punti)) : h('span.muted', `${fmt(s.punti)} parz.`)),
             h('td.r.num', fmt(d.mediana)), h('td.r.num', `${fmt(d.q1)} – ${fmt(d.q3)}`), h('td.r.num', `${fmt(d.min)} – ${fmt(d.max)}`));
         })))),
+      storico.length > 1 ? h('div.small', h('strong', 'Soglia di finanziamento negli anni: '), storico.map((x) => `${x.anno}: ultimo finanziato ${fmt(x.ultimoFinanziato)}, primo ${fmt(x.primo)} (${x.finanziati} progetti)`).join(' · '), '.') : null,
       h('p.muted.small', 'Fonte: ', st.url ? h('a', { href: st.url, target: '_blank', rel: 'noopener' }, st.fonte) : st.fonte, '. Questi punteggi reali sono anche il metro con cui Claude tara i giudizi.')));
 }
 

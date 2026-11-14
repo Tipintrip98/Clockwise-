@@ -1,4 +1,4 @@
-# Clockwise — simulatore di punteggio per i bandi cinema
+# Clockwise — controllo qualità dei dossier per i bandi cinema
 
 Clockwise legge il dossier di candidatura a un bando regionale per il cinema e l'audiovisivo e stima il punteggio che la Commissione gli darebbe, criterio per criterio, **prima dell'invio**. Serve come controllo qualità: mostra dove si perdono punti, che cosa manca per essere ammessi e che cosa sistemare.
 
@@ -11,12 +11,19 @@ Non c'è nulla da caricare per far funzionare la valutazione sul bando Sicilia. 
 - **il testo ufficiale dell'Avviso** (articoli 3-18) e le griglie di valutazione, trascritte criterio per criterio;
 - **la struttura dei Moduli I, II e III** del dossier; il Modulo III in formato .xls viene letto in automatico;
 - **la graduatoria reale della finestra 2026** (D.D.G. n. 2384 del 28/07/2026): i punteggi per sezione di tutti i 75 progetti valutati.
+- **i beneficiari della finestra 2025** (D.D.G. n. 2698 del 06/08/2025): i punteggi per sezione dei 14 progetti finanziati, usati come storico della soglia di finanziamento (ultimo film finanziato a 83,1 nel 2025 e a 77,1 nel 2026).
 
 A ogni lettura Claude riceve gli articoli che riguardano la sezione in esame e la distribuzione dei punteggi reali, che usa come metro. I test automatici verificano che la griglia trascritta sia coerente con i documenti: i 75 esiti reali del 2026 rispettano soglie, fasce e formula del contributo così come sono scritte nel programma. I PDF di origine sono in `bandi/sicilia-2025-2027/`.
 
 Che cosa dice la graduatoria 2026, in breve: su 38 film e serie valutati solo 11 hanno superato tutte le soglie, e 26 dei 27 esclusi sono caduti sulla **sezione D** (piano finanziario e distribuzione). Nei documentari 12 erano ammissibili ma solo 8 finanziati: l'ultimo ha preso 80,2 punti.
 
-## Avvio in tre passi
+## Installazione su Windows
+
+Per chi usa Windows c'è il **programma di installazione** `Clockwise-Setup-<versione>.exe`: si installa per il solo utente (non chiede i permessi di amministratore), crea le icone nel menu Start e sul desktop e si disinstalla da *App installate*. All'avvio apre Clockwise nel browser predefinito; per chiuderlo c'è **Esci** nella barra in alto. Non serve installare Node.js.
+
+Il pacchetto si genera con `npm run build:windows` e, a ogni aggiornamento del repository, viene costruito e provato su un vero Windows dal flusso automatico `.github/workflows/windows.yml`: i file restano allegati all'esecuzione, e si pubblicano tra i rilasci solo su richiesta (Actions → Windows → Run workflow → *pubblica*). Dettagli, limiti e avvisi di Windows (SmartScreen) sono in [`installer/LEGGIMI.md`](installer/LEGGIMI.md).
+
+## Avvio da sorgente
 
 Serve [Node.js](https://nodejs.org) 20 o successivo.
 
@@ -42,32 +49,45 @@ C'è anche una terza strada, senza installare niente: la stessa interfaccia pubb
 
 ## Come si usa
 
-1. **Documenti** — trascina i file del dossier: Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento. Il tipo di ogni file viene riconosciuto dal nome e si può correggere.
+Al primo avvio una **guida in sette passi** mostra dove trovare le cose; la prima volta che apri una scheda compare un suggerimento su come usarla. Tutto si ritrova nel pulsante **Aiuto** in alto (guida, novità della versione, informazioni e crediti).
+
+Ogni dossier si apre sul **Cruscotto**:
+
+- un **semaforo** dice se il dossier si può inviare (rosso: problemi bloccanti; giallo: cose da sistemare; verde: pronto) e propone il prossimo passo;
+- **Da sistemare** elenca i problemi in ordine di gravità, ognuno con il pulsante che porta al punto in cui correggerlo;
+- **Previsione prima della valutazione**: le sezioni non ancora lette da Claude vengono completate con i punteggi che la Commissione ha realmente dato ai progetti dell'ultima finestra, e vedi in quanti casi il dossier sarebbe ammissibile e in quanti sopra l'ultimo finanziato. Non serve Claude;
+- **Invio**: date della finestra con i giorni mancanti, indirizzo PEC e oggetto pronti da copiare, regole di formato, elenco dei file da allegare con ciò che manca.
+
+Le quattro schede numerate sono i passi della valutazione:
+
+1. **Documenti** — trascina i file del dossier: Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento. Il tipo di ogni file viene riconosciuto dal nome e si può correggere. Clockwise controlla i **formati** prescritti dall'avviso (Modulo I e allegati in PDF, Modulo II in PDF unico, Modulo III in .xls unico) e la **coerenza con il Modulo III**: accordi dichiarati ma non allegati, documenti allegati ma non dichiarati, nominativi di cast e troupe che non compaiono in nessun accordo, date delle riprese incoerenti.
 2. **Dati chiave** — se carichi il **Modulo III in formato .xls**, giorni di lavorazione, professionisti siciliani, budget e piano finanziario si compilano da soli. I punti che dipendono dai numeri si aggiornano mentre scrivi, con le mosse per salire di fascia.
 3. **Valutazione** — scegli quanti commissari simulare (1, 3 o 5) e avvia. Ogni commissario legge i documenti della sezione e assegna i punteggi; il risultato è la media, arrotondata al decimale, come fa la Commissione reale.
-4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026, stima del contributo. Si può scaricare o stampare.
+4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026 e con le soglie di finanziamento 2025 e 2026, stima del contributo. Si può scaricare o stampare.
 
-### Produzione: spoglio e piano di lavorazione
+### Produzione
 
-Nella scheda **Produzione** Claude legge la sceneggiatura scena per scena e ne ricava lo **spoglio**: personaggi, set, comparse, oggetti di scena, costumi, trucco, veicoli, animali, stunt, effetti e VFX. Da lì Clockwise calcola:
+La scheda **Produzione** ha cinque sezioni.
 
-- il **piano di lavorazione** (scene raggruppate per set e per giorno/notte, pagine in ottavi, pagine al giorno regolabili);
-- i **giorni di riprese in Sicilia**, dopo aver indicato quali set si girano sul territorio: con un clic finiscono nei Dati chiave e quindi nel criterio 4.1;
-- il **DOOD** (giornate di lavoro e di attesa per personaggio), i **fabbisogni per reparto**, l'elenco dei **rischi** da preparare e delle **scene con VFX**;
-- **logline, soggetto e sinossi**: il soggetto rispetta il limite di 900 battute del Modulo II.
+- **Spoglio** — Claude legge la sceneggiatura scena per scena e ne ricava personaggi, set, comparse, oggetti di scena, costumi, trucco, veicoli, animali, stunt, effetti e VFX; poi fabbisogni per reparto, rischi da preparare, scene con VFX, **logline, soggetto e sinossi** (il soggetto rispetta le 900 battute del Modulo II).
+- **Piano e ordine del giorno** — piano di lavorazione (scene raggruppate per set e per giorno/notte, pagine in ottavi), **calendario** dal primo giorno di riprese con i riposi settimanali, **DOOD**, e per ogni giornata l'**ordine del giorno**: orari, scene, cast convocato, comparse, fabbisogni per reparto, avvertenze di sicurezza, anticipo del giorno dopo. Si copia o si scarica, insieme agli **stralci** della sceneggiatura per quella giornata. I giorni di riprese in Sicilia si riportano nei Dati chiave con un clic (criterio 4.1).
+- **Storyboard** — per ogni scena Claude prepara le inquadrature **seguendo la pagina**: campo, angolazione, movimento, ottica, durata, un bozzetto e un prompt in inglese per i generatori di immagini. Ogni inquadratura riporta le parole della sceneggiatura a cui corrisponde e il programma controlla che esistano davvero nel testo: quelle senza riscontro sono segnate. Si può caricare un'immagine al posto del bozzetto; lo storyboard si scarica come pagina stampabile e come elenco inquadrature in CSV.
+- **Preventivo** — righe di costo assegnate alle voci del budget del Modulo III (A.1-A.9), con la quota spesa in Sicilia: ne escono costo di produzione, costo ammissibile, spesa sul territorio, producer fee (con il limite del 7,5%) e percentuale sopra la linea, da riportare nei Dati chiave. **Importa il Master Budget in Excel** (foglio `BUDGET`): i lordi diventano costo per la produzione (paghe con oneri e TFR, fatture senza IVA) e ogni riga riceve la voce del Modulo III più vicina, che puoi cambiare.
+- **Adempimenti** — che cosa serve per girare in regola in Italia, dallo sviluppo alla chiusura: 53 voci con che cosa fare, quando, riferimento e fonte. Le voci su minori, animali, armi, droni, acqua, luoghi pubblici, musica e stunt compaiono solo se lo spoglio le ha trovate in sceneggiatura, con le scene interessate. Le voci non riscontrate su una fonte certa sono segnate «da verificare con il consulente».
 
-Spoglio e piano si scaricano in CSV (si aprono in Excel).
+Spoglio, piano, calendario e inquadrature si scaricano in CSV (si aprono in Excel).
 
-### Legale: bando, contratti, bozze
+### Legale
 
 Nella scheda **Legale**:
 
 - **Chiedi al bando** — risposte fondate sul testo ufficiale dell'avviso, con l'articolo citato accanto a ogni affermazione e applicate ai dati del dossier. Ciò che esce dal testo è segnalato come "da verificare".
-- **Contratti e accordi del dossier** — contratti, deal memo, lettere di intento, referenze bancarie e atti di concessione letti uno per uno: parti, oggetto, importi, firma, criterio che sostengono, problemi e correzioni prima dell'invio.
-- **Bozze di documenti** — lettera di intento, deal memo di distribuzione e di coproduzione, richiesta di referenze bancarie, accordo Green Film: pronte da completare e far firmare.
+- **Contratti** — contratti, deal memo, lettere di intento, referenze bancarie e atti di concessione letti uno per uno: parti, oggetto, importi, firma, criterio che sostengono, problemi e correzioni prima dell'invio.
+- **Bozze** — quattordici modelli. Per il dossier: lettera di intento, deal memo di distribuzione e di coproduzione, richiesta di referenze bancarie, accordo Green Film, deal memo con il produttore esecutivo. Per la produzione: opzione e cessione dei diritti, liberatorie per immagine, minori, location e marchi, licenza di sincronizzazione, accordo di riservatezza.
+- **Fascicolo** — parti, impegni e date chiave ricavati dai moduli e dagli accordi, con il file di provenienza accanto a ogni voce e le incongruenze tra un documento e l'altro.
 - **Scadenze** — fine riprese, rendicontazione e termini di proroga calcolati dalla data del decreto.
 
-È un supporto alla preparazione del dossier, non un parere legale.
+È un supporto alla preparazione del dossier e dei documenti di produzione, non un parere legale.
 
 ### Prova con un dossier già presentato
 
@@ -100,28 +120,38 @@ Nella pagina **Bandi**:
 
 - È una **stima**: aiuta a trovare i punti deboli, non anticipa né vincola il giudizio della Commissione.
 - Il vecchio formato `.doc` e i PDF scansionati non sono leggibili: usa PDF con testo, DOCX o XLS.
-- Il piano di lavorazione è una bozza automatica: non conosce disponibilità degli attori, spostamenti e meteo. Non ci sono (ancora) preventivo automatico, storyboard, ordini del giorno e stralci di sceneggiatura.
+- Il piano di lavorazione è una bozza automatica: non conosce disponibilità degli attori, spostamenti e meteo.
+- I bozzetti dello storyboard sono schizzi vettoriali di lavoro: servono a discutere la regia, non sostituiscono un disegnatore. Per immagini rifinite si usa il prompt in un generatore esterno e si carica il risultato.
+- Il preventivo non stima i costi: riordina quelli che inserisci o importi. La voce del Modulo III proposta per ogni riga va controllata.
+- La previsione statistica dice come sono andati i progetti reali, non come andrà il tuo: è sostituita dalla valutazione di Claude appena i documenti sono caricati.
+- Gli adempimenti sono un elenco di orientamento aggiornato a novembre 2026: norme, importi e termini cambiano e vanno verificati con i consulenti.
 - L'area legale lavora sul testo dell'avviso e sui documenti del dossier: non consulta una banca dati di leggi e sentenze e non gestisce il processo telematico.
 - Con l'account Claude nell'app (pagina pubblicata) ogni lettura è limitata a circa 250.000 caratteri: le sceneggiature più lunghe vengono lette in più parti e riassunte in una scheda con estratti. Con il server locale la lettura è integrale.
-- Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su macOS/Linux; su Windows usa l'installazione nativa di Claude Code.
+- Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su Linux; su Windows usa l'installazione nativa di Claude Code.
 
 ## Per chi sviluppa
 
 ```
 bandi/          documenti ufficiali di origine (avviso, modello del Modulo III, graduatoria 2026)
 app/            interfaccia (HTML, CSS, moduli JavaScript, nessuna compilazione)
-  js/core/      griglia del bando, calcolo dei punteggi, lettura del Modulo III, istruzioni per Claude,
-                spoglio e piano di lavorazione (sceneggiatura.js), area legale (legale.js)
-  js/ui/        pagine
+  js/core/      griglia del bando ed esiti reali, calcolo dei punteggi e previsione statistica (scoring.js),
+                stato dell'invio e controlli incrociati (invio.js), lettura del Modulo III, istruzioni per Claude,
+                spoglio e piano (sceneggiatura.js), ordine del giorno (odg.js), storyboard (storyboard.js),
+                preventivo e Master Budget (preventivo.js), adempimenti (adempimenti.js, condizioni.js),
+                area legale (legale.js), versione e crediti (versione.js)
+  js/ui/        pagine: cruscotto, schede del dossier, produzione, legale, aiuto, guida iniziale
   vendor/       lettori di PDF, Word ed Excel
-server/         server locale: file statici e ponte verso Claude (API e Claude Code)
-scripts/        generazione della pagina singola per l'app Claude
+server/         server locale: file statici e ponte verso Claude (API e Claude Code); avvio dell'eseguibile Windows
+installer/      programma di installazione per Windows (NSIS), icona, istruzioni
+scripts/        pagina singola per l'app Claude, pacchetto Windows
+.claude/skills/ istruzioni per Claude Code: valutazione del bando, spoglio, storyboard, rilascio
 test/           test automatici
 ```
 
 ```bash
 npm test                  # punteggi, Modulo III, orchestrazione, coerenza con i documenti ufficiali
 npm run build:artifact    # dist/clockwise.html
+npm run build:windows     # dist/windows/Clockwise.exe e programma di installazione
 PORT=5858 npm start       # porta diversa
 ```
 

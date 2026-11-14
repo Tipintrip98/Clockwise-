@@ -5,7 +5,7 @@
 // principi generali della Commissione e punteggi minimi di sezione.
 
 import { TESTO_AVVISO_SICILIA } from './bando-sicilia-testo.js';
-import { ESITI_SICILIA } from './bando-sicilia-esiti.js';
+import { ESITI_SICILIA, FINANZIATI_SICILIA } from './bando-sicilia-esiti.js';
 
 // Struttura dei tre moduli ufficiali del Dossier di candidatura (dai modelli 2025-2027 della Sicilia Film Commission).
 const MODULI_SICILIA = `MODULO I — ISTANZA (da presentare in PDF con firma digitale del legale rappresentante)
@@ -335,6 +335,13 @@ export const BANDO_SICILIA = {
   ],
   invio: {
     canale: 'PEC',
+    regole: [
+      'Un solo invio, dalla casella PEC indicata nel dossier (art. 8.1 e 8.2).',
+      'Modulo I e allegati in PDF, un file per documento; il Modulo I firmato digitalmente.',
+      'Modulo II in PDF, in un unico file. Modulo III in formato .xls, in un unico file.',
+      'Tutto in lingua italiana. Solo la modulistica ufficiale dell’Avviso: moduli diversi rendono l’istanza irricevibile.',
+      'Una sola istanza per categoria in ciascuna finestra: vale la prima pervenuta.',
+    ],
     indirizzo: 'dipartimento.turismo@certmail.regione.sicilia.it',
     oggetto: 'SICILIA FILM COMMISSION – ISTANZA PER LA CONCESSIONE DI CONTRIBUTI A SOSTEGNO DELLA PRODUZIONE CINEMATOGRAFICA E AUDIOVISIVA 2025-2027',
   },
@@ -377,14 +384,14 @@ export const BANDO_SICILIA = {
   griglie: { A: GRIGLIA_A, B: GRIGLIA_B },
   // Allegati del dossier (art. 8.2). "sempre": obbligatori; gli altri dipendono dal progetto.
   allegati: [
-    { tipo: 'modulo1', nome: 'Modulo I — Istanza (PDF firmato digitalmente)', obbligo: 'sempre' },
-    { tipo: 'modulo2', nome: 'Modulo II — Scheda di produzione (PDF, unico file)', obbligo: 'sempre' },
-    { tipo: 'modulo3', nome: 'Modulo III — Dati di produzione (.xls, unico file)', obbligo: 'sempre' },
-    { tipo: 'identita', nome: 'Documento d’identità del legale rappresentante', obbligo: 'sempre' },
-    { tipo: 'sceneggiatura', nome: 'Sceneggiatura (trattamento per documentari)', obbligo: 'sempre' },
-    { tipo: 'cv_societa', nome: 'Curriculum del soggetto proponente', obbligo: 'sempre' },
-    { tipo: 'cv_regista', nome: 'Curriculum regista/i', obbligo: 'sempre' },
-    { tipo: 'cv_autori', nome: 'Curriculum sceneggiatore/i (autore o consulente scientifico per i documentari)', obbligo: 'sempre' },
+    { tipo: 'modulo1', nome: 'Modulo I — Istanza (PDF firmato digitalmente)', obbligo: 'sempre', formati: ['pdf'], unico: true },
+    { tipo: 'modulo2', nome: 'Modulo II — Scheda di produzione (PDF, unico file)', obbligo: 'sempre', formati: ['pdf'], unico: true },
+    { tipo: 'modulo3', nome: 'Modulo III — Dati di produzione (.xls, unico file)', obbligo: 'sempre', formati: ['xls'], unico: true },
+    { tipo: 'identita', nome: 'Documento d’identità del legale rappresentante', obbligo: 'sempre', formati: ['pdf'] },
+    { tipo: 'sceneggiatura', nome: 'Sceneggiatura (trattamento per documentari)', obbligo: 'sempre', formati: ['pdf'] },
+    { tipo: 'cv_societa', nome: 'Curriculum del soggetto proponente', obbligo: 'sempre', formati: ['pdf'] },
+    { tipo: 'cv_regista', nome: 'Curriculum regista/i', obbligo: 'sempre', formati: ['pdf'] },
+    { tipo: 'cv_autori', nome: 'Curriculum sceneggiatore/i (autore o consulente scientifico per i documentari)', obbligo: 'sempre', formati: ['pdf'] },
     { tipo: 'green_film', nome: 'Contratto o accordo pre-contrattuale per la certificazione Green Film', obbligo: 'green' },
     { tipo: 'accordi_cast', nome: 'Contratti, deal memo o lettere di intento con artisti e tecnici', obbligo: 'punteggio', criteri: ['3.2', '3.3'] },
     { tipo: 'coproduzione', nome: 'Coproduzione/produzione associata: CV dei soggetti, deal memo o contratti', obbligo: 'se_dichiarato' },
@@ -422,10 +429,13 @@ export const BANDO_SICILIA = {
   testi: TESTO_AVVISO_SICILIA,
   moduli: MODULI_SICILIA,
   esiti: ESITI_SICILIA,
+  // Edizioni di cui sono pubblici solo i punteggi dei finanziati: storico della soglia di finanziamento.
+  esitiFinanziati: FINANZIATI_SICILIA,
   fonti: [
     { nome: 'Avviso pubblico 2025-2027, testo coordinato con il D.D.G. n. 4788 del 22/12/2025', dettaglio: 'testo integrale degli articoli 3-18 e griglie di valutazione (Tabelle A e B)' },
     { nome: 'Dossier di candidatura: Modulo I (Istanza), Modulo II (Scheda di produzione), Modulo III (Dati di produzione)', dettaglio: 'struttura dei campi; il Modulo III .xls viene letto in automatico' },
     { nome: 'D.D.G. n. 2384 del 28/07/2026 — graduatorie della finestra 2026', dettaglio: 'punteggi reali per sezione di 75 progetti valutati (38 film e serie, 25 documentari, 12 cortometraggi)' },
+    { nome: 'D.D.G. n. 2698 del 06/08/2025 — beneficiari della finestra 2025', dettaglio: 'punteggi reali per sezione dei 14 progetti finanziati (7 film e serie, 5 documentari, 2 cortometraggi)' },
   ],
   note: [
     'Punteggio complessivo minimo 65/100, più un punteggio minimo per ciascuna sezione A, B, C e D.',

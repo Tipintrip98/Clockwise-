@@ -9,11 +9,15 @@ import { vistaHome } from './home.js';
 import { vistaProgetto } from './progetto.js';
 import { vistaBandi } from './bandi.js';
 import { vistaCollegamento } from './collegamento.js';
+import { apriAiuto } from './aiuto.js';
+import { avviaTutorial, tutorialAttivo } from './tutorial.js';
 
 export const S = {
   ambiente: { ambiente: 'attesa' },
   imp: { collegamento: null, modello: 'claude-fable-5-2', impegno: 'high', commissari: 3 },
-  bandi: [], progetti: [], progetto: null, scheda: 'documenti', corsa: null, bandoAperto: null,
+  bandi: [], progetti: [], progetto: null, scheda: 'cruscotto', corsa: null, bandoAperto: null,
+  sotto: { produzione: 'spoglio', legale: 'chiedi' },
+  guida: { tutorialVisto: false, dritte: {} },
 };
 
 export const llmAttivo = () => creaLlm(S.ambiente, S.imp.collegamento);
@@ -59,7 +63,8 @@ export async function apriProgetto(id, scheda) {
   if (!p) return vai('dossier');
   p.dati = { ...datiVuoti(), ...p.dati };
   S.progetto = p;
-  S.scheda = scheda || (p.valutazione || p.esempio ? 'report' : 'documenti');
+  S.scheda = scheda || 'cruscotto';
+  S.sotto = { produzione: 'spoglio', legale: 'chiedi' };
   await store.salvaImpostazioni({ ultimoProgetto: id });
   vai('progetto', true);
 }
@@ -87,7 +92,10 @@ export function render() {
     h('header.top', h('div.wrap',
       h('a.brand', { href: '#dossier', 'aria-label': 'Clockwise, elenco dossier' }, logo(), 'Clockwise'),
       h('nav.nav', { 'aria-label': 'Sezioni' }, voce('dossier', 'Dossier'), voce('bandi', 'Bandi'), voce('collegamento', 'Collegamento')),
-      pillola)),
+      h('div.top-fine',
+        pillola,
+        h('button.btn.s.aiuto', { type: 'button', id: 'btn-aiuto', title: 'Guida, novità e crediti', onclick: () => apriAiuto(AZIONI_AIUTO) }, h('span', { 'aria-hidden': 'true' }, '?'), h('span.et', 'Aiuto')),
+        S.ambiente.server?.eseguibile && h('button.btn.s.ghost', { type: 'button', id: 'btn-esci', title: 'Chiudi il programma', onclick: () => apriAiuto(AZIONI_AIUTO, 'info') }, 'Esci')))),
     main);
   VISTE[r](main);
   window.scrollTo(0, 0);
@@ -136,14 +144,58 @@ export async function avvia(el) {
   }
   if (rotta() === 'progetto' && salvate.ultimoProgetto) {
     const p = await store.caricaProgetto(salvate.ultimoProgetto);
-    if (p) { p.dati = { ...datiVuoti(), ...p.dati }; S.progetto = p; S.scheda = p.valutazione || p.esempio ? 'report' : 'documenti'; }
+    if (p) { p.dati = { ...datiVuoti(), ...p.dati }; S.progetto = p; S.scheda = 'cruscotto'; }
   }
   window.addEventListener('hashchange', render);
   render();
+  S.guida = { tutorialVisto: !!salvate.tutorialVisto, dritte: { ...(salvate.dritte || {}) } };
   // il collegamento a Claude arriva dopo: la pagina è già utilizzabile
   S.ambiente = await rilevaAmbiente();
-  if (rotta() !== 'progetto' || S.scheda === 'valutazione') render(); else aggiornaPillola();
+  if (rotta() !== 'progetto' || S.scheda === 'valutazione' || S.ambiente.server?.eseguibile) render(); else aggiornaPillola();
+  if (!S.guida.tutorialVisto) guidaIniziale();
 }
+
+/* ------------------------------------------------------------------ guida al primo utilizzo */
+
+const attendi = (selettore, ms = 1500) => new Promise((fatto) => {
+  const inizio = Date.now();
+  const prova = () => (document.querySelector(selettore) || Date.now() - inizio > ms ? fatto() : requestAnimationFrame(prova));
+  prova();
+});
+
+export function guidaIniziale() {
+  const esempio = () => S.progetti.find((x) => x.esempio) || S.progetti[0];
+  const apriEsempio = async () => {
+    const e = esempio();
+    if (!e) return;
+    if (S.progetto?.id !== e.id || rotta() !== 'progetto' || S.scheda !== 'cruscotto') await apriProgetto(e.id, 'cruscotto');
+    await attendi('#cruscotto-stato');
+  };
+  const elenco = async () => { vai('dossier', true); await attendi('.page-head'); };
+  avviaTutorial([
+    { titolo: 'Benvenuto in Clockwise', testo: 'Clockwise legge il dossier di candidatura a un bando per il cinema e stima il punteggio che la Commissione gli darebbe, prima dell’invio. In un minuto ti mostro dove trovare le cose.', prima: elenco },
+    { bersaglio: '.link-pill', titolo: 'Il collegamento a Claude', testo: 'I documenti li legge Claude. Qui vedi se è collegato: toccalo per scegliere tra il tuo abbonamento Claude e una chiave API. I punti che dipendono dai numeri si calcolano anche senza.', prima: elenco },
+    { bersaglio: '.cards .card', titolo: 'Un dossier per ogni candidatura', testo: 'Ogni progetto ha il suo dossier, salvato su questo dispositivo. Questo è un esempio già compilato: apriamolo.', prima: elenco },
+    { bersaglio: '#cruscotto-stato', titolo: 'Il cruscotto', testo: 'Dice a che punto sei: semaforo, punteggio stimato, quanto manca alla finestra del bando e il prossimo passo da fare. Più sotto trovi i problemi da sistemare, ognuno con il pulsante che porta al punto giusto.', prima: apriEsempio },
+    { bersaglio: '.passi', titolo: 'Quattro passi', testo: 'Documenti, Dati chiave, Valutazione, Esito. Ogni riquadro dice che cosa manca e apre la scheda corrispondente.', prima: apriEsempio },
+    { bersaglio: '.tabs', titolo: 'Le schede del dossier', testo: 'Le stesse tappe sono sempre qui. A destra gli strumenti: Produzione (spoglio, piano, storyboard, ordine del giorno, preventivo, adempimenti) e Legale (domande sul bando, contratti, bozze, fascicolo).', prima: apriEsempio },
+    { bersaglio: '#btn-aiuto', titolo: 'Aiuto, sempre a portata', testo: 'Guida, novità della versione e crediti. Da qui puoi rivedere questa presentazione quando vuoi. La prima volta che apri una scheda trovi anche un suggerimento su come usarla.' },
+  ], () => {
+    S.guida.tutorialVisto = true;
+    store.salvaImpostazioni({ tutorialVisto: true });
+  });
+}
+
+export async function dritaVista(id) {
+  S.guida.dritte[id] = true;
+  await store.salvaImpostazioni({ dritte: S.guida.dritte });
+}
+export const guidaInCorso = () => tutorialAttivo();
+
+const AZIONI_AIUTO = {
+  tutorial: () => guidaIniziale(),
+  suggerimenti: async () => { S.guida.dritte = {}; await store.salvaImpostazioni({ dritte: {} }); },
+};
 
 // Aggiunge (o sostituisce) un documento nella conoscenza aggiuntiva di un bando.
 export async function aggiungiConoscenza(bando, voce) {

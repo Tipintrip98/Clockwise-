@@ -1,0 +1,221 @@
+# Pacchetto di Clockwise per Windows.
+# Su un vero Windows: costruisce Clockwise.exe e l'installatore e li prova davvero (avvio, pagine,
+# uscita, installazione e disinstallazione silenziose). I due file restano allegati all'esecuzione.
+# È l'unico posto in cui l'eseguibile gira su Windows prima di arrivare agli utenti.
+# La pubblicazione nella release "windows" (indirizzo di download fisso) NON è automatica:
+# si chiede a mano da Actions → Windows → Run workflow, spuntando "pubblica".
+name: Windows
+
+on:
+  workflow_dispatch:
+    inputs:
+      pubblica:
+        description: 'Pubblica l''installatore nella release "windows"'
+        type: boolean
+        default: false
+  push:
+    branches:
+      - ccr-7bd5e0b0-69ciny
+    paths:
+      - 'server/**'
+      - 'app/**'
+      - 'installer/**'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/windows.yml'
+
+permissions:
+  contents: read
+
+# Un push nuovo ferma la build precedente dello stesso ramo.
+concurrency:
+  group: windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pacchetto:
+    name: Clockwise.exe e installatore
+    runs-on: windows-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      # Senza questo git su Windows trasforma i fine riga in CRLF: i file dentro l'eseguibile
+      # devono essere identici a quelli del repository.
+      - name: Fine riga come nel repository
+        run: git config --global core.autocrlf false
+
+      - name: Sorgenti
+        uses: actions/checkout@v4
+
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dipendenze
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      # Di solito NSIS è già sulla macchina; se manca lo installa Chocolatey.
+      - name: NSIS (makensis)
+        run: |
+          $standard = Join-Path ${env:ProgramFiles(x86)} 'NSIS\makensis.exe'
+          if ((Get-Command makensis -ErrorAction SilentlyContinue) -or (Test-Path $standard)) {
+            Write-Host 'NSIS già installato'
+          } else {
+            choco install nsis -y --no-progress
+            if ($LASTEXITCODE -ne 0) { throw 'Installazione di NSIS non riuscita' }
+          }
+
+      - name: Build (Clockwise.exe + installatore)
+        run: npm run build:windows
+
+      # ---- Prova 1: l'eseguibile parte, serve l'interfaccia incorporata e si chiude su richiesta
+      - name: Prova di Clockwise.exe
+        env:
+          CLOCKWISE_NO_BROWSER: '1'
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $env:CLOCKWISE_DATA = Join-Path $env:RUNNER_TEMP 'clockwise-dati'
+          $exe = (Resolve-Path 'dist/windows/Clockwise.exe').Path
+          $log = Join-Path $env:RUNNER_TEMP 'clockwise-out.txt'
+          $err = Join-Path $env:RUNNER_TEMP 'clockwise-err.txt'
+          $base = 'http://127.0.0.1:5757'
+
+          $p = Start-Process -FilePath $exe -PassThru -NoNewWindow -RedirectStandardOutput $log -RedirectStandardError $err
+          $null = $p.Handle # senza questo PowerShell non conserva il codice di uscita
+          try {
+            # attesa dell'avvio: al massimo 30 secondi
+            $stato = $null
+            $limite = (Get-Date).AddSeconds(30)
+            while (-not $stato -and -not $p.HasExited -and (Get-Date) -lt $limite) {
+              try { $stato = Invoke-RestMethod "$base/api/stato" -TimeoutSec 5 } catch { Start-Sleep -Milliseconds 500 }
+            }
+            if (-not $stato) { throw 'Clockwise.exe non risponde su 127.0.0.1:5757 entro 30 secondi' }
+            Write-Host "stato: $($stato | ConvertTo-Json -Compress -Depth 5)"
+            if ($stato.eseguibile -ne $true) { throw '/api/stato: "eseguibile" non è true' }
+            $versione = (Get-Content package.json -Raw | ConvertFrom-Json).version
+            if ($stato.versione -ne $versione) { throw "/api/stato: versione $($stato.versione), attesa $versione" }
+
+            $pagina = Invoke-WebRequest "$base/" -UseBasicParsing
+            if ($pagina.StatusCode -ne 200 -or $pagina.Content -notmatch 'Clockwise') { throw 'La pagina iniziale non contiene "Clockwise"' }
+
+            # un file di vendor/, un modulo JS e il CSS: 200 e stessa lunghezza del file nel repository
+            foreach ($percorso in 'vendor/xlsx.full.min.js', 'js/main.js', 'css/app.css') {
+              $r = Invoke-WebRequest "$base/$percorso" -UseBasicParsing
+              $attesa = (Get-Item "app/$percorso").Length
+              if ($r.StatusCode -ne 200 -or $r.RawContentLength -ne $attesa) { throw "GET /$percorso -> $($r.StatusCode), $($r.RawContentLength) byte (attesi $attesa)" }
+              Write-Host "GET /$percorso -> 200, $attesa byte"
+            }
+
+            # uscita pulita
+            $esci = Invoke-RestMethod "$base/api/esci" -Method Post
+            if ($esci.ok -ne $true) { throw 'POST /api/esci non ha risposto ok' }
+            if (-not $p.WaitForExit(15000)) { throw 'Clockwise.exe è ancora aperto 15 secondi dopo POST /api/esci' }
+            if ($p.ExitCode -ne 0) { throw "Clockwise.exe è uscito con codice $($p.ExitCode)" }
+            Write-Host 'Clockwise.exe: avvio, interfaccia e uscita a posto'
+          } finally {
+            if (-not $p.HasExited) { $p.Kill() }
+            Write-Host '--- finestra di Clockwise ---'
+            Get-Content $log, $err -ErrorAction SilentlyContinue
+          }
+
+      # ---- Prova 2: installazione e disinstallazione silenziose, senza diritti di amministratore
+      - name: Prova dell'installatore
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $setup = Get-ChildItem 'dist/windows/Clockwise-Setup-*.exe' | Select-Object -First 1
+          if (-not $setup) { throw 'Installatore non trovato in dist/windows' }
+          $cartella = Join-Path $env:LOCALAPPDATA 'Programs\Clockwise'
+          $menu = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Clockwise.lnk'
+          $desktop = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Clockwise.lnk'
+          $chiave = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Clockwise'
+
+          $i = Start-Process -FilePath $setup.FullName -ArgumentList '/S' -Wait -PassThru
+          if ($i.ExitCode -ne 0) { throw "L'installatore è uscito con codice $($i.ExitCode)" }
+          foreach ($f in "$cartella\Clockwise.exe", "$cartella\Disinstalla.exe", $menu) {
+            if (-not (Test-Path $f)) { throw "Dopo l'installazione manca: $f" }
+          }
+          if (-not (Test-Path $desktop)) { Write-Host "::warning::Collegamento sul desktop non trovato: $desktop" }
+          if ((Get-FileHash "$cartella\Clockwise.exe").Hash -ne (Get-FileHash 'dist/windows/Clockwise.exe').Hash) { throw 'Il file installato non è quello appena costruito' }
+          $voce = Get-ItemProperty $chiave
+          if ($voce.DisplayName -ne 'Clockwise' -or -not $voce.UninstallString) { throw 'Voce di "App installate" incompleta' }
+          Write-Host "Installato: $($voce.DisplayName) $($voce.DisplayVersion) in $($voce.InstallLocation)"
+
+          # Il disinstallatore si copia in %TEMP% e lavora da lì: si aspetta che la cartella sparisca.
+          $u = Start-Process -FilePath "$cartella\Disinstalla.exe" -ArgumentList '/S' -Wait -PassThru
+          for ($n = 0; $n -lt 60 -and (Test-Path $cartella); $n++) { Start-Sleep -Milliseconds 500 }
+          if (Test-Path $cartella) { throw "Dopo la disinstallazione la cartella esiste ancora: $cartella" }
+          if (Test-Path $menu) { throw 'Dopo la disinstallazione resta il collegamento nel menu Start' }
+          if (Test-Path $chiave) { throw 'Dopo la disinstallazione resta la voce in "App installate"' }
+          Write-Host 'Installatore: installazione e disinstallazione silenziose a posto'
+
+      # ---- I due file restano allegati a questa esecuzione
+      - name: File allegati all'esecuzione
+        uses: actions/upload-artifact@v4
+        with:
+          name: clockwise-windows
+          path: |
+            dist/windows/Clockwise.exe
+            dist/windows/Clockwise-Setup-*.exe
+          if-no-files-found: error
+
+  # ---- Solo su richiesta: i due file provati sopra vengono pubblicati nella release "windows":
+  #   https://github.com/<proprietario>/<repository>/releases/download/windows/Clockwise-Setup.exe
+  rilascio:
+    name: Release "windows"
+    needs: pacchetto
+    if: github.event_name == 'workflow_dispatch' && inputs.pubblica
+    runs-on: windows-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # per creare la release e caricarvi i file
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Sorgenti
+        uses: actions/checkout@v4
+
+      - name: File costruiti e provati
+        uses: actions/download-artifact@v4
+        with:
+          name: clockwise-windows
+          path: dist/windows
+
+      - name: Release "windows"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $versione = (Get-Content package.json -Raw | ConvertFrom-Json).version
+          $setup = Get-ChildItem 'dist/windows/Clockwise-Setup-*.exe' | Select-Object -First 1
+          # copia con nome fisso: l'indirizzo di download non cambia quando cambia la versione
+          Copy-Item $setup.FullName 'dist/windows/Clockwise-Setup.exe'
+          $scarica = "https://github.com/$env:GITHUB_REPOSITORY/releases/download/windows"
+          $note = Join-Path $env:RUNNER_TEMP 'note.md'
+          @(
+            "Clockwise $versione per Windows 10 e 11 (64 bit), costruito dal commit $env:GITHUB_SHA.",
+            '',
+            "- **[Clockwise-Setup.exe]($scarica/Clockwise-Setup.exe)**: l'installatore, quello da scaricare. Non servono i diritti di amministratore.",
+            '- **Clockwise.exe**: il solo programma, senza installazione.',
+            '',
+            'I file non hanno una firma digitale: al primo avvio Windows mostra «PC protetto da Windows».',
+            'Premi **Ulteriori informazioni** e poi **Esegui comunque**. I dettagli sono in `installer/LEGGIMI.md`.'
+          ) | Set-Content -Path $note -Encoding utf8
+
+          gh release view windows *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release delete windows --cleanup-tag --yes
+            if ($LASTEXITCODE -ne 0) { throw 'Non riesco a eliminare la release "windows" precedente' }
+          }
+          gh release create windows 'dist/windows/Clockwise-Setup.exe' $setup.FullName 'dist/windows/Clockwise.exe' `
+            --target $env:GITHUB_SHA --title "Clockwise $versione per Windows" --notes-file $note --prerelease
+          if ($LASTEXITCODE -ne 0) { throw 'Pubblicazione della release non riuscita' }
+          Write-Host "Pubblicato: $scarica/Clockwise-Setup.exe"

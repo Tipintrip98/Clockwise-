@@ -436,4 +436,53 @@ export function posizioneEsiti(bando, categoriaId, punteggio) {
   };
 }
 
+// Storico della soglia di finanziamento: per ogni finestra nota, primo e ultimo progetto finanziato.
+export function storicoFinanziamento(bando, categoriaId) {
+  return [...(bando.esitiFinanziati || []), ...(bando.esiti || [])].map((e) => {
+    const fin = (e.categorie?.[categoriaId] || []).filter((r) => r.stato === 'F');
+    if (!fin.length) return null;
+    const tot = fin.map((r) => r.totale);
+    return { anno: e.anno, fonte: e.fonte, url: e.url, finanziati: fin.length, primo: Math.max(...tot), ultimoFinanziato: Math.min(...tot), soloFinanziati: !!e.soloFinanziati };
+  }).filter(Boolean).sort((a, b) => a.anno - b.anno);
+}
+
+/**
+ * Previsione senza lettura dei documenti. Le sezioni già complete restano quelle calcolate; per le altre si usano
+ * i punteggi che la Commissione ha realmente attribuito nell'ultima finestra completa, in due modi:
+ *  - scenari: primo quartile, mediana e terzo quartile di ciascuna sezione mancante;
+ *  - empirica: il dossier viene completato, di volta in volta, con i punteggi reali di ciascun progetto valutato
+ *    (così resta la correlazione tra sezioni) e si conta in quanti casi supera le soglie e l'ultimo finanziato.
+ * Ogni valore è riportato entro i limiti possibili per il dossier (punti già certi ÷ massimo ancora ottenibile).
+ */
+export function previsioneStatistica(bando, categoriaId, ris) {
+  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const righe = edizione?.categorie?.[categoriaId];
+  const st = statisticheEsiti(bando, categoriaId);
+  if (!righe?.length || !st) return null;
+  const stimate = ris.sezioni.filter((s) => !s.completo && st.sezioni[s.id]);
+  const entro = (s, v) => r1(clamp(v, s.punti, s.punti + s.daValutare));
+  const componi = (valori) => {
+    const sezioni = ris.sezioni.map((s) => ({ id: s.id, punti: valori[s.id] ?? s.punti, soglia: s.soglia, stimata: s.id in valori }));
+    const totale = r1(sezioni.reduce((a, s) => a + s.punti, 0));
+    const sotto = sezioni.filter((s) => s.soglia != null && s.punti < s.soglia).map((s) => s.id);
+    return { totale, sezioni, sotto, ammissibile: totale >= bando.sogliaTotale && !sotto.length };
+  };
+  const scenario = (k) => componi(Object.fromEntries(stimate.map((s) => [s.id, entro(s, st.sezioni[s.id][k])])));
+  const casi = righe.map((r) => componi(Object.fromEntries(stimate.map((s) => [s.id, entro(s, r.sezioni[s.id])]))));
+  const ammissibili = casi.filter((c) => c.ammissibile);
+  const cadute = {};
+  for (const c of casi) for (const id of c.sotto) cadute[id] = (cadute[id] || 0) + 1;
+  const peggiore = Object.entries(cadute).sort((a, b) => b[1] - a[1])[0] || null;
+  return {
+    anno: edizione.anno, valutati: righe.length, completa: !stimate.length, sezioniStimate: stimate.map((s) => s.id),
+    scenari: { basso: scenario('q1'), atteso: scenario('mediana'), alto: scenario('q3') },
+    empirica: {
+      casi: casi.length, ammissibili: ammissibili.length,
+      finanziabili: st.ultimoFinanziato == null ? null : ammissibili.filter((c) => c.totale >= st.ultimoFinanziato).length,
+      sezioneCritica: peggiore ? { id: peggiore[0], casi: peggiore[1] } : null,
+    },
+    ultimoFinanziato: st.ultimoFinanziato, sogliaTotale: bando.sogliaTotale,
+  };
+}
+
 export const formati = { fmt, euro, fmtPct };

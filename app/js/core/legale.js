@@ -122,6 +122,15 @@ export const MODELLI_BOZZA = [
   { id: 'deal_memo_coproduzione', nome: 'Deal memo di coproduzione', guida: 'Coproduttore, quote, apporto in denaro, ripartizione dei diritti, chi presenta l’istanza.', criteri: '5.1 e 5.3: il proponente deve mantenere almeno il 20%' },
   { id: 'richiesta_referenze', nome: 'Richiesta di referenze bancarie alla banca', guida: 'Banca e filiale, importo dell’apporto proprio da coprire, titolo dell’opera e budget complessivo.', criteri: '5.1: le risorse proprie contano solo con referenze riferite allo specifico budget' },
   { id: 'accordo_green', nome: 'Accordo pre-contrattuale per la certificazione Green Film', guida: 'Organismo di certificazione accreditato, protocollo, tempi.', criteri: 'art. 5.2: requisito di ammissibilità per film e serie TV non in animazione' },
+  { id: 'incarico_produttore_esecutivo', nome: 'Deal memo con il produttore esecutivo', guida: 'Società di produzione esecutiva, attività affidate, compenso, periodo, sede operativa sul territorio.', criteri: 'art. 8.2: va allegato con il curriculum se il Modulo III dichiara un produttore esecutivo' },
+  { id: 'opzione_diritti', ambito: 'produzione', nome: 'Opzione sui diritti di un’opera (romanzo, soggetto, storia vera)', guida: 'Titolare dei diritti, opera, durata dell’opzione, prezzo dell’opzione e prezzo di acquisto, diritti compresi.', criteri: 'catena dei diritti: senza titolo sui diritti il progetto non è producibile né finanziabile' },
+  { id: 'cessione_sceneggiatura', ambito: 'produzione', nome: 'Contratto di scrittura e cessione dei diritti di sceneggiatura', guida: 'Autore, compenso e rate, consegne, diritti ceduti, crediti nei titoli.', criteri: 'catena dei diritti e voce A.1 del budget' },
+  { id: 'liberatoria_immagine', ambito: 'produzione', nome: 'Liberatoria per l’uso dell’immagine e della voce', guida: 'Persona ripresa (comparsa, intervistato, non professionista), scene o giornate, compenso o gratuità, utilizzi ammessi.', criteri: 'utilizzabilità delle riprese: documentari, comparse, persone riconoscibili' },
+  { id: 'liberatoria_minore', ambito: 'produzione', nome: 'Consenso dei genitori per la partecipazione di un minore', guida: 'Minore e genitori o tutore, ruolo, giornate e orari, accompagnatore, compenso.', criteri: 'minori in scena: va insieme all’autorizzazione dell’Ispettorato del lavoro' },
+  { id: 'liberatoria_location', ambito: 'produzione', nome: 'Accordo per l’uso di una location privata', guida: 'Proprietario, immobile, date e orari, corrispettivo, ripristino dei luoghi, assicurazione.', criteri: 'disponibilità dei set dichiarati nel piano di lavorazione' },
+  { id: 'liberatoria_marchio', ambito: 'produzione', nome: 'Autorizzazione all’uso di marchi, opere e insegne in scena', guida: 'Titolare, marchio od opera, scene in cui compare, eventuale corrispettivo.', criteri: 'elementi protetti visibili in scena' },
+  { id: 'licenza_musica', ambito: 'produzione', nome: 'Richiesta di licenza di sincronizzazione per un brano', guida: 'Brano, autori ed editore, casa discografica, durata dell’utilizzo, scene, territori e mezzi.', criteri: 'musica preesistente: servono i diritti editoriali e quelli sulla registrazione' },
+  { id: 'riservatezza', ambito: 'produzione', nome: 'Accordo di riservatezza (NDA)', guida: 'Parti, informazioni riservate (sceneggiatura, budget, trattative), durata.', criteri: 'circolazione di sceneggiatura e dati economici prima della firma dei contratti' },
 ];
 
 /** Bozza di un documento da far firmare, coerente con ciò che il bando richiede per attribuire punteggio. */
@@ -129,7 +138,13 @@ export async function redigiBozza({ bando, progetto, tipo, indicazioni, llm, opz
   const modello = MODELLI_BOZZA.find((m) => m.id === tipo) || MODELLI_BOZZA[0];
   const articoli = (bando.testi || []).filter((a) => ['art5', 'art10', 'art12'].includes(a.id)).map((a) => `### ${a.titolo}\n${a.testo}`).join('\n\n');
   const r = await llm.chiama({
-    system: `Sei un avvocato esperto di contratti cinematografici. Prepari bozze di documenti che una società di produzione farà firmare e allegherà al dossier per l'avviso «${bando.nome}».
+    system: modello.ambito === 'produzione'
+      ? `Sei un avvocato esperto di diritto dello spettacolo e di diritto d'autore in Italia. Prepari bozze di documenti di produzione per una società che sta realizzando un'opera cinematografica o audiovisiva.
+
+La bozza deve essere pronta da completare e firmare: parti identificate con i dati anagrafici o societari, opera indicata per titolo, oggetto determinato, corrispettivo o gratuità espressi, durata, territori e mezzi di utilizzo, data, luogo e spazi per le firme. Dove manca un dato scrivi [DA COMPLETARE: che cosa] invece di inventarlo. Nessuna clausola vessatoria nascosta: ciò che la controparte concede deve essere chiaro a chi firma.
+
+Testo semplice in italiano, senza simboli di formattazione. Dopo il documento aggiungi, separata da una riga di trattini, una breve nota «Da controllare prima della firma»: i punti da far verificare a un legale e le norme di riferimento. Cita una norma solo se sei certo del riferimento; altrimenti indica la materia (per esempio «disciplina del diritto d'autore», «tutela del lavoro dei minori nello spettacolo») e scrivi che il riferimento va verificato.`
+      : `Sei un avvocato esperto di contratti cinematografici. Prepari bozze di documenti che una società di produzione farà firmare e allegherà al dossier per l'avviso «${bando.nome}».
 
 La bozza deve essere pronta da completare e firmare, e scritta in modo che la Commissione le riconosca valore: parti identificate, opera indicata per titolo, impegni determinati (oggetto, importi, tempi), data e spazi per le firme di tutte le parti. Niente formule che svuotano l'impegno. Dove manca un dato scrivi [DA COMPLETARE: che cosa] invece di inventarlo.
 
@@ -139,11 +154,61 @@ REGOLE DELL'AVVISO
 ${articoli || (bando.note || []).join('\n')}`,
     documenti: `DATI DEL DOSSIER\n${riepilogoDati(bando, progetto.categoriaId, progetto.anno, progetto.dati)}`,
     compito: `Documento da redigere: ${modello.nome}.
-Rilevanza per il bando: ${modello.criteri}.
+A che cosa serve: ${modello.criteri}.
 Indicazioni della produzione: ${indicazioni?.trim() || '(nessuna: usa i dati del dossier e lascia da completare il resto)'}`,
     schema: null, modello: opzioni.modello, impegno: opzioni.impegno || 'high', signal, onTesto,
   });
   return { tipo: modello.id, nome: modello.nome, testo: r.testo.trim(), data: new Date().toISOString() };
+}
+
+export const SCHEMA_FASCICOLO = {
+  type: 'object', additionalProperties: false, required: ['parti', 'impegni', 'date', 'incongruenze', 'sintesi'],
+  properties: {
+    parti: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['nome', 'ruolo', 'documenti'], properties: { nome: { type: 'string' }, ruolo: { type: 'string' }, documenti: LISTA } } },
+    impegni: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['soggetto', 'impegno', 'importo', 'scadenza', 'fonte'], properties: { soggetto: { type: 'string' }, impegno: { type: 'string' }, importo: { type: 'string' }, scadenza: { type: 'string' }, fonte: { type: 'string' } } } },
+    date: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['data', 'evento', 'fonte'], properties: { data: { type: 'string' }, evento: { type: 'string' }, fonte: { type: 'string' } } } },
+    incongruenze: LISTA, sintesi: { type: 'string' },
+  },
+};
+
+const TIPI_FASCICOLO = [...TIPI_CONTRATTO, 'modulo1', 'modulo2', 'modulo3'];
+
+/**
+ * Fascicolo del progetto: chi sono le parti, chi si è impegnato a fare che cosa ed entro quando, le date
+ * chiave e le incongruenze tra un documento e l'altro. Ogni voce indica il file da cui proviene.
+ */
+export async function costruisciFascicolo({ bando, progetto, llm, opzioni, signal, onTesto }) {
+  const docs = progetto.documenti.filter((d) => d.testo && TIPI_FASCICOLO.includes(d.tipo));
+  if (!docs.length) throw new ErroreLlm('nessun_documento', 'Per il fascicolo servono i moduli del dossier oppure contratti, deal memo e lettere di intento.');
+  const system = `Sei il legale interno di una società di produzione cinematografica. Tieni il fascicolo del progetto: un quadro ordinato di parti, impegni e date ricavato dai documenti, che permetta a chiunque in produzione di sapere chi deve fare che cosa ed entro quando.
+
+Regole
+- Riporta solo ciò che i documenti dicono. Per ogni voce indica in «fonte» il nome del file da cui proviene.
+- Le date vanno scritte come nel documento; se manca l'anno o il giorno non completarle.
+- Un'incongruenza è un dato che due documenti riportano in modo diverso (importi, quote, date, ragioni sociali, titolo dell'opera) oppure un impegno dichiarato in un modulo che non trova riscontro in nessun accordo.`;
+  const compito = `Costruisci il fascicolo del progetto.
+
+Rispondi soltanto con un oggetto JSON in questa forma:
+{"parti":[{"nome":"<ragione sociale o persona>","ruolo":"<produttore, coproduttore, distributore, regista, banca…>","documenti":["<file in cui compare>"]}],"impegni":[{"soggetto":"<chi si impegna>","impegno":"<che cosa deve fare o dare>","importo":"<importo o stringa vuota>","scadenza":"<entro quando, o stringa vuota>","fonte":"<file>"}],"date":[{"data":"<data come scritta>","evento":"<firma, inizio riprese, consegna, scadenza di un'opzione…>","fonte":"<file>"}],"incongruenze":["<che cosa non torna, con i file coinvolti>"],"sintesi":"<3-4 frasi sullo stato contrattuale del progetto>"}
+Al massimo 20 parti, 30 impegni e 30 date: privilegia ciò che conta per la produzione e per il bando «${bando.nomeBreve || bando.nome}».`;
+  const dati = `DATI DEL DOSSIER\n${riepilogoDati(bando, progetto.categoriaId, progetto.anno, progetto.dati)}`;
+  // se i documenti non entrano tutti, ciascuno viene accorciato in proporzione
+  const spazio = llm.limiteByte - byteLen(system) - byteLen(compito) - byteLen(dati) - 4000;
+  const totale = docs.reduce((a, d) => a + byteLen(d.testo), 0);
+  const ridotti = totale <= spazio ? docs : docs.map((d) => ({ ...d, testo: d.testo.slice(0, Math.max(1500, Math.floor((d.testo.length * spazio) / totale) - 200)) }));
+  const r = await llm.chiama({ system, documenti: `${dati}\n\nDOCUMENTI\n${blocchiDocumenti(ridotti)}`, compito, schema: SCHEMA_FASCICOLO, modello: opzioni.modello, impegno: opzioni.impegno || 'high', signal, onTesto });
+  const j = r.json || {};
+  const testo = (v) => String(v || '').trim();
+  const out = {
+    data: new Date().toISOString(), ridotto: ridotti !== docs, documenti: docs.map((d) => d.nome),
+    parti: (Array.isArray(j.parti) ? j.parti : []).filter((x) => x?.nome).slice(0, 20).map((x) => ({ nome: testo(x.nome), ruolo: testo(x.ruolo), documenti: (x.documenti || []).map(testo).filter(Boolean) })),
+    impegni: (Array.isArray(j.impegni) ? j.impegni : []).filter((x) => x?.impegno).slice(0, 30).map((x) => ({ soggetto: testo(x.soggetto), impegno: testo(x.impegno), importo: testo(x.importo), scadenza: testo(x.scadenza), fonte: testo(x.fonte) })),
+    date: (Array.isArray(j.date) ? j.date : []).filter((x) => x?.evento).slice(0, 30).map((x) => ({ data: testo(x.data), evento: testo(x.evento), fonte: testo(x.fonte) })),
+    incongruenze: (Array.isArray(j.incongruenze) ? j.incongruenze : []).map(testo).filter(Boolean).slice(0, 12),
+    sintesi: testo(j.sintesi),
+  };
+  if (!out.parti.length && !out.impegni.length && !out.date.length) throw new ErroreLlm('invalid_json', 'Il fascicolo non ha prodotto risultati leggibili. Riprova.');
+  return out;
 }
 
 const aggiungiMesi = (iso, mesi) => { const d = new Date(`${iso}T12:00:00`); const giorno = d.getDate(); d.setMonth(d.getMonth() + mesi); if (d.getDate() !== giorno) d.setDate(0); return d; };

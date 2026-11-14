@@ -161,6 +161,13 @@ export async function estraiTesto(file) {
   return { testo, pagine, avvisi, modulo3 };
 }
 
+// Apre un file Excel come workbook SheetJS (per gli importatori: preventivo, Master Budget).
+export async function apriFoglio(file) {
+  await assicura('XLSX');
+  if (!globalThis.XLSX) throw new Error('Lettore Excel non disponibile.');
+  return globalThis.XLSX.read(new Uint8Array(await file.arrayBuffer()), { type: 'array' });
+}
+
 export const byteLen = (s) => new TextEncoder().encode(s).length;
 
 // Documenti che una sezione di valutazione deve leggere, nell'ordine dei tipi.

@@ -99,3 +99,35 @@ export const ESITI_SICILIA = [{
   url: 'https://www.regione.sicilia.it/istituzioni/servizi-informativi/decreti-e-direttive/dds-n-2384s9-28072026-approvazione-elenchi-anno-2026-istanze-ammissibili-non-ammissibili-cofinanziamento-inerenti-all-avviso-pubblico-2025-2027',
   categorie: { film: righe(film), documentario: righe(documentario), cortometraggio: righe(cortometraggio) },
 }];
+
+// Finestra 2025: il decreto pubblica i punteggi per sezione dei soli progetti finanziati
+// (D.D.G. n. 2698 del 06/08/2025, elenchi consolidati dei beneficiari). Non descrive l'intera platea
+// dei candidati: serve come storico della soglia di finanziamento, non per le statistiche di sezione.
+const film2025 = [
+  [10, 19.5, 14.8, 30, 21.8, 86.1, 'F', 300000, 300000],
+  [24, 17.7, 16.3, 30, 21.2, 85.2, 'F', 250000, 247386.76],
+  [9, 19.2, 14.6, 29, 21.2, 84, 'F', 445000, 434146.34],
+  [20, 19.1, 15.8, 27.2, 21.8, 83.9, 'F', 750000, 730836.24],
+  [42, 19.3, 16.5, 23, 25, 83.8, 'F', 750000, 729965.16],
+  [6, 19.7, 16.2, 22.2, 25, 83.1, 'F', 750000, 600069.86], // ultimo in capienza, a pari merito: contributo ridotto
+  [70, 21.6, 17.5, 26.2, 17.8, 83.1, 'F', 700000, 560052.11],
+];
+const documentario2025 = [
+  [41, 22.5, 11.5, 27, 22, 83, 'F', 70000, 70000],
+  [43, 21.1, 9.6, 30, 20.8, 81.5, 'F', 32460, 31873.37],
+  [7, 25.5, 11.9, 26.4, 17.2, 81, 'F', 50000, 48795.18],
+  [47, 23.3, 12.1, 27, 18.5, 80.9, 'F', 130000, 126710.85],
+  [23, 25.6, 12.2, 25.8, 15.8, 79.4, 'F', 150000, 52620.6], // dotazione esaurita: contributo parziale
+];
+const cortometraggio2025 = [
+  [86, 19.3, 16.4, 30, 18.1, 83.8, 'F', 10000, 10000],
+  [15, 18.7, 15.9, 29, 12.2, 75.8, 'F', 15000, 13568.02],
+];
+
+export const FINANZIATI_SICILIA = [{
+  anno: 2025,
+  soloFinanziati: true,
+  fonte: 'D.D.G. n. 2698 del 06/08/2025 — elenchi consolidati delle istanze beneficiarie di contributo, anno 2025',
+  url: 'https://www.siciliafilmcommission.org/wp-content/uploads/2024/12/DDG-n.-2698-del-06.08.2025Allegati-Firmato.pdf',
+  categorie: { film: righe(film2025), documentario: righe(documentario2025), cortometraggio: righe(cortometraggio2025) },
+}];
