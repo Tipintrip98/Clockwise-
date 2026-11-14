@@ -1,17 +1,39 @@
 # Clockwise — controllo qualità dei dossier per i bandi cinema
 
-Clockwise legge il dossier di candidatura a un bando regionale per il cinema e l'audiovisivo e stima il punteggio che la Commissione gli darebbe, criterio per criterio, **prima dell'invio**. Serve come controllo qualità: mostra dove si perdono punti, che cosa manca per essere ammessi e che cosa sistemare.
+Clockwise legge il dossier di candidatura a un bando pubblico per il cinema e l'audiovisivo e stima il punteggio che la Commissione gli darebbe, criterio per criterio, **prima dell'invio**. Serve come controllo qualità: mostra dove si perdono punti, che cosa manca per essere ammessi e che cosa sistemare. Attorno alla stima ha gli strumenti per tutta la vita del progetto: produzione, finanza, gestione del bando dopo la concessione, area legale.
 
-Il primo bando caricato è l'**Avviso pubblico Regione Siciliana 2025-2027** (Sicilia Film Commission, testo coordinato con il D.D.G. n. 4788 del 22/12/2025), con le griglie ufficiali delle Tabelle A e B, le fasce dei criteri quantitativi e i punteggi minimi di sezione.
+## Il catalogo dei bandi
 
-## Conoscenza fissa: i documenti del bando sono dentro il programma
+Clockwise contiene **25 schede di bando**: le regioni e le province autonome, i contributi selettivi del Ministero della Cultura e Creative Europe MEDIA. Ogni scheda riporta stato, finestre, edizione successiva attesa, categorie, contributo e massimali, allegati, requisiti, scadenze dopo la concessione e fonti ufficiali.
+
+- **Si simulano 23 bandi** con griglia a punti. Ogni griglia è trascritta dal testo ufficiale (avviso, decreto o regolamento) e ricontrollata da una verifica indipendente sullo stesso testo; le citazioni e i dubbi rimasti sono nella scheda («Come è stata verificata la griglia»).
+- **Toscana** (bando 2026 non ancora pubblicato, con pesi già cambiati rispetto al 2024) e **Alto Adige** (parere degli esperti senza punteggio) restano schede informative: Clockwise non simula su regole che non ha potuto leggere.
+- Le regole particolari sono nel motore: soglia complessiva calcolata solo su alcune sezioni (es. Molise, Lombardia, Umbria), minimi su somme di criteri o sezioni (Liguria, Sardegna, Campania, Lazio), penalità (Veneto), punteggi massimi diversi da 100, contributo proporzionale al primo in graduatoria solo dove il bando lo prevede (Sicilia).
+- **«Quale bando vuoi simulare?»**: al primo avvio e a ogni nuovo dossier si sceglie bando, categoria e anno (le finestre note e l'edizione successiva attesa). Il cruscotto mostra **dove conviene presentare** lo stesso progetto: contributo ottenibile, punti dai numeri e profilo di ogni bando.
+
+L'elenco completo, con atto ufficiale ed esito della verifica di ogni fondo, è in [`bandi/README.md`](bandi/README.md).
+
+### Aggiornamento automatico e silenzioso
+
+Due livelli, entrambi silenziosi: si vede qualcosa solo quando c'è una novità.
+
+1. **Canale del catalogo.** Il programma scarica `bandi/catalogo.json`. Una voce entra solo se l'impronta sha256 è esatta, la scheda supera pulizia e controllo e la revisione è più recente di quella in uso; le voci accettate sostituiscono subito i bandi del programma, le altre finiscono nel registro con il motivo. Indirizzo modificabile con `CLOCKWISE_CATALOGO` o `"canaleBandi"` in `data/config.json`.
+2. **Pagine ufficiali degli enti.** Il server locale controlla periodicamente la pagina ufficiale di ogni bando e ne ricava l'elenco dei documenti pubblicati: ogni documento mai visto (avviso, decreto, graduatoria, proroga, FAQ) diventa una «novità» nel dettaglio del bando. Se è attiva l'opzione, Claude legge il nuovo avviso e ne ricava una **proposta** di griglia con il confronto: non sostituisce mai la griglia verificata e si attiva solo a mano, come bando «da verificare».
+3. Cadenza: all'avvio se sono passate 12 ore, poi ogni 6 ore a programma aperto, più «Controlla ora» nella pagina Bandi. Solo https, nessun indirizzo privato, limiti di tempo e dimensione, nessun dato dell'utente inviato.
+4. Per chi mantiene il catalogo: `npm run bandi:controlla` confronta le pagine con `bandi/sorgenti.lock.json`; il workflow `.github/workflows/bandi.yml` lo esegue ogni lunedì e apre una issue con le novità. Dopo aver rivisto una scheda: `npm run bandi` e commit.
+
+**Da sapere:** finché il repository GitHub è privato, il canale del catalogo non è raggiungibile dai programmi installati (risponde 404, gestito in silenzio). Il controllo delle pagine ufficiali funziona comunque.
+
+## Sicilia: testo integrale e graduatorie reali
 
 Non c'è nulla da caricare per far funzionare la valutazione sul bando Sicilia. Clockwise contiene già:
 
 - **il testo ufficiale dell'Avviso** (articoli 3-18) e le griglie di valutazione, trascritte criterio per criterio;
 - **la struttura dei Moduli I, II e III** del dossier; il Modulo III in formato .xls viene letto in automatico;
 - **la graduatoria reale della finestra 2026** (D.D.G. n. 2384 del 28/07/2026): i punteggi per sezione di tutti i 75 progetti valutati.
-- **i beneficiari delle finestre 2025 e 2024** (D.D.G. n. 2698 del 06/08/2025 e n. 2003 del 11/07/2024, quest'ultimo dell'avviso precedente): i punteggi per sezione dei progetti finanziati, usati come storico della soglia di finanziamento (ultimo film finanziato a 80,6 nel 2024, 83,1 nel 2025 e 77,1 nel 2026).
+- **la graduatoria completa della finestra 2025** (D.D.G. n. 2230 del 02/07/2025): i punteggi per sezione di tutti i 77 progetti valutati, con lo scorrimento del D.D.G. n. 3542/2025;
+- **le rettifiche e gli scorrimenti 2026** (D.D.G. n. 2469 e n. 3304/2026) e le **FAQ del 02/02/2026**, che l'Amministrazione dichiara vincolanti per i punteggi;
+- **i beneficiari della finestra 2024** (D.D.G. n. 2003 del 11/07/2024, avviso precedente), come storico della soglia di finanziamento.
 
 A ogni lettura Claude riceve gli articoli che riguardano la sezione in esame e la distribuzione dei punteggi reali, che usa come metro. I test automatici verificano che la griglia trascritta sia coerente con i documenti: i 75 esiti reali del 2026 rispettano soglie, fasce e formula del contributo così come sono scritte nel programma. I PDF di origine sono in `bandi/sicilia-2025-2027/`.
 
@@ -79,6 +101,14 @@ La scheda **Produzione** ha cinque sezioni.
 
 Spoglio, piano, calendario e inquadrature si scaricano in CSV (si aprono in Excel).
 
+### Finanza
+
+Dai Dati chiave del dossier: piano finanziario con scenari confrontabili, **limite degli aiuti pubblici** (Reg. UE 651/2014 art. 54: 50%, 60% per le coproduzioni transfrontaliere, 80% per le opere difficili), **calcolatore del tax credit** alla produzione secondo il D.I. 225/2024 come modificato dal D.I. 141/2025 e dal D.I. 281/2026 (film al 30%), piano di cassa mensile con quote di erogazione e finanziamento ponte, piano di recupero dei ricavi su tre scenari, indicatori con la formula. Ogni numero normativo porta fonte e data; ciò che non è verificato su un atto ufficiale è marcato «da verificare» o «indicativo».
+
+### Gestione bando
+
+Dopo la concessione: tappe e scadenze con conto alla rovescia, quote di erogazione e fideiussione, registro delle spese (inserimento da tastiera o importazione da CSV/Excel), rendiconto contro preventivo con i controlli del bando, **parametri di punteggio da mantenere** a consuntivo (giorni, professionisti e spesa sul territorio ricalcolati sui criteri) e cronoprogramma.
+
 ### Legale
 
 Nella scheda **Legale**:
@@ -100,8 +130,9 @@ Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decre
 - **Criteri numerici** (sezione C, copertura finanziaria): li calcola il programma applicando le fasce del bando. Nessuna stima dell'AI: stessi numeri, stesso risultato.
 - **Criteri di giudizio** (qualità della sceneggiatura, curriculum, piano finanziario e distributivo): li valuta Claude nel ruolo di più commissari con profili diversi. La forbice tra il più severo e il più generoso dice quanto è solido il risultato.
 - **Due letture per ogni criterio di giudizio**: il **punteggio atteso**, cioè quello che la Commissione darebbe secondo il metro dei punteggi reali e la prassi osservata, e la **lettura rigorosa**, cioè i punti che resterebbero contando solo ciò che è provato da documenti idonei e firmati. La differenza è il rischio documentale: se nella lettura rigorosa una sezione scende sotto il minimo, il dossier è segnato «a rischio» anche quando il punteggio atteso supera le soglie.
-- **Soglie**: 65/100 complessivi più il minimo di ogni sezione. Se una sezione non può raggiungere il minimo, il report lo dice subito.
-- **Ammissibilità**: tetto del contributo, spesa minima sul territorio (150%), quadratura tra budget e piano finanziario, allegati obbligatori, incoerenze tra i moduli.
+- **Motore di ragionamento**: le regole ricavate dalla prova sul dossier reale (62 regole su 46 fatti verificabili del dossier, per famiglia di criteri) fissano per ogni criterio una fascia attesa e una rigorosa. Le fasce entrano nelle istruzioni dei commissari simulati; dopo la valutazione il report segnala i criteri in cui la media esce dalla fascia, senza correggere i punteggi. Senza Claude il cruscotto dà una **stima dalle regole**.
+- **Soglie**: quelle del bando scelto (in Sicilia 65/100 più il minimo di ogni sezione), comprese soglie su gruppi di sezioni o di criteri. Se una soglia non può essere raggiunta, il report lo dice subito.
+- **Ammissibilità**: tetto del contributo, spesa minima sul territorio, quadratura tra budget e piano finanziario, producer fee, allegati obbligatori, incoerenze tra i moduli.
 
 Dove il testo del bando si presta a due letture (per esempio la base di calcolo dei giorni di lavorazione), il report mostra entrambe.
 
@@ -126,7 +157,7 @@ Che cosa ha insegnato la prova:
 
 La terza colonna **non è una prova alla cieca**: il metro è stato corretto proprio su questo caso. Per sapere quanto vale su un dossier mai visto serve almeno un secondo caso reale, meglio se escluso o non finanziato. La prassi ricavata è in `prassi` dentro `app/js/core/bando-sicilia.js` e va aggiornata a ogni nuovo caso.
 
-## Altri bandi e conoscenza aggiuntiva
+## Bandi da PDF e conoscenza aggiuntiva
 
 Nella pagina **Bandi**:
 
@@ -151,14 +182,22 @@ Nella pagina **Bandi**:
 - Gli adempimenti sono un elenco di orientamento aggiornato a novembre 2026: norme, importi e termini cambiano e vanno verificati con i consulenti.
 - L'area legale lavora sul testo dell'avviso e sui documenti del dossier: non consulta una banca dati di leggi e sentenze e non gestisce il processo telematico.
 - Con l'account Claude nell'app (pagina pubblicata) ogni lettura è limitata a circa 250.000 caratteri: le sceneggiature più lunghe vengono lette in più parti e riassunte in una scheda con estratti. Con il server locale la lettura è integrale.
+- La taratura del motore di ragionamento poggia su un solo dossier reale (finanziato, lungometraggio, Sicilia) più le graduatorie: documentari, cortometraggi e famiglie di criteri assenti in Sicilia sono estrapolazioni. Un secondo caso reale, meglio se escluso, serve a confermarla.
+- Le griglie degli altri bandi sono verificate sul testo ufficiale, ma per nessuno di loro c'è ancora una prova su un dossier reale: la stima vale come controllo della struttura del dossier rispetto alla griglia.
+- Costi di fideiussione, sconto del tax credit, finanziamento ponte e percentuali del piano di recupero sono stime di mercato senza fonte ufficiale: vanno sostituiti con i valori reali.
 - Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su Linux; su Windows usa l'installazione nativa di Claude Code.
 
 ## Per chi sviluppa
 
 ```
-bandi/          documenti ufficiali di origine (avviso, modello del Modulo III, graduatoria 2026)
+bandi/          schede dei bandi (dati/), catalogo pubblicato (catalogo.json), impronte delle pagine ufficiali
+                (sorgenti.lock.json), documenti ufficiali della Sicilia
 app/            interfaccia (HTML, CSS, moduli JavaScript, nessuna compilazione)
-  js/core/      griglia del bando ed esiti reali, calcolo dei punteggi e previsione statistica (scoring.js),
+  js/core/bandi/ catalogo dei bandi: forma e controllo delle schede (schema.js), registro (indice.js),
+                dati generati da bandi/dati/*.json (dati.js), ricerca e raggruppamento (catalogo.js)
+  js/core/      motore di ragionamento e taratura (ragionamento.js, taratura-dati.js), finanza
+                (finanza.js, finanza-regole.js), gestione del bando (gestione.js), confronto tra bandi
+                (confronto.js), aggiornamenti automatici (aggiornamenti.js), griglia del bando Sicilia ed esiti reali, calcolo dei punteggi e previsione statistica (scoring.js),
                 stato dell'invio e controlli incrociati (invio.js), lettura del Modulo III, istruzioni per Claude,
                 spoglio e piano (sceneggiatura.js), ordine del giorno (odg.js), storyboard (storyboard.js),
                 preventivo e Master Budget (preventivo.js), adempimenti (adempimenti.js, condizioni.js),
@@ -174,7 +213,9 @@ test/           test automatici
 ```
 
 ```bash
-npm test                  # punteggi, Modulo III, orchestrazione, coerenza con i documenti ufficiali
+npm test                  # punteggi, bandi, finanza, gestione, taratura, coerenza con i documenti ufficiali
+npm run bandi             # rigenera app/js/core/bandi/dati.js e bandi/catalogo.json dalle schede
+npm run bandi:controlla   # controlla le pagine ufficiali degli enti
 npm run build:artifact    # dist/clockwise.html
 npm run build:windows     # dist/windows/Clockwise.exe e programma di installazione
 PORT=5858 npm start       # porta diversa
