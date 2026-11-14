@@ -229,7 +229,7 @@ function vistaErogazione(area, ctx) {
     const conGaranzia = quote.filter((q) => q.garanzia);
     const garantito = piano.righe.filter((r) => r.garanzia && r.attiva).reduce((a, r) => a + (r.importo || 0), 0);
     const mesi = fid.mesi ?? mesiFideiussione(bando);
-    const stimato = costoFideiussione({ importo: garantito, tasso: fid.tasso, mesi });
+    const stimato = g.contributoConcesso == null ? null : costoFideiussione({ importo: garantito, tasso: fid.tasso, mesi });
     const incassatoPct = piano.contributo ? Math.max(0, Math.min(100, (piano.incassato / piano.contributo) * 100)) : 0;
 
     metti(svuota(area),
@@ -276,7 +276,7 @@ function vistaErogazione(area, ctx) {
               h('label.field', { for: 'gst-fid-tasso' }, h('span', 'Costo annuo %'), h('input', { id: 'gst-fid-tasso', type: 'number', min: '0', max: '20', step: '0.05', value: fid.tasso ?? '', onchange: (e) => { fid.tasso = e.target.value === '' ? null : Number(e.target.value); cambia(); } })),
               h('label.field', { for: 'gst-fid-mesi' }, h('span', 'Durata in mesi'), h('input', { id: 'gst-fid-mesi', type: 'number', min: '1', max: '120', step: '1', value: mesi, onchange: (e) => { fid.mesi = e.target.value === '' ? null : Number(e.target.value); cambia(); } })),
               campoImporto('Costo da preventivo €', fid.costo, (n) => { fid.costo = n; cambia(); }, { id: 'gst-fid-costo', placeholder: 'se lo hai già' })),
-            h('div.notice', h('strong', `Costo ${fid.costo != null ? 'da preventivo' : 'stimato'}: ${soldi(fid.costo ?? stimato)}. `),
+            h('div.notice', { role: 'status' }, h('strong', `Costo ${fid.costo != null ? 'da preventivo' : 'stimato'}: ${soldi(fid.costo ?? stimato)}. `),
               fid.costo != null ? 'È l’importo che hai inserito.' : stimato == null ? 'Inserisci il contributo concesso per la stima.' : `${soldi(garantito)} × ${fmt(fid.tasso, 2)}% l’anno × ${mesiTesto(mesi)}. Il tasso è un’ipotesi, non un dato ufficiale: sostituiscilo con il preventivo della banca o della compagnia.`,
               ' Nel budget rientra tra gli oneri assicurativi, finanziari e di garanzia (voce A.7).')) : null,
         ] : null) : null);

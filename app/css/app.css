@@ -197,10 +197,11 @@ ol.how { margin: 0; padding-left: 20px; display: flex; flex-direction: column; g
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--idle); flex: none; box-shadow: 0 0 0 3px rgba(146, 160, 181, .22); }
 .dot.ok { background: var(--ok); box-shadow: 0 0 0 3px rgba(79, 208, 138, .24); } .dot.bad { background: var(--bad); box-shadow: 0 0 0 3px rgba(255, 140, 138, .24); } .dot.warn { background: var(--signal); box-shadow: 0 0 0 3px rgba(242, 182, 60, .24); }
 @media (max-width: 760px) {
-  .top { position: static; }
+  .top { position: relative; top: 0; }
   .top .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "marca fine" "voci voci"; gap: 8px 12px; padding-block: 10px 0; }
   .brand { grid-area: marca; }
-  .top-fine { grid-area: fine; flex-wrap: nowrap; }
+  .top-fine { grid-area: fine; flex-wrap: nowrap; margin-left: 0; justify-self: stretch; width: 100%; }
+  .top-fine > .link-pill { flex: 0 1 auto; }
   .nav { grid-area: voci; flex-wrap: nowrap; gap: 2px; margin-inline: -6px; overflow-x: auto; scrollbar-width: none; }
   .nav a { padding: 9px 12px 11px; border-radius: 9px 9px 0 0; white-space: nowrap; }
   .nav a[aria-current="page"] { background: rgba(255, 255, 255, .1); box-shadow: inset 0 -2px 0 #FFFFFF; }

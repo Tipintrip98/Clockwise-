@@ -264,6 +264,7 @@ export function estraiDocumenti(html, urlPagina, { massimo = 400 } = {}) {
   if (tagBase) { const href = attributi(tagBase[0].slice(5, -1)).href; const assoluto = href ? normalizzaUrl(decodificaEntita(href), urlPagina) : ''; if (assoluto) base = assoluto; }
 
   const trovati = new Map();
+  const sestessa = normalizzaUrl(urlPagina || '', undefined); // il link della pagina a sé stessa (menu, «Bandi» evidenziato) non è un documento
   const ancora = /<a(?=[\s>/])/gi;
   let m, contate = 0, troncato = false;
   while ((m = ancora.exec(pagina))) {
@@ -274,7 +275,7 @@ export function estraiDocumenti(html, urlPagina, { massimo = 400 } = {}) {
     const attr = attributi(apertura.slice(0, fine));
     if (!attr.href) continue;
     const url = normalizzaUrl(decodificaEntita(attr.href), base);
-    if (!url) continue;
+    if (!url || url === sestessa) continue;
     const dopo = pagina.slice(m.index + 2 + fine + 1, m.index + 2 + fine + 1 + 1500);
     const chiusura = /<\/a\s*>|<a(?=[\s>/])/i.exec(dopo);
     const interno = chiusura ? dopo.slice(0, chiusura.index) : dopo.slice(0, 300);

@@ -209,6 +209,9 @@ test('estraiDocumenti: link relativi, doppioni, parametri di sessione e di tracc
   // <base href> sposta la radice dei link relativi
   const conBase = A.estraiDocumenti('<head><base href="https://archivio.ente.test/2027/"></head><a href="avviso.pdf">Avviso</a>', 'https://ente.test/bandi/');
   assert.deepEqual(conBase.documenti.map((d) => d.url), ['https://archivio.ente.test/2027/avviso.pdf']);
+  // il link della pagina a sé stessa (voce di menu «Bandi») non è un documento
+  const sestessa = A.estraiDocumenti('<a href="/bandi/">Bandi</a><a href="https://ente.test/bandi/#elenco">Bandi</a><a href="/bandi/avviso.pdf">Avviso</a>', 'https://ente.test/bandi/');
+  assert.deepEqual(sestessa.documenti.map((d) => d.url), ['https://ente.test/bandi/avviso.pdf']);
   assert.deepEqual(A.estraiDocumenti('', 'https://ente.test/').documenti, []);
   assert.deepEqual(A.estraiDocumenti(null, 'https://ente.test/').documenti, []);
 });

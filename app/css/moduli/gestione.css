@@ -1,0 +1,175 @@
+/* Scheda «Gestione bando»: tappe e scadenze, erogazione, registro delle spese, rendiconto, punteggio da mantenere,
+   cronoprogramma. Le tabelle con .gst-schede sotto i 680 px diventano schede impilate (etichette da data-et).
+   Solo le variabili colore di app.css. */
+
+.gst-intro { max-width: 76ch; margin-top: 4px; }
+.gst-piede { margin-top: 4px; max-width: 90ch; }
+.gst-rosso { color: var(--bad); }
+.gst-su { margin-top: 14px; }
+.gst-nascosto { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.gst-testa { align-items: flex-start; }
+.gst-testa > .row { justify-content: flex-end; }
+
+/* citazioni dal testo del bando */
+.gst-cit { margin: 0; padding: 8px 0 8px 14px; border-left: 3px solid var(--line-strong); }
+.gst-cit p { margin: 0; font-size: .88rem; color: var(--ink); }
+.gst-cit footer { margin-top: 4px; font-size: .78rem; color: var(--muted); }
+
+/* «Che cosa fare adesso» con il conto alla rovescia */
+.gst-adesso { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 28px; align-items: center; border-left: 5px solid var(--idle); }
+.gst-adesso[data-semaforo="rosso"] { border-left-color: var(--bad); background: linear-gradient(90deg, var(--bad-soft), var(--surface) 46%); }
+.gst-adesso[data-semaforo="giallo"] { border-left-color: var(--signal); background: linear-gradient(90deg, var(--warn-soft), var(--surface) 46%); }
+.gst-adesso[data-semaforo="verde"], .gst-adesso[data-semaforo="fatto"] { border-left-color: var(--ok); }
+.gst-conto { text-align: right; min-width: 9rem; }
+.gst-conto-n { font-family: var(--font-display); font-weight: 760; font-size: 2.6rem; line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums lining-nums; }
+.gst-adesso[data-semaforo="rosso"] .gst-conto-n { color: var(--bad); }
+.gst-adesso[data-semaforo="giallo"] .gst-conto-n { color: var(--warn); }
+
+/* tappe: linea del tempo verticale */
+.gst-tappe { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.gst-tappa { position: relative; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; padding: 0 0 22px; }
+.gst-tappa:last-child { padding-bottom: 0; }
+.gst-tappa::before { content: ""; position: absolute; left: 16px; top: 34px; bottom: 0; width: 2px; background: var(--line); }
+.gst-tappa:last-child::before { display: none; }
+.gst-pallino { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .9rem; background: var(--idle-soft); color: var(--idle); box-shadow: inset 0 0 0 2px var(--line-strong); font-variant-numeric: tabular-nums; }
+.gst-tappa[data-semaforo="fatto"] .gst-pallino { background: var(--ok); color: var(--surface); box-shadow: none; }
+.gst-tappa[data-semaforo="verde"] .gst-pallino { background: var(--ok-soft); color: var(--ok); box-shadow: inset 0 0 0 2px var(--ok); }
+.gst-tappa[data-semaforo="giallo"] .gst-pallino { background: var(--warn-soft); color: var(--warn); box-shadow: inset 0 0 0 2px var(--signal); }
+.gst-tappa[data-semaforo="rosso"] .gst-pallino { background: var(--bad); color: var(--surface); box-shadow: none; }
+.gst-tappa-corpo { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding-top: 5px; }
+.gst-tappa-testa { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.gst-tappa-testa h3 { font-size: 1rem; }
+.gst-tappa-corpo > p { margin: 0; max-width: 80ch; }
+.gst-tappa-campi { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px 18px; align-items: start; padding: 12px 14px; border-radius: var(--r-s); background: var(--bg); border: 1px solid var(--line); }
+.gst-termine { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.gst-termine-data { font-weight: 650; font-variant-numeric: tabular-nums lining-nums; }
+
+/* altre scadenze (del bando e libere) */
+.gst-libere { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.gst-libera { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 8px 14px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.gst-libera:last-child { border-bottom: 0; }
+.gst-libera-mia { grid-template-columns: minmax(0, 1.4fr) minmax(150px, 1fr) minmax(0, 1fr) auto auto; align-items: end; }
+.gst-libera-stato { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; padding-bottom: 8px; }
+.gst-libera-mia > .check, .gst-libera-mia > .btn { margin-bottom: 6px; }
+.gst-note { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 5px; }
+
+/* riquadri dei totali */
+.gst-kpi-griglia { grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); }
+.gst-kpi-v { font-family: var(--font-display); font-weight: 720; font-size: 1.28rem; letter-spacing: -.02em; font-variant-numeric: tabular-nums lining-nums; overflow-wrap: anywhere; }
+.gst-kpi { border-left: 4px solid var(--line-strong); }
+.gst-kpi.gst-ok { border-left-color: var(--ok); }
+.gst-kpi.gst-warn { border-left-color: var(--bad); }
+
+/* erogazione */
+.gst-spenta > td { opacity: .62; }
+.gst-spenta > td .gst-rosso { opacity: 1; }
+.gst-stretto { width: 6.5rem; text-align: right; }
+.gst-q-nome { min-width: 220px; }
+.gst-q-nome .muted { max-width: 60ch; }
+.gst-q-data { min-width: 160px; }
+.gst-scelta { border: 0; margin: 0; padding: 0; display: flex; gap: 10px 22px; align-items: center; flex-wrap: wrap; }
+.gst-scelta legend { float: left; margin-right: 8px; font-weight: 600; }
+
+/* registro delle spese: modulo (inserimento rapido e modifica in riga) */
+.gst-modulo { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px 14px; align-items: start; }
+.gst-modulo .gst-largo { grid-column: span 2; }
+.gst-spunte { grid-column: 1 / -1; display: flex; gap: 10px 26px; flex-wrap: wrap; }
+.gst-rapida { display: flex; flex-direction: column; gap: 14px; }
+.gst-periodo { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.gst-periodo > .field { width: 12rem; }
+.gst-filtri { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.gst-anteprima { border-color: var(--accent-line); background: var(--accent-soft); }
+.gst-anteprima .tablewrap { max-height: none; }
+
+/* registro: tabella */
+.gst-registro { max-height: none; }
+.gst-registro td { vertical-align: top; }
+.gst-c-data { white-space: nowrap; }
+.gst-c-forn { min-width: 200px; }
+.gst-forn { font-weight: 600; overflow-wrap: anywhere; }
+.gst-c-imp, .gst-c-pag { white-space: nowrap; }
+.gst-etichette { display: flex; flex-wrap: wrap; gap: 4px; }
+.gst-etichette .tag { white-space: normal; }
+.gst-solo-scheda { display: none; }
+.gst-riga-modifica > td { background: var(--surface-2); padding: 16px; }
+.gst-in-modifica { display: table-cell; }
+.gst-in-modifica > * + * { margin-top: 12px; }
+.gst-ordina { all: unset; cursor: pointer; display: inline-flex; gap: 2px; align-items: center; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; border-radius: 4px; }
+.gst-ordina:hover { color: var(--ink); }
+.gst-ordina:focus-visible { outline: 2px solid var(--fuoco); outline-offset: 2px; }
+th[aria-sort="ascending"], th[aria-sort="descending"] { color: var(--ink); }
+
+/* rendiconto */
+.gst-misure { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px 28px; }
+.gst-misura { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.gst-misura .bar { margin-top: 2px; }
+.gst-consuntivo tfoot td { background: var(--surface-2); font-weight: 600; border-bottom: 0; }
+.gst-adempimenti { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.gst-adempimenti li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.gst-adempimenti li:last-child { border-bottom: 0; }
+.gst-nuovo-adempimento { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.gst-nuovo-adempimento > .field { flex: 1 1 260px; }
+
+/* cronoprogramma */
+.gst-gantt { width: 100%; min-width: 0; overflow: hidden; }
+.gst-gantt-svg { display: block; max-width: 100%; height: auto; }
+.gst-legenda { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px 18px; font-size: .88rem; }
+.gst-legenda li { display: flex; gap: 9px; align-items: baseline; min-width: 0; }
+.gst-numero { flex: none; width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center; font-family: var(--font-mono); font-size: .7rem; font-weight: 700; color: var(--surface); background: var(--muted); transform: translateY(4px); }
+.gst-numero[data-semaforo="rosso"] { background: var(--bad); }
+.gst-numero[data-semaforo="giallo"] { background: var(--signal); }
+.gst-numero[data-semaforo="verde"] { background: var(--ok); }
+tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; font-size: .9rem; font-weight: 600; color: var(--ink); background: transparent; white-space: nowrap; vertical-align: middle; }
+.gst-campione { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
+
+/* telefono e finestre strette */
+@media (max-width: 860px) {
+  .gst-filtri { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gst-filtri .gst-cerca { grid-column: 1 / -1; }
+  .gst-libera-mia { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  .gst-libera-mia > .gst-libera-stato { padding-bottom: 0; }
+}
+@media (max-width: 680px) {
+  .gst-adesso { grid-template-columns: minmax(0, 1fr); }
+  .gst-conto { text-align: left; display: flex; gap: 4px 10px; align-items: baseline; flex-wrap: wrap; }
+  .gst-conto-n { font-size: 2.1rem; }
+  .gst-modulo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .gst-modulo .gst-largo { grid-column: 1 / -1; }
+  .gst-libera { grid-template-columns: minmax(0, 1fr) auto; }
+  .gst-libera > .check { grid-column: 1 / -1; }
+  .gst-periodo > .field { width: auto; flex: 1 1 140px; }
+  .gst-testa > .row { justify-content: flex-start; }
+  .gst-testa > .row .btn { white-space: normal; text-align: left; }
+
+  /* tabelle a schede: una scheda per riga, ogni cella con la sua etichetta */
+  .gst-schede { max-height: none; border: 0; background: transparent; box-shadow: none; overflow: visible; }
+  .gst-schede table, .gst-schede tbody, .gst-schede tr, .gst-schede td, .gst-schede tbody th { display: block; width: auto; }
+  .gst-schede thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .gst-schede tbody { display: flex; flex-direction: column; gap: 10px; }
+  .gst-schede tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); }
+  .gst-schede td, .gst-schede tbody th { padding: 0; border: 0; min-width: 0; text-align: left; }
+  .gst-schede td[data-et]::before, .gst-schede tbody th[data-et]::before { content: attr(data-et); display: block; font-size: .68rem; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .gst-schede tbody th.gst-fase::before { display: none; }
+  .gst-schede td.r { text-align: left; }
+  .gst-schede .gst-q-nome, .gst-schede .gst-c-forn, .gst-schede .gst-c-stato, .gst-schede .gst-fase, .gst-schede .gst-in-modifica { grid-column: 1 / -1; min-width: 0; }
+  .gst-schede .gst-c-azioni { grid-column: 1 / -1; }
+  .gst-schede .gst-c-azioni .btn { width: 100%; }
+  .gst-schede td:not([data-et]):empty { display: none; }
+  .gst-schede .gst-riga-modifica { display: block; background: var(--surface-2); }
+  .gst-schede .gst-riga-modifica > td { background: transparent; padding: 0; }
+  .gst-solo-scheda { display: inline; }
+  .gst-q-data { min-width: 0; }
+  .gst-stretto { width: 100%; text-align: left; }
+}
+@media (max-width: 420px) {
+  .gst-modulo { grid-template-columns: minmax(0, 1fr); }
+  .gst-filtri { grid-template-columns: minmax(0, 1fr); }
+  .gst-tappa { grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+  .gst-pallino { width: 28px; height: 28px; font-size: .8rem; }
+  .gst-tappa::before { left: 13px; top: 28px; }
+  .gst-tappa-campi { padding: 10px; }
+  .gst-libera-mia { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+  .gst-tappa-campi input, .gst-modulo, .gst-rapida, .gst-filtri { break-inside: avoid; }
+}

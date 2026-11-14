@@ -53,7 +53,8 @@ export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 
   const cerca = h('input', {
     id: `${id}-cerca`, type: 'search', autocomplete: 'off', spellcheck: 'false', enterkeyhint: 'search', placeholder: 'Cerca per regione, ente o nome', 'aria-label': 'Cerca un bando', value: stato.testo,
     oninput: (e) => { stato.testo = e.target.value; disegna(); },
-    onkeydown: (e) => { if (e.key === 'ArrowDown' && bottoni().length) { e.preventDefault(); (bottoni().find((b) => b.tabIndex === 0) || bottoni()[0]).focus(); } },
+    // freccia giù dalla ricerca: al primo risultato, nell'ordine in cui si vede
+    onkeydown: (e) => { if (e.key === 'ArrowDown' && bottoni().length) { e.preventDefault(); const tutti = bottoni(); for (const b of tutti) b.tabIndex = b === tutti[0] ? 0 : -1; tutti[0].focus(); } },
   });
   const numeri = {};
   const filtri = h('div.cat-filtri', { role: 'group', 'aria-label': 'Filtra i bandi' }, FILTRI.map((f) => {
@@ -89,9 +90,11 @@ export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 
     for (const b of filtri.children) { b.setAttribute('aria-pressed', String(b.dataset.filtro === stato.filtro)); numeri[b.dataset.filtro].textContent = String(quanti[b.dataset.filtro]); }
     conta.hidden = !ricco;
     conta.textContent = visibili.length === correnti.length ? `${bandi(correnti.length)} in catalogo` : `${visibili.length} su ${bandi(correnti.length)}`;
-    const sosta = visibili.some((b) => b.id === idScelto) ? idScelto : visibili[0]?.id;
+    const gruppi = raggruppaPerRegione(visibili);
+    // il bando raggiungibile con Tab: quello scelto se è visibile, altrimenti il primo nell'ordine dei gruppi
+    const sosta = visibili.some((b) => b.id === idScelto) ? idScelto : gruppi[0]?.voci[0]?.id;
     metti(svuota(lista), visibili.length
-      ? raggruppaPerRegione(visibili).map((g) => h('section.cat-gruppo', { 'aria-label': g.titolo },
+      ? gruppi.map((g) => h('section.cat-gruppo', { 'aria-label': g.titolo },
         h('h3', h('span', g.titolo), ricco && h('span.num', { 'aria-hidden': 'true' }, String(g.voci.length))),
         h('ul', g.voci.map((b) => voce(b, oggi, b.id === idScelto, b.id === sosta)))))
       : h('div.cat-vuoto', h('strong', 'Nessun bando corrisponde.'), h('span', stato.testo ? ` Nessun risultato per «${stato.testo}»${stato.filtro !== 'tutti' ? ' con questo filtro' : ''}.` : ' Nessun bando con questo filtro in questo momento.'),
@@ -347,11 +350,14 @@ export function apriSceltaBando({ alTermine, primoAvvio = false, bandoId = null 
     if (bersaglio?.id === 'sb-nome') bersaglio.select();
   };
 
-  function fine() {
-    if (!pronto()) return;
+  let inChiusura = false;
+  async function fine() {
+    if (!pronto() || inChiusura) return;
+    inChiusura = true;
     const esito = { bandoId: st.bando.id, categoriaId: st.categoriaId, anno: st.anno, nome: primoAvvio ? '' : st.nome.trim() || proposto };
     ricordo = { bandoId: esito.bandoId, categoriaId: esito.categoriaId, anno: esito.anno };
-    if (primoAvvio || st.preferito) impostazione({ bandoPreferito: esito.bandoId }).catch(() => {});
+    // la preferenza si salva prima di proseguire: chi riceve la scelta scrive a sua volta nelle impostazioni
+    if (primoAvvio || st.preferito) { try { await impostazione({ bandoPreferito: esito.bandoId }); } catch { /* la scelta vale comunque per questo dossier */ } }
     chiudi(esito);
   }
 

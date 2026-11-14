@@ -1,0 +1,22 @@
+{
+ "schema": 1,
+ "nota": "Generato da scripts/controlla-bandi.mjs --aggiorna: elenco dei documenti visti sulle pagine ufficiali dei bandi. Non modificare a mano.",
+ "aggiornato": "2026-11-14T23:00:18.472Z",
+ "sorgenti": {
+  "sicilia-2025-2027": {
+   "pagine": {
+    "https://www.siciliafilmcommission.org/": {
+     "rilevato": "2026-11-14T23:00:18.472Z",
+     "impronta": "4939b6b1da7fd0525d5a755015478b3776d957ce5ffa60ce66e09706f2c889ea",
+     "documenti": [
+      "https://www.siciliafilmcommission.org/bandi-e-loghi/",
+      "https://www.siciliafilmcommission.org/news/avviso-pubblico-contributi-a-sostegno-dei-festival-e-delle-rassegne-cinematografiche-per-il-triennio-2025-2027-programma-di-assegnazione-dei-contributi-per-lanno-2026/",
+      "https://www.siciliafilmcommission.org/news/avviso-pubblico-per-la-concessione-di-contributi-a-sostegno-delle-produzioni-cinematografiche-e-audiovisive-anni-2025-2027-elenchi-consolidati-delle-istanze-ammissibili-a-cofinanziamento-per-il-2026/",
+      "https://www.siciliafilmcommission.org/news/avviso-pubblico-per-la-concessione-di-contributi-a-sostegno-delle-produzioni-cinematografiche-e-audiovisive-anni-2025-2027-elenchi-delle-istanze-ammissibili-e-non-ammissibili-a-cofinanziamento-per-i-2/",
+      "https://www.siciliafilmcommission.org/news/avviso-pubblico-per-la-concessione-di-contributi-a-sostegno-delle-produzioni-cinematografiche-e-audiovisive-anni-2025-2027-rettifica-seconda-parte-allegato-2-istanze-non-ammissibili-a-cofinanziamen/"
+     ]
+    }
+   }
+  }
+ }
+}

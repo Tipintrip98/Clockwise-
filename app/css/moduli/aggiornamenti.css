@@ -70,8 +70,10 @@
 .agg-proposta { border-color: var(--warn); }
 .agg-proposta > .spread > h3 { margin: 0; }
 .agg-confronto { max-height: 420px; box-shadow: none; }
-.agg-confronto tbody th { position: static; z-index: auto; display: table-cell; padding: 10px 12px; background: transparent; color: var(--ink); font-size: inherit; font-weight: 500; letter-spacing: 0; text-transform: none; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.agg-confronto tbody th { position: static; z-index: auto; display: table-cell; padding: 10px 12px; background: transparent; color: var(--ink); font-size: inherit; font-weight: 500; letter-spacing: 0; text-transform: none; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); white-space: normal; min-width: 12ch; }
 .agg-voce-riga > span { display: block; overflow-wrap: anywhere; }
+.agg-confronto td:last-child { white-space: nowrap; }
+.agg-confronto td:last-child .small { display: block; }
 .agg-confronto td .small { white-space: normal; }
 .agg-confronto tbody tr:last-child > * { border-bottom: 0; }
 
