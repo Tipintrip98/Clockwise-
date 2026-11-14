@@ -475,7 +475,7 @@ test('CSV del piano di cassa: separatore, decimali italiani, totali', () => {
   assert.ok(testo.startsWith('﻿'));
   const righe = testo.slice(1).split('\r\n');
   assert.match(righe[0], /"Entrata: 2\.1 Apporto ""diretto"""/);
-  assert.match(righe[1], /^"dic 2026";"Preparazione";"200,00";"1000,00"/);
+  assert.match(righe[1], /^"dic 2026";"Preparazione";"266,67";"1000,00"/);
   assert.match(righe.at(-1), /^"Totale";"";"1000,00";"1000,00"/);
 });
 

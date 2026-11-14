@@ -38,8 +38,8 @@ export function schedaGestione(corpo, p, bando, mostra) {
 /* ------------------------------------------------------------------ strumenti comuni */
 
 const SEMAFORO = { rosso: ['bad', 'Urgente'], giallo: ['warn', 'Attenzione'], verde: ['ok', 'In regola'], fatto: ['ok', 'Fatto'], grigio: ['x', 'Da pianificare'] };
-const soldi = (n) => (n == null || Number.isNaN(n) ? '—' : Number(n).toLocaleString('it-IT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-const importoTesto = (n) => (n == null ? '' : Number(n).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+const soldi = (n) => (n == null || Number.isNaN(n) ? '—' : Number(n).toLocaleString('it-IT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: 'always' }));
+const importoTesto = (n) => (n == null ? '' : Number(n).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: 'always' }));
 const dataBreve = (d) => (eData(d) ? new Date(`${d}T12:00:00Z`).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : '—');
 const giorniTesto = (n) => (n === 1 ? '1 giorno' : `${fmt(n, 0)} giorni`);
 const mesiTesto = (n) => (n === 1 ? '1 mese' : `${n} mesi`);

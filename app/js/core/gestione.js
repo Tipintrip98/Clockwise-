@@ -132,7 +132,15 @@ export function citaBando(bando, espressione, massimo = 2) {
     viste.add(testo);
     out.push({ fonte, testo });
   };
-  for (const a of Array.isArray(bando.testi) ? bando.testi : []) for (const riga of String(a?.testo || '').split('\n')) aggiungi(a.titolo || 'Avviso', riga);
+  // una voce d'elenco («- in cui la spesa…») si cita con la frase che la introduce («…revocato nei casi:»), altrimenti non si capisce
+  for (const a of Array.isArray(bando.testi) ? bando.testi : []) {
+    let introduzione = '';
+    for (const riga of String(a?.testo || '').split('\n')) {
+      const voce = riga.match(/^\s*[-–•]\s*(.*)$/);
+      if (!voce) { introduzione = /:\s*$/.test(riga) ? riga.trim().replace(/\s+:$/, ':') : ''; aggiungi(a.titolo || 'Avviso', riga); continue; }
+      aggiungi(a.titolo || 'Avviso', introduzione ? `${introduzione} […] ${voce[1]}` : voce[1]);
+    }
+  }
   const nome = bando.nomeBreve || bando.nome || 'Bando';
   for (const n of bando.note || []) aggiungi(`${nome} — note`, n);
   for (const s of bando.scadenze || []) aggiungi(`${nome} — scadenze`, s.nota);
