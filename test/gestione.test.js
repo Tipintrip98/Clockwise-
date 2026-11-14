@@ -115,7 +115,12 @@ test('citazioni: frasi riportate alla lettera dal testo dell’avviso, con la fo
   const p = citaBando(B, 'punteggio', 3);
   assert.equal(p.length, 3);
   assert.ok(p.some((c) => /Art\. 18/.test(c.fonte) && /diminuzione del punteggio/.test(c.testo)));
-  for (const c of p) assert.ok(B.testi.some((a) => a.testo.replace(/\s+/g, ' ').includes(c.testo.replace(/^…|…$/g, ''))), `non letterale: ${c.testo}`);
+  // ogni parte è letterale; le voci d'elenco portano davanti la frase che le introduce, unite da «[…]»
+  for (const c of p) for (const parte of c.testo.replace(/^…|…$/g, '').split(' […] ')) assert.ok(B.testi.some((a) => a.testo.replace(/\s+/g, ' ').includes(parte.replace(/:$/, ''))), `non letterale: ${parte}`);
+  const revoca = citaBando(B, 'territorio', 1)[0].testo;
+  assert.match(revoca, /^Il cofinanziamento concesso sarà, inoltre, revocato nei casi: \[…\] in cui la spesa ammissibile/);
+  assert.doesNotMatch(revoca, /^-|\[…\] -/);
+  assert.equal(citaBando({ testi: [{ titolo: 'Art. 1', testo: 'Elenco:\n- primo caso di revoca\nAltro testo.\n- revoca senza introduzione' }] }, /revoca/, 3).map((c) => c.testo).join(' | '), 'Elenco: […] primo caso di revoca | revoca senza introduzione');
   assert.match(citaBando(B, 'contanti', 2)[1].testo, /transazione sia avvenuta in contanti/);
   assert.match(citaBando(B, 'periodo', 1)[0].testo, /tra la data di presentazione dell’istanza e la data di presentazione della rendicontazione finale/);
   assert.match(citaBando(B, 'territorio', 1)[0].testo, /inferiore al 150% dell’importo concesso/);
