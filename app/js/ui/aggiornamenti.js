@@ -8,7 +8,7 @@ import { BANDI_PREDEFINITI, SCHEDE_BANDI, REVISIONE_CATALOGO } from '../core/ban
 import { urlSicuro } from '../core/bandi/schema.js';
 import {
   ORE_ALL_AVVIO, ORE_A_PROGRAMMA_APERTO, potaSalvati, revisioniInUso, verificaCatalogo, aggiornaSorgente, segnaControllato,
-  candidatoAvviso, confrontaGriglie, unisciRegistro, controlloDovuto, nomeDaUrl, sorgenteVuota,
+  candidatoAvviso, scaricabile, confrontaGriglie, unisciRegistro, controlloDovuto, nomeDaUrl, sorgenteVuota,
 } from '../core/aggiornamenti.js';
 import { estraiTesto } from '../core/docs.js';
 import { leggiBando } from '../core/engine.js';
@@ -137,7 +137,8 @@ async function controlla({ manuale = false } = {}) {
   }
 
   const raggiunto = canale?.esito === 'ok' || lette > 0;
-  await salva({ bandi, sorgenti, canale, registro: unisciRegistro(memo.registro, eventi), ultimoTentativo: adesso, ...(raggiunto ? { ultimoControllo: istante } : {}) });
+  const protocolli = Array.isArray(r.protocolli) && r.protocolli.every((x) => x === 'https:' || x === 'http:') && r.protocolli.length ? r.protocolli : ['https:'];
+  await salva({ bandi, sorgenti, canale, protocolli, registro: unisciRegistro(memo.registro, eventi), ultimoTentativo: adesso, ...(raggiunto ? { ultimoControllo: istante } : {}) });
   if (novita.bandi.length) await caricaBandi(); // integrazione automatica: i bandi aggiornati sono già quelli in uso
 
   // un toast solo quando qualcosa è cambiato davvero
@@ -240,7 +241,7 @@ async function letturaAutomatica() {
   for (const [id, grezza] of Object.entries(memo.sorgenti || {})) {
     if (!inUso(id) || memo.proposte?.[id] || letture.has(id)) continue;
     const sorgente = sorgenteVuota(grezza);
-    const candidato = candidatoAvviso(sorgente.nuovi, sorgente.letti);
+    const candidato = candidatoAvviso(sorgente.nuovi, sorgente.letti, memo.protocolli);
     if (!candidato) continue;
     const fatta = await leggiDocumento(id, candidato, { automatica: true });
     if (fatta) ridisegnaPagine();
@@ -422,7 +423,7 @@ function disegnaAvviso(nodo, bando, ridisegna) {
   if (sorgente?.nuovi.length) {
     const piu = sorgente.nuovi.length > 12;
     const voce = (d) => {
-      const leggibile = llm && (d.tipo === 'pdf' || d.tipo === 'docx') && d.url.startsWith('https://') && !sorgente.letti.includes(d.url);
+      const leggibile = llm && (d.tipo === 'pdf' || d.tipo === 'docx') && scaricabile(d.url, m.protocolli) && !sorgente.letti.includes(d.url);
       return h('li',
         h('span.tag.agg-tipo', d.tipo === 'pagina' ? 'pagina' : d.tipo.toUpperCase()),
         h('div.agg-doc',

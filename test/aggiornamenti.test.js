@@ -325,7 +325,13 @@ test('scelta del candidato avviso tra i documenti nuovi', () => {
   assert.equal(A.candidatoAvviso([nuovi[0], nuovi[1], nuovi[2], nuovi[3], nuovi[5], nuovi[6]]), null, 'graduatorie, FAQ, moduli e proroghe non sono griglie; i .docx e le pagine non si leggono da soli');
   assert.equal(A.candidatoAvviso([d('allegato-a.pdf', 'Allegato A – Avviso pubblico'), d('allegato-b.pdf', 'Allegato B – Schema di domanda')]).url, 'https://ente.test/doc/allegato-a.pdf');
   assert.equal(A.candidatoAvviso([d('FF2027_Regolamento_definitivo.pdf', 'REGOLAMENTO FILM FUND'), d('FF2027_Check_List.pdf', 'CHECK LIST'), d('elenco.pdf', 'ELENCO 2026')]).url, 'https://ente.test/doc/FF2027_Regolamento_definitivo.pdf');
-  assert.equal(A.candidatoAvviso([{ url: 'http://ente.test/doc/avviso.pdf', titolo: 'Avviso pubblico', tipo: 'pdf' }]), null, 'solo documenti su https');
+  const inChiaro = [{ url: 'http://ente.test/doc/avviso.pdf', titolo: 'Avviso pubblico', tipo: 'pdf' }];
+  assert.equal(A.candidatoAvviso(inChiaro), null, 'solo documenti che il server può scaricare: di norma https');
+  assert.equal(A.candidatoAvviso(inChiaro, [], ['http:', 'https:']), inChiaro[0]);
+  assert.equal(A.scaricabile('https://ente.test/a.pdf'), true);
+  assert.equal(A.scaricabile('http://ente.test/a.pdf'), false);
+  assert.equal(A.scaricabile('javascript:alert(1)', ['http:', 'https:']), false);
+  assert.equal(A.scaricabile('storto', []), false);
   assert.equal(A.candidatoAvviso([]), null);
   assert.equal(A.candidatoAvviso(null), null);
   // a parità di indizi la scelta non dipende dall'ordine
@@ -511,6 +517,8 @@ test('controllo completo: catalogo dal canale, documenti delle pagine, canale no
 
   let r = await s.controlla();
   assert.deepEqual(r.canale, { url: u('canale.test', '/catalogo.json'), esito: 'ok' });
+  assert.deepEqual(r.protocolli, ['http:'], 'nelle prove; nel programma è sempre e solo https');
+  assert.deepEqual((await creaAggiornamenti({ env: { CLOCKWISE_CATALOGO: 'off' }, bandi: [] }).controlla()).protocolli, ['https:']);
   assert.deepEqual(r.catalogo, catalogo, 'il catalogo arriva tale e quale: lo verifica chi lo usa');
   assert.match(r.quando, /^\d{4}-\d{2}-\d{2}T/);
   assert.deepEqual(Object.keys(r.sorgenti), ['regione-prova-2027'], 'solo i bandi con una pagina da sorvegliare');

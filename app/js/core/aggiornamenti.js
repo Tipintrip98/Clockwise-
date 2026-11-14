@@ -382,17 +382,22 @@ export function punteggioAvviso(documento) {
   for (const [indizio, peso] of INDIZI_AVVISO) if (indizio.test(frase)) { if (peso > 0) favore = Math.max(favore, peso); else contro += peso; }
   return favore + contro;
 }
+/** Il server può scaricare questo indirizzo? Di norma solo https (l'elenco arriva dal server con ogni controllo). */
+export function scaricabile(url, protocolli = ['https:']) {
+  try { return (Array.isArray(protocolli) && protocolli.length ? protocolli : ['https:']).includes(new URL(url).protocol); } catch { return false; }
+}
 /**
  * Tra i documenti nuovi sceglie quello che più probabilmente è il testo dell'avviso (o del bando, o del disciplinare)
  * in PDF. null se nessuno lo sembra: graduatorie, moduli, FAQ e proroghe non si fanno leggere come griglie.
  * @param {object[]} documenti
- * @param {string[]} [giaLetti]   indirizzi già fatti leggere: mai due volte lo stesso documento
+ * @param {string[]} [giaLetti]     indirizzi già fatti leggere: mai due volte lo stesso documento
+ * @param {string[]} [protocolli]   protocolli che il server accetta di scaricare
  */
-export function candidatoAvviso(documenti, giaLetti = []) {
+export function candidatoAvviso(documenti, giaLetti = [], protocolli = ['https:']) {
   const esclusi = new Set(giaLetti);
   let migliore = null, massimo = 0;
   for (const d of documenti || []) {
-    if (!d || esclusi.has(d.url) || !String(d.url).startsWith('https://')) continue;
+    if (!d || esclusi.has(d.url) || !scaricabile(d.url, protocolli)) continue;
     const punti = punteggioAvviso(d);
     if (punti > massimo || (punti === massimo && punti > 0 && migliore && d.url < migliore.url)) { migliore = d; massimo = punti; }
   }

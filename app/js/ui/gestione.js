@@ -7,7 +7,7 @@ import { sottoNavigazione } from './sezioni.js';
 import { apriFoglio } from '../core/docs.js';
 import { r1 } from '../core/scoring.js';
 import {
-  eData, oggiIso, dataEstesa, dataCorta, giorniTra, assicuraGestione, citaBando, statoTappe,
+  eData, oggiIso, dataEstesa, dataCorta, assicuraGestione, citaBando, statoTappe,
   STATI_QUOTA, quoteDaBando, quoteInUso, pianoErogazione, costoFideiussione, mesiFideiussione,
   VOCI_SPESA, MEZZI, PROBLEMI, FILTRI_STATO, nomeVoce, nomeMezzo, nuovaSpesa, problemiSpesa, eBloccante, filtraSpese, ordinaSpese,
   numeroItaliano, voceDaDescrizione, leggiCsv, importaSpese, senzaDoppioni, csvRegistro, csvMatrice,
@@ -313,8 +313,8 @@ async function tabelleDaFile(file) {
 function vistaSpese(area, ctx) {
   const { p, bando, g, leg, terr } = ctx;
   const vista = { testo: '', voce: '', stato: '', ordine: 'data', verso: 'desc', modifica: null, limite: 100 };
-  const riepilogo = h('div.stack-s'), anteprima = h('div'), rapida = h('div'), elenco = h('div.stack-s'), opzioni = h('div.stack-s');
-  let bozza = { data: '', fornitore: '', descrizione: '', voce: '', imponibile: null, iva: null, aliquota: 22, territorio: true, ammissibile: true, pagataIl: '', mezzo: '', documento: '', note: '' };
+  const riepilogo = h('div.stack-s'), anteprima = h('div'), rapida = h('div'), filtri = h('div'), tabella = h('div.stack-s'), opzioni = h('div.stack-s');
+  let bozza = { data: '', fornitore: '', descrizione: '', voce: '', imponibile: null, iva: null, aliquota: null, territorio: true, ammissibile: true, pagataIl: '', mezzo: '', documento: '', note: '' };
   const contesto = () => ({ periodo: g.periodo });
   const titolo = () => p.dati.titolo || p.nome;
 
@@ -324,6 +324,9 @@ function vistaSpese(area, ctx) {
     const testo = (k, etichetta, extra = {}) => h(`label.field${extra.largo ? '.gst-largo' : ''}`, { for: id(k) }, h('span', etichetta),
       h('input', { id: id(k), type: 'text', value: v[k] || '', autocomplete: 'off', list: extra.lista, placeholder: extra.placeholder, oninput: (e) => { v[k] = e.target.value; alCambio(k); } }));
     const ivaTesto = () => (conAliquota && v.aliquota != null ? `${fmt(v.aliquota, 2)}%` : importoTesto(v.iva));
+    // con un'aliquota scritta nel campo, l'importo calcolato compare qui sotto
+    const calcolata = h('span', { id: id('iva-calcolata'), 'aria-live': 'polite' });
+    const mostraCalcolata = () => { calcolata.textContent = conAliquota && v.aliquota != null && v.iva != null ? `= ${soldi(v.iva)}` : ''; };
     const campoIva = h('input', { id: id('iva'), type: 'text', inputmode: 'decimal', autocomplete: 'off', class: 'num', value: ivaTesto(), placeholder: 'importo o 22%',
       onchange: (e) => {
         const r = leggiIva(e.target.value, v.imponibile);
@@ -331,8 +334,10 @@ function vistaSpese(area, ctx) {
         e.target.removeAttribute('aria-invalid');
         v.iva = r.iva; if (conAliquota) v.aliquota = r.aliquota;
         if (!(conAliquota && r.aliquota != null)) e.target.value = importoTesto(r.iva);
+        mostraCalcolata();
         alCambio('iva');
       } });
+    mostraCalcolata();
     const ammissibile = h('input', { id: id('ammissibile'), type: 'checkbox', checked: !!v.ammissibile, onchange: (e) => { v.ammissibile = e.target.checked; alCambio('ammissibile'); } });
     return h('div.gst-modulo',
       h('datalist', { id: `${pre}-fornitori` }, [...new Set(g.spese.map((r) => r.fornitore).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'it')).slice(0, 200).map((f) => h('option', { value: f }))),
@@ -347,9 +352,10 @@ function vistaSpese(area, ctx) {
       h('label.field', { for: id('imponibile') }, h('span', 'Imponibile €'), ingressoImporto(v.imponibile, (n) => {
         v.imponibile = n;
         if (conAliquota && v.aliquota != null) v.iva = n == null ? null : Math.round(n * v.aliquota) / 100;
+        mostraCalcolata();
         alCambio('imponibile');
       }, { id: id('imponibile'), placeholder: '0,00' })),
-      h('label.field', { for: id('iva') }, h('span', 'IVA'), campoIva),
+      h('label.field', { for: id('iva') }, h('span', 'IVA'), campoIva, conAliquota ? calcolata : null),
       testo('documento', 'N. documento', { placeholder: 'fattura, ricevuta…' }),
       campoData('Pagata il', v.pagataIl, (d) => { v.pagataIl = d; alCambio('pagataIl'); }, { id: id('pagataIl') }),
       h('label.field', { for: id('mezzo') }, h('span', 'Mezzo di pagamento'), menu([{ id: '', nome: '—' }, ...MEZZI], v.mezzo, (x) => { v.mezzo = x; alCambio('mezzo'); }, { id: id('mezzo') })),
@@ -363,6 +369,7 @@ function vistaSpese(area, ctx) {
     if (rapida.querySelector('[aria-invalid="true"]')) { toast('Correggi il campo segnato prima di aggiungere.'); return; }
     if (bozza.imponibile == null && !bozza.fornitore.trim() && !bozza.descrizione.trim()) { toast('Scrivi almeno il fornitore o la descrizione e l’importo.'); document.getElementById('sp-nuova-fornitore')?.focus(); return; }
     const voce = bozza.voce || voceDaDescrizione(bozza.descrizione);
+    const proposta = !bozza.voce && voce;
     const r = nuovaSpesa({ ...bozza, voce, ammissibile: bozza.ammissibile && !VOCI_SPESA.find((y) => y.id === voce)?.nonAmmissibile });
     g.spese.push(r);
     // restano data, aliquota, territorio e mezzo: di solito si registrano più documenti dello stesso periodo
@@ -370,7 +377,7 @@ function vistaSpese(area, ctx) {
     salvaPresto();
     disegnaRapida(); disegnaRiepilogo(); disegnaElenco();
     document.getElementById('sp-nuova-fornitore')?.focus();
-    toast(`Spesa aggiunta${r.voce && !bozza.voce ? `: voce ${r.voce}` : ''}`);
+    toast(proposta ? `Spesa aggiunta alla voce ${r.voce} ${nomeVoce(r.voce)}: correggila se non è quella giusta` : 'Spesa aggiunta');
   }
 
   function disegnaRapida() {
@@ -404,7 +411,7 @@ function vistaSpese(area, ctx) {
     const pres = st.tappe.find((t) => t.id === 'presentazione'), rend = st.tappe.find((t) => t.id === 'rendicontazione');
     const proposta = { dal: pres.data || '', al: rend.data || rend.termine || '' };
     const fontePeriodo = citaBando(bando, 'periodo', 1)[0], fonteIva = citaBando(bando, 'iva', 1)[0];
-    const aggiorna = () => { salvaPresto(); conFuoco(opzioni, disegnaOpzioni); disegnaRiepilogo(); disegnaElenco(); };
+    const aggiorna = () => { salvaPresto(); conFuoco(opzioni, disegnaOpzioni); disegnaRiepilogo(); disegnaTabella(); };
     metti(svuota(opzioni),
       h('div.gst-periodo',
         campoData('Spese ammissibili dal', g.periodo.dal, (v) => { g.periodo.dal = v; aggiorna(); }, { id: 'sp-periodo-dal' }),
@@ -427,7 +434,7 @@ function vistaSpese(area, ctx) {
   function riga(r) {
     const problemi = problemiSpesa(r, contesto());
     if (vista.modifica === r.id) {
-      const chiudi = () => { vista.modifica = null; disegnaElenco(); document.getElementById(`sp-mod-${r.id}`)?.focus(); };
+      const chiudi = () => { vista.modifica = null; disegnaTabella(); document.getElementById(`sp-mod-${r.id}`)?.focus(); };
       const avvisi = h('div');
       const aggiorna = () => {
         salvaPresto(); disegnaRiepilogo();
@@ -449,38 +456,41 @@ function vistaSpese(area, ctx) {
       h('td.r.num.gst-c-imp', { dataset: { et: 'Imponibile' } }, soldi(r.imponibile), r.iva != null && h('div.muted.small', `IVA ${soldi(r.iva)}`)),
       h('td.gst-c-pag', { dataset: { et: 'Pagamento' } }, r.pagataIl ? [h('span.num', dataCorta(r.pagataIl)), r.mezzo && h('div.muted.small', nomeMezzo(r.mezzo))] : h('span.muted', 'Da pagare')),
       h('td.gst-c-stato', { dataset: { et: 'Stato' } }, h('div.gst-etichette', etichette(r, problemi))),
-      h('td.r.gst-c-azioni', h('button.btn.s', { type: 'button', id: `sp-mod-${r.id}`, 'aria-label': `Modifica la spesa ${r.fornitore || r.descrizione || ''}`, onclick: () => { vista.modifica = r.id; disegnaElenco(); document.getElementById(`sp-${r.id}-fornitore`)?.focus(); } }, 'Modifica')));
+      h('td.r.gst-c-azioni', h('button.btn.s', { type: 'button', id: `sp-mod-${r.id}`, 'aria-label': `Modifica la spesa ${r.fornitore || r.descrizione || ''}`, onclick: () => { vista.modifica = r.id; disegnaTabella(); document.getElementById(`sp-${r.id}-fornitore`)?.focus(); } }, 'Modifica')));
   }
   function intestazione(col) {
     const attiva = vista.ordine === col.id;
     return h(`th${col.id === 'imponibile' ? '.r' : ''}`, { 'aria-sort': attiva ? (vista.verso === 'asc' ? 'ascending' : 'descending') : 'none' },
-      h('button.gst-ordina', { type: 'button', id: `sp-ord-${col.id}`, onclick: () => { vista.verso = attiva && vista.verso === 'asc' ? 'desc' : 'asc'; vista.ordine = col.id; conFuoco(elenco, disegnaElenco); } }, col.nome, h('span', { 'aria-hidden': 'true' }, attiva ? (vista.verso === 'asc' ? ' ↑' : ' ↓') : '')));
+      h('button.gst-ordina', { type: 'button', id: `sp-ord-${col.id}`, onclick: () => { vista.verso = attiva && vista.verso === 'asc' ? 'desc' : 'asc'; vista.ordine = col.id; const sel = document.getElementById('sp-f-ordine'); if (sel) sel.value = `${vista.ordine}:${vista.verso}`; conFuoco(tabella, disegnaTabella); } }, col.nome, h('span', { 'aria-hidden': 'true' }, attiva ? (vista.verso === 'asc' ? ' ↑' : ' ↓') : '')));
   }
-  function disegnaElenco() {
+  function disegnaFiltri() {
+    const aggiorna = () => { vista.limite = 100; disegnaTabella(); };
+    metti(svuota(filtri), g.spese.length ? h('div.gst-filtri',
+      h('label.field.gst-cerca', { for: 'sp-cerca' }, h('span', 'Cerca'), h('input', { id: 'sp-cerca', type: 'search', value: vista.testo, placeholder: 'fornitore, descrizione, numero, data…', oninput: (e) => { vista.testo = e.target.value; aggiorna(); } })),
+      h('label.field', { for: 'sp-f-voce' }, h('span', 'Voce'), menu([{ id: '', nome: 'Tutte le voci' }, ...OPZIONI_VOCE, { id: 'nessuna', nome: 'Senza voce' }], vista.voce, (v) => { vista.voce = v; aggiorna(); }, { id: 'sp-f-voce' })),
+      h('label.field', { for: 'sp-f-stato' }, h('span', 'Mostra'), menu(FILTRI_STATO.map((f) => (f.id === 'territorio' ? { ...f, nome: `In ${terr}` } : f.id === 'fuori' ? { ...f, nome: `Fuori da ${terr}` } : f)), vista.stato, (v) => { vista.stato = v; aggiorna(); }, { id: 'sp-f-stato' })),
+      h('label.field', { for: 'sp-f-ordine' }, h('span', 'Ordina per'), menu(COLONNE_ORDINE.flatMap((c) => [{ id: `${c.id}:asc`, nome: `${c.nome} ↑` }, { id: `${c.id}:desc`, nome: `${c.nome} ↓` }]), `${vista.ordine}:${vista.verso}`, (v) => { [vista.ordine, vista.verso] = v.split(':'); aggiorna(); }, { id: 'sp-f-ordine' }))) : null);
+  }
+  function disegnaTabella() {
     if (!g.spese.length) {
-      metti(svuota(elenco), h('div.panel.flat.empty', h('strong', 'Nessuna spesa registrata'), 'Inserisci la prima qui sopra oppure importa un file CSV o Excel: fatture, ricevute e buste paga, una riga per documento.'));
+      metti(svuota(tabella), h('div.panel.flat.empty', h('strong', 'Nessuna spesa registrata'), 'Inserisci la prima qui sopra oppure importa un file CSV o Excel: fatture, ricevute e buste paga, una riga per documento.'));
       return;
     }
     const filtrate = ordinaSpese(filtraSpese(g.spese, vista, contesto()), vista.ordine, vista.verso);
     const visibili = filtrate.slice(0, vista.limite);
     const somma = filtrate.reduce((a, r) => a + (r.imponibile || 0), 0);
     const filtroAttivo = vista.testo || vista.voce || vista.stato;
-    const ridisegna = () => { vista.limite = 100; conFuoco(elenco, disegnaElenco); };
-    metti(svuota(elenco),
-      h('div.gst-filtri',
-        h('label.field.gst-cerca', { for: 'sp-cerca' }, h('span', 'Cerca'), h('input', { id: 'sp-cerca', type: 'text', value: vista.testo, placeholder: 'fornitore, descrizione, numero, data…', oninput: (e) => { vista.testo = e.target.value; ridisegna(); } })),
-        h('label.field', { for: 'sp-f-voce' }, h('span', 'Voce'), menu([{ id: '', nome: 'Tutte le voci' }, ...OPZIONI_VOCE, { id: 'nessuna', nome: 'Senza voce' }], vista.voce, (v) => { vista.voce = v; ridisegna(); }, { id: 'sp-f-voce' })),
-        h('label.field', { for: 'sp-f-stato' }, h('span', 'Mostra'), menu(FILTRI_STATO.map((f) => (f.id === 'territorio' ? { ...f, nome: `In ${terr}` } : f.id === 'fuori' ? { ...f, nome: `Fuori da ${terr}` } : f)), vista.stato, (v) => { vista.stato = v; ridisegna(); }, { id: 'sp-f-stato' })),
-        h('label.field', { for: 'sp-f-ordine' }, h('span', 'Ordina per'), menu(COLONNE_ORDINE.flatMap((c) => [{ id: `${c.id}:asc`, nome: `${c.nome} ↑` }, { id: `${c.id}:desc`, nome: `${c.nome} ↓` }]), `${vista.ordine}:${vista.verso}`, (v) => { [vista.ordine, vista.verso] = v.split(':'); ridisegna(); }, { id: 'sp-f-ordine' }))),
+    metti(svuota(tabella),
       h('div.spread', h('div.muted.small', { id: 'sp-conteggio', role: 'status' }, filtroAttivo ? `${fmt(filtrate.length, 0)} di ${fmt(g.spese.length, 0)} spese · imponibile ${soldi(somma)}` : `${fmt(g.spese.length, 0)} ${g.spese.length === 1 ? 'spesa' : 'spese'} · imponibile ${soldi(somma)}`),
         filtroAttivo ? h('button.btn.s.ghost', { type: 'button', id: 'sp-azzera', onclick: () => { vista.testo = ''; vista.voce = ''; vista.stato = ''; disegnaElenco(); document.getElementById('sp-cerca')?.focus(); } }, 'Togli i filtri') : null),
       filtrate.length ? h('div.tablewrap.gst-schede.gst-registro', h('table',
         h('thead', h('tr', intestazione(COLONNE_ORDINE[0]), intestazione(COLONNE_ORDINE[1]), intestazione(COLONNE_ORDINE[2]), intestazione(COLONNE_ORDINE[3]), intestazione(COLONNE_ORDINE[4]), h('th', 'Stato'), h('th', h('span.gst-nascosto', 'Azioni')))),
         h('tbody', visibili.map(riga))))
         : h('div.panel.flat.empty', h('strong', 'Nessuna spesa con questi filtri'), 'Cambia la ricerca o togli i filtri.'),
-      filtrate.length > visibili.length ? h('div', h('button.btn.s', { type: 'button', id: 'sp-altre', onclick: () => { vista.limite += 200; conFuoco(elenco, disegnaElenco); } }, `Mostra altre ${fmt(Math.min(200, filtrate.length - visibili.length), 0)} (${fmt(filtrate.length - visibili.length, 0)} nascoste)`)) : null,
+      filtrate.length > visibili.length ? h('div', h('button.btn.s', { type: 'button', id: 'sp-altre', onclick: () => { vista.limite += 200; conFuoco(tabella, disegnaTabella); } }, `Mostra altre ${fmt(Math.min(200, filtrate.length - visibili.length), 0)} (${fmt(filtrate.length - visibili.length, 0)} nascoste)`)) : null,
       h('div.spread', h('span'), bottoneConferma('Svuota il registro', 'Conferma: elimina tutte le spese', () => { g.spese = []; vista.modifica = null; salva(p).then(() => { disegnaRiepilogo(); disegnaElenco(); }); })));
   }
+  const disegnaElenco = () => { disegnaFiltri(); disegnaTabella(); };
 
   /* importazione */
   async function importa(file) {
@@ -522,7 +532,7 @@ function vistaSpese(area, ctx) {
       h('details.more', { id: 'sp-opzioni' }, h('summary', 'Periodo di ammissibilità e IVA'), opzioni),
       h('p.muted.small.gst-intro', 'L’importazione riconosce da sola le colonne (in qualunque ordine) e i numeri scritti all’italiana. La matrice esportata serve a compilare la modulistica dell’ente: non la sostituisce.')),
     h('div.panel.stack', h('h3', 'Inserimento rapido'), rapida),
-    h('div.panel.stack', elenco));
+    h('div.panel.stack', filtri, tabella));
   disegnaRapida(); disegnaRiepilogo(); disegnaOpzioni(); disegnaElenco();
 }
 
@@ -571,7 +581,7 @@ function vistaRendiconto(area, ctx, apri) {
         h('div.spread', h('h2', 'Che cosa manca per chiedere il saldo'), h(`span.tag.${r.mancanti ? 'warn' : 'ok'}`, r.mancanti ? `${r.mancanti} ${r.mancanti === 1 ? 'cosa da fare' : 'cose da fare'}` : 'Tutto pronto')),
         h('div.bar', { role: 'img', 'aria-label': `${fatte} voci fatte su ${r.saldo.length}` }, h('i.ok', { style: { width: `${(fatte / r.saldo.length) * 100}%` } })),
         h('ul.todo', r.saldo.filter((x) => !x.id.startsWith('adempimento:')).map((x) => h('li', segno(x.fatto ? 'ok' : 'attenzione'),
-          h('div', h('div.t', x.testo), x.dettaglio && h('div.d', x.dettaglio)),
+          h('div', h('div.t', x.testo, h('span.gst-nascosto', x.fatto ? ' — fatto' : ' — da fare')), x.dettaglio && h('div.d', x.dettaglio)),
           !x.fatto && x.vai ? h('button.btn.s', { type: 'button', onclick: () => apri(x.vai) }, 'Vai →') : h('span')))),
         h('div.stack-s',
           h('div', h('h3', 'Adempimenti dell’avviso'), h('p.muted.small.gst-intro', 'Voci tipiche dei bandi regionali, da spuntare a mano: adattale a ciò che chiede il tuo avviso.')),

@@ -365,7 +365,8 @@ export function creaAggiornamenti({ versione = '', leggiConfig = () => ({}), env
     const tutti = elencoPagine();
     const scelti = richiesti ? tutti.filter((b) => richiesti.includes(b.id)) : tutti;
     const sorgenti = await rilevaPagine(scelti);
-    return { catalogo: canale.catalogo, canale: canale.canale, sorgenti, quando: new Date().toISOString() };
+    // protocolli: che cosa questo server accetta di scaricare (https e basta, fuori dalle prove): lo usa la pagina per sapere quali documenti può far leggere
+    return { catalogo: canale.catalogo, canale: canale.canale, sorgenti, quando: new Date().toISOString(), protocolli: opzioniRete.protocolli || ['https:'] };
   }
 
   /** Il controllo completo (o dei soli bandi indicati): catalogo dal canale e pagine ufficiali. Una sola esecuzione alla volta per richiesta uguale. */
