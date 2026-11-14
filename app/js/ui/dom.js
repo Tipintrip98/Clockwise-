@@ -93,3 +93,25 @@ export function bottoneConferma(etichetta, conferma, azione, classe = 'btn.s.gho
   } }, etichetta);
   return b;
 }
+
+// Salva un file generato dalla pagina: nell'app Claude passa dalla conferma di salvataggio, altrove è un download.
+export async function salvaFile(nomeFile, contenuto, mime = 'text/plain') {
+  const download = globalThis.claude?.use ? await globalThis.claude.use('downloads').catch(() => null) : null;
+  if (download) {
+    try { await download.save({ filename: nomeFile, data: contenuto }); toast('File salvato'); }
+    catch (e) { if (e?.code !== 'declined') toast('Salvataggio non disponibile in questa vista.'); }
+    return;
+  }
+  if (globalThis.claude) { toast('Salvataggio non disponibile in questa vista: usa “Copia”.'); return; }
+  const url = URL.createObjectURL(new Blob([contenuto], { type: mime }));
+  const a = h('a', { href: url, download: nomeFile });
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+export async function copiaTesto(testo, messaggio = 'Copiato') {
+  try { await navigator.clipboard.writeText(testo); toast(messaggio); }
+  catch { toast('Copia non consentita qui: seleziona il testo a mano o usa “Scarica”.'); }
+}
+
+export const nomeFilePulito = (s, est) => `${String(s || 'clockwise').toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50) || 'clockwise'}.${est}`;

@@ -1,5 +1,5 @@
 // Report: esito, sezioni e criteri, ammissibilità, piano di miglioramento, esportazione.
-import { h, metti, svuota, fmt, euro, toast, elencoControlli } from './dom.js';
+import { h, metti, svuota, fmt, euro, toast, elencoControlli, salvaFile, copiaTesto, nomeFilePulito } from './dom.js';
 import { S, risultatoDi, salvaPresto, nomeModello, aggiungiConoscenza } from './app.js';
 import { quadrante, barreSezioni } from './grafici.js';
 import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, r1 } from '../core/scoring.js';
@@ -241,15 +241,7 @@ function riepilogoTesto(p, bando, ris, piano) {
   return righe.join('\n');
 }
 
-async function copia(testo) {
-  try { await navigator.clipboard.writeText(testo); toast('Riepilogo copiato'); }
-  catch {
-    const area = h('textarea', { style: { position: 'fixed', opacity: '0' } }, testo);
-    document.body.append(area); area.select();
-    toast('Copia non consentita qui: usa “Scarica report”.');
-    setTimeout(() => area.remove(), 100);
-  }
-}
+const copia = (testo) => copiaTesto(testo, 'Riepilogo copiato');
 
 function cssCorrente() {
   let css = '';
@@ -267,17 +259,6 @@ async function scarica(p, report) {
   const html = `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${titolo}</title>`
     + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">'
     + `<style>${cssCorrente()}</style></head><body><main class="wrap"><h1 style="margin-bottom:18px">${titolo}</h1>${copiaDom.outerHTML}</main></body></html>`;
-  const nomeFile = `clockwise-${p.nome.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50) || 'report'}.html`;
-  const download = globalThis.claude?.use ? await globalThis.claude.use('downloads').catch(() => null) : null;
-  if (download) {
-    try { await download.save({ filename: nomeFile, data: html }); toast('Report salvato'); }
-    catch (e) { if (e?.code !== 'declined') toast('Salvataggio non disponibile in questa vista.'); }
-    return;
-  }
-  if (globalThis.claude) { toast('Salvataggio non disponibile in questa vista: usa “Copia riepilogo”.'); return; }
-  const url = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
-  const a = h('a', { href: url, download: nomeFile });
-  document.body.append(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 2000);
+  await salvaFile(nomeFilePulito(`clockwise-${p.nome}`, 'html'), html, 'text/html');
   void S;
 }

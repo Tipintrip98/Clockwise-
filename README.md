@@ -47,6 +47,28 @@ C'è anche una terza strada, senza installare niente: la stessa interfaccia pubb
 3. **Valutazione** — scegli quanti commissari simulare (1, 3 o 5) e avvia. Ogni commissario legge i documenti della sezione e assegna i punteggi; il risultato è la media, arrotondata al decimale, come fa la Commissione reale.
 4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026, stima del contributo. Si può scaricare o stampare.
 
+### Produzione: spoglio e piano di lavorazione
+
+Nella scheda **Produzione** Claude legge la sceneggiatura scena per scena e ne ricava lo **spoglio**: personaggi, set, comparse, oggetti di scena, costumi, trucco, veicoli, animali, stunt, effetti e VFX. Da lì Clockwise calcola:
+
+- il **piano di lavorazione** (scene raggruppate per set e per giorno/notte, pagine in ottavi, pagine al giorno regolabili);
+- i **giorni di riprese in Sicilia**, dopo aver indicato quali set si girano sul territorio: con un clic finiscono nei Dati chiave e quindi nel criterio 4.1;
+- il **DOOD** (giornate di lavoro e di attesa per personaggio), i **fabbisogni per reparto**, l'elenco dei **rischi** da preparare e delle **scene con VFX**;
+- **logline, soggetto e sinossi**: il soggetto rispetta il limite di 900 battute del Modulo II.
+
+Spoglio e piano si scaricano in CSV (si aprono in Excel).
+
+### Legale: bando, contratti, bozze
+
+Nella scheda **Legale**:
+
+- **Chiedi al bando** — risposte fondate sul testo ufficiale dell'avviso, con l'articolo citato accanto a ogni affermazione e applicate ai dati del dossier. Ciò che esce dal testo è segnalato come "da verificare".
+- **Contratti e accordi del dossier** — contratti, deal memo, lettere di intento, referenze bancarie e atti di concessione letti uno per uno: parti, oggetto, importi, firma, criterio che sostengono, problemi e correzioni prima dell'invio.
+- **Bozze di documenti** — lettera di intento, deal memo di distribuzione e di coproduzione, richiesta di referenze bancarie, accordo Green Film: pronte da completare e far firmare.
+- **Scadenze** — fine riprese, rendicontazione e termini di proroga calcolati dalla data del decreto.
+
+È un supporto alla preparazione del dossier, non un parere legale.
+
 ### Prova con un dossier già presentato
 
 Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decreto di graduatoria), caricalo, avvia la valutazione e inserisci i punteggi reali nel riquadro **Prova con un punteggio reale** del report: vedi lo scarto sezione per sezione. Con "Salva come caso di taratura" il caso entra nella conoscenza del bando e Claude ne tiene conto nelle valutazioni successive.
@@ -78,6 +100,8 @@ Nella pagina **Bandi**:
 
 - È una **stima**: aiuta a trovare i punti deboli, non anticipa né vincola il giudizio della Commissione.
 - Il vecchio formato `.doc` e i PDF scansionati non sono leggibili: usa PDF con testo, DOCX o XLS.
+- Il piano di lavorazione è una bozza automatica: non conosce disponibilità degli attori, spostamenti e meteo. Non ci sono (ancora) preventivo automatico, storyboard, ordini del giorno e stralci di sceneggiatura.
+- L'area legale lavora sul testo dell'avviso e sui documenti del dossier: non consulta una banca dati di leggi e sentenze e non gestisce il processo telematico.
 - Con l'account Claude nell'app (pagina pubblicata) ogni lettura è limitata a circa 250.000 caratteri: le sceneggiature più lunghe vengono lette in più parti e riassunte in una scheda con estratti. Con il server locale la lettura è integrale.
 - Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su macOS/Linux; su Windows usa l'installazione nativa di Claude Code.
 
@@ -86,7 +110,8 @@ Nella pagina **Bandi**:
 ```
 bandi/          documenti ufficiali di origine (avviso, modello del Modulo III, graduatoria 2026)
 app/            interfaccia (HTML, CSS, moduli JavaScript, nessuna compilazione)
-  js/core/      griglia del bando, calcolo dei punteggi, lettura del Modulo III, istruzioni per Claude
+  js/core/      griglia del bando, calcolo dei punteggi, lettura del Modulo III, istruzioni per Claude,
+                spoglio e piano di lavorazione (sceneggiatura.js), area legale (legale.js)
   js/ui/        pagine
   vendor/       lettori di PDF, Word ed Excel
 server/         server locale: file statici e ponte verso Claude (API e Claude Code)

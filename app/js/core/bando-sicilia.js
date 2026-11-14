@@ -409,6 +409,15 @@ export const BANDO_SICILIA = {
     { id: 'contenuti', testo: 'L’opera non è promozionale, istituzionale o di intrattenimento TV e non contiene messaggi vietati (art. 5.2)' },
     { id: 'pec', testo: 'Invio unico via PEC dalla casella indicata nel dossier, con l’oggetto previsto dall’Avviso' },
   ],
+  // Scadenze che decorrono dalla notifica del decreto di concessione provvisoria.
+  scadenze: [
+    { id: 'riprese', etichetta: 'Fine delle riprese (o delle lavorazioni, per l\u2019animazione)', mesi: 18, preavvisoGiorni: 30, nota: 'Art. 12 lett. g) e art. 14: proroga una sola volta, per non più di 6 mesi, da chiedere almeno 30 giorni prima della scadenza. Oltre il termine il contributo è revocato (art. 18).' },
+    { id: 'rendiconto', etichetta: 'Rendicontazione finale, copia campione e richiesta della seconda quota', mesi: 24, preavvisoGiorni: 30, nota: 'Art. 12 lett. h), art. 15 e art. 16: conto consuntivo e matrice di rendicontazione asseverati da un revisore legale; proroga fino a 6 mesi con richiesta almeno 30 giorni prima.' },
+  ],
+  scadenzeNote: [
+    'Uscita in sala o messa in onda (fruizione pubblica per documentari e cortometraggi): da documentare entro 6 mesi dalla liquidazione della seconda quota (art. 12 lett. q).',
+    'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16).',
+  ],
   // Conoscenza fissa: fa parte del programma e accompagna ogni lettura di Claude.
   testi: TESTO_AVVISO_SICILIA,
   moduli: MODULI_SICILIA,

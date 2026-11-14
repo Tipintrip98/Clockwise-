@@ -7,8 +7,12 @@ import { MODELLI, IMPEGNI } from '../core/llm.js';
 import { pianoValutazione, eseguiValutazione, estraiDati } from '../core/engine.js';
 import { nuovoId } from '../core/store.js';
 import { schedaReport } from './report.js';
+import { schedaProduzione } from './produzione.js';
+import { schedaLegale } from './legale.js';
 
+// Le prime quattro sono i passi della valutazione; Produzione e Legale sono strumenti di lavoro sul dossier.
 const SCHEDE = [['documenti', 'Documenti'], ['dati', 'Dati chiave'], ['valutazione', 'Valutazione'], ['report', 'Report']];
+const STRUMENTI = [['produzione', 'Produzione'], ['legale', 'Legale']];
 
 export function vistaProgetto(main) {
   const p = S.progetto;
@@ -18,10 +22,11 @@ export function vistaProgetto(main) {
     S.scheda = id;
     for (const b of barra.children) b.setAttribute('aria-selected', String(b.dataset.id === id));
     svuota(corpo);
-    ({ documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport })[id](corpo, p, bando, mostra);
+    ({ documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, legale: schedaLegale })[id](corpo, p, bando, mostra);
   };
-  const barra = h('div.tabs', { role: 'tablist' }, SCHEDE.map(([id, nome], i) =>
-    h('button', { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, h('span.n', String(i + 1)), nome)));
+  const barra = h('div.tabs', { role: 'tablist' },
+    SCHEDE.map(([id, nome], i) => h('button', { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, h('span.n', String(i + 1)), nome)),
+    STRUMENTI.map(([id, nome], i) => h(`button${i === 0 ? '.sep' : ''}`, { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, nome)));
   const cambiaBando = (id) => {
     const b = S.bandi.find((x) => x.id === id);
     p.bandoId = id; p.categoriaId = b.categorie[0].id; p.anno = annoPredefinito(b); p.valutazione = null;
