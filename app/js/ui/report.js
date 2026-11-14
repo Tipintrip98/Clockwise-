@@ -1,8 +1,8 @@
 // Report: esito, sezioni e criteri, ammissibilità, piano di miglioramento, esportazione.
 import { h, metti, svuota, fmt, euro, toast, elencoControlli } from './dom.js';
-import { S, risultatoDi, salvaPresto, nomeModello } from './app.js';
+import { S, risultatoDi, salvaPresto, nomeModello, aggiungiConoscenza } from './app.js';
 import { quadrante, barreSezioni } from './grafici.js';
-import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo } from '../core/scoring.js';
+import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, r1 } from '../core/scoring.js';
 
 const TITOLI = {
   ammissibile: 'Sopra tutte le soglie',
@@ -87,11 +87,13 @@ export function schedaReport(corpo, p, bando) {
   // stima del contributo
   const richiesto = p.dati.economici?.contributoRichiesto;
   const stimaEl = h('div');
+  const st = statisticheEsiti(bando, p.categoriaId);
+  const primo = () => p.punteggioPrimo || st?.primo || 85;
   const disegnaStima = () => {
-    const stima = stimaContributo(richiesto, ris.totale, p.punteggioPrimo);
+    const stima = stimaContributo(richiesto, ris.totale, primo());
     metti(svuota(stimaEl), richiesto == null ? h('p.muted', 'Indica il contributo richiesto nei Dati chiave.')
       : h('div.row', h('div', h('div.label', 'Contributo stimato'), h('div.num', { style: { fontSize: '1.5rem', fontWeight: 600 } }, euro(stima))),
-        h('div.muted.small', { style: { maxWidth: '46ch' } }, `${fmt(ris.totale)} ÷ ${fmt(Math.max(ris.totale, p.punteggioPrimo))} × ${euro(richiesto)} richiesti. Vale solo se il dossier supera le soglie e la dotazione della categoria non è esaurita.`)));
+        h('div.muted.small', { style: { maxWidth: '46ch' } }, `${fmt(ris.totale)} ÷ ${fmt(Math.max(ris.totale, primo()))} × ${euro(richiesto)} richiesti. Vale solo se il dossier supera le soglie e la dotazione della categoria non è esaurita.`)));
   };
 
   const report = h('div.stack', { id: 'report' },
@@ -129,12 +131,15 @@ export function schedaReport(corpo, p, bando) {
         val.verifica.sintesi && h('p.muted', { style: { marginBottom: '6px' } }, val.verifica.sintesi),
         elencoControlli(val.verifica.controlli)) : null),
 
+    st ? confrontoGraduatoria(st, ris, bando, p) : null,
+    confrontoReale(p, bando, ris),
+
     h('section',
       h('div.sec-h', h('h3', 'Quanto potresti ottenere')),
       h('div.panel.stack',
         h('p.muted.small', { style: { maxWidth: '75ch' } }, 'Il primo in graduatoria riceve il 100% del contributo richiesto; gli altri una quota pari al rapporto tra il proprio punteggio e quello del primo.'),
-        h('label.field.no-print', { for: 'punteggio-primo', style: { maxWidth: '260px' } }, h('span', 'Punteggio ipotizzato del primo in graduatoria'),
-          h('input', { id: 'punteggio-primo', type: 'number', min: '1', max: '100', value: p.punteggioPrimo, oninput: (e) => { p.punteggioPrimo = Number(e.target.value) || 85; salvaPresto(); disegnaStima(); } })),
+        h('label.field.no-print', { for: 'punteggio-primo', style: { maxWidth: '300px' } }, h('span', st ? `Punteggio del primo in graduatoria (nel ${st.anno}: ${fmt(st.primo)})` : 'Punteggio ipotizzato del primo in graduatoria'),
+          h('input', { id: 'punteggio-primo', type: 'number', min: '1', max: '100', step: '0.1', value: primo(), oninput: (e) => { p.punteggioPrimo = Number(e.target.value) || null; salvaPresto(); disegnaStima(); } })),
         stimaEl)),
 
     h('p.muted.small', { style: { maxWidth: '85ch' } },
@@ -152,6 +157,76 @@ export function schedaReport(corpo, p, bando) {
         h('button.btn.s', { type: 'button', onclick: () => scarica(p, report) }, 'Scarica report'),
         !globalThis.claude && h('button.btn.s', { type: 'button', onclick: () => { report.querySelectorAll('details').forEach((d) => { d.open = true; }); window.print(); } }, 'Stampa / PDF'))),
     report);
+}
+
+const ordinale = (n) => `${n}°`;
+
+// Dove si colloca la stima rispetto ai punteggi reali dell'ultima finestra conclusa.
+function confrontoGraduatoria(st, ris, bando, p) {
+  const pos = ris.completo && ris.esito !== 'sotto_soglia' ? posizioneEsiti(bando, p.categoriaId, ris.totale) : null;
+  const causa = Object.entries(st.esclusiPer).sort((a, b) => b[1] - a[1])[0];
+  const esclusi = st.valutati - st.ammissibili;
+  return h('section',
+    h('div.sec-h', h('h3', `Confronto con la graduatoria reale ${st.anno}`)),
+    h('div.panel.stack',
+      h('p', { style: { maxWidth: '80ch' } },
+        `Nella finestra ${st.anno} la Commissione ha valutato ${st.valutati} progetti di questa categoria: ${st.ammissibili} hanno superato tutte le soglie e ${st.finanziati} sono stati finanziati. Primo in graduatoria ${fmt(st.primo)}, ultimo finanziato ${fmt(st.ultimoFinanziato)}.`,
+        esclusi && causa?.[1] ? ` Dei ${esclusi} esclusi, ${causa[1]} non hanno raggiunto il minimo della sezione ${causa[0]}.` : ''),
+      pos ? h(`div.notice.${pos.finanziabile ? 'ok' : 'warn'}`, h('strong', `Con ${fmt(ris.totale)} punti saresti ${ordinale(pos.posizione)} su ${pos.su} ammissibili. `),
+        pos.finanziabile ? `Sopra l'ultimo finanziato del ${st.anno} (${fmt(pos.ultimoFinanziato)}).` : `Sotto l'ultimo finanziato del ${st.anno} (${fmt(pos.ultimoFinanziato)}): ammissibile, ma con la stessa concorrenza resteresti senza contributo.`) : null,
+      h('div.tablewrap', h('table',
+        h('thead', h('tr', h('th', 'Sezione'), h('th.r', 'Tua stima'), h('th.r', `Mediana ${st.anno}`), h('th.r', 'Metà dei progetti'), h('th.r', 'Minimo – massimo'))),
+        h('tbody', ris.sezioni.filter((s) => st.sezioni[s.id]).map((s) => {
+          const d = st.sezioni[s.id];
+          return h('tr', h('td', h('strong', s.id), ` · ${s.nome}`),
+            h('td.r.num', s.completo ? h('strong', { style: { color: s.punti >= d.mediana ? 'var(--ok)' : 'var(--warn)' } }, fmt(s.punti)) : h('span.muted', `${fmt(s.punti)} parz.`)),
+            h('td.r.num', fmt(d.mediana)), h('td.r.num', `${fmt(d.q1)} – ${fmt(d.q3)}`), h('td.r.num', `${fmt(d.min)} – ${fmt(d.max)}`));
+        })))),
+      h('p.muted.small', 'Fonte: ', st.url ? h('a', { href: st.url, target: '_blank', rel: 'noopener' }, st.fonte) : st.fonte, '. Questi punteggi reali sono anche il metro con cui Claude tara i giudizi.')));
+}
+
+// Prova del nove: il dossier è già stato presentato e se ne conosce il punteggio reale.
+function confrontoReale(p, bando, ris) {
+  p.reale = p.reale || {};
+  const tabella = h('div');
+  const disegna = () => {
+    const righe = ris.sezioni.map((s) => ({ s, reale: typeof p.reale[s.id] === 'number' ? p.reale[s.id] : null }));
+    const complete = righe.filter((x) => x.reale != null && x.s.completo);
+    const totReale = righe.every((x) => x.reale != null) ? r1(righe.reduce((a, x) => a + x.reale, 0)) : null;
+    const scartoMedio = complete.length ? r1(complete.reduce((a, x) => a + Math.abs(x.s.punti - x.reale), 0) / complete.length) : null;
+    const segno = (v) => (v > 0 ? `+${fmt(v)}` : fmt(v));
+    metti(svuota(tabella),
+      h('div.tablewrap', h('table',
+        h('thead', h('tr', h('th', 'Sezione'), h('th.r', 'Stima'), h('th.r', 'Punteggio reale'), h('th.r', 'Scarto'))),
+        h('tbody', righe.map(({ s, reale }) => h('tr',
+          h('td', h('strong', s.id), ` · ${s.nome}`),
+          h('td.r.num', s.completo ? fmt(s.punti) : h('span.muted', `${fmt(s.punti)} parz.`)),
+          h('td.r', { style: { width: '120px' } }, h('input', { id: `reale-${s.id}`, type: 'number', min: '0', max: String(s.massimo), step: '0.1', value: reale ?? '', 'aria-label': `Punteggio reale sezione ${s.id}`,
+            oninput: (e) => { p.reale[s.id] = e.target.value === '' ? null : Number(e.target.value); salvaPresto(); aggiornaEsito(); } })),
+          h('td.r.num', { id: `scarto-${s.id}` }, reale != null && s.completo ? segno(r1(s.punti - reale)) : '—'))),
+        h('tr', h('td', h('strong', 'Totale')), h('td.r.num', h('strong', fmt(ris.totale))), h('td.r.num', h('strong', totReale == null ? '—' : fmt(totReale))), h('td.r.num', h('strong', totReale != null && ris.completo ? segno(r1(ris.totale - totReale)) : '—')))))),
+      scartoMedio != null ? h(`div.notice.${scartoMedio <= 1.5 ? 'ok' : scartoMedio <= 3 ? 'info' : 'warn'}`, h('strong', `Scarto medio per sezione: ${fmt(scartoMedio)} punti. `),
+        scartoMedio <= 1.5 ? 'La stima è allineata al giudizio reale.' : scartoMedio <= 3 ? 'La stima è vicina al giudizio reale; salva il caso per affinare le prossime.' : 'La stima si discosta dal giudizio reale: salva il caso, così le prossime valutazioni ne tengono conto.') : null,
+      complete.length ? h('div', h('button.btn.s', { type: 'button', onclick: async () => {
+        const val = p.valutazione;
+        const testo = [
+          `CASO REALE DI TARATURA — dossier «${p.dati.titolo || p.nome}», ${getCategoria(bando, p.categoriaId).nome}, finestra ${p.anno}.`,
+          `Punteggi assegnati dalla Commissione: ${righe.filter((x) => x.reale != null).map((x) => `sezione ${x.s.id} ${fmt(x.reale)} su ${fmt(x.s.massimo)}`).join('; ')}${totReale != null ? `; totale ${fmt(totReale)}` : ''}.`,
+          `Stima di Clockwise sugli stessi documenti: ${complete.map((x) => `sezione ${x.s.id} ${fmt(x.s.punti)}`).join('; ')}.`,
+          `Scarti (stima meno reale): ${complete.map((x) => `${x.s.id} ${segno(r1(x.s.punti - x.reale))}`).join('; ')}. Dove lo scarto è positivo la stima era troppo generosa, dove è negativo troppo severa: tienine conto per dossier di livello simile.`,
+          ...Object.entries(val?.giudizi || {}).flatMap(([sid, lista]) => lista.filter((g) => g.sintesi).slice(0, 1).map((g) => `Profilo del dossier, sezione ${sid}: ${g.sintesi}`)),
+        ].join('\n');
+        await aggiungiConoscenza(bando, { id: `taratura-${p.id}`, nome: `Caso reale — ${p.dati.titolo || p.nome} (${p.anno})`, testo, caratteri: testo.length });
+        toast('Caso salvato nella conoscenza del bando');
+      } }, 'Salva come caso di taratura'), h('span.muted.small', ' Claude lo leggerà nelle prossime valutazioni di questo bando.')) : null);
+  };
+  const aggiornaEsito = () => { clearTimeout(aggiornaEsito.t); aggiornaEsito.t = setTimeout(() => { const attivo = document.activeElement?.id; disegna(); if (attivo) { const el = document.getElementById(attivo); if (el) { el.focus(); const v = el.value; el.value = ''; el.value = v; } } }, 600); };
+  disegna();
+  return h('section.no-print',
+    h('div.sec-h', h('h3', 'Prova con un punteggio reale')),
+    h('div.panel.stack',
+      h('p.muted', { style: { maxWidth: '80ch' } }, 'Se questo dossier è già stato presentato, inserisci i punteggi che la Commissione gli ha assegnato per sezione (sono pubblicati nel decreto di graduatoria): vedi subito quanto la stima si avvicina e puoi usare il caso per tarare le valutazioni successive.'),
+      tabella));
 }
 
 function riepilogoTesto(p, bando, ris, piano) {

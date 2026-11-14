@@ -164,7 +164,7 @@ test('ammissibilità: spesa minima, tetto del contributo, allegati', () => {
   assert.equal(by('req_ateco').esito, 'da_verificare');
   dati.economici.contributoRichiesto = 200000;
   v = verificheAmmissibilita(B, 'film', 2027, dati, []);
-  assert.equal(v.find((x) => x.id === 'contributo').esito, 'critico', '200.000 supera il 30% di 470.000');
+  assert.equal(v.find((x) => x.id === 'contributo').esito, 'attenzione', '200.000 supera il 30% di 470.000: va ridotto');
   assert.equal(v.find((x) => x.id === 'spesa').esito, 'critico', '270.000 è il 135% di 200.000');
   assert.equal(verificheAmmissibilita(B, 'cortometraggio', 2027, { ...dati, durataMin: 60 }, []).find((x) => x.id === 'durata').esito, 'critico');
 });

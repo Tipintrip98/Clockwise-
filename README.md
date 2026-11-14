@@ -4,6 +4,18 @@ Clockwise legge il dossier di candidatura a un bando regionale per il cinema e l
 
 Il primo bando caricato è l'**Avviso pubblico Regione Siciliana 2025-2027** (Sicilia Film Commission, testo coordinato con il D.D.G. n. 4788 del 22/12/2025), con le griglie ufficiali delle Tabelle A e B, le fasce dei criteri quantitativi e i punteggi minimi di sezione.
 
+## Conoscenza fissa: i documenti del bando sono dentro il programma
+
+Non c'è nulla da caricare per far funzionare la valutazione sul bando Sicilia. Clockwise contiene già:
+
+- **il testo ufficiale dell'Avviso** (articoli 3-18) e le griglie di valutazione, trascritte criterio per criterio;
+- **la struttura dei Moduli I, II e III** del dossier; il Modulo III in formato .xls viene letto in automatico;
+- **la graduatoria reale della finestra 2026** (D.D.G. n. 2384 del 28/07/2026): i punteggi per sezione di tutti i 75 progetti valutati.
+
+A ogni lettura Claude riceve gli articoli che riguardano la sezione in esame e la distribuzione dei punteggi reali, che usa come metro. I test automatici verificano che la griglia trascritta sia coerente con i documenti: i 75 esiti reali del 2026 rispettano soglie, fasce e formula del contributo così come sono scritte nel programma. I PDF di origine sono in `bandi/sicilia-2025-2027/`.
+
+Che cosa dice la graduatoria 2026, in breve: su 38 film e serie valutati solo 11 hanno superato tutte le soglie, e 26 dei 27 esclusi sono caduti sulla **sezione D** (piano finanziario e distribuzione). Nei documentari 12 erano ammissibili ma solo 8 finanziati: l'ultimo ha preso 80,2 punti.
+
 ## Avvio in tre passi
 
 Serve [Node.js](https://nodejs.org) 20 o successivo.
@@ -33,7 +45,11 @@ C'è anche una terza strada, senza installare niente: la stessa interfaccia pubb
 1. **Documenti** — trascina i file del dossier: Moduli I, II e III, sceneggiatura, curriculum, contratti, deal memo, lettere di intento. Il tipo di ogni file viene riconosciuto dal nome e si può correggere.
 2. **Dati chiave** — se carichi il **Modulo III in formato .xls**, giorni di lavorazione, professionisti siciliani, budget e piano finanziario si compilano da soli. I punti che dipendono dai numeri si aggiornano mentre scrivi, con le mosse per salire di fascia.
 3. **Valutazione** — scegli quanti commissari simulare (1, 3 o 5) e avvia. Ogni commissario legge i documenti della sezione e assegna i punteggi; il risultato è la media, arrotondata al decimale, come fa la Commissione reale.
-4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, stima del contributo. Si può scaricare o stampare.
+4. **Report** — punteggio complessivo e per sezione rispetto alle soglie, motivazioni per criterio, controlli di ammissibilità, elenco degli interventi ordinati per punti recuperabili, confronto con la graduatoria reale 2026, stima del contributo. Si può scaricare o stampare.
+
+### Prova con un dossier già presentato
+
+Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decreto di graduatoria), caricalo, avvia la valutazione e inserisci i punteggi reali nel riquadro **Prova con un punteggio reale** del report: vedi lo scarto sezione per sezione. Con "Salva come caso di taratura" il caso entra nella conoscenza del bando e Claude ne tiene conto nelle valutazioni successive.
 
 ## Come nasce il punteggio
 
@@ -49,7 +65,7 @@ Dove il testo del bando si presta a due letture (per esempio la base di calcolo 
 Nella pagina **Bandi**:
 
 - **Aggiungi un bando da PDF**: Claude ricava criteri, fasce e soglie dall'avviso. La griglia resta segnata "da verificare" finché non la controlli sul testo.
-- **Conoscenza aggiuntiva**: FAQ, graduatorie degli anni scorsi con i punteggi, verbali, decreti di modifica. Claude li legge a ogni valutazione per calibrare la severità: più materiale reale carichi, più la stima si avvicina al metro della Commissione.
+- **Conoscenza aggiuntiva**: FAQ, verbali, schede di valutazione ricevute, decreti di modifica, graduatorie di altri anni, casi reali di taratura. Claude li legge a ogni valutazione insieme alla conoscenza fissa.
 
 ## Riservatezza
 
@@ -68,6 +84,7 @@ Nella pagina **Bandi**:
 ## Per chi sviluppa
 
 ```
+bandi/          documenti ufficiali di origine (avviso, modello del Modulo III, graduatoria 2026)
 app/            interfaccia (HTML, CSS, moduli JavaScript, nessuna compilazione)
   js/core/      griglia del bando, calcolo dei punteggi, lettura del Modulo III, istruzioni per Claude
   js/ui/        pagine
@@ -78,9 +95,9 @@ test/           test automatici
 ```
 
 ```bash
-npm test                  # calcolo dei punteggi, lettura del Modulo III, orchestrazione
+npm test                  # punteggi, Modulo III, orchestrazione, coerenza con i documenti ufficiali
 npm run build:artifact    # dist/clockwise.html
 PORT=5858 npm start       # porta diversa
 ```
 
-La griglia della Sicilia è in `app/js/core/bando-sicilia.js`: se l'avviso viene modificato, si aggiorna lì.
+La griglia della Sicilia è in `app/js/core/bando-sicilia.js`, il testo dell'avviso in `bando-sicilia-testo.js` (generato da `scripts/estrai-testo-avviso.py`), gli esiti reali in `bando-sicilia-esiti.js`. Quando esce la graduatoria di una nuova finestra si aggiunge lì e la taratura si aggiorna da sola.

@@ -5,6 +5,7 @@ import * as store from '../core/store.js';
 import { estraiTesto } from '../core/docs.js';
 import { leggiBando } from '../core/engine.js';
 import { normalizzaBando } from '../core/prompts.js';
+import { statisticheEsiti } from '../core/scoring.js';
 
 const TIPO_CRITERIO = { qualitativo: 'Giudizio della Commissione', fasce: 'Calcolato a fasce', discreto: 'Punteggi fissi' };
 
@@ -69,11 +70,23 @@ function dettaglio(b, ridisegna) {
             h('td.small.muted', { style: { width: '150px' } }, TIPO_CRITERIO[c.tipo]),
             h('td.r.num', { style: { width: '56px' } }, fmt(c.max))))))))))),
 
+    b.fonti?.length ? h('div.panel.stack',
+      h('div.spread', h('h3', 'Conoscenza fissa del programma'), h('span.tag.ok', 'Sempre attiva')),
+      h('p.muted.small', { style: { maxWidth: '78ch' } }, 'Questi documenti ufficiali fanno parte di Clockwise: a ogni valutazione Claude riceve gli articoli dell\u2019avviso che riguardano la sezione in esame e i punteggi reali della graduatoria come metro di giudizio. Non serve caricarli.'),
+      h('ul.checklist', b.fonti.map((f) => h('li', h('span.ico.ok', { 'aria-hidden': 'true' }, '✓'), h('div', h('div.t', f.nome), h('div.d', f.dettaglio))))),
+      b.categorie.some((c) => statisticheEsiti(b, c.id)) ? h('div',
+        h('h4', { style: { margin: '6px 0 8px' } }, `Punteggi reali della finestra ${statisticheEsiti(b, b.categorie.find((c) => statisticheEsiti(b, c.id)).id).anno}`),
+        h('div.tablewrap', h('table',
+          h('thead', h('tr', h('th', 'Categoria'), h('th.r', 'Valutati'), h('th.r', 'Finanziati'), h('th.r', 'Primo'), h('th.r', 'Ultimo finanziato'), h('th.r', 'Mediane A · B · C · D'))),
+          h('tbody', b.categorie.map((c) => { const st = statisticheEsiti(b, c.id); return st ? h('tr', h('td', c.nome), h('td.r.num', st.valutati), h('td.r.num', st.finanziati), h('td.r.num', fmt(st.primo)), h('td.r.num', fmt(st.ultimoFinanziato)), h('td.r.num.small', Object.values(st.sezioni).map((d) => fmt(d.mediana)).join(' · '))) : null; }))))) : null,
+      b.testi?.length ? h('details.more', h('summary', `Leggi il testo dell\u2019avviso (${b.testi.length} articoli)`),
+        h('div.stack-s', b.testi.map((a) => h('details.more', h('summary', { style: { color: 'var(--ink)', fontWeight: 500 } }, a.titolo), h('p.small', { style: { whiteSpace: 'pre-wrap', maxWidth: '85ch' } }, a.testo))))) : null) : null,
+
     b.note?.length ? h('div.panel', h('h3', 'Da ricordare'), h('ul', { style: { margin: 0, paddingLeft: '18px' } }, b.note.map((n) => h('li', n)))) : null,
 
     h('div.panel.stack',
       h('div', h('h3', 'Conoscenza aggiuntiva'),
-        h('p.muted.small', { style: { maxWidth: '75ch' } }, 'FAQ, graduatorie degli anni scorsi con i punteggi, verbali, decreti di modifica: Claude li legge a ogni valutazione per calibrare severità e interpretazioni. Più materiale reale carichi, più la stima si avvicina al metro della Commissione.')),
+        h('p.muted.small', { style: { maxWidth: '75ch' } }, 'FAQ, verbali, schede di valutazione ricevute, decreti di modifica, graduatorie di altri anni: Claude li legge a ogni valutazione insieme alla conoscenza fissa. Qui finiscono anche i casi reali salvati dal report di un dossier già presentato.')),
       ingresso, stato,
       (b.conoscenza || []).length ? h('div.tablewrap', h('table', h('tbody', b.conoscenza.map((k) => h('tr',
         h('td.fname', k.nome), h('td.r.num.small', `${fmt((k.caratteri || 0) / 1000, 0)}k caratteri`),

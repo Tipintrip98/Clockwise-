@@ -1,5 +1,5 @@
 // Istruzioni per Claude: commissari simulati, verifica formale, estrazione dati, lettura di un nuovo bando.
-import { getCategoria, getGriglia, coperturaPiano, ETICHETTE_DOC, formati } from './scoring.js';
+import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati } from './scoring.js';
 import { blocchiDocumenti, tipoPerId } from './docs.js';
 
 const { fmt, euro } = formati;
@@ -55,6 +55,24 @@ function blocchiConoscenza(bando) {
   return `\n\nCONOSCENZA AGGIUNTIVA SUL BANDO (FAQ, graduatorie, verbali o note caricati dall'utente: usali per calibrare severità e interpretazioni)\n${extra.map((k, i) => `--- ${i + 1}. ${k.nome} ---\n${k.testo}`).join('\n\n')}`;
 }
 
+// Articoli dell'avviso che riguardano una lettura (A, B, D = sezioni; V = verifica formale).
+export function testiUfficiali(bando, uso) {
+  const articoli = (bando.testi || []).filter((a) => a.usi?.includes(uso));
+  if (!articoli.length) return '';
+  return `\n\nTESTO UFFICIALE DELL'AVVISO — articoli rilevanti (fonte: ${bando.fonte})\n${articoli.map((a) => `### ${a.titolo}\n${a.testo}`).join('\n\n')}`;
+}
+
+// Metro reale della Commissione: distribuzione dei punteggi assegnati nell'ultima finestra nota.
+export function taratura(bando, categoriaId, sezione) {
+  const st = statisticheEsiti(bando, categoriaId);
+  const d = st?.sezioni?.[sezione.id];
+  if (!d) return '';
+  return `\n\nTARATURA SUI PUNTEGGI REALI — finestra ${st.anno} (${st.fonte})
+In questa categoria la Commissione ha valutato ${st.valutati} progetti: ${st.ammissibili} hanno superato tutte le soglie, ${st.finanziati} sono stati finanziati. Totali: primo in graduatoria ${fmt(st.primo)}, ultimo finanziato ${fmt(st.ultimoFinanziato)}.
+Nella sezione ${sezione.id} i punteggi reali sono andati da ${fmt(d.min)} a ${fmt(d.max)} su ${fmt(sezione.max)}: metà dei progetti tra ${fmt(d.q1)} e ${fmt(d.q3)}, mediana ${fmt(d.mediana)}.
+Usa questa distribuzione come metro. La somma dei tuoi punteggi per la sezione deve essere credibile rispetto a questi valori: un dossier nella media dei candidati sta vicino alla mediana; ci si avvicina al massimo reale solo con un dossier che reggerebbe il confronto con i migliori di quella graduatoria; si scende sotto il minimo reale solo per lacune gravi o documenti mancanti (in quel caso scendi senza esitare: la Commissione lo fa).`;
+}
+
 const SCALA = 'Riferimento per i criteri qualitativi, in percentuale del massimo: 90-100% eccellenza rara, che reggerebbe il confronto con i migliori progetti nazionali; 75-89% lavoro solido e professionale con punti di forza evidenti; 60-74% discreto, con limiti chiari; 40-59% debole; sotto il 40% carente o non documentato.';
 
 function sistemaCommissione(bando, categoriaId, sezione) {
@@ -75,7 +93,7 @@ Come lavora la Commissione
 Opera in valutazione: categoria «${cat.nome}». Per essere ammessi a cofinanziamento servono almeno ${bando.sogliaTotale}/100 complessivi e i minimi di sezione (${soglie}). Le soglie sono un'informazione di contesto: non avvicinare i punteggi alla soglia per far passare o bocciare il progetto.
 
 Sezione ${sezione.id} — ${sezione.nome} (massimo ${sezione.max} punti)
-${sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio).map(descriviCriterio).join('\n\n')}${blocchiConoscenza(bando)}`;
+${sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio).map(descriviCriterio).join('\n\n')}${taratura(bando, categoriaId, sezione)}${testiUfficiali(bando, sezione.id)}${blocchiConoscenza(bando)}`;
 }
 
 const GUIDA_SEZIONE = {
@@ -166,7 +184,7 @@ ${bando.invio ? `- Invio: ${bando.invio.canale} a ${bando.invio.indirizzo}, in u
 ${(bando.allegati || []).map((a) => `  · ${a.nome} [${a.obbligo === 'sempre' ? 'obbligatorio' : a.obbligo === 'green' ? 'obbligatorio per film e serie TV non in animazione' : a.obbligo === 'se_dichiarato' ? 'obbligatorio se l’accordo o la fonte è dichiarata' : 'non obbligatorio ma incide sul punteggio'}]`).join('\n')}
 - Requisiti dichiarativi:
 ${(bando.requisiti || []).map((r) => `  · ${r.testo}`).join('\n')}
-${(bando.note || []).map((n) => `- ${n}`).join('\n')}${blocchiConoscenza(bando)}`,
+${(bando.note || []).map((n) => `- ${n}`).join('\n')}${bando.moduli ? `\n\nSTRUTTURA DEI MODULI UFFICIALI (che cosa deve contenere ogni modulo compilato)\n${bando.moduli}` : ''}${testiUfficiali(bando, 'V')}${blocchiConoscenza(bando)}`,
     documenti: `DATI CHIAVE GIÀ ESTRATTI\n${riepilogoDati(bando, categoriaId, anno, dati)}\n\nINVENTARIO DEI FILE CARICATI\n${inventario || '(nessun file)'}\n\nMODULI DEL DOSSIER\n${blocchiDocumenti(documenti) || '(nessun modulo leggibile)'}`,
     compito: `Controlla il dossier come farebbe l'istruttore e segnala soltanto ciò che trovi davvero nei documenti:
 - campi obbligatori dei moduli vuoti o compilati a metà, dichiarazioni non spuntate, firme o date mancanti;

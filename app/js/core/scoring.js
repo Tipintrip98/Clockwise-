@@ -284,7 +284,7 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
   if (costo == null || rich == null) add('contributo', 'da_verificare', 'Contributo richiesto', 'Indica costo di produzione e contributo richiesto.');
   else {
     const tetto = Math.min((costo * cat.contributo.percentuale) / 100, massimale ?? Infinity);
-    if (rich > tetto + 0.5) add('contributo', 'critico', 'Contributo richiesto', `${euro(rich)} supera il massimo concedibile di ${euro(tetto)} (${cat.contributo.percentuale}% del costo di produzione${massimale ? `, tetto ${euro(massimale)}` : ''}).`);
+    if (rich > tetto + 0.5) add('contributo', 'attenzione', 'Contributo richiesto', `${euro(rich)} supera il massimo concedibile di ${euro(tetto)} (${cat.contributo.percentuale}% del costo di produzione${massimale ? `, tetto ${euro(massimale)}` : ''}). Riduci la richiesta: oltre il tetto non viene concesso nulla e una richiesta più alta abbassa il rapporto tra spesa sul territorio e contributo.`);
     else add('contributo', 'ok', 'Contributo richiesto', `${euro(rich)}, pari al ${fmt((rich / costo) * 100)}% del costo di produzione (massimo ${cat.contributo.percentuale}%${massimale ? `, tetto ${euro(massimale)}` : ''}).`);
   }
 
@@ -391,6 +391,49 @@ export function suggerimentiQuantitativi(bando, categoriaId, dati) {
 export function stimaContributo(richiesto, punteggio, punteggioPrimo) {
   if (num(richiesto) == null || num(punteggio) == null || !punteggioPrimo) return null;
   return Math.min(richiesto, (richiesto * punteggio) / Math.max(punteggio, punteggioPrimo));
+}
+
+// --- Esiti reali delle finestre precedenti (bando.esiti): metro della Commissione e posizione in graduatoria
+const quantile = (ord, q) => { const i = (ord.length - 1) * q, lo = Math.floor(i), hi = Math.ceil(i); return ord[lo] + (ord[hi] - ord[lo]) * (i - lo); };
+const distribuzione = (valori) => {
+  const o = [...valori].sort((a, b) => a - b);
+  return { min: o[0], q1: r1(quantile(o, 0.25)), mediana: r1(quantile(o, 0.5)), q3: r1(quantile(o, 0.75)), max: o[o.length - 1] };
+};
+
+export function statisticheEsiti(bando, categoriaId) {
+  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const righe = edizione?.categorie?.[categoriaId];
+  if (!righe?.length) return null;
+  const cat = getCategoria(bando, categoriaId);
+  const finanziati = righe.filter((r) => r.stato === 'F');
+  const sezioni = {}, esclusiPer = {};
+  for (const k of Object.keys(righe[0].sezioni)) {
+    sezioni[k] = distribuzione(righe.map((r) => r.sezioni[k]));
+    esclusiPer[k] = righe.filter((r) => cat.soglie?.[k] != null && r.sezioni[k] < cat.soglie[k]).length;
+  }
+  return {
+    anno: edizione.anno, fonte: edizione.fonte, url: edizione.url,
+    valutati: righe.length, ammissibili: righe.filter((r) => r.stato !== 'X').length, finanziati: finanziati.length,
+    primo: Math.max(...righe.map((r) => r.totale)),
+    ultimoFinanziato: finanziati.length ? Math.min(...finanziati.map((r) => r.totale)) : null,
+    totale: distribuzione(righe.map((r) => r.totale)), sezioni, esclusiPer,
+  };
+}
+
+// Dove si sarebbe collocato un punteggio tra i progetti ammissibili dell'ultima finestra nota.
+export function posizioneEsiti(bando, categoriaId, punteggio) {
+  const edizione = (bando.esiti || [])[(bando.esiti || []).length - 1];
+  const righe = edizione?.categorie?.[categoriaId];
+  if (!righe?.length || num(punteggio) == null) return null;
+  const ammissibili = righe.filter((r) => r.stato !== 'X');
+  const finanziati = righe.filter((r) => r.stato === 'F');
+  const ultimo = finanziati.length ? Math.min(...finanziati.map((r) => r.totale)) : null;
+  return {
+    posizione: ammissibili.filter((r) => r.totale > punteggio).length + 1,
+    su: ammissibili.length + 1,
+    finanziabile: ultimo == null ? null : punteggio >= ultimo,
+    ultimoFinanziato: ultimo,
+  };
 }
 
 export const formati = { fmt, euro, fmtPct };

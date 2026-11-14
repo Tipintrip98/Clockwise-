@@ -36,7 +36,7 @@ export function nuovoProgetto(nome = 'Nuovo dossier') {
   const bando = S.bandi[0];
   return {
     id: store.nuovoId(), nome, bandoId: bando.id, categoriaId: bando.categorie[0].id, anno: annoPredefinito(bando),
-    creato: new Date().toISOString(), documenti: [], dati: datiVuoti(), origineDati: null, valutazione: null, punteggioPrimo: 85,
+    creato: new Date().toISOString(), documenti: [], dati: datiVuoti(), origineDati: null, valutazione: null, punteggioPrimo: null, reale: {},
   };
 }
 
@@ -143,6 +143,14 @@ export async function avvia(el) {
   // il collegamento a Claude arriva dopo: la pagina è già utilizzabile
   S.ambiente = await rilevaAmbiente();
   if (rotta() !== 'progetto' || S.scheda === 'valutazione') render(); else aggiornaPillola();
+}
+
+// Aggiunge (o sostituisce) un documento nella conoscenza aggiuntiva di un bando.
+export async function aggiungiConoscenza(bando, voce) {
+  const lista = [...(bando.conoscenza || []).filter((k) => k.id !== voce.id), voce];
+  if (bando.predefinito) await store.salvaConoscenza(bando.id, lista);
+  else await store.salvaBando({ ...bando, conoscenza: lista });
+  await caricaBandi();
 }
 
 export async function ricontrollaAmbiente() { S.ambiente = await rilevaAmbiente(); render(); }

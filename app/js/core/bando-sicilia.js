@@ -4,6 +4,28 @@
 // Trascritta dall'art. 10.2 dell'Avviso: tabelle A e B, sub-criteri quantitativi,
 // principi generali della Commissione e punteggi minimi di sezione.
 
+import { TESTO_AVVISO_SICILIA } from './bando-sicilia-testo.js';
+import { ESITI_SICILIA } from './bando-sicilia-esiti.js';
+
+// Struttura dei tre moduli ufficiali del Dossier di candidatura (dai modelli 2025-2027 della Sicilia Film Commission).
+const MODULI_SICILIA = `MODULO I — ISTANZA (da presentare in PDF con firma digitale del legale rappresentante)
+Dati del legale rappresentante (nome, luogo e data di nascita, residenza, codice fiscale) e della società (ragione sociale, PEC, e-mail, telefono, partita IVA, codice fiscale, sede legale, sede operativa, Stato, sito web). Tipologia di opera, da spuntare con X, con durata in minuti oppure numero di puntate e durata media. Titolo. Stato dell'opera: «non ancora in fase di riprese in Sicilia» oppure data di avvio delle riprese. Costo di produzione in euro. Cofinanziamento richiesto in euro.
+Dichiarazioni: iscrizione al Registro delle Imprese da almeno 24 mesi (Camera di Commercio e data); codice ATECO 59.11 primario o prevalente da almeno 24 mesi; produttore unico oppure coproduttore/produttore associato con quota non inferiore al 20% (indicare la quota); l'opera non è stata oggetto di visione pubblica integrale; categoria d'impresa (micro, piccola, media, grande); possesso dei requisiti soggettivi del paragrafo 5.1; veridicità dei dati. Impegni: obblighi dell'art. 12 e comunicazione delle varianti.
+Elenco degli allegati da spuntare: sceneggiatura e CV sceneggiatore/i (trattamento e CV autore o consulente scientifico per i documentari); documento d'identità; CV del soggetto proponente; CV regista/i; piano di lavorazione con le location in Sicilia e storyboard (se presenti). Per ciascun caso dichiarato, con il NUMERO di deal memo e di contratti allegati: coproduzioni/produzioni associate (più CV delle imprese coinvolte), finanziamenti nazionali o internazionali richiesti e ottenuti, accordi di distribuzione, accordi con produttore esecutivo (più CV), finanziatori esterni alla filiera, certificazione Green Film. Luogo, data, firma.
+
+MODULO II — SCHEDA DI PRODUZIONE (PDF, unico file)
+Titolo, tipologia di opera, soggetto proponente, anno di costituzione.
+II.1 Soggetto dell'opera: massimo mezza cartella, 900 battute. II.2 Note di regia: massimo una cartella e mezzo, 2.700 battute.
+II.3 Regista: elenco delle opere realizzate (titolo, anno, prodotta da, premi e riconoscimenti). II.4 Sceneggiatore (per i documentari: autore del soggetto/trattamento e/o consulente scientifico): elenco delle opere con premi e riconoscimenti.
+II.5 Impresa: opere prodotte negli ultimi 5 anni. Per film, documentari e cortometraggi: anno, titolo, tipologia, quota % del proponente, festival, premi e riconoscimenti, coproduzione con, coproduttore nazionale o internazionale. Per film TV e serie: anno, titolo, tipologia, quota %, canali di distribuzione, coproduzioni.
+II.6 Professionisti della componente artistica: nome, ruolo, opere (titolo, anno, prodotta da, premi). II.7 Professionisti del cast tecnico: nome, mansione, opere. II.8 Produttore esecutivo: ragione sociale, sede legale, regione, legale rappresentante, partita IVA.
+
+MODULO III — DATI DI PRODUZIONE (.xls, unico file: copertina e quattro sezioni)
+III.1 Anagrafica: titolo (provvisorio o definitivo), proponente, legale rappresentante, regia, soggetto, sceneggiatura, tipologia, genere, durata, lingua; accordi SI/NO con ragione sociale (N.1 coproduzione con imprese italiane, N.2 con imprese estere, N.3 distribuzione, N.4 produttore esecutivo, N.5 finanziatori esterni); costi calcolati in automatico (O.1 costo di produzione, O.2 costi ammissibili, O.3 cofinanziamento richiesto, O.4-O.5 percentuali, O.6 importo speso in Sicilia e suo rapporto con il contributo); P.1-P.2 date di inizio e fine riprese; P.3-P.5 giorni di pre-produzione, riprese e post-produzione; Q.1-Q.3 giorni di ciascuna fase svolti in Sicilia; R.1-R.4 numero di professionisti artistici e tecnici, totale e siciliani; S.1-S.4 referente, telefono, mail, PEC.
+III.2 Cast e troupe list: tabella A componente artistica (regista, autore del soggetto, sceneggiatore, compositore, interpreti principali e secondari; esclusi figuranti e comparse), tabella B cast tecnico con i soli ruoli del menù a tendina; per ogni figura ruolo, cognome, nome e «nato e/o residente in Sicilia da almeno 6 mesi» SI/NO. I nominativi si indicano solo se già individuati. Quadro di sintesi con totale e numero di siciliani per A e B: è il dato usato per i criteri sui professionisti siciliani.
+III.3 Budget a preventivo: voci A.1 soggetto e sceneggiatura, A.2 direzione, A.3 componente artistica, A.4 produzione, A.5 animazione, A.6 post-produzione, A.7 spese varie, A.8 spese generali (non ammissibili), A.9 producer fee (ammissibile fino al 7,5% del costo di produzione). Due colonne, IVA esclusa: importo complessivo e «di cui spesa ammissibile sostenuta in Sicilia».
+III.4 Piano finanziario a copertura dei costi: 1 finanziamento pubblico (1.1 richiesta con questo bando, 1.2 tax credit, 1.3 MIC-DGCA, 1.4 Regioni, 1.5 fondi europei, 1.6 altri enti), 2 produttore e coproduttori (2.1 apporto societario diretto, 2.2 produttori indipendenti, 2.3 non indipendenti, 2.4 emittenti TV, 2.5 OTT, 2.6 differimenti), 3 coproduttori esteri, 4 apporto di terzi (capitale di rischio, sponsor, product placement, in kind), 5 prevendite Italia, 6 prevendite estero, 7 minimo garantito Italia, 8 minimo garantito estero. Per ogni riga: denominazione, tipologia di accordo, importo, % e documento a supporto (deal memo, contratto, delibera ente pubblico, nessun documento). Il totale del piano deve coincidere con il costo di produzione (differenza zero).`;
+
 const FASCE_LAVORAZIONE = [
   { oltre: 75, punti: 10, etichetta: 'Oltre il 75%' },
   { da: 51, punti: 9, etichetta: 'Dal 51% al 74%' },
@@ -386,6 +408,15 @@ export const BANDO_SICILIA = {
     { id: 'italiano', testo: 'Tutta la documentazione è in lingua italiana' },
     { id: 'contenuti', testo: 'L’opera non è promozionale, istituzionale o di intrattenimento TV e non contiene messaggi vietati (art. 5.2)' },
     { id: 'pec', testo: 'Invio unico via PEC dalla casella indicata nel dossier, con l’oggetto previsto dall’Avviso' },
+  ],
+  // Conoscenza fissa: fa parte del programma e accompagna ogni lettura di Claude.
+  testi: TESTO_AVVISO_SICILIA,
+  moduli: MODULI_SICILIA,
+  esiti: ESITI_SICILIA,
+  fonti: [
+    { nome: 'Avviso pubblico 2025-2027, testo coordinato con il D.D.G. n. 4788 del 22/12/2025', dettaglio: 'testo integrale degli articoli 3-18 e griglie di valutazione (Tabelle A e B)' },
+    { nome: 'Dossier di candidatura: Modulo I (Istanza), Modulo II (Scheda di produzione), Modulo III (Dati di produzione)', dettaglio: 'struttura dei campi; il Modulo III .xls viene letto in automatico' },
+    { nome: 'D.D.G. n. 2384 del 28/07/2026 — graduatorie della finestra 2026', dettaglio: 'punteggi reali per sezione di 75 progetti valutati (38 film e serie, 25 documentari, 12 cortometraggi)' },
   ],
   note: [
     'Punteggio complessivo minimo 65/100, più un punteggio minimo per ciascuna sezione A, B, C e D.',

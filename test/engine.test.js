@@ -70,8 +70,8 @@ test('una lettura fallita non blocca le altre e si può riprovare', async () => 
 
 test('documenti oltre il limite: scheda di lettura, testo integrale conservato', async () => {
   const p = progetto();
-  p.documenti[0].testo = 'INT. CASA - NOTTE. Dialogo lungo.\n'.repeat(3000); // ~100k caratteri
-  const llm = llmFinto({ limiteByte: 60000 });
+  p.documenti[0].testo = 'INT. CASA - NOTTE. Dialogo lungo.\n'.repeat(7000); // ~240k caratteri
+  const llm = llmFinto({ limiteByte: 150000 });
   const note = [];
   const val = await eseguiValutazione({ bando: B, progetto: p, llm, opzioni: { commissari: 1, modello: 'm', impegno: 'high' }, onEvento: (e) => { if (e.nota) note.push(e.nota); } });
   assert.equal(val.errori.length, 0);
@@ -80,10 +80,11 @@ test('documenti oltre il limite: scheda di lettura, testo integrale conservato',
   assert.equal(p.documenti[0].condensato, undefined);
   const sezA = llm.richieste.find((r) => r.schema && r.compito.includes('della sezione A'));
   assert.ok(sezA.documenti.includes('SCHEDA DI LETTURA') && sezA.documenti.length < 60000);
+  assert.ok(llm.richieste.filter((r) => !r.schema).length >= 2, 'la sceneggiatura è stata letta in più parti');
   // con un collegamento senza limiti torna il testo integrale
   const grande = llmFinto();
   await eseguiValutazione({ bando: B, progetto: p, llm: grande, opzioni: { commissari: 1, modello: 'm', impegno: 'high' } });
-  assert.ok(grande.richieste.find((r) => r.compito.includes('della sezione A')).documenti.length > 90000);
+  assert.ok(grande.richieste.find((r) => r.compito.includes('della sezione A')).documenti.length > 200000);
 });
 
 test('sezioni senza documenti restano da valutare', async () => {
