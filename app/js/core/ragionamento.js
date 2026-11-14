@@ -228,7 +228,7 @@ export function fattiDossier(bando, progetto) {
   metti('materiali_visivi_presenti', !!visivo, visivo ? `«${visivo.nome}»` : 'nessuno storyboard, moodboard o teaser tra gli allegati');
 
   // --- territorio
-  const regione = minuscolo(bando.territorio || bando.regione).replace('’', '’');
+  const regione = minuscolo(bando.territorio || bando.regione).replace(/'/g, '’');
   const luoghi = [regione, ...(LUOGHI[regione] || [])].filter(Boolean);
   const reLuoghi = luoghi.length ? new RegExp(`\\b(?:${luoghi.map((l) => l.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/’/g, '[’\']')).join('|')})\\b`, 'gi') : null;
   if (testo && reLuoghi) {
@@ -597,9 +597,8 @@ export function testoAncore(ancore, sezione) {
   const lista = Object.values(ancore?.criteri || {}).filter((a) => a.sezione === sid);
   if (!lista.length) return '';
   const righe = lista.map((a) => {
-    const fatti = (ancore.fatti?.origini && a.regole.flatMap((r) => regoleFamiglia(a.famiglia).find((x) => x.id === r.id)?.tutti.map((c) => c[0]) || []))
-      ? [...new Set(a.regole.flatMap((r) => (regoleFamiglia(a.famiglia).find((x) => x.id === r.id)?.tutti || []).map((c) => c[0])))].filter((k) => k !== 'documenti_del_criterio' && ancore.fatti.valori[k] != null).slice(0, 5).map((k) => `${k.replace(/_/g, ' ')}: ${ancore.fatti.origini[k]}`)
-      : [];
+    const usati = [...new Set(a.regole.flatMap((r) => { const reg = REGOLE.find((x) => x.id === r.id); return reg ? [...reg.tutti, ...reg.almenoUno].map((c) => c[0]) : []; }))];
+    const fatti = usati.filter((k) => k !== 'documenti_del_criterio' && ancore.fatti?.valori?.[k] != null && ancore.fatti?.origini?.[k]).slice(0, 5).map((k) => `${k.replace(/_/g, ' ')}: ${ancore.fatti.origini[k]}`);
     const tab = a.tabella ? `\n  Copertura attesa ${pctTesto(a.tabella.coperturaAttesa)} (fascia «${a.tabella.fasciaAttesa || '—'}»), copertura rigorosa ${pctTesto(a.tabella.coperturaRigorosa)} (fascia «${a.tabella.fasciaRigorosa || '—'}»): il tuo «valore» atteso dovrebbe stare vicino alla prima.` : '';
     const domande = a.ignoti.length ? `\n  Da verificare leggendo: ${a.ignoti.map((k) => FATTI[k]?.domanda || FATTI[k]?.descrizione).filter(Boolean).join(' ')}` : '';
     return `- Criterio ${a.id} — ${a.nome} (massimo ${fmt(a.massimo)}): ATTESA ${intervallo(a.atteso)} · RIGOROSA ${intervallo(a.rigoroso)} · fiducia ${a.fiducia}.${tab}

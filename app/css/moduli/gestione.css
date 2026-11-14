@@ -165,8 +165,8 @@ tbody th.gst-fase { position: static; text-transform: none; letter-spacing: 0; f
   .gst-stretto { width: 100%; text-align: left; }
 }
 @media (max-width: 420px) {
-  .gst-modulo { grid-template-columns: minmax(0, 1fr); }
-  .gst-filtri { grid-template-columns: minmax(0, 1fr); }
+  .gst-filtri { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .gst-filtri .gst-cerca, .gst-filtri > .field:last-child { grid-column: 1 / -1; }
   .gst-tappa { grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
   .gst-pallino { width: 28px; height: 28px; font-size: .8rem; }
   .gst-tappa::before { left: 13px; top: 28px; }

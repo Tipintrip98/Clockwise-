@@ -342,7 +342,7 @@ function vistaSpese(area, ctx) {
     return h('div.gst-modulo',
       h('datalist', { id: `${pre}-fornitori` }, [...new Set(g.spese.map((r) => r.fornitore).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'it')).slice(0, 200).map((f) => h('option', { value: f }))),
       campoData('Data documento', v.data, (d) => { v.data = d; alCambio('data'); }, { id: id('data') }),
-      testo('fornitore', 'Fornitore', { lista: `${pre}-fornitori` }),
+      testo('fornitore', 'Fornitore', { lista: `${pre}-fornitori`, largo: true }),
       testo('descrizione', 'Descrizione', { largo: true }),
       h('label.field', { for: id('voce') }, h('span', 'Voce di budget'), menu([{ id: '', nome: conAliquota ? 'Proponi dalla descrizione' : 'Senza voce' }, ...OPZIONI_VOCE], v.voce, (x) => {
         v.voce = x;
@@ -725,7 +725,7 @@ function gantt(geo, larghezza, idTabella) {
       const yBarra = stretto ? y + 22 : y + (riga - barra) / 2;
       const titolo = b.x == null ? `${b.nome}: date da indicare` : `${b.nome}: ${b.dal && b.al ? `dal ${dataEstesa(b.dal)} al ${dataEstesa(b.al)} (${giorniTesto(b.giorni)})` : dataEstesa(b.dal || b.al)}`;
       return s('g', {},
-        s('text', { x: stretto ? sinistra + 2 : 8, y: stretto ? y + 15 : y + riga / 2 + 4, 'font-size': 12, 'font-family': 'var(--font-body)', 'font-weight': 600, fill: b.x == null ? 'var(--muted)' : 'var(--ink)' }, b.nome),
+        s('text', { x: stretto ? sinistra + 2 : 8, y: stretto ? y + 15 : y + riga / 2 + 4, 'font-size': 12, 'font-family': 'var(--font-body)', 'font-weight': 600, fill: b.x == null ? 'var(--muted)' : 'var(--ink)', ...(stretto ? { stroke: 'var(--surface)', 'stroke-width': 4, 'paint-order': 'stroke', 'stroke-linejoin': 'round' } : {}) }, b.nome),
         b.x == null ? null
           : b.puntuale ? s('path', { d: `M ${x(b.x)} ${yBarra - 1} l 7 9 l -7 9 l -7 -9 z`, fill: COLORE_FASE[b.id] || 'var(--accent)' }, s('title', {}, titolo))
             : s('rect', { x: x(b.x), y: yBarra, width: Math.max(3, b.w * utile), height: barra, rx: 4, fill: COLORE_FASE[b.id] || 'var(--accent)', opacity: OPACITA_FASE[b.id] || 1 }, s('title', {}, titolo)));
