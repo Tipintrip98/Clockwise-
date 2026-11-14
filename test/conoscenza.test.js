@@ -62,7 +62,10 @@ test('ogni lettura di Claude riceve testo ufficiale e taratura', () => {
   const dati = datiVuoti();
   const sez = (id) => getGriglia(B, 'film').sezioni.find((s) => s.id === id);
   const a = promptSezione({ bando: B, categoriaId: 'film', anno: 2027, sezione: sez('A'), documenti: [], dati, commissario: { nome: 'X', descrizione: 'y' } });
-  assert.match(a.system, /TARATURA SUI PUNTEGGI REALI — finestra 2026/);
+  assert.match(a.system, /METRO REALE DELLA COMMISSIONE — finestra 2026/);
+  assert.match(a.system, /Tra i 27 progetti finanziati nelle finestre 2024, 2025, 2026/);
+  assert.match(a.system, /PRASSI OSSERVATA/);
+  assert.match(a.system, /«rigoroso»/, 'ogni commissario dà la lettura attesa e quella rigorosa');
   assert.match(a.system, /da 16 a 21,7 su 25/);
   assert.match(a.system, /TESTO UFFICIALE DELL'AVVISO/);
   assert.match(a.system, /Art\. 10 — /);

@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '1.2.0',
+  versione: '1.3.0',
   rilascio: '2026-11-14',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,12 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '1.3.0', data: '2026-11-14', voci: [
+    'Metro della Commissione corretto dopo la prova alla cieca su un dossier reale già finanziato: la stima era molto più severa del punteggio vero nelle sezioni B e D; con il metro corretto lo scarto sullo stesso caso è sotto i 4 punti su 100.',
+    'Due letture per ogni criterio di giudizio: punteggio atteso e lettura rigorosa. La differenza è il rischio documentale; un dossier sopra le soglie solo nella lettura attesa è segnato «a rischio».',
+    'Copertura finanziaria calcolata sul costo al netto del contributo richiesto, la sola lettura compatibile con il punteggio reale.',
+    'Beneficiari della finestra 2024 nello storico delle soglie di finanziamento.',
+  ] },
   { versione: '1.2.0', data: '2026-11-14', voci: [
     'Report completo in PDF: tutti i dati interni del dossier in un documento impaginato (punteggi, motivazioni di ogni commissario, controlli, confronto con le graduatorie, dati e piano finanziario, documenti, appendici di produzione e legale).',
     'Lettura delle scansioni: Claude legge come immagini i PDF senza testo e le fotografie (contratti firmati, lettere, curriculum) e ne trascrive il contenuto, segnalando firme e timbri.',

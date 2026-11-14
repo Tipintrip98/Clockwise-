@@ -34,6 +34,9 @@ export const TITOLI_ESITO = {
   parziale: 'Stima parziale',
 };
 
+/** Titolo dell'esito: un dossier sopra le soglie solo nella lettura attesa ha un rischio documentale, non un margine ridotto. */
+export const titoloEsito = (ris) => (ris.esito === 'a_rischio' && ris.sezioniFragili?.length ? 'Sopra le soglie, con rischio documentale' : TITOLI_ESITO[ris.esito]);
+
 /** Confronto tra la stima e il punteggio reale inserito a mano (progetto.reale), sezione per sezione. */
 export function confrontoConReale(ris, reale = {}) {
   const righe = ris.sezioni.map((s) => {

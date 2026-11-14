@@ -144,7 +144,8 @@ export function statoInvio(bando, progetto, ris, oggi = new Date()) {
   }
   for (const b of ris.bloccanti || []) problemi.push({ id: `pt_b${problemi.length}`, esito: 'critico', titolo: 'Minimo di sezione irraggiungibile', dettaglio: b, scheda: 'report' });
   if (ris.completo && ris.esito === 'sotto_soglia') for (const m of ris.motivi) problemi.push({ id: `pt_s${problemi.length}`, esito: 'critico', titolo: 'Punteggio sotto soglia', dettaglio: m, scheda: 'report' });
-  if (ris.completo && ris.esito === 'a_rischio') problemi.push({ id: 'pt_rischio', esito: 'attenzione', titolo: 'Margine ridotto sulle soglie', dettaglio: `Nella lettura più severa dei commissari il dossier scende a ${ris.min.toLocaleString('it-IT')} punti o sotto un minimo di sezione.`, scheda: 'report' });
+  if (ris.completo && ris.esito === 'a_rischio') problemi.push({ id: 'pt_rischio', esito: 'attenzione', titolo: ris.sezioniFragili?.length ? 'Soglie superate, ma a rischio documentale' : 'Margine ridotto sulle soglie',
+    dettaglio: ris.sezioniFragili?.length ? `Applicando alla lettera i principi di attribuzione il dossier scenderebbe a ${ris.rigoroso.toLocaleString('it-IT')} punti, con ${ris.sezioniFragili.length === 1 ? 'la sezione' : 'le sezioni'} ${ris.sezioniFragili.join(', ')} sotto il minimo: chiudi le lacune documentali segnalate nel report.` : `Nella lettura più severa dei commissari il dossier scende a ${Math.min(ris.min, ris.rigoroso).toLocaleString('it-IT')} punti o sotto un minimo di sezione.`, scheda: 'report' });
   problemi.sort((a, b) => ORDINE[a.esito] - ORDINE[b.esito]);
 
   const mancantiObbligatori = controlli.filter((c) => c.id.startsWith('all_') && c.esito === 'critico').length;
@@ -159,7 +160,7 @@ export function statoInvio(bando, progetto, ris, oggi = new Date()) {
     { id: 'valutazione', titolo: 'Valutazione', stato: !val ? 'da_fare' : (val.errori?.length || !ris.completo) ? 'attenzione' : 'fatto',
       dettaglio: !val ? 'La commissione simulata non ha ancora letto i documenti.' : val.errori?.length ? `${val.errori.length} ${val.errori.length === 1 ? 'lettura non riuscita' : 'letture non riuscite'}: riprovale.` : !ris.completo ? 'Alcune sezioni non sono state valutate: mancano i documenti corrispondenti.' : `Completata il ${new Date(val.data).toLocaleDateString('it-IT')}.` },
     { id: 'report', titolo: 'Esito', stato: !ris.completo ? 'da_fare' : ris.esito === 'ammissibile' ? 'fatto' : 'attenzione',
-      dettaglio: !ris.completo ? 'Stima ancora parziale.' : ris.esito === 'ammissibile' ? 'Sopra tutte le soglie.' : ris.esito === 'a_rischio' ? 'Ammissibile con margine ridotto.' : 'Sotto soglia.' },
+      dettaglio: !ris.completo ? 'Stima ancora parziale.' : ris.esito === 'ammissibile' ? 'Sopra tutte le soglie.' : ris.esito === 'a_rischio' ? (ris.sezioniFragili?.length ? 'Sopra le soglie, con rischio documentale.' : 'Ammissibile con margine ridotto.') : 'Sotto soglia.' },
   ];
   const critici = problemi.filter((x) => x.esito === 'critico').length;
   const attenzioni = problemi.length - critici;

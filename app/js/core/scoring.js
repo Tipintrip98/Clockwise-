@@ -99,11 +99,13 @@ export function calcolaMetriche(dati) {
       formula: 'spesa ammissibile sostenuta in Sicilia ÷ contributo richiesto',
       dettaglio: null,
     },
+    // Lettura principale: sul fabbisogno al netto del contributo richiesto. In un dossier reale di cui si conoscono
+    // documenti e punteggi il punteggio della sezione D è compatibile solo con questa lettura.
     copertura: {
-      valore: cop.sulCosto,
-      alternativa: cop.sulFabbisogno,
-      formula: 'fonti documentate (contratti, deal memo, delibere, referenze bancarie) ÷ costo di produzione',
-      formulaAlternativa: 'fonti documentate ÷ costo di produzione al netto del contributo richiesto',
+      valore: cop.sulFabbisogno ?? cop.sulCosto,
+      alternativa: cop.sulFabbisogno != null ? cop.sulCosto : null,
+      formula: 'fonti documentate (contratti, deal memo, delibere, referenze bancarie) ÷ costo di produzione al netto del contributo richiesto',
+      formulaAlternativa: 'fonti documentate ÷ costo di produzione, contributo richiesto compreso',
       dettaglio: null,
     },
   };
@@ -210,6 +212,9 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
       } else if (giudizi.length) {
         const pts = giudizi.map((g) => g.punti);
         r = { id: c.id, punti: r1(media(pts)), min: Math.min(...pts), max: Math.max(...pts), fonte: 'commissione', avvisi: [], mancante: false };
+        // lettura rigorosa: i punti che resterebbero applicando alla lettera i principi di attribuzione
+        const rig = giudizi.map((g) => num(g.rigoroso)).filter((v) => v != null).map((v) => clamp(v, 0, c.max));
+        if (rig.length) r.rigoroso = r1(Math.min(media(rig), r.punti));
         if (c.tipo === 'fasce') {
           const dich = valutaQuantitativo(c, dati);
           r.dichiarato = dich;
@@ -232,10 +237,11 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
     const punti = r1(valutati.reduce((a, c) => a + c.punti, 0));
     const min = r1(valutati.reduce((a, c) => a + (c.min ?? c.punti), 0));
     const max = r1(valutati.reduce((a, c) => a + (c.max ?? c.punti), 0));
+    const rigoroso = r1(valutati.reduce((a, c) => a + (c.rigoroso ?? c.punti), 0));
     const soglia = categoria.soglie?.[sez.id] ?? null;
     const daValutare = r1(criteri.filter((c) => c.punti == null).reduce((a, c) => a + c.massimo, 0));
     return {
-      id: sez.id, nome: sez.nome, massimo: sez.max, soglia, punti, min, max, criteri,
+      id: sez.id, nome: sez.nome, massimo: sez.max, soglia, punti, min, max, rigoroso, criteri,
       completo: valutati.length === criteri.length, datiCompleti: completo, daValutare,
       superata: soglia == null ? true : punti >= soglia,
       raggiungibile: soglia == null ? true : punti + daValutare >= soglia,
@@ -244,6 +250,7 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
   const totale = r1(sezioni.reduce((a, s) => a + s.punti, 0));
   const min = r1(sezioni.reduce((a, s) => a + s.min, 0));
   const max = r1(sezioni.reduce((a, s) => a + s.max, 0));
+  const rigoroso = r1(sezioni.reduce((a, s) => a + s.rigoroso, 0));
   const completo = sezioni.every((s) => s.completo);
   const sotto = sezioni.filter((s) => !s.superata);
   const motivi = [];
@@ -252,11 +259,14 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
     for (const s of sotto) motivi.push(`Sezione ${s.id} a ${fmt(s.punti)}: minimo richiesto ${s.soglia}.`);
   }
   let esito = 'parziale';
-  if (completo) esito = motivi.length ? 'sotto_soglia' : (min < bando.sogliaTotale || sezioni.some((s) => s.soglia != null && s.min < s.soglia) ? 'a_rischio' : 'ammissibile');
+  // «a rischio»: sopra le soglie nella lettura attesa, sotto nella più severa tra i commissari o in quella rigorosa
+  const fragile = (k) => (k === 'min' ? min : rigoroso) < bando.sogliaTotale || sezioni.some((s) => s.soglia != null && s[k] < s.soglia);
+  if (completo) esito = motivi.length ? 'sotto_soglia' : (fragile('min') || fragile('rigoroso') ? 'a_rischio' : 'ammissibile');
+  const sezioniFragili = completo && !motivi.length ? sezioni.filter((s) => s.soglia != null && s.rigoroso < s.soglia && s.punti >= s.soglia).map((s) => s.id) : [];
   const irraggiungibili = sezioni.filter((s) => !s.raggiungibile);
   return {
     categoria: categoria.nome, sogliaTotale: bando.sogliaTotale, massimo: bando.punteggioMassimo || 100,
-    sezioni, totale, min, max, completo, esito, motivi,
+    sezioni, totale, min, max, rigoroso, sezioniFragili, completo, esito, motivi,
     bloccanti: irraggiungibili.map((s) => `Sezione ${s.id}: anche con il massimo nei criteri ancora da valutare non si raggiunge il minimo di ${s.soglia}.`),
   };
 }
@@ -379,8 +389,8 @@ export function suggerimentiQuantitativi(bando, categoriaId, dati) {
       const target = (e.contributoRichiesto * soglia) / 100;
       azione = `Porta la spesa ammissibile in Sicilia da ${euro(e.spesaSicilia)} a ${stretta ? 'oltre' : 'almeno'} ${euro(target)}, oppure riduci il contributo richiesto sotto ${euro((e.spesaSicilia / soglia) * 100)}.`;
     } else if (c.metrica === 'copertura' && num(e.costoProduzione)) {
-      const target = (e.costoProduzione * soglia) / 100;
-      azione = `Documenta fonti per ${stretta ? 'più di' : 'almeno'} ${euro(target)} (${stretta ? 'oltre il' : ''} ${soglia}% del costo): contratti, deal memo, delibere o referenze bancarie.`;
+      const target = ((e.costoProduzione - (num(e.contributoRichiesto) || 0)) * soglia) / 100;
+      azione = `Documenta fonti per ${stretta ? 'più di' : 'almeno'} ${euro(target)} (${stretta ? 'oltre il' : ''} ${soglia}% del costo al netto del contributo richiesto): contratti, deal memo, delibere o referenze bancarie.`;
     }
     if (azione) out.push({ criterio: c.id, nome: c.nome, azione, guadagno, fascia: etichetta });
   }
@@ -434,6 +444,16 @@ export function posizioneEsiti(bando, categoriaId, punteggio) {
     finanziabile: ultimo == null ? null : punteggio >= ultimo,
     ultimoFinanziato: ultimo,
   };
+}
+
+// Come sono andati, sezione per sezione, i progetti finanziati in tutte le finestre note.
+export function statisticheFinanziati(bando, categoriaId) {
+  const edizioni = [...(bando.esitiFinanziati || []), ...(bando.esiti || [])];
+  const righe = edizioni.flatMap((e) => (e.categorie?.[categoriaId] || []).filter((r) => r.stato === 'F'));
+  if (!righe.length) return null;
+  const sezioni = {};
+  for (const k of Object.keys(righe[0].sezioni)) sezioni[k] = distribuzione(righe.map((r) => r.sezioni[k]));
+  return { progetti: righe.length, anni: [...new Set(edizioni.filter((e) => (e.categorie?.[categoriaId] || []).some((r) => r.stato === 'F')).map((e) => e.anno))].sort(), sezioni, totale: distribuzione(righe.map((r) => r.totale)) };
 }
 
 // Storico della soglia di finanziamento: per ogni finestra nota, primo e ultimo progetto finanziato.

@@ -80,6 +80,7 @@ function pulisciGiudizio(json, sezione) {
   const criteri = (Array.isArray(json?.criteri) ? json.criteri : []).filter((c) => c && attesi.has(String(c.id))).map((c) => ({
     id: String(c.id),
     punteggio: numero(c.punteggio),
+    rigoroso: numero(c.rigoroso),
     valore: numero(c.valore),
     motivazione: typeof c.motivazione === 'string' ? c.motivazione.trim() : '',
     evidenze: elenco(c.evidenze), criticita: elenco(c.criticita),

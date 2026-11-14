@@ -99,10 +99,32 @@ Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decre
 
 - **Criteri numerici** (sezione C, copertura finanziaria): li calcola il programma applicando le fasce del bando. Nessuna stima dell'AI: stessi numeri, stesso risultato.
 - **Criteri di giudizio** (qualità della sceneggiatura, curriculum, piano finanziario e distributivo): li valuta Claude nel ruolo di più commissari con profili diversi. La forbice tra il più severo e il più generoso dice quanto è solido il risultato.
+- **Due letture per ogni criterio di giudizio**: il **punteggio atteso**, cioè quello che la Commissione darebbe secondo il metro dei punteggi reali e la prassi osservata, e la **lettura rigorosa**, cioè i punti che resterebbero contando solo ciò che è provato da documenti idonei e firmati. La differenza è il rischio documentale: se nella lettura rigorosa una sezione scende sotto il minimo, il dossier è segnato «a rischio» anche quando il punteggio atteso supera le soglie.
 - **Soglie**: 65/100 complessivi più il minimo di ogni sezione. Se una sezione non può raggiungere il minimo, il report lo dice subito.
 - **Ammissibilità**: tetto del contributo, spesa minima sul territorio (150%), quadratura tra budget e piano finanziario, allegati obbligatori, incoerenze tra i moduli.
 
 Dove il testo del bando si presta a due letture (per esempio la base di calcolo dei giorni di lavorazione), il report mostra entrambe.
+
+### Prova su un dossier reale
+
+Il metro è stato messo alla prova su un dossier vero: un film già finanziato in una finestra precedente, caricato così come fu presentato (24 file, 12 dei quali scansioni lette da Claude) e valutato alla cieca da tre commissari simulati.
+
+| Sezione | Commissione reale | Stima alla cieca (metro 1.2) | Stima con il metro corretto (1.3) |
+|---|---|---|---|
+| A · Qualità del progetto | 19,8 | 16,7 | 18,7 |
+| B · Soggetti proponenti e coinvolti | 16,6 | 5,7 | 14,7 |
+| C · Impatti in Sicilia | 30,0 | 30,0 | 30,0 |
+| D · Solidità economico-finanziaria | 23,1 | 1,3 | 22,7 |
+| **Totale** | **89,5** | **53,7** | **86,1** |
+
+Che cosa ha insegnato la prova:
+
+- la sezione C, calcolata dai numeri, coincide al decimale;
+- alla cieca il simulatore era **molto più severo** della Commissione nelle sezioni B e D: applicava alla lettera i principi di attribuzione (nessun accordo firmato, nessun punto), mentre la Commissione ha riconosciuto ciò che era dichiarato nei moduli e allegato;
+- la copertura finanziaria reale è compatibile solo con il calcolo sul costo **al netto del contributo richiesto**, che ora è la lettura principale;
+- da qui la doppia lettura: la severità di prima non è andata persa, è diventata la «lettura rigorosa».
+
+La terza colonna **non è una prova alla cieca**: il metro è stato corretto proprio su questo caso. Per sapere quanto vale su un dossier mai visto serve almeno un secondo caso reale, meglio se escluso o non finanziato. La prassi ricavata è in `prassi` dentro `app/js/core/bando-sicilia.js` e va aggiornata a ogni nuovo caso.
 
 ## Altri bandi e conoscenza aggiuntiva
 

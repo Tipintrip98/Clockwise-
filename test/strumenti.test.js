@@ -199,7 +199,7 @@ test('ordine del giorno, calendario e stralci', async () => {
   assert.deepEqual([giorno1.orari.troupe, giorno1.orari.prontiAGirare, giorno1.orari.fine, giorno1.data], ['06:30', '07:30', '16:30', null]);
   assert.ok(giorno1.domani && giorno1.domani.n === 2);
   assert.equal(ordineDelGiorno(sp, piano, 99), null);
-  const testo = testoOdg(odg, { titolo: 'Prova', produzione: 'CinemaSet' });
+  const testo = testoOdg(odg, { titolo: 'Prova', produzione: 'Esempio Film' });
   assert.ok(testo.includes('ORDINE DEL GIORNO N.') && testo.includes('PROVA') && testo.includes('TONNARA DI FAVIGNANA') && testo.includes('minore in scena') && testo.includes('lanterna'));
   const st = stralci(documento, sp, ['2', '3']);
   assert.ok(st.includes('Nina fotografa') && st.includes('Saro rema') && !st.includes('lanterna spenta'));

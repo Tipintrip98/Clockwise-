@@ -1,5 +1,5 @@
 // Istruzioni per Claude: commissari simulati, verifica formale, estrazione dati, lettura di un nuovo bando.
-import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati } from './scoring.js';
+import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati, statisticheFinanziati } from './scoring.js';
 import { blocchiDocumenti, tipoPerId } from './docs.js';
 
 const { fmt, euro } = formati;
@@ -19,7 +19,7 @@ function descriviCriterio(c) {
   if (c.tipo === 'discreto') {
     righe.push(`Punteggi ammessi (nessun valore intermedio): ${c.valori.map((v) => `${fmt(v.punti)} = ${v.etichetta}`).join('; ')}.`);
   } else if (c.tipo === 'fasce') {
-    righe.push(`Criterio a fasce. Non assegnare punti: scrivi in «valore» la percentuale (0-100) che riconosceresti come documentata applicando il principio qui sopra, e lascia «punteggio» a 0. Il sistema applica le fasce del bando: ${c.fasce.map((f) => `${f.etichetta} → ${fmt(f.punti * c.peso)}`).join('; ')}.`);
+    righe.push(`Criterio a fasce. In «valore» scrivi la percentuale (0-100) di copertura che la Commissione riconoscerebbe secondo la prassi osservata (fonti dichiarate nel Modulo III per le quali nel dossier c'è un documento della controparte, rapportate al costo di produzione al netto del contributo richiesto), e lascia «punteggio» a 0: il sistema applica le fasce del bando (${c.fasce.map((f) => `${f.etichetta} → ${fmt(f.punti * c.peso)}`).join('; ')}). In «rigoroso» scrivi invece i punti della fascia che risulterebbe contando solo le fonti che reggono a una lettura severa del principio qui sopra.`);
   } else {
     righe.push('Giudizio qualitativo: punteggio con un decimale, da 0 al massimo.');
   }
@@ -44,7 +44,7 @@ export function riepilogoDati(bando, categoriaId, anno, dati) {
     const cop = coperturaPiano(dati);
     righe.push('Piano finanziario dichiarato (voce — fonte — importo — documento dichiarato a supporto):');
     for (const r of dati.piano) righe.push(`  ${r.voce} — ${[r.etichetta, r.denominazione].filter(Boolean).join(' / ')} — ${euro(r.importo)} — ${r.voce === '1.1' ? 'contributo richiesto con questo bando' : ETICHETTE_DOC[r.documento] || 'Nessun documento'}`);
-    righe.push(`  Fonti con documento dichiarato: ${euro(cop.documentato)} (${fmt(cop.sulCosto)}% del costo di produzione).`);
+    righe.push(`  Fonti con documento dichiarato: ${euro(cop.documentato)}, pari al ${fmt(cop.sulFabbisogno)}% del costo al netto del contributo richiesto (${fmt(cop.sulCosto)}% del costo di produzione complessivo).`);
   } else righe.push('Piano finanziario: non inserito.');
   return righe.join('\n');
 }
@@ -62,18 +62,22 @@ export function testiUfficiali(bando, uso) {
   return `\n\nTESTO UFFICIALE DELL'AVVISO — articoli rilevanti (fonte: ${bando.fonte})\n${articoli.map((a) => `### ${a.titolo}\n${a.testo}`).join('\n\n')}`;
 }
 
-// Metro reale della Commissione: distribuzione dei punteggi assegnati nell'ultima finestra nota.
+// Metro reale della Commissione: distribuzione dei punteggi assegnati nell'ultima finestra completa,
+// punteggi dei finanziati di tutte le finestre note e prassi osservata nei casi reali.
 export function taratura(bando, categoriaId, sezione) {
   const st = statisticheEsiti(bando, categoriaId);
   const d = st?.sezioni?.[sezione.id];
   if (!d) return '';
-  return `\n\nTARATURA SUI PUNTEGGI REALI — finestra ${st.anno} (${st.fonte})
+  const fin = statisticheFinanziati(bando, categoriaId);
+  const f = fin?.sezioni?.[sezione.id];
+  const prassi = (bando.prassi || []).filter((x) => !x.sezioni || x.sezioni.includes(sezione.id)).map((x) => `- ${x.testo}`).join('\n');
+  return `\n\nMETRO REALE DELLA COMMISSIONE — finestra ${st.anno} (${st.fonte})
 In questa categoria la Commissione ha valutato ${st.valutati} progetti: ${st.ammissibili} hanno superato tutte le soglie, ${st.finanziati} sono stati finanziati. Totali: primo in graduatoria ${fmt(st.primo)}, ultimo finanziato ${fmt(st.ultimoFinanziato)}.
-Nella sezione ${sezione.id} i punteggi reali sono andati da ${fmt(d.min)} a ${fmt(d.max)} su ${fmt(sezione.max)}: metà dei progetti tra ${fmt(d.q1)} e ${fmt(d.q3)}, mediana ${fmt(d.mediana)}.
-Usa questa distribuzione come metro. La somma dei tuoi punteggi per la sezione deve essere credibile rispetto a questi valori: un dossier nella media dei candidati sta vicino alla mediana; ci si avvicina al massimo reale solo con un dossier che reggerebbe il confronto con i migliori di quella graduatoria; si scende sotto il minimo reale solo per lacune gravi o documenti mancanti (in quel caso scendi senza esitare: la Commissione lo fa).`;
+Nella sezione ${sezione.id} i punteggi reali di tutti i ${st.valutati} progetti sono andati da ${fmt(d.min)} a ${fmt(d.max)} su ${fmt(sezione.max)}: metà tra ${fmt(d.q1)} e ${fmt(d.q3)}, mediana ${fmt(d.mediana)}.${f ? `\nTra i ${fin.progetti} progetti finanziati nelle finestre ${fin.anni.join(', ')} la sezione ${sezione.id} è andata da ${fmt(f.min)} a ${fmt(f.max)}: metà tra ${fmt(f.q1)} e ${fmt(f.q3)}, mediana ${fmt(f.mediana)}.` : ''}
+Questa distribuzione è la scala da usare per il punteggio atteso: la somma dei tuoi «punteggio» per la sezione deve cadere dove la Commissione collocherebbe questo dossier tra quelli reali. Un dossier nella media dei candidati sta vicino alla mediana; uno paragonabile ai finanziati sta nella loro fascia; ci si avvicina al massimo reale solo reggendo il confronto con i migliori. Sotto il minimo reale si scende solo se i documenti della sezione mancano del tutto o sono palesemente inconsistenti: non per difetti di forma che la Commissione, nei fatti, non ha sanzionato.${prassi ? `\n\nPRASSI OSSERVATA (ricavata da dossier reali di cui si conoscono documenti e punteggi)\n${prassi}` : ''}`;
 }
 
-const SCALA = 'Riferimento per i criteri qualitativi, in percentuale del massimo: 90-100% eccellenza rara, che reggerebbe il confronto con i migliori progetti nazionali; 75-89% lavoro solido e professionale con punti di forza evidenti; 60-74% discreto, con limiti chiari; 40-59% debole; sotto il 40% carente o non documentato.';
+const SCALA = 'Per ripartire il punteggio della sezione tra i criteri qualitativi: 90-100% del massimo solo per l’eccellenza rara, che reggerebbe il confronto con i migliori progetti nazionali; 75-89% lavoro solido e professionale; 60-74% discreto, con limiti chiari; sotto il 60% solo per ciò che è debole o non documentato affatto.';
 
 function sistemaCommissione(bando, categoriaId, sezione) {
   const cat = getCategoria(bando, categoriaId);
@@ -81,13 +85,17 @@ function sistemaCommissione(bando, categoriaId, sezione) {
   const soglie = griglia.sezioni.map((s) => `sezione ${s.id} almeno ${cat.soglie?.[s.id] ?? '—'} su ${s.max}`).join('; ');
   return `Sei un componente della Commissione di Valutazione dell'avviso «${bando.nome}» (${bando.ente}).
 
-Questa è una simulazione per un controllo qualità prima dell'invio dell'istanza. Il produttore vuole sapere con realismo quale punteggio otterrebbe il dossier così com'è e che cosa lo limita. Una stima generosa gli farebbe danno: lo porterebbe a inviare un dossier debole o a contare su un contributo che non arriverà. Valuta come farebbe un commissario vero davanti a decine di istanze concorrenti.
+Questa è una simulazione per un controllo qualità prima dell'invio dell'istanza. Il produttore vuole sapere quale punteggio darebbe la Commissione vera al dossier così com'è e che cosa lo limita. Serve una previsione fedele: una stima generosa lo porterebbe a contare su un contributo che non arriverà, una stima più severa della Commissione gli farebbe scartare o riscrivere un dossier che sarebbe stato finanziato. Per questo dai due letture distinte di ogni criterio.
+
+Le due letture
+- «punteggio» (per i criteri a fasce «valore»): il punteggio ATTESO, cioè quello che la Commissione reale assegnerebbe secondo il metro e la prassi riportati più sotto. È la previsione, e deve stare sulla scala dei punteggi reali.
+- «rigoroso»: i punti che resterebbero applicando alla lettera i principi di attribuzione del bando, contando solo ciò che è provato da un documento idoneo e firmato. Non può superare il punteggio atteso. La differenza tra le due letture misura il rischio: i punti che il dossier perderebbe davanti a una Commissione più severa.
 
 Come lavora la Commissione
 - ${bando.commissione?.descrizione || 'Ogni componente attribuisce un punteggio per ogni voce della griglia; il punteggio finale è la media.'}
-- Valuta soltanto ciò che è documentato nel dossier. Un documento non allegato, per la Commissione, non esiste; un'affermazione senza riscontro vale poco.
-- Applica alla lettera le regole del bando riportate sotto, compresi i principi di attribuzione.
-- Usa tutta la scala. ${SCALA}
+- Valuta il dossier per ciò che dichiarano i moduli e mostrano gli allegati. Non svolge un'istruttoria legale sui contratti: nella lettura attesa un accordo allegato e sottoscritto viene riconosciuto anche se la forma è migliorabile, e una figura dichiarata nei moduli con un curriculum conta anche senza lettera di intento. Le mancanze documentali vanno nella lettura rigorosa, nelle criticità e nei miglioramenti.
+- I punteggi reali sono compressi in una fascia stretta della scala: usa il metro reale riportato sotto, non la scala teorica da zero al massimo.
+- ${SCALA}
 - Motiva ogni punteggio con riferimenti puntuali ai documenti: titolo del file, scena, pagina o voce.
 
 Opera in valutazione: categoria «${cat.nome}». Per essere ammessi a cofinanziamento servono almeno ${bando.sogliaTotale}/100 complessivi e i minimi di sezione (${soglie}). Le soglie sono un'informazione di contesto: non avvicinare i punteggi alla soglia per far passare o bocciare il progetto.
@@ -98,8 +106,8 @@ ${sezione.criteri.filter((c) => c.tipo !== 'fasce' || c.giudizio).map(descriviCr
 
 const GUIDA_SEZIONE = {
   A: 'Leggi per intero il testo dell’opera prima di assegnare i punteggi. Giudica ciò che è scritto sulla pagina, non le intenzioni dichiarate nelle note di regia.',
-  B: 'Per i criteri sulle persone verifica, figura per figura: è indicata nel Modulo III (cast e troupe list)? C’è un contratto, deal memo o lettera di intento sottoscritto? Che cosa dice il curriculum degli ultimi anni? Le figure senza accordo sottoscritto non generano punteggio, anche se prestigiose.',
-  D: 'Ricostruisci fonte per fonte quali importi del piano finanziario la Commissione considererebbe davvero coperti: documento presente nel dossier, firmato, con controparte credibile. Le risorse proprie contano solo con referenze bancarie; i contributi pubblici solo se già concessi con atto formale; il contributo richiesto con questo bando non è una fonte coperta.',
+  B: 'Per i criteri sulle persone verifica, figura per figura: è indicata nei Moduli II e III? Che cosa dice il curriculum o il profilo riportato? C’è un contratto, deal memo o lettera di intento sottoscritto? Nella lettura attesa valuta il livello professionale di società, componente artistica e troupe così come emergono da moduli e allegati; nella lettura rigorosa conta solo le figure con un accordo sottoscritto. Ogni accordo o curriculum mancante va tra le criticità, con l’intervento per rimediare.',
+  D: 'Ricostruisci il piano finanziario fonte per fonte. Lettura attesa: sono coperte le fonti dichiarate nel Modulo III per le quali nel dossier c’è un documento proveniente dalla controparte (contratto, deal memo, lettera di impegno, atto di concessione, referenza bancaria), rapportate al costo di produzione al netto del contributo richiesto; un contratto di distribuzione firmato è riconosciuto come tale. Lettura rigorosa: solo documenti firmati da tutte le parti, con importi determinati e controparte la cui qualifica è provata nel dossier; risorse proprie solo con referenze bancarie, contributi pubblici solo se già concessi. Segnala tra le criticità ogni fonte che regge alla prima lettura ma non alla seconda.',
 };
 
 export const SCHEMA_SEZIONE = {
@@ -109,10 +117,11 @@ export const SCHEMA_SEZIONE = {
       type: 'array',
       items: {
         type: 'object', additionalProperties: false,
-        required: ['id', 'punteggio', 'valore', 'motivazione', 'evidenze', 'criticita', 'miglioramenti'],
+        required: ['id', 'punteggio', 'rigoroso', 'valore', 'motivazione', 'evidenze', 'criticita', 'miglioramenti'],
         properties: {
           id: { type: 'string' },
           punteggio: { type: 'number' },
+          rigoroso: { type: 'number' },
           valore: { anyOf: [{ type: 'number' }, { type: 'null' }] },
           motivazione: { type: 'string' },
           evidenze: { type: 'array', items: { type: 'string' } },
@@ -129,7 +138,7 @@ export const SCHEMA_SEZIONE = {
 };
 
 const FORMATO_SEZIONE = `Rispondi soltanto con un oggetto JSON, senza testo prima o dopo, in questa forma:
-{"criteri":[{"id":"<codice criterio>","punteggio":<numero>,"valore":<numero o null>,"motivazione":"<3-6 frasi>","evidenze":["<riferimento puntuale a un documento>"],"criticita":["<che cosa abbassa il punteggio>"],"miglioramenti":[{"azione":"<intervento concreto fattibile prima dell'invio>","punti":<punti che potrebbe far guadagnare su questo criterio>}]}],"sintesi":"<2-3 frasi sul giudizio complessivo della sezione>"}
+{"criteri":[{"id":"<codice criterio>","punteggio":<punteggio atteso>,"rigoroso":<punti nella lettura rigorosa>,"valore":<numero o null>,"motivazione":"<3-6 frasi: che cosa giustifica il punteggio atteso e che cosa lo separa dalla lettura rigorosa>","evidenze":["<riferimento puntuale a un documento>"],"criticita":["<che cosa abbassa il punteggio>"],"miglioramenti":[{"azione":"<intervento concreto fattibile prima dell'invio>","punti":<punti che potrebbe far guadagnare su questo criterio>}]}],"sintesi":"<2-3 frasi sul giudizio complessivo della sezione>"}
 «valore» serve solo per i criteri a fasce, altrimenti null. Al massimo tre evidenze, tre criticità e tre miglioramenti per criterio; se non c'è nulla di utile da dire lascia l'elenco vuoto.`;
 
 export function promptSezione({ bando, categoriaId, anno, sezione, documenti, dati, commissario }) {
@@ -196,7 +205,7 @@ Non ripetere i controlli puramente aritmetici (percentuali, tetti, quadratura): 
 
 Rispondi soltanto con un oggetto JSON in questa forma:
 {"controlli":[{"titolo":"<breve>","esito":"ok|attenzione|critico","dettaglio":"<che cosa hai trovato e dove>","azione":"<che cosa fare prima dell'invio; stringa vuota se esito ok>"}],"sintesi":"<2-3 frasi>"}
-«critico» = rischio di esclusione o revoca; «attenzione» = va sistemato o chiarito; «ok» = verificato e a posto (al massimo tre voci ok, le più importanti). Al massimo quindici controlli, dal più grave.`,
+«critico» = solo ciò che l'avviso sanziona espressamente con irricevibilità, inammissibilità o revoca: allegato obbligatorio assente, modulistica diversa da quella ufficiale, istanza fuori dalla finestra, requisito soggettivo mancante, limiti di contributo o di spesa sul territorio violati. «attenzione» = tutto il resto che va sistemato o chiarito: campi vuoti, incongruenze tra i moduli, denominazioni difformi, documenti deboli nella forma. Nella prassi dossier con incongruenze formali tra i moduli sono stati ammessi e finanziati: non presentarle come cause di esclusione, ma spiega che cosa correggere. «ok» = verificato e a posto (al massimo tre voci ok, le più importanti). Al massimo quindici controlli, dal più grave.`,
     schema: SCHEMA_VERIFICA,
   };
 }

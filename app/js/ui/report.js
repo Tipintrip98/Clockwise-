@@ -4,7 +4,7 @@ import { S, risultatoDi, salvaPresto, nomeModello, aggiungiConoscenza } from './
 import { quadrante, barreSezioni } from './grafici.js';
 import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, suggerimentiQuantitativi, stimaContributo, statisticheEsiti, posizioneEsiti, storicoFinanziamento, r1 } from '../core/scoring.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
-import { pianoMiglioramento } from '../core/report-dati.js';
+import { pianoMiglioramento, titoloEsito } from '../core/report-dati.js';
 import { scaricaReportPdf } from './pdf.js';
 
 const TITOLI = {
@@ -20,7 +20,11 @@ function spiegazione(ris, p) {
     return `Finora sono assegnati ${fmt(ris.totale)} punti; ne restano ${fmt(mancano)} da valutare con la lettura dei documenti${p.valutazione ? ' (sezioni senza documenti o letture non riuscite)' : ': avvia la valutazione'}.`;
   }
   if (ris.esito === 'ammissibile') return `Punteggio stimato ${fmt(ris.totale)} su ${ris.massimo}, con ogni sezione sopra il minimo. Anche nella lettura più severa (${fmt(ris.min)}) il dossier resta ammissibile.`;
-  if (ris.esito === 'a_rischio') return `La media dei commissari supera le soglie, ma nella lettura più severa (${fmt(ris.min)}) il totale o una sezione scendono sotto il minimo. Basta poco per restare fuori.`;
+  if (ris.esito === 'a_rischio') {
+    return ris.sezioniFragili?.length
+      ? `Il punteggio atteso supera tutte le soglie. Applicando alla lettera i principi di attribuzione del bando scenderebbe però a ${fmt(ris.rigoroso)}, con ${ris.sezioniFragili.length === 1 ? `la sezione ${ris.sezioniFragili[0]}` : `le sezioni ${ris.sezioniFragili.join(', ')}`} sotto il minimo: conviene chiudere le lacune documentali indicate sotto.`
+      : `La media dei commissari supera le soglie, ma nella lettura più severa (${fmt(Math.min(ris.min, ris.rigoroso))}) il totale o una sezione scendono sotto il minimo. Basta poco per restare fuori.`;
+  }
   return ris.motivi.join(' ');
 }
 
@@ -37,7 +41,7 @@ function schedaCriterio(c, def) {
   if (def.principio) corpo.push(h('div.small', h('strong', 'Come attribuisce i punti la Commissione: '), def.principio));
   for (const g of c.giudizi) {
     corpo.push(h('div.judge',
-      h('h4', h('span', g.commissario), h('span.num', def.tipo === 'fasce' ? `${fmt(g.valore)}% → ${fmt(g.punti)}` : fmt(g.punti))),
+      h('h4', h('span', g.commissario), h('span.num', def.tipo === 'fasce' ? `${fmt(g.valore)}% → ${fmt(g.punti)}` : fmt(g.punti), g.rigoroso != null && g.rigoroso < g.punti - 0.05 ? h('span.muted', { style: { fontWeight: 400 } }, ` · rigorosa ${fmt(g.rigoroso)}`) : null)),
       h('p', g.motivazione),
       g.evidenze?.length ? h('ul.ev', g.evidenze.map((e) => h('li', e))) : null,
       g.criticita?.length ? h('ul', g.criticita.map((e) => h('li', e))) : null));
@@ -46,7 +50,8 @@ function schedaCriterio(c, def) {
   return h('details.crit',
     h('summary',
       h('span.id', c.id), h('span.nm', c.nome),
-      h('span.pt', h('b', c.punti == null ? '—' : fmt(c.punti)), ` / ${fmt(c.massimo)}`, forbice && h('div.muted.small', `${fmt(c.min)} – ${fmt(c.max)}`))),
+      h('span.pt', h('b', c.punti == null ? '—' : fmt(c.punti)), ` / ${fmt(c.massimo)}`, forbice && h('div.muted.small', `${fmt(c.min)} – ${fmt(c.max)}`),
+        c.rigoroso != null && c.rigoroso < c.punti - 0.05 && h('div.small', { style: { color: 'var(--warn)' } }, `rigorosa ${fmt(c.rigoroso)}`))),
     h('div.meter', h('i', { style: { width: `${pct}%` } })),
     h('div.body', corpo));
 }
@@ -82,8 +87,9 @@ export function schedaReport(corpo, p, bando) {
       quadrante(ris),
       h('div.stack-s',
         h('div.label', `${bando.nomeBreve || bando.nome} · ${cat.nome} · finestra ${p.anno}`),
-        h('h2', TITOLI[ris.esito]),
+        h('h2', titoloEsito(ris)),
         h('p', spiegazione(ris, p)),
+        ris.rigoroso < ris.totale - 0.05 && h('div.small', h('strong', `Lettura rigorosa del bando: ${fmt(ris.rigoroso)} punti. `), h('span.muted', `I ${fmt(r1(ris.totale - ris.rigoroso))} punti di differenza sono quelli a rischio se la Commissione conta solo ciò che è provato da documenti firmati.`)),
         ris.bloccanti.map((b) => h('div.notice.bad', b)),
         conta('critico') > 0 && h('div.notice.bad', h('strong', `${conta('critico')} ${conta('critico') === 1 ? 'problema' : 'problemi'} di ammissibilità: `), 'il punteggio conta solo se l’istanza è ammessa alla valutazione.'),
         h('div', { style: { marginTop: '8px' } }, barreSezioni(ris))))),
@@ -97,7 +103,7 @@ export function schedaReport(corpo, p, bando) {
     ris.sezioni.map((sez) => h('section',
       h('div.sec-h',
         h('h3', `Sezione ${sez.id} — ${sez.nome}`),
-        h('div.row', h('span.num', h('strong', fmt(sez.punti)), ` / ${fmt(sez.massimo)}`),
+        h('div.row', h('span.num', h('strong', fmt(sez.punti)), ` / ${fmt(sez.massimo)}`, sez.rigoroso < sez.punti - 0.05 ? h('span.muted.small', ` · rigorosa ${fmt(sez.rigoroso)}`) : null),
           sez.soglia != null && h(`span.tag.${!sez.completo ? (sez.raggiungibile ? 'x' : 'bad') : sez.superata ? 'ok' : 'bad'}`, !sez.completo ? (sez.raggiungibile ? `minimo ${fmt(sez.soglia)} · da completare` : `minimo ${fmt(sez.soglia)} irraggiungibile`) : sez.superata ? `minimo ${fmt(sez.soglia)} superato` : `sotto il minimo di ${fmt(sez.soglia)}`))),
       (val?.giudizi?.[sez.id] || []).filter((g) => g.sintesi).length ? h('details.more', { style: { marginBottom: '10px' } }, h('summary', 'Giudizio di sintesi dei commissari'),
         h('div.stack-s', val.giudizi[sez.id].filter((g) => g.sintesi).map((g) => h('div.judge', h('h4', g.commissario.nome), h('p', g.sintesi))))) : null,
@@ -217,7 +223,7 @@ function riepilogoTesto(p, bando, ris, piano) {
   const righe = [
     `${p.nome} — ${bando.nomeBreve || bando.nome}, finestra ${p.anno}`,
     `Punteggio stimato: ${fmt(ris.totale)} / ${ris.massimo}${ris.completo ? '' : ' (parziale)'}${ris.max > ris.min ? ` — forbice ${fmt(ris.min)}-${fmt(ris.max)}` : ''} — soglia ${ris.sogliaTotale}`,
-    `Esito: ${TITOLI[ris.esito]}`,
+    `Esito: ${titoloEsito(ris)}${ris.rigoroso < ris.totale - 0.05 ? ` — lettura rigorosa ${fmt(ris.rigoroso)}` : ''}`,
     ...ris.sezioni.map((s) => `Sezione ${s.id} ${s.nome}: ${fmt(s.punti)} / ${fmt(s.massimo)}${s.soglia != null ? ` (minimo ${fmt(s.soglia)})` : ''}`),
   ];
   if (piano.blocchi.length) righe.push('', 'Bloccanti:', ...piano.blocchi.map((v) => `- ${v.testo}`));

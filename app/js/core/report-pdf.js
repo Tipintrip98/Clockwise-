@@ -1,7 +1,7 @@
 // Report completo in PDF: tutti i dati interni del dossier in un documento impaginato.
 // Usa jsPDF (passato dal chiamante: nel browser arriva da vendor/, nei test da npm), solo testo e forme:
 // niente immagini, niente HTML, quindi il file resta leggero e identico su ogni sistema.
-import { raccogliReport, TITOLI_ESITO } from './report-dati.js';
+import { raccogliReport, titoloEsito } from './report-dati.js';
 import { ETICHETTE_DOC } from './scoring.js';
 import { tipoPerId } from './docs.js';
 import { APP } from './versione.js';
@@ -210,12 +210,12 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
   P.font('bold', 34, INK); P.d.text(num(ris.totale), P.mx + 8, P.y + 15.5);
   const lt = P.d.getTextWidth(num(ris.totale));
   P.font('normal', 10, MUTO); P.d.text(`/ ${ris.massimo}${ris.completo ? '' : '  parziale'}`, P.mx + 10 + lt, P.y + 15.5);
-  P.font('normal', 8.5, MUTO); P.d.text(pulisci(`Soglia complessiva ${ris.sogliaTotale}${ris.max > ris.min + 0.05 ? ` · forbice dei commissari ${num(ris.min)} – ${num(ris.max)}` : ''}`), P.mx + 8, P.y + 22.5);
+  P.font('normal', 8.5, MUTO); P.d.text(pulisci(`Soglia ${ris.sogliaTotale}${ris.max > ris.min + 0.05 ? ` · forbice ${num(ris.min)} – ${num(ris.max)}` : ''}${ris.rigoroso < ris.totale - 0.05 ? ` · lettura rigorosa ${num(ris.rigoroso)}` : ''}`), P.mx + 8, P.y + 22.5);
   P.barra(P.mx + 8, P.y + 26.5, 76, ris.totale, ris.massimo, ris.sogliaTotale, coloreEsito);
-  P.font('bold', 12.5, coloreEsito); P.d.text(pulisci(TITOLI_ESITO[ris.esito]), P.mx + 96, P.y + 9.5);
+  P.font('bold', 11.5, coloreEsito); P.d.text(pulisci(titoloEsito(ris)), P.mx + 96, P.y + 9.5);
   const spiega = ris.esito === 'parziale' ? `Assegnati finora ${num(ris.totale)} punti; ${num(ris.sezioni.reduce((a, s) => a + s.daValutare, 0))} restano da valutare con la lettura dei documenti.`
     : ris.esito === 'ammissibile' ? `Ogni sezione supera il minimo. Anche nella lettura più severa (${num(ris.min)}) il dossier resta ammissibile.`
-      : ris.esito === 'a_rischio' ? `La media supera le soglie, ma nella lettura più severa (${num(ris.min)}) il totale o una sezione scendono sotto il minimo.`
+      : ris.esito === 'a_rischio' ? (ris.sezioniFragili?.length ? `Il punteggio atteso supera le soglie; applicando alla lettera i principi del bando scenderebbe a ${num(ris.rigoroso)}, con ${ris.sezioniFragili.length === 1 ? 'la sezione' : 'le sezioni'} ${ris.sezioniFragili.join(', ')} sotto il minimo.` : `La media supera le soglie, ma nella lettura più severa (${num(Math.min(ris.min, ris.rigoroso))}) il totale o una sezione scendono sotto il minimo.`)
         : ris.motivi.join(' ');
   P.font('normal', 8.8, INK);
   P.d.text(P.d.splitTextToSize(pulisci(spiega), P.w - 102).slice(0, 5), P.mx + 96, P.y + 15);
@@ -223,11 +223,12 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
 
   // sezioni
   P.tabella(
-    [{ t: 'Sezione', w: 46 }, { t: 'Punti', w: 12, a: 'r', peso: 'bold' }, { t: 'Massimo', w: 12, a: 'r' }, { t: 'Minimo', w: 12, a: 'r' }, { t: 'Esito', w: 30 }],
+    [{ t: 'Sezione', w: 44 }, { t: 'Atteso', w: 11, a: 'r', peso: 'bold' }, { t: 'Rigoroso', w: 12, a: 'r' }, { t: 'Massimo', w: 12, a: 'r' }, { t: 'Minimo', w: 11, a: 'r' }, { t: 'Esito', w: 28 }],
     ris.sezioni.map((s) => {
-      const esito = !s.completo ? (s.raggiungibile ? 'Da completare' : 'Minimo irraggiungibile') : s.superata ? 'Minimo superato' : 'Sotto il minimo';
-      return { celle: [`${s.id} · ${s.nome}`, num(s.punti), num(s.massimo), s.soglia == null ? '—' : num(s.soglia), esito], colori: [null, null, null, null, !s.completo ? (s.raggiungibile ? MUTO : MALE) : s.superata ? OK : MALE] };
+      const esito = !s.completo ? (s.raggiungibile ? 'Da completare' : 'Minimo irraggiungibile') : s.superata ? (s.soglia != null && s.rigoroso < s.soglia ? 'Superato, a rischio' : 'Minimo superato') : 'Sotto il minimo';
+      return { celle: [`${s.id} · ${s.nome}`, num(s.punti), num(s.rigoroso), num(s.massimo), s.soglia == null ? '—' : num(s.soglia), esito], colori: [null, null, s.rigoroso < s.punti - 0.05 ? AVVISO : MUTO, null, null, !s.completo ? (s.raggiungibile ? MUTO : MALE) : s.superata ? (s.soglia != null && s.rigoroso < s.soglia ? AVVISO : OK) : MALE] };
     }));
+  if (ris.rigoroso < ris.totale - 0.05) P.testo('Atteso: il punteggio che la Commissione darebbe secondo il metro dei punteggi reali. Rigoroso: i punti che resterebbero contando solo ciò che è provato da documenti idonei e firmati; la differenza è il rischio documentale.', { corpo: 8, colore: MUTO });
 
   // stato dell'invio
   const semaforo = { rosso: ['Non inviare', MALE], giallo: ['Da completare', AVVISO], verde: ['Pronto per l’invio', OK] }[invio.semaforo];
@@ -269,6 +270,7 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
       P.y += 8.6;
       if (def.descrizione) P.testo(def.descrizione, { corpo: 8.5, colore: MUTO });
       if (c.min != null && c.max != null && c.max - c.min >= 0.1) P.testo(`Forbice tra i commissari: ${num(c.min)} – ${num(c.max)}.`, { corpo: 8.5, colore: MUTO });
+      if (c.rigoroso != null && c.rigoroso < c.punti - 0.05) P.testo(`Lettura rigorosa: ${num(c.rigoroso)} punti (${num(c.punti - c.rigoroso)} a rischio).`, { corpo: 8.5, colore: AVVISO });
       if (c.fonte === 'calcolo' || c.fonte === 'dichiarato') {
         P.testo(c.mancante ? 'Dato mancante: i Dati chiave non sono compilati per questo criterio.'
           : `Valore ${c.valoreTesto}${c.dettaglio ? ` (${c.dettaglio})` : ''}: fascia «${c.fascia}». Calcolo: ${c.formula}.${c.fonte === 'dichiarato' ? ' Punteggio provvisorio dai dati dichiarati.' : ''}`, { corpo: 9 });
@@ -278,7 +280,7 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
       if (def.principio) P.testo(`Come attribuisce i punti la Commissione: ${def.principio}`, { corpo: 8.5, colore: MUTO });
       for (const g of c.giudizi) {
         P.serve(10);
-        P.testo(`${g.commissario} — ${def.tipo === 'fasce' ? `${num(g.valore)}% -> ${num(g.punti)} punti` : `${num(g.punti)} punti`}`, { corpo: 9, peso: 'bold', dopo: 0.5 });
+        P.testo(`${g.commissario} — ${def.tipo === 'fasce' ? `${num(g.valore)}% -> ${num(g.punti)} punti` : `${num(g.punti)} punti`}${g.rigoroso != null && g.rigoroso < g.punti - 0.05 ? ` · lettura rigorosa ${num(g.rigoroso)}` : ''}`, { corpo: 9, peso: 'bold', dopo: 0.5 });
         P.testo(g.motivazione, { corpo: 9, x: P.mx + 3, dopo: 1 });
         if (g.evidenze?.length) { P.testo('Evidenze nei documenti', { corpo: 7.5, peso: 'bold', colore: MUTO, x: P.mx + 3, dopo: 0.3 }); P.elenco(g.evidenze, { corpo: 8.6, x: P.mx + 3, dopo: 0.6 }); }
         if (g.criticita?.length) { P.testo('Criticità', { corpo: 7.5, peso: 'bold', colore: MUTO, x: P.mx + 3, dopo: 0.3 }); P.elenco(g.criticita.map((t) => ({ testo: t, colore: AVVISO })), { corpo: 8.6, x: P.mx + 3, dopo: 0.6 }); }

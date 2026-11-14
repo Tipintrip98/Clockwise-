@@ -425,6 +425,15 @@ export const BANDO_SICILIA = {
     'Uscita in sala o messa in onda (fruizione pubblica per documentari e cortometraggi): da documentare entro 6 mesi dalla liquidazione della seconda quota (art. 12 lett. q).',
     'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16).',
   ],
+  // Prassi osservata: come la Commissione ha applicato la griglia nei casi reali di cui si conoscono sia i documenti
+  // sia i punteggi. Ricavata dalla prova su un dossier reale già finanziato e dalle graduatorie 2024-2026.
+  // Accompagna la taratura delle sezioni indicate; va aggiornata a ogni nuovo caso reale. Senza dati che identifichino il progetto.
+  prassi: [
+    { sezioni: ['A'], testo: 'Sezione A: i punteggi reali stanno in una fascia stretta (circa dal 64% all’87% del massimo). Refusi, impaginazione o lunghezza della sceneggiatura non hanno portato sotto il minimo di sezione un progetto con un soggetto forte e un legame autentico con il territorio: pesano sulla posizione dentro la fascia, non fuori.' },
+    { sezioni: ['B'], testo: 'Sezione B: nessun film valutato nel 2026 è sceso sotto 13 su 20 e i finanziati stanno tra 13,7 e 18,7. Un film con una società giovane, un regista con poca esperienza nel lungometraggio, cast e troupe elencati nei moduli e pochi accordi sottoscritti allegati ha ottenuto oltre l’80% del massimo: la Commissione valuta i profili dichiarati e non azzera i criteri per le lettere di intento mancanti.' },
+    { sezioni: ['D'], testo: 'Sezione D: la copertura del piano finanziario è stata riconosciuta sulle fonti dichiarate nel Modulo III con un documento allegato della controparte, rapportate al costo al netto del contributo richiesto. In un caso reale un accordo di coproduzione firmato, una lettera di un finanziatore esterno e un contratto di distribuzione firmato con una società indipendente, senza referenze bancarie e senza prova dei titoli distribuiti, hanno portato la sezione oltre il 90% del massimo.' },
+    { sezioni: ['D'], testo: 'Sezione D: quando invece le fonti non hanno alcun documento allegato la Commissione scende molto. Nel 2026 più di due film su tre sono rimasti sotto il minimo di 15, molti tra 0 e 6: è la sezione che decide l’ammissibilità.' },
+  ],
   // Conoscenza fissa: fa parte del programma e accompagna ogni lettura di Claude.
   testi: TESTO_AVVISO_SICILIA,
   moduli: MODULI_SICILIA,
