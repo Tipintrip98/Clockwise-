@@ -33,19 +33,71 @@ function schedaLocale(ridisegna) {
   };
   const usa = (tipo) => impostazione({ collegamento: tipo }).then(ridisegna);
 
+  const win = s.piattaforma === 'win32';
+  const statoCC = h('div');
+  const aggiornaStato = async () => { const r = await fetch('api/ricontrolla', { method: 'POST' }); S.ambiente = { ambiente: 'locale', server: await r.json() }; return S.ambiente.server.claudeCode || {}; };
+  // Dopo «Accedi» si aspetta che l'accesso risulti fatto (al massimo 4 minuti), poi si passa al collegamento.
+  const attendiAccesso = async () => {
+    const fine = Date.now() + 4 * 60 * 1000;
+    while (Date.now() < fine) {
+      await new Promise((ok) => setTimeout(ok, 3000));
+      if (!document.body.contains(statoCC)) return;
+      let c; try { c = await aggiornaStato(); } catch { continue; }
+      if (c.pronto) { await impostazione({ collegamento: 'claude-code' }); toast('Claude è collegato'); ridisegna(); return; }
+    }
+    metti(svuota(statoCC), h('div.notice.warn', 'Non risulta ancora l’accesso. Se hai completato l’accesso nel browser premi «Ricontrolla»; altrimenti premi di nuovo «Accedi».'));
+  };
+  const accedi = async (b) => {
+    if (b) b.disabled = true;
+    metti(svuota(statoCC), h('div.notice', h('span.spin'), ' Apro la pagina di accesso…'));
+    try {
+      const r = await fetch('api/claude/accedi', { method: 'POST' });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.messaggio || 'Accesso non avviato.');
+      metti(svuota(statoCC), h('div.notice.info', h('span.spin'), h('strong', ' Completa l’accesso nel browser. '), win ? 'Si è aperta anche una finestra «Accesso a Claude»: se il browser mostra un codice, incollalo lì. ' : '', 'Questa pagina si aggiorna da sola appena l’accesso è fatto.'));
+      attendiAccesso();
+    } catch (e) { metti(svuota(statoCC), h('div.notice.bad', e.message)); if (b) b.disabled = false; }
+  };
+  const installa = async (b) => {
+    b.disabled = true;
+    metti(svuota(statoCC), h('div.notice', h('span.spin'), ' Installazione di Claude Code in corso: scarico il programma ufficiale di Anthropic, di solito ci vogliono uno o due minuti…'));
+    try {
+      const r = await fetch('api/claude/installa', { method: 'POST' });
+      const j = await r.json().catch(() => ({}));
+      if (j.stato) S.ambiente = { ambiente: 'locale', server: j.stato };
+      if (!r.ok || !j.ok) {
+        metti(svuota(statoCC), h('div.notice.bad', h('strong', 'Installazione non riuscita. '), 'Prova la procedura a mano qui sotto oppure usa «Esegui la diagnosi» e mandami il rapporto.', j.uscita ? h('pre.diag', j.uscita) : null));
+        b.disabled = false; return;
+      }
+      toast('Claude Code installato');
+      if (!S.ambiente.server.claudeCode?.pronto) { ridisegna(); return accedi(); }
+      ridisegna();
+    } catch (e) { metti(svuota(statoCC), h('div.notice.bad', e.message)); b.disabled = false; }
+  };
+  const comandoInstalla = win ? 'irm https://claude.ai/install.ps1 | iex' : 'curl -fsSL https://claude.ai/install.sh | bash';
+
   return h('div.stack',
     h('div.panel.stack',
-      h('div.spread', h('div', h('div.label', 'Abbonamento Claude'), h('h2', 'Account Claude')),
-        h(`span.tag.${cc.pronto ? 'ok' : cc.installato ? 'warn' : 'x'}`, cc.pronto ? 'Collegato' : cc.installato ? 'Accesso da fare' : 'Claude Code non trovato')),
-      h('p', { style: { maxWidth: '70ch' } }, 'Usa il tuo abbonamento Claude (Pro, Max, Team) attraverso Claude Code installato su questo computer: le valutazioni rientrano nell’utilizzo dell’abbonamento, senza costi a consumo.'),
-      cc.pronto ? h('div.muted.small', `${cc.versione || 'Claude Code'} · accesso attivo`)
-        : h('ol.how',
-          !cc.installato && h('li', 'Installa Claude Code: apri un terminale ed esegui ', h('code', 'npm install -g @anthropic-ai/claude-code')),
-          h('li', 'Nel terminale esegui ', h('code', 'claude'), ' e poi il comando ', h('code', '/login'), ': accedi con l’account del tuo abbonamento.'),
-          h('li', 'Torna qui e premi “Ricontrolla”.')),
+      h('div.spread', h('div', h('div.label', 'Abbonamento Claude · consigliato'), h('h2', 'Account Claude')),
+        h(`span.tag.${cc.pronto ? 'ok' : cc.installato ? 'warn' : 'x'}`, cc.pronto ? 'Collegato' : cc.installato ? 'Accesso da fare' : 'Da installare')),
+      h('p', { style: { maxWidth: '70ch' } }, 'Usa il tuo abbonamento Claude (Pro, Max, Team) attraverso Claude Code, il programma ufficiale di Anthropic: le valutazioni rientrano nell’utilizzo dell’abbonamento, senza costi a consumo.'),
+      cc.pronto
+        ? h('div.muted.small', `${cc.versione || 'Claude Code'} · accesso attivo${cc.origine && cc.origine !== 'PATH del programma' ? ` · trovato in: ${cc.origine}` : ''}`)
+        : h('ol.passi-collegamento',
+          h('li', { class: cc.installato ? 'fatto' : 'attivo' }, h('div', h('strong', 'Installa Claude Code'), h('div.muted.small', cc.installato ? `Fatto: ${cc.versione || 'installato'}` : 'Un clic: Clockwise scarica e installa il programma ufficiale di Anthropic.')),
+            !cc.installato && h('button.btn.primary', { type: 'button', id: 'btn-installa-claude', onclick: (e) => installa(e.currentTarget) }, 'Installa Claude Code')),
+          h('li', { class: cc.installato ? 'attivo' : '' }, h('div', h('strong', 'Accedi con il tuo account Claude'), h('div.muted.small', 'Si apre la pagina di accesso di Claude nel browser: entra con l’account del tuo abbonamento.')),
+            cc.installato && h('button.btn.primary', { type: 'button', id: 'btn-accedi-claude', onclick: (e) => accedi(e.currentTarget) }, 'Accedi')),
+          h('li', h('div', h('strong', 'Fatto'), h('div.muted.small', 'Clockwise se ne accorge da solo e usa il collegamento.')))),
+      statoCC,
       h('div.row',
         cc.pronto && (attivo === 'claude-code' ? h('span.tag.accent', 'In uso') : h('button.btn.s.primary', { type: 'button', onclick: () => usa('claude-code') }, 'Usa questo collegamento')),
-        h('button.btn.s', { type: 'button', onclick: async (e) => { e.currentTarget.disabled = true; try { const r = await fetch('api/ricontrolla', { method: 'POST' }); S.ambiente = { ambiente: 'locale', server: await r.json() }; } catch { toast('Server locale non raggiungibile'); } ridisegna(); } }, 'Ricontrolla'))),
+        h('button.btn.s', { type: 'button', onclick: async (e) => { e.currentTarget.disabled = true; try { await aggiornaStato(); } catch { toast('Server locale non raggiungibile'); } ridisegna(); } }, 'Ricontrolla')),
+      !cc.pronto && h('details.more', h('summary', 'Preferisci farlo a mano?'),
+        h('ol.how',
+          h('li', win ? 'Apri PowerShell (menu Start → digita «PowerShell»)' : 'Apri il Terminale', ' ed esegui ', h('code', comandoInstalla)),
+          h('li', 'Poi esegui ', h('code', 'claude auth login'), ' e completa l’accesso nel browser.'),
+          h('li', 'Torna qui e premi «Ricontrolla». Non serve riavviare Clockwise.')))),
 
     h('div.panel.stack',
       h('div.spread', h('div', h('div.label', 'A consumo'), h('h2', 'Chiave API Anthropic')),
@@ -82,6 +134,29 @@ function schedaNessuno() {
     h('div', h('button.btn.s', { type: 'button', onclick: () => ricontrollaAmbiente() }, 'Ricontrolla')));
 }
 
+// Diagnosi del collegamento su questo computer: rapporto da leggere o da copiare per chi assiste.
+function pannelloDiagnosi() {
+  const area = h('div.stack-s');
+  const esegui = async (b) => {
+    b.disabled = true;
+    metti(svuota(area), h('div.notice', h('span.spin'), ' Controllo di Claude Code, dell’accesso, della rete e del PATH…'));
+    try {
+      const r = await fetch('api/diagnosi');
+      const d = await r.json();
+      metti(svuota(area),
+        d.problemi?.length ? h('div.notice.warn', h('strong', 'Che cosa ho trovato'), h('ul', { style: { margin: '6px 0 0', paddingLeft: '18px' } }, d.problemi.map((p) => h('li', p)))) : h('div.notice.info', 'Nessun problema rilevato.'),
+        h('pre.diag', { id: 'testo-diagnosi' }, d.testo),
+        h('div.row', h('button.btn.s', { type: 'button', onclick: async () => { try { await navigator.clipboard.writeText(d.testo); toast('Rapporto copiato: incollalo nel messaggio'); } catch { toast('Copia non riuscita: seleziona il testo e copialo a mano'); } } }, 'Copia il rapporto')));
+    } catch (e) { metti(svuota(area), h('div.notice.bad', `Diagnosi non riuscita: ${e.message}`)); }
+    b.disabled = false;
+  };
+  return h('div.panel.stack',
+    h('div.spread', h('div', h('div.label', 'Se qualcosa non va'), h('h2', 'Diagnosi del collegamento')),
+      h('button.btn.s', { type: 'button', id: 'btn-diagnosi', onclick: (e) => esegui(e.currentTarget) }, 'Esegui la diagnosi')),
+    h('p.muted.small', { style: { maxWidth: '75ch' } }, 'Controlla su questo computer dove è installato Claude Code, se risponde, se l’accesso è fatto, se la rete raggiunge Anthropic e quale PATH vede Clockwise. Il rapporto non contiene chiavi né documenti e la cartella dell’utente è anonimizzata: puoi copiarlo e mandarlo a chi ti assiste.'),
+    area);
+}
+
 export function vistaCollegamento(main) {
   const corpo = h('div.stack');
   const ridisegna = () => {
@@ -90,6 +165,7 @@ export function vistaCollegamento(main) {
       amb === 'attesa' ? h('div.panel', h('span.spin'), ' Verifica del collegamento a Claude…')
         : amb === 'app' ? schedaApp() : amb === 'locale' ? schedaLocale(ridisegna) : schedaNessuno(),
       amb === 'app' || amb === 'locale' ? preferenze() : null,
+      amb === 'locale' ? pannelloDiagnosi() : null,
       h('p.muted.small', { style: { maxWidth: '80ch' } }, 'Riservatezza: i file del dossier restano su questo dispositivo. A Claude viene inviato il testo dei documenti che servono a ciascuna valutazione, attraverso il collegamento scelto qui sopra e a nessun altro servizio. Il documento d’identità non viene mai inviato.'));
     aggiornaPillola();
   };

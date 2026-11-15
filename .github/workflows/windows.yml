@@ -132,6 +132,38 @@ jobs:
             Get-Content $log, $err -ErrorAction SilentlyContinue
           }
 
+      # ---- Prova 1b: collegamento a Claude. Si installa Claude Code con l'installatore ufficiale e si avvia
+      # Clockwise con un PATH che NON contiene la cartella di Claude Code (come succede a un programma aperto dal
+      # menu Start subito dopo l'installazione): Clockwise deve trovarlo lo stesso. Senza account l'accesso resta da fare.
+      - name: Prova del collegamento a Claude Code
+        env:
+          CLOCKWISE_NO_BROWSER: '1'
+        run: |
+          $ErrorActionPreference = 'Stop'
+          try { irm https://claude.ai/install.ps1 | iex } catch { Write-Host "::warning::Installatore di Claude Code non riuscito: $_"; exit 0 }
+          $claude = Join-Path $env:USERPROFILE '.local\bin\claude.exe'
+          if (-not (Test-Path $claude)) { Write-Host "::warning::Claude Code non trovato in $claude dopo l'installazione"; Get-ChildItem (Join-Path $env:USERPROFILE '.local') -Recurse -ErrorAction SilentlyContinue | Select-Object -First 20 FullName; exit 0 }
+          Write-Host "Claude Code installato: $(& $claude --version)"
+          # PATH senza la cartella di Claude Code, e senza leggerla dal registro: resta solo la ricerca nelle cartelle note
+          $env:Path = ($env:Path -split ';' | Where-Object { $_ -and ($_ -notmatch '\\\.local\\bin') }) -join ';'
+          $env:CLOCKWISE_DATA = Join-Path $env:RUNNER_TEMP 'clockwise-dati-claude'
+          $env:PORT = '5777'
+          $p = Start-Process -FilePath (Resolve-Path 'dist/windows/Clockwise.exe').Path -PassThru -NoNewWindow
+          try {
+            $stato = $null; $limite = (Get-Date).AddSeconds(60)
+            while (-not $stato -and -not $p.HasExited -and (Get-Date) -lt $limite) { try { $stato = Invoke-RestMethod 'http://127.0.0.1:5777/api/stato' -TimeoutSec 30 } catch { Start-Sleep -Milliseconds 500 } }
+            if (-not $stato) { throw 'Clockwise.exe non risponde' }
+            Write-Host "claudeCode: $($stato.claudeCode | ConvertTo-Json -Compress)"
+            if ($stato.claudeCode.installato -ne $true) { throw 'Clockwise non trova Claude Code installato fuori dal PATH' }
+            if ($stato.claudeCode.percorso -notmatch '\.local\\bin\\claude\.exe$') { throw "Percorso inatteso: $($stato.claudeCode.percorso)" }
+            $d = Invoke-RestMethod 'http://127.0.0.1:5777/api/diagnosi' -TimeoutSec 60
+            Write-Host '--- diagnosi ---'; Write-Host $d.testo
+            if ($d.claudeCode.trovato -ne $true) { throw 'La diagnosi non trova Claude Code' }
+            Invoke-RestMethod 'http://127.0.0.1:5777/api/esci' -Method Post | Out-Null
+            if (-not $p.WaitForExit(15000)) { throw 'Clockwise.exe non si chiude' }
+            Write-Host 'Collegamento a Claude Code: trovato fuori dal PATH, diagnosi a posto'
+          } finally { if (-not $p.HasExited) { $p.Kill() } }
+
       # ---- Prova 2: installazione e disinstallazione silenziose, senza diritti di amministratore
       - name: Prova dell'installatore
         run: |

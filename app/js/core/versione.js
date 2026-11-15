@@ -2,8 +2,8 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.0',
-  rilascio: '2026-11-14',
+  versione: '2.0.1',
+  rilascio: '2026-11-15',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
   sito: 'https://www.davidetipaldi.it',
@@ -12,6 +12,12 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.1', data: '2026-11-15', voci: [
+    'Collegamento a Claude in tre passi, senza terminale: «Installa Claude Code» scarica e installa il programma ufficiale di Anthropic, «Accedi» apre la pagina di accesso dell’account, poi Clockwise si collega da solo.',
+    'Claude Code viene trovato anche se è stato installato dopo l’avvio del computer e non è nel PATH (registro di Windows, cartella dell’installatore ufficiale, npm, WinGet, app Claude desktop).',
+    'Diagnosi del collegamento: rapporto completo su Claude Code, accesso, rete e PATH, da copiare e mandare a chi assiste.',
+    'Manuale d’uso completo in PDF, incluso nell’installazione.',
+  ] },
   { versione: '2.0.0', data: '2026-11-14', voci: [
     'Catalogo dei bandi italiani ed europei per la produzione: per ogni fondo stato, finestre, edizioni successive attese, categorie e metodo di valutazione. Le griglie a punti sono trascritte dai testi ufficiali e ricontrollate da una verifica indipendente; i fondi senza griglia (automatici, a sportello, non attivi) restano come schede informative.',
     '«Quale bando vuoi simulare?»: scelta guidata di bando, categoria e anno, anche nella guida del primo avvio; confronto dello stesso progetto su più bandi.',

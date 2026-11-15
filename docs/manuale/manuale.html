@@ -152,10 +152,14 @@ tr { break-inside: avoid; }
   <p>I documenti li legge Claude. Lo stato del collegamento è sempre visibile nella pillola in alto a destra (punto verde = collegato). Toccala, o apri <strong>Collegamento</strong>, per scegliere come collegarti.</p>
   <figure><img src="img/16-collegamento.jpg" alt="Pagina Collegamento"><figcaption>La pagina Collegamento: account Claude, chiave API e impostazioni di lettura.</figcaption></figure>
   <div class="dl">
-    <dt>Account Claude</dt><dd>Usa l’abbonamento Claude attraverso Claude Code installato sul computer. Se manca, la pagina indica il comando per installarlo e per fare l’accesso; poi si preme <strong>Ricontrolla</strong>.</dd>
+    <dt>Account Claude</dt><dd>Usa l’abbonamento Claude (Pro, Max, Team) attraverso Claude Code, il programma ufficiale di Anthropic. È il collegamento consigliato e si fa in tre passi dalla pagina, senza aprire il terminale:
+      <ol class="passi" style="margin-top:2mm"><li><strong>Installa Claude Code</strong>: un clic, Clockwise scarica e installa il programma ufficiale (uno o due minuti).</li><li><strong>Accedi</strong>: si apre la pagina di accesso di Claude nel browser; su Windows anche una finestra «Accesso a Claude», dove incollare il codice se il browser ne mostra uno.</li><li>Clockwise si accorge da solo dell’accesso e usa il collegamento.</li></ol>
+      Clockwise trova Claude Code anche se è stato installato dopo l’avvio del computer e non è nel PATH.</dd>
     <dt>Chiave API Anthropic</dt><dd>Si incolla la chiave (inizia con <code>sk-ant-</code>): viene verificata e salvata sul computer, leggibile solo dal tuo utente. Le letture sono a consumo sul conto API.</dd>
     <dt>Come deve leggere Claude</dt><dd>Modello (il più capace per la stima da usare prima dell’invio; uno più rapido per le prove), livello di approfondimento e numero di commissari (uno per una prova veloce, tre per la stima da usare, cinque per la massima solidità).</dd>
   </div>
+  <h2>Se il collegamento non funziona</h2>
+  <p>In fondo alla pagina Collegamento c’è <strong>Diagnosi del collegamento</strong> → <strong>Esegui la diagnosi</strong>. Controlla sul computer dove è installato Claude Code e se risponde, se l’accesso è fatto, se la rete raggiunge Anthropic e quale PATH vede Clockwise, e dice che cosa fare. Con <strong>Copia il rapporto</strong> lo si manda a chi assiste: non contiene chiavi né documenti e la cartella dell’utente è anonimizzata.</p>
   <div class="nota"><p>I criteri che dipendono dai numeri (giorni, professionisti, spesa, copertura) si calcolano <strong>anche senza Claude</strong>: il cruscotto mostra comunque una stima statistica e una stima dalle regole.</p></div>
 </section>
 
@@ -396,7 +400,9 @@ tr { break-inside: avoid; }
     <thead><tr><th style="width:36%">Che cosa succede</th><th>Che cosa fare</th></tr></thead>
     <tbody>
       <tr><td>Windows mostra «PC protetto da Windows»</td><td>Ulteriori informazioni → Esegui comunque. Sparisce quando il programma è firmato con il certificato della società.</td></tr>
-      <tr><td>La pillola in alto dice «Claude non collegato»</td><td>Apri Collegamento: installa o accedi a Claude Code e premi Ricontrolla, oppure inserisci una chiave API.</td></tr>
+      <tr><td>La pillola in alto dice «Claude non collegato»</td><td>Apri Collegamento e segui i tre passi: Installa Claude Code, Accedi, fatto. In alternativa inserisci una chiave API.</td></tr>
+      <tr><td>Claude Code è installato ma Clockwise non lo trova, o l’accesso non risulta</td><td>Collegamento → Esegui la diagnosi: il rapporto dice dove è stato cercato e che cosa risponde. Premi Copia il rapporto e mandalo a chi ti assiste.</td></tr>
+      <tr><td>L’installazione di Claude Code non riesce</td><td>Spesso è la rete aziendale (proxy, firewall): la diagnosi lo mostra nella sezione Rete. Si può installare a mano da PowerShell con <code>irm https://claude.ai/install.ps1 | iex</code>, poi <code>claude auth login</code>.</td></tr>
       <tr><td>«La porta è già in uso»</td><td>Clockwise è probabilmente già aperto: cerca la finestra nera. Altrimenti il programma sceglie da solo la porta successiva.</td></tr>
       <tr><td>Un file non viene letto</td><td>Se è un <code>.doc</code> salvalo in PDF o DOCX. Se è una scansione usa «Leggi le scansioni con Claude» (dopo aver riaperto la pagina va trascinato di nuovo).</td></tr>
       <tr><td>Una sezione non viene valutata</td><td>Non ci sono documenti leggibili per i suoi criteri: carica quelli indicati nella scheda Valutazione, o correggi il tipo dei documenti.</td></tr>

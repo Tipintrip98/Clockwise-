@@ -5,7 +5,8 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { creaClient, verificaChiave, chiamaApi, messaggioErrore } from './anthropic-api.js';
-import { statoClaudeCode, chiamaClaudeCode } from './claude-code.js';
+import { statoClaudeCode, chiamaClaudeCode, installaClaudeCode, avviaAccesso } from './claude-code.js';
+import { diagnosi, testoDiagnosi } from './diagnosi.js';
 import { percorsoRelativo } from './statici.js';
 import { creaAggiornamenti } from './aggiornamenti.js';
 
@@ -44,6 +45,7 @@ function origineValida(req) {
  * @returns {http.Server}
  */
 export function creaServer({ fornitore, cartellaDati, versione, eseguibile = false, suEsci, aggiornamenti: opzioniAggiornamenti = {} }) {
+  let installazioneInCorso = false;
   const fileConfig = path.join(cartellaDati, 'config.json');
   // aggiornamento automatico dei bandi: catalogo dal canale e pagine ufficiali (vedi server/aggiornamenti.js)
   const aggiornamenti = creaAggiornamenti({ versione, leggiConfig: () => leggiConfig(), ...opzioniAggiornamenti });
@@ -68,6 +70,7 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     return {
       versione,
       eseguibile: !!eseguibile,
+      piattaforma: process.platform,
       api: { configurata: !!k.chiave, origine: k.origine, chiave: maschera(k.chiave) },
       claudeCode: await statoClaudeCode(),
     };
@@ -116,6 +119,21 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     if (!origineValida(req)) return json(res, 403, { codice: 'origine', messaggio: 'Richiesta non consentita.' });
     if (percorso === '/api/stato' && req.method === 'GET') return json(res, 200, await stato());
     if (percorso === '/api/ricontrolla' && req.method === 'POST') { await statoClaudeCode(true); return json(res, 200, await stato()); }
+    if (percorso === '/api/diagnosi' && req.method === 'GET') {
+      const k = chiaveApi();
+      const d = await diagnosi({ versione, eseguibile, api: { configurata: !!k.chiave, origine: k.origine } });
+      return json(res, 200, { ...d, testo: testoDiagnosi(d) });
+    }
+    // Installazione di Claude Code con l'installatore ufficiale: una alla volta, solo su richiesta dell'utente.
+    if (percorso === '/api/claude/installa' && req.method === 'POST') {
+      if (installazioneInCorso) return json(res, 409, { codice: 'in_corso', messaggio: 'Installazione già in corso.' });
+      installazioneInCorso = true;
+      try { const r = await installaClaudeCode(); return json(res, 200, { ...r, stato: await stato() }); } finally { installazioneInCorso = false; }
+    }
+    if (percorso === '/api/claude/accedi' && req.method === 'POST') {
+      const r = await avviaAccesso();
+      return json(res, r.ok ? 200 : 400, r.ok ? { ok: true } : { codice: 'accesso', messaggio: r.messaggio });
+    }
     if (percorso === '/api/chiave' && req.method === 'POST') {
       const { chiave } = await leggiCorpo(req, 4096);
       if (typeof chiave !== 'string' || chiave.trim().length < 20) return json(res, 400, { codice: 'chiave', messaggio: 'Incolla la chiave completa (inizia con sk-ant-).' });

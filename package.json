@@ -1,6 +1,6 @@
 {
   "name": "clockwise",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Clockwise — simulatore di punteggio per bandi regionali cinema e audiovisivo (controllo qualità pre-invio)",
   "type": "module",
   "private": true,
