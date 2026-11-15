@@ -182,3 +182,8 @@ summary.cat-articolo { color: var(--ink); font-weight: 500; }
 
 /* indirizzi PEC e URL lunghi vanno a capo invece di allargare la pagina */
 .cat-prosa, .cat-numeri .num, .panel dd, .panel td, .notice { overflow-wrap: anywhere; }
+
+/* regole di soglia nella tabella delle categorie: una per riga, a capo se lunghe */
+.cat-regole { margin: 4px 0 0; padding: 0; list-style: none; text-align: left; }
+.cat-regole li + li { margin-top: 3px; }
+.cat-punti li, dl.guida dd { overflow-wrap: anywhere; }

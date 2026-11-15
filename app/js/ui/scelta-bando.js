@@ -133,11 +133,12 @@ export function testoContributo(c) {
   if (c.massimale) parti.push(`fino a ${euro(c.massimale.valore)}${c.massimale.ereditato ? ` (dato ${c.massimale.anno})` : ''}`);
   return parti.join(' · ') || 'non indicato';
 }
-/** Punteggi minimi di una categoria in una riga: «65 su 100 in totale · A ≥ 17 · B ≥ 13». */
+/** Punteggi minimi di una categoria in una riga: «65 su 100 in totale · A ≥ 17 · B ≥ 13 · Criteri 1 + 5 ≥ 50». */
 export function testoMinimi(c) {
   const parti = [];
-  if (c.sogliaTotale) parti.push(`${fmt(c.sogliaTotale)} su ${fmt(c.punteggioMassimo)} in totale`);
+  if (c.minimoTotale) parti.push(c.minimoTotale);
   for (const x of c.soglie) parti.push(`${x.id}\u00a0≥\u00a0${fmt(x.min)}`);
+  parti.push(...(c.regole || []));
   return parti.join(' · ') || 'nessun minimo indicato';
 }
 

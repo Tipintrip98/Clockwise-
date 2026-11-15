@@ -95,6 +95,10 @@ export function simulabilita(bando) {
   } else if (b.tipoValutazione === 'nessuna' || b.stato === 'non_trovato') {
     motivo = 'Nessun bando attivo';
     spiegazione = 'Al momento non risulta un avviso attivo per questo fondo: non c’è una griglia su cui simulare.';
+  } else if (!haGriglie(b) && b.tipoValutazione === 'misto') {
+    motivo = 'Griglia non disponibile';
+    spiegazione = 'Il bando combina requisiti di accesso e una valutazione di merito, ma per la parte di merito non è stata trovata una griglia a punti in un testo ufficiale: Clockwise non simula su regole che non ha potuto leggere. Se la valutazione è un parere senza punteggio, la scheda va classificata come «selettiva».';
+    daPdf = true;
   } else if (!haGriglie(b)) {
     motivo = 'Griglia non disponibile';
     spiegazione = 'Il bando assegna punteggi, ma la griglia di valutazione non è stata trovata in un testo ufficiale: Clockwise non simula su regole che non ha potuto leggere.';
@@ -235,9 +239,79 @@ export function valoreAnno(mappa, anno) {
   return { valore: mappa[rif], anno: rif, ereditato: true };
 }
 
+/* ------------------------------------------------------------------ regole di soglia in parole */
+
+const num = (n) => Number(n).toLocaleString('it-IT', { maximumFractionDigits: 1 });
+const unisci = (v) => (v.length > 1 ? `${v.slice(0, -1).join(', ')} e ${v.at(-1)}` : v[0] || '');
+const PLURALE = { elemento: 'Elementi', criterio: 'Criteri', 'sub criterio': 'Sub criteri', sottocriterio: 'Sottocriteri', sezione: 'Sezioni' };
+
+/** «A-F» se le sezioni sono tre o più consecutive nella griglia, altrimenti «A, B e D». */
+function elencoSezioni(ids, griglia) {
+  const ordine = (griglia?.sezioni || []).map((s) => s.id);
+  const pos = ids.map((id) => ordine.indexOf(id));
+  const consecutive = ids.length >= 3 && pos.every((p, i) => p >= 0 && (i === 0 || p === pos[i - 1] + 1));
+  return consecutive ? `${ids[0]}-${ids.at(-1)}` : unisci(ids);
+}
+
+// Un minimo sotto 1 punto su un solo elemento significa «diverso da zero» (es. Liguria, art. 9b punto 7).
+const eNonZero = (sc) => sc.minimo < 1 && sc.criteri.length + sc.sezioni.length === 1;
+
+/** Testo di una soglia combinata, senza ripetere il minimo se l'etichetta lo dice già («…: almeno 50 punti»). */
+function testoCombinata(sc) {
+  const ref = [...sc.criteri, ...sc.sezioni];
+  const base = String(sc.etichetta || '').replace(/[\s:;,–-]*(almeno|minimo|non inferiore a)\s+[\d.,]+(\s*punti)?\.?\s*$/i, '').replace(/\s*diverso da zero/i, '').trim()
+    || (sc.sezioni.length && !sc.criteri.length ? `${ref.length > 1 ? 'Sezioni' : 'Sezione'} ${ref.join(' + ')}` : `${ref.length > 1 ? 'Criteri' : 'Criterio'} ${ref.join(' + ')}`);
+  return eNonZero(sc) ? `${base} diverso da zero` : `${base} ≥ ${num(sc.minimo)}`;
+}
+
+/**
+ * Le regole di soglia di una categoria in frasi brevi: soglia complessiva (anche se misurata solo su alcune
+ * sezioni), minimi su somme di criteri o sezioni, condizioni «diverso da zero», penalità.
+ * @returns {{ minimoTotale: string, sogliaSu: {sezioni: string[], testo: string, max: number|null}|null, regole: string[] }}
+ */
+export function regoleSoglia(bando, categoria) {
+  const b = bando || {};
+  const griglia = b.griglie?.[categoria?.griglia];
+  const sezGriglia = griglia?.sezioni || [];
+  const ids = (b.sogliaSuSezioni || []).filter(Boolean);
+  let sogliaSu = null;
+  if (ids.length) {
+    const trovate = ids.map((id) => sezGriglia.find((s) => s.id === id)).filter(Boolean);
+    const max = trovate.length === ids.length ? trovate.reduce((a, s) => a + (Number(s.max) || 0), 0) : null;
+    // se le sezioni indicate sono tutte quelle della griglia, la soglia vale sul totale: niente da precisare
+    if (!(sezGriglia.length && trovate.length === sezGriglia.length)) sogliaSu = { sezioni: ids, testo: `${ids.length > 1 ? 'sezioni' : 'sezione'} ${elencoSezioni(ids, griglia)}`, max };
+  }
+  const soglia = Number(b.sogliaTotale) || 0;
+  const minimoTotale = !soglia ? ''
+    : sogliaSu ? `${num(soglia)}${sogliaSu.max ? ` su ${num(sogliaSu.max)}` : ''} ${ids.length > 1 ? 'sulle' : 'sulla'} ${sogliaSu.testo}`
+      : `${num(soglia)} su ${num(b.punteggioMassimo ?? 100)} in totale`;
+
+  // soglie combinate: quelle della categoria se ci sono, altrimenti quelle del bando; solo se riguardano questa griglia
+  const esiste = (sc) => !sezGriglia.length || [...sc.criteri, ...sc.sezioni].some((id) => sezGriglia.some((s) => s.id === id || (s.criteri || []).some((c) => c.id === id)));
+  const combinate = (categoria?.soglieCombinate || b.soglieCombinate || []).filter((sc) => sc && (sc.criteri?.length || sc.sezioni?.length)).map((sc) => ({ criteri: [], sezioni: [], ...sc })).filter(esiste);
+  const regole = [];
+  const nonZero = combinate.filter(eNonZero);
+  for (const sc of combinate) if (!eNonZero(sc)) regole.push(testoCombinata(sc));
+  if (nonZero.length > 1) {
+    // «Elementi 1.1, 1.2, 1.3 e 1.4 diversi da zero (art. 9b, punto 7)» invece di quattro righe uguali
+    const parola = String(nonZero[0].etichetta || '').match(/^(sub criterio|sottocriterio|elemento|criterio|sezione)\b/i)?.[1]?.toLowerCase();
+    const note = [...new Set(nonZero.map((sc) => String(sc.etichetta || '').match(/\(([^)]*)\)\s*$/)?.[1] || ''))];
+    regole.push(`${PLURALE[parola] || 'Voci'} ${unisci(nonZero.map((sc) => [...sc.criteri, ...sc.sezioni][0]))} diversi da zero${note.length === 1 && note[0] ? ` (${note[0]})` : ''}`);
+  } else if (nonZero.length) regole.push(testoCombinata(nonZero[0]));
+
+  for (const p of b.penalita || []) {
+    if (!p?.testo || !(p.punti < 0)) continue;
+    const n = Math.abs(p.punti);
+    regole.push(`−${num(n)} ${n === 1 ? 'punto' : 'punti'} se ${p.testo.charAt(0).toLowerCase()}${p.testo.slice(1).replace(/\.\s*$/, '')}`);
+  }
+  return { minimoTotale, sogliaSu, regole };
+}
+
 /**
  * Ciò che serve sapere di una categoria per scegliere: contributo massimo, dotazione dell'anno, punteggi minimi.
- * @returns {{ id, nome, percentuale, massimale, dotazione, notaContributo, sogliaTotale, punteggioMassimo, soglie: {id, nome, min, max}[], durata: string, testoQualita: string }}
+ * `minimoTotale` e `regole` sono già in parole (vedi regoleSoglia).
+ * @returns {{ id, nome, percentuale, massimale, dotazione, notaContributo, sogliaTotale, punteggioMassimo, soglie: {id, nome, min, max}[],
+ *            minimoTotale: string, sogliaSu: object|null, regole: string[], durata: string, testoQualita: string }}
  */
 export function schedaCategoria(bando, categoria, anno) {
   const c = categoria || {};
@@ -248,7 +322,7 @@ export function schedaCategoria(bando, categoria, anno) {
   return {
     id: c.id, nome: c.nome || '', percentuale: c.contributo?.percentuale ?? null,
     massimale: valoreAnno(c.contributo?.massimali, anno), dotazione: valoreAnno(c.dotazione, anno), notaContributo: c.contributo?.nota || '',
-    sogliaTotale: bando?.sogliaTotale ?? null, punteggioMassimo: bando?.punteggioMassimo ?? 100, soglie, durata,
+    sogliaTotale: bando?.sogliaTotale ?? null, punteggioMassimo: bando?.punteggioMassimo ?? 100, soglie, ...regoleSoglia(bando, c), durata,
     testoQualita: c.testoQualita || '',
   };
 }

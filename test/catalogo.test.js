@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import {
   dataEstesa, dataCorta, giorniTra, normalizza, statoBando, etichettaValutazione, aPunti, simulabilita, areaBando, raggruppaPerRegione,
   cercaBandi, filtraBandi, contaFiltri, riepilogoCatalogo, collegati, opzioniAnno, annoConsigliato, valoreAnno, schedaCategoria,
-  calendarioEdizioni, nomeDossierProposto, FILTRI, NOTA_PREVISTA,
+  calendarioEdizioni, nomeDossierProposto, FILTRI, NOTA_PREVISTA, regoleSoglia,
 } from '../app/js/core/bandi/catalogo.js';
 import { preparaBando } from '../app/js/core/bandi/schema.js';
 import { catalogo, BANDI_PREDEFINITI } from '../app/js/core/bandi/indice.js';
@@ -388,6 +388,51 @@ test('scheda della categoria: anni successivi, dati mancanti, durate', () => {
   assert.equal(vuota.nome, '');
   assert.equal(vuota.percentuale, null);
   assert.equal(vuota.durata, '');
+});
+
+test('scheda della categoria: regole di soglia in parole (soglia su sezioni, soglie combinate, penalità)', () => {
+  const voce = (id) => catalogo().find((b) => b.id === id);
+  const scheda = (id, i = 0) => { const b = voce(id); return schedaCategoria(b, b.categorie[i], 2026); };
+  const sic = scheda('sicilia-2025-2027');
+  assert.equal(sic.minimoTotale, '65 su 100 in totale');
+  assert.deepEqual(sic.regole, []);
+  const pie = scheda('piemonte-film-tv-fund-2026');
+  assert.equal(pie.minimoTotale, '50 su 100 sulle sezioni 1-11', 'la soglia si misura sulle sezioni di base, non su 102');
+  assert.deepEqual(pie.sogliaSu.sezioni.length, 11);
+  assert.equal(scheda('lombardia-per-il-cinema-2025-2026').minimoTotale, '50 su 100 sulle sezioni A-F');
+  assert.equal(scheda('umbria-film-fund-2026-2027').minimoTotale, '60 su 100 sulle sezioni A-C');
+  const lig = scheda('liguria-attrazione-produzioni-audiovisive-2026');
+  assert.equal(lig.minimoTotale, '', 'Liguria non ha soglia sul totale');
+  assert.deepEqual(lig.regole, ['Criteri 1 + 5 (art. 9b) ≥ 50', 'Elementi 1.1, 1.2, 1.3 e 1.4 diversi da zero (art. 9b, punto 7)']);
+  assert.deepEqual(scheda('veneto-produzione-audiovisiva-pr-fesr-2026').regole, ['−1 punto se l’impresa ha i requisiti per richiedere il rating di legalità ma non l’ha conseguito']);
+  assert.deepEqual(scheda('lazio-cinema-international-2026-1').regole, ['Sub criterio B.3 (track record dei produttori stranieri) ≥ 3']);
+  assert.deepEqual(scheda('campania-piano-cinema-2026', 1).regole, ['Criteri 1 + 2 ≥ 40'], 'la soglia della categoria vale più di quella del bando');
+});
+
+test('regole di soglia: casi limite', () => {
+  const b = bando();
+  // senza etichetta: il testo nasce da criteri e sezioni; una soglia di un'altra griglia non compare
+  const conCombinate = { ...b, soglieCombinate: [
+    { etichetta: '', minimo: 50, criteri: [], sezioni: ['A', 'B'] },
+    { etichetta: '', minimo: 20, criteri: ['A1'], sezioni: [] },
+    { etichetta: 'Elemento Z.9 diverso da zero', minimo: 0.1, criteri: ['Z.9'], sezioni: [] },
+  ], penalita: [{ id: 'x', testo: 'Domanda incompleta.', punti: -3 }] };
+  const r = regoleSoglia(conCombinate, conCombinate.categorie[0]);
+  assert.deepEqual(r.regole, ['Sezioni A + B ≥ 50', 'Criterio A1 ≥ 20', '−3 punti se domanda incompleta']);
+  // soglia «su sezioni» che coincide con tutta la griglia: resta «in totale»
+  assert.equal(regoleSoglia({ ...b, sogliaSuSezioni: ['A', 'B'] }, b.categorie[0]).minimoTotale, '60 su 100 in totale');
+  assert.equal(regoleSoglia({ ...b, sogliaSuSezioni: ['A'] }, b.categorie[0]).minimoTotale, '60 su 60 sulla sezione A');
+  const vuoto = regoleSoglia(null, null);
+  assert.deepEqual(vuoto, { minimoTotale: '', sogliaSu: null, regole: [] });
+});
+
+test('simulabilità: bando misto senza griglia e bando selettivo', () => {
+  const misto = simulabilita({ tipoValutazione: 'misto', categorie: [] });
+  assert.equal(misto.simulabile, false);
+  assert.match(misto.spiegazione, /requisiti di accesso e una valutazione di merito/);
+  const idm = simulabilita(catalogo().find((b) => b.id === 'alto-adige-idm-film-fund-2024-2026'));
+  assert.equal(idm.motivo, 'Selezione senza punteggio');
+  assert.doesNotMatch(idm.spiegazione, /assegna punteggi/);
 });
 
 test('scheda della categoria: la Sicilia del programma', () => {
