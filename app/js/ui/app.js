@@ -12,6 +12,7 @@ import { vistaProgetto } from './progetto.js';
 import { vistaBandi } from './bandi.js';
 import { vistaCollegamento } from './collegamento.js';
 import { apriAiuto } from './aiuto.js';
+import { APP } from '../core/versione.js';
 import { avviaTutorial, tutorialAttivo } from './tutorial.js';
 import { apriSceltaBando } from './scelta-bando.js';
 
@@ -107,7 +108,7 @@ export function render() {
   const main = h('main.wrap');
   metti(svuota(radice), 
     h('header.top', h('div.wrap',
-      h('a.brand', { href: '#dossier', 'aria-label': 'Clockwise, elenco dossier' }, logo(), 'Clockwise'),
+      h('a.brand', { href: '#dossier', 'aria-label': `Clockwise ${APP.versione}, elenco dossier` }, logo(), 'Clockwise', h('span.versione', { title: `Versione ${APP.versione}` }, APP.versione)),
       h('nav.nav', { 'aria-label': 'Sezioni' }, voce('dossier', 'Dossier'), voce('bandi', 'Bandi'), voce('collegamento', 'Collegamento')),
       h('div.top-fine',
         pillola,

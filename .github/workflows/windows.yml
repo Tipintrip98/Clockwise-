@@ -2,7 +2,7 @@
 # Su un vero Windows: costruisce Clockwise.exe e l'installatore e li prova davvero (avvio, pagine,
 # uscita, installazione e disinstallazione silenziose). I due file restano allegati all'esecuzione.
 # È l'unico posto in cui l'eseguibile gira su Windows prima di arrivare agli utenti.
-# La pubblicazione nella release "windows" (indirizzo di download fisso) NON è automatica:
+# La pubblicazione nella release della versione (v<versione>, file con la versione nel nome) NON è automatica:
 # si chiede a mano da Actions → Windows → Run workflow, spuntando "pubblica".
 name: Windows
 
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       pubblica:
-        description: 'Pubblica l''installatore nella release "windows"'
+        description: 'Pubblica installatore e manuale nella release della versione (v<versione>)'
         type: boolean
         default: false
   push:
@@ -251,10 +251,11 @@ jobs:
             docs/Manuale-Clockwise.pdf
           if-no-files-found: error
 
-  # ---- Solo su richiesta: i due file provati sopra vengono pubblicati nella release "windows":
-  #   https://github.com/<proprietario>/<repository>/releases/download/windows/Clockwise-Setup.exe
+  # ---- Solo su richiesta: i file provati sopra vengono pubblicati nella release della versione, v<versione>,
+  #   con il numero di versione in ogni nome di file (es. Clockwise-Setup-2.0.1.exe) e segnata come «Latest»:
+  #   https://github.com/<proprietario>/<repository>/releases/latest porta sempre all'ultima.
   rilascio:
-    name: Release "windows"
+    name: Release della versione
     needs: pacchetto
     if: github.event_name == 'workflow_dispatch' && inputs.pubblica
     runs-on: windows-latest
@@ -274,39 +275,50 @@ jobs:
           name: clockwise-windows
           path: scaricati
 
-      - name: Release "windows"
+      - name: Release v<versione>
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $ErrorActionPreference = 'Stop'
           $versione = (Get-Content package.json -Raw | ConvertFrom-Json).version
+          $tag = "v$versione"
           # l'archivio dell'esecuzione mantiene le cartelle: exe in dist/windows, manuale in docs
-          New-Item -ItemType Directory -Force 'dist/windows' | Out-Null
-          Get-ChildItem -Recurse 'scaricati' -Filter '*.exe' | Copy-Item -Destination 'dist/windows'
+          $cartella = Join-Path $env:RUNNER_TEMP 'pubblica'
+          New-Item -ItemType Directory -Force $cartella | Out-Null
+          $setup = Get-ChildItem -Recurse 'scaricati' -Filter "Clockwise-Setup-$versione.exe" | Select-Object -First 1
+          $exe = Get-ChildItem -Recurse 'scaricati' -Filter 'Clockwise.exe' | Select-Object -First 1
           $manuale = Get-ChildItem -Recurse 'scaricati' -Filter 'Manuale-Clockwise.pdf' | Select-Object -First 1
-          if (-not $manuale) { throw 'Manuale non trovato tra i file della build' }
-          $setup = Get-ChildItem 'dist/windows/Clockwise-Setup-*.exe' | Select-Object -First 1
-          # copia con nome fisso: l'indirizzo di download non cambia quando cambia la versione
-          Copy-Item $setup.FullName 'dist/windows/Clockwise-Setup.exe'
-          $scarica = "https://github.com/$env:GITHUB_REPOSITORY/releases/download/windows"
+          if (-not $setup -or -not $exe -or -not $manuale) { throw "File mancanti tra quelli della build (installatore $versione, Clockwise.exe, manuale)" }
+          # nomi con la versione: si capisce sempre che cosa si sta scaricando
+          $nomi = @{ setup = "Clockwise-Setup-$versione.exe"; exe = "Clockwise-$versione.exe"; manuale = "Manuale-Clockwise-$versione.pdf" }
+          Copy-Item $setup.FullName (Join-Path $cartella $nomi.setup)
+          Copy-Item $exe.FullName (Join-Path $cartella $nomi.exe)
+          Copy-Item $manuale.FullName (Join-Path $cartella $nomi.manuale)
+          $scarica = "https://github.com/$env:GITHUB_REPOSITORY/releases/download/$tag"
           $note = Join-Path $env:RUNNER_TEMP 'note.md'
           @(
             "Clockwise $versione per Windows 10 e 11 (64 bit), costruito dal commit $env:GITHUB_SHA.",
             '',
-            "- **[Clockwise-Setup.exe]($scarica/Clockwise-Setup.exe)**: l'installatore, quello da scaricare. Non servono i diritti di amministratore.",
-            '- **Clockwise.exe**: il solo programma, senza installazione.',
-            "- **[Manuale-Clockwise.pdf]($scarica/Manuale-Clockwise.pdf)**: istruzioni complete di funzionamento (è incluso anche nell'installazione).",
+            "- **[$($nomi.setup)]($scarica/$($nomi.setup))**: l'installatore, quello da scaricare. Si installa sopra la versione precedente; i dossier restano. Non servono i diritti di amministratore.",
+            "- **[$($nomi.exe)]($scarica/$($nomi.exe))**: il solo programma, senza installazione.",
+            "- **[$($nomi.manuale)]($scarica/$($nomi.manuale))**: istruzioni complete di funzionamento (sono incluse anche nell'installazione).",
+            '',
+            'Per controllare la versione installata: in Clockwise il numero è accanto al nome, in alto a sinistra.',
             '',
             'I file non hanno una firma digitale: al primo avvio Windows mostra «PC protetto da Windows».',
             'Premi **Ulteriori informazioni** e poi **Esegui comunque**. I dettagli sono in `installer/LEGGIMI.md`.'
           ) | Set-Content -Path $note -Encoding utf8
 
-          gh release view windows *> $null
+          # una versione già pubblicata si ripubblica da capo (stesso numero = stessi nomi)
+          gh release view $tag *> $null
           if ($LASTEXITCODE -eq 0) {
-            gh release delete windows --cleanup-tag --yes
-            if ($LASTEXITCODE -ne 0) { throw 'Non riesco a eliminare la release "windows" precedente' }
+            gh release delete $tag --cleanup-tag --yes
+            if ($LASTEXITCODE -ne 0) { throw "Non riesco a sostituire la release $tag" }
           }
-          gh release create windows 'dist/windows/Clockwise-Setup.exe' $setup.FullName 'dist/windows/Clockwise.exe' $manuale.FullName `
-            --target $env:GITHUB_SHA --title "Clockwise $versione per Windows" --notes-file $note --prerelease
+          gh release create $tag (Join-Path $cartella $nomi.setup) (Join-Path $cartella $nomi.exe) (Join-Path $cartella $nomi.manuale) `
+            --target $env:GITHUB_SHA --title "Clockwise $versione per Windows" --notes-file $note --latest
           if ($LASTEXITCODE -ne 0) { throw 'Pubblicazione della release non riuscita' }
-          Write-Host "Pubblicato: $scarica/Clockwise-Setup.exe"
+          # la vecchia release «windows» con i nomi senza versione non si usa più
+          gh release view windows *> $null
+          if ($LASTEXITCODE -eq 0) { gh release delete windows --cleanup-tag --yes }
+          Write-Host "Pubblicato: $scarica/$($nomi.setup)"

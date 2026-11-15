@@ -20,8 +20,8 @@ Opzioni (dopo `--`): `--linux-smoke` mette lo stesso contenuto nel Node di Linux
 
 A ogni push sul ramo di lavoro il workflow `.github/workflows/windows.yml` rifà tutto su un vero Windows e prova l'eseguibile e l'installatore; i due file restano allegati all'esecuzione (Actions → Windows → l'ultima esecuzione → *Artifacts* → `clockwise-windows`).
 
-La pubblicazione non è automatica. Per avere un indirizzo di download fisso da dare agli utenti: Actions → Windows → **Run workflow**, spunta **pubblica**. I file finiscono nella release `windows`:
-`https://github.com/<proprietario>/<repository>/releases/download/windows/Clockwise-Setup.exe`
+La pubblicazione non è automatica: Actions → Windows → **Run workflow**, spunta **pubblica**. I file finiscono nella release della versione, `v<versione>`, con il numero di versione nel nome (`Clockwise-Setup-2.0.1.exe`, `Clockwise-2.0.1.exe`, `Manuale-Clockwise-2.0.1.pdf`), segnata come ultima. Indirizzo da dare agli utenti, che porta sempre all'ultima versione:
+`https://github.com/<proprietario>/<repository>/releases/latest`
 
 File di questa cartella: `clockwise.nsi` (l'installatore), `clockwise.ico` (l'icona; si ridisegna con `node scripts/windows/genera-icona.mjs`).
 

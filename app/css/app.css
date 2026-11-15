@@ -580,3 +580,8 @@ dl.guida dd { margin: 0; color: var(--ink-2); }
 .passi-collegamento > li.attivo > div::before { background: var(--accent); color: var(--accent-ink); }
 .passi-collegamento > li.fatto > div::before { content: "✓"; background: var(--ok); color: #fff; }
 pre.diag { margin: 0; max-height: 360px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-mono); font-size: .78rem; line-height: 1.45; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-s); padding: 12px; }
+
+/* numero di versione accanto al nome, nella barra in alto */
+.brand .versione { font-family: var(--font-body); font-size: .7rem; font-weight: 600; letter-spacing: .02em; padding: 2px 7px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .22); color: rgba(255, 255, 255, .78); font-variant-numeric: tabular-nums; margin-left: 2px; }
+@media print { .brand .versione { color: inherit; border-color: currentColor; } }
+@media (max-width: 1000px) { .brand .versione { display: none; } }

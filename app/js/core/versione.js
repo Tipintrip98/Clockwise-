@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.1',
+  versione: '2.0.2',
   rilascio: '2026-11-15',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,10 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.2', data: '2026-11-15', voci: [
+    'Il numero di versione è accanto al nome, in alto a sinistra, e in tutti i file pubblicati: Clockwise-Setup-2.0.2.exe, Clockwise-2.0.2.exe, Manuale-Clockwise-2.0.2.pdf.',
+    'Ogni versione ha la sua pagina di rilascio su GitHub (v2.0.2); l’indirizzo «releases/latest» porta sempre all’ultima.',
+  ] },
   { versione: '2.0.1', data: '2026-11-15', voci: [
     'Collegamento a Claude in tre passi, senza terminale: «Installa Claude Code» scarica e installa il programma ufficiale di Anthropic, «Accedi» apre la pagina di accesso dell’account, poi Clockwise si collega da solo.',
     'Claude Code viene trovato anche se è stato installato dopo l’avvio del computer e non è nel PATH (registro di Windows, cartella dell’installatore ufficiale, npm, WinGet, app Claude desktop).',

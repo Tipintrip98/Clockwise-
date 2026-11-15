@@ -128,7 +128,7 @@ tr { break-inside: avoid; }
   <h1>Installazione e avvio</h1>
   <h2>Su Windows (consigliato)</h2>
   <ol class="passi">
-    <li>Scarica <code>Clockwise-Setup.exe</code> dalla pagina dei rilasci del progetto su GitHub (sezione 19) oppure dal file ricevuto.</li>
+    <li>Scarica l’installatore <code>Clockwise-Setup-&lt;versione&gt;.exe</code> (per esempio <code>Clockwise-Setup-{{VERSIONE}}.exe</code>) dalla pagina dei rilasci del progetto su GitHub (sezione 19) oppure dal file ricevuto. Il numero nel nome è la versione: la versione installata si legge in Clockwise accanto al nome, in alto a sinistra.</li>
     <li>Fai doppio clic. Se compare «PC protetto da Windows» premi <strong>Ulteriori informazioni</strong> e poi <strong>Esegui comunque</strong>: l’avviso compare finché il programma non è firmato con il certificato della società (sezione 19).</li>
     <li>Premi <strong>Installa</strong>. Non servono i diritti di amministratore: il programma si installa per il tuo utente in <code>%LOCALAPPDATA%\Programs\Clockwise</code> e crea le icone nel menu Start e sul desktop.</li>
     <li>Apri <strong>Clockwise</strong> dal menu Start o dal desktop. Si apre una piccola finestra nera (va lasciata aperta: è il motore del programma) e subito dopo Clockwise nel browser predefinito.</li>
@@ -420,7 +420,7 @@ tr { break-inside: avoid; }
   <h2>Dove trovare il programma</h2>
   <div class="dl">
     <dt>Codice</dt><dd><a href="https://github.com/Tipintrip98/Clockwise-">github.com/Tipintrip98/Clockwise-</a></dd>
-    <dt>Installatore</dt><dd>Pagina dei rilasci del progetto, release «windows»: indirizzo fisso <code>…/releases/download/windows/Clockwise-Setup.exe</code>.</dd>
+    <dt>Installatore</dt><dd>Pagina dei rilasci del progetto: <code>…/releases/latest</code> porta sempre all’ultima versione. Ogni versione ha la sua release, <code>v&lt;versione&gt;</code>, con il numero nei nomi dei file: <code>Clockwise-Setup-&lt;versione&gt;.exe</code>, <code>Clockwise-&lt;versione&gt;.exe</code>, <code>Manuale-Clockwise-&lt;versione&gt;.pdf</code>.</dd>
     <dt>Accesso</dt><dd>Finché il repository è privato, rilasci e download sono visibili solo agli utenti GitHub con accesso al progetto.</dd>
   </div>
   <h2>Comandi</h2>
@@ -437,7 +437,7 @@ tr { break-inside: avoid; }
   <h2>Pubblicare una nuova versione</h2>
   <ol class="passi">
     <li>A ogni aggiornamento del codice GitHub costruisce e prova il pacchetto su un vero Windows (Actions → Windows): test, avvio, installazione e disinstallazione.</li>
-    <li>Per pubblicarlo: Actions → Windows → <strong>Run workflow</strong>, spunta <strong>pubblica</strong>. L’installatore e questo manuale vanno nella release «windows» con indirizzo fisso.</li>
+    <li>Per pubblicarlo: Actions → Windows → <strong>Run workflow</strong>, spunta <strong>pubblica</strong>. Installatore, programma e manuale vanno nella release della versione (<code>v&lt;versione&gt;</code>), con la versione nei nomi dei file, segnata come ultima.</li>
   </ol>
   <h2>Firma digitale</h2>
   <p>Con un certificato di firma del codice intestato alla società (rilasciato da un’autorità riconosciuta) Windows mostra l’editore e smette di bloccare l’installazione. Il pacchetto si firma da solo: basta inserire in GitHub → Settings → Secrets and variables → Actions i segreti <code>WINDOWS_CERT_PFX_BASE64</code> e <code>WINDOWS_CERT_PASSWORD</code>. Per certificati su token USB o in cloud si usa <code>CLOCKWISE_FIRMA_COMANDO</code> (vedi <code>scripts/windows/firma.mjs</code>). Un certificato autofirmato vale solo sui computer dove viene installato a mano.</p>
