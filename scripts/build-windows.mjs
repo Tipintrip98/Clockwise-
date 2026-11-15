@@ -8,6 +8,10 @@
 //   npm run build:windows -- --senza-installer solo Clockwise.exe
 //   npm run build:windows -- --installer-obbligatorio   errore se manca makensis (predefinito su Windows)
 //   npm run build:windows -- --senza-risorse   non tocca icona e proprietà del file .exe
+//   npm run build:windows -- --richiedi-firma  errore se non è configurato un certificato di firma
+//
+// Firma digitale: se è configurato un certificato (vedi scripts/windows/firma.mjs) vengono firmati
+// Clockwise.exe, il disinstallatore e l'installatore. Senza certificato i file restano non firmati.
 //
 // Passi: 1) esbuild riunisce server/eseguibile.js in un solo CommonJS; 2) i file di app/ diventano
 // asset SEA; 3) `node --experimental-sea-config` crea il blob; 4) il blob viene iniettato con postject
@@ -24,12 +28,13 @@ import crypto from 'node:crypto';
 import { spawn, spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
+import { firma, firmaAttiva, leggiFirma, configurazioneFirma } from './windows/firma.mjs';
 
 const require = createRequire(import.meta.url);
 const radice = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const WIN = process.platform === 'win32';
 const opzioni = new Set(process.argv.slice(2));
-const OPZIONI_NOTE = ['--linux-smoke', '--senza-installer', '--installer-obbligatorio', '--senza-risorse'];
+const OPZIONI_NOTE = ['--richiedi-firma', '--linux-smoke', '--senza-installer', '--installer-obbligatorio', '--senza-risorse'];
 for (const o of opzioni) if (!OPZIONI_NOTE.includes(o)) { console.error(`Opzione sconosciuta: ${o}\nOpzioni: ${OPZIONI_NOTE.join(' ')}`); process.exit(2); }
 
 const pacchetto = JSON.parse(fs.readFileSync(path.join(radice, 'package.json'), 'utf8'));
@@ -300,6 +305,17 @@ async function creaExe(nodeExe, blob) {
   if (!pe || !pe.fusibileAttivo) errore('Clockwise.exe non è un eseguibile Windows valido con il contenuto SEA attivo.');
   if (pe.struttura) errore(`Clockwise.exe ha una struttura che Windows rifiuterebbe: ${pe.struttura}. Riprova con --senza-risorse.`);
   nota(`${rel(fileExe)} — ${mb(fileExe)} — ${pe.formato} ${pe.architettura}, ${pe.sottosistema}, ${pe.firma ? 'firma di node.exe presente ma non più valida' : 'senza firma digitale'}`);
+  firmaFile(fileExe);
+}
+
+// ---------------------------------------------------------------- firma digitale
+function firmaFile(file) {
+  if (!firmaAttiva()) return false;
+  try { nota(`${path.basename(file)}: ${firma(file)}`); } catch (e) { errore(`Firma di ${path.basename(file)} non riuscita: ${e.message}`); }
+  const f = leggiFirma(file);
+  if (!f.presente) errore(`Dopo la firma ${path.basename(file)} non risulta firmato.`);
+  nota(`  firma presente${f.firmatario ? ` — ${f.firmatario}` : ''}${f.marcaTemporale ? ', con marca temporale' : ''}`);
+  return true;
 }
 
 // ---------------------------------------------------------------- 6. installatore NSIS
@@ -329,9 +345,12 @@ function creaInstallatore(licenzaNode) {
   fs.rmSync(fileSetup, { force: true });
   const definizioni = { VERSIONE: versione, VERSIONE_NUMERICA: versioneNumerica, ESEGUIBILE: fileExe, ICONA: fileIcona, USCITA: fileSetup };
   if (licenzaNode) definizioni.LICENZA_NODE = licenzaNode;
+  // il disinstallatore si firma mentre makensis lo crea (!uninstfinalize), con lo stesso script
+  if (firmaAttiva()) { definizioni.FIRMA_NODE = process.execPath; definizioni.FIRMA_SCRIPT = path.join(radice, 'scripts', 'windows', 'firma.mjs'); }
   esegui(nsis.comando, ['-V2', '-INPUTCHARSET', 'UTF8', ...Object.entries(definizioni).map(([k, v]) => `-D${k}=${v}`), path.join(radice, 'installer', 'clockwise.nsi')]);
   if (!fs.existsSync(fileSetup)) errore('makensis non ha prodotto l’installatore.');
   nota(`${rel(fileSetup)} — ${mb(fileSetup)} (NSIS ${nsis.versione})`);
+  firmaFile(fileSetup);
   return true;
 }
 
@@ -425,6 +444,8 @@ async function principale() {
   console.log(`Clockwise ${versione} — pacchetto per Windows (build su ${process.platform} ${process.arch}, node ${process.version})`);
   if (!fs.existsSync(fileIcona)) errore('Manca installer/clockwise.ico (si rigenera con: node scripts/windows/genera-icona.mjs).');
   if (opzioni.has('--linux-smoke') && process.platform !== 'linux') errore('--linux-smoke funziona solo su Linux.');
+  if (opzioni.has('--richiedi-firma') && !firmaAttiva()) errore('--richiedi-firma: nessun certificato configurato (CLOCKWISE_FIRMA_PFX, CLOCKWISE_FIRMA_PFX_BASE64 o CLOCKWISE_FIRMA_COMANDO).');
+  nota(firmaAttiva() ? `firma digitale: attiva (${configurazioneFirma().modo === 'comando' ? 'comando configurato' : 'certificato .pfx'})` : 'firma digitale: nessun certificato configurato, i file non saranno firmati');
   fs.rmSync(lavoro, { recursive: true, force: true });
   fs.mkdirSync(lavoro, { recursive: true });
   for (const f of fs.readdirSync(uscita)) if (/^Clockwise(-Setup-.*)?\.exe$/.test(f)) fs.rmSync(path.join(uscita, f));

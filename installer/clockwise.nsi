@@ -30,6 +30,11 @@ SetCompressor /SOLID lzma
   !error "Manca -DUSCITA (percorso dell'installatore da creare)"
 !endif
 
+; Firma del disinstallatore: build-windows.mjs passa -DFIRMA_NODE e -DFIRMA_SCRIPT solo se c'è un certificato.
+!ifdef FIRMA_NODE
+  !uninstfinalize '"${FIRMA_NODE}" "${FIRMA_SCRIPT}" "%1"' = 0
+!endif
+
 !define NOME "Clockwise"
 !define EDITORE "Davide Tipaldi"
 !define DESCRIZIONE "Clockwise — simulatore di punteggio bandi cinema"

@@ -45,6 +45,16 @@ Per chi usa Windows c'è il **programma di installazione** `Clockwise-Setup-<ver
 
 Il pacchetto si genera con `npm run build:windows` e, a ogni aggiornamento del repository, viene costruito e provato su un vero Windows dal flusso automatico `.github/workflows/windows.yml`: i file restano allegati all'esecuzione, e si pubblicano tra i rilasci solo su richiesta (Actions → Windows → Run workflow → *pubblica*). Dettagli, limiti e avvisi di Windows (SmartScreen) sono in [`installer/LEGGIMI.md`](installer/LEGGIMI.md).
 
+### Firma digitale dell'eseguibile
+
+Senza firma Windows mostra «Editore sconosciuto» e SmartScreen blocca il primo avvio. Il pacchetto è già pronto per essere firmato: eseguibile, disinstallatore e installatore si firmano da soli appena è configurato un certificato di **firma del codice** (Authenticode) rilasciato da un'autorità riconosciuta e intestato alla società.
+
+1. Procurarsi il certificato a nome della società (verifica dell'identità da parte dell'autorità). Dal 2023 la chiave privata sta su un dispositivo sicuro (token USB) o in un servizio di firma in cloud.
+2. Nella CI: in GitHub → Settings → Secrets and variables → Actions aggiungere `WINDOWS_CERT_PFX_BASE64` (il file .pfx in base64) e `WINDOWS_CERT_PASSWORD`. Dalla build successiva i file sono firmati e la CI controlla che la firma sia valida e con marca temporale.
+3. In locale: `CLOCKWISE_FIRMA_PFX=certificato.pfx CLOCKWISE_FIRMA_PASSWORD=… npm run build:windows -- --richiedi-firma`. Per token USB o firma in cloud: `CLOCKWISE_FIRMA_COMANDO='<comando che firma {file}>'`. Dettagli in `scripts/windows/firma.mjs`.
+
+Un certificato fatto in casa (autofirmato) non toglie l'avviso sui computer degli altri: vale solo dove viene installato a mano tra i certificati attendibili, per esempio sui PC della società. Anche con un certificato riconosciuto SmartScreen può avvisare per le prime settimane, finché il certificato non acquista reputazione.
+
 ## Avvio da sorgente
 
 Serve [Node.js](https://nodejs.org) 20 o successivo.

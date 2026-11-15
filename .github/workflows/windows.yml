@@ -73,7 +73,12 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw 'Installazione di NSIS non riuscita' }
           }
 
+      # Firma digitale: attiva solo se nei segreti del repository c'è il certificato
+      # (Settings → Secrets and variables → Actions): WINDOWS_CERT_PFX_BASE64 e WINDOWS_CERT_PASSWORD.
       - name: Build (Clockwise.exe + installatore)
+        env:
+          CLOCKWISE_FIRMA_PFX_BASE64: ${{ secrets.WINDOWS_CERT_PFX_BASE64 }}
+          CLOCKWISE_FIRMA_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
         run: npm run build:windows
 
       # ---- Prova 1: l'eseguibile parte, serve l'interfaccia incorporata e si chiude su richiesta
@@ -155,6 +160,51 @@ jobs:
           if (Test-Path $menu) { throw 'Dopo la disinstallazione resta il collegamento nel menu Start' }
           if (Test-Path $chiave) { throw 'Dopo la disinstallazione resta la voce in "App installate"' }
           Write-Host 'Installatore: installazione e disinstallazione silenziose a posto'
+
+      # ---- Prova 3: firma digitale.
+      # Con il certificato vero: Clockwise.exe e installatore devono risultare firmati e validi.
+      # Senza: si firma una copia con un certificato di prova usa e getta, per dimostrare che la firma
+      # non rompe l'eseguibile (i file allegati restano quelli non firmati).
+      - name: Prova della firma
+        env:
+          CLOCKWISE_NO_BROWSER: '1'
+          HA_CERTIFICATO: ${{ secrets.WINDOWS_CERT_PFX_BASE64 != '' }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:HA_CERTIFICATO -eq 'true') {
+            foreach ($f in (Get-Item 'dist/windows/Clockwise.exe'), (Get-ChildItem 'dist/windows/Clockwise-Setup-*.exe' | Select-Object -First 1)) {
+              $s = Get-AuthenticodeSignature -LiteralPath $f.FullName
+              Write-Host "$($f.Name): $($s.Status) — $($s.SignerCertificate.Subject)"
+              if ($s.Status -ne 'Valid') { throw "$($f.Name): firma non valida ($($s.Status))" }
+              if (-not $s.TimeStamperCertificate) { throw "$($f.Name): manca la marca temporale" }
+            }
+            Write-Host 'Firma digitale: valida su eseguibile e installatore'
+            exit 0
+          }
+          $cartella = Join-Path $env:RUNNER_TEMP 'firma-prova'
+          New-Item -ItemType Directory -Force $cartella | Out-Null
+          $cert = New-SelfSignedCertificate -Subject 'CN=Clockwise prova CI' -Type CodeSigningCert -CertStoreLocation Cert:\CurrentUser\My
+          $pwd = ConvertTo-SecureString -String 'prova-ci' -Force -AsPlainText
+          Export-PfxCertificate -Cert $cert -FilePath "$cartella\prova.pfx" -Password $pwd | Out-Null
+          Copy-Item 'dist/windows/Clockwise.exe' "$cartella\Clockwise.exe"
+          $env:CLOCKWISE_FIRMA_PFX = "$cartella\prova.pfx"; $env:CLOCKWISE_FIRMA_PASSWORD = 'prova-ci'
+          node scripts/windows/firma.mjs "$cartella\Clockwise.exe"
+          if ($LASTEXITCODE -ne 0) { throw 'firma.mjs non è riuscito a firmare la copia' }
+          $s = Get-AuthenticodeSignature -LiteralPath "$cartella\Clockwise.exe"
+          if (-not $s.SignerCertificate) { throw 'La copia firmata non risulta firmata' }
+          Write-Host "Copia firmata: $($s.Status) — $($s.SignerCertificate.Subject) (certificato di prova, non riconosciuto: atteso)"
+          $env:CLOCKWISE_DATA = Join-Path $env:RUNNER_TEMP 'clockwise-dati-firma'
+          $env:PORT = '5767'
+          $p = Start-Process -FilePath "$cartella\Clockwise.exe" -PassThru -NoNewWindow
+          try {
+            $stato = $null; $limite = (Get-Date).AddSeconds(30)
+            while (-not $stato -and -not $p.HasExited -and (Get-Date) -lt $limite) { try { $stato = Invoke-RestMethod 'http://127.0.0.1:5767/api/stato' -TimeoutSec 5 } catch { Start-Sleep -Milliseconds 500 } }
+            if (-not $stato) { throw "L'eseguibile firmato non risponde" }
+            Invoke-RestMethod 'http://127.0.0.1:5767/api/esci' -Method Post | Out-Null
+            if (-not $p.WaitForExit(15000)) { throw "L'eseguibile firmato non si chiude" }
+            Write-Host "Eseguibile firmato: avvio e uscita a posto (versione $($stato.versione))"
+          } finally { if (-not $p.HasExited) { $p.Kill() } }
+          Remove-Item -LiteralPath $cert.PSPath
 
       # ---- I due file restano allegati a questa esecuzione
       - name: File allegati all'esecuzione
