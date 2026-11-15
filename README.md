@@ -1,5 +1,7 @@
 # Clockwise — controllo qualità dei dossier per i bandi cinema
 
+**Manuale d’uso completo:** [`docs/Manuale-Clockwise.pdf`](docs/Manuale-Clockwise.pdf) (incluso anche nell’installazione per Windows). Si rigenera con `node scripts/genera-manuale.mjs` da `docs/manuale/manuale.html`.
+
 Clockwise legge il dossier di candidatura a un bando pubblico per il cinema e l'audiovisivo e stima il punteggio che la Commissione gli darebbe, criterio per criterio, **prima dell'invio**. Serve come controllo qualità: mostra dove si perdono punti, che cosa manca per essere ammessi e che cosa sistemare. Attorno alla stima ha gli strumenti per tutta la vita del progetto: produzione, finanza, gestione del bando dopo la concessione, area legale.
 
 ## Il catalogo dei bandi

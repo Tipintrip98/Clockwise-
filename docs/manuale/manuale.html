@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Clockwise 2.0 — Manuale d’uso</title>
+<style>
+@font-face { font-family: "Inter"; src: url("../../app/vendor/fonts/inter-latin-opsz-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "Inter"; src: url("../../app/vendor/fonts/inter-latin-ext-opsz-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@page { size: A4; margin: 18mm 17mm 20mm; }
+:root { --blu: #2E48E9; --inchiostro: #121B25; --grigio: #566473; --linea: #D9DFE7; --fondo: #F3F5F9; --ambra: #B87503; --verde: #137838; --rosso: #B32E26; }
+* { box-sizing: border-box; }
+html { font-family: "Inter", system-ui, sans-serif; font-size: 10.2pt; line-height: 1.5; color: var(--inchiostro); font-feature-settings: "tnum" 1, "cv11" 1; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; }
+h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.012em; margin: 0; break-after: avoid; }
+h1 { font-size: 22pt; font-weight: 750; margin-bottom: 6mm; }
+h2 { font-size: 13.5pt; font-weight: 700; margin: 7mm 0 2.5mm; }
+h3 { font-size: 11pt; font-weight: 650; margin: 5mm 0 1.5mm; }
+p { margin: 0 0 2.6mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5.5mm; }
+li { margin-bottom: 1.1mm; }
+a { color: var(--blu); text-decoration: none; }
+strong { font-weight: 650; }
+code, .k { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .88em; background: var(--fondo); border: 1px solid var(--linea); border-radius: 3px; padding: 0 1.2mm; }
+.capitolo { break-before: page; }
+.occhiello { font-size: 8pt; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--blu); margin-bottom: 2mm; }
+.nota, .attenzione, .passo { border-radius: 2.5mm; padding: 3mm 4mm; margin: 3mm 0 4mm; break-inside: avoid; }
+.nota { background: #EEF1FD; border-left: 1.2mm solid var(--blu); }
+.attenzione { background: #FBF1DD; border-left: 1.2mm solid var(--ambra); }
+.nota p:last-child, .attenzione p:last-child { margin-bottom: 0; }
+figure { margin: 3mm 0 5mm; break-inside: avoid; }
+figure img { width: 100%; border: 1px solid var(--linea); border-radius: 2mm; display: block; }
+figcaption { font-size: 8.4pt; color: var(--grigio); margin-top: 1.5mm; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 5mm; font-size: 8.8pt; break-inside: auto; }
+th, td { text-align: left; vertical-align: top; padding: 1.6mm 2mm; border-bottom: 1px solid var(--linea); }
+th { font-size: 7.6pt; letter-spacing: .06em; text-transform: uppercase; color: var(--grigio); font-weight: 650; background: var(--fondo); }
+tr { break-inside: avoid; }
+.tasti { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
+/* copertina */
+.copertina { height: 257mm; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(160deg, #0E1424 0%, #17224A 60%, #2E48E9 140%); color: #fff; margin: -18mm -17mm 0; padding: 26mm 22mm 22mm; }
+.copertina .marchio { display: flex; align-items: center; gap: 5mm; font-size: 20pt; font-weight: 750; letter-spacing: -.02em; }
+.copertina .marchio svg { width: 15mm; height: 15mm; }
+.copertina h1 { font-size: 34pt; margin: 0 0 4mm; font-weight: 780; letter-spacing: -.025em; }
+.copertina .sotto { font-size: 13pt; color: #C9D3FF; max-width: 130mm; }
+.copertina .piede { font-size: 9.5pt; color: #AEB9E4; display: grid; gap: 1mm; }
+.indice ol { list-style: none; padding: 0; columns: 2; column-gap: 10mm; }
+.indice li { padding: 1.4mm 0; border-bottom: 1px solid var(--linea); break-inside: avoid; }
+.indice li span { color: var(--grigio); display: inline-block; width: 8mm; font-weight: 600; }
+.passi { counter-reset: n; list-style: none; padding: 0; }
+.passi > li { counter-increment: n; position: relative; padding-left: 9mm; margin-bottom: 2.4mm; }
+.passi > li::before { content: counter(n); position: absolute; left: 0; top: .1mm; width: 5.6mm; height: 5.6mm; border-radius: 50%; background: var(--blu); color: #fff; font-size: 8pt; font-weight: 700; display: grid; place-items: center; }
+.dl { display: grid; grid-template-columns: 38mm 1fr; gap: 1.6mm 5mm; margin: 2mm 0 4mm; }
+.dl dt { font-weight: 650; }
+.dl dd { margin: 0; }
+.piccolo { font-size: 8.6pt; color: var(--grigio); }
+</style>
+</head>
+<body>
+
+<section class="copertina">
+  <div class="marchio">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#2E48E9"/><path d="M6.3 16.6A7.4 7.4 0 1 1 17.7 16.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M12 12l3.5-3.8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="12" r="1.6" fill="#fff"/></svg>
+    Clockwise
+  </div>
+  <div>
+    <h1>Manuale d’uso</h1>
+    <p class="sotto">Il simulatore del punteggio dei bandi cinema: dalla scelta del bando al dossier pronto per l’invio, fino al rendiconto dopo la concessione.</p>
+  </div>
+  <div class="piede">
+    <div><strong style="color:#fff">Versione {{VERSIONE}}</strong> · {{DATA}}</div>
+    <div>Ideazione, direzione del progetto e sviluppo: Davide Tipaldi · davidetipaldi.it</div>
+    <div>Uso interno e per i produttori che presentano domanda ai bandi pubblici per il cinema e l’audiovisivo.</div>
+  </div>
+</section>
+
+<section class="capitolo indice">
+  <h1>Indice</h1>
+  <ol>
+    <li><span>1</span>Che cos’è Clockwise</li>
+    <li><span>2</span>Installazione e avvio</li>
+    <li><span>3</span>Collegare Claude</li>
+    <li><span>4</span>Primo avvio e scelta del bando</li>
+    <li><span>5</span>Il dossier e il cruscotto</li>
+    <li><span>6</span>Passo 1 — Documenti</li>
+    <li><span>7</span>Passo 2 — Dati chiave</li>
+    <li><span>8</span>Passo 3 — Valutazione</li>
+    <li><span>9</span>Passo 4 — Report</li>
+    <li><span>10</span>Produzione</li>
+    <li><span>11</span>Finanza</li>
+    <li><span>12</span>Gestione bando</li>
+    <li><span>13</span>Legale</li>
+    <li><span>14</span>Il catalogo dei bandi</li>
+    <li><span>15</span>Aggiornamenti automatici</li>
+    <li><span>16</span>Dati e riservatezza</li>
+    <li><span>17</span>Limiti da conoscere</li>
+    <li><span>18</span>Problemi comuni</li>
+    <li><span>19</span>Per chi gestisce il programma</li>
+    <li><span>A</span>Elenco dei bandi</li>
+  </ol>
+  <div class="nota"><p><strong>Come leggere questo manuale.</strong> I capitoli 2-9 seguono l’ordine in cui si lavora a una candidatura: installare, collegare Claude, scegliere il bando, caricare i documenti, controllare i numeri, far valutare il dossier, leggere il report. I capitoli 10-13 descrivono gli strumenti di lavoro; i capitoli 14-19 il catalogo dei bandi, la riservatezza, i limiti e la manutenzione.</p></div>
+</section>
+
+<!-- 1 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 1</div>
+  <h1>Che cos’è Clockwise</h1>
+  <p>Clockwise legge il dossier di candidatura a un bando pubblico per il cinema e l’audiovisivo e stima il punteggio che la Commissione gli darebbe, <strong>criterio per criterio e prima dell’invio</strong>. È un controllo qualità: mostra dove si perdono punti, che cosa manca per essere ammessi e che cosa conviene sistemare, con il guadagno atteso di ogni intervento.</p>
+  <p>Attorno alla stima ci sono gli strumenti per tutta la vita del progetto:</p>
+  <ul>
+    <li><strong>Produzione</strong>: spoglio della sceneggiatura, piano di lavorazione, ordine del giorno, storyboard, preventivo, adempimenti;</li>
+    <li><strong>Finanza</strong>: piano finanziario, limite degli aiuti pubblici, tax credit, piano di cassa, recupero dei ricavi;</li>
+    <li><strong>Gestione bando</strong>: scadenze dopo la concessione, quote di erogazione, registro delle spese, rendiconto;</li>
+    <li><strong>Legale</strong>: domande sul bando con gli articoli citati, analisi dei contratti, bozze di documenti.</li>
+  </ul>
+  <h2>Come nasce il punteggio</h2>
+  <div class="dl">
+    <dt>Criteri numerici</dt><dd>Giorni di lavorazione sul territorio, professionisti locali, spesa, copertura finanziaria: li calcola il programma applicando le fasce scritte nel bando. Stessi numeri, stesso risultato, senza intelligenza artificiale.</dd>
+    <dt>Criteri di giudizio</dt><dd>Qualità della sceneggiatura, curriculum, piano finanziario e distributivo: li valuta Claude nel ruolo di più commissari con profili diversi (sceneggiatura, produzione, territorio, presidente, distribuzione). Il punteggio è la media, come nella Commissione vera.</dd>
+    <dt>Due letture</dt><dd>Per ogni criterio di giudizio c’è il <strong>punteggio atteso</strong> (quello che la Commissione darebbe secondo il metro dei punteggi reali) e la <strong>lettura rigorosa</strong> (solo ciò che è provato da documenti firmati). La differenza è il rischio documentale.</dd>
+    <dt>Motore di ragionamento</dt><dd>Regole ricavate dalla prova su un dossier reale fissano per ogni criterio una fascia attesa e una rigorosa; dopo la valutazione il report segnala dove i commissari simulati escono dalla fascia.</dd>
+    <dt>Soglie</dt><dd>Quelle del bando scelto: punteggio complessivo minimo, minimi di sezione, minimi su gruppi di criteri, penalità.</dd>
+  </div>
+  <div class="attenzione"><p><strong>È una stima.</strong> Aiuta a trovare i punti deboli del dossier; non anticipa né vincola il giudizio della Commissione e non sostituisce il parere di un consulente.</p></div>
+</section>
+
+<!-- 2 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 2</div>
+  <h1>Installazione e avvio</h1>
+  <h2>Su Windows (consigliato)</h2>
+  <ol class="passi">
+    <li>Scarica <code>Clockwise-Setup.exe</code> dalla pagina dei rilasci del progetto su GitHub (sezione 19) oppure dal file ricevuto.</li>
+    <li>Fai doppio clic. Se compare «PC protetto da Windows» premi <strong>Ulteriori informazioni</strong> e poi <strong>Esegui comunque</strong>: l’avviso compare finché il programma non è firmato con il certificato della società (sezione 19).</li>
+    <li>Premi <strong>Installa</strong>. Non servono i diritti di amministratore: il programma si installa per il tuo utente in <code>%LOCALAPPDATA%\Programs\Clockwise</code> e crea le icone nel menu Start e sul desktop.</li>
+    <li>Apri <strong>Clockwise</strong> dal menu Start o dal desktop. Si apre una piccola finestra nera (va lasciata aperta: è il motore del programma) e subito dopo Clockwise nel browser predefinito.</li>
+  </ol>
+  <div class="dl">
+    <dt>Chiudere</dt><dd>Pulsante <strong>Esci</strong> nella barra in alto, oppure chiudendo la finestra nera.</dd>
+    <dt>Aggiornare</dt><dd>Installa la nuova versione sopra la vecchia: i dossier restano.</dd>
+    <dt>Disinstallare</dt><dd>Impostazioni di Windows → App → App installate → Clockwise → Disinstalla.</dd>
+    <dt>Senza installazione</dt><dd><code>Clockwise.exe</code> funziona anche da solo, con un doppio clic.</dd>
+  </div>
+  <h2>Nell’app Claude</h2>
+  <p>La stessa interfaccia è pubblicata come pagina nell’app Claude: si apre dal link ricevuto e usa l’account Claude di chi la apre, senza installare nulla. Nell’app ogni lettura è limitata a circa 250.000 caratteri (le sceneggiature lunghe vengono lette in più parti) e la lettura delle scansioni dipende dal permesso di inviare immagini.</p>
+  <h2>Da sorgente (per sviluppatori)</h2>
+  <p>Serve Node.js 20 o successivo: <code>npm install</code> e poi <code>npm start</code>, quindi si apre <code>http://localhost:5757</code>.</p>
+</section>
+
+<!-- 3 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 3</div>
+  <h1>Collegare Claude</h1>
+  <p>I documenti li legge Claude. Lo stato del collegamento è sempre visibile nella pillola in alto a destra (punto verde = collegato). Toccala, o apri <strong>Collegamento</strong>, per scegliere come collegarti.</p>
+  <figure><img src="img/16-collegamento.jpg" alt="Pagina Collegamento"><figcaption>La pagina Collegamento: account Claude, chiave API e impostazioni di lettura.</figcaption></figure>
+  <div class="dl">
+    <dt>Account Claude</dt><dd>Usa l’abbonamento Claude attraverso Claude Code installato sul computer. Se manca, la pagina indica il comando per installarlo e per fare l’accesso; poi si preme <strong>Ricontrolla</strong>.</dd>
+    <dt>Chiave API Anthropic</dt><dd>Si incolla la chiave (inizia con <code>sk-ant-</code>): viene verificata e salvata sul computer, leggibile solo dal tuo utente. Le letture sono a consumo sul conto API.</dd>
+    <dt>Come deve leggere Claude</dt><dd>Modello (il più capace per la stima da usare prima dell’invio; uno più rapido per le prove), livello di approfondimento e numero di commissari (uno per una prova veloce, tre per la stima da usare, cinque per la massima solidità).</dd>
+  </div>
+  <div class="nota"><p>I criteri che dipendono dai numeri (giorni, professionisti, spesa, copertura) si calcolano <strong>anche senza Claude</strong>: il cruscotto mostra comunque una stima statistica e una stima dalle regole.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 4</div>
+  <h1>Primo avvio e scelta del bando</h1>
+  <p>Al primo avvio una breve guida a comparsa mostra dove sono le cose e propone di scegliere il bando con cui lavorerai di solito. La guida si può saltare e rivedere quando vuoi da <strong>Aiuto → Rivedi la guida iniziale</strong>. La prima volta che apri ogni scheda compare anche un suggerimento con <strong>Ho capito</strong>.</p>
+  <figure><img src="img/03-scelta-bando.jpg" alt="Quale bando vuoi simulare?"><figcaption>«Quale bando vuoi simulare?»: elenco dei bandi per regione, con stato, scadenza e tipo di valutazione.</figcaption></figure>
+  <h2>Creare un dossier</h2>
+  <ol class="passi">
+    <li>Nell’elenco <strong>I tuoi dossier</strong> premi <strong>+ Nuovo dossier</strong>.</li>
+    <li><strong>Bando</strong>: cerca per regione o per nome, filtra «Aperti adesso» o «Con griglia a punti». Ogni voce dice se il bando è aperto, quando scade o quando è attesa la prossima edizione, e se è <strong>Simulabile</strong>. Le schede «Solo scheda informativa» non hanno una griglia a punti verificata: il programma spiega perché e quali alternative ci sono.</li>
+    <li><strong>Categoria e anno</strong>: per ogni categoria vedi contributo massimo (percentuale e tetto), dotazione e punteggi minimi. L’anno si sceglie tra le finestre note e l’edizione successiva attesa, marcata «prevista»: in quel caso vale la griglia dell’ultima edizione finché non esce il nuovo avviso.</li>
+    <li><strong>Dossier</strong>: dai un nome e conferma. Con «Usa questo bando per i prossimi dossier» il bando diventa quello proposto di solito.</li>
+  </ol>
+  <figure><img src="img/04-scelta-categoria.jpg" alt="Categoria e anno"><figcaption>Secondo passo: categoria dell’opera e anno della finestra.</figcaption></figure>
+  <p>Bando, categoria e finestra si possono cambiare in ogni momento dall’intestazione del dossier; se il dossier ha già una valutazione, il programma chiede conferma perché la valutazione va rifatta sul nuovo bando.</p>
+  <div class="nota"><p><strong>Dossier d’esempio.</strong> Nell’elenco c’è «Esempio — L’ultima tonnara», con numeri d’invenzione: serve a vedere subito come lavora il simulatore. Si può modificare o eliminare.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 5</div>
+  <h1>Il dossier e il cruscotto</h1>
+  <p>Ogni candidatura ha il suo dossier, salvato sul tuo dispositivo. In alto ci sono bando, categoria e finestra; sotto le schede: <strong>Cruscotto</strong>, i quattro passi numerati (<strong>Documenti, Dati chiave, Valutazione, Report</strong>) e gli strumenti (<strong>Produzione, Finanza, Gestione bando, Legale</strong>).</p>
+  <figure><img src="img/05-cruscotto.jpg" alt="Cruscotto"><figcaption>Il cruscotto: semaforo, punteggio stimato, finestra del bando e i quattro passi.</figcaption></figure>
+  <div class="dl">
+    <dt>Semaforo</dt><dd><strong>Rosso</strong>: almeno un problema rende l’istanza irricevibile o sotto soglia. <strong>Giallo</strong>: nessun blocco, ma restano cose da sistemare. <strong>Verde</strong>: pronto per l’invio.</dd>
+    <dt>Prossimo passo</dt><dd>Il pulsante principale porta all’azione più utile in quel momento.</dd>
+    <dt>Da sistemare</dt><dd>Problemi in ordine di gravità, ognuno con il pulsante che porta al punto in cui correggerlo.</dd>
+    <dt>Previsione</dt><dd>Prima della lettura di Claude il dossier viene completato con i punteggi che la Commissione ha dato davvero ai progetti delle ultime finestre (dove le graduatorie sono pubbliche): scenari prudente, atteso e favorevole, e in quanti casi reali il dossier sarebbe ammissibile.</dd>
+    <dt>Stima dalle regole</dt><dd>La previsione del motore di ragionamento, calcolata senza Claude dai fatti del dossier.</dd>
+    <dt>Dove conviene presentare</dt><dd>Lo stesso progetto confrontato sugli altri bandi: contributo ottenibile, punti dai numeri, profilo di ciascun bando e pulsante per creare un dossier gemello.</dd>
+    <dt>Invio</dt><dd>PEC o piattaforma, oggetto del messaggio da copiare, regole di invio ed elenco dei file da allegare.</dd>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 6</div>
+  <h1>Passo 1 — Documenti</h1>
+  <p>Trascina nel riquadro tutti i file della candidatura insieme: moduli di domanda, sceneggiatura o trattamento, curriculum, contratti, deal memo, lettere di intento, piano finanziario. Formati: PDF, DOCX, XLS/XLSX, TXT, immagini.</p>
+  <figure><img src="img/06-documenti.jpg" alt="Documenti"><figcaption>La scheda Documenti con l’elenco degli allegati previsti dal bando.</figcaption></figure>
+  <ul>
+    <li><strong>Tipo di documento</strong>: viene riconosciuto dal nome del file; se è sbagliato lo correggi nella tabella. Il tipo decide quali criteri lo leggono.</li>
+    <li><strong>Allegati previsti dal bando</strong>: l’elenco segna in rosso gli obbligatori mancanti (senza, l’istanza è irricevibile) e in giallo quelli che portano punti.</li>
+    <li><strong>Modulo III della Sicilia</strong> (.xls): compila da solo i Dati chiave. Per gli altri bandi i dati si inseriscono a mano o si fanno estrarre da Claude.</li>
+    <li><strong>Scansioni</strong>: i PDF senza testo e le fotografie vengono letti da Claude come immagini con il pulsante <strong>Leggi le scansioni con Claude</strong>, segnalando firme e timbri. La trascrizione va controllata sull’originale per importi, date e firme. Dopo aver riaperto la pagina, per leggere una scansione serve trascinare di nuovo il file.</li>
+    <li><strong>Documento d’identità</strong>: non viene mai letto né inviato a Claude.</li>
+  </ul>
+  <div class="attenzione"><p>Il vecchio formato Word <code>.doc</code> non è leggibile: salvalo in PDF o DOCX.</p></div>
+</section>
+
+<!-- 7 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 7</div>
+  <h1>Passo 2 — Dati chiave</h1>
+  <p>Qui stanno i numeri da cui dipendono i criteri calcolati e i controlli di ammissibilità. A destra vedi subito i punti che ne derivano e quanto vale salire di fascia.</p>
+  <figure><img src="img/07-dati.jpg" alt="Dati chiave"><figcaption>Dati chiave: a sinistra i numeri, a destra i punti calcolati in tempo reale.</figcaption></figure>
+  <div class="dl">
+    <dt>Opera</dt><dd>Titolo, tipologia, durata, animazione.</dd>
+    <dt>Giorni</dt><dd>Pre-produzione, riprese e post-produzione: totali e svolti nel territorio del bando.</dd>
+    <dt>Professionisti</dt><dd>Componente artistica e cast tecnico: totali e nati o residenti nel territorio (figuranti e comparse esclusi).</dd>
+    <dt>Economici</dt><dd>Costo di produzione, costo ammissibile, contributo richiesto, spesa nel territorio, producer fee.</dd>
+    <dt>Piano finanziario</dt><dd>Una riga per fonte, con il documento che la sostiene (contratto, deal memo, delibera, referenze bancarie, nessuno). La copertura documentata si calcola sul costo al netto del contributo richiesto.</dd>
+    <dt>Requisiti</dt><dd>I requisiti che il programma non può dedurre dai numeri (iscrizioni, regolarità, ATECO…) si spuntano a mano.</dd>
+  </div>
+  <p>Se mancano i moduli in Excel, <strong>Compila con Claude dai documenti caricati</strong> li ricava dai documenti caricati: controlla sempre il risultato. Puoi cambiare un numero per vedere quanto vale salire di fascia: i file originali non vengono toccati.</p>
+</section>
+
+<!-- 8 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 8</div>
+  <h1>Passo 3 — Valutazione</h1>
+  <p>Claude legge i documenti come farebbero i commissari: una lettura per ogni sezione della griglia con criteri di giudizio, per ciascun commissario, più una verifica formale del dossier.</p>
+  <figure><img src="img/08-valutazione.jpg" alt="Valutazione"><figcaption>La scheda Valutazione: piano delle letture e avanzamento.</figcaption></figure>
+  <ol class="passi">
+    <li>Scegli il numero di commissari: <strong>uno</strong> per una prova (costa una frazione), <strong>tre</strong> per la stima da usare prima dell’invio, <strong>cinque</strong> per la massima solidità.</li>
+    <li>Controlla il piano: se una sezione non ha documenti leggibili non viene valutata, e il programma dice quali caricare.</li>
+    <li>Premi <strong>Avvia la valutazione</strong>. Ogni passo mostra avanzamento e risultato; la valutazione può durare diversi minuti. Se un passo fallisce si può riprovare solo quello.</li>
+  </ol>
+  <div class="nota"><p>Le sceneggiature troppo lunghe per una sola lettura vengono lette in più parti e riassunte in una <strong>scheda di lettura con estratti</strong>, conservata per le valutazioni successive.</p></div>
+</section>
+
+<!-- 9 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 9</div>
+  <h1>Passo 4 — Report</h1>
+  <figure><img src="img/09-report.jpg" alt="Report"><figcaption>Il report: esito, quadrante del punteggio con la tacca della soglia, sezioni con i minimi.</figcaption></figure>
+  <ul>
+    <li><strong>Esito</strong>: «Sopra le soglie», «Sopra le soglie, con rischio documentale» (ammesso solo nella lettura attesa), «Sotto soglia», oppure stima parziale.</li>
+    <li><strong>Punteggio</strong> con la forbice tra il commissario più severo e il più generoso, e la <strong>lettura rigorosa</strong>.</li>
+    <li><strong>Sezioni e criteri</strong>: apri un criterio per leggere motivazioni, evidenze, criticità e miglioramenti di ogni commissario, con la fascia di taratura (dentro o fuori, e perché).</li>
+    <li><strong>Interventi</strong>: azioni ordinate per punti recuperabili.</li>
+    <li><strong>Ammissibilità</strong>: tetto del contributo, spesa minima sul territorio, quadratura tra budget e piano, producer fee, allegati, incoerenze tra i moduli.</li>
+    <li><strong>Graduatoria</strong>: dove si sarebbe collocato il dossier tra i progetti reali e storico delle soglie di finanziamento (dove le graduatorie sono pubbliche).</li>
+    <li><strong>Quanto potresti ottenere</strong>: per i bandi che riducono il contributo in proporzione al primo in graduatoria (es. Sicilia) la stima del contributo concedibile.</li>
+  </ul>
+  <figure><img src="img/10-report-criteri.jpg" alt="Criteri del report"><figcaption>Sezioni e criteri: atteso, rigoroso e fascia di taratura.</figcaption></figure>
+  <h2>Esportare</h2>
+  <p><strong>Report completo (PDF)</strong> crea un documento impaginato con tutti i dati interni: punteggi e motivazioni di ogni commissario, controlli, confronto con le graduatorie, dati chiave, piano finanziario, documenti, appendici di produzione e legale. Ci sono anche <strong>Copia riepilogo</strong>, <strong>Scarica pagina (HTML)</strong> e <strong>Stampa</strong>.</p>
+  <h2>Prova con un dossier già presentato</h2>
+  <p>In fondo al report si può inserire il punteggio reale ottenuto da un dossier già valutato: il programma mostra lo scarto sezione per sezione. È il modo per misurare e migliorare la taratura.</p>
+</section>
+
+<!-- 10 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 10</div>
+  <h1>Produzione</h1>
+  <figure><img src="img/11-produzione.jpg" alt="Produzione"><figcaption>Produzione: si parte dallo spoglio della sceneggiatura.</figcaption></figure>
+  <div class="dl">
+    <dt>Spoglio</dt><dd>Claude legge la sceneggiatura scena per scena: luogo, interno/esterno, giorno/notte, personaggi, comparse, elementi per reparto, rischi, effetti visivi. Esportazione CSV.</dd>
+    <dt>Piano e ordine del giorno</dt><dd>Piano di lavorazione proposto dalle scene, calendario delle riprese, ordine del giorno e stralci.</dd>
+    <dt>Storyboard</dt><dd>Inquadrature per scena con campo, angolazione, movimento, ottica, durata, bozzetto vettoriale e prompt per un generatore di immagini.</dd>
+    <dt>Preventivo</dt><dd>Voci di budget, importazione del Master Budget e minimi di riferimento; i totali alimentano i Dati chiave.</dd>
+    <dt>Adempimenti</dt><dd>Che cosa serve per girare in regola in Italia, fase per fase; le voci legate a minori, animali, armi, droni, acqua o luoghi pubblici compaiono solo se lo spoglio le ha trovate.</dd>
+  </div>
+  <div class="attenzione"><p>Piano di lavorazione e bozzetti sono strumenti di lavoro: non conoscono disponibilità degli attori, spostamenti e meteo, e non sostituiscono un disegnatore.</p></div>
+</section>
+
+<!-- 11 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 11</div>
+  <h1>Finanza</h1>
+  <p>In testa c’è il riquadro <strong>Il piano in un minuto</strong>: giudizio e numeri chiave, aggiornati a ogni modifica. Le fonti sono sempre quelle dei Dati chiave: qui si leggono e si confrontano, non si duplicano.</p>
+  <figure><img src="img/12-finanza.jpg" alt="Finanza"><figcaption>La scheda Finanza.</figcaption></figure>
+  <div class="dl">
+    <dt>Piano finanziario</dt><dd>Struttura delle fonti, scoperto, copertura documentata; scenari alternativi salvabili e confrontabili, applicabili al dossier dopo conferma.</dd>
+    <dt>Aiuti pubblici</dt><dd>Intensità degli aiuti sul costo contro il limite applicabile (50%, 60% per le coproduzioni transfrontaliere, 80% per le opere difficili, Reg. UE 651/2014 art. 54), margine in euro, scelta riga per riga di che cosa conta come aiuto.</dd>
+    <dt>Tax credit</dt><dd>Calcolatore del credito d’imposta alla produzione secondo il D.I. 225/2024 come modificato nel 2025 e nel 2026: costo eleggibile, aliquota, tetti, quote di utilizzo; <strong>Porta nel piano</strong> lo inserisce come fonte.</dd>
+    <dt>Cassa</dt><dd>Piano di cassa mensile: uscite per fase, entrate per fonte con la loro tempistica, punta di fabbisogno, costo del finanziamento ponte; grafico, tabella ed esportazione CSV.</dd>
+    <dt>Recupero</dt><dd>Tre scenari di incasso per canale, cascata di recupero, punto di pareggio.</dd>
+    <dt>Indicatori</dt><dd>Costo al minuto e per giorno di ripresa, producer fee e spese generali contro i limiti del bando, quote pubblica e privata, ognuno con la formula.</dd>
+  </div>
+  <div class="attenzione"><p>Ogni numero normativo porta fonte e data. I costi di fideiussione, sconto del tax credit e finanziamento ponte e le percentuali del recupero sono <strong>stime indicative</strong>: sostituiscile con i valori reali. Per le decisioni fiscali conferma con il commercialista.</p></div>
+</section>
+
+<!-- 12 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 12</div>
+  <h1>Gestione bando</h1>
+  <p>Serve dopo la concessione: gli impegni che hanno generato il punteggio vengono verificati a consuntivo.</p>
+  <figure><img src="img/13-gestione.jpg" alt="Gestione bando"><figcaption>Gestione bando: tappe e scadenze con il prossimo passo da fare.</figcaption></figure>
+  <div class="dl">
+    <dt>Tappe e scadenze</dt><dd>Dalla presentazione al saldo: concessione, accettazione, riprese, rendicontazione, uscita. Le scadenze del bando (mesi dalla concessione, preavvisi, proroghe) con conto alla rovescia e semaforo; la data di notifica del decreto si inserisce una volta sola.</dd>
+    <dt>Erogazione</dt><dd>Quote del bando calcolate sul contributo concesso, fideiussione e suo costo stimato, stato di ogni quota, incassato e residuo.</dd>
+    <dt>Registro spese</dt><dd>Data, fornitore, voce di budget, imponibile, IVA, nel territorio, ammissibile, pagamento tracciabile, documento. Inserimento rapido da tastiera, importazione da CSV o Excel (anche con numeri all’italiana), esportazione della matrice di rendicontazione.</dd>
+    <dt>Rendiconto</dt><dd>Consuntivo contro preventivo per voce, controlli del bando (spesa minima sul territorio, costo minimo a consuntivo, pagamenti non tracciabili, spese fuori periodo) e che cosa manca per chiedere il saldo.</dd>
+    <dt>Punteggio da mantenere</dt><dd>Giorni, professionisti e spesa dichiarati contro quelli effettivi, con il ricalcolo dei criteri e il rischio di riduzione o revoca.</dd>
+    <dt>Cronoprogramma</dt><dd>Diagramma delle fasi con le scadenze del bando, date modificabili, esportazione CSV.</dd>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 13</div>
+  <h1>Legale</h1>
+  <figure><img src="img/14-legale.jpg" alt="Legale"><figcaption>L’area legale: domande sul bando con gli articoli citati.</figcaption></figure>
+  <div class="dl">
+    <dt>Chiedi al bando</dt><dd>Domande su requisiti, spese ammissibili, punteggi, scadenze, obblighi, revoca: ogni risposta cita l’articolo dell’avviso. Controlla sempre il testo indicato prima di decidere.</dd>
+    <dt>Contratti</dt><dd>Analisi di contratti e deal memo caricati: parti, importi, clausole, rischi e coerenza con il dossier.</dd>
+    <dt>Bozze</dt><dd>Bozze di documenti per la candidatura e la produzione (lettere di intento, accordi, dichiarazioni), da rivedere con un legale.</dd>
+    <dt>Fascicolo</dt><dd>Parti, impegni e date chiave ricavati dai documenti, con le incongruenze tra un documento e l’altro.</dd>
+    <dt>Scadenze</dt><dd>Termini che decorrono dalla notifica del decreto di concessione.</dd>
+  </div>
+  <div class="attenzione"><p>L’area legale lavora sul testo dell’avviso e sui documenti del dossier: è un supporto, non un parere legale, e non consulta banche dati di leggi e sentenze.</p></div>
+</section>
+
+<!-- 14 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 14</div>
+  <h1>Il catalogo dei bandi</h1>
+  <p>Clockwise contiene <strong>{{N_BANDI}} schede di bando</strong>: le regioni e le province autonome, i contributi selettivi del Ministero della Cultura e Creative Europe MEDIA. <strong>{{N_SIMULABILI}}</strong> hanno una griglia a punti trascritta dal testo ufficiale e ricontrollata da una verifica indipendente: su questi si simula il punteggio. Gli altri restano schede informative (bando senza punteggio, non ancora pubblicato o con griglia non provata).</p>
+  <figure><img src="img/15-bandi.jpg" alt="Pagina Bandi"><figcaption>La pagina Bandi: catalogo per regione, aggiornamenti e dettaglio del bando.</figcaption></figure>
+  <h2>Che cosa c’è nella scheda di un bando</h2>
+  <ul>
+    <li>stato e date: finestre di presentazione, edizioni passate e prossima edizione attesa;</li>
+    <li>categorie con contributo massimo, massimali, dotazione e punteggi minimi;</li>
+    <li>griglia di valutazione completa, con le regole particolari (soglia su alcune sezioni, minimi su gruppi di criteri, penalità);</li>
+    <li>fonti ufficiali con i link e «Come è stata verificata la griglia» (estratti del testo e dubbi rimasti);</li>
+    <li>per la Sicilia anche il testo integrale dell’avviso e i punteggi reali delle graduatorie 2025 e 2026, usati come metro della Commissione.</li>
+  </ul>
+  <figure><img src="img/15b-bandi-dettaglio.jpg" alt="Dettaglio del bando"><figcaption>Dettaglio di un bando: numeri chiave, categorie, calendario delle edizioni.</figcaption></figure>
+  <h2>Aggiungere un bando</h2>
+  <p><strong>+ Aggiungi un bando da PDF</strong>: Claude ricava criteri, fasce e soglie dall’avviso. La griglia resta segnata «da verificare» finché non la controlli sul testo; si può correggere anche a mano.</p>
+  <h2>Conoscenza aggiuntiva</h2>
+  <p>FAQ, verbali, schede di valutazione ricevute, decreti di modifica, graduatorie di altri anni: caricati nel dettaglio del bando, Claude li legge a ogni valutazione insieme alla conoscenza fissa.</p>
+</section>
+
+<!-- 15 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 15</div>
+  <h1>Aggiornamenti automatici</h1>
+  <p>Il controllo è <strong>silenzioso</strong>: vedi qualcosa solo quando c’è una novità.</p>
+  <div class="dl">
+    <dt>Catalogo</dt><dd>Il programma scarica il catalogo pubblicato del progetto. Una scheda entra solo se integra (impronta corretta), valida e più recente di quella in uso; le altre finiscono nel registro con il motivo.</dd>
+    <dt>Pagine degli enti</dt><dd>Il programma controlla la pagina ufficiale di ogni bando e ne ricava l’elenco dei documenti pubblicati. Un documento mai visto (avviso, decreto, graduatoria, proroga, FAQ) diventa una «novità» nel dettaglio del bando, con il link.</dd>
+    <dt>Nuovi avvisi</dt><dd>Se l’opzione è attiva e Claude è collegato, un nuovo avviso in PDF di un bando che usi viene letto da Claude e diventa una <strong>proposta</strong> di griglia con il confronto. Non sostituisce mai la griglia verificata: si attiva solo a mano, come bando «da verificare».</dd>
+    <dt>Cadenza</dt><dd>All’avvio se sono passate 12 ore, poi ogni 6 ore a programma aperto. Nella pagina Bandi ci sono <strong>Controlla ora</strong>, le due opzioni e il registro degli eventi.</dd>
+  </div>
+  <div class="attenzione"><p>Il controllo delle pagine degli enti funziona solo con il programma installato (non nell’app Claude). Il catalogo pubblicato raggiunge i programmi installati solo se il repository GitHub del progetto è pubblico o se il catalogo è ospitato a un indirizzo accessibile.</p></div>
+</section>
+
+<!-- 16 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 16</div>
+  <h1>Dati e riservatezza</h1>
+  <ul>
+    <li>I dossier restano <strong>sul tuo dispositivo</strong>, nel browser. Non vengono caricati su nessun server del programma. Il server locale ascolta solo su <code>127.0.0.1</code>.</li>
+    <li>A Claude viene inviato solo il testo necessario a ciascuna lettura, attraverso il collegamento scelto e a nessun altro servizio.</li>
+    <li>Il documento d’identità non viene mai letto né inviato.</li>
+    <li>La chiave API è salvata sul computer, leggibile solo dal tuo utente.</li>
+    <li>Il controllo degli aggiornamenti non invia alcun dato dell’utente.</li>
+  </ul>
+  <div class="attenzione"><p>I dati stanno nel browser usato da Clockwise: cancellare i dati di navigazione di quel browser cancella anche i dossier. Prima di farlo, o prima di cambiare computer, scarica il report completo dei dossier importanti.</p></div>
+</section>
+
+<!-- 17 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 17</div>
+  <h1>Limiti da conoscere</h1>
+  <ul>
+    <li><strong>Taratura</strong>: il motore di ragionamento poggia su una prova con un dossier reale (finanziato, lungometraggio, Sicilia) e sulle graduatorie pubbliche. Documentari, cortometraggi e gli altri bandi sono estrapolazioni ragionate: un secondo caso reale, meglio se escluso, serve a confermarla.</li>
+    <li><strong>Altri bandi</strong>: le griglie sono verificate sul testo ufficiale, ma nessuno è ancora stato provato su un dossier reale: la stima vale soprattutto come controllo della struttura del dossier rispetto alla griglia.</li>
+    <li><strong>Edizioni previste</strong>: per un anno non ancora pubblicato vale la griglia dell’ultima edizione; il nuovo avviso può cambiarla.</li>
+    <li><strong>Scansioni</strong>: la trascrizione va controllata sull’originale per importi, date e firme.</li>
+    <li><strong>Finanza</strong>: le stime di mercato (fideiussione, sconto, ponte, recupero) non hanno fonte ufficiale.</li>
+    <li><strong>Adempimenti</strong>: elenco di orientamento aggiornato a novembre 2026; norme, importi e termini cambiano.</li>
+  </ul>
+</section>
+
+<!-- 18 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 18</div>
+  <h1>Problemi comuni</h1>
+  <table>
+    <thead><tr><th style="width:36%">Che cosa succede</th><th>Che cosa fare</th></tr></thead>
+    <tbody>
+      <tr><td>Windows mostra «PC protetto da Windows»</td><td>Ulteriori informazioni → Esegui comunque. Sparisce quando il programma è firmato con il certificato della società.</td></tr>
+      <tr><td>La pillola in alto dice «Claude non collegato»</td><td>Apri Collegamento: installa o accedi a Claude Code e premi Ricontrolla, oppure inserisci una chiave API.</td></tr>
+      <tr><td>«La porta è già in uso»</td><td>Clockwise è probabilmente già aperto: cerca la finestra nera. Altrimenti il programma sceglie da solo la porta successiva.</td></tr>
+      <tr><td>Un file non viene letto</td><td>Se è un <code>.doc</code> salvalo in PDF o DOCX. Se è una scansione usa «Leggi le scansioni con Claude» (dopo aver riaperto la pagina va trascinato di nuovo).</td></tr>
+      <tr><td>Una sezione non viene valutata</td><td>Non ci sono documenti leggibili per i suoi criteri: carica quelli indicati nella scheda Valutazione, o correggi il tipo dei documenti.</td></tr>
+      <tr><td>Un passo della valutazione fallisce</td><td>Premi Riprova: vengono rifatti solo i passi mancanti.</td></tr>
+      <tr><td>Il bando che cerco non c’è o non è simulabile</td><td>Pagina Bandi → Aggiungi un bando da PDF, poi verifica la griglia sul testo.</td></tr>
+      <tr><td>I dossier sono spariti</td><td>Probabilmente sono stati cancellati i dati del browser. Per questo conviene scaricare il report completo dei dossier importanti.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 19 -->
+<section class="capitolo">
+  <div class="occhiello">Capitolo 19</div>
+  <h1>Per chi gestisce il programma</h1>
+  <h2>Dove trovare il programma</h2>
+  <div class="dl">
+    <dt>Codice</dt><dd><a href="https://github.com/Tipintrip98/Clockwise-">github.com/Tipintrip98/Clockwise-</a></dd>
+    <dt>Installatore</dt><dd>Pagina dei rilasci del progetto, release «windows»: indirizzo fisso <code>…/releases/download/windows/Clockwise-Setup.exe</code>.</dd>
+    <dt>Accesso</dt><dd>Finché il repository è privato, rilasci e download sono visibili solo agli utenti GitHub con accesso al progetto.</dd>
+  </div>
+  <h2>Comandi</h2>
+  <table>
+    <thead><tr><th style="width:42%">Comando</th><th>A che serve</th></tr></thead>
+    <tbody>
+      <tr><td><code>npm test</code></td><td>Test automatici: punteggi, bandi, finanza, gestione, taratura, coerenza con i documenti ufficiali.</td></tr>
+      <tr><td><code>npm run build:windows</code></td><td>Clockwise.exe e installatore in <code>dist/windows</code>.</td></tr>
+      <tr><td><code>npm run build:artifact</code></td><td>Pagina singola per l’app Claude (<code>dist/clockwise.html</code>).</td></tr>
+      <tr><td><code>npm run bandi</code></td><td>Rigenera il catalogo dalle schede in <code>bandi/dati/</code>.</td></tr>
+      <tr><td><code>npm run bandi:controlla</code></td><td>Controlla le pagine ufficiali degli enti.</td></tr>
+    </tbody>
+  </table>
+  <h2>Pubblicare una nuova versione</h2>
+  <ol class="passi">
+    <li>A ogni aggiornamento del codice GitHub costruisce e prova il pacchetto su un vero Windows (Actions → Windows): test, avvio, installazione e disinstallazione.</li>
+    <li>Per pubblicarlo: Actions → Windows → <strong>Run workflow</strong>, spunta <strong>pubblica</strong>. L’installatore e questo manuale vanno nella release «windows» con indirizzo fisso.</li>
+  </ol>
+  <h2>Firma digitale</h2>
+  <p>Con un certificato di firma del codice intestato alla società (rilasciato da un’autorità riconosciuta) Windows mostra l’editore e smette di bloccare l’installazione. Il pacchetto si firma da solo: basta inserire in GitHub → Settings → Secrets and variables → Actions i segreti <code>WINDOWS_CERT_PFX_BASE64</code> e <code>WINDOWS_CERT_PASSWORD</code>. Per certificati su token USB o in cloud si usa <code>CLOCKWISE_FIRMA_COMANDO</code> (vedi <code>scripts/windows/firma.mjs</code>). Un certificato autofirmato vale solo sui computer dove viene installato a mano.</p>
+  <h2>Aggiornare una scheda di bando</h2>
+  <p>Si modifica il file in <code>bandi/dati/</code> riportando solo numeri letti nel testo ufficiale, si aggiorna <code>revisione</code>, si esegue <code>npm run bandi</code> e <code>npm test</code>, poi si pubblica: il catalogo raggiunge da solo i programmi installati.</p>
+</section>
+
+<!-- A -->
+<section class="capitolo">
+  <div class="occhiello">Appendice</div>
+  <h1>Elenco dei bandi</h1>
+  <p class="piccolo">Stato al {{DATA}}. «Simulabile» = griglia a punti trascritta dal testo ufficiale e verificata in modo indipendente. Le date e lo stato si aggiornano con il catalogo.</p>
+  {{TABELLA_BANDI}}
+</section>
+
+</body>
+</html>

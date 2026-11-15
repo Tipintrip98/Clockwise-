@@ -345,6 +345,10 @@ function creaInstallatore(licenzaNode) {
   fs.rmSync(fileSetup, { force: true });
   const definizioni = { VERSIONE: versione, VERSIONE_NUMERICA: versioneNumerica, ESEGUIBILE: fileExe, ICONA: fileIcona, USCITA: fileSetup };
   if (licenzaNode) definizioni.LICENZA_NODE = licenzaNode;
+  // il manuale d'uso (docs/Manuale-Clockwise.pdf, generato da scripts/genera-manuale.mjs) va nell'installazione
+  const manuale = path.join(radice, 'docs', 'Manuale-Clockwise.pdf');
+  if (fs.existsSync(manuale)) definizioni.MANUALE = manuale;
+  else nota('ATTENZIONE: docs/Manuale-Clockwise.pdf non trovato, l’installatore non conterrà il manuale');
   // il disinstallatore si firma mentre makensis lo crea (!uninstfinalize), con lo stesso script
   if (firmaAttiva()) { definizioni.FIRMA_NODE = process.execPath; definizioni.FIRMA_SCRIPT = path.join(radice, 'scripts', 'windows', 'firma.mjs'); }
   esegui(nsis.comando, ['-V2', '-INPUTCHARSET', 'UTF8', ...Object.entries(definizioni).map(([k, v]) => `-D${k}=${v}`), path.join(radice, 'installer', 'clockwise.nsi')]);

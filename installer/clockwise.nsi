@@ -1,7 +1,7 @@
 ; Installatore di Clockwise per Windows (NSIS 3).
 ; Non si compila a mano: lo fa `npm run build:windows` (scripts/build-windows.mjs), che passa
 ;   -DVERSIONE=1.1.0 -DVERSIONE_NUMERICA=1.1.0.0 -DESEGUIBILE=<Clockwise.exe> -DICONA=<clockwise.ico>
-;   -DUSCITA=<Clockwise-Setup-1.1.0.exe> [-DLICENZA_NODE=<LICENSE di Node.js>]
+;   -DUSCITA=<Clockwise-Setup-1.1.0.exe> [-DLICENZA_NODE=<LICENSE di Node.js>] [-DMANUALE=<docs/Manuale-Clockwise.pdf>]
 ; Il file è in UTF-8: makensis va chiamato con -INPUTCHARSET UTF8.
 ;
 ; Cosa fa: installa per il solo utente corrente (nessun diritto di amministratore) in
@@ -95,6 +95,10 @@ Section "Clockwise" SezioneProgramma
 !ifdef LICENZA_NODE
   File "/oname=Licenza Node.js.txt" "${LICENZA_NODE}"
 !endif
+!ifdef MANUALE
+  File "/oname=Manuale di Clockwise.pdf" "${MANUALE}"
+  CreateShortcut "$SMPROGRAMS\Manuale di Clockwise.lnk" "$INSTDIR\Manuale di Clockwise.pdf"
+!endif
   WriteUninstaller "$INSTDIR\Disinstalla.exe"
 
   CreateShortcut "$SMPROGRAMS\Clockwise.lnk" "$INSTDIR\Clockwise.exe" "" "$INSTDIR\clockwise.ico" 0 SW_SHOWNORMAL "" "${DESCRIZIONE}"
@@ -121,10 +125,12 @@ Section "Uninstall"
   Delete "$INSTDIR\Clockwise.exe"
   Delete "$INSTDIR\clockwise.ico"
   Delete "$INSTDIR\Licenza Node.js.txt"
+  Delete "$INSTDIR\Manuale di Clockwise.pdf"
   Delete "$INSTDIR\Disinstalla.exe"
   RMDir "$INSTDIR"
 
   Delete "$SMPROGRAMS\Clockwise.lnk"
+  Delete "$SMPROGRAMS\Manuale di Clockwise.lnk"
   Delete "$DESKTOP\Clockwise.lnk"
   DeleteRegKey HKCU "${CHIAVE_DISINSTALLA}"
   DeleteRegKey HKCU "${CHIAVE_APP}"
