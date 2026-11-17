@@ -257,14 +257,21 @@ jobs:
   #   Clockwise riconosce bene la situazione); con il segreto CLAUDE_CODE_OAUTH_TOKEN (creato con «claude setup-token»)
   #   la richiesta deve riuscire davvero.
   macchine:
-    name: Collegamento reale su ${{ matrix.os }}
+    name: Collegamento reale su ${{ matrix.os }}${{ matrix.profilo && ' (cartella utente con spazi e accenti)' || '' }}
     needs: pacchetto
     runs-on: ${{ matrix.os }}
     timeout-minutes: 25
+    # la variante con la cartella utente «difficile» avvisa senza bloccare la pubblicazione
+    continue-on-error: ${{ matrix.profilo != '' }}
     strategy:
       fail-fast: false
       matrix:
         os: [windows-2022, windows-2025]
+        profilo: ['']
+        include:
+          # come su un PC il cui utente si chiama «Mario Rossi» o «Niccolò»: spazi e lettere accentate nei percorsi
+          - os: windows-2025
+            profilo: 'Niccolò De Rossi'
     defaults:
       run:
         shell: pwsh
@@ -280,6 +287,7 @@ jobs:
           CLOCKWISE_NO_BROWSER: '1'
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           HA_ACCOUNT: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+          PROFILO_DI_PROVA: ${{ matrix.profilo }}
         run: |
           $ErrorActionPreference = 'Stop'
           Write-Host "Macchina: $((Get-CimInstance Win32_OperatingSystem).Caption) build $([Environment]::OSVersion.Version.Build), $env:PROCESSOR_ARCHITECTURE"
@@ -291,6 +299,14 @@ jobs:
           if (-not (Test-Path $exe)) { throw "Dopo l'installazione manca $exe" }
           $base = 'http://127.0.0.1:5757'
           $corpo = @{ 'Content-Type' = 'application/json' }
+          if ($env:PROFILO_DI_PROVA) {
+            # cartella utente con spazi e lettere accentate: Claude Code e Clockwise devono cavarsela lo stesso
+            $profilo = Join-Path $env:RUNNER_TEMP $env:PROFILO_DI_PROVA
+            foreach ($d in $profilo, "$profilo\AppData\Roaming", "$profilo\AppData\Local") { New-Item -ItemType Directory -Force $d | Out-Null }
+            $env:USERPROFILE = $profilo; $env:APPDATA = "$profilo\AppData\Roaming"; $env:LOCALAPPDATA = "$profilo\AppData\Local"
+            $env:HOMEDRIVE = $profilo.Substring(0, 2); $env:HOMEPATH = $profilo.Substring(2)
+            Write-Host "Cartella utente di prova: $profilo"
+          }
           $p = Start-Process -FilePath $exe -PassThru -NoNewWindow
           try {
             $stato = $null; $limite = (Get-Date).AddSeconds(60)
@@ -305,7 +321,7 @@ jobs:
               if ($r.ok -ne $true) { throw 'Il pulsante «Installa Claude Code» non è riuscito' }
               $stato = $r.stato
             }
-            if ($stato.claudeCode.installato -ne $true -or -not $stato.claudeCode.versione) { throw 'Dopo l’installazione Clockwise non vede Claude Code' }
+            if ($stato.claudeCode.installato -ne $true -or -not $stato.claudeCode.versione) { throw 'Dopo la sua installazione Clockwise non vede Claude Code' }
             Write-Host "Claude Code: $($stato.claudeCode.versione) in $($stato.claudeCode.percorso) [$($stato.claudeCode.origine)], accesso: $($stato.claudeCode.loggato)"
 
             # 2) la richiesta reale di prova
@@ -328,7 +344,7 @@ jobs:
 
             # 4) il pulsante «Accedi» deve avviare l'accesso (qui nessuno lo completa: si chiude il processo)
             $a = Invoke-RestMethod "$base/api/claude/accedi" -Method Post -TimeoutSec 60
-            if ($a.ok -ne $true) { throw '«Accedi» non ha avviato l’accesso' }
+            if ($a.ok -ne $true) { throw 'Il pulsante Accedi non ha avviato il login' }
             Start-Sleep -Seconds 5
             $login = Get-CimInstance Win32_Process -Filter "Name = 'claude.exe'" | Where-Object { $_.CommandLine -match 'auth\s+login' }
             if ($login) { Write-Host "Accesso avviato (processo $($login.ProcessId)): lo chiudo"; $login | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue } }

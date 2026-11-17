@@ -108,8 +108,9 @@ export function correggi(grezzo, t, massimo) {
   if (!t || !Number.isFinite(grezzo)) return { punti: grezzo, grezzo, regole: 0, casi: 0 };
   const regole = (t.peso || 0) * ((Number.isFinite(t.centro) ? t.centro : grezzo) - grezzo);
   const dopoRegole = clamp(grezzo + regole, 0, massimo);
-  const punti = r1(clamp(dopoRegole + (t.casi || 0), 0, massimo));
-  return { punti, grezzo, regole: r3(dopoRegole - grezzo), casi: r3(punti - dopoRegole) };
+  const dopoCasi = clamp(dopoRegole + (t.casi || 0), 0, massimo);
+  // le due parti restano esatte (l'arrotondamento al decimo riguarda solo il voto)
+  return { punti: r1(dopoCasi), grezzo, regole: r3(dopoRegole - grezzo), casi: r3(dopoCasi - dopoRegole) };
 }
 
 /**

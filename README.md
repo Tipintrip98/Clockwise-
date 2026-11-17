@@ -144,7 +144,7 @@ Il voto dei criteri a giudizio nasce in due passi (`app/js/core/apprendimento.js
 1. **Regole**: media pesata tra i commissari simulati e il centro della fascia che il motore di regole ricava dai casi reali (peso 0,5 se la regola ha un riscontro diretto in un caso reale, 0,25 se è un'estrapolazione).
 2. **Casi**: per sezione, una parte dello scarto medio (reale − stima) osservato nei dossier di cui si conosce il punteggio vero, incorporati e salvati dall'utente: `n ÷ (n + 1)` dello scarto medio, con un tetto dell'8% della sezione.
 
-Criteri calcolati, criteri con una tabella del bando e lettura rigorosa non si correggono. Sul dossier reale di prova: commissari senza fasce 85,8; con le fasce nel prompt 87,9; con le regole 88,6; con i casi 89,1; punteggio vero 89,5. È lo stesso caso su cui il programma è tarato: serve un secondo dossier reale per una misura fuori campione.
+Criteri calcolati, criteri con una tabella del bando e lettura rigorosa non si correggono. Sul dossier reale di prova (punteggio vero 89,5), due valutazioni reali complete: commissari con le fasce nel prompt 87,7 e 87,9; con le regole 88,4 e 88,6; con i casi 88,9 e 89,1. Prima delle fasce la stima era 85,8. È lo stesso caso su cui il programma è tarato: serve un secondo dossier reale per una misura fuori campione.
 
 ## Come nasce il punteggio
 
