@@ -1,0 +1,67 @@
+# Prova a richiesta: su un vero Windows, il programma installato apre davvero il browser all'avvio?
+# Scarica l'installatore pubblicato, lo installa, avvia Clockwise come dal menu Start e mostra quali processi nascono.
+name: Prova apertura browser
+
+on:
+  workflow_dispatch:
+    inputs:
+      versione:
+        description: Versione pubblicata da provare (es. 2.0.6)
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    name: Apertura del browser su ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-2025]
+    steps:
+      - name: Avvio e processi nati
+        env:
+          VERSIONE: ${{ inputs.versione }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          function Processi { Get-CimInstance Win32_Process | Select-Object ProcessId, Name, SessionId, CommandLine }
+          function Nuovi($prima) { $noti = $prima.ProcessId; Processi | Where-Object { $noti -notcontains $_.ProcessId -and $_.Name -notmatch '^(conhost|WmiPrvSE|svchost|dllhost|backgroundTaskHost|RuntimeBroker)\.exe$' } }
+          function Mostra($titolo, $lista) { Write-Host "--- $titolo ---"; if (-not $lista) { Write-Host '(nessun processo nuovo)' }; foreach ($p in $lista) { $c = "$($p.CommandLine)"; if ($c.Length -gt 220) { $c = $c.Substring(0, 220) + '...' }; Write-Host "[$($p.SessionId)] $($p.Name) :: $c" } }
+          function Browser($lista) { @($lista | Where-Object { $_.Name -match '^(msedge|chrome|firefox|iexplore)\.exe$' }) }
+          function ChiudiBrowser { Get-Process msedge, chrome, firefox -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 2 }
+
+          $scelta = Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice' -ErrorAction SilentlyContinue
+          Write-Host "Sessione di questo script: $((Get-Process -Id $PID).SessionId); browser predefinito per http: $($scelta.ProgId)"
+
+          $setup = Join-Path $env:RUNNER_TEMP "Clockwise-Setup-$($env:VERSIONE).exe"
+          Invoke-WebRequest "https://github.com/${{ github.repository }}/releases/download/v$($env:VERSIONE)/Clockwise-Setup-$($env:VERSIONE).exe" -OutFile $setup
+          $i = Start-Process -FilePath $setup -ArgumentList '/S' -Wait -PassThru
+          if ($i.ExitCode -ne 0) { throw "Installatore uscito con codice $($i.ExitCode)" }
+          $exe = Join-Path $env:LOCALAPPDATA 'Programs\Clockwise\Clockwise.exe'
+          ChiudiBrowser
+
+          # 1) il sistema da solo
+          $prima = Processi; Start-Process 'http://localhost:5757/'; Start-Sleep -Seconds 10
+          $n = Nuovi $prima; Mostra 'Start-Process http://localhost:5757/' $n; $sistema = (Browser $n).Count; ChiudiBrowser
+
+          # 2) il comando che usa Clockwise
+          $prima = Processi; & "$env:SystemRoot\System32\rundll32.exe" url.dll,FileProtocolHandler http://localhost:5757/; Start-Sleep -Seconds 10
+          $n = Nuovi $prima; Mostra 'rundll32 url.dll,FileProtocolHandler' $n; $rundll = (Browser $n).Count; ChiudiBrowser
+
+          # 3) Clockwise installato, avviato come dal menu Start
+          $prima = Processi; Start-Process -FilePath $exe
+          $stato = $null; $limite = (Get-Date).AddSeconds(60)
+          while (-not $stato -and (Get-Date) -lt $limite) { try { $stato = Invoke-RestMethod 'http://127.0.0.1:5757/api/stato' -TimeoutSec 5 } catch { Start-Sleep -Milliseconds 500 } }
+          if (-not $stato) { throw 'Clockwise non risponde' }
+          Start-Sleep -Seconds 12
+          $n = Nuovi $prima; Mostra "Clockwise $($stato.versione) avviato dal collegamento" $n; $clockwise = (Browser $n).Count
+          $finestre = @(Get-Process -Name Clockwise | Where-Object { $_.MainWindowHandle -ne 0 }).Count
+          Invoke-RestMethod 'http://127.0.0.1:5757/api/esci' -Method Post | Out-Null
+          ChiudiBrowser
+
+          Write-Host "RISULTATO: browser aperti -> dal sistema $sistema, da rundll32 $rundll, da Clockwise $clockwise; finestre di Clockwise: $finestre"
+          if ($finestre) { throw 'Clockwise ha aperto una finestra propria' }
+          if ($sistema -gt 0 -and $clockwise -eq 0) { throw 'Il sistema apre il browser ma Clockwise no' }
+          if ($clockwise -eq 0) { Write-Host '::warning::Nessun browser si apre su questa macchina, nemmeno dal sistema: non verificabile qui' }
