@@ -21,6 +21,17 @@ function ambiente(percorso) {
   return env;
 }
 
+/**
+ * Ambiente per l'installatore ufficiale. Su Windows l'installatore gira in Windows PowerShell 5.1: se Clockwise è stato
+ * avviato da PowerShell 7 eredita un PSModulePath che punta ai moduli della 7 e i comandi di base (Get-FileHash)
+ * non si trovano più. Senza la variabile, PowerShell 5.1 usa i suoi percorsi predefiniti.
+ */
+export function ambienteInstallatore(env = ambiente()) {
+  const pulito = { ...env };
+  for (const k of Object.keys(pulito)) if (k.toLowerCase() === 'psmodulepath') delete pulito[k];
+  return pulito;
+}
+
 let cache = null, ricerca = null;
 export async function statoClaudeCode(forza = false) {
   if (cache && !forza && Date.now() - cache.quando < 30000) return cache.valore;
@@ -46,7 +57,7 @@ export function installaClaudeCode({ timeout = 10 * 60 * 1000 } = {}) {
       : ['bash', ['-c', 'curl -fsSL https://claude.ai/install.sh | bash']];
     let out = '';
     let figlio;
-    try { figlio = spawn(cmd, args, { env: ambiente(), windowsHide: true }); } catch (e) { return ok({ ok: false, uscita: e.message }); }
+    try { figlio = spawn(cmd, args, { env: ambienteInstallatore(), windowsHide: true }); } catch (e) { return ok({ ok: false, uscita: e.message }); }
     const timer = setTimeout(() => { figlio.kill(); out += '\n(tempo scaduto)'; }, timeout);
     figlio.stdout.on('data', (d) => { out += d; });
     figlio.stderr.on('data', (d) => { out += d; });

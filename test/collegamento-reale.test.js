@@ -1,7 +1,7 @@
 // Ripiego di modello, classificazione degli errori e prova reale del collegamento (senza rete: la chiamata è simulata).
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { classificaErrore, modelliDaProvare, chiamaClaudeCode, provaClaudeCode, SCALA_MODELLI } from '../server/claude-code.js';
+import { classificaErrore, modelliDaProvare, chiamaClaudeCode, provaClaudeCode, SCALA_MODELLI, ambienteInstallatore } from '../server/claude-code.js';
 import { testoDiagnosi } from '../server/diagnosi.js';
 
 const errore = (codice, messaggio = codice) => Object.assign(new Error(messaggio), { codice });
@@ -68,4 +68,9 @@ test('rapporto di diagnosi: riporta la richiesta reale di prova', () => {
   assert.match(testoDiagnosi({ ...base, provaReale: { ok: true, ms: 6100, modello: 'claude-opus-5-5', richiesto: 'claude-fable-5-2', ripiego: { richiesto: 'claude-fable-5-2' } } }), /Richiesta reale di prova: riuscita in 6,?\.?1 s con claude-opus-5-5 \(claude-fable-5-2 non disponibile/);
   assert.match(testoDiagnosi({ ...base, provaReale: { ok: false, codice: 'rete', messaggio: 'Claude Code non raggiunge i server' } }), /NON riuscita \[rete\]/);
   assert.match(testoDiagnosi({ ...base, provaReale: null }), /Richiesta reale di prova: non eseguita/);
+});
+
+test('installatore di Claude Code: non eredita il PSModulePath di PowerShell 7 (trovato sulle prove reali su Windows)', () => {
+  const env = ambienteInstallatore({ Path: 'C:\\Windows', PSModulePath: 'C:\\Program Files\\PowerShell\\7\\Modules', psmodulepath: 'x', USERPROFILE: 'C:\\Users\\a' });
+  assert.deepEqual(Object.keys(env).sort(), ['Path', 'USERPROFILE']);
 });
