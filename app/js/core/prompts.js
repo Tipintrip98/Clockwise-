@@ -2,6 +2,7 @@
 import { getCategoria, getGriglia, coperturaPiano, statisticheEsiti, ETICHETTE_DOC, formati, statisticheFinanziati } from './scoring.js';
 import { blocchiDocumenti, tipoPerId, famiglieSezione } from './docs.js';
 import { FAMIGLIE, METRICHE, sanificaBando } from './bandi/schema.js';
+import { MINIMO_GREEN, RIDUZIONE_EMAS, EDIZIONE_PRECEDENTE } from './greenfilm.js';
 
 const { fmt, euro } = formati;
 
@@ -210,7 +211,7 @@ ${bando.invio ? `- Invio: ${bando.invio.canale} a ${bando.invio.indirizzo}, in u
 ${(bando.allegati || []).map((a) => `  · ${a.nome} [${a.obbligo === 'sempre' ? 'obbligatorio' : a.obbligo === 'green' ? 'obbligatorio per film e serie TV non in animazione' : a.obbligo === 'se_dichiarato' ? 'obbligatorio se l’accordo o la fonte è dichiarata' : 'non obbligatorio ma incide sul punteggio'}]`).join('\n')}
 - Requisiti dichiarativi:
 ${(bando.requisiti || []).map((r) => `  · ${r.testo}`).join('\n')}
-${(bando.note || []).map((n) => `- ${n}`).join('\n')}${bando.moduli ? `\n\nSTRUTTURA DEI MODULI UFFICIALI (che cosa deve contenere ogni modulo compilato)\n${bando.moduli}` : ''}${testiUfficiali(bando, 'V')}${blocchiConoscenza(bando)}`,
+${cat.greenFilm && !dati?.animazione ? `- Certificazione ambientale (requisito di ammissibilità per questa categoria): serve un contratto o un accordo pre-contrattuale per ottenere la certificazione Green Film o equivalente. Nella prassi è stata accettata la domanda di abilitazione all'uso del marchio Green Film firmata dal legale rappresentante, con la scheda di scelta dei criteri e l'organismo di verifica indicato. Se c'è, controlla: firma e data; organismo di verifica indicato; titolo, date e luoghi di ripresa coerenti con i moduli; prerequisiti spuntati; punti dichiarati almeno pari al minimo (${MINIMO_GREEN} con il disciplinare Edizione 03 – 2024, ${EDIZIONE_PRECEDENTE.minimo} con l'edizione precedente; ${RIDUZIONE_EMAS} in meno se la società è registrata EMAS). Una scheda compilata sull'edizione precedente è da «attenzione», non da «critico»: il bando chiede l'accordo, non una certa edizione. A rendiconto andrà documentata la certificazione ottenuta.\n` : ''}${(bando.note || []).map((n) => `- ${n}`).join('\n')}${bando.moduli ? `\n\nSTRUTTURA DEI MODULI UFFICIALI (che cosa deve contenere ogni modulo compilato)\n${bando.moduli}` : ''}${testiUfficiali(bando, 'V')}${blocchiConoscenza(bando)}`,
     documenti: `DATI CHIAVE GIÀ ESTRATTI\n${riepilogoDati(bando, categoriaId, anno, dati)}\n\nINVENTARIO DEI FILE CARICATI\n${inventario || '(nessun file)'}\n\nMODULI DEL DOSSIER\n${blocchiDocumenti(documenti) || '(nessun modulo leggibile)'}`,
     compito: `Controlla il dossier come farebbe l'istruttore e segnala soltanto ciò che trovi davvero nei documenti:
 - campi obbligatori dei moduli vuoti o compilati a metà, dichiarazioni non spuntate, firme o date mancanti;

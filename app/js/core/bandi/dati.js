@@ -1,5 +1,5 @@
 // FILE GENERATO da scripts/genera-bandi.mjs a partire da bandi/dati/*.json — non modificare a mano.
-export const REVISIONE_DATI = "2026-11-14";
+export const REVISIONE_DATI = "2026-11-17";
 export const BANDI_DATI = [
  {
   "id": "abruzzo-produzione-audiovisiva-2026",
@@ -711,6 +711,7 @@ export const BANDI_DATI = [
    }
   ],
   "scadenzeNote": [],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -1276,6 +1277,7 @@ export const BANDI_DATI = [
    "Per le opere cinematografiche: almeno una proiezione in Alto Adige con il regista e almeno uno degli interpreti principali (art. 25, comma 3).",
    "Un’opera cinematografica italiana sovvenzionata deve rispettare i termini sospensivi vigenti per lo sfruttamento su supporto video e audio e per la trasmissione televisiva (art. 26, comma 3)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "prima rata (anticipo)",
@@ -2357,6 +2359,7 @@ export const BANDI_DATI = [
    "La Fondazione verifica la rendicontazione e liquida entro 60 giorni dal ricevimento della rendicontazione completa; il procedimento di selezione dura al massimo 120 giorni dalla scadenza delle domande, salvo sospensioni.",
    "Tempi dell’istruttoria: elenco delle domande ricevibili entro 30 giorni dalla chiusura del 21/10/2026, che diventano 60 se le domande sono più di 15 o i progetti molto complessi (i termini si interrompono per integrazioni e chiarimenti); graduatoria entro 60 giorni dalla pubblicazione di quell’elenco (art. 11.1, c. 4 dell’Avviso; art. 10 della D.D. n. 283/2026)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -3811,6 +3814,7 @@ export const BANDI_DATI = [
    "Se la distribuzione è successiva al 16 novembre 2026, al saldo si può consegnare un estratto in premontaggio che comprovi il girato in Calabria (par. 5.10 comma 3 lett. f).",
    "Documenti e informazioni richiesti dalla Fondazione vanno forniti entro 15 giorni dalla richiesta (par. 6.1 lett. t)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -5003,6 +5007,7 @@ export const BANDI_DATI = [
    "Deposito di tre copie digitali dell’opera in alta definizione con loghi e dicitura «con il contributo ex L.R. 30/2016 della Regione Campania» (art. 25 lett. c e g).",
    "Rimodulazioni del preventivo o tra macro-voci di costo oltre il 20% di scostamento vanno comunicate prima e autorizzate dalla Fondazione (art. 23 c. 8)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "acconto",
@@ -5911,6 +5916,7 @@ export const BANDI_DATI = [
    "Entro 30 giorni dalla conclusione del progetto (fine gennaio 2028, salvo proroga): rendicontazione finale, richiesta di saldo e 2 copie campione dell’opera. Ritardo fino a 30 giorni: revoca del 10% del contributo liquidabile; da 31 a 60 giorni: 40%; oltre 60 giorni: revoca totale (par. 17 e 22.2 c. 2). Le integrazioni richieste vanno date entro 20 giorni solari.",
    "Attenzione: il par. 8 c. 12 ammette a rendiconto solo giustificativi emessi entro il 31 gennaio 2027 e le slide del webinar indicano il 31/01/2027 come termine ultimo del saldo, in contrasto con la conclusione al 31/12/2027 scritta negli altri paragrafi. Prima di pianificare spese nel 2027 va chiesta conferma scritta alla Film Commission."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "acconto",
@@ -6531,6 +6537,7 @@ export const BANDI_DATI = [
   "scadenzeNote": [
    "Consegna dei deliverable: struttura finanziaria aggiornata, contratto con l’emittente principale, lettera di accettazione del materiale, link all’opera prodotta, materiale promozionale, ultimo rendiconto royalty dell’agente di vendita, identificativo standard (ISAN/EIDR), dichiarazione di indipendenza e proprietà: §10 Milestones and deliverables: entro la fine dell’azione; titoli e ordine vanno rispettati. Nessun termine in mesi indicato nel bando."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -7535,6 +7542,7 @@ export const BANDI_DATI = [
    "Entro 30 giorni dall’uscita in sala o dalla messa in onda: deposito di 3 copie dell’opera, del backstage e delle foto di scena presso FVG Film Commission e di una copia presso la Cineteca del Friuli (art. 18, lett. h).",
    "Fine riprese in regione e conclusione dell’iniziativa: da comunicare con PEC distinte (art. 18, lett. l). Entro 45 giorni dal ricevimento del saldo vanno pagate le spese rimaste insolute sul territorio regionale (all. p_bis)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -8533,6 +8541,7 @@ export const BANDI_DATI = [
    "Graduatorie: approvate con decreto del Direttore generale entro 120 giorni dal termine di presentazione delle domande (art. 3, comma 10; art. 24, comma 8). Per le sessioni 2025 i decreti sono usciti dopo circa 8-9 mesi.",
    "Sviluppo: acconto del 50% da chiedere entro 90 giorni dal decreto di graduatoria; richiesta definitiva entro 18 mesi (art. 18). Scrittura: acconto del 50% entro 90 giorni dalla pubblicazione della graduatoria; richiesta definitiva con la sceneggiatura entro 12 mesi (art. 10)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "acconto",
@@ -9867,6 +9876,7 @@ export const BANDI_DATI = [
    "Graduatorie: approvate con decreto del Direttore generale entro 120 giorni dal termine di presentazione delle domande (art. 3, comma 10; art. 24, comma 8). Per le sessioni 2025 i decreti sono usciti dopo circa 8-9 mesi.",
    "Sviluppo: acconto del 50% da chiedere entro 90 giorni dal decreto di graduatoria; richiesta definitiva entro 18 mesi (art. 18). Scrittura: acconto del 50% entro 90 giorni dalla pubblicazione della graduatoria; richiesta definitiva con la sceneggiatura entro 12 mesi (art. 10)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "acconto",
@@ -10742,6 +10752,7 @@ export const BANDI_DATI = [
    }
   ],
   "scadenzeNote": [],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -11394,6 +11405,7 @@ export const BANDI_DATI = [
    "In caso di esito negativo l’impresa ha 15 giorni dal preavviso per presentare osservazioni scritte.",
    "La documentazione originale di spesa va conservata per 10 anni dall’erogazione del saldo; per i 5 anni successivi al completamento vanno forniti, se richiesti, i dati sugli indicatori socio-economici."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -12056,6 +12068,7 @@ export const BANDI_DATI = [
    "La documentazione originale di spesa va conservata per 10 anni dall’erogazione del saldo; per i 5 anni successivi al completamento vanno forniti, se richiesti, i dati sugli indicatori socio-economici.",
    "Solo bando «sviluppo e produzione»: per tre anni dopo l’erogazione va mantenuta l’unità operativa in Liguria e non va cessata l’attività."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -12641,6 +12654,7 @@ export const BANDI_DATI = [
    "La documentazione originale di spesa va conservata per 10 anni dall’erogazione del saldo; per i 5 anni successivi al completamento vanno forniti, se richiesti, i dati sugli indicatori socio-economici.",
    "Solo bando «sviluppo e produzione»: per tre anni dopo l’erogazione va mantenuta l’unità operativa in Liguria e non va cessata l’attività."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -17038,6 +17052,7 @@ export const BANDI_DATI = [
    "Stabilità dell’operazione: per 3 anni dal pagamento finale non devono cessare o trasferirsi fuori regione le attività né mutare natura e obiettivi del progetto (art. 65 Reg. UE 2021/1060). Documenti da conservare per almeno 5 anni dal 31 dicembre dell’anno del saldo.",
    "Regione chiede via PEC aggiornamenti semestrali sullo stato di avanzamento dei lavori (art. D.4)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -18157,6 +18172,7 @@ export const BANDI_DATI = [
    "Accettazione del contributo (Allegato L, tramite SIGEF o PEC): Art. 5.1.2 e art. 8.4: la mancata accettazione entro 10 giorni vale come rinuncia e determina la revoca.",
    "Richiesta dell’anticipo del 40% (facoltativa): Art. 6.3 e art. 10.4.1: entro 90 giorni dall’avvio del progetto, salvo richieste autorizzate dal responsabile del procedimento; servono fideiussione e contratti con i professionisti residenti nelle Marche."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -18883,6 +18899,7 @@ export const BANDI_DATI = [
    "Conclusione del progetto (comunicazione «Conclusione delle attività»): Artt. 4, 7, 14 e 17: data fissa 30/06/2024 salvo proroghe, non un termine in mesi dalla concessione.",
    "Richiesta di saldo e rendicontazione finale: Art. 17, c. 4: entro 30 giorni dalla PEC di conclusione delle attività (non dalla concessione); art. 7, c. 4 e art. 14, c. 1, lett. b: comunque entro il 31/07/2024 salvo proroghe. Integrazioni: art. 17, c. 7 dà 20 giorni solari pena la revoca totale, mentre l’art. 15, c. 12 indica un termine non superiore a 10 giorni di calendario per la documentazione carente."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -21328,6 +21345,7 @@ export const BANDI_DATI = [
    "Variazioni dei dati della domanda: da comunicare possibilmente entro 10 giorni e comunque non oltre 30.",
    "Fideiussione dell’anticipo: durata 18 mesi (24 per l’animazione) dalla lettera di concessione, con proroga automatica fino a tre semestri."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -24164,6 +24182,7 @@ export const BANDI_DATI = [
    "Ultimo giorno per rinunciare senza perdere l’accesso al successivo Apulia Film Fund: Art. 19, par. 1: rinuncia via PEC a funding@pec.apuliafilmcommission.it; oltre i 90 giorni comporta l’esclusione dal successivo avviso, salvo forza maggiore documentata.",
    "Richiesta dell’anticipazione del 40% (Allegato 8a) con fideiussione: Art. 10, par. 2.1: le richieste oltre i 120 giorni non sono prese in considerazione."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -25006,6 +25025,7 @@ export const BANDI_DATI = [
    "Documentazione del progetto da conservare per almeno 5 anni dall’erogazione del saldo (artt. 19 e 24).",
    "Accettazione formale del contributo, con cronoprogramma delle attività e delle spese: Art. 12: entro dieci giorni dalla comunicazione formale di attribuzione, pena la rinuncia automatica. Chi riceve meno del richiesto deve rimodulare il piano finanziario (ed eventualmente il piano dei costi)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -25607,6 +25627,7 @@ export const BANDI_DATI = [
    "La certificazione ambientale (Green Film o equivalente), se dichiarata, va sottoscritta prima dell’avvio delle riprese e documentata a saldo (art. 5.2 e art. 8.2.3).",
    "Nei titoli dell’opera e in tutti i materiali promozionali vanno inseriti i loghi della Regione Toscana e dell’Unione europea con la dicitura prevista dall’art. 9 c. 4 lett. i e j."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -26760,6 +26781,7 @@ export const BANDI_DATI = [
    }
   ],
   "scadenzeNote": [],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "primo acconto",
@@ -26945,7 +26967,7 @@ export const BANDI_DATI = [
  {
   "id": "umbria-film-fund-2026-2027",
   "fondoId": "umbria",
-  "revisione": "2026-11-14",
+  "revisione": "2026-11-17",
   "nome": "Umbria — Umbria Film Fund 2026-2027. Bando per il sostegno alle imprese cinematografiche e audiovisive",
   "nomeBreve": "Umbria · Umbria Film Fund 2026-2027",
   "ente": "Regione Umbria — Direzione regionale Sviluppo economico, agricoltura, istruzione, formazione e lavoro, turismo e sport · Servizio Turismo, Sport e Film Commission (PR FESR 2021-2027, Azione 1.3.4). Promozione e assistenza alle produzioni: Fondazione Umbria Film Commission",
@@ -29612,8 +29634,10 @@ export const BANDI_DATI = [
    "Eventuale rinuncia al contributo (in mancanza l’agevolazione si intende accettata): entro 10 giorni dalla ricezione della PEC regionale di ammissione (art. 16, comma 7).",
    "Tempi massimi del procedimento (art. 23): istruttoria formale 35 giorni dalla ricezione della domanda; valutazione del progetto 60 giorni; determinazione di approvazione dell’esito 15 giorni; comunicazione di ammissione (BUR e PEC) 15 giorni.",
    "La fideiussione per l’anticipo deve durare almeno 24 mesi per la categoria a) e 18 mesi per la categoria b) (art. 17).",
-   "La documentazione va conservata per cinque anni dal 31 dicembre dell’anno dell’ultimo pagamento al beneficiario (art. 20)."
+   "La documentazione va conservata per cinque anni dal 31 dicembre dell’anno dell’ultimo pagamento al beneficiario (art. 20).",
+   "Tempi osservati nell’edizione 2024: in un caso reale tra l’invio della domanda via PEC e la seduta della Commissione sono passati quasi nove mesi, e la comunicazione dell’esito è arrivata tre settimane dopo la seduta. I tempi massimi scritti nel bando vanno letti come indicativi."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -29640,7 +29664,7 @@ export const BANDI_DATI = [
    "Possono presentare domanda solo PMI che siano produttori indipendenti con codice ATECO 59.11; i coproduttori privi dei requisiti possono partecipare all’opera ma non beneficiare dell’aiuto, con separazione contabile.",
    "Aiuto in esenzione ai sensi dell’art. 54 del Reg. (UE) n. 651/2014 (numero caso SA.123566): il cumulo con altri aiuti pubblici sulla stessa opera segue l’art. 8 dello stesso regolamento ed è verificato sul Registro Nazionale Aiuti.",
    "Obblighi di comunicazione dei fondi europei: dicitura «L’opera è stata realizzata con il contributo dei Fondi europei della Regione Umbria» e loghi del programma nei titoli di testa o di coda; il mancato rispetto può costare una revoca nel limite del 3%.",
-   "Rispetto all’edizione 2024, che raccoglieva le domande in ordine cronologico, il bando 2026-2027 usa una procedura valutativa comparativa con graduatoria (art. 12)."
+   "Rispetto all’edizione 2024, che esaminava le domande in ordine cronologico, il bando 2026-2027 usa una procedura valutativa comparativa con graduatoria (art. 12). Anche nel 2024 però la Commissione assegnava un punteggio, con un minimo di 60 su 100 per passare all’istruttoria formale: in un caso reale un progetto è stato dichiarato inammissibile con 56 punti."
   ],
   "altriBandi": [],
   "esitiPubblici": [
@@ -30464,6 +30488,7 @@ export const BANDI_DATI = [
    "Su richiesta della Fondazione: tre copie dell’opera su supporto digitale e file in alta risoluzione entro trenta giorni dalla prima messa in onda o proiezione in sala (art. 9 c. 4 lett. c).",
    "La commissione completa le valutazioni entro 90 giorni dalla scadenza della finestra mensile; gli esiti arrivano per via elettronica (art. 7 c. 7)."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",
@@ -32170,6 +32195,7 @@ export const BANDI_DATI = [
    "Consegna alla Regione di tre copie dell’opera su supporto digitale: Art. 13 c. 2 lett. l): entro i termini della domanda di saldo, alla Direzione Beni, Attività Culturali e Sport.",
    "Comunicazione ad AVEPA di variazioni societarie, rinuncia o procedure concorsuali: Art. 13 c. 1 lett. b) e c): via PEC a protocollo@cert.avepa.it entro 30 giorni."
   ],
+  "obblighi": [],
   "erogazione": [
    {
     "quota": "anticipo",

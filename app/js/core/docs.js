@@ -30,7 +30,7 @@ const REGOLE = [
   ['modulo2', /modulo[\s_\-]*(ii|2)\b|scheda[\s_\-]*di[\s_\-]*produzione/],
   ['modulo1', /modulo[\s_\-]*(i|1)\b|istanza/],
   ['identita', /carta[\s_\-]*(d.?[\s_\-]*)?identit|documento[\s_\-]*(d.?[\s_\-]*)?identit|\bc\.?i\.?[\s_\-]+legale|passaporto|patente/],
-  ['green_film', /green[\s_\-]*film|certificazione[\s_\-]*ambientale|edenred|eco[\s_\-]*muvi/],
+  ['green_film', /green[\s_\-]*film|certificazione[\s_\-]*ambientale|abilitazione[\s_\-]*all.?uso[\s_\-]*del[\s_\-]*marchio|scelta[\s_\-]*dei[\s_\-]*criteri|piano[\s_\-]*di[\s_\-]*sostenibilit|edenred|eco[\s_\-]*muvi/],
   ['referenze_bancarie', /referenz\w*[\s_\-]*bancari|lettera[\s_\-]*(della[\s_\-]*)?banca/],
   ['piano_lavorazione', /piano[\s_\-]*di[\s_\-]*lavorazione|\bpdl\b|calendario[\s_\-]*riprese/],
   ['sceneggiatura', /sceneggiatura|screenplay|\bscript\b|trattamento|treatment|soggetto/],

@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.3',
+  versione: '2.0.4',
   rilascio: '2026-11-17',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,13 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.4', data: '2026-11-17', voci: [
+    'Green Film: nella scheda Produzione c’è il disciplinare ufficiale (Edizione 03 – 2024) con tutti i criteri. Scegli quelli che la produzione rispetterà e vedi i punti (minimo 25 su 65, 20 per le società EMAS), il margine, i documenti e le prove sul set da preparare per ogni criterio, il prerequisito obbligatorio e le scadenze della procedura; la scheda si scarica in CSV.',
+    'Le richieste Green Film compilate sull’edizione precedente del disciplinare (minimo 20 punti) vengono riconosciute e segnalate; la verifica formale controlla firma, organismo di verifica e punti dichiarati.',
+    'Gestione bando per la Sicilia: elenco dei 17 obblighi a pena di revoca del decreto di concessione, da spuntare fase per fase, compresa la certificazione ambientale da documentare a rendiconto.',
+    'Dagli atti di un caso reale: contenuto obbligatorio dell’accettazione del contributo, tempi effettivi tra graduatoria, concessione e notifica, modelli che arrivano con il decreto, approvazione dei titoli di testa e di coda, comunicazione delle variazioni della coproduzione.',
+    'Umbria Film Fund: registrati un esito reale (progetto non ammesso con 56 punti su un minimo di 60) e i tempi effettivi di valutazione.',
+  ] },
   { versione: '2.0.3', data: '2026-11-17', voci: [
     'Il programma impara dai punteggi reali: il voto dei criteri a giudizio è la media pesata tra i commissari simulati e la fascia ricavata dai casi reali, più una parte dello scarto osservato nei dossier di cui si conosce il punteggio vero. Sul dossier reale di prova lo scarto dal punteggio della Commissione è sceso da 3,7 a meno di un punto su 100.',
     '«Salva come caso di taratura» nel Report ora registra anche gli scarti numerici: ogni punteggio reale che inserisci corregge le stime successive dello stesso bando.',

@@ -8,6 +8,7 @@ import { vistaPiano } from './piano.js';
 import { vistaStoryboard } from './storyboard.js';
 import { vistaPreventivo } from './preventivo.js';
 import { vistaAdempimenti } from './adempimenti.js';
+import { vistaGreenFilm } from './greenfilm.js';
 
 const STATO_SICILIA = [{ id: 'si', nome: 'Sì' }, { id: 'no', nome: 'No' }, { id: '', nome: 'Da definire' }];
 const aStato = (v) => (v === true ? 'si' : v === false ? 'no' : '');
@@ -19,6 +20,7 @@ const SEZIONI = [
   ['storyboard', 'Storyboard', vistaStoryboard],
   ['preventivo', 'Preventivo', vistaPreventivo],
   ['adempimenti', 'Adempimenti', vistaAdempimenti],
+  ['green', 'Green Film', vistaGreenFilm],
 ];
 
 export function schedaProduzione(corpo, p, bando, mostra) {

@@ -102,6 +102,22 @@ function vistaTappe(area, ctx) {
   const { p, bando, g, leg } = ctx;
   const cambia = () => { salvaPresto(); conFuoco(area, disegna); };
 
+  // Obblighi del beneficiario a pena di revoca (dal bando): elenco per fase, con la spunta di ciò che è già a posto.
+  const FASI_OBBLIGHI = [['sempre', 'Per tutta la durata del progetto'], ['riprese', 'Riprese'], ['postproduzione', 'Titoli e materiali promozionali'], ['rendiconto', 'Rendicontazione'], ['uscita', 'Uscita e dopo']];
+  function pannelloObblighi() {
+    const lista = bando.obblighi || [];
+    if (!lista.length) return null;
+    g.obblighi = g.obblighi || {};
+    const fatti = lista.filter((o) => g.obblighi[o.id]).length;
+    return h('div.panel.stack', { id: 'gst-obblighi' },
+      h('div.spread', intro('Obblighi a pena di revoca', 'Sono gli impegni che il decreto di concessione elenca: se uno manca il contributo può essere revocato. Spunta quelli già rispettati o documentati.'),
+        h(`span.tag.${fatti === lista.length ? 'ok' : 'x'}`, `${fatti} su ${lista.length}`)),
+      FASI_OBBLIGHI.map(([fase, nome]) => {
+        const voci = lista.filter((o) => o.quando === fase);
+        return voci.length ? h('div.stack-s', h('div.label', nome), voci.map((o) => spunta(o.testo, !!g.obblighi[o.id], (v) => { g.obblighi[o.id] = v; cambia(); }, { id: `gst-obbligo-${idSicuro(o.id)}` }))) : null;
+      }));
+  }
+
   function termine(t, mia) {
     if (t.id === 'concessione') return null;
     if (t.origine === 'bando') {
@@ -182,7 +198,8 @@ function vistaTappe(area, ctx) {
           h('button.btn.s', { type: 'button', id: 'gst-nuova-scadenza', onclick: () => { g.scadenzeLibere.push({ id: `l${Date.now().toString(36)}`, etichetta: '', data: '', fatta: false, nota: '' }); salvaPresto(); disegna(); document.getElementById(`gst-lib-n-${g.scadenzeLibere.at(-1).id}`)?.focus(); } }, '+ Aggiungi scadenza')),
         st.altre.length ? h('ul.gst-libere', st.altre.map(altra)) : h('p.muted.small', 'Scadenze tue da tenere d’occhio: polizze, opzioni sui diritti, consegne, comunicazioni all’ente.'),
         st.note.length ? h('div.stack-s', h('div.label', 'Dal bando'), h('ul.gst-note', st.note.map((n) => h('li.small', n)))) : null,
-        proroga.length ? h('details.more.small', h('summary', 'Proroghe: che cosa dice l’avviso'), h('div.stack-s', proroga.map(citazione))) : null));
+        proroga.length ? h('details.more.small', h('summary', 'Proroghe: che cosa dice l’avviso'), h('div.stack-s', proroga.map(citazione))) : null),
+      pannelloObblighi());
   }
   disegna();
 }

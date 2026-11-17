@@ -440,6 +440,31 @@ export const BANDO_SICILIA = {
     'Uscita in sala o messa in onda (fruizione pubblica per documentari e cortometraggi): da documentare entro 6 mesi dalla liquidazione della seconda quota (art. 12 lett. q).',
     'Anticipo fino al 60% del contributo: solo con fideiussione bancaria o assicurativa (art. 16), e pagato nei limiti dell’impegno contabile dell’esercizio fissato nel decreto di concessione in base al cronoprogramma di spesa: se l’impegno dell’anno è più basso, la differenza slitta all’esercizio successivo (nel 2026 un anticipo chiesto per € 34.246,88 è stato pagato per € 28.000, il resto rinviato al 2027: D.D.S. n. 3950 del 04/11/2026).',
     'Prima della concessione: entro 15 giorni dalla notifica della graduatoria, a pena di decadenza, accettazione incondizionata del contributo, Patto di Integrità firmato e cronoprogramma di spesa (nel 2026 un beneficiario è decaduto così: D.D.G. n. 3304 del 30/09/2026).',
+    'L’accettazione va inviata via PEC e deve dire in modo esplicito che la società si fa carico con risorse proprie della differenza tra il contributo richiesto e quello concedibile, per chiudere a pareggio il piano finanziario del Modulo III; il Patto di Integrità va firmato digitalmente in PDF anche dai partner produttivi. Il silenzio oltre i 15 giorni vale come mancata accettazione.',
+    'Tempi osservati in un caso reale: graduatoria notificata al beneficiario circa 20 giorni dopo il decreto; decreto di concessione provvisoria circa due mesi e mezzo dopo la graduatoria (servono DURC regolare, visura Deggendorf e richiesta di informazione antimafia), notificato dopo altri 8 giorni. Con la notifica arrivano i modelli da usare: richiesta dell’anticipazione, schema di fideiussione, richiesta della seconda quota, richiesta del saldo, conto consuntivo e matrice di rendicontazione, schema di certificazione con asseverazione in forma di perizia giurata.',
+    'Titoli di testa e di coda e bozze dei materiali promozionali vanno mandati alla Sicilia Film Commission prima dell’uso, per l’approvazione dei loghi: in un caso reale la risposta è arrivata in 5 giorni, con la raccomandazione di rispettare le proporzioni tra il logo dell’Assessorato e quello della Film Commission.',
+    'Se cambia l’assetto della coproduzione (un coproduttore dichiarato nell’istanza non partecipa, cambiano le quote) va comunicato all’Amministrazione con una dichiarazione del capofila che riporti le nuove quote; il beneficiario deve comunque mantenere almeno il 20% dell’opera.',
+  ],
+  // Obblighi del beneficiario a pena di revoca del contributo: art. 12 dell'Avviso, come riportati in un decreto reale di
+  // concessione provvisoria. «quando» dice in che fase vanno rispettati.
+  obblighi: [
+    { id: 'investimento', quando: 'sempre', testo: 'Investimento sul territorio regionale pari alla percentuale indicata nell’istanza o, comunque, non inferiore alla fascia di riferimento delle tabelle di valutazione (art. 10).' },
+    { id: 'requisiti', quando: 'sempre', testo: 'Comunicare ogni modifica dei requisiti di ammissibilità (art. 5) intervenuta dopo l’istanza e prima della conclusione del progetto.' },
+    { id: 'variazioni', quando: 'sempre', testo: 'Comunicare qualsiasi variazione del progetto produttivo presentato, dalla valutazione fino alla rendicontazione finale.' },
+    { id: 'quota20', quando: 'sempre', testo: 'Mantenere la quota minima del 20% nella compartecipazione alla realizzazione dell’opera.' },
+    { id: 'archivio', quando: 'sempre', testo: 'Autorizzare l’Assessorato e i soggetti da lui indicati all’uso dell’opera per archivio cinematografico.' },
+    { id: 'avvio', quando: 'riprese', testo: 'Comunicare la data di avvio delle riprese nel territorio regionale.' },
+    { id: 'fine_riprese', quando: 'riprese', testo: 'Completare le riprese (le lavorazioni, per l’animazione) entro 18 mesi dalla notifica del decreto e comunicarlo.' },
+    { id: 'rendiconto', quando: 'rendiconto', testo: 'Presentare la rendicontazione entro 24 mesi dalla notifica del decreto.' },
+    { id: 'copie', quando: 'rendiconto', testo: 'Con la rendicontazione: tutta la documentazione contabile e due copie ad alta risoluzione dell’opera (una per la Filmoteca Regionale Siciliana, una per il Dipartimento).' },
+    { id: 'foto', quando: 'rendiconto', testo: 'Con la rendicontazione: cinque fotografie di scena in formato elettronico, con i diritti di uso istituzionale non commerciale.' },
+    { id: 'festival', quando: 'uscita', testo: 'Informare l’Amministrazione se l’opera è selezionata a festival, mostre o rassegne, perché possa presenziare.' },
+    { id: 'loghi_testa', quando: 'postproduzione', testo: 'Loghi dell’Amministrazione nei titoli di testa, con durata e dimensioni analoghe a quelli di produttori e coproduttori (solo menzione testuale se, per scelta artistica, nei titoli di testa non compaiono loghi, previa autorizzazione).' },
+    { id: 'loghi_coda', quando: 'postproduzione', testo: 'Gli stessi loghi nei titoli di coda e, in formato di stringa, sui materiali promozionali, anche se realizzati dopo la chiusura del progetto.' },
+    { id: 'green', quando: 'rendiconto', testo: 'Documentare la certificazione ambientale ottenuta e darle visibilità nei titoli di testa e di coda e in tutto il materiale promozionale.' },
+    { id: 'approvazione', quando: 'postproduzione', testo: 'Sottoporre prima dell’uso titoli di testa e di coda e bozze dei materiali promozionali all’approvazione della Sicilia Film Commission.' },
+    { id: 'trailer', quando: 'uscita', testo: 'Su richiesta, cedere un trailer di almeno 60 secondi per usi istituzionali non commerciali della Sicilia Film Commission.' },
+    { id: 'uscita', quando: 'uscita', testo: 'Documentare l’uscita in sala (film cinematografici), la messa in onda (film televisivi e serie) o la fruizione pubblica, anche SVOD (documentari e cortometraggi).' },
   ],
   // Modalità di erogazione (art. 16). L'avviso fissa due tetti cumulati: anticipo fino al 60%, seconda quota «fino alla
   // concorrenza del 90%»; il saldo è ciò che resta. Le percentuali qui sotto sono quelle del caso con anticipo pieno:
