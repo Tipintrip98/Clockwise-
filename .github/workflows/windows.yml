@@ -422,7 +422,4 @@ jobs:
           gh release create $tag (Join-Path $cartella $nomi.setup) (Join-Path $cartella $nomi.exe) (Join-Path $cartella $nomi.manuale) `
             --target $env:GITHUB_SHA --title "Clockwise $versione per Windows" --notes-file $note --latest
           if ($LASTEXITCODE -ne 0) { throw 'Pubblicazione della release non riuscita' }
-          # la vecchia release «windows» con i nomi senza versione non si usa più
-          gh release view windows *> $null
-          if ($LASTEXITCODE -eq 0) { gh release delete windows --cleanup-tag --yes }
           Write-Host "Pubblicato: $scarica/$($nomi.setup)"
