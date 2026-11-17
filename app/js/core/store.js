@@ -73,6 +73,11 @@ export async function eliminaBando(id) { await scrivi('bandi', (await bandiPerso
 export async function conoscenzaBando(id) { return (await leggi(`conoscenza:${id}`)) || []; }
 export async function salvaConoscenza(id, lista) { await scrivi(`conoscenza:${id}`, lista); }
 
+// casi reali per l'apprendimento (core/apprendimento.js): un caso per dossier, l'ultimo salvato sostituisce il precedente
+export async function casiReali() { return (await leggi('casi-reali')) || []; }
+export async function salvaCasoReale(caso) { const lista = [...(await casiReali()).filter((c) => c.id !== caso.id), caso]; await scrivi('casi-reali', lista); return lista; }
+export async function eliminaCasoReale(id) { const lista = (await casiReali()).filter((c) => c.id !== id); await scrivi('casi-reali', lista); return lista; }
+
 export async function impostazioni() { return (await leggi('impostazioni')) || {}; }
 export async function salvaImpostazioni(patch) { const v = { ...(await impostazioni()), ...patch }; await scrivi('impostazioni', v); return v; }
 

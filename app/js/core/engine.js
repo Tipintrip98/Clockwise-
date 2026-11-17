@@ -1,9 +1,10 @@
 // Orchestrazione della valutazione: commissari simulati per sezione, verifica formale, aggregazione.
-import { getGriglia, componiRisultato } from './scoring.js';
+import { getGriglia, getCategoria, componiRisultato } from './scoring.js';
 import { documentiPerSezione, byteLen } from './docs.js';
 import { PROFILI, promptSezione, promptVerifica, promptEstrazione, promptCondensa, promptBando, normalizzaBando } from './prompts.js';
 import { stimaByte, ErroreLlm } from './llm.js';
 import { ancoreTaratura, testoAncore, ancoreCompatte, scostamenti } from './ragionamento.js';
+import { correzioneValutazione, tuttiICasi } from './apprendimento.js';
 
 const UNICO = { id: 'unico', nome: 'Commissario', descrizione: 'esperto con competenze trasversali su scrittura, produzione e politiche territoriali, abituato a valutare istanze per fondi regionali.' };
 
@@ -95,7 +96,7 @@ function pulisciGiudizio(json, sezione) {
  * Esegue (o completa) la valutazione di un progetto.
  * onEvento({ passo, stato: 'in_corso'|'fatto'|'errore', testo?, pensiero?, messaggio? }) e onEvento({ nota })
  */
-export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvento = () => {}, signal, precedente = null }) {
+export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvento = () => {}, signal, precedente = null, casiReali = [] }) {
   const griglia = getGriglia(bando, progetto.categoriaId);
   const { passi, saltate, commissari } = pianoValutazione(bando, progetto, opzioni.commissari);
   const val = {
@@ -119,6 +120,10 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
     val.uso.chiamate++;
     if (r.uso) { val.uso.ingresso += r.uso.ingresso || 0; val.uso.uscita += r.uso.uscita || 0; val.uso.cacheLetta += r.uso.cacheLetta || 0; val.uso.cacheScritta += r.uso.cacheScritta || 0; }
     if (r.modello && !val.modelliUsati.includes(r.modello)) val.modelliUsati.push(r.modello);
+    if (r.ripiego && !val.note.some((n) => n.startsWith('Modello di ripiego'))) {
+      const n = `Modello di ripiego: ${r.ripiego.richiesto} non è disponibile per questo account, la lettura è stata fatta con ${r.ripiego.usato}.`;
+      val.note.push(n); onEvento({ nota: n });
+    }
   };
   const esegui = (passo, fn) => limita(async () => {
     if (signal?.aborted) return;
@@ -192,6 +197,10 @@ export async function eseguiValutazione({ bando, progetto, llm, opzioni, onEvent
   // esito della taratura: fasce usate e criteri in cui la media dei commissari ne esce (si segnala, non si corregge)
   if (ancore) {
     try {
+      // apprendimento dai casi reali: la correzione resta salvata con la valutazione (il punteggio non cambia da solo)
+      val.correzione = correzioneValutazione(ancore, griglia, tuttiICasi(casiReali), getCategoria(bando, progetto.categoriaId).griglia);
+    } catch (e) { val.note.push(`Correzione sui casi reali non applicata: ${e?.message || 'errore'}.`); }
+    try {
       const ris = componiRisultato(bando, progetto.categoriaId, progetto.dati, valutazioniPerCriterio(val));
       val.taratura = { ...ancoreCompatte(ancore), scostamenti: scostamenti(ris, ancore) };
     } catch (e) { val.note.push(`Controllo della taratura non riuscito: ${e?.message || 'errore'}.`); }
@@ -205,6 +214,8 @@ export function valutazioniPerCriterio(valutazione) {
   for (const lista of Object.values(valutazione?.giudizi || {})) {
     for (const g of lista) for (const c of g.criteri) (out[c.id] = out[c.id] || []).push({ commissario: g.commissario.nome, ...c });
   }
+  // la correzione appresa dai casi reali viaggia con i giudizi, senza comparire tra i criteri
+  if (valutazione?.correzione) Object.defineProperty(out, 'correzione', { value: valutazione.correzione, enumerable: false });
   return out;
 }
 

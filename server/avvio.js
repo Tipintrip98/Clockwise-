@@ -76,6 +76,34 @@ export function ascolta(server, porta) {
   });
 }
 
+/** Chiede a un Clockwise già avviato su questa porta di chiudersi (POST /api/esci). true = ha risposto. */
+export function chiediChiusura(porta, attesaMs = 5000) {
+  return new Promise((ok) => {
+    const req = http.request({ host: '127.0.0.1', port: porta, path: '/api/esci', method: 'POST', headers: { 'content-length': 0 }, timeout: attesaMs }, (res) => { res.resume(); res.on('end', () => ok(res.statusCode === 200)); res.on('error', () => ok(false)); });
+    req.on('timeout', () => { req.destroy(); ok(false); });
+    req.on('error', () => ok(false));
+    req.end();
+  });
+}
+
+/**
+ * Avvio con sostituzione: se sulla porta risponde un Clockwise di un'ALTRA versione (quella vecchia rimasta aperta
+ * dopo un aggiornamento), gli si chiede di chiudersi e si avvia questa. Con la stessa versione resta quello aperto.
+ * @returns {Promise<{porta: number, giaAvviato: boolean, stato?: object, sostituita?: string}>}
+ */
+export async function avviaSostituendo(server, preferita, versione, { attesaMs = 8000, pausaMs = 400, giri = 20 } = {}) {
+  let esito = await avviaSuPortaLibera(server, preferita, { attesaMs });
+  if (!esito.giaAvviato || !versione || esito.stato?.versione === versione) return esito;
+  const vecchia = esito.stato?.versione || 'sconosciuta';
+  if (!(await chiediChiusura(esito.porta))) return esito; // non si chiude: meglio riaprire quella che c'è
+  for (let i = 0; i < giri; i++) {
+    await new Promise((ok) => setTimeout(ok, pausaMs));
+    if (await ascolta(server, esito.porta)) return { porta: esito.porta, giaAvviato: false, sostituita: vecchia };
+  }
+  esito = await avviaSuPortaLibera(server, preferita, { attesaMs });
+  return esito.giaAvviato ? esito : { ...esito, sostituita: vecchia };
+}
+
 /**
  * Mette il server in ascolto sulla porta preferita o, se è occupata da altro, sulla prima libera
  * dopo di lei. Se sulla porta occupata risponde già Clockwise non avvia niente.

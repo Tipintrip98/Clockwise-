@@ -144,7 +144,7 @@ function llmServer(tipo) {
       if (!fine) throw new ErroreLlm('server', 'Risposta interrotta prima della fine.');
       const json = schema ? (fine.json ?? estraiJson(fine.testo || testo)) : undefined;
       if (schema && json === undefined) throw new ErroreLlm('invalid_json', 'La risposta non era nel formato atteso. Riprova.');
-      return { json, testo: fine.testo || testo, modello: fine.modello, troncato: !!fine.troncato, uso: fine.uso || null };
+      return { json, testo: fine.testo || testo, modello: fine.modello, troncato: !!fine.troncato, uso: fine.uso || null, ripiego: fine.ripiego || null };
     },
   };
 }

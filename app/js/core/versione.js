@@ -2,8 +2,8 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.2',
-  rilascio: '2026-11-15',
+  versione: '2.0.3',
+  rilascio: '2026-11-17',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
   sito: 'https://www.davidetipaldi.it',
@@ -12,6 +12,14 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.3', data: '2026-11-17', voci: [
+    'Il programma impara dai punteggi reali: il voto dei criteri a giudizio è la media pesata tra i commissari simulati e la fascia ricavata dai casi reali, più una parte dello scarto osservato nei dossier di cui si conosce il punteggio vero. Sul dossier reale di prova lo scarto dal punteggio della Commissione è sceso da 3,7 a meno di un punto su 100.',
+    '«Salva come caso di taratura» nel Report ora registra anche gli scarti numerici: ogni punteggio reale che inserisci corregge le stime successive dello stesso bando.',
+    '«Prova il collegamento»: una richiesta reale di una riga a Claude, con il collegamento e il modello scelti, per sapere subito se le valutazioni funzioneranno su questo computer. La stessa prova entra nel rapporto di diagnosi.',
+    'Se il modello scelto non è disponibile per il tuo abbonamento Clockwise ripiega da solo sul modello successivo e lo indica nel report, invece di fermarsi.',
+    'Dopo un aggiornamento, la versione nuova chiude da sola quella vecchia rimasta aperta: prima si riapriva la vecchia.',
+    'Messaggi di errore del collegamento più precisi: accesso mancante, limite di utilizzo, server sovraccarichi, rete.',
+  ] },
   { versione: '2.0.2', data: '2026-11-15', voci: [
     'Il numero di versione è accanto al nome, in alto a sinistra, e in tutti i file pubblicati: Clockwise-Setup-2.0.2.exe, Clockwise-2.0.2.exe, Manuale-Clockwise-2.0.2.pdf.',
     'Ogni versione ha la sua pagina di rilascio su GitHub (v2.0.2); l’indirizzo «releases/latest» porta sempre all’ultima.',

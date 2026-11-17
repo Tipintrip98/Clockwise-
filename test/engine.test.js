@@ -43,11 +43,20 @@ test('valutazione completa: tre commissari, media e verifica formale', async () 
   assert.equal(val.verifica.controlli[0].esito, 'critico');
   const ris = componiRisultato(B, 'film', p.dati, valutazioniPerCriterio(val));
   const cr = (id) => ris.sezioni.flatMap((s) => s.criteri).find((c) => c.id === id);
-  assert.equal(cr('1.1').punti, 6, 'media di 5, 6 e 7');
-  assert.equal(cr('1.1').min, 5);
+  // la media dei commissari resta leggibile; il voto finale è corretto con la fascia dei casi reali (core/apprendimento.js)
+  assert.equal(cr('1.1').taratura.grezzo, 6, 'media di 5, 6 e 7');
+  const k = val.correzione.criteri['1.1'];
+  assert.ok(k.peso > 0 && k.peso <= 0.5);
+  assert.equal(cr('1.1').punti, Math.round((6 + k.peso * (k.centro - 6) + k.casi) * 10) / 10);
+  assert.equal(Math.round((cr('1.1').max - cr('1.1').min) * 10) / 10, 2, 'la forbice tra i commissari resta quella');
+  // senza la correzione salvata (valutazioni delle versioni precedenti) il risultato è la media semplice
+  const senza = componiRisultato(B, 'film', p.dati, valutazioniPerCriterio({ ...val, correzione: null }));
+  const c11 = senza.sezioni.flatMap((s) => s.criteri).find((c) => c.id === '1.1');
+  assert.equal(c11.punti, 6); assert.equal(c11.min, 5); assert.equal(c11.taratura, undefined);
   assert.equal(cr('5.1').punti, 12.8, 'copertura riconosciuta 75% → fascia 71-80');
   assert.equal(cr('5.2').punti, 2, '2,4 riportato al valore ammesso più vicino');
-  assert.equal(cr('5.3').punti, 4, 'limitato al massimo');
+  assert.equal(cr('5.3').taratura.grezzo, 4, 'voto dei commissari limitato al massimo del criterio');
+  assert.ok(cr('5.3').punti <= 4);
   // i documenti sono il prefisso identico per tutti i commissari della stessa sezione (cache)
   const sezA = llm.richieste.filter((r) => r.compito.includes('della sezione A'));
   assert.equal(sezA.length, 3);

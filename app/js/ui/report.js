@@ -6,6 +6,9 @@ import { getCategoria, getGriglia, elencoCriteri, verificheAmmissibilita, sugger
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 import { pianoMiglioramento, titoloEsito } from '../core/report-dati.js';
 import { taraturaDossier } from '../core/ragionamento.js';
+import { casoDaDossier, descriviCorrezione } from '../core/apprendimento.js';
+import { salvaCasoReale } from '../core/store.js';
+import { APP } from '../core/versione.js';
 import { scaricaReportPdf } from './pdf.js';
 
 /* ------------------------------------------------------------------ taratura sui casi reali */
@@ -42,7 +45,7 @@ function rigaTaratura(a, sc) {
 }
 
 let domandeAperteUi = false; // dopo una risposta l'elenco delle domande resta aperto
-function pannelloTaratura(tar, p, ridisegna) {
+function pannelloTaratura(tar, p, ridisegna, ris) {
   if (!tar) return null;
   const sc = tar.scostamenti;
   const rispondi = (fatto, valore, id) => {
@@ -66,7 +69,12 @@ function pannelloTaratura(tar, p, ridisegna) {
         sc ? h(`span.tag.${sc.fuori ? (sc.marcati ? 'bad' : 'warn') : 'ok'}`, sc.fuori ? `${sc.fuori} fuori fascia su ${sc.valutati}` : `${sc.valutati} su ${sc.valutati} nella fascia`) : h('span.tag.x', 'Valutazione non ancora fatta'),
         h('span.tag.x', `regole ${tar.versione}`))),
     h('p', { style: { maxWidth: '80ch' } }, sc ? sc.sintesi : `Stima dalle sole regole: ${fmt(tar.stima?.totale)} punti (da ${fmt(tar.stima?.min)} a ${fmt(tar.stima?.max)}). Dopo la valutazione qui vedi se i commissari simulati escono dalle fasce.`),
-    h('p.muted.small', { style: { maxWidth: '80ch' } }, 'Ogni criterio ha una fascia attesa e una rigorosa, calcolate dai fatti verificabili del dossier (allegati, firme, piano finanziario, figure dichiarate) con regole ricavate dal confronto tra simulazioni e punteggi reali della Commissione. Le fasce sono passate ai commissari simulati; una media fuori fascia non viene corretta: va letta la motivazione.'),
+    h('p.muted.small', { style: { maxWidth: '80ch' } }, 'Ogni criterio ha una fascia attesa e una rigorosa, calcolate dai fatti verificabili del dossier (allegati, firme, piano finanziario, figure dichiarate) con regole ricavate dal confronto tra simulazioni e punteggi reali della Commissione. Le fasce sono passate ai commissari simulati.'),
+    (() => { const k = descriviCorrezione(p.valutazione?.correzione, ris); return k ? h('div.notice.info', { id: 'nota-apprendimento' },
+      h('strong', `Apprendimento dai casi reali: ${k.totale >= 0 ? '+' : '−'}${fmt(Math.abs(k.totale))} punti sul totale. `),
+      `Il voto di ${k.criteri} criteri a giudizio è la media pesata tra i commissari simulati e la fascia ricavata dai casi reali (${k.regole >= 0 ? '+' : '−'}${fmt(Math.abs(k.regole))})`,
+      k.nCasi ? `, più una parte dello scarto osservato in ${k.nCasi} ${k.nCasi === 1 ? 'dossier' : 'dossier'} di cui si conosce il punteggio vero (${k.casi >= 0 ? '+' : '−'}${fmt(Math.abs(k.casi))})` : '',
+      '. I criteri calcolati, quelli con una tabella del bando e la lettura rigorosa non vengono toccati. In ogni criterio trovi la media dei commissari prima della correzione.') : null; })(),
     tar.cambiate ? h('div.notice.warn', 'Documenti o dati sono cambiati dopo la valutazione: qui vedi le fasce usate allora. Ripeti la valutazione per applicare quelle nuove.') : null,
     sc?.fuori ? h('ul.tar-elenco', sc.criteri.filter((x) => x.stato !== 'dentro').map((x) => h('li',
       h('strong', `${x.id} · ${x.nome}`),
@@ -109,6 +117,11 @@ function schedaCriterio(c, def, tar = null) {
   const sc = tar?.scostamenti?.criteri?.find((x) => x.id === c.id) || null;
   if (def.descrizione) corpo.push(h('p.muted.small', def.descrizione));
   if (ancora) corpo.push(rigaTaratura(ancora, sc));
+  if (c.taratura && Math.abs(c.punti - c.taratura.grezzo) >= 0.05) {
+    const parte = (k, testo) => (Math.abs(k) >= 0.05 ? `${k > 0 ? '+' : '−'}${fmt(Math.abs(r1(k)))} ${testo}` : null);
+    corpo.push(h('div.small.tar-corretto', h('strong', `Media dei commissari ${fmt(c.taratura.grezzo)} → voto ${fmt(c.punti)}`), ': ',
+      [parte(c.taratura.regole, 'dalla fascia dei casi reali'), parte(c.taratura.casi, 'dagli scarti osservati nei dossier con punteggio noto')].filter(Boolean).join(', '), '.'));
+  }
   if (c.fonte === 'calcolo' || c.fonte === 'dichiarato') {
     corpo.push(c.mancante ? h('div.notice.warn', 'Dato mancante: compila i Dati chiave.')
       : h('div', h('strong', c.valoreTesto), c.dettaglio ? ` (${c.dettaglio})` : '', ' → fascia “', c.fascia, '”', h('div.muted.small', `Calcolo: ${c.formula}.`)));
@@ -181,7 +194,7 @@ export function schedaReport(corpo, p, bando) {
       piano.punti.length ? h('ul.actions', piano.punti.map((v) => h('li', h('div', v.testo), h('div.g', `+${fmt(v.punti)}`), h('div.w', v.dove)))) : null,
       piano.punti.length ? h('p.muted.small', { style: { marginTop: '8px' } }, 'I punti indicati sono stime per singolo intervento e non si sommano automaticamente.') : null) : null,
 
-    pannelloTaratura(tar, p, () => schedaReport(svuota(corpo), p, bando)),
+    pannelloTaratura(tar, p, () => schedaReport(svuota(corpo), p, bando), ris),
 
     ris.sezioni.map((sez) => h('section',
       h('div.sec-h',
@@ -290,8 +303,11 @@ function confrontoReale(p, bando, ris) {
           ...Object.entries(val?.giudizi || {}).flatMap(([sid, lista]) => lista.filter((g) => g.sintesi).slice(0, 1).map((g) => `Profilo del dossier, sezione ${sid}: ${g.sintesi}`)),
         ].join('\n');
         await aggiungiConoscenza(bando, { id: `taratura-${p.id}`, nome: `Caso reale — ${p.dati.titolo || p.nome} (${p.anno})`, testo, caratteri: testo.length });
-        toast('Caso salvato nella conoscenza del bando');
-      } }, 'Salva come caso di taratura'), h('span.muted.small', ' Claude lo leggerà nelle prossime valutazioni di questo bando.')) : null);
+        // oltre al testo per Claude, gli scarti numerici: correggono le prossime stime di questo bando (core/apprendimento.js)
+        const caso = casoDaDossier({ id: p.id, bandoId: bando.id, griglia: getCategoria(bando, p.categoriaId).griglia, categoriaId: p.categoriaId, anno: p.anno, versione: APP.versione, ris, reale: p.reale });
+        if (caso) await salvaCasoReale(caso);
+        toast(caso ? 'Caso salvato: le prossime stime di questo bando ne terranno conto' : 'Caso salvato nella conoscenza del bando');
+      } }, 'Salva come caso di taratura'), h('span.muted.small', ' Claude lo leggerà nelle prossime valutazioni di questo bando e il programma correggerà le stime con lo scarto osservato.')) : null);
   };
   const aggiornaEsito = () => { clearTimeout(aggiornaEsito.t); aggiornaEsito.t = setTimeout(() => { const attivo = document.activeElement?.id; disegna(); if (attivo) { const el = document.getElementById(attivo); if (el) { el.focus(); const v = el.value; el.value = ''; el.value = v; } } }, 600); };
   disegna();

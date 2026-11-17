@@ -12,6 +12,36 @@ function preferenze() {
     h('p.muted.small', { style: { maxWidth: '75ch' } }, 'Fable 5.2 è il modello più capace e quello consigliato per giudicare una sceneggiatura. Se non è disponibile per il tuo account, il collegamento usa il modello più vicino e lo indica nel report.'));
 }
 
+// Prova reale: una richiesta minima a Claude con il collegamento e il modello scelti. Dice se tutto il percorso funziona.
+const nomeModello = (id) => MODELLI.find((m) => m.id === id)?.nome || id;
+function pannelloProva() {
+  const tipo = llmAttivo()?.tipo;
+  const area = h('div', { id: 'esito-prova' });
+  const esegui = async (b) => {
+    b.disabled = true;
+    metti(svuota(area), h('div.notice', h('span.spin'), ' Mando a Claude una richiesta di prova…'));
+    try {
+      const r = await fetch('api/prova', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ provider: tipo, modello: S.imp.modello }) });
+      const p = await r.json();
+      if (p.ok) {
+        metti(svuota(area), h(`div.notice.${p.ripiego ? 'warn' : 'info'}`, h('strong', `Funziona: ${nomeModello(p.modello)} ha risposto in ${(p.ms / 1000).toLocaleString('it-IT', { maximumFractionDigits: 1 })} secondi. `),
+          p.ripiego ? `${nomeModello(p.richiesto)} non è disponibile per questo account: Clockwise userà ${nomeModello(p.modello)} e lo indicherà nel report.` : 'Puoi avviare le valutazioni.'));
+      } else {
+        metti(svuota(area), h('div.notice.bad', h('strong', 'La prova non è riuscita. '), p.messaggio || 'Errore sconosciuto.',
+          p.codice === 'login' ? ' Premi «Accedi» qui sopra.' : p.codice === 'rete' || p.codice === 'tempo' ? ' Poi usa «Esegui la diagnosi» per il dettaglio.' : ''));
+      }
+    } catch (e) { metti(svuota(area), h('div.notice.bad', `Il server locale di Clockwise non risponde: ${e.message}`)); }
+    b.disabled = false;
+  };
+  return h('div.panel.stack',
+    h('div.spread', h('div', h('div.label', 'Verifica'), h('h2', 'Prova il collegamento')),
+      h('button.btn.primary', { type: 'button', id: 'btn-prova', disabled: !tipo, onclick: (e) => esegui(e.currentTarget) }, 'Prova adesso')),
+    h('p.muted.small', { style: { maxWidth: '75ch' } }, tipo
+      ? 'Manda a Claude una richiesta di una riga con il collegamento e il modello scelti e aspetta la risposta: se arriva, le valutazioni funzioneranno. Consuma una quantità trascurabile di utilizzo.'
+      : 'Prima collega Claude qui sopra (account oppure chiave API).'),
+    area);
+}
+
 function schedaApp() {
   return h('div.panel.stack',
     h('div.spread', h('h2', 'Account Claude'), h('span.tag.ok', h('span.dot.ok'), 'Collegato')),
@@ -165,6 +195,7 @@ export function vistaCollegamento(main) {
       amb === 'attesa' ? h('div.panel', h('span.spin'), ' Verifica del collegamento a Claude…')
         : amb === 'app' ? schedaApp() : amb === 'locale' ? schedaLocale(ridisegna) : schedaNessuno(),
       amb === 'app' || amb === 'locale' ? preferenze() : null,
+      amb === 'locale' ? pannelloProva() : null,
       amb === 'locale' ? pannelloDiagnosi() : null,
       h('p.muted.small', { style: { maxWidth: '80ch' } }, 'Riservatezza: i file del dossier restano su questo dispositivo. A Claude viene inviato il testo dei documenti che servono a ciascuna valutazione, attraverso il collegamento scelto qui sopra e a nessun altro servizio. Il documento d’identità non viene mai inviato.'));
     aggiornaPillola();

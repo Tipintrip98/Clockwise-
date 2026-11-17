@@ -2,6 +2,7 @@
 // Non usa l'AI: tutto ciò che il bando definisce con numeri si calcola qui.
 
 import { METRICHE } from './bandi/schema.js';
+import { correggi } from './apprendimento.js';
 
 export const r1 = (n) => Math.round((n + Number.EPSILON) * 10) / 10;
 const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
@@ -260,6 +261,13 @@ export function componiRisultato(bando, categoriaId, dati, valutazioni = {}) {
       } else if (giudizi.length) {
         const pts = giudizi.map((g) => g.punti);
         r = { id: c.id, punti: r1(media(pts)), min: Math.min(...pts), max: Math.max(...pts), fonte: 'commissione', avvisi: [], mancante: false };
+        // apprendimento dai casi reali (core/apprendimento.js): solo giudizi puri, mai i criteri con una tabella del bando
+        const t = c.tipo !== 'fasce' && c.tipo !== 'discreto' ? valutazioni.correzione?.criteri?.[c.id] : null;
+        if (t) {
+          const k = correggi(r.punti, t, c.max), d = k.punti - k.grezzo;
+          r.taratura = { grezzo: k.grezzo, regole: k.regole, casi: k.casi };
+          r.punti = k.punti; r.min = r1(clamp(r.min + d, 0, c.max)); r.max = r1(clamp(r.max + d, 0, c.max));
+        }
         // lettura rigorosa: i punti che resterebbero applicando alla lettera i principi di attribuzione
         const rig = giudizi.map((g) => num(g.rigoroso)).filter((v) => v != null).map((v) => clamp(v, 0, c.max));
         if (rig.length) r.rigoroso = r1(Math.min(media(rig), r.punti));

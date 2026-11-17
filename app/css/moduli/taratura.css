@@ -47,3 +47,6 @@
   .tar-domande .row { display: none; }
   .tar-crit { break-inside: avoid; }
 }
+
+/* voto corretto con l'apprendimento dai casi reali */
+.tar-corretto { padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: var(--r-s); overflow-wrap: anywhere; }

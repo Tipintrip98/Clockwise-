@@ -135,7 +135,16 @@ Nella scheda **Legale**:
 
 ### Prova con un dossier già presentato
 
-Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decreto di graduatoria), caricalo, avvia la valutazione e inserisci i punteggi reali nel riquadro **Prova con un punteggio reale** del report: vedi lo scarto sezione per sezione. Con "Salva come caso di taratura" il caso entra nella conoscenza del bando e Claude ne tiene conto nelle valutazioni successive.
+Se di un dossier conosci il punteggio reale (è pubblicato per sezione nel decreto di graduatoria), caricalo, avvia la valutazione e inserisci i punteggi reali nel riquadro **Prova con un punteggio reale** del report: vedi lo scarto sezione per sezione. Con "Salva come caso di taratura" il caso entra nella conoscenza del bando (Claude ne tiene conto nelle valutazioni successive) e i suoi scarti numerici correggono le stime successive dello stesso bando.
+
+### Apprendimento dai casi reali
+
+Il voto dei criteri a giudizio nasce in due passi (`app/js/core/apprendimento.js`), dichiarati nel report criterio per criterio:
+
+1. **Regole**: media pesata tra i commissari simulati e il centro della fascia che il motore di regole ricava dai casi reali (peso 0,5 se la regola ha un riscontro diretto in un caso reale, 0,25 se è un'estrapolazione).
+2. **Casi**: per sezione, una parte dello scarto medio (reale − stima) osservato nei dossier di cui si conosce il punteggio vero, incorporati e salvati dall'utente: `n ÷ (n + 1)` dello scarto medio, con un tetto dell'8% della sezione.
+
+Criteri calcolati, criteri con una tabella del bando e lettura rigorosa non si correggono. Sul dossier reale di prova: commissari senza fasce 85,8; con le fasce nel prompt 87,9; con le regole 88,6; con i casi 89,1; punteggio vero 89,5. È lo stesso caso su cui il programma è tarato: serve un secondo dossier reale per una misura fuori campione.
 
 ## Come nasce il punteggio
 
@@ -197,7 +206,7 @@ Nella pagina **Bandi**:
 - La taratura del motore di ragionamento poggia su un solo dossier reale (finanziato, lungometraggio, Sicilia) più le graduatorie: documentari, cortometraggi e famiglie di criteri assenti in Sicilia sono estrapolazioni. Un secondo caso reale, meglio se escluso, serve a confermarla.
 - Le griglie degli altri bandi sono verificate sul testo ufficiale, ma per nessuno di loro c'è ancora una prova su un dossier reale: la stima vale come controllo della struttura del dossier rispetto alla griglia.
 - Costi di fideiussione, sconto del tax credit, finanziamento ponte e percentuali del piano di recupero sono stime di mercato senza fonte ufficiale: vanno sostituiti con i valori reali.
-- Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su Linux; su Windows usa l'installazione nativa di Claude Code.
+- Il collegamento con chiave API è verificato con test automatici su un servizio simulato, non ancora con una chiave reale. Il collegamento con account Claude è provato dal vivo su Linux (richieste reali, compreso il ripiego di modello); su Windows la build prova su due versioni del sistema l'installazione di Claude Code dal pulsante, la ricerca, la diagnosi e il riconoscimento dell'accesso mancante. La richiesta reale su Windows parte solo se nei segreti del repository c'è `CLAUDE_CODE_OAUTH_TOKEN` (creato con `claude setup-token`).
 
 ## Per chi sviluppa
 

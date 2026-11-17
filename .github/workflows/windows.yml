@@ -251,12 +251,100 @@ jobs:
             docs/Manuale-Clockwise.pdf
           if-no-files-found: error
 
+  # ---- Prova su macchine Windows diverse, come farebbe un utente: si installa con l'installatore, si avvia il
+  #   programma installato, si preme «Installa Claude Code» (stessa strada del pulsante), si fa la richiesta reale di
+  #   prova e la diagnosi. Senza un account la richiesta deve fallire con il codice «login» (è la verifica che
+  #   Clockwise riconosce bene la situazione); con il segreto CLAUDE_CODE_OAUTH_TOKEN (creato con «claude setup-token»)
+  #   la richiesta deve riuscire davvero.
+  macchine:
+    name: Collegamento reale su ${{ matrix.os }}
+    needs: pacchetto
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-2025]
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: File costruiti
+        uses: actions/download-artifact@v4
+        with:
+          name: clockwise-windows
+          path: scaricati
+
+      - name: Installazione, Claude Code e richiesta reale
+        env:
+          CLOCKWISE_NO_BROWSER: '1'
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          HA_ACCOUNT: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Write-Host "Macchina: $((Get-CimInstance Win32_OperatingSystem).Caption) build $([Environment]::OSVersion.Version.Build), $env:PROCESSOR_ARCHITECTURE"
+          $setup = Get-ChildItem -Recurse 'scaricati' -Filter 'Clockwise-Setup-*.exe' | Select-Object -First 1
+          if (-not $setup) { throw 'Installatore non trovato tra i file della build' }
+          $i = Start-Process -FilePath $setup.FullName -ArgumentList '/S' -Wait -PassThru
+          if ($i.ExitCode -ne 0) { throw "L'installatore è uscito con codice $($i.ExitCode)" }
+          $exe = Join-Path $env:LOCALAPPDATA 'Programs\Clockwise\Clockwise.exe'
+          if (-not (Test-Path $exe)) { throw "Dopo l'installazione manca $exe" }
+          $base = 'http://127.0.0.1:5757'
+          $corpo = @{ 'Content-Type' = 'application/json' }
+          $p = Start-Process -FilePath $exe -PassThru -NoNewWindow
+          try {
+            $stato = $null; $limite = (Get-Date).AddSeconds(60)
+            while (-not $stato -and -not $p.HasExited -and (Get-Date) -lt $limite) { try { $stato = Invoke-RestMethod "$base/api/stato" -TimeoutSec 30 } catch { Start-Sleep -Milliseconds 500 } }
+            if (-not $stato) { throw 'Il programma installato non risponde' }
+            Write-Host "Avviato Clockwise $($stato.versione); Claude Code prima: $($stato.claudeCode | ConvertTo-Json -Compress)"
+
+            # 1) il pulsante «Installa Claude Code»
+            if ($stato.claudeCode.installato -ne $true) {
+              $r = Invoke-RestMethod "$base/api/claude/installa" -Method Post -TimeoutSec 900
+              Write-Host "--- uscita dell'installatore di Claude Code ---"; Write-Host $r.uscita
+              if ($r.ok -ne $true) { throw 'Il pulsante «Installa Claude Code» non è riuscito' }
+              $stato = $r.stato
+            }
+            if ($stato.claudeCode.installato -ne $true -or -not $stato.claudeCode.versione) { throw 'Dopo l’installazione Clockwise non vede Claude Code' }
+            Write-Host "Claude Code: $($stato.claudeCode.versione) in $($stato.claudeCode.percorso) [$($stato.claudeCode.origine)], accesso: $($stato.claudeCode.loggato)"
+
+            # 2) la richiesta reale di prova
+            $prova = Invoke-RestMethod "$base/api/prova" -Method Post -Headers $corpo -Body '{"provider":"claude-code","modello":"claude-fable-5-2"}' -TimeoutSec 300
+            Write-Host "Prova reale: $($prova | ConvertTo-Json -Compress -Depth 5)"
+            if ($env:HA_ACCOUNT -eq 'true') {
+              if ($prova.ok -ne $true) { throw "Con l'account configurato la richiesta reale a Claude non è riuscita: [$($prova.codice)] $($prova.messaggio)" }
+              Write-Host "RICHIESTA REALE RIUSCITA: $($prova.modello) ha risposto «$($prova.risposta)» in $($prova.ms) ms"
+            } else {
+              if ($prova.ok -eq $true) { throw 'La prova è riuscita senza account: inatteso' }
+              if ($prova.codice -ne 'login') { throw "Senza account Clockwise doveva riconoscere l'accesso mancante (codice «login»), invece: [$($prova.codice)] $($prova.messaggio)" }
+              Write-Host 'Senza account: accesso mancante riconosciuto correttamente (per la richiesta reale serve il segreto CLAUDE_CODE_OAUTH_TOKEN)'
+            }
+
+            # 3) la diagnosi
+            $d = Invoke-RestMethod "$base/api/diagnosi" -TimeoutSec 300
+            Write-Host '--- diagnosi ---'; Write-Host $d.testo
+            if ($d.claudeCode.trovato -ne $true) { throw 'La diagnosi non trova Claude Code' }
+            if (($d.rete | Where-Object { $_.url -match 'api.anthropic.com' }).ok -ne $true) { throw 'La diagnosi dice che api.anthropic.com non è raggiungibile' }
+
+            # 4) il pulsante «Accedi» deve avviare l'accesso (qui nessuno lo completa: si chiude il processo)
+            $a = Invoke-RestMethod "$base/api/claude/accedi" -Method Post -TimeoutSec 60
+            if ($a.ok -ne $true) { throw '«Accedi» non ha avviato l’accesso' }
+            Start-Sleep -Seconds 5
+            $login = Get-CimInstance Win32_Process -Filter "Name = 'claude.exe'" | Where-Object { $_.CommandLine -match 'auth\s+login' }
+            if ($login) { Write-Host "Accesso avviato (processo $($login.ProcessId)): lo chiudo"; $login | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue } }
+            elseif ($env:HA_ACCOUNT -ne 'true') { Write-Host '::warning::Dopo «Accedi» non risulta il processo di accesso di Claude Code' }
+
+            Invoke-RestMethod "$base/api/esci" -Method Post | Out-Null
+            if (-not $p.WaitForExit(15000)) { throw 'Il programma non si chiude' }
+            Write-Host 'Programma installato: installazione di Claude Code, prova reale, diagnosi e accesso a posto'
+          } finally { if (-not $p.HasExited) { $p.Kill() } }
+
   # ---- Solo su richiesta: i file provati sopra vengono pubblicati nella release della versione, v<versione>,
   #   con il numero di versione in ogni nome di file (es. Clockwise-Setup-2.0.1.exe) e segnata come «Latest»:
   #   https://github.com/<proprietario>/<repository>/releases/latest porta sempre all'ultima.
   rilascio:
     name: Release della versione
-    needs: pacchetto
+    needs: [pacchetto, macchine]
     if: github.event_name == 'workflow_dispatch' && inputs.pubblica
     runs-on: windows-latest
     timeout-minutes: 15

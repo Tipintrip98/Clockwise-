@@ -6,7 +6,7 @@ import { trascriviScansione, AVVISO_TRASCRIZIONE } from '../core/scansioni.js';
 import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti } from '../core/scoring.js';
 import { MODELLI, IMPEGNI } from '../core/llm.js';
 import { pianoValutazione, eseguiValutazione, estraiDati } from '../core/engine.js';
-import { nuovoId } from '../core/store.js';
+import { nuovoId, casiReali } from '../core/store.js';
 import { schedaReport } from './report.js';
 import { schedaProduzione } from './produzione.js';
 import { schedaLegale } from './legale.js';
@@ -377,6 +377,7 @@ function schedaValutazione(corpo, p, bando, mostra) {
     try {
       const val = await eseguiValutazione({
         bando, progetto: p, llm, signal: corsa.controller.signal,
+        casiReali: await casiReali().catch(() => []),
         opzioni: { commissari: S.imp.commissari, modello: S.imp.modello, impegno: S.imp.impegno },
         precedente: soloMancanti ? p.valutazione : null,
         onEvento: (ev) => {

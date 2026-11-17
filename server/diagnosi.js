@@ -28,7 +28,7 @@ function raggiungibile(url, timeout = 6000) {
 }
 
 /** Rapporto completo, come oggetto. `api` = { configurata, origine }. */
-export async function diagnosi({ versione, eseguibile, api }) {
+export async function diagnosi({ versione, eseguibile, api, prova = null }) {
   const env = process.env;
   const win = process.platform === 'win32';
   const chiavePath = Object.keys(env).find((k) => k.toLowerCase() === 'path') || 'PATH';
@@ -41,6 +41,9 @@ export async function diagnosi({ versione, eseguibile, api }) {
     : [path.join(os.homedir(), 'Library', 'Application Support', 'Claude'), '/Applications/Claude.app'];
   const rete = await Promise.all(['https://api.anthropic.com/', 'https://claude.ai/', 'https://downloads.claude.ai/'].map((u) => raggiungibile(u)));
   const proxy = ['HTTPS_PROXY', 'HTTP_PROXY', 'https_proxy', 'http_proxy', 'NO_PROXY'].filter((k) => env[k]);
+  // prova reale: una richiesta minima a Claude, solo se Claude Code c'è e l'accesso risulta fatto
+  let reale = null;
+  if (prova && t.percorso && accesso?.loggato) { try { reale = await prova(); } catch (e) { reale = { ok: false, codice: 'errore', messaggio: e.message }; } }
 
   const problemi = [];
   if (!t.percorso) {
@@ -51,6 +54,8 @@ export async function diagnosi({ versione, eseguibile, api }) {
   }
   if (t.percorso && accesso && !accesso.loggato) problemi.push('Claude Code è installato ma non è collegato a un account: usa «Accedi con il tuo account Claude».');
   if (rete.some((r) => r.url.includes('api.anthropic.com') && !r.ok)) problemi.push('Questo computer non raggiunge api.anthropic.com: controlla la connessione, il firewall o il proxy aziendale.');
+  if (reale && !reale.ok) problemi.push(`La richiesta di prova a Claude non è riuscita: ${reale.messaggio}`);
+  if (reale?.ok && reale.ripiego) problemi.push(`Il modello ${reale.richiesto} non è disponibile per questo account: Clockwise usa ${reale.modello}. Per usare il modello più capace serve un abbonamento che lo includa.`);
   if (!t.percorso && !api.configurata && !problemi.length) problemi.push('Nessun collegamento a Claude configurato.');
 
   return {
@@ -70,6 +75,7 @@ export async function diagnosi({ versione, eseguibile, api }) {
     },
     chiaveApi: { configurata: !!api.configurata, origine: api.origine || null },
     rete, proxy,
+    provaReale: reale ? { ...reale, messaggio: reale.messaggio ? anonimo(reale.messaggio) : undefined } : null,
     problemi,
   };
 }
@@ -83,6 +89,8 @@ export function testoDiagnosi(d) {
   const c = d.claudeCode;
   r.push('', 'CLAUDE CODE', `Trovato: ${c.trovato ? `sì — ${c.percorso} (${c.versione}, da: ${c.origine})` : 'no'}`);
   if (c.accesso) r.push(`Accesso all'account: ${c.accesso.collegato ? `sì (${c.accesso.metodo || 'metodo non indicato'})` : 'no'}${c.accesso.risposta ? ` — risposta: ${c.accesso.risposta}` : ''}`);
+  const p = d.provaReale;
+  r.push(`Richiesta reale di prova: ${!p ? 'non eseguita (serve Claude Code con l’accesso fatto)' : p.ok ? `riuscita in ${(p.ms / 1000).toLocaleString('it-IT', { maximumFractionDigits: 1 })} s con ${p.modello}${p.ripiego ? ` (${p.richiesto} non disponibile per questo account)` : ''}` : `NON riuscita [${p.codice}] — ${p.messaggio}`}`);
   r.push(`Posizioni controllate: ${c.cercatiIn}`);
   for (const f of c.fileTrovati) r.push(`- ${f.percorso} [${f.origine}]: ${f.funziona ? `funziona (${f.versione})` : `non risponde — ${f.errore}`}`);
   if (c.variabile) r.push(c.variabile);

@@ -643,23 +643,25 @@ export function scostamenti(risultato, ancore) {
   for (const sez of risultato?.sezioni || []) for (const c of sez.criteri) {
     const a = ancore?.criteri?.[c.id];
     if (!a || c.fonte !== 'commissione' || c.punti == null) continue;
-    const sopra = c.punti > a.atteso.max + TOLLERANZA, sotto = c.punti < a.atteso.min - TOLLERANZA;
+    // il confronto si fa sulla media dei commissari così come l'hanno data, prima della correzione sui casi reali
+    const grezzo = c.taratura?.grezzo ?? c.punti;
+    const sopra = grezzo > a.atteso.max + TOLLERANZA, sotto = grezzo < a.atteso.min - TOLLERANZA;
     const stato = sopra ? 'sopra' : sotto ? 'sotto' : 'dentro';
-    const scarto = sopra ? r1(c.punti - a.atteso.max) : sotto ? r1(c.punti - a.atteso.min) : 0;
+    const scarto = sopra ? r1(grezzo - a.atteso.max) : sotto ? r1(grezzo - a.atteso.min) : 0;
     const frazione = a.massimo ? arrot(Math.abs(scarto) / a.massimo) : 0;
     const rig = c.rigoroso ?? null;
     const statoRigoroso = rig == null ? null : rig > a.rigoroso.max + TOLLERANZA ? 'sopra' : rig < a.rigoroso.min - TOLLERANZA ? 'sotto' : 'dentro';
     const motivati = c.giudizi.filter((g) => /fuori fascia/i.test(g.motivazione || '')).length;
     let spiegazione;
-    if (stato === 'dentro') spiegazione = `La media dei commissari (${fmt(c.punti)}) è nella fascia attesa ${intervallo(a.atteso)}.`;
+    if (stato === 'dentro') spiegazione = `La media dei commissari (${fmt(grezzo)}) è nella fascia attesa ${intervallo(a.atteso)}.`;
     else {
-      spiegazione = `La media dei commissari (${fmt(c.punti)}) è ${fmt(Math.abs(scarto))} punti ${stato === 'sopra' ? 'sopra' : 'sotto'} la fascia attesa (${intervallo(a.atteso)}). `
+      spiegazione = `La media dei commissari (${fmt(grezzo)}) è ${fmt(Math.abs(scarto))} punti ${stato === 'sopra' ? 'sopra' : 'sotto'} la fascia attesa (${intervallo(a.atteso)}). `
         + (stato === 'sopra' ? 'Nei casi reali la Commissione non è andata così in alto con documenti di questo tipo' : 'Nei casi reali la Commissione non è scesa così in basso con documenti di questo tipo')
         + `${a.regole?.[0]?.id ? ` (regola «${a.regole[0].id}»)` : ''}. ${String(a.spiegazione || '').replace(/^Regola «[^»]+»\.\s*/, '')} `
         + (motivati ? `${motivati} ${motivati === 1 ? 'commissario motiva' : 'commissari motivano'} l’uscita dalla fascia con un riferimento ai documenti: leggilo prima di decidere.` : 'Nessun commissario ha motivato l’uscita dalla fascia con un riferimento preciso: considera la fascia come la previsione più probabile.');
     }
     criteri.push({
-      id: c.id, nome: c.nome, sezione: sez.id, massimo: a.massimo, media: c.punti, mediaRigorosa: rig,
+      id: c.id, nome: c.nome, sezione: sez.id, massimo: a.massimo, media: grezzo, tarato: c.taratura ? c.punti : null, mediaRigorosa: rig,
       atteso: a.atteso, rigoroso: a.rigoroso, centro: a.centro, stato, statoRigoroso, scarto, frazione,
       gravita: stato === 'dentro' ? null : frazione > 0.1 ? 'marcato' : 'lieve',
       motivati, fiducia: a.fiducia, regole: (a.regole || []).map((r) => r.id), spiegazione,

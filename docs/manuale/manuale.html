@@ -158,8 +158,10 @@ tr { break-inside: avoid; }
     <dt>Chiave API Anthropic</dt><dd>Si incolla la chiave (inizia con <code>sk-ant-</code>): viene verificata e salvata sul computer, leggibile solo dal tuo utente. Le letture sono a consumo sul conto API.</dd>
     <dt>Come deve leggere Claude</dt><dd>Modello (il più capace per la stima da usare prima dell’invio; uno più rapido per le prove), livello di approfondimento e numero di commissari (uno per una prova veloce, tre per la stima da usare, cinque per la massima solidità).</dd>
   </div>
+  <h2>Prova il collegamento</h2>
+  <p>Nella pagina Collegamento, <strong>Prova il collegamento</strong> → <strong>Prova adesso</strong> manda a Claude una richiesta reale di una riga con il collegamento e il modello scelti. Se risponde («Funziona: … ha risposto in pochi secondi») le valutazioni funzioneranno su questo computer. Se il modello scelto non è incluso nel tuo abbonamento, Clockwise ripiega da solo sul modello successivo e lo dice; lo stesso succede durante le valutazioni, e il report indica il modello usato.</p>
   <h2>Se il collegamento non funziona</h2>
-  <p>In fondo alla pagina Collegamento c’è <strong>Diagnosi del collegamento</strong> → <strong>Esegui la diagnosi</strong>. Controlla sul computer dove è installato Claude Code e se risponde, se l’accesso è fatto, se la rete raggiunge Anthropic e quale PATH vede Clockwise, e dice che cosa fare. Con <strong>Copia il rapporto</strong> lo si manda a chi assiste: non contiene chiavi né documenti e la cartella dell’utente è anonimizzata.</p>
+  <p>In fondo alla pagina Collegamento c’è <strong>Diagnosi del collegamento</strong> → <strong>Esegui la diagnosi</strong>. Controlla sul computer dove è installato Claude Code e se risponde, se l’accesso è fatto, se una richiesta reale a Claude riesce, se la rete raggiunge Anthropic e quale PATH vede Clockwise, e dice che cosa fare. Con <strong>Copia il rapporto</strong> lo si manda a chi assiste: non contiene chiavi né documenti e la cartella dell’utente è anonimizzata.</p>
   <div class="nota"><p>I criteri che dipendono dai numeri (giorni, professionisti, spesa, copertura) si calcolano <strong>anche senza Claude</strong>: il cruscotto mostra comunque una stima statistica e una stima dalle regole.</p></div>
 </section>
 
@@ -253,7 +255,7 @@ tr { break-inside: avoid; }
   <ul>
     <li><strong>Esito</strong>: «Sopra le soglie», «Sopra le soglie, con rischio documentale» (ammesso solo nella lettura attesa), «Sotto soglia», oppure stima parziale.</li>
     <li><strong>Punteggio</strong> con la forbice tra il commissario più severo e il più generoso, e la <strong>lettura rigorosa</strong>.</li>
-    <li><strong>Sezioni e criteri</strong>: apri un criterio per leggere motivazioni, evidenze, criticità e miglioramenti di ogni commissario, con la fascia di taratura (dentro o fuori, e perché).</li>
+    <li><strong>Sezioni e criteri</strong>: apri un criterio per leggere motivazioni, evidenze, criticità e miglioramenti di ogni commissario, con la fascia di taratura (dentro o fuori, e perché) e, dove il voto è stato corretto con i casi reali, la media dei commissari prima della correzione.</li>
     <li><strong>Interventi</strong>: azioni ordinate per punti recuperabili.</li>
     <li><strong>Ammissibilità</strong>: tetto del contributo, spesa minima sul territorio, quadratura tra budget e piano, producer fee, allegati, incoerenze tra i moduli.</li>
     <li><strong>Graduatoria</strong>: dove si sarebbe collocato il dossier tra i progetti reali e storico delle soglie di finanziamento (dove le graduatorie sono pubbliche).</li>
@@ -263,7 +265,14 @@ tr { break-inside: avoid; }
   <h2>Esportare</h2>
   <p><strong>Report completo (PDF)</strong> crea un documento impaginato con tutti i dati interni: punteggi e motivazioni di ogni commissario, controlli, confronto con le graduatorie, dati chiave, piano finanziario, documenti, appendici di produzione e legale. Ci sono anche <strong>Copia riepilogo</strong>, <strong>Scarica pagina (HTML)</strong> e <strong>Stampa</strong>.</p>
   <h2>Prova con un dossier già presentato</h2>
-  <p>In fondo al report si può inserire il punteggio reale ottenuto da un dossier già valutato: il programma mostra lo scarto sezione per sezione. È il modo per misurare e migliorare la taratura.</p>
+  <p>In fondo al report si può inserire il punteggio reale ottenuto da un dossier già valutato: il programma mostra lo scarto sezione per sezione. Con <strong>Salva come caso di taratura</strong> il caso viene registrato: Claude lo legge nelle valutazioni successive dello stesso bando e il programma corregge le stime con una parte dello scarto osservato.</p>
+  <h2>Come il programma impara dai punteggi reali</h2>
+  <p>Il voto di ogni criterio a giudizio nasce in due passi, entrambi visibili nel report:</p>
+  <ol>
+    <li><strong>Regole</strong>: media pesata tra i commissari simulati, che leggono i documenti, e la fascia che il motore di regole ricava dai casi reali. Dove la regola ha un riscontro diretto in un caso reale pesa quanto i commissari, dove è un’estrapolazione pesa un quarto.</li>
+    <li><strong>Casi</strong>: per ogni sezione si aggiunge una parte dello scarto medio osservato nei dossier di cui si conosce il punteggio vero (quelli incorporati nel programma e quelli salvati da te). Con un solo caso si applica metà dello scarto, con due i due terzi, e così via, con un tetto dell’8% della sezione.</li>
+  </ol>
+  <p>I criteri calcolati dai numeri, quelli con una tabella di punteggi nel bando e la <strong>lettura rigorosa</strong> non vengono mai corretti. La correzione resta salvata con la valutazione: il punteggio di un dossier non cambia da solo quando arrivano casi nuovi, cambia alla valutazione successiva.</p>
 </section>
 
 <!-- 10 -->
@@ -383,7 +392,7 @@ tr { break-inside: avoid; }
   <div class="occhiello">Capitolo 17</div>
   <h1>Limiti da conoscere</h1>
   <ul>
-    <li><strong>Taratura</strong>: il motore di ragionamento poggia su una prova con un dossier reale (finanziato, lungometraggio, Sicilia) e sulle graduatorie pubbliche. Documentari, cortometraggi e gli altri bandi sono estrapolazioni ragionate: un secondo caso reale, meglio se escluso, serve a confermarla.</li>
+    <li><strong>Taratura</strong>: il motore di ragionamento e l’apprendimento dai casi poggiano su una prova con un dossier reale (finanziato, lungometraggio, Sicilia) e sulle graduatorie pubbliche. Su quel dossier la stima è a meno di un punto dal punteggio vero, ma è lo stesso caso su cui il programma è stato tarato. Documentari, cortometraggi e gli altri bandi sono estrapolazioni ragionate: un secondo caso reale, meglio se escluso, serve a confermarla.</li>
     <li><strong>Altri bandi</strong>: le griglie sono verificate sul testo ufficiale, ma nessuno è ancora stato provato su un dossier reale: la stima vale soprattutto come controllo della struttura del dossier rispetto alla griglia.</li>
     <li><strong>Edizioni previste</strong>: per un anno non ancora pubblicato vale la griglia dell’ultima edizione; il nuovo avviso può cambiarla.</li>
     <li><strong>Scansioni</strong>: la trascrizione va controllata sull’originale per importi, date e firme.</li>

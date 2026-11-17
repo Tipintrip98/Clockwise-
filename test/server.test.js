@@ -171,3 +171,26 @@ test('porta: libera -> la usa; occupata da Clockwise -> già avviato; occupata d
   // 3) nessuno in ascolto: nessun Clockwise
   assert.equal(await clockwiseGiaAvviato(occupata, 1000), null);
 });
+
+test('aggiornamento: una versione diversa rimasta aperta viene chiusa e sostituita; la stessa versione resta', async () => {
+  const { avviaSostituendo } = await import('../server/avvio.js');
+  const base = { fornitore: fornitoreCartella(path.join(radice, 'app')), cartellaDati };
+  // vecchia versione in ascolto, con la sua uscita su richiesta (come l'eseguibile)
+  const vecchio = creaServer({ ...base, versione: '2.0.0', suEsci: () => chiudiServer(vecchio) });
+  assert.equal(await ascolta(vecchio, 0), true);
+  const porta = vecchio.address().port;
+  const nuovo = creaServer({ ...base, versione: '2.0.3' });
+  try {
+    const esito = await avviaSostituendo(nuovo, porta, '2.0.3', { pausaMs: 100 });
+    assert.equal(esito.giaAvviato, false);
+    assert.equal(esito.sostituita, '2.0.0');
+    assert.equal(esito.porta, porta);
+    assert.equal((await (await fetch(`http://127.0.0.1:${porta}/api/stato`)).json()).versione, '2.0.3');
+    // stessa versione: il secondo avvio riapre quella che c'è, senza chiuderla
+    const doppione = creaServer({ ...base, versione: '2.0.3' });
+    const e2 = await avviaSostituendo(doppione, porta, '2.0.3', { pausaMs: 100 });
+    assert.equal(e2.giaAvviato, true);
+    assert.equal(e2.sostituita, undefined);
+    assert.equal(nuovo.listening, true);
+  } finally { await chiudiServer(nuovo); await chiudiServer(vecchio).catch(() => {}); }
+});

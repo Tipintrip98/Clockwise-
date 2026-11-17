@@ -5,7 +5,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { creaClient, verificaChiave, chiamaApi, messaggioErrore } from './anthropic-api.js';
-import { statoClaudeCode, chiamaClaudeCode, installaClaudeCode, avviaAccesso } from './claude-code.js';
+import { statoClaudeCode, chiamaClaudeCode, installaClaudeCode, avviaAccesso, provaClaudeCode } from './claude-code.js';
 import { diagnosi, testoDiagnosi } from './diagnosi.js';
 import { percorsoRelativo } from './statici.js';
 import { creaAggiornamenti } from './aggiornamenti.js';
@@ -121,7 +121,7 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     if (percorso === '/api/ricontrolla' && req.method === 'POST') { await statoClaudeCode(true); return json(res, 200, await stato()); }
     if (percorso === '/api/diagnosi' && req.method === 'GET') {
       const k = chiaveApi();
-      const d = await diagnosi({ versione, eseguibile, api: { configurata: !!k.chiave, origine: k.origine } });
+      const d = await diagnosi({ versione, eseguibile, api: { configurata: !!k.chiave, origine: k.origine }, prova: () => provaClaudeCode({ modello: 'claude-fable-5-2' }) });
       return json(res, 200, { ...d, testo: testoDiagnosi(d) });
     }
     // Installazione di Claude Code con l'installatore ufficiale: una alla volta, solo su richiesta dell'utente.
@@ -129,6 +129,26 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
       if (installazioneInCorso) return json(res, 409, { codice: 'in_corso', messaggio: 'Installazione già in corso.' });
       installazioneInCorso = true;
       try { const r = await installaClaudeCode(); return json(res, 200, { ...r, stato: await stato() }); } finally { installazioneInCorso = false; }
+    }
+    // Prova reale del collegamento: una richiesta minima a Claude con il collegamento e il modello scelti.
+    if (percorso === '/api/prova' && req.method === 'POST') {
+      const c = await leggiCorpo(req, 4096);
+      const modello = typeof c.modello === 'string' && /^claude-[a-z0-9.-]+$/.test(c.modello) ? c.modello : 'claude-fable-5-2';
+      if (c.provider === 'api') {
+        const k = chiaveApi();
+        if (!k.chiave) return json(res, 200, { ok: false, richiesto: modello, codice: 'chiave', messaggio: 'Nessuna chiave API configurata.' });
+        const inizio = Date.now();
+        try {
+          const r = await chiamaApi({ client: creaClient(k.chiave), modello, impegno: 'low', system: 'Prova di collegamento di Clockwise.', documenti: '(nessun documento)', compito: 'Rispondi soltanto con la parola: OK' });
+          return json(res, 200, { ok: true, richiesto: modello, modello: r.modello || modello, ripiego: r.modello && r.modello !== modello ? { richiesto: modello, usato: r.modello } : null, ms: Date.now() - inizio, risposta: String(r.testo || '').trim().slice(0, 80) });
+        } catch (e) {
+          const m = e.codice ? { codice: e.codice, messaggio: e.message } : messaggioErrore(e);
+          return json(res, 200, { ok: false, richiesto: modello, ms: Date.now() - inizio, ...m });
+        }
+      }
+      const stato = await statoClaudeCode();
+      if (!stato.installato) return json(res, 200, { ok: false, richiesto: modello, codice: 'non_installato', messaggio: 'Claude Code non è installato su questo computer: premi «Installa Claude Code».' });
+      return json(res, 200, await provaClaudeCode({ modello }));
     }
     if (percorso === '/api/claude/accedi' && req.method === 'POST') {
       const r = await avviaAccesso();

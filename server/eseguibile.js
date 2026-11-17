@@ -5,7 +5,7 @@
 import sea from 'node:sea';
 import { creaServer, chiudiServer } from './servizio.js';
 import { fornitoreIncorporato } from './statici.js';
-import { PORTA_PREDEFINITA, cartellaDatiEseguibile, avviaSuPortaLibera, apriBrowser } from './avvio.js';
+import { PORTA_PREDEFINITA, cartellaDatiEseguibile, avviaSostituendo, apriBrowser } from './avvio.js';
 
 const WIN = process.platform === 'win32';
 const pausa = (ms) => new Promise((ok) => setTimeout(ok, ms));
@@ -62,7 +62,8 @@ async function avvia() {
   });
 
   const preferita = Number(process.env.PORT) || PORTA_PREDEFINITA;
-  const esito = await avviaSuPortaLibera(server, preferita);
+  // una versione diversa rimasta aperta (dopo un aggiornamento) viene chiusa e sostituita da questa
+  const esito = await avviaSostituendo(server, preferita, versione);
   const indirizzo = `http://localhost:${esito.porta}`;
 
   if (esito.giaAvviato) {
@@ -74,6 +75,7 @@ async function avvia() {
 
   console.log(`\n  Clockwise ${versione} — simulatore di punteggio bandi cinema`);
   console.log(`  Clockwise è in esecuzione:  ${indirizzo}\n`);
+  if (esito.sostituita) console.log(`  Era ancora aperta la versione ${esito.sostituita}: l’ho chiusa e ho avviato la ${versione}.\n`);
   if (esito.porta !== preferita) {
     console.log(`  Attenzione: la porta ${preferita} è occupata da un altro programma, uso la ${esito.porta}.`);
     console.log(`  I dossier salvati nel browser sono legati all’indirizzo: quelli creati su`);

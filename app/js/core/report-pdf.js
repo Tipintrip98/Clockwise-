@@ -298,9 +298,11 @@ export function creaReportPdf(JsPDF, bando, p, opzioni = {}) {
     const sc = tar.scostamenti;
     if (sc) {
       P.testo(sc.sintesi, { corpo: 9.5, peso: 'bold', colore: sc.fuori ? AVVISO : OK });
-      P.tabella([{ t: 'Criterio', w: 46 }, { t: 'Commissari', w: 14, a: 'r', peso: 'bold' }, { t: 'Fascia attesa', w: 18, a: 'r' }, { t: 'Rigorosa', w: 16, a: 'r' }, { t: 'Esito', w: 18 }],
-        sc.criteri.map((x) => ({ celle: [`${x.id} · ${x.nome}`, num(x.media), fascia(x.atteso), fascia(x.rigoroso), x.stato === 'dentro' ? 'Nella fascia' : `${x.stato === 'sopra' ? 'Sopra' : 'Sotto'} di ${num(Math.abs(x.scarto))}`],
-          colori: [null, null, MUTO, MUTO, x.stato === 'dentro' ? OK : x.gravita === 'marcato' ? MALE : AVVISO] })));
+      const corretti = sc.criteri.some((x) => x.tarato != null);
+      P.tabella([{ t: 'Criterio', w: corretti ? 38 : 46 }, { t: 'Commissari', w: 14, a: 'r', peso: corretti ? null : 'bold' }, ...(corretti ? [{ t: 'Voto', w: 10, a: 'r', peso: 'bold' }] : []), { t: 'Fascia attesa', w: 18, a: 'r' }, { t: 'Rigorosa', w: 16, a: 'r' }, { t: 'Esito', w: corretti ? 16 : 18 }],
+        sc.criteri.map((x) => ({ celle: [`${x.id} · ${x.nome}`, num(x.media), ...(corretti ? [x.tarato != null ? num(x.tarato) : num(x.media)] : []), fascia(x.atteso), fascia(x.rigoroso), x.stato === 'dentro' ? 'Nella fascia' : `${x.stato === 'sopra' ? 'Sopra' : 'Sotto'} di ${num(Math.abs(x.scarto))}`],
+          colori: [null, null, ...(corretti ? [null] : []), MUTO, MUTO, x.stato === 'dentro' ? OK : x.gravita === 'marcato' ? MALE : AVVISO] })));
+      if (corretti) P.testo('«Voto» è il punteggio usato nei totali: media pesata tra i commissari simulati e la fascia ricavata dai casi reali, più una parte dello scarto osservato nei dossier di cui si conosce il punteggio vero. Criteri calcolati, tabelle del bando e lettura rigorosa non vengono corretti.', { corpo: 8.5, colore: MUTO });
       for (const x of sc.criteri.filter((y) => y.stato !== 'dentro')) P.testo(`${x.id}: ${x.spiegazione}`, { corpo: 8.5, colore: MUTO });
       if (tar.cambiate) P.testo('Documenti o dati sono cambiati dopo la valutazione: le fasce sono quelle usate allora.', { corpo: 8.5, colore: AVVISO });
     } else if (tar.stima) {

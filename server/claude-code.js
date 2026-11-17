@@ -82,10 +82,76 @@ export async function avviaAccesso() {
 }
 
 /**
+ * Che cosa è andato storto in una chiamata, dal testo dell'errore di Claude Code e dallo stato HTTP dell'API.
+ * I codici guidano l'interfaccia: 'modello' fa scattare il ripiego su un altro modello, 'login' porta al pulsante «Accedi».
+ */
+export function classificaErrore({ testo = '', stato = null, codiceUscita = null } = {}) {
+  const t = String(testo).replace(/\s+/g, ' ').trim();
+  const breve = t.slice(0, 300);
+  if (stato === 404 || /unrecognized_model|selected model|may not exist|not have access to (it|this model)|model.{0,40}(not (found|available|supported)|unavailable)|invalid model/i.test(t)) {
+    return { codice: 'modello', messaggio: 'Il modello scelto non è disponibile per questo account.' };
+  }
+  if (stato === 401 || stato === 403 || /not logged in|log ?in|\/login|authenticat|unauthori[sz]ed|oauth|credential|invalid api key/i.test(t)) {
+    return { codice: 'login', messaggio: 'Claude Code non è collegato a un account: apri «Collegamento» e premi «Accedi».' };
+  }
+  if (stato === 429 || /rate.?limit|usage limit|limit reached|quota|too many requests/i.test(t)) {
+    return { codice: 'limite', messaggio: `Limite di utilizzo dell'abbonamento Claude raggiunto: riprova più tardi. ${breve.slice(0, 200)}`.trim() };
+  }
+  if (stato === 529 || (stato >= 500 && stato < 600) || /overloaded|temporarily unavailable|service unavailable/i.test(t)) {
+    return { codice: 'sovraccarico', messaggio: 'I server di Claude sono momentaneamente sovraccarichi: riprova tra qualche minuto.' };
+  }
+  if (/ENOTFOUND|ECONNRESET|ECONNREFUSED|ETIMEDOUT|EAI_AGAIN|network|fetch failed|certificate|proxy|unable to connect/i.test(t)) {
+    return { codice: 'rete', messaggio: 'Claude Code non raggiunge i server di Anthropic: controlla la connessione, il firewall o il proxy.' };
+  }
+  return { codice: 'claude_code', messaggio: `Claude Code ha restituito un errore${codiceUscita != null ? ` (codice ${codiceUscita})` : ''}: ${breve || 'nessun dettaglio'}` };
+}
+
+// Dal modello più capace al più leggero: se quello scelto non è disponibile per l'account si scende di un gradino.
+export const SCALA_MODELLI = ['claude-fable-5-2', 'claude-opus-5-5', 'claude-sonnet-5-5', 'claude-haiku-5-5'];
+export function modelliDaProvare(modello) {
+  const i = SCALA_MODELLI.indexOf(modello);
+  return i < 0 ? [modello, ...SCALA_MODELLI.slice(1)] : SCALA_MODELLI.slice(i);
+}
+
+/**
+ * Chiamata a Claude tramite Claude Code, con ripiego: se il modello scelto non è disponibile per l'account
+ * (capita con alcuni abbonamenti) si riprova con il modello successivo della scala. Il risultato dice quale
+ * modello ha risposto e, se diverso da quello chiesto, lo segnala in `ripiego`.
+ */
+export async function chiamaClaudeCode(parametri, { chiama = unaChiamata } = {}) {
+  const provati = [];
+  let ultimo = null;
+  for (const modello of modelliDaProvare(parametri.modello)) {
+    try {
+      const r = await chiama({ ...parametri, modello });
+      return modello === parametri.modello ? r : { ...r, ripiego: { richiesto: parametri.modello, usato: r.modello || modello, scartati: provati } };
+    } catch (e) {
+      if (e?.codice !== 'modello' || parametri.signal?.aborted) throw e;
+      provati.push(modello); ultimo = e;
+    }
+  }
+  throw Object.assign(new Error('Nessun modello di Claude è disponibile per questo account con Claude Code. Controlla l’abbonamento (serve almeno Claude Pro) oppure usa una chiave API.'), { codice: 'modello', causa: ultimo?.message });
+}
+
+/** Prova reale del collegamento: una richiesta minima a Claude, per sapere se tutto il percorso funziona davvero. */
+export async function provaClaudeCode({ modello = SCALA_MODELLI[0], timeout = 120000 } = {}, opzioni) {
+  const inizio = Date.now();
+  const controllo = new AbortController();
+  const timer = setTimeout(() => controllo.abort(), timeout);
+  try {
+    const r = await chiamaClaudeCode({ modello, impegno: 'low', system: 'Prova di collegamento di Clockwise.', documenti: '(nessun documento)', compito: 'Rispondi soltanto con la parola: OK', signal: controllo.signal }, opzioni);
+    return { ok: true, richiesto: modello, modello: r.modello || modello, ripiego: r.ripiego || null, ms: Date.now() - inizio, risposta: String(r.testo || '').trim().slice(0, 80) };
+  } catch (e) {
+    const scaduto = controllo.signal.aborted;
+    return { ok: false, richiesto: modello, ms: Date.now() - inizio, codice: scaduto ? 'tempo' : (e?.codice || 'claude_code'), messaggio: scaduto ? 'Claude non ha risposto entro due minuti: controlla la connessione e riprova.' : (e?.message || 'Errore sconosciuto.') };
+  } finally { clearTimeout(timer); }
+}
+
+/**
  * Una chiamata a Claude tramite Claude Code. Tutto il contenuto viaggia su stdin
  * (nessun limite di lunghezza degli argomenti); nessuno strumento, nessuna personalizzazione.
  */
-export function chiamaClaudeCode({ modello, impegno, system, documenti, compito, schema, immagini, onTesto, onPensiero, signal }) {
+function unaChiamata({ modello, impegno, system, documenti, compito, schema, immagini, onTesto, onPensiero, signal }) {
   return new Promise((ok, ko) => {
   percorsoClaude().then((percorso) => {
     if (!percorso) return ko(Object.assign(new Error('Claude Code non è installato su questo computer.'), { codice: 'non_installato' }));
@@ -135,13 +201,12 @@ export function chiamaClaudeCode({ modello, impegno, system, documenti, compito,
       if (signal?.aborted) return ko(Object.assign(new Error('Valutazione interrotta.'), { codice: 'cancelled' }));
       if (!risultato) {
         const dettaglio = errOut.trim().split('\n').slice(-2).join(' ').slice(0, 300);
-        const login = /log ?in|auth|credential/i.test(dettaglio);
-        return ko(Object.assign(new Error(login ? 'Claude Code non è collegato a un account: apri un terminale, esegui "claude" e poi "/login".' : `Claude Code si è chiuso senza risposta (codice ${codice}). ${dettaglio}`), { codice: login ? 'login' : 'claude_code' }));
+        const e = classificaErrore({ testo: `${errOut}`, codiceUscita: codice });
+        return ko(Object.assign(new Error(e.codice === 'claude_code' ? `Claude Code si è chiuso senza risposta (codice ${codice}). ${dettaglio}` : e.messaggio), { codice: e.codice }));
       }
       if (risultato.is_error || risultato.subtype !== 'success') {
-        const testo = String(risultato.result || risultato.subtype || '');
-        const limite = /limit|quota|usage/i.test(testo);
-        return ko(Object.assign(new Error(limite ? `Limite di utilizzo dell'abbonamento Claude raggiunto. ${testo.slice(0, 200)}` : `Claude Code ha restituito un errore: ${testo.slice(0, 300)}`), { codice: limite ? 'limite' : 'claude_code' }));
+        const e = classificaErrore({ testo: `${risultato.result || risultato.subtype || ''} ${errOut}`, stato: risultato.api_error_status });
+        return ko(Object.assign(new Error(e.messaggio), { codice: e.codice }));
       }
       const u = risultato.usage || {};
       ok({
