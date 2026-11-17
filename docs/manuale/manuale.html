@@ -131,11 +131,12 @@ tr { break-inside: avoid; }
     <li>Scarica l’installatore <code>Clockwise-Setup-&lt;versione&gt;.exe</code> (per esempio <code>Clockwise-Setup-{{VERSIONE}}.exe</code>) dalla pagina dei rilasci del progetto su GitHub (sezione 19) oppure dal file ricevuto. Il numero nel nome è la versione: la versione installata si legge in Clockwise accanto al nome, in alto a sinistra.</li>
     <li>Fai doppio clic. Se compare «PC protetto da Windows» premi <strong>Ulteriori informazioni</strong> e poi <strong>Esegui comunque</strong>: l’avviso compare finché il programma non è firmato con il certificato della società (sezione 19).</li>
     <li>Premi <strong>Installa</strong>. Non servono i diritti di amministratore: il programma si installa per il tuo utente in <code>%LOCALAPPDATA%\Programs\Clockwise</code> e crea le icone nel menu Start e sul desktop.</li>
-    <li>Apri <strong>Clockwise</strong> dal menu Start o dal desktop. Si apre una piccola finestra nera (va lasciata aperta: è il motore del programma) e subito dopo Clockwise nel browser predefinito.</li>
+    <li>Apri <strong>Clockwise</strong> dal menu Start o dal desktop. Clockwise si apre nel browser predefinito. Non c’è nessuna finestra da tenere aperta: il programma lavora in background e resta attivo anche se chiudi il browser; per tornarci basta di nuovo l’icona.</li>
   </ol>
   <div class="dl">
-    <dt>Chiudere</dt><dd>Pulsante <strong>Esci</strong> nella barra in alto, oppure chiudendo la finestra nera.</dd>
-    <dt>Aggiornare</dt><dd>Installa la nuova versione sopra la vecchia: i dossier restano.</dd>
+    <dt>Chiudere</dt><dd>Pulsante <strong>Esci</strong> nella barra in alto e poi <strong>Salva ed esci</strong>, oppure <strong>Chiudi Clockwise</strong> nel menu Start. Chiudere il browser non ferma il programma.</dd>
+    <dt>All’accensione</dt><dd>In <strong>Esci</strong> c’è la casella «Avvia Clockwise all’accensione del computer»: il programma parte da solo, in background, senza aprire il browser.</dd>
+    <dt>Aggiornare</dt><dd>Installa la nuova versione sopra la vecchia: i dossier restano (sono nella cartella dei dati, capitolo 16).</dd>
     <dt>Disinstallare</dt><dd>Impostazioni di Windows → App → App installate → Clockwise → Disinstalla.</dd>
     <dt>Senza installazione</dt><dd><code>Clockwise.exe</code> funziona anche da solo, con un doppio clic.</dd>
   </div>
@@ -180,7 +181,7 @@ tr { break-inside: avoid; }
   </ol>
   <figure><img src="img/04-scelta-categoria.jpg" alt="Categoria e anno"><figcaption>Secondo passo: categoria dell’opera e anno della finestra.</figcaption></figure>
   <p>Bando, categoria e finestra si possono cambiare in ogni momento dall’intestazione del dossier; se il dossier ha già una valutazione, il programma chiede conferma perché la valutazione va rifatta sul nuovo bando.</p>
-  <div class="nota"><p><strong>Dossier d’esempio.</strong> Nell’elenco c’è «Esempio — L’ultima tonnara», con numeri d’invenzione: serve a vedere subito come lavora il simulatore. Si può modificare o eliminare.</p></div>
+  <div class="nota"><p><strong>Dossier d’esempio.</strong> Nell’elenco c’è «Esempio — L’insabbiato»: un caso reale, il film presentato all’avviso della Regione Siciliana nel 2024 e finanziato con 89,5 punti (terzo in graduatoria); Clockwise sul dossier completo ne stima 88,9. L’esempio contiene i dati chiave, il piano finanziario e i punteggi, non i documenti: per questo cruscotto e report segnalano gli allegati come mancanti. Si può modificare o eliminare. Le figure di questo manuale mostrano ancora l’esempio delle versioni precedenti.</p></div>
 </section>
 
 <!-- 5 -->
@@ -265,6 +266,8 @@ tr { break-inside: avoid; }
   <figure><img src="img/10-report-criteri.jpg" alt="Criteri del report"><figcaption>Sezioni e criteri: atteso, rigoroso e fascia di taratura.</figcaption></figure>
   <h2>Esportare</h2>
   <p><strong>Report completo (PDF)</strong> crea un documento impaginato con tutti i dati interni: punteggi e motivazioni di ogni commissario, controlli, confronto con le graduatorie, dati chiave, piano finanziario, documenti, appendici di produzione e legale. Ci sono anche <strong>Copia riepilogo</strong>, <strong>Scarica pagina (HTML)</strong> e <strong>Stampa</strong>.</p>
+  <h2>Esportare e importare un dossier</h2>
+  <p><strong>Esporta dossier</strong>, in alto a destra nel dossier, salva tutto in un solo file <code>.clockwise</code>: dati chiave, testi dei documenti, valutazione, strumenti e, nel programma installato, i file originali. Serve come copia di sicurezza e per portare il dossier su un altro computer. <strong>Importa dossier</strong>, nell’elenco dei dossier, lo ricarica: se un dossier uguale c’è già ne crea una copia, senza sovrascrivere niente. Il documento d’identità non entra mai nel file.</p>
   <h2>Prova con un dossier già presentato</h2>
   <p>In fondo al report si può inserire il punteggio reale ottenuto da un dossier già valutato: il programma mostra lo scarto sezione per sezione. Con <strong>Salva come caso di taratura</strong> il caso viene registrato: Claude lo legge nelle valutazioni successive dello stesso bando e il programma corregge le stime con una parte dello scarto osservato.</p>
   <h2>Come il programma impara dai punteggi reali</h2>
@@ -338,6 +341,15 @@ tr { break-inside: avoid; }
     <dt>Scadenze</dt><dd>Termini che decorrono dalla notifica del decreto di concessione.</dd>
   </div>
   <div class="attenzione"><p>L’area legale lavora sul testo dell’avviso e sui documenti del dossier: è un supporto, non un parere legale, e non consulta banche dati di leggi e sentenze.</p></div>
+  <h2>Bandi MiC</h2>
+  <p>L’ultima scheda del dossier mostra lo stesso progetto sulle griglie dei <strong>contributi selettivi del Ministero della cultura</strong> (bando 2026), con i punteggi separati dalla valutazione sul bando del dossier. Scegli la linea (film di qualità e identità culturale, opere prime e seconde, giovani autori, documentari, animazione, cortometraggi) e dichiara i tre criteri a punteggio fisso: pari opportunità, coproduzione internazionale, certificazione ambientale.</p>
+  <figure><img src="img/17-mic.jpg" alt="Bandi MiC"><figcaption>La scheda «Bandi MiC»: totale stimato sulla griglia del Ministero e criteri a punteggio fisso da dichiarare.</figcaption></figure>
+  <ul>
+    <li>Per i criteri di qualità (A–E) si riporta la stessa quota del massimo ottenuta nella valutazione del dossier, famiglia per famiglia; ogni riga dice da dove viene il numero.</li>
+    <li>I criteri a punteggio fisso valgono zero finché non li dichiari: non vengono stimati.</li>
+    <li>In fondo, il confronto con le <strong>graduatorie reali 2025</strong> della stessa linea: ultimo finanziato, posto in cui si collocherebbe la stima, a parità di quota del massimo.</li>
+  </ul>
+  <div class="attenzione"><p>È una stima indicativa, non una valutazione: serve a decidere se candidare il progetto anche al Ministero. La griglia del 2025 era diversa da quella del 2026, quindi il confronto con le graduatorie è un ordine di grandezza.</p></div>
 </section>
 
 <!-- 14 -->
@@ -353,9 +365,11 @@ tr { break-inside: avoid; }
     <li>categorie con contributo massimo, massimali, dotazione e punteggi minimi;</li>
     <li>griglia di valutazione completa, con le regole particolari (soglia su alcune sezioni, minimi su gruppi di criteri, penalità);</li>
     <li>fonti ufficiali con i link e «Come è stata verificata la griglia» (estratti del testo e dubbi rimasti);</li>
-    <li>per la Sicilia anche il testo integrale dell’avviso e i punteggi reali delle graduatorie 2025 e 2026, usati come metro della Commissione.</li>
+    <li>per la Sicilia anche il testo integrale dell’avviso;</li>
+    <li><strong>Punteggi reali</strong>, in una sezione a sé: per la Sicilia i punteggi delle graduatorie 2025 e 2026, sezione per sezione, usati come metro della Commissione; per i contributi selettivi del MiC le graduatorie delle due sessioni 2025 lette dai decreti (653 progetti): progetti presentati, finanziati, primo e ultimo finanziato, mediane criterio per criterio, contributi assegnati. Nel 2025 la griglia del MiC aveva sette criteri e massimi diversi da quella del 2026: quei punteggi si leggono qui e non entrano nel calcolo delle stime.</li>
   </ul>
   <figure><img src="img/15b-bandi-dettaglio.jpg" alt="Dettaglio del bando"><figcaption>Dettaglio di un bando: numeri chiave, categorie, calendario delle edizioni.</figcaption></figure>
+  <figure><img src="img/18-punteggi-reali.jpg" alt="Punteggi reali"><figcaption>«Punteggi reali» nella scheda dei contributi selettivi MiC: le graduatorie 2025 lette dai decreti ufficiali.</figcaption></figure>
   <h2>Aggiungere un bando</h2>
   <p><strong>+ Aggiungi un bando da PDF</strong>: Claude ricava criteri, fasce e soglie dall’avviso. La griglia resta segnata «da verificare» finché non la controlli sul testo; si può correggere anche a mano.</p>
   <h2>Conoscenza aggiuntiva</h2>
@@ -381,13 +395,15 @@ tr { break-inside: avoid; }
   <div class="occhiello">Capitolo 16</div>
   <h1>Dati e riservatezza</h1>
   <ul>
-    <li>I dossier restano <strong>sul tuo dispositivo</strong>, nel browser. Non vengono caricati su nessun server del programma. Il server locale ascolta solo su <code>127.0.0.1</code>.</li>
+    <li>I dossier restano <strong>sul tuo computer</strong>. Nel programma installato dossier, impostazioni, bandi aggiunti e file originali caricati sono salvati nella cartella dei dati, <code>%APPDATA%\Clockwise\archivio</code> (la apri da <strong>Esci → Apri la cartella</strong>): non dipendono dal browser. Non vengono caricati su nessun server del programma. Il server locale ascolta solo su <code>127.0.0.1</code>.</li>
+    <li>Clockwise salva mentre lavori e ricorda la <strong>sessione</strong>: dossier aperto, scheda e sezione. Alla riapertura riparti da lì. Una modifica non arrivata al disco (computer spento all’improvviso) resta nel browser e viene recuperata al riavvio.</li>
+    <li>I file originali si riaprono dalla scheda Documenti toccandone il nome; le scansioni non vanno ricaricate per farle leggere a Claude.</li>
     <li>A Claude viene inviato solo il testo necessario a ciascuna lettura, attraverso il collegamento scelto e a nessun altro servizio.</li>
-    <li>Il documento d’identità non viene mai letto né inviato.</li>
+    <li>Il documento d’identità non viene mai letto né inviato, e il suo file non viene conservato nell’archivio.</li>
     <li>La chiave API è salvata sul computer, leggibile solo dal tuo utente.</li>
     <li>Il controllo degli aggiornamenti non invia alcun dato dell’utente.</li>
   </ul>
-  <div class="attenzione"><p>I dati stanno nel browser usato da Clockwise: cancellare i dati di navigazione di quel browser cancella anche i dossier. Prima di farlo, o prima di cambiare computer, scarica il report completo dei dossier importanti.</p></div>
+  <div class="attenzione"><p>Nell’app Claude e nella pagina autonoma (senza programma installato) i dati stanno solo nel browser: cancellare i dati di navigazione cancella anche i dossier. Prima di cambiare computer usa <strong>Esporta dossier</strong> per i dossier importanti. Disinstallando Clockwise i dati restano, a meno che tu non chieda di eliminarli.</p></div>
 </section>
 
 <!-- 17 -->
@@ -416,7 +432,7 @@ tr { break-inside: avoid; }
       <tr><td>La pillola in alto dice «Claude non collegato»</td><td>Apri Collegamento e segui i tre passi: Installa Claude Code, Accedi, fatto. In alternativa inserisci una chiave API.</td></tr>
       <tr><td>Claude Code è installato ma Clockwise non lo trova, o l’accesso non risulta</td><td>Collegamento → Esegui la diagnosi: il rapporto dice dove è stato cercato e che cosa risponde. Premi Copia il rapporto e mandalo a chi ti assiste.</td></tr>
       <tr><td>L’installazione di Claude Code non riesce</td><td>Spesso è la rete aziendale (proxy, firewall): la diagnosi lo mostra nella sezione Rete. Si può installare a mano da PowerShell con <code>irm https://claude.ai/install.ps1 | iex</code>, poi <code>claude auth login</code>.</td></tr>
-      <tr><td>«La porta è già in uso»</td><td>Clockwise è probabilmente già aperto: cerca la finestra nera. Altrimenti il programma sceglie da solo la porta successiva.</td></tr>
+      <tr><td>«La porta è già in uso»</td><td>Clockwise è già attivo in background: apri l’icona e ritrovi la pagina. Se la porta è di un altro programma, Clockwise sceglie da solo la successiva; i dossier sono su disco e restano gli stessi.</td></tr>
       <tr><td>Un file non viene letto</td><td>Se è un <code>.doc</code> salvalo in PDF o DOCX. Se è una scansione usa «Leggi le scansioni con Claude» (dopo aver riaperto la pagina va trascinato di nuovo).</td></tr>
       <tr><td>Una sezione non viene valutata</td><td>Non ci sono documenti leggibili per i suoi criteri: carica quelli indicati nella scheda Valutazione, o correggi il tipo dei documenti.</td></tr>
       <tr><td>Un passo della valutazione fallisce</td><td>Premi Riprova: vengono rifatti solo i passi mancanti.</td></tr>

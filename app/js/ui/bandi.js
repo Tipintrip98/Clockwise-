@@ -3,6 +3,7 @@
 import { h, metti, svuota, fmt, euro, toast, bottoneConferma } from './dom.js';
 import { S, caricaBandi, llmAttivo, impostazione, salva, apriProgetto } from './app.js';
 import { pannelloConfronto } from './confronto.js';
+import { sezionePunteggiReali, haPunteggiReali } from './punteggi-reali.js';
 import * as store from '../core/store.js';
 import { estraiTesto } from '../core/docs.js';
 import { leggiBando } from '../core/engine.js';
@@ -174,7 +175,9 @@ function sezioneConoscenza(b, ridisegna) {
       try {
         const r = await estraiTesto(f);
         if (!r.testo) { toast(`«${f.name}»: nessun testo leggibile`); continue; }
-        lista.push({ id: store.nuovoId(), nome: f.name, testo: r.testo, caratteri: r.testo.length });
+        const id = store.nuovoId();
+        const salvato = await store.salvaOriginale('bandi', id, f); // l'originale resta sul computer
+        lista.push({ id, nome: f.name, testo: r.testo, caratteri: r.testo.length, ...(salvato ? { originale: { nome: salvato.nome, byte: salvato.byte } } : {}) });
       } catch (e) { toast(`«${f.name}»: ${e.message}`); }
     }
     svuota(stato);
@@ -240,6 +243,7 @@ function dettaglio(b, voci, ridisegna, apri, tornaAllElenco) {
   const sezioni = [
     ['scheda', 'Scheda', () => sezioneScheda(b, oggi)],
     haGriglia ? ['griglia', 'Griglia di valutazione', () => sezioneGriglia(b)] : null,
+    haPunteggiReali(b) ? ['punteggi', 'Punteggi reali', () => sezionePunteggiReali(b)] : null,
     ['fonti', 'Fonti e verifica', () => sezioneFonti(b, voci, apri)],
     sim.simulabile ? ['conoscenza', 'Conoscenza', () => sezioneConoscenza(b, ridisegna)] : null,
   ].filter(Boolean);

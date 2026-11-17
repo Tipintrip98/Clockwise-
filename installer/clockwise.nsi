@@ -59,7 +59,7 @@ BrandingText "${NOME} ${VERSIONE}"
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_TITLE "Clockwise è installato"
-!define MUI_FINISHPAGE_TEXT "Per usarlo apri Clockwise dal menu Start o dal desktop: si apre una finestra nera (va lasciata aperta) e subito dopo il programma nel browser.$\r$\n$\r$\nPer chiudere Clockwise basta chiudere quella finestra."
+!define MUI_FINISHPAGE_TEXT "Per usarlo apri Clockwise dal menu Start o dal desktop: il programma si apre nel browser.$\r$\n$\r$\nClockwise resta attivo in background anche se chiudi il browser: dossier e file caricati sono salvati sul computer. Per chiuderlo usa il pulsante «Esci» nella pagina oppure «Chiudi Clockwise» nel menu Start."
 !define MUI_FINISHPAGE_RUN "$INSTDIR\Clockwise.exe"
 !define MUI_FINISHPAGE_RUN_TEXT "Avvia Clockwise adesso"
 !insertmacro MUI_PAGE_FINISH
@@ -102,6 +102,7 @@ Section "Clockwise" SezioneProgramma
   WriteUninstaller "$INSTDIR\Disinstalla.exe"
 
   CreateShortcut "$SMPROGRAMS\Clockwise.lnk" "$INSTDIR\Clockwise.exe" "" "$INSTDIR\clockwise.ico" 0 SW_SHOWNORMAL "" "${DESCRIZIONE}"
+  CreateShortcut "$SMPROGRAMS\Chiudi Clockwise.lnk" "$INSTDIR\Clockwise.exe" "--esci" "$INSTDIR\clockwise.ico" 0 SW_SHOWNORMAL "" "Chiude Clockwise rimasto attivo in background"
   CreateShortcut "$DESKTOP\Clockwise.lnk" "$INSTDIR\Clockwise.exe" "" "$INSTDIR\clockwise.ico" 0 SW_SHOWNORMAL "" "${DESCRIZIONE}"
 
   WriteRegStr HKCU "${CHIAVE_APP}" "CartellaInstallazione" "$INSTDIR"
@@ -131,14 +132,16 @@ Section "Uninstall"
 
   Delete "$SMPROGRAMS\Clockwise.lnk"
   Delete "$SMPROGRAMS\Manuale di Clockwise.lnk"
+  Delete "$SMPROGRAMS\Chiudi Clockwise.lnk"
+  DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "Clockwise"
   Delete "$DESKTOP\Clockwise.lnk"
   DeleteRegKey HKCU "${CHIAVE_DISINSTALLA}"
   DeleteRegKey HKCU "${CHIAVE_APP}"
 
-  ; Le impostazioni (chiave API salvata) restano, a meno che l'utente non chieda di toglierle.
-  ; In silenzioso (/S) la risposta è No. I dossier vivono nel browser e non vengono toccati.
+  ; Dossier, file caricati e impostazioni stanno in %APPDATA%\Clockwise e restano, a meno che l'utente non chieda
+  ; di toglierli. In silenzioso (/S) la risposta è No.
   IfFileExists "$APPDATA\Clockwise\*.*" 0 fineDati
-  MessageBox MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2 "Vuoi eliminare anche le impostazioni di Clockwise, compresa la chiave API salvata?$\r$\n$\r$\nI dossier restano comunque nel browser." /SD IDNO IDNO fineDati
+  MessageBox MB_YESNO|MB_ICONEXCLAMATION|MB_DEFBUTTON2 "Vuoi eliminare anche i DOSSIER, i file caricati e le impostazioni di Clockwise (compresa la chiave API salvata)?$\r$\n$\r$\nSe rispondi No restano sul computer e li ritrovi alla prossima installazione." /SD IDNO IDNO fineDati
     RMDir /r "$APPDATA\Clockwise"
   fineDati:
 SectionEnd

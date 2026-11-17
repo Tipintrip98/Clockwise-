@@ -1,5 +1,5 @@
 // Stato dell'applicazione, barra superiore e navigazione tra le viste.
-import { h, metti, s, svuota } from './dom.js';
+import { h, metti, s, svuota, toast, salvaFile, nomeFilePulito } from './dom.js';
 import { rilevaAmbiente, creaLlm, MODELLI } from '../core/llm.js';
 import { BANDI_PREDEFINITI, SCHEDE_BANDI } from '../core/bandi/indice.js';
 import { applicaAggiornamenti } from '../core/aggiornamenti.js';
@@ -15,6 +15,9 @@ import { apriAiuto } from './aiuto.js';
 import { APP } from '../core/versione.js';
 import { avviaTutorial, tutorialAttivo } from './tutorial.js';
 import { apriSceltaBando } from './scelta-bando.js';
+import { apriProgramma } from './programma.js';
+import { compilaEsempio, VERSIONE_ESEMPIO, NOME_ESEMPIO } from '../core/esempio.js';
+import { pacchettoDossier, leggiPacchetto, preparaImportato, ESTENSIONE } from '../core/scambio.js';
 
 export const S = {
   ambiente: { ambiente: 'attesa' },
@@ -66,7 +69,32 @@ export async function salva(p = S.progetto) {
   S.progetti = await store.elencoProgetti();
 }
 let timerSalva = null;
-export function salvaPresto() { clearTimeout(timerSalva); timerSalva = setTimeout(() => salva(), 500); }
+export function salvaPresto() { clearTimeout(timerSalva); timerSalva = setTimeout(() => { timerSalva = null; salva(); }, 500); }
+/** Salva adesso ciò che era in attesa (alla chiusura della pagina, al cambio di scheda del browser, prima di «Esci»). */
+export function salvaSubito() {
+  const inAttesa = timerSalva != null;
+  clearTimeout(timerSalva); timerSalva = null;
+  return inAttesa ? salva() : Promise.resolve();
+}
+
+/* ------------------------------------------------------------------ sessione di lavoro */
+// Dove si era rimasti (pagina, dossier, scheda, sezioni interne): si salva a ogni spostamento e alla chiusura,
+// e alla riapertura del programma si riparte da lì.
+let timerSessione = null, sessioneAttiva = false;
+const fotoSessione = () => ({ rotta: rotta(), progetto: S.progetto?.id || null, scheda: S.scheda, sotto: { ...S.sotto }, bandoAperto: S.bandoAperto || null, quando: new Date().toISOString() });
+export function ricordaSessione(subito = false) {
+  if (!sessioneAttiva) return Promise.resolve();
+  clearTimeout(timerSessione); timerSessione = null;
+  if (subito) return store.salvaSessione(fotoSessione()).catch(() => {});
+  timerSessione = setTimeout(() => { timerSessione = null; store.salvaSessione(fotoSessione()).catch(() => {}); }, 400);
+  return Promise.resolve();
+}
+/** Tutto su disco, adesso: dossier in modifica e sessione. Restituisce true se non resta niente in sospeso. */
+export async function salvaTutto() {
+  await salvaSubito();
+  await ricordaSessione(true);
+  return store.scrittureConcluse();
+}
 
 // Dei documenti d'identità non si conserva mai il testo, comunque sia arrivato.
 function senzaIdentita(p) {
@@ -76,6 +104,7 @@ function senzaIdentita(p) {
 }
 
 export async function apriProgetto(id, scheda) {
+  await salvaSubito(); // il dossier che si lascia va su disco prima di aprire l'altro
   const p = await store.caricaProgetto(id);
   if (!p) return vai('dossier');
   p.dati = { ...datiVuoti(), ...p.dati };
@@ -113,10 +142,11 @@ export function render() {
       h('div.top-fine',
         pillola,
         h('button.btn.s.aiuto', { type: 'button', id: 'btn-aiuto', title: 'Guida, novità e crediti', onclick: () => apriAiuto(AZIONI_AIUTO) }, h('span', { 'aria-hidden': 'true' }, '?'), h('span.et', 'Aiuto')),
-        S.ambiente.server?.eseguibile && h('button.btn.s.ghost', { type: 'button', id: 'btn-esci', title: 'Chiudi il programma', onclick: () => apriAiuto(AZIONI_AIUTO, 'info') }, 'Esci')))),
+        S.ambiente.ambiente === 'locale' && h('button.btn.s.ghost', { type: 'button', id: 'btn-esci', title: 'Salvataggio, dati sul computer e chiusura del programma', onclick: () => apriProgramma() }, S.ambiente.server?.eseguibile ? 'Esci' : 'Dati')))),
     main);
   VISTE[r](main);
   window.scrollTo(0, 0);
+  ricordaSessione();
 }
 
 // Marchio: il quadrante di Clockwise su una tessera cobalto, con la lancetta ambra (i colori sono variabili di app.css).
@@ -131,45 +161,58 @@ function logo() {
     s('circle', { cx: 16, cy: 16.6, r: 1.9, fill: '#FFFFFF' }));
 }
 
-// Dossier dimostrativo: numeri d'invenzione, per mostrare subito come lavora il simulatore.
-function progettoEsempio() {
-  const p = nuovoProgetto('Esempio — L’ultima tonnara', { bandoId: 'sicilia-2025-2027', categoriaId: 'film' });
-  p.esempio = true;
-  p.dati = {
-    ...datiVuoti(), titolo: 'L’ultima tonnara', tipologiaOpera: 'Film di produzione cinematografica', durataMin: 100,
-    giorni: { prepTot: 30, prepSicilia: 24, ripreseTot: 28, ripreseSicilia: 28, postTot: 60, postSicilia: 20 },
-    professionisti: { artTot: 10, artSicilia: 6, crewTot: 20, crewSicilia: 15 },
-    economici: { costoProduzione: 470000, costoAmmissibile: 460000, contributoRichiesto: 120000, spesaSicilia: 270000, producerFee: 30000 },
-    piano: [
-      { voce: '1.1', etichetta: 'Contributo richiesto con questo bando', denominazione: '', importo: 120000, documento: 'nessuno' },
-      { voce: '1.2', etichetta: 'Tax credit', denominazione: '', importo: 100000, documento: 'nessuno' },
-      { voce: '2.1', etichetta: 'Apporto societario diretto', denominazione: '', importo: 80000, documento: 'referenze' },
-      { voce: '2.2', etichetta: 'Produttori indipendenti', denominazione: 'Coproduttore d’esempio', importo: 110000, documento: 'contratto' },
-      { voce: '5.2', etichetta: 'Prevendite Italia — Free TV', denominazione: 'Emittente d’esempio', importo: 60000, documento: 'deal_memo' },
-    ],
-  };
-  return p;
+// Dossier dimostrativo: «L'insabbiato», con i soli dati chiave e i punteggi (core/esempio.js).
+function progettoEsempio() { return compilaEsempio(nuovoProgetto('Esempio', { bandoId: 'sicilia-2025-2027', categoriaId: 'film' })); }
+
+// L'esempio delle versioni precedenti (numeri d'invenzione) lascia il posto a quello nuovo, ma solo se nessuno
+// ci ha lavorato: un esempio a cui sono stati aggiunti documenti o una valutazione resta dov'è.
+async function aggiornaEsempio(salvate) {
+  if (salvate.esempioCreato && salvate.esempioVersione === VERSIONE_ESEMPIO) return;
+  for (const voce of (await store.elencoProgetti()).filter((x) => x.esempio)) {
+    const vecchio = await store.caricaProgetto(voce.id);
+    if (vecchio && (vecchio.esempioVersione === VERSIONE_ESEMPIO || vecchio.documenti?.length || (vecchio.valutazione && !vecchio.esempioVersione))) continue;
+    await store.eliminaProgetto(voce.id);
+  }
+  if (!(await store.elencoProgetti()).some((x) => x.esempio && x.nome === NOME_ESEMPIO)) {
+    const p = progettoEsempio();
+    await store.salvaProgetto(p, riepilogo(p));
+  }
+  await store.salvaImpostazioni({ esempioCreato: true, esempioVersione: VERSIONE_ESEMPIO });
 }
 
 export async function avvia(el) {
   radice = el;
+  // nel programma installato i dati stanno su disco: va collegato prima di leggere qualsiasi cosa
+  await store.collegaDisco();
   const salvate = await store.impostazioni();
   Object.assign(S.imp, Object.fromEntries(Object.entries(salvate).filter(([k]) => k in S.imp)));
   await caricaBandi();
+  await aggiornaEsempio(salvate);
   S.progetti = await store.elencoProgetti();
-  if (!salvate.esempioCreato) {
-    await store.salvaProgetto(progettoEsempio(), {});
-    const p = await store.caricaProgetto((await store.elencoProgetti())[0].id);
-    await store.salvaProgetto(p, riepilogo(p));
-    await store.salvaImpostazioni({ esempioCreato: true });
-    S.progetti = await store.elencoProgetti();
+  // si riparte da dove si era rimasti: senza un indirizzo preciso vale la sessione salvata
+  const ses = await store.sessione();
+  const senzaIndirizzo = !location.hash || location.hash === '#';
+  const daRiaprire = rotta() === 'progetto' ? (ses?.progetto || salvate.ultimoProgetto) : senzaIndirizzo && ses?.rotta === 'progetto' ? ses.progetto : null;
+  let ripresa = null;
+  if (daRiaprire) {
+    const p = await store.caricaProgetto(daRiaprire);
+    if (p) {
+      p.dati = { ...datiVuoti(), ...p.dati }; if (senzaIdentita(p)) await store.salvaProgetto(p, riepilogo(p));
+      S.progetto = p; S.scheda = ses?.progetto === p.id && ses.scheda ? ses.scheda : 'cruscotto';
+      if (ses?.progetto === p.id && ses.sotto) S.sotto = { ...S.sotto, ...ses.sotto };
+      if (senzaIndirizzo) { ripresa = p.nome; history.replaceState(null, '', '#progetto'); }
+    }
+  } else if (senzaIndirizzo && ses?.rotta && VISTE[ses.rotta] && ses.rotta !== 'progetto' && ses.rotta !== 'dossier') {
+    S.bandoAperto = ses.bandoAperto || null;
+    history.replaceState(null, '', `#${ses.rotta}`);
   }
-  if (rotta() === 'progetto' && salvate.ultimoProgetto) {
-    const p = await store.caricaProgetto(salvate.ultimoProgetto);
-    if (p) { p.dati = { ...datiVuoti(), ...p.dati }; if (senzaIdentita(p)) await store.salvaProgetto(p, riepilogo(p)); S.progetto = p; S.scheda = 'cruscotto'; }
-  }
+  sessioneAttiva = true;
   window.addEventListener('hashchange', render);
+  // alla chiusura della pagina, o quando passa in secondo piano, ciò che è in attesa va salvato subito
+  window.addEventListener('pagehide', () => { salvaSubito(); ricordaSessione(true); });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') { salvaSubito(); ricordaSessione(true); } });
   render();
+  if (ripresa && salvate.tutorialVisto) toast(`Sessione ripresa: «${ripresa}»`);
   S.guida = { tutorialVisto: !!salvate.tutorialVisto, dritte: { ...(salvate.dritte || {}) } };
   // il collegamento a Claude arriva dopo: la pagina è già utilizzabile
   S.ambiente = await rilevaAmbiente();
@@ -179,6 +222,60 @@ export async function avvia(el) {
   if (!S.guida.tutorialVisto && rotta() === 'dossier') guidaIniziale();
   // controllo silenzioso degli aggiornamenti dei bandi: non blocca e non disturba se non c'è nulla di nuovo
   controlloSilenzioso().catch(() => {});
+}
+
+/* ------------------------------------------------------------------ esporta e importa un dossier */
+
+async function inBase64(blob) {
+  const b = new Uint8Array(await blob.arrayBuffer());
+  let testo = '';
+  for (let i = 0; i < b.length; i += 0x8000) testo += String.fromCharCode(...b.subarray(i, i + 0x8000));
+  return btoa(testo);
+}
+function daBase64(base64, nome, tipo) {
+  const testo = atob(base64);
+  const b = new Uint8Array(testo.length);
+  for (let i = 0; i < testo.length; i++) b[i] = testo.charCodeAt(i);
+  return new File([b], nome, { type: tipo || 'application/octet-stream' });
+}
+
+/** Salva tutto il dossier in un file .clockwise, con i file originali se sono nell'archivio del computer. */
+export async function esportaDossier(p) {
+  await salvaSubito();
+  const originali = [];
+  let pesanti = 0;
+  for (const d of p.documenti) {
+    if (!d.originale || d.tipo === 'identita') continue;
+    if (pesanti + (d.dimensione || 0) > 250 * 1024 * 1024) continue; // oltre, il file diventerebbe ingestibile
+    const f = await store.leggiOriginale(p.id, d.id, d.nome);
+    if (f) { originali.push({ id: d.id, nome: d.nome, tipo: f.type, base64: await inBase64(f) }); pesanti += f.size; }
+  }
+  const pacchetto = pacchettoDossier(p, { versioneApp: APP.versione, originali });
+  await salvaFile(nomeFilePulito(`dossier-${p.dati?.titolo || p.nome}`, ESTENSIONE), JSON.stringify(pacchetto), 'application/json');
+  const mancanti = p.documenti.filter((d) => d.tipo !== 'identita').length - originali.length;
+  toast(originali.length ? `Dossier esportato con ${originali.length} file originali${mancanti > 0 ? ` (${mancanti} senza originale)` : ''}` : 'Dossier esportato (testi e dati, senza i file originali)');
+}
+
+/** Carica un dossier esportato: non sovrascrive mai un dossier esistente (se c'è già, ne crea una copia). */
+export async function importaDossier(file) {
+  let letto;
+  try { letto = leggiPacchetto(await file.text()); } catch (e) { toast(e.message); return null; }
+  const { progetto: p, copia } = preparaImportato(letto.progetto, { idEsistenti: S.progetti.map((x) => x.id), nuovoId: store.nuovoId });
+  p.dati = { ...datiVuoti(), ...p.dati };
+  let salvati = 0;
+  for (const o of letto.originali) {
+    const d = p.documenti.find((x) => x.id === o.id);
+    if (!d || d.tipo === 'identita') continue;
+    let r = null;
+    try { r = await store.salvaOriginale(p.id, d.id, daBase64(o.base64, o.nome, o.tipo)); } catch { r = null; }
+    if (r) { d.originale = { nome: r.nome, byte: r.byte }; salvati++; }
+  }
+  for (const d of p.documenti) if (!letto.originali.some((o) => o.id === d.id) || !store.statoDisco().attivo) delete d.originale;
+  await store.salvaProgetto(p, riepilogo(p));
+  S.progetti = await store.elencoProgetti();
+  toast(`Dossier «${p.nome}» importato${copia ? ' come copia' : ''}${salvati ? ` con ${salvati} file originali` : ''}`);
+  await apriProgetto(p.id, 'cruscotto');
+  return p;
 }
 
 /* ------------------------------------------------------------------ guida al primo utilizzo */

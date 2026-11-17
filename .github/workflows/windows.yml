@@ -355,6 +355,76 @@ jobs:
             Write-Host 'Programma installato: installazione di Claude Code, prova reale, diagnosi e accesso a posto'
           } finally { if (-not $p.HasExited) { $p.Kill() } }
 
+      # Dati su disco, programma in background, avvio all'accensione, chiusura dal menu Start: sul programma installato.
+      - name: Archivio su disco, background e chiusura
+        env:
+          CLOCKWISE_NO_BROWSER: '1'
+          PROFILO_DI_PROVA: ${{ matrix.profilo }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $exe = Join-Path $env:LOCALAPPDATA 'Programs\Clockwise\Clockwise.exe'
+          $base = 'http://127.0.0.1:5757'
+          $json = @{ 'Content-Type' = 'application/json' }
+          $menu = [Environment]::GetFolderPath('Programs')
+          if (-not (Test-Path (Join-Path $menu 'Chiudi Clockwise.lnk'))) { throw 'Nel menu Start manca «Chiudi Clockwise»' }
+          # niente finestra nera: nell'intestazione del file il sottosistema deve essere 2 (finestre), non 3 (console)
+          $b = [IO.File]::ReadAllBytes($exe); $pe = [BitConverter]::ToInt32($b, 0x3C); $sotto = [BitConverter]::ToUInt16($b, $pe + 24 + 68)
+          if ($sotto -ne 2) { throw "Clockwise.exe ha sottosistema $sotto: aprirebbe la finestra della console" }
+          if ($env:PROFILO_DI_PROVA) {
+            $profilo = Join-Path $env:RUNNER_TEMP $env:PROFILO_DI_PROVA
+            $env:USERPROFILE = $profilo; $env:APPDATA = "$profilo\AppData\Roaming"
+          }
+          $dati = Join-Path $env:APPDATA 'Clockwise'
+          function Attendi { $s = $null; $limite = (Get-Date).AddSeconds(60); while (-not $s -and (Get-Date) -lt $limite) { try { $s = Invoke-RestMethod "$base/api/stato" -TimeoutSec 10 } catch { Start-Sleep -Milliseconds 500 } }; if (-not $s) { throw 'Clockwise non risponde' }; $s }
+          function Spento { $limite = (Get-Date).AddSeconds(20); while ((Get-Date) -lt $limite) { try { Invoke-RestMethod "$base/api/stato" -TimeoutSec 2 | Out-Null; Start-Sleep -Milliseconds 500 } catch { return $true } }; return $false }
+
+          # avvio come dal menu Start: nessuna console, nessuna redirezione
+          Start-Process -FilePath $exe
+          $stato = Attendi
+          if ($stato.sfondo -ne $true -or $stato.archivio -ne $true) { throw "Stato inatteso: $($stato | ConvertTo-Json -Compress)" }
+          $finestre = @(Get-Process -Name Clockwise | Where-Object { $_.MainWindowHandle -ne 0 })
+          if ($finestre.Count) { throw 'Clockwise ha aperto una finestra' }
+
+          # un dossier e un file originale: devono finire nella cartella dei dati dell'utente
+          $dossier = '{"id":"provaci1","nome":"Città — «è» già lì","documenti":[],"dati":{}}'
+          Invoke-RestMethod "$base/api/archivio/kv/progetto%3Aprovaci1" -Method Put -Headers $json -Body ([Text.Encoding]::UTF8.GetBytes($dossier)) | Out-Null
+          $file = Join-Path $dati 'archivio\kv\progetto~provaci1.json'
+          if (-not (Test-Path -LiteralPath $file)) { throw "Il dossier non è su disco: $file" }
+          $pdf = Join-Path $env:RUNNER_TEMP 'originale.pdf'; [IO.File]::WriteAllBytes($pdf, [Text.Encoding]::ASCII.GetBytes('%PDF-1.4 prova'))
+          $nome = [Uri]::EscapeDataString('Contratto è firmato: v2.pdf')
+          $r = Invoke-RestMethod "$base/api/archivio/file/provaci1/doc1?nome=$nome" -Method Put -InFile $pdf
+          $originale = Join-Path $dati "archivio\originali\provaci1\doc1\$($r.nome)"
+          if (-not (Test-Path -LiteralPath $originale)) { throw "Il file originale non è su disco: $originale" }
+          Write-Host "Su disco: $file e $originale"
+
+          # avvio all'accensione: voce nel registro dell'utente, poi tolta
+          $run = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+          $prg = Invoke-RestMethod "$base/api/programma/avvio-automatico" -Method Post -Headers $json -Body '{"attivo":true}'
+          $voce = (Get-ItemProperty $run -Name Clockwise -ErrorAction SilentlyContinue).Clockwise
+          if ($prg.avvioAutomatico.attivo -ne $true -or $voce -notmatch '--sfondo' -or $voce -notmatch 'Clockwise\.exe') { throw "Avvio all'accensione non impostato: «$voce»" }
+          Write-Host "Avvio all'accensione: $voce"
+          Invoke-RestMethod "$base/api/programma/avvio-automatico" -Method Post -Headers $json -Body '{"attivo":false}' | Out-Null
+          if ((Get-ItemProperty $run -Name Clockwise -ErrorAction SilentlyContinue).Clockwise) { throw "La voce di avvio all'accensione è rimasta nel registro" }
+
+          # «Chiudi Clockwise» del menu Start: Clockwise.exe --esci ferma quello attivo in background
+          Start-Process -FilePath $exe -ArgumentList '--esci' -Wait
+          if (-not (Spento)) { throw 'Dopo --esci Clockwise è ancora attivo' }
+
+          # riavvio in background (--sfondo, come all'accensione): i dati di prima ci sono ancora
+          Start-Process -FilePath $exe -ArgumentList '--sfondo'
+          Attendi | Out-Null
+          $letto = Invoke-RestMethod "$base/api/archivio/kv/progetto%3Aprovaci1"
+          if ($letto.nome -ne 'Città — «è» già lì') { throw "Dopo il riavvio il dossier non è quello salvato: $($letto.nome)" }
+          $elenco = Invoke-RestMethod "$base/api/archivio"
+          if ($elenco.originali -lt 1) { throw 'Dopo il riavvio manca il file originale' }
+          Invoke-RestMethod "$base/api/esci" -Method Post | Out-Null
+          if (-not (Spento)) { throw 'Il programma non si chiude' }
+          $registro = Join-Path $dati 'clockwise.log'
+          Write-Host '--- clockwise.log ---'; Get-Content -LiteralPath $registro
+          if (-not (Select-String -LiteralPath $registro -Pattern 'è in esecuzione' -Quiet)) { throw 'Nel registro manca la riga di avvio' }
+          if (-not (Select-String -LiteralPath $registro -Pattern '--esci' -Quiet)) { throw 'Nel registro manca la chiusura con --esci' }
+          Write-Host 'Dati su disco, background, avvio automatico e chiusura: a posto'
+
   # ---- Solo su richiesta: i file provati sopra vengono pubblicati nella release della versione, v<versione>,
   #   con il numero di versione in ogni nome di file (es. Clockwise-Setup-2.0.1.exe) e segnata come «Latest»:
   #   https://github.com/<proprietario>/<repository>/releases/latest porta sempre all'ultima.

@@ -290,6 +290,18 @@ async function inietta(file, blob) {
   return { previsti: avvisi.length - imprevisti.length, imprevisti: imprevisti.length };
 }
 
+// node.exe è un programma da console: Windows gli aprirebbe sempre una finestra nera. Il campo «Subsystem»
+// dell'intestazione PE passa da 3 (console) a 2 (finestre): Clockwise resta attivo in background senza finestra,
+// e Node, senza console, scarta da solo ciò che il programma scriverebbe a video (lo si ritrova in clockwise.log).
+function senzaConsole(file) {
+  const b = fs.readFileSync(file);
+  const pe = b.readUInt32LE(0x3C);
+  if (b.toString('latin1', 0, 2) !== 'MZ' || b.toString('latin1', pe, pe + 4) !== 'PE\0\0') errore('Clockwise.exe non ha un’intestazione PE valida.');
+  const campo = pe + 24 + 68;
+  if (b.readUInt16LE(campo) === 3) { b.writeUInt16LE(2, campo); fs.writeFileSync(file, b); }
+  nota('eseguibile marcato come programma senza finestra della console (resta attivo in background)');
+}
+
 async function creaExe(nodeExe, blob) {
   passo('Clockwise.exe');
   fs.copyFileSync(nodeExe, fileExe);
@@ -301,8 +313,10 @@ async function creaExe(nodeExe, blob) {
     const icone = await personalizzaRisorse(fileExe, blob);
     nota(`icona di Clockwise (${icone} misure) e proprietà del file impostate, firma di node.exe rimossa; contenuto SEA riletto: identico`);
   }
+  senzaConsole(fileExe);
   const pe = leggiPE(fileExe);
   if (!pe || !pe.fusibileAttivo) errore('Clockwise.exe non è un eseguibile Windows valido con il contenuto SEA attivo.');
+  if (pe.sottosistema !== 'finestre') errore('Clockwise.exe risulta ancora un programma da console: comparirebbe la finestra nera.');
   if (pe.struttura) errore(`Clockwise.exe ha una struttura che Windows rifiuterebbe: ${pe.struttura}. Riprova con --senza-risorse.`);
   nota(`${rel(fileExe)} — ${mb(fileExe)} — ${pe.formato} ${pe.architettura}, ${pe.sottosistema}, ${pe.firma ? 'firma di node.exe presente ma non più valida' : 'senza firma digitale'}`);
   firmaFile(fileExe);
@@ -399,7 +413,12 @@ async function provaLinux(blob, interfaccia) {
     verifica(!!stato, `avvio: /api/stato risponde su 127.0.0.1:${porta}`);
     if (!stato) { console.log(primo.testo()); errore('L’eseguibile di prova non è partito.'); }
     verifica(stato.eseguibile === true && stato.versione === versione, `/api/stato -> versione ${stato.versione}, eseguibile ${stato.eseguibile}`);
-    verifica(/Lascia aperta questa finestra/.test(primo.testo()) && primo.testo().includes(`http://localhost:${porta}`), 'testo della finestra con indirizzo e istruzioni');
+    verifica(/pulsante «Esci»/.test(primo.testo()) && primo.testo().includes(`http://localhost:${porta}`), 'messaggio di avvio con indirizzo e come chiudere');
+    // senza finestra, lo stesso messaggio deve finire nel registro su file; e l'archivio su disco deve rispondere
+    const registro = path.join(dati, 'clockwise.log');
+    verifica(fs.existsSync(registro) && fs.readFileSync(registro, 'utf8').includes(`http://localhost:${porta}`), 'clockwise.log nella cartella dei dati, con l’avvio');
+    const messo = await fetch(`http://127.0.0.1:${porta}/api/archivio/kv/prova`, { method: 'PUT', body: '{"a":1}' });
+    verifica(messo.ok && fs.existsSync(path.join(dati, 'archivio', 'kv', 'prova.json')), 'archivio su disco: il valore scritto è nella cartella dei dati');
     const pagina = await fetch(`http://127.0.0.1:${porta}/`);
     verifica(pagina.status === 200 && (await pagina.text()).includes('Clockwise'), 'GET / -> 200, contiene "Clockwise"');
     let diversi = 0;

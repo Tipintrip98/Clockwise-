@@ -1,7 +1,8 @@
 // Pannello Aiuto: guida rapida, novità della versione, crediti. Si apre dal pulsante «?» nella barra in alto.
-import { h, metti, svuota, s, bottoneConferma, toast } from './dom.js';
+import { h, metti, svuota, s, toast } from './dom.js';
 import { S } from './app.js';
 import { APP, NOVITA } from '../core/versione.js';
+import { apriProgramma } from './programma.js';
 
 const GUIDA = [
   ['Come si usa, in quattro passi', [
@@ -23,7 +24,9 @@ const GUIDA = [
     ['Bandi', 'Catalogo dei fondi italiani ed europei con stato, finestre e griglie verificate sui testi ufficiali, aggiornato in automatico. Puoi aggiungere altri bandi da PDF e altra conoscenza (FAQ, casi reali).'],
   ]],
   ['Dati e riservatezza', [
-    ['Dove stanno i dossier', 'Su questo dispositivo, nel browser. Non vengono caricati su nessun server del programma.'],
+    ['Dove stanno i dossier', 'Su questo computer. Nel programma installato dossier, impostazioni e file originali caricati sono salvati nella cartella dei dati (la vedi con «Esci» in alto a destra), non solo nel browser. Non vengono caricati su nessun server del programma.'],
+    ['Sessione e chiusura', 'Clockwise salva mentre lavori e ricorda dossier, scheda e sezione: alla riapertura riparti da lì. Il programma resta attivo in background anche a browser chiuso; per fermarlo usa «Esci» › «Salva ed esci».'],
+    ['Copia di un dossier', '«Esporta dossier» salva tutto in un file .clockwise (con gli originali); «Importa dossier», nell’elenco, lo ricarica qui o su un altro computer.'],
     ['Che cosa riceve Claude', 'Solo il testo necessario a ciascuna lettura. Il documento d’identità non viene mai inviato.'],
     ['Che valore ha la stima', 'È un controllo di qualità prima dell’invio: non anticipa né vincola il giudizio della Commissione.'],
   ]],
@@ -67,11 +70,7 @@ export function apriAiuto(azioni = {}, scheda = 'guida') {
         h('dt', 'Questa installazione'), h('dd', `${collegamento}${server?.versione ? ` · servizio ${server.versione}` : ''}`),
         h('dt', 'Librerie'), h('dd.muted.small', 'PDF.js (Mozilla), SheetJS, Mammoth: lettura di PDF, Excel e Word sul dispositivo. Carattere Inter (licenza SIL OFL).')),
       h('p.muted.small', { style: { maxWidth: '62ch' } }, `© ${APP.rilascio.slice(0, 4)} ${APP.autore}. Le stime sono uno strumento di controllo qualità e non sostituiscono il giudizio della Commissione né il parere di un professionista.`),
-      server?.eseguibile ? h('div', bottoneConferma('Chiudi Clockwise', 'Conferma: arresta il programma', async () => {
-        try { await fetch('api/esci', { method: 'POST' }); } catch { /* il servizio si chiude mentre risponde */ }
-        chiudiAiuto();
-        metti(svuota(document.body), h('main.wrap', { style: { paddingTop: '18vh', textAlign: 'center' } }, h('h1', 'Clockwise è stato chiuso'), h('p.muted', { style: { marginTop: '8px' } }, 'Puoi chiudere questa scheda. Per riaprirlo usa l’icona Clockwise nel menu Start o sul desktop.')));
-      }, 'btn.danger')) : null,
+      S.ambiente.ambiente === 'locale' ? h('div', h('button.btn', { type: 'button', id: 'aiuto-programma', onclick: () => { chiudiAiuto(); apriProgramma(); } }, server?.eseguibile ? 'Salvataggio e chiusura…' : 'Dati salvati…')) : null,
     ],
   };
   const linguette = h('div.subnav', { role: 'tablist' }, [['guida', 'Guida'], ['novita', 'Novità'], ['info', 'Informazioni e crediti']].map(([id, nome]) => h('button', { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, nome)));

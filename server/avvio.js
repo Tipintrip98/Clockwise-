@@ -1,9 +1,10 @@
 // Avvio di Clockwise come programma (Clockwise.exe): cartella dati dell'utente, scelta della
 // porta, apertura del browser. Funzioni senza effetti all'importazione, così si possono provare.
 import http from 'node:http';
+import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 
 export const PORTA_PREDEFINITA = 5757;
 
@@ -16,25 +17,53 @@ export function cartellaDatiEseguibile(env = process.env, casa = os.homedir()) {
 
 /** Comando che apre l'indirizzo nel browser predefinito del sistema. */
 export function comandoBrowser(url, piattaforma = process.platform, env = process.env) {
-  // Su Windows il primo argomento tra virgolette di "start" è il titolo della finestra: va lasciato vuoto.
-  if (piattaforma === 'win32') return { comando: env.ComSpec || 'cmd.exe', args: ['/c', 'start', '""', url], opzioni: { windowsVerbatimArguments: true } };
+  // Su Windows rundll32 è un programma senza console: Clockwise gira in background e non deve far comparire finestre nere.
+  if (piattaforma === 'win32') return { comando: path.win32.join(env.SystemRoot || env.windir || 'C:\\Windows', 'System32', 'rundll32.exe'), args: ['url.dll,FileProtocolHandler', url], opzioni: { windowsHide: true } };
   if (piattaforma === 'darwin') return { comando: 'open', args: [url], opzioni: {} };
   return { comando: 'xdg-open', args: [url], opzioni: {} };
 }
 
-/** Apre il browser; non blocca e non fallisce mai (al massimo l'utente copia l'indirizzo dalla finestra). */
+/** Apre il browser; non blocca e non fallisce mai (al massimo l'indirizzo resta scritto nel registro). */
 export function apriBrowser(url, env = process.env) {
   if (env.CLOCKWISE_NO_BROWSER === '1') return false;
   if (!/^http:\/\/(localhost|127\.0\.0\.1):\d+\/?$/.test(url)) return false; // solo l'indirizzo di Clockwise
   const { comando, args, opzioni } = comandoBrowser(url);
   try {
-    // Su Windows cmd usa la finestra di Clockwise (nessuna finestra in più) e termina subito;
-    // altrove il programma che apre il browser viene staccato da questo processo.
     const figlio = spawn(comando, args, { ...opzioni, stdio: 'ignore', detached: process.platform !== 'win32' });
-    figlio.on('error', () => { /* nessun browser predefinito: resta l'indirizzo scritto nella finestra */ });
+    figlio.on('error', () => { /* nessun browser predefinito: resta l'indirizzo scritto nel registro */ });
     figlio.unref();
     return true;
   } catch { return false; }
+}
+
+/**
+ * Registro su file (clockwise.log nella cartella dei dati): l'eseguibile gira senza finestra, quindi avvio,
+ * chiusura ed errori si scrivono qui. Oltre 512 kB il file riparte da capo. Non fallisce mai.
+ */
+export function creaRegistro(file, { massimo = 512 * 1024 } = {}) {
+  try { fs.mkdirSync(path.dirname(file), { recursive: true }); if (fs.statSync(file).size > massimo) fs.rmSync(file, { force: true }); } catch { /* file non ancora creato */ }
+  const scrivi = (testo) => { try { fs.appendFileSync(file, `${new Date().toISOString()}  ${String(testo).trim()}\n`); } catch { /* disco pieno o cartella non scrivibile */ } };
+  return { file, scrivi };
+}
+
+/* ------------------------------------------------------------------ avvio all'accensione (solo Windows) */
+// Una voce nel registro dell'utente corrente (nessun diritto di amministratore): all'accesso a Windows
+// parte Clockwise.exe --sfondo, cioè il servizio senza aprire il browser.
+const CHIAVE_RUN = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run';
+const VOCE_RUN = 'Clockwise';
+const reg = (args) => spawnSync('reg', args, { encoding: 'utf8', windowsHide: true });
+
+export function statoAvvioAutomatico({ eseguibile = true, piattaforma = process.platform, esegui = reg } = {}) {
+  if (piattaforma !== 'win32' || !eseguibile) return { disponibile: false, attivo: false };
+  const r = esegui(['query', CHIAVE_RUN, '/v', VOCE_RUN]);
+  return { disponibile: true, attivo: !r.error && r.status === 0 && /Clockwise/i.test(String(r.stdout || '')) };
+}
+export function impostaAvvioAutomatico(attivo, { exe = process.execPath, esegui = reg } = {}) {
+  const r = attivo ? esegui(['add', CHIAVE_RUN, '/v', VOCE_RUN, '/t', 'REG_SZ', '/d', `"${exe}" --sfondo`, '/f'])
+    : esegui(['delete', CHIAVE_RUN, '/v', VOCE_RUN, '/f']);
+  // togliere una voce che non c'è non è un errore
+  if (!attivo && !r.error && r.status !== 0) return { ok: true };
+  return r.error || r.status !== 0 ? { ok: false, messaggio: String(r.stderr || r.error?.message || 'Il registro di Windows ha rifiutato la modifica.').trim() } : { ok: true };
 }
 
 /**

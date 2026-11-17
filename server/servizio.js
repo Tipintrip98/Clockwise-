@@ -9,6 +9,8 @@ import { statoClaudeCode, chiamaClaudeCode, installaClaudeCode, avviaAccesso, pr
 import { diagnosi, testoDiagnosi } from './diagnosi.js';
 import { percorsoRelativo } from './statici.js';
 import { creaAggiornamenti } from './aggiornamenti.js';
+import { creaArchivio } from './archivio.js';
+import { statoAvvioAutomatico, impostaAvvioAutomatico } from './avvio.js';
 
 const TIPI_MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon', '.woff2': 'font/woff2' };
 
@@ -42,10 +44,15 @@ function origineValida(req) {
  * @param {boolean} [o.eseguibile]  true quando gira come Clockwise.exe (la UI mostra "Esci")
  * @param {() => void} [o.suEsci]   chiamata dopo aver risposto a POST /api/esci
  * @param {object} [o.aggiornamenti]  opzioni per il controllo degli aggiornamenti dei bandi (nelle prove: rete, bandi, limiti)
+ * @param {object} [o.programma]  { sfondo, registro, avvioAutomatico: { stato(), imposta(attivo) }, apriCartella } (nelle prove sostituisce registro di Windows ed Esplora file)
  * @returns {http.Server}
  */
-export function creaServer({ fornitore, cartellaDati, versione, eseguibile = false, suEsci, aggiornamenti: opzioniAggiornamenti = {} }) {
+export function creaServer({ fornitore, cartellaDati, versione, eseguibile = false, suEsci, aggiornamenti: opzioniAggiornamenti = {}, programma = {} }) {
   let installazioneInCorso = false;
+  // archivio su disco di dossier, impostazioni e file originali (vedi server/archivio.js)
+  const archivio = creaArchivio({ cartellaDati, apriCartella: programma.apriCartella });
+  const avvioAutomatico = programma.avvioAutomatico || { stato: () => statoAvvioAutomatico({ eseguibile }), imposta: (attivo) => impostaAvvioAutomatico(attivo) };
+  const statoProgramma = () => ({ eseguibile: !!eseguibile, sfondo: !!programma.sfondo, cartellaDati, archivio: archivio.radice, registro: programma.registro || null, avvioAutomatico: avvioAutomatico.stato() });
   const fileConfig = path.join(cartellaDati, 'config.json');
   // aggiornamento automatico dei bandi: catalogo dal canale e pagine ufficiali (vedi server/aggiornamenti.js)
   const aggiornamenti = creaAggiornamenti({ versione, leggiConfig: () => leggiConfig(), ...opzioniAggiornamenti });
@@ -70,6 +77,8 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     return {
       versione,
       eseguibile: !!eseguibile,
+      sfondo: !!programma.sfondo,
+      archivio: true,
       piattaforma: process.platform,
       api: { configurata: !!k.chiave, origine: k.origine, chiave: maschera(k.chiave) },
       claudeCode: await statoClaudeCode(),
@@ -167,6 +176,16 @@ export function creaServer({ fornitore, cartellaDati, versione, eseguibile = fal
     }
     if (percorso === '/api/llm' && req.method === 'POST') return gestisciLlm(req, res);
     if (percorso.startsWith('/api/bandi/')) return aggiornamenti.gestisci(req, res, percorso, { json, leggiCorpo });
+    if (percorso === '/api/archivio' || percorso.startsWith('/api/archivio/')) return archivio.gestisci(req, res, percorso, { json });
+    // Il programma sul computer: dove stanno i dati, se resta attivo in background, avvio all'accensione.
+    if (percorso === '/api/programma' && req.method === 'GET') return json(res, 200, statoProgramma());
+    if (percorso === '/api/programma/avvio-automatico' && req.method === 'POST') {
+      const { attivo } = await leggiCorpo(req, 4096);
+      if (!avvioAutomatico.stato().disponibile) return json(res, 400, { codice: 'non_disponibile', messaggio: 'L’avvio all’accensione si può impostare solo dal programma installato su Windows.' });
+      const r = avvioAutomatico.imposta(attivo === true);
+      if (!r.ok) return json(res, 500, { codice: 'registro', messaggio: r.messaggio || 'Impostazione non riuscita.' });
+      return json(res, 200, statoProgramma());
+    }
     if (percorso === '/api/esci' && req.method === 'POST') {
       // Prima la risposta, poi la chiusura: la pagina deve poter mostrare "Clockwise è stato chiuso".
       res.once('finish', () => { if (suEsci) suEsci(); else chiudiServer(server); });

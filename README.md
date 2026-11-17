@@ -41,6 +41,15 @@ A ogni lettura Claude riceve gli articoli che riguardano la sezione in esame e l
 
 Che cosa dice la graduatoria 2026, in breve: su 38 film e serie valutati solo 11 hanno superato tutte le soglie, e 26 dei 27 esclusi sono caduti sulla **sezione D** (piano finanziario e distribuzione). Nei documentari 12 erano ammissibili ma solo 8 finanziati: l'ultimo ha preso 80,2 punti.
 
+## Dove stanno i dati, sessione, programma in background
+
+- **Su disco, non solo nel browser.** Nel programma installato (e con `npm start`) dossier, impostazioni, bandi aggiunti, casi reali e i **file originali caricati** vengono scritti nella cartella dei dati dell'utente: `%APPDATA%\Clockwise\archivio` (`kv/` un file JSON per chiave, `originali/<dossier>/<documento>/<nome del file>`). Il browser resta come copia di riserva: una scrittura non arrivata al disco viene recuperata al riavvio. Il documento d'identità non viene mai conservato.
+- **Sessione.** Dossier aperto, scheda e sezione si salvano a ogni spostamento e alla chiusura; alla riapertura si riparte da lì. «Esci» → «Salva ed esci» chiude il programma solo dopo aver verificato che tutto sia su disco.
+- **In background.** `Clockwise.exe` non ha finestra della console: resta attivo anche a browser chiuso, si riapre dall'icona e si chiude da «Esci» o con `Clockwise.exe --esci` (collegamento «Chiudi Clockwise»). `--sfondo` lo avvia senza browser (avvio all'accensione, voce in `HKCU\…\Run` impostabile da «Esci»). Avvio, chiusura ed errori finiscono in `%APPDATA%\Clockwise\clockwise.log`.
+- **Esporta / Importa dossier.** Un dossier completo in un file `.clockwise` (JSON con dati, testi, valutazione e originali in base64); l'importazione non sovrascrive mai un dossier esistente.
+- **Esempio.** Il dossier di esempio è «L'insabbiato» (caso reale: 89,5 punti dalla Commissione nel 2024, 88,9 stimati) con i soli dati chiave e punteggi (`app/js/core/esempio.js`): niente documenti, nomi o motivazioni.
+- **MiC.** `app/js/core/bandi/esiti-mic.js` contiene i punteggi delle graduatorie 2025 dei contributi selettivi alla produzione (4 decreti, 653 progetti, solo numeri). La griglia 2025 è diversa da quella 2026, quindi non entrano nelle stime: si vedono nella scheda del bando («Punteggi reali») e nella scheda «Bandi MiC» del dossier (`app/js/core/mic.js`).
+
 ## Installazione su Windows
 
 Per chi usa Windows c'è il **programma di installazione** `Clockwise-Setup-<versione>.exe`: si installa per il solo utente (non chiede i permessi di amministratore), crea le icone nel menu Start e sul desktop e si disinstalla da *App installate*. All'avvio apre Clockwise nel browser predefinito; per chiuderlo c'è **Esci** nella barra in alto. Non serve installare Node.js.

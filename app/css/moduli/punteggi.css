@@ -1,0 +1,23 @@
+/* Punteggi reali (scheda del bando) e dossier sulle griglie MiC */
+.pr-tab td, .pr-tab th { white-space: nowrap; }
+.pr-tab th { white-space: normal; vertical-align: bottom; }
+.pr-tab td:first-child, .pr-tab th:first-child { white-space: normal; min-width: 22ch; }
+.tablewrap.intera { max-height: none; }
+.pr-isto { display: flex; align-items: flex-end; gap: 4px; height: 120px; padding-top: 6px; overflow-x: auto; }
+.pr-col { flex: 1 0 22px; max-width: 40px; display: flex; flex-direction: column; align-items: center; gap: 3px; height: 100%; font-size: .72rem; color: var(--muted); }
+.pr-barre { flex: 1; width: 100%; display: flex; flex-direction: column-reverse; justify-content: flex-start; }
+.pr-barre i { display: block; width: 100%; min-height: 0; }
+.pr-barre i.si { background: var(--ok); border-radius: 0; }
+.pr-barre i.no { background: var(--line-strong, var(--line)); border-radius: 3px 3px 0 0; }
+.pr-barre i.si:last-child, .pr-barre i.no + i.si { border-radius: 0; }
+.pr-chiave { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: baseline; margin-left: 6px; }
+.pr-chiave.si { background: var(--ok); }
+.pr-chiave.no { background: var(--line-strong, var(--line)); }
+
+.mic-totale { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; }
+.mic-numero b { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; letter-spacing: -.02em; }
+.mic-numero span { color: var(--muted); }
+.mic-tab tr.mic-sezione td { background: var(--surface-2); border-top: 1px solid var(--line); }
+.mic-tab td.mic-voce { padding-left: 22px; }
+.mic-fisso select { max-width: 70ch; }
+.mic-fisso .small { display: block; max-width: 84ch; margin-top: 4px; }

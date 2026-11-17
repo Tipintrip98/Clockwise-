@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.5',
+  versione: '2.0.6',
   rilascio: '2026-11-17',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,15 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.6', data: '2026-11-17', voci: [
+    'Tutto resta sul computer: dossier, impostazioni, bandi aggiunti e i file originali che carichi vengono salvati nella cartella dei dati del programma, non solo nel browser. Li ritrovi anche dopo aver svuotato o cambiato browser; dai Documenti apri l’originale con un tocco e le scansioni non vanno più ricaricate.',
+    'La sessione si salva da sola: Clockwise ricorda dossier aperto, scheda e sezione e alla riapertura riparte da lì. Ciò che stavi scrivendo viene salvato anche se chiudi la scheda all’improvviso; il pulsante «Esci» › «Salva ed esci» chiude il programma dopo aver controllato che tutto sia su disco.',
+    'Clockwise resta attivo in background: niente più finestra nera da lasciare aperta. Si riapre dall’icona, si chiude da «Esci» o da «Chiudi Clockwise» nel menu Start, e se vuoi parte da solo all’accensione del computer.',
+    '«Esporta dossier» e «Importa dossier»: un dossier completo (dati, testi, valutazione, file originali) in un solo file, per farne una copia di sicurezza o portarlo su un altro computer.',
+    'Nuovo dossier di esempio: «L’insabbiato», un caso reale (89,5 punti dalla Commissione, 88,9 stimati da Clockwise), con dati chiave, piano finanziario e punteggi, senza i documenti.',
+    'Bandi MiC: nella scheda dei contributi selettivi c’è la sezione «Punteggi reali» con le graduatorie 2025 lette dai decreti (653 progetti, sessioni I e II); nel dossier la nuova scheda «Bandi MiC» mostra, separati dalla valutazione, i punti che il progetto otterrebbe sulle griglie del Ministero e dove si collocherebbe nelle graduatorie reali.',
+    'Anche per la Sicilia i punteggi reali hanno ora una sezione propria nella scheda del bando.',
+  ] },
   { versione: '2.0.5', data: '2026-11-17', voci: [
     'Pagina Bandi riordinata: si apre subito sul catalogo, con i bandi aperti in cima (prima chi scade prima), poi quelli in arrivo, quelli attesi, i sospesi e i chiusi. Con «Ordina» si torna all’elenco per regione. Il riquadro degli aggiornamenti sta in una riga e si apre da solo quando c’è una novità.',
     'Coproduzione estera al 20%: nei Dati chiave c’è il riquadro «Coproduzione» con la quota del proponente e quella dei coproduttori esteri (se manca, il programma la calcola dal piano finanziario). Sotto il 20% la coproduzione estera conta come partecipazione minore: il controllo lo segnala e il punteggio atteso di internazionalizzazione scende.',

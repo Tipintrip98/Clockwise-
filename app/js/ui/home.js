@@ -1,6 +1,6 @@
 // Elenco dei dossier.
 import { h, metti, fmt, dataBreve, bottoneConferma, toast } from './dom.js';
-import { S, apriProgetto, render } from './app.js';
+import { S, apriProgetto, render, importaDossier } from './app.js';
 import * as store from '../core/store.js';
 import { opzioniAnno, areaBando } from '../core/bandi/catalogo.js';
 import { nuovoDossierGuidato } from './scelta-bando.js';
@@ -27,12 +27,16 @@ function bandoDelDossier(p, oggi) {
 
 export function vistaHome(main) {
   const oggi = new Date().toISOString().slice(0, 10);
+  const disco = store.statoDisco();
+  const ingressoDossier = h('input', { id: 'file-importa-dossier', type: 'file', hidden: true, accept: '.clockwise,.json,application/json', onchange: (e) => { const f = e.target.files[0]; e.target.value = ''; if (f) importaDossier(f); } });
   metti(main,
     h('div.page-head',
       h('div', h('h1', 'I tuoi dossier'),
         h('p', 'Carica il dossier di candidatura e ottieni il punteggio che la Commissione gli darebbe, criterio per criterio, prima di inviarlo.')),
-      h('button.btn.primary', { type: 'button', id: 'btn-nuovo-dossier', onclick: () => nuovoDossierGuidato() }, '+ Nuovo dossier')),
-    !store.persistente && h('div.notice.warn.cat-spazio', 'Questo browser non permette di salvare i dati: i dossier restano disponibili solo finché la pagina è aperta. Scarica il report prima di chiudere.'),
+      h('div.row', ingressoDossier,
+        h('button.btn', { type: 'button', id: 'btn-importa-dossier', title: 'Carica un dossier esportato da Clockwise (file .clockwise)', onclick: () => ingressoDossier.click() }, 'Importa dossier'),
+        h('button.btn.primary', { type: 'button', id: 'btn-nuovo-dossier', onclick: () => nuovoDossierGuidato() }, '+ Nuovo dossier'))),
+    !store.persistente && !disco.attivo && h('div.notice.warn.cat-spazio', 'Questo browser non permette di salvare i dati: i dossier restano disponibili solo finché la pagina è aperta. Scarica il report prima di chiudere.'),
     S.progetti.length
       ? h('div.cards', S.progetti.map((p) => {
         const [classe, etichetta] = ESITI[p.esito] || ESITI.parziale;
@@ -55,6 +59,6 @@ export function vistaHome(main) {
       : h('div.panel.flat.empty', h('strong', 'Nessun dossier'), 'Crea il primo dossier: scegli il bando, la categoria e l’anno, poi carica i documenti della candidatura.',
         h('div.cat-spazio-su', h('button.btn.primary', { type: 'button', onclick: () => nuovoDossierGuidato() }, 'Quale bando vuoi simulare?'))),
     h('p.muted.small.cat-nota-fondo',
-      'I documenti restano su questo dispositivo. A Claude viene inviato solo il testo necessario alla valutazione; il documento d’identità non viene mai inviato. La stima è uno strumento di controllo qualità: non sostituisce il giudizio della Commissione.'),
+      disco.attivo ? `Dossier e file caricati sono salvati su questo computer, nella cartella ${disco.cartella}. ` : 'I documenti restano su questo dispositivo. ', 'A Claude viene inviato solo il testo necessario alla valutazione; il documento d’identità non viene mai inviato. La stima è uno strumento di controllo qualità: non sostituisce il giudizio della Commissione.'),
   );
 }

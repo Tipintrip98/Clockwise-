@@ -1,18 +1,19 @@
 // Area di lavoro di un dossier: Cruscotto, Documenti, Dati chiave, Valutazione, Report, più gli strumenti.
 import { h, metti, svuota, fmt, euro, toast, dimensione, campoNumero, campoTesto, scelta, elencoControlli, bottoneConferma } from './dom.js';
-import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello, dritaVista, guidaInCorso } from './app.js';
+import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello, dritaVista, guidaInCorso, ricordaSessione, esportaDossier } from './app.js';
 import { TIPI, tipoPerId, estraiTesto, riconosciTipo, immaginiScansione } from '../core/docs.js';
 import { trascriviScansione, AVVISO_TRASCRIZIONE } from '../core/scansioni.js';
 import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti, quoteCoproduzione, QUOTA_ESTERA_MIN } from '../core/scoring.js';
 import { MODELLI, IMPEGNI } from '../core/llm.js';
 import { pianoValutazione, eseguiValutazione, estraiDati } from '../core/engine.js';
-import { nuovoId, casiReali } from '../core/store.js';
+import { nuovoId, casiReali, salvaOriginale, leggiOriginale, eliminaOriginale, indirizzoOriginale, statoDisco } from '../core/store.js';
 import { schedaReport } from './report.js';
 import { schedaProduzione } from './produzione.js';
 import { schedaLegale } from './legale.js';
 import { schedaFinanza } from './finanza.js';
 import { schedaGestione } from './gestione.js';
 import { schedaCruscotto } from './cruscotto.js';
+import { schedaMic } from './mic.js';
 import { suggerimento } from './tutorial.js';
 import { sceltaNelDossier } from './scelta-bando.js';
 import { controlliFormato, controlliIncrociati } from '../core/invio.js';
@@ -20,8 +21,8 @@ import { controlliFormato, controlliIncrociati } from '../core/invio.js';
 // Il cruscotto riassume lo stato; le quattro schede numerate sono i passi della valutazione;
 // Produzione e Legale sono strumenti di lavoro sul dossier.
 const SCHEDE = [['documenti', 'Documenti'], ['dati', 'Dati chiave'], ['valutazione', 'Valutazione'], ['report', 'Report']];
-const STRUMENTI = [['produzione', 'Produzione'], ['finanza', 'Finanza'], ['gestione', 'Gestione bando'], ['legale', 'Legale']];
-const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, finanza: schedaFinanza, gestione: schedaGestione, legale: schedaLegale };
+const STRUMENTI = [['produzione', 'Produzione'], ['finanza', 'Finanza'], ['gestione', 'Gestione bando'], ['legale', 'Legale'], ['mic', 'Bandi MiC']];
+const VISTE = { cruscotto: schedaCruscotto, documenti: schedaDocumenti, dati: schedaDati, valutazione: schedaValutazione, report: schedaReport, produzione: schedaProduzione, finanza: schedaFinanza, gestione: schedaGestione, legale: schedaLegale, mic: schedaMic };
 // Suggerimenti mostrati la prima volta che si apre una scheda.
 const DRITTE = {
   documenti: ['Trascina tutti i file insieme.', 'Il tipo di ciascun documento viene riconosciuto dal nome e puoi correggerlo nella tabella. Per i bandi siciliani il Modulo III in Excel compila da solo i Dati chiave.'],
@@ -31,10 +32,12 @@ const DRITTE = {
   produzione: ['Si parte dallo spoglio.', 'Piano di lavorazione, ordine del giorno, storyboard e adempimenti si riempiono dalle scene lette nella sceneggiatura. Il preventivo è indipendente: puoi importarlo subito.'],
   finanza: ['I numeri partono dai Dati chiave.', 'Piano finanziario, limite degli aiuti pubblici, tax credit, piano di cassa e recupero si calcolano dal costo e dalle fonti già inseriti: qui provi le alternative senza toccare il dossier.'],
   gestione: ['Serve dopo la concessione.', 'Tappe e scadenze, quote di erogazione, registro delle spese e rendiconto: tieni sotto controllo gli impegni che hanno generato il punteggio, perché a consuntivo vengono verificati.'],
+  mic: ['Stessi punteggi, altra griglia.', 'La stima riporta sulla griglia del Ministero la valutazione già fatta sul bando del dossier: è un orientamento per decidere se candidare il progetto anche ai contributi selettivi.'],
   legale: ['Ogni risposta cita l’articolo dell’avviso.', 'Apri il testo ufficiale e controlla il punto indicato prima di decidere: è un supporto, non un parere legale.'],
 };
 
-// I file caricati in questa sessione: servono a rileggere le scansioni come immagini (dopo una ricarica vanno riselezionati).
+// I file caricati in questa sessione: servono a rileggere le scansioni come immagini. Nel programma installato ogni file
+// viene anche conservato sul computer (archivio su disco), quindi dopo una riapertura non va ricaricato.
 const FILE_SESSIONE = new Map();
 
 // Ciò che del Modulo III serve ai controlli incrociati (accordi dichiarati, nominativi, date).
@@ -49,6 +52,7 @@ export function vistaProgetto(main) {
   const corpo = h('div');
   const mostra = (id) => {
     S.scheda = id;
+    ricordaSessione();
     for (const b of barra.children) b.setAttribute('aria-selected', String(b.dataset.id === id));
     svuota(corpo);
     const dritta = DRITTE[id] && !guidaInCorso() ? suggerimento(id, S.guida.dritte, DRITTE[id][0], DRITTE[id][1], dritaVista) : null;
@@ -62,9 +66,12 @@ export function vistaProgetto(main) {
     STRUMENTI.map(([id, nome], i) => h(`button${i === 0 ? '.sep' : ''}`, { type: 'button', role: 'tab', dataset: { id }, onclick: () => mostra(id) }, nome)));
   metti(main,
     h('div.stack-s',
-      h('a.small.muted', { href: '#dossier' }, '← Tutti i dossier'),
+      h('div.spread', h('a.small.muted', { href: '#dossier' }, '← Tutti i dossier'),
+        h('button.btn.s.ghost', { type: 'button', id: 'btn-esporta-dossier', title: 'Salva tutto il dossier in un file: copia di sicurezza, o per portarlo su un altro computer', onclick: () => esportaDossier(p) }, 'Esporta dossier')),
       h('input.title-input', { id: 'nome-dossier', type: 'text', value: p.nome, 'aria-label': 'Nome del dossier', oninput: (e) => { p.nome = e.target.value || 'Senza nome'; salvaPresto(); } }),
-      p.esempio && h('div.notice.info', h('strong', 'Dossier di esempio. '), 'I numeri sono d’invenzione e servono a mostrare come funziona il simulatore. Modificali liberamente o crea un nuovo dossier.'),
+      p.esempio && (p.esempioVersione
+        ? h('div.notice.info', { id: 'avviso-esempio' }, h('strong', 'Dossier di esempio: un caso reale. '), '«L’insabbiato», film presentato all’avviso della Regione Siciliana nel 2024: 89,5 punti dalla Commissione, terzo in graduatoria. Clockwise sul dossier completo ne stima 88,9. Qui ci sono i dati chiave, il piano finanziario e i punteggi; i documenti e le motivazioni non sono inclusi: per questo cruscotto e report segnalano gli allegati come mancanti. Chi ha il dossier completo lo carica con «Importa dossier», nell’elenco dei dossier.')
+        : h('div.notice.info', h('strong', 'Dossier di esempio. '), 'I numeri sono d’invenzione e servono a mostrare come funziona il simulatore. Modificali liberamente o crea un nuovo dossier.')),
       // bando, categoria e finestra (con le edizioni previste e la conferma prima di perdere una valutazione): ui/scelta-bando.js
       sceltaNelDossier(p, bando)),
     barra, corpo);
@@ -113,6 +120,9 @@ function schedaDocumenti(corpo, p, bando, mostra) {
         if (prima.trascritto && doc.scansione && prima.dimensione === doc.dimensione) Object.assign(doc, { testo: prima.testo, trascritto: true, avvisi: prima.avvisi });
       }
       if (doc.scansione) FILE_SESSIONE.set(doc.id, file);
+      // l'originale resta sul computer, nella cartella dei dati (mai il documento d'identità)
+      if (doc.tipo === 'identita') eliminaOriginale(p.id, doc.id);
+      else { const r = await salvaOriginale(p.id, doc.id, file); if (r) doc.originale = { nome: r.nome, byte: r.byte }; }
       p.documenti = p.documenti.filter((d) => d.nome !== doc.nome);
       p.documenti.push(doc);
     }
@@ -141,7 +151,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
     const errori = [];
     for (const d of elenco) {
       if (lettura.controller.signal.aborted) break;
-      const file = FILE_SESSIONE.get(d.id);
+      const file = FILE_SESSIONE.get(d.id) || (d.originale ? await leggiOriginale(p.id, d.id, d.nome) : null);
       if (!file) { errori.push(`«${d.nome}»: ricarica il file per poterlo leggere`); continue; }
       Object.assign(lettura, { nome: d.nome, fatte: 0, totale: d.pagine || 1 });
       disegna();
@@ -154,7 +164,7 @@ function schedaDocumenti(corpo, p, bando, mostra) {
         Object.assign(d, { testo: r.testo, trascritto: true, avvisi: [AVVISO_TRASCRIZIONE, ...(troncato ? [`Lette solo le prime ${immagini.length} pagine.`] : [])] });
         if (d.tipo === 'altro') d.tipo = riconosciTipo(d.nome, r.testo);
         // un file dal nome generico può rivelarsi un documento d'identità: il testo letto non si conserva
-        if (d.tipo === 'identita') Object.assign(d, { testo: '', trascritto: false, avvisi: ['Riconosciuto come documento d’identità: il testo letto è stato scartato e non viene usato.'] });
+        if (d.tipo === 'identita') { Object.assign(d, { testo: '', trascritto: false, avvisi: ['Riconosciuto come documento d’identità: il testo letto è stato scartato e non viene usato.'] }); eliminaOriginale(p.id, d.id); delete d.originale; }
         lette++;
         await salva();
       } catch (e) {
@@ -174,25 +184,27 @@ function schedaDocumenti(corpo, p, bando, mostra) {
     if (scansioni.length || lettura) {
       const llm = llmAttivo();
       const pag = scansioni.reduce((a, d) => a + (d.pagine || 1), 0);
-      const inMemoria = scansioni.filter((d) => FILE_SESSIONE.has(d.id));
+      const inMemoria = scansioni.filter((d) => FILE_SESSIONE.has(d.id) || d.originale);
       const daRicaricare = scansioni.length - inMemoria.length;
       metti(tabella, h('div.notice.info', { id: 'avviso-scansioni', style: { marginBottom: '12px' } },
         lettura ? h('div.row', h('span.spin'), h('span', { id: 'avanzamento-scansioni' }, `Lettura di «${lettura.nome}»…`), h('button.btn.s.danger', { type: 'button', onclick: () => lettura.controller.abort() }, 'Interrompi'))
           : h('div.spread',
             h('div', h('strong', `${scansioni.length} ${scansioni.length === 1 ? 'documento è una scansione' : 'documenti sono scansioni'} senza testo. `), `Claude può leggerle come immagini e trascriverle (${pag} ${pag === 1 ? 'pagina' : 'pagine'}), segnalando firme e timbri: senza, contratti e curriculum scansionati non contano nella valutazione.`),
-            inMemoria.length ? h('button.btn.primary', { type: 'button', id: 'btn-scansioni', disabled: !llm || !llm.immagini, onclick: () => leggiScansioni(daLeggere().filter((d) => FILE_SESSIONE.has(d.id))) }, inMemoria.length === 1 ? 'Leggi la scansione con Claude' : `Leggi le ${inMemoria.length} scansioni con Claude`) : null),
-        !lettura && daRicaricare ? h('div.small', { style: { marginTop: '6px' } }, `${daRicaricare === scansioni.length ? 'Per leggerle' : `Per leggerne ${daRicaricare}`} serve di nuovo il file: dopo la riapertura della pagina le scansioni non restano in memoria. Trascina qui sopra gli stessi file: tipo e letture già fatte si conservano.`) : null,
+            inMemoria.length ? h('button.btn.primary', { type: 'button', id: 'btn-scansioni', disabled: !llm || !llm.immagini, onclick: () => leggiScansioni(daLeggere().filter((d) => FILE_SESSIONE.has(d.id) || d.originale)) }, inMemoria.length === 1 ? 'Leggi la scansione con Claude' : `Leggi le ${inMemoria.length} scansioni con Claude`) : null),
+        !lettura && daRicaricare ? h('div.small', { style: { marginTop: '6px' } }, `${daRicaricare === scansioni.length ? 'Per leggerle' : `Per leggerne ${daRicaricare}`} serve di nuovo il file, perché non è nell’archivio del computer. Trascina qui sopra gli stessi file: tipo e letture già fatte si conservano.`) : null,
         !lettura && llm && !llm.immagini ? h('div.small', { style: { marginTop: '6px' } }, 'In questa vista Claude non può ricevere immagini: usa il programma installato sul computer.') : null,
         !lettura && !llm ? h('div.small', { style: { marginTop: '6px' } }, h('a', { href: '#collegamento' }, 'Collega Claude'), ' per leggere le scansioni.') : null));
     }
     if (p.documenti.length) {
+      const conservati = p.documenti.filter((d) => d.originale).length;
+      if (statoDisco().attivo) metti(tabella, h('p.small.muted', { id: 'nota-originali', style: { margin: '0 0 8px' } }, conservati ? `${conservati} di ${p.documenti.length} file originali sono conservati su questo computer: tocca il nome per aprirli. ` : '', conservati < p.documenti.filter((d) => d.tipo !== 'identita').length ? 'I file caricati prima della versione 2.0.6 non hanno l’originale: ricaricali se vuoi conservarlo.' : '', ' Il documento d’identità non viene mai conservato.'));
       metti(tabella, h('div.tablewrap', h('table',
         h('thead', h('tr', h('th', 'File'), h('th', 'Tipo di documento'), h('th.r', 'Contenuto'), h('th', ''))),
         h('tbody', p.documenti.map((d) => h('tr',
-          h('td.fname', d.nome, d.avvisi.map((a) => h('div.small', { style: { color: 'var(--warn)', fontWeight: 400 } }, a))),
-          h('td', scelta(null, TIPI, d.tipo, (v) => { d.tipo = v; if (v === 'identita') d.testo = ''; salva().then(disegna); }, { id: `tipo-${d.id}` })),
+          h('td.fname', d.originale && indirizzoOriginale(p.id, d.id) ? h('a', { href: indirizzoOriginale(p.id, d.id), target: '_blank', rel: 'noopener', title: 'Apri il file originale conservato sul computer' }, d.nome) : d.nome, d.avvisi.map((a) => h('div.small', { style: { color: 'var(--warn)', fontWeight: 400 } }, a))),
+          h('td', scelta(null, TIPI, d.tipo, (v) => { d.tipo = v; if (v === 'identita') { d.testo = ''; eliminaOriginale(p.id, d.id); delete d.originale; } salva().then(disegna); }, { id: `tipo-${d.id}` })),
           h('td.r.num.small', d.tipo === 'identita' ? 'non letto' : d.testo ? `${d.pagine ? `${d.pagine} pag. · ` : ''}${fmt(d.testo.length / 1000, 0)}k caratteri${d.trascritto ? ' · letto da Claude' : ''}` : d.scansione ? `scansione · ${d.pagine || 1} pag.` : dimensione(d.dimensione)),
-          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); FILE_SESSIONE.delete(d.id); if (!p.documenti.some((x) => x.tipo === 'modulo3')) p.modulo3 = null; salva().then(disegna); } }, 'Rimuovi'))))))));
+          h('td.r', h('button.btn.s.ghost', { type: 'button', 'aria-label': `Rimuovi ${d.nome}`, onclick: () => { p.documenti = p.documenti.filter((x) => x.id !== d.id); FILE_SESSIONE.delete(d.id); eliminaOriginale(p.id, d.id); if (!p.documenti.some((x) => x.tipo === 'modulo3')) p.modulo3 = null; salva().then(disegna); } }, 'Rimuovi'))))))));
     }
     const allegati = verificheAmmissibilita(bando, p.categoriaId, p.anno, p.dati, p.documenti.map((d) => d.tipo)).filter((c) => c.id.startsWith('all_'));
     const mancanti = allegati.filter((c) => c.esito === 'critico').length;

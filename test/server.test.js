@@ -129,10 +129,11 @@ test('cartella dati dell’eseguibile: CLOCKWISE_DATA, poi %APPDATA%\\Clockwise,
 
 test('apertura del browser: comando per ogni sistema, mai con CLOCKWISE_NO_BROWSER=1', () => {
   const url = 'http://localhost:5757';
-  const win = comandoBrowser(url, 'win32', { ComSpec: 'C:\\Windows\\system32\\cmd.exe' });
-  assert.equal(win.comando, 'C:\\Windows\\system32\\cmd.exe');
-  assert.deepEqual(win.args, ['/c', 'start', '""', url]);
-  assert.equal(win.opzioni.windowsVerbatimArguments, true);
+  // su Windows un programma senza console (rundll32): Clockwise gira in background e non deve aprire finestre nere
+  const win = comandoBrowser(url, 'win32', { SystemRoot: 'C:\\Windows' });
+  assert.equal(win.comando, 'C:\\Windows\\System32\\rundll32.exe');
+  assert.deepEqual(win.args, ['url.dll,FileProtocolHandler', url]);
+  assert.equal(win.opzioni.windowsHide, true);
   assert.deepEqual(comandoBrowser(url, 'darwin'), { comando: 'open', args: [url], opzioni: {} });
   assert.deepEqual(comandoBrowser(url, 'linux'), { comando: 'xdg-open', args: [url], opzioni: {} });
   assert.equal(apriBrowser(url, { CLOCKWISE_NO_BROWSER: '1' }), false);
