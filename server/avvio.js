@@ -28,10 +28,17 @@ export function apriBrowser(url, env = process.env) {
   if (env.CLOCKWISE_NO_BROWSER === '1') return false;
   if (!/^http:\/\/(localhost|127\.0\.0\.1):\d+\/?$/.test(url)) return false; // solo l'indirizzo di Clockwise
   const { comando, args, opzioni } = comandoBrowser(url);
-  try {
-    const figlio = spawn(comando, args, { ...opzioni, stdio: 'ignore', detached: process.platform !== 'win32' });
-    figlio.on('error', () => { /* nessun browser predefinito: resta l'indirizzo scritto nel registro */ });
+  const lancia = (c, a, o, riserva) => {
+    const figlio = spawn(c, a, { ...o, stdio: 'ignore', detached: process.platform !== 'win32' });
+    figlio.on('error', () => { if (riserva) { try { riserva(); } catch { /* resta l'indirizzo scritto nel registro */ } } });
     figlio.unref();
+  };
+  try {
+    // su Windows, se rundll32 non parte, si ripiega sul comando «start» (con la finestra nascosta)
+    const riserva = process.platform === 'win32'
+      ? () => lancia(env.ComSpec || 'cmd.exe', ['/d', '/c', 'start', '""', url], { windowsVerbatimArguments: true, windowsHide: true }, null)
+      : null;
+    lancia(comando, args, opzioni, riserva);
     return true;
   } catch { return false; }
 }

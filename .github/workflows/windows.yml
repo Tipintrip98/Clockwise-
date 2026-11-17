@@ -419,6 +419,29 @@ jobs:
           if ($elenco.originali -lt 1) { throw 'Dopo il riavvio manca il file originale' }
           Invoke-RestMethod "$base/api/esci" -Method Post | Out-Null
           if (-not (Spento)) { throw 'Il programma non si chiude' }
+          # apertura del browser: senza finestra nera è l'unico segnale di avvio. Qui il programma parte come dal
+          # menu Start (senza CLOCKWISE_NO_BROWSER) e si guarda se il browser predefinito apre l'indirizzo di Clockwise.
+          $prima = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'localhost:5757' -and $_.Name -notmatch 'Clockwise|pwsh|powershell' }).Count
+          $env:CLOCKWISE_NO_BROWSER = $null; Remove-Item Env:CLOCKWISE_NO_BROWSER -ErrorAction SilentlyContinue
+          Start-Process -FilePath $exe
+          Attendi | Out-Null
+          $aperto = $null; $limite = (Get-Date).AddSeconds(30)
+          while (-not $aperto -and (Get-Date) -lt $limite) { Start-Sleep -Seconds 1; $aperto = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'localhost:5757' -and $_.Name -notmatch 'Clockwise|pwsh|powershell' } | Select-Object -First 1 }
+          $console = @(Get-Process -Name Clockwise | Where-Object { $_.MainWindowHandle -ne 0 }).Count
+          Invoke-RestMethod "$base/api/esci" -Method Post | Out-Null
+          if (-not (Spento)) { throw 'Il programma non si chiude' }
+          if ($aperto) { Write-Host "BROWSER APERTO: $($aperto.Name) -> $($aperto.CommandLine)" }
+          else {
+            # controprova: il sistema, da solo, riesce ad aprire un browser su questa macchina?
+            Start-Process 'http://localhost:5757/'; Start-Sleep -Seconds 15
+            $daSolo = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'localhost:5757' -and $_.Name -notmatch 'Clockwise|pwsh|powershell' } | Select-Object -First 1
+            if ($daSolo) { throw "All'avvio Clockwise non ha aperto il browser, mentre il sistema ci riesce ($($daSolo.Name)): processi prima $prima" }
+            Write-Host '::warning::Su questa macchina nessun browser si apre nemmeno dal sistema: apertura del browser non verificabile qui'
+          }
+          if ($console) { throw 'Clockwise ha aperto una finestra propria' }
+          Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'localhost:5757' -and $_.Name -notmatch 'Clockwise|pwsh|powershell' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
+          $env:CLOCKWISE_NO_BROWSER = '1'
+
           $registro = Join-Path $dati 'clockwise.log'
           Write-Host '--- clockwise.log ---'; Get-Content -LiteralPath $registro
           if (-not (Select-String -LiteralPath $registro -Pattern 'è in esecuzione' -Quiet)) { throw 'Nel registro manca la riga di avvio' }
