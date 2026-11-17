@@ -421,6 +421,9 @@ jobs:
           if (-not (Spento)) { throw 'Il programma non si chiude' }
           # apertura del browser: senza finestra nera è l'unico segnale di avvio. Qui il programma parte come dal
           # menu Start (senza CLOCKWISE_NO_BROWSER) e si guarda se il browser predefinito apre l'indirizzo di Clockwise.
+          # i browser rimasti aperti dai passi precedenti vanno chiusi: un browser già aperto riceve l'indirizzo
+          # senza far nascere un processo riconoscibile, e la verifica risulterebbe a vuoto
+          Get-Process msedge, chrome, firefox -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 2
           $prima = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'localhost:5757' -and $_.Name -notmatch 'Clockwise|pwsh|powershell' }).Count
           $env:CLOCKWISE_NO_BROWSER = $null; Remove-Item Env:CLOCKWISE_NO_BROWSER -ErrorAction SilentlyContinue
           Start-Process -FilePath $exe
