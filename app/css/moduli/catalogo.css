@@ -182,3 +182,12 @@ summary.cat-articolo { color: var(--ink); font-weight: 500; }
 
 /* indirizzi PEC e URL lunghi vanno a capo invece di allargare la pagina */
 .cat-prosa, .cat-numeri .num, .panel dd, .panel td, .notice { overflow-wrap: anywhere; }
+
+/* ordine dell'elenco e riga degli aggiornamenti nella pagina Bandi */
+.cat-ordine { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.cat-agg > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.cat-agg > summary .tag { font-weight: 600; }
+.cat-agg[open] > summary { margin-bottom: 10px; }
+.cat-agg .agg-testata h3 { display: none; }
+.cat-agg .agg-testata .tag { display: none; }
+@media print { .cat-agg { display: none !important; } }

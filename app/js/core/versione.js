@@ -2,7 +2,7 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.4',
+  versione: '2.0.5',
   rilascio: '2026-11-17',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
@@ -12,6 +12,11 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.5', data: '2026-11-17', voci: [
+    'Pagina Bandi riordinata: si apre subito sul catalogo, con i bandi aperti in cima (prima chi scade prima), poi quelli in arrivo, quelli attesi, i sospesi e i chiusi. Con «Ordina» si torna all’elenco per regione. Il riquadro degli aggiornamenti sta in una riga e si apre da solo quando c’è una novità.',
+    'Coproduzione estera al 20%: nei Dati chiave c’è il riquadro «Coproduzione» con la quota del proponente e quella dei coproduttori esteri (se manca, il programma la calcola dal piano finanziario). Sotto il 20% la coproduzione estera conta come partecipazione minore: il controllo lo segnala e il punteggio atteso di internazionalizzazione scende.',
+    'Bando Sicilia: quota del proponente sotto il 20% segnalata come bloccante (requisito di ammissibilità, da mantenere fino al rendiconto).',
+  ] },
   { versione: '2.0.4', data: '2026-11-17', voci: [
     'Green Film: nella scheda Produzione c’è il disciplinare ufficiale (Edizione 03 – 2024) con tutti i criteri. Scegli quelli che la produzione rispetterà e vedi i punti (minimo 25 su 65, 20 per le società EMAS), il margine, i documenti e le prove sul set da preparare per ogni criterio, il prerequisito obbligatorio e le scadenze della procedura; la scheda si scarica in CSV.',
     'Le richieste Green Film compilate sull’edizione precedente del disciplinare (minimo 20 punti) vengono riconosciute e segnalate; la verifica formale controlla firma, organismo di verifica e punti dichiarati.',

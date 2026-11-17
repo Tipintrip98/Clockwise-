@@ -5,7 +5,7 @@
   {
    "id": "abruzzo-produzione-audiovisiva-2026",
    "revisione": "2026-11-14",
-   "sha256": "8454277349dd3298363a932e926277d1efcaf69eda86aea2beee19b698808173",
+   "sha256": "bd549c329114307dac52c997e7a888ec7d583d1aaea8ec3e3ea43f0ee38f63ca",
    "bando": {
     "id": "abruzzo-produzione-audiovisiva-2026",
     "fondoId": "abruzzo",
@@ -137,6 +137,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -864,7 +865,7 @@
   {
    "id": "alto-adige-idm-film-fund-2024-2026",
    "revisione": "2026-11-14",
-   "sha256": "cba26274bd103f12a9bb45ebdc6bae47d84ba07a468fffb22f8f7eb798f964d3",
+   "sha256": "454304d3ce8bfa5308d5162dffe02c18448b4c3fa6d1ec400e12ffc48ab03137",
    "bando": {
     "id": "alto-adige-idm-film-fund-2024-2026",
     "fondoId": "alto-adige",
@@ -1050,6 +1051,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": 7.5,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -1436,7 +1438,7 @@
   {
    "id": "basilicata-po-val-d-agri-2026",
    "revisione": "2026-11-14",
-   "sha256": "cd91c5bcfdc75b13c355af00eb431d2aa2aba32790f74e8e197522fc29bc263d",
+   "sha256": "6e737abf4dd4087d2990084693c487ff126dd522ab8abf0448d5242f3d959fcc",
    "bando": {
     "id": "basilicata-po-val-d-agri-2026",
     "fondoId": "basilicata",
@@ -1613,6 +1615,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -2545,7 +2548,7 @@
   {
    "id": "calabria-regolamento-contributi-2026",
    "revisione": "2026-11-14",
-   "sha256": "2a7141d5d60b1e8016ba79373674c64bd33db75a0cfb51c52a59ea4d8c9d4bca",
+   "sha256": "5a4712f080a51677421babe428167486f64f0a7260c1555f9d2a072e294f52a7",
    "bando": {
     "id": "calabria-regolamento-contributi-2026",
     "fondoId": "calabria",
@@ -2707,6 +2710,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -3982,7 +3986,7 @@
   {
    "id": "campania-piano-cinema-2026",
    "revisione": "2026-11-14",
-   "sha256": "6fbb4f881c3b94cf9a733a24a99e238342d75998d38f81f99a5d2da1a47a36d8",
+   "sha256": "34d86e70ac5d4f313492a21794b39cf4d9d297cd9c5b8b15129f51f346997fd7",
    "bando": {
     "id": "campania-piano-cinema-2026",
     "fondoId": "campania",
@@ -4102,6 +4106,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": 0,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -5194,7 +5199,7 @@
   {
    "id": "emilia-romagna-produzione-nazionali-internazionali-2026",
    "revisione": "2026-11-14",
-   "sha256": "d76732af3dcfd985f6bc53fa96ded08dd1c080cbe8de3395f61b77afe3092a12",
+   "sha256": "65495663938e0d6717a83a91827ee8359f1a2ff1608f2d7c36fd4f20c997a5e4",
    "bando": {
     "id": "emilia-romagna-produzione-nazionali-internazionali-2026",
     "fondoId": "emilia-romagna",
@@ -5344,6 +5349,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -6132,7 +6138,7 @@
   {
    "id": "europa-media-tv-online-content-2027",
    "revisione": "2026-11-14",
-   "sha256": "ca7219866ea6357d207619886a8ba442a9457f5a55bd068b10d0a790cf33f19e",
+   "sha256": "4fe6703a747329f21c9c39cb2801fc1722710d22b930270536c1668cf32da96d",
    "bando": {
     "id": "europa-media-tv-online-content-2027",
     "fondoId": "europa",
@@ -6236,6 +6242,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -6684,7 +6691,7 @@
   {
    "id": "friuli-venezia-giulia-fvg-film-fund-2026-2027",
    "revisione": "2026-11-14",
-   "sha256": "5eed2ceba2baf3321f80bdfe4200b77ab301058b42414981ccfebb12a5bee6d6",
+   "sha256": "98fcb7a9fc7ae83a4a15e7fcfc347ae86ff37ee80a395500b0b6fe43795c77e0",
    "bando": {
     "id": "friuli-venezia-giulia-fvg-film-fund-2026-2027",
     "fondoId": "friuli-venezia-giulia",
@@ -6942,6 +6949,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 3,
@@ -7738,7 +7746,7 @@
   {
    "id": "italia-mic-selettivi-2026",
    "revisione": "2026-11-14",
-   "sha256": "290206ff42b315be9e8684160caf56ffc2735aa1a5aef65a43752656bfc11696",
+   "sha256": "cb075839f91435c51deeea41b6bbfa3212159e3f249554fdb2719e1848cef8f4",
    "bando": {
     "id": "italia-mic-selettivi-2026",
     "fondoId": "mic-selettivi",
@@ -7918,6 +7926,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 15,
@@ -8741,7 +8750,7 @@
   {
    "id": "italia-mic-selettivi-qualita-2026",
    "revisione": "2026-11-14",
-   "sha256": "52a6e12acf4827910e0a195ae091adb8e8db17daab2087c9494d46a67a2c1386",
+   "sha256": "44812bdf461c15499170cb4191e49e082c0894a1f6981f23ca2cc8cf728859c1",
    "bando": {
     "id": "italia-mic-selettivi-qualita-2026",
     "fondoId": "mic-selettivi",
@@ -8921,6 +8930,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 15,
@@ -10081,7 +10091,7 @@
   {
    "id": "lazio-cinema-international-2026-1",
    "revisione": "2026-11-14",
-   "sha256": "e39dab70fc3b0cd42df313b38684faac610a5e6e3d61ea749af42cfc61ea3f58",
+   "sha256": "dabcd21c0af270fdd382188049d9b23b29014bf67d87fbc8eeb6719244e5f5f2",
    "bando": {
     "id": "lazio-cinema-international-2026-1",
     "fondoId": "lazio",
@@ -10258,6 +10268,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -10951,7 +10962,7 @@
   {
    "id": "liguria-attrazione-produzioni-audiovisive-2026",
    "revisione": "2026-11-14",
-   "sha256": "736fb1e4c3292e526d45258a6cffd957434e9f4c79ef183abb7fe40b7203d4ab",
+   "sha256": "38455166c84c133cc14b583d28aed0ad44bdd38386793f286863396f1a3734e1",
    "bando": {
     "id": "liguria-attrazione-produzioni-audiovisive-2026",
     "fondoId": "liguria",
@@ -11085,6 +11096,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -11588,7 +11600,7 @@
   {
    "id": "liguria-produzione-progetti-audiovisivi-2026",
    "revisione": "2026-11-14",
-   "sha256": "29ea8b23cc17365ca1e717c1a580644832a6e0dd472d0f60d91aa2824a1fc062",
+   "sha256": "6070dfd8e9d080bca70b4f67b1a2d6146f0b880a3683abdf0ee4a24bac8b669b",
    "bando": {
     "id": "liguria-produzione-progetti-audiovisivi-2026",
     "fondoId": "liguria",
@@ -11704,6 +11716,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -12222,7 +12235,7 @@
   {
    "id": "liguria-sviluppo-progetti-audiovisivi-2026",
    "revisione": "2026-11-14",
-   "sha256": "60ed05e3f76f12c5e3e877375735295c429216a117d456e325a88f08d9f1cab4",
+   "sha256": "cdbd002142863bc788b051fd221ed5bf0f47cb35d0c29470116ba36cbcf9e520",
    "bando": {
     "id": "liguria-sviluppo-progetti-audiovisivi-2026",
     "fondoId": "liguria",
@@ -12338,6 +12351,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -12813,7 +12827,7 @@
   {
    "id": "lombardia-per-il-cinema-2025-2026",
    "revisione": "2026-11-14",
-   "sha256": "c1e1f6430203ac30941c9a1a2026c5492c803b04317c81e8bcb661968862f6ce",
+   "sha256": "bc270b4d12a16ac0092fbb184e7d88e3352e3df87df760bc32dd689b3e1ef07e",
    "bando": {
     "id": "lombardia-per-il-cinema-2025-2026",
     "fondoId": "lombardia",
@@ -12946,6 +12960,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -17280,7 +17295,7 @@
   {
    "id": "marche-sostegno-produzione-audiovisiva-2025",
    "revisione": "2026-11-14",
-   "sha256": "d8aeae96812b7dcd7264caecc4a4b46eeb7fae2b2610c957288e5b25c4869ba6",
+   "sha256": "a3d6e0504ec41705607703e81da41b68cb09573f4866ec903f7bb3ed39fd71f1",
    "bando": {
     "id": "marche-sostegno-produzione-audiovisiva-2025",
     "fondoId": "marche",
@@ -17442,6 +17457,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": 7.5,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 3,
@@ -18399,7 +18415,7 @@
   {
    "id": "molise-bando-produzione-cinema-audiovisivo-2022",
    "revisione": "2026-11-14",
-   "sha256": "c153bebecb3ac71f6d2c3b8693b0ea0a730f44540f2daf48e520aff5a70d6c70",
+   "sha256": "31c3a9429c8897a7c108185a2d028ae1cb2be187caef02f7fb4bd74fdd9154db",
    "bando": {
     "id": "molise-bando-produzione-cinema-audiovisivo-2022",
     "fondoId": "molise",
@@ -18473,6 +18489,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -19081,7 +19098,7 @@
   {
    "id": "piemonte-film-tv-fund-2026",
    "revisione": "2026-11-14",
-   "sha256": "ebb269eefd5d170d24f5a98fd66b9c6f12101dc138f79a188eaa113c95e217b7",
+   "sha256": "174e4d1cb2359e8166677345b1ca69ccefc258eb6cdba0b25f508067526ff05c",
    "bando": {
     "id": "piemonte-film-tv-fund-2026",
     "fondoId": "piemonte",
@@ -19273,6 +19290,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -21602,7 +21620,7 @@
   {
    "id": "puglia-apulia-film-fund-2026",
    "revisione": "2026-11-14",
-   "sha256": "d3f89a4b5284717fb16d699e8f35830c1abc647fc6d1a52e477308d18cfe29d4",
+   "sha256": "bd9da7eb1f78725a1b3a81602bbb6cbfccfa85ab5913c5d192ef14e98b9037ca",
    "bando": {
     "id": "puglia-apulia-film-fund-2026",
     "fondoId": "puglia",
@@ -21776,6 +21794,7 @@
     "spesaTerritorioMinSuCostoPct": 20,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -24440,7 +24459,7 @@
   {
    "id": "sardegna-lungometraggi-lr15-2026",
    "revisione": "2026-11-14",
-   "sha256": "c91eb9daa32331790a5aa5b0ae019a7d23e412e6facefa5b4df3dce1568b7c22",
+   "sha256": "cf2eb44c5e27db712f1eb57f6ce5f46360f4ae46788ef5e6df02c0481cce55bd",
    "bando": {
     "id": "sardegna-lungometraggi-lr15-2026",
     "fondoId": "sardegna",
@@ -24584,6 +24603,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": 7.5,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 5,
@@ -25280,7 +25300,7 @@
   {
    "id": "toscana-bando-produzioni-2024-2026",
    "revisione": "2026-11-14",
-   "sha256": "1549d4e60e14df62d9f76f9f252b5b5f0133952609886a75ed6c4afbc89ab8b1",
+   "sha256": "27599ca3b4188fcf801fdea5214a72435214fb8626d73a237f4c388d9d7c98d0",
    "bando": {
     "id": "toscana-bando-produzioni-2024-2026",
     "fondoId": "toscana",
@@ -25442,6 +25462,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -25863,7 +25884,7 @@
   {
    "id": "trentino-film-fund-2026",
    "revisione": "2026-11-14",
-   "sha256": "10641a4b9b54ec2b600927960eeec528640fcd2720c630f89d0af913c6522be8",
+   "sha256": "23315b636fc29679011099cd5f73693cabb52ed6b273f973708eb14fa996c85f",
    "bando": {
     "id": "trentino-film-fund-2026",
     "fondoId": "trentino",
@@ -26091,6 +26112,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": null,
@@ -27078,7 +27100,7 @@
   {
    "id": "umbria-film-fund-2026-2027",
    "revisione": "2026-11-17",
-   "sha256": "1363b1be4d0d74134c606e590112bd3702aa4b28444703dbd58895e35526df96",
+   "sha256": "224186d33b742ff4a217c2653b2a2bdb229d448c9a0bffda14b91d6bccadb917",
    "bando": {
     "id": "umbria-film-fund-2026-2027",
     "fondoId": "umbria",
@@ -27222,6 +27244,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 3,
@@ -29909,7 +29932,7 @@
   {
    "id": "valle-aosta-film-fund-2025-2026",
    "revisione": "2026-11-14",
-   "sha256": "cd8754c278ef819ffa29acf4b7b668202e232c1c0bc36003c0002322faf2814e",
+   "sha256": "4cb0fd4b956d6f85656fd53147998037fc697f997c53c0e20a0913948ceaab40",
    "bando": {
     "id": "valle-aosta-film-fund-2025-2026",
     "fondoId": "valle-aosta",
@@ -30088,6 +30111,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 3,
@@ -30806,7 +30830,7 @@
   {
    "id": "veneto-produzione-audiovisiva-pr-fesr-2026",
    "revisione": "2026-11-14",
-   "sha256": "425bbe16ca1c0605d36679fe4f5c46cb4cf9e682ead6df87bad85a60bcdfd2c2",
+   "sha256": "63ac5730d427190d553bc9b69d176552ec71fc4734a6139f129be2e27a4f0932",
    "bando": {
     "id": "veneto-produzione-audiovisiva-pr-fesr-2026",
     "fondoId": "veneto",
@@ -31016,6 +31040,7 @@
     "spesaTerritorioMinSuCostoPct": 0,
     "producerFeeMaxPct": null,
     "consuntivoMinPct": null,
+    "quotaProponenteMinPct": null,
     "regolaContributo": "pieno",
     "commissione": {
      "componenti": 3,

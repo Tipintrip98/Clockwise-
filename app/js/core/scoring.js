@@ -35,8 +35,36 @@ export function datiVuoti() {
     professionisti: { artTot: null, artSicilia: null, crewTot: null, crewSicilia: null },
     economici: { costoProduzione: null, costoAmmissibile: null, contributoRichiesto: null, spesaSicilia: null, producerFee: null },
     piano: [],
+    coproduzione: { quotaProponente: null, quotaEstera: null },
     ripreseIniziate: false,
     requisiti: {},
+  };
+}
+
+/** Soglia della coproduzione estera: sotto il 20% l'apporto estero è una partecipazione minore. */
+export const QUOTA_ESTERA_MIN = 20;
+
+/** Le righe del piano finanziario che vengono da soggetti esteri (voci 3.x o etichette «estero», «internazionale»). */
+export const righeEsterePiano = (dati) => (dati?.piano || []).filter((r) => num(r.importo) > 0 && (/^3/.test(String(r.voce || '')) || /ester|internazional/i.test(r.etichetta || '')) && !/^[68]/.test(String(r.voce || '')));
+
+/**
+ * Quote di coproduzione del dossier. La quota estera è quella dichiarata nei Dati chiave oppure, se manca,
+ * l'apporto dei soggetti esteri nel piano finanziario rapportato al costo di produzione.
+ * @returns {{ esteraPct: number|null, origine: 'dichiarata'|'piano'|null, importoEstero: number, coproduttoriEsteri: number, proponentePct: number|null, presente: boolean, sottoSoglia: boolean|null }}
+ */
+export function quoteCoproduzione(dati) {
+  const righe = righeEsterePiano(dati);
+  const importo = righe.reduce((a, r) => a + num(r.importo), 0);
+  const costo = num(dati?.economici?.costoProduzione);
+  const dichiarata = num(dati?.coproduzione?.quotaEstera);
+  const dalPiano = righe.length && costo ? (importo / costo) * 100 : null;
+  const esteraPct = dichiarata != null ? dichiarata : dalPiano;
+  const presente = righe.length > 0 || (dichiarata != null && dichiarata > 0);
+  return {
+    esteraPct: esteraPct == null ? null : Math.round(esteraPct * 10) / 10, origine: dichiarata != null ? 'dichiarata' : dalPiano != null ? 'piano' : null,
+    importoEstero: importo, coproduttoriEsteri: new Set(righe.map((r) => String(r.denominazione || r.voce || '').trim().toLowerCase())).size,
+    proponentePct: num(dati?.coproduzione?.quotaProponente), presente,
+    sottoSoglia: presente && esteraPct != null ? esteraPct < QUOTA_ESTERA_MIN : null,
   };
 }
 
@@ -405,6 +433,19 @@ export function verificheAmmissibilita(bando, categoriaId, anno, dati, tipiPrese
     const p = (e.producerFee / costo) * 100;
     if (p > tettoFee + 0.01) add('fee', 'attenzione', 'Producer fee', `${fmt(p)}% del costo: la quota oltre il ${fmt(tettoFee)}% non è ammissibile.`);
     else add('fee', 'ok', 'Producer fee', `${fmt(p)}% del costo di produzione (ammissibile fino al ${fmt(tettoFee)}%).`);
+  }
+
+  // coproduzione: quota del proponente (dove il bando fissa un minimo) e quota dei coproduttori esteri
+  const q = quoteCoproduzione(dati);
+  const minProponente = num(bando.quotaProponenteMinPct);
+  if (minProponente != null && q.proponentePct != null) {
+    if (q.proponentePct < minProponente) add('quota_proponente', 'critico', 'Quota del proponente nell’opera', `${fmt(q.proponentePct)}%: sotto il ${fmt(minProponente)}% che il bando chiede a chi presenta la domanda come produttore, coproduttore o produttore associato. È un requisito di ammissibilità e va mantenuto fino alla fine, a pena di revoca.`);
+    else add('quota_proponente', 'ok', 'Quota del proponente nell’opera', `${fmt(q.proponentePct)}% (minimo ${fmt(minProponente)}%, da mantenere fino alla rendicontazione).`);
+  }
+  if (q.presente && q.esteraPct != null) {
+    const base = q.origine === 'piano' ? `l’apporto dei soggetti esteri nel piano finanziario (${euro(q.importoEstero)}) vale il ${fmt(q.esteraPct)}% del costo di produzione` : `la quota dichiarata è del ${fmt(q.esteraPct)}%`;
+    if (q.sottoSoglia) add('quota_estera', 'attenzione', 'Coproduzione estera', `Sotto il ${QUOTA_ESTERA_MIN}%: ${base}. Con una quota così bassa è una partecipazione minore: il punteggio atteso sui criteri di internazionalizzazione scende, e gli accordi di coproduzione chiedono di norma almeno il ${QUOTA_ESTERA_MIN}% al coproduttore minoritario (verifica l’accordo applicabile al Paese del partner). Porta la quota estera almeno al ${QUOTA_ESTERA_MIN}% oppure non contare su quei punti.`);
+    else add('quota_estera', 'ok', 'Coproduzione estera', `Almeno il ${QUOTA_ESTERA_MIN}%: ${base}.`);
   }
 
   // fattibilità: un criterio sulla copertura finanziaria che vale zero può rendere irraggiungibile il minimo della sua sezione

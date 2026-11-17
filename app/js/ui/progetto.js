@@ -3,7 +3,7 @@ import { h, metti, svuota, fmt, euro, toast, dimensione, campoNumero, campoTesto
 import { S, bandoDi, risultatoDi, salva, salvaPresto, llmAttivo, vai, annoPredefinito, impostazione, nomeModello, dritaVista, guidaInCorso } from './app.js';
 import { TIPI, tipoPerId, estraiTesto, riconosciTipo, immaginiScansione } from '../core/docs.js';
 import { trascriviScansione, AVVISO_TRASCRIZIONE } from '../core/scansioni.js';
-import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti } from '../core/scoring.js';
+import { getCategoria, getGriglia, verificheAmmissibilita, suggerimentiQuantitativi, valutaQuantitativo, coperturaPiano, ETICHETTE_DOC, datiVuoti, quoteCoproduzione, QUOTA_ESTERA_MIN } from '../core/scoring.js';
 import { MODELLI, IMPEGNI } from '../core/llm.js';
 import { pianoValutazione, eseguiValutazione, estraiDati } from '../core/engine.js';
 import { nuovoId, casiReali } from '../core/store.js';
@@ -241,7 +241,14 @@ function pannelloLive(p, bando) {
 function schedaDati(corpo, p, bando, mostra) {
   const d = p.dati, terr = bando.territorio || 'regione';
   const laterale = h('div.sticky');
-  const aggiorna = () => { metti(svuota(laterale), pannelloLive(p, bando)); salvaPresto(); };
+  // esito della coproduzione estera: si aggiorna a ogni modifica dei dati (quote o piano finanziario)
+  const esitoCoproduzione = h('div', { id: 'esito-coproduzione' });
+  const disegnaCoproduzione = () => {
+    const q = quoteCoproduzione(p.dati);
+    svuota(esitoCoproduzione);
+    if (q.presente && q.esteraPct != null) metti(esitoCoproduzione, h(`div.notice.${q.sottoSoglia ? 'warn' : 'ok'}`, h('strong', `Coproduzione estera: ${fmt(q.esteraPct)}%. `), q.sottoSoglia ? `Sotto il ${QUOTA_ESTERA_MIN}%: partecipazione minore, il punteggio atteso di internazionalizzazione scende.` : `Almeno il ${QUOTA_ESTERA_MIN}%: conta come coproduzione piena.`, q.origine === 'piano' ? ' Calcolata dal piano finanziario.' : ''));
+  };
+  const aggiorna = () => { metti(svuota(laterale), pannelloLive(p, bando)); disegnaCoproduzione(); salvaPresto(); };
   const n = (et, ogg, k, extra) => campoNumero(et, ogg, k, aggiorna, extra);
   const pianoEl = h('div');
 
@@ -305,6 +312,10 @@ function schedaDati(corpo, p, bando, mostra) {
       h('div.grid', n('Componente artistica, totale', d.professionisti, 'artTot'), n(`Artistici di ${terr}`, d.professionisti, 'artSicilia'), n('Cast tecnico, totale', d.professionisti, 'crewTot'), n(`Tecnici di ${terr}`, d.professionisti, 'crewSicilia'))),
     h('div.panel.stack', h('h2', 'Budget e contributo'),
       h('div.grid.w', n('Costo di produzione €', d.economici, 'costoProduzione'), n('Costo ammissibile €', d.economici, 'costoAmmissibile'), n('Contributo richiesto €', d.economici, 'contributoRichiesto'), n(`Spesa ammissibile in ${terr} €`, d.economici, 'spesaSicilia'), n('Producer fee €', d.economici, 'producerFee'))),
+    h('div.panel.stack', { id: 'pannello-coproduzione' }, h('h2', 'Coproduzione'),
+      h('p.muted.small', { style: { maxWidth: '80ch' } }, `Quote dell’opera. Sotto il ${QUOTA_ESTERA_MIN}% la coproduzione estera conta come partecipazione minore e il punteggio atteso di internazionalizzazione scende. Se lasci vuota la quota estera, il programma usa l’apporto dei soggetti esteri nel piano finanziario rapportato al costo.`),
+      h('div.grid.w', n('Quota del proponente nell’opera %', (d.coproduzione = d.coproduzione || { quotaProponente: null, quotaEstera: null }), 'quotaProponente'), n('Quota dei coproduttori esteri %', d.coproduzione, 'quotaEstera')),
+      (disegnaCoproduzione(), esitoCoproduzione)),
     h('div.panel.stack', h('h2', 'Piano finanziario'),
       h('p.muted.small', 'Per ogni fonte indica il documento che la sostiene ed è allegato al dossier. Le risorse proprie contano solo con referenze bancarie; tax credit e contributi pubblici solo se già concessi con atto formale.'),
       pianoEl,

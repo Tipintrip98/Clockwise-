@@ -13,7 +13,7 @@
 
 import { REGOLE, FATTI, FORZE, FIDUCIE, FAMIGLIE_TARATE, ERRORI_DA_EVITARE, LIMITI, VERSIONE_TARATURA, LESSICO, REPARTI,
   ALLEGATI_PER_VOCE, ALLEGATI_PER_ETICHETTA, LUOGHI, COMPOSIZIONE } from './taratura-dati.js';
-import { getCategoria, getGriglia, calcolaMetriche, coperturaPiano, puntiFascia, valutaQuantitativo, statisticheEsiti, statisticheFinanziati,
+import { quoteCoproduzione, getCategoria, getGriglia, calcolaMetriche, coperturaPiano, puntiFascia, valutaQuantitativo, statisticheEsiti, statisticheFinanziati,
   DOC_VALIDI, r1 } from './scoring.js';
 import { tipoPerId } from './docs.js';
 
@@ -345,6 +345,8 @@ export function fattiDossier(bando, progetto) {
   const firmeCop = firmeDocumento(accordoEstero?.testo);
   metti('accordo_coproduzione_estera_firmato', !!accordoEstero && firmeCop.soggetti >= parti, accordoEstero ? `${firmeCop.soggetti} firme per ${parti} parti${firmeCop.daControllare ? ' (firme non leggibili: controlla l’originale)' : ''}` : 'nessun accordo');
   metti('coproduttori_esteri_n', nEstere || (righeEstere.length ? new Set(righeEstere.map((r) => minuscolo(r.denominazione) || r.voce)).size : 0), nEstere ? `${nEstere} società estere parti dell’accordo` : righeEstere.length ? 'dalle righe del piano finanziario' : 'nessuna');
+  const quote = quoteCoproduzione(dati);
+  metti('quota_estera_almeno_20', quote.presente && quote.esteraPct != null ? !quote.sottoSoglia : null, quote.presente && quote.esteraPct != null ? `${fmt(quote.esteraPct)}% ${quote.origine === 'piano' ? 'del costo dal piano finanziario' : 'dichiarato nei Dati chiave'}` : 'quota estera non ricavabile: manca il piano finanziario o il costo');
   const cvEstero = coprod.find((d) => d !== accordoEstero && prova(LESSICO.curriculumSocietario, d.testo) && (estereIn(d.testo).size || prova(LESSICO.paesiEsteri, d.testo)));
   metti('coproduttori_esteri_rilevanza_provata', !!cvEstero, cvEstero ? `«${cvEstero.nome}»` : 'manca il curriculum societario del coproduttore estero');
   const estero = distr.find((d) => prova(LESSICO.venditeEstere, d.testo));

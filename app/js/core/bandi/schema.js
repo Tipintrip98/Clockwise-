@@ -118,7 +118,7 @@ export function sanificaBando(g) {
     soglieCombinate: soglieComb(b.soglieCombinate),
     penalita: elenco(b.penalita, 20).map((x, i) => ({ id: slug(x?.id, 40) || `p${i + 1}`, testo: testo(x?.testo, 400), punti: -Math.abs(numero(x?.punti) ?? 0) })).filter((x) => x.testo && x.punti < 0),
     spesaTerritorioMinPct: numero(b.spesaTerritorioMinPct) ?? 0, spesaTerritorioMinSuCostoPct: numero(b.spesaTerritorioMinSuCostoPct) ?? 0,
-    producerFeeMaxPct: numero(b.producerFeeMaxPct), consuntivoMinPct: numero(b.consuntivoMinPct), regolaContributo: b.regolaContributo === 'proporzionale_al_primo' ? 'proporzionale_al_primo' : 'pieno',
+    producerFeeMaxPct: numero(b.producerFeeMaxPct), consuntivoMinPct: numero(b.consuntivoMinPct), quotaProponenteMinPct: numero(b.quotaProponenteMinPct), regolaContributo: b.regolaContributo === 'proporzionale_al_primo' ? 'proporzionale_al_primo' : 'pieno',
     commissione: { componenti: numero(b.commissione?.componenti), descrizione: testo(b.commissione?.descrizione, 1500) },
     invio: b.invio && (b.invio.indirizzo || b.invio.canale) ? { canale: testo(b.invio.canale, 60), indirizzo: testo(b.invio.indirizzo, 300), oggetto: testo(b.invio.oggetto, 400), regole: elenco(b.invio.regole, 20).map((r) => testo(r, 500)).filter(Boolean) } : null,
     categorie: elenco(b.categorie, 30).map((c) => ({

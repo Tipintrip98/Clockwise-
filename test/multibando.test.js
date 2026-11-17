@@ -248,3 +248,42 @@ test('soglie combinate su criteri e sezioni', () => {
   assert.ok(r.combinate.every((x) => x.superata));
   assert.ok(validaBando(sanificaBando({ ...INVENTATO, soglieCombinate: [{ criteri: ['zz'], minimo: 3 }] })).errori.some((e) => /inesistente/.test(e)));
 });
+
+test('coproduzione estera al 20%: quota dal piano o dichiarata, controlli e regola sul punteggio', async () => {
+  const { quoteCoproduzione, QUOTA_ESTERA_MIN, verificheAmmissibilita, datiVuoti } = await import('../app/js/core/scoring.js');
+  const { BANDO_SICILIA } = await import('../app/js/core/bando-sicilia.js');
+  const { componiRegole } = await import('../app/js/core/ragionamento.js');
+  assert.equal(QUOTA_ESTERA_MIN, 20);
+  const dati = (estero, extra = {}) => ({ ...datiVuoti(), economici: { costoProduzione: 1000000, costoAmmissibile: 1000000, contributoRichiesto: 200000, spesaSicilia: 500000, producerFee: 50000 },
+    piano: [{ voce: '1.1', etichetta: 'Contributo', importo: 200000 }, { voce: '2.2', etichetta: 'Produttori indipendenti', denominazione: 'Alfa', importo: 800000 - estero }, ...(estero ? [{ voce: '3.1', etichetta: 'Produttori esteri', denominazione: 'Beta Ltd', importo: estero }] : [])], ...extra });
+
+  // dal piano: 25% → sopra; 5% → sotto; nessun estero → niente da dire
+  assert.deepEqual((({ esteraPct, origine, sottoSoglia, coproduttoriEsteri }) => ({ esteraPct, origine, sottoSoglia, coproduttoriEsteri }))(quoteCoproduzione(dati(250000))), { esteraPct: 25, origine: 'piano', sottoSoglia: false, coproduttoriEsteri: 1 });
+  assert.equal(quoteCoproduzione(dati(50000)).sottoSoglia, true);
+  assert.equal(quoteCoproduzione(dati(200000)).sottoSoglia, false, 'il 20% esatto basta');
+  assert.deepEqual((({ presente, sottoSoglia }) => ({ presente, sottoSoglia }))(quoteCoproduzione(dati(0))), { presente: false, sottoSoglia: null });
+  // la quota dichiarata nei Dati chiave prevale sul piano
+  const dich = quoteCoproduzione(dati(50000, { coproduzione: { quotaProponente: 30, quotaEstera: 22 } }));
+  assert.equal(dich.esteraPct, 22); assert.equal(dich.origine, 'dichiarata'); assert.equal(dich.sottoSoglia, false);
+
+  // controlli di ammissibilità
+  const controllo = (d, id) => verificheAmmissibilita(BANDO_SICILIA, 'film', 2026, d, []).find((x) => x.id === id);
+  assert.equal(controllo(dati(250000), 'quota_estera').esito, 'ok');
+  assert.equal(controllo(dati(50000), 'quota_estera').esito, 'attenzione');
+  assert.match(controllo(dati(50000), 'quota_estera').dettaglio, /Sotto il 20%.*5%/);
+  assert.equal(controllo(dati(0), 'quota_estera'), undefined);
+  // quota del proponente: sotto il 20% è bloccante in Sicilia; senza il dato nessun controllo
+  assert.equal(BANDO_SICILIA.quotaProponenteMinPct, 20);
+  assert.equal(controllo(dati(0, { coproduzione: { quotaProponente: 15, quotaEstera: null } }), 'quota_proponente').esito, 'critico');
+  assert.equal(controllo(dati(0, { coproduzione: { quotaProponente: 26.4, quotaEstera: null } }), 'quota_proponente').esito, 'ok');
+  assert.equal(controllo(dati(0), 'quota_proponente'), undefined);
+
+  // regola sul punteggio di internazionalizzazione: sotto il 20% la fascia attesa scende
+  const base = { accordo_coproduzione_estera_firmato: true, coproduttori_esteri_rilevanza_provata: false, coproduttori_esteri_n: 2, documento_coproduzione_estera_allegato: true, coproduzione_estera_dichiarata: true, distribuzione_internazionale_firmata: false, venditore_estero_qualifica_provata: false };
+  const sopra = componiRegole('internazionale', { ...base, quota_estera_almeno_20: true });
+  const sotto = componiRegole('internazionale', { ...base, quota_estera_almeno_20: false });
+  assert.deepEqual(sopra.regole.map((r) => r.id), ['internazionale-piu-coproduttori-esteri-rilevanza-non-provata']);
+  assert.deepEqual(sotto.regole.map((r) => r.id), ['internazionale-coproduzione-estera-sotto-il-20']);
+  assert.ok(sotto.attesa[1] < sopra.attesa[0], 'sotto il 20% il massimo atteso è sotto il minimo atteso della coproduzione piena');
+  assert.deepEqual(sotto.attesa, [0.5, 0.7]);
+});

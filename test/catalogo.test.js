@@ -458,3 +458,25 @@ test('il catalogo del programma passa da tutte le funzioni senza errori', () => 
   }
   assert.equal(raggruppaPerRegione(voci).reduce((n, g) => n + g.voci.length, 0), voci.length);
 });
+
+test('elenco per stato: prima gli aperti (chi scade prima), poi in arrivo, attesi, sospesi, chiusi', async () => {
+  const { raggruppaPerStato, GRUPPI_STATO } = await import('../app/js/core/bandi/catalogo.js');
+  const oggi = '2026-11-17';
+  const g = raggruppaPerStato(catalogo(), oggi);
+  const ordine = GRUPPI_STATO.map(([k]) => k);
+  // i gruppi presenti rispettano l'ordine fissato e nessun bando va perso o raddoppiato
+  assert.deepEqual(g.map((x) => x.chiave), ordine.filter((k) => g.some((x) => x.chiave === k)));
+  assert.equal(g.reduce((n, x) => n + x.voci.length, 0), catalogo().length);
+  assert.equal(new Set(g.flatMap((x) => x.voci.map((b) => b.id))).size, catalogo().length);
+  assert.equal(g[0].chiave, 'aperto');
+  // dentro «aperti» e «in arrivo» l'ordine è per giorni mancanti
+  for (const k of ['aperto', 'in_arrivo']) {
+    const giorni = g.find((x) => x.chiave === k).voci.map((b) => statoBando(b, oggi).giorni);
+    assert.deepEqual(giorni, [...giorni].sort((a, b) => a - b), k);
+  }
+  assert.ok(g.find((x) => x.chiave === 'in_arrivo').voci.some((b) => b.id === 'sicilia-2025-2027'));
+  // ogni bando sta nel gruppo del suo stato
+  for (const x of g) for (const b of x.voci) assert.equal(statoBando(b, oggi).codice, x.chiave);
+  assert.deepEqual(raggruppaPerStato([], oggi), []);
+  assert.deepEqual(raggruppaPerStato(null, oggi), []);
+});

@@ -6,7 +6,7 @@ import { S, impostazione, nuovoProgetto, salva, apriProgetto, vai } from './app.
 import { catalogo } from '../core/bandi/indice.js';
 import { urlSicuro } from '../core/bandi/schema.js';
 import {
-  FILTRI, NOTA_PREVISTA, statoBando, simulabilita, etichettaValutazione, raggruppaPerRegione, filtraBandi, contaFiltri,
+  FILTRI, NOTA_PREVISTA, statoBando, simulabilita, etichettaValutazione, raggruppaPerRegione, raggruppaPerStato, filtraBandi, contaFiltri,
   opzioniAnno, annoConsigliato, schedaCategoria, nomeDossierProposto, dataEstesa, dataCorta, giorniTra,
 } from '../core/bandi/catalogo.js';
 
@@ -44,7 +44,7 @@ const SOGLIA_STRUMENTI = 6;
  * Da tastiera: frecce su/giù, Inizio e Fine per scorrere; Invio sceglie; Invio su un bando già scelto conferma.
  * @returns {{ nodo: HTMLElement, cerca: HTMLInputElement, aggiorna: (o?: { voci?: object[], scelto?: string|null }) => void, azzera: () => void, focalizza: () => void }}
  */
-export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 'tutti' }, alScegli, alConferma, espansione, id = 'cat', attributo = 'aria-pressed' }) {
+export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 'tutti' }, alScegli, alConferma, espansione, id = 'cat', attributo = 'aria-pressed', ordini = false }) {
   let correnti = voci || [], idScelto = scelto;
   const lista = h('div.cat-lista');
   const conta = h('p.cat-conta.small.muted', { role: 'status' });
@@ -61,7 +61,11 @@ export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 
     numeri[f.id] = h('span.num');
     return h('button.cat-filtro', { type: 'button', dataset: { filtro: f.id }, onclick: () => { stato.filtro = f.id; disegna(); } }, f.nome, numeri[f.id]);
   }));
-  const strumenti = h('div.cat-strumenti', h('div.cat-cerca', lente(), cerca), filtri);
+  // ordine dell'elenco (solo dove chi chiama lo chiede): per stato, con i bandi aperti in cima, oppure per regione
+  const ORDINI = [['stato', 'Per scadenza'], ['regione', 'Per regione']];
+  const ordine = ordini ? h('div.cat-ordine', { role: 'group', 'aria-label': 'Ordina i bandi' }, h('span.small.muted', 'Ordina'),
+    ORDINI.map(([oid, nome]) => h('button.cat-filtro', { type: 'button', dataset: { ordine: oid }, onclick: () => { stato.ordine = oid; disegna(); } }, nome))) : null;
+  const strumenti = h('div.cat-strumenti', h('div.cat-cerca', lente(), cerca), filtri, ordine);
 
   const voce = (b, oggi, attiva, sosta) => {
     const st = statoBando(b, oggi), sim = simulabilita(b);
@@ -90,7 +94,9 @@ export function elencoBandi({ voci, scelto = null, stato = { testo: '', filtro: 
     for (const b of filtri.children) { b.setAttribute('aria-pressed', String(b.dataset.filtro === stato.filtro)); numeri[b.dataset.filtro].textContent = String(quanti[b.dataset.filtro]); }
     conta.hidden = !ricco;
     conta.textContent = visibili.length === correnti.length ? `${bandi(correnti.length)} in catalogo` : `${visibili.length} su ${bandi(correnti.length)}`;
-    const gruppi = raggruppaPerRegione(visibili);
+    const perStato = ordini && stato.ordine !== 'regione';
+    if (ordine) for (const b of ordine.querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.ordine === (perStato ? 'stato' : 'regione')));
+    const gruppi = perStato ? raggruppaPerStato(visibili, oggi) : raggruppaPerRegione(visibili);
     // il bando raggiungibile con Tab: quello scelto se è visibile, altrimenti il primo nell'ordine dei gruppi
     const sosta = visibili.some((b) => b.id === idScelto) ? idScelto : gruppi[0]?.voci[0]?.id;
     metti(svuota(lista), visibili.length

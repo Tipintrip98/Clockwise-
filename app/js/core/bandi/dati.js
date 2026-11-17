@@ -132,6 +132,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -1040,6 +1041,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": 7.5,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -1598,6 +1600,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -2687,6 +2690,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -4077,6 +4081,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": 0,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -5314,6 +5319,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -6201,6 +6207,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -6902,6 +6909,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 3,
@@ -7873,6 +7881,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 15,
@@ -8871,6 +8880,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 15,
@@ -10203,6 +10213,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -11025,6 +11036,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -11639,6 +11651,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -12268,6 +12281,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -12871,6 +12885,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -17362,6 +17377,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": 7.5,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 3,
@@ -18388,6 +18404,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -19183,6 +19200,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -21681,6 +21699,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 20,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -24484,6 +24503,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": 7.5,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 5,
@@ -25337,6 +25357,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -25981,6 +26002,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": null,
@@ -27107,6 +27129,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 3,
@@ -29968,6 +29991,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 3,
@@ -30891,6 +30915,7 @@ export const BANDI_DATI = [
   "spesaTerritorioMinSuCostoPct": 0,
   "producerFeeMaxPct": null,
   "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
   "regolaContributo": "pieno",
   "commissione": {
    "componenti": 3,

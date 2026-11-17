@@ -146,6 +146,35 @@ export function raggruppaPerRegione(voci) {
   return [...gruppi.values()].sort((a, b) => ORDINE_AREA[a.area] - ORDINE_AREA[b.area] || a.titolo.localeCompare(b.titolo, 'it'));
 }
 
+/** Ordine e titoli dei gruppi quando l'elenco è ordinato per stato: prima i bandi a cui si può partecipare adesso. */
+export const GRUPPI_STATO = [
+  ['aperto', 'Aperti adesso'], ['in_arrivo', 'In arrivo'], ['atteso', 'Prossima edizione attesa'], ['sospeso', 'Sospesi'], ['chiuso', 'Chiusi'],
+];
+
+/**
+ * Raggruppa le voci per stato del bando: aperti (prima chi scade prima), in arrivo (prima chi apre prima), attesi,
+ * sospesi, chiusi. Dentro i gruppi senza data l'ordine è alfabetico. I gruppi vuoti non compaiono.
+ * @returns {{ chiave: string, titolo: string, voci: object[], simulabili: number }[]}
+ */
+export function raggruppaPerStato(voci, oggi = oggiIso()) {
+  const nome = (b) => String(b.nomeBreve || b.nome || '');
+  const gruppi = new Map(GRUPPI_STATO.map(([chiave, titolo]) => [chiave, { chiave, titolo, voci: [], simulabili: 0 }]));
+  gruppi.set('altro', { chiave: 'altro', titolo: 'Altri bandi', voci: [], simulabili: 0 });
+  const stati = new Map();
+  for (const b of voci || []) {
+    const st = statoBando(b, oggi);
+    stati.set(b, st);
+    const g = gruppi.get(st.codice) || gruppi.get('altro');
+    g.voci.push(b);
+    if (b.simulabile !== false) g.simulabili += 1;
+  }
+  const giorni = (b) => (stati.get(b).giorni == null ? Infinity : stati.get(b).giorni);
+  for (const g of gruppi.values()) {
+    g.voci.sort((a, b) => (g.chiave === 'aperto' || g.chiave === 'in_arrivo' ? giorni(a) - giorni(b) : 0) || nome(a).localeCompare(nome(b), 'it'));
+  }
+  return [...gruppi.values()].filter((g) => g.voci.length);
+}
+
 const testoCercabile = (b) => normalizza([b.nome, b.nomeBreve, b.regione, b.territorio, b.ente, b.descrizione, etichettaValutazione(b), ...(b.categorie || []).map((c) => c.nome)].filter(Boolean).join(' '));
 
 /** Ricerca immediata: tutte le parole scritte devono comparire (senza badare ad accenti e maiuscole). */

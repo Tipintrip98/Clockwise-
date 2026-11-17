@@ -431,6 +431,8 @@ export const BANDO_SICILIA = {
     { id: 'contenuti', testo: 'L’opera non è promozionale, istituzionale o di intrattenimento TV e non contiene messaggi vietati (art. 5.2)' },
     { id: 'pec', testo: 'Invio unico via PEC dalla casella indicata nel dossier, con l’oggetto previsto dall’Avviso' },
   ],
+  // Quota minima dell'opera in capo al proponente (artt. 3 e 5; da mantenere, art. 12 lett. d).
+  quotaProponenteMinPct: 20,
   // Scadenze che decorrono dalla notifica del decreto di concessione provvisoria.
   scadenze: [
     { id: 'riprese', etichetta: 'Fine delle riprese (o delle lavorazioni, per l\u2019animazione)', mesi: 18, preavvisoGiorni: 30, nota: 'Art. 12 lett. g) e art. 14: proroga una sola volta, per non più di 6 mesi, da chiedere almeno 30 giorni prima della scadenza. Oltre il termine il contributo è revocato (art. 18).' },

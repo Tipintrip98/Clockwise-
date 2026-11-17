@@ -10,7 +10,7 @@ import { statisticheEsiti } from '../core/scoring.js';
 import { catalogo } from '../core/bandi/indice.js';
 import {
   statoBando, simulabilita, etichettaValutazione, riepilogoCatalogo, collegati, calendarioEdizioni, schedaCategoria, areaBando,
-  dataEstesa, dataCorta, NOTA_PREVISTA,
+  dataEstesa, dataCorta, NOTA_PREVISTA, raggruppaPerStato,
 } from '../core/bandi/catalogo.js';
 import { elencoBandi, nuovoDossierGuidato, linkEsterno, spiegaNonSimulabile, quandoBando } from './scelta-bando.js';
 import { pannelloAggiornamenti, avvisoBando } from './aggiornamenti.js';
@@ -26,7 +26,7 @@ const CONDIZIONE = { passata: ['x', 'Chiusa'], aperta: ['ok', 'Aperta'], futura:
 const AMBITO = { nazionale: 'Bando nazionale', europeo: 'Bando europeo', personale: 'Bando aggiunto da te' };
 
 // Ciò che della pagina deve sopravvivere ai ridisegni e al cambio di vista: ricerca, filtro, sezione aperta.
-const vista = { ricerca: { testo: '', filtro: 'tutti' }, sezione: 'scheda', pannello: 'elenco', visto: null };
+const vista = { ricerca: { testo: '', filtro: 'tutti', ordine: 'stato' }, sezione: 'scheda', pannello: 'elenco', visto: null };
 
 const maiuscola = (t) => (t ? t.charAt(0).toUpperCase() + t.slice(1) : '');
 // I segnaposto e gli altri moduli possono non avere nulla da mostrare (o fallire): la pagina resta in piedi.
@@ -293,7 +293,24 @@ export function vistaBandi(main) {
   let elenco = null;
 
   const voci = () => catalogo(S.bandi, S.schede);
-  const predefinito = (v) => v.find((b) => b.id === S.bandoAperto) || v.find((b) => b.id === S.imp.bandoPreferito) || v.find((b) => b.simulabile !== false) || v[0];
+  // in apertura: il bando chiesto, poi il preferito, poi il primo simulabile nell'ordine in cui l'elenco li mostra
+  const predefinito = (v) => v.find((b) => b.id === S.bandoAperto) || v.find((b) => b.id === S.imp.bandoPreferito)
+    || raggruppaPerStato(v).flatMap((g) => g.voci).find((b) => b.simulabile !== false) || v[0];
+
+  // Il riquadro degli aggiornamenti sta chiuso in una riga: si apre da solo quando c'è una novità da guardare.
+  const scatolaAggiornamenti = (pannello) => {
+    if (!pannello) return null;
+    const esito = h('span.tag.x');
+    const scatola = h('details.more.cat-agg', { id: 'cat-aggiornamenti' }, h('summary', h('span', 'Aggiornamento dei bandi'), esito), pannello);
+    const allinea = () => {
+      const tag = pannello.querySelector('.agg-testata .tag');
+      esito.textContent = tag?.textContent || ''; esito.className = tag?.className || 'tag x'; esito.hidden = !tag;
+      if (pannello.querySelector('.agg-novita')) scatola.open = true;
+    };
+    allinea();
+    if (globalThis.MutationObserver) new MutationObserver(allinea).observe(pannello, { childList: true, subtree: true });
+    return scatola;
+  };
 
   // Ridisegna tutta la pagina sotto l'intestazione: serve dopo un aggiornamento dei bandi o una modifica alla conoscenza.
   const ridisegna = () => {
@@ -321,13 +338,13 @@ export function vistaBandi(main) {
     const tornaAllElenco = unico ? null : () => { vista.pannello = 'elenco'; cornice.dataset.pannello = 'elenco'; elenco?.focalizza(); };
     const disegnaDettaglio = (b) => metti(svuota(colonna), b ? dettaglio(b, v, ridisegna, apri, tornaAllElenco) : h('div.panel.flat.empty', h('strong', 'Nessun bando'), 'Aggiungi il primo bando dal PDF dell’avviso.'));
 
-    elenco = unico ? null : elencoBandi({ voci: v, scelto: aperto?.id || null, stato: vista.ricerca, id: 'cat', attributo: 'aria-current', alScegli: (b) => apri(b.id) });
+    elenco = unico ? null : elencoBandi({ voci: v, scelto: aperto?.id || null, stato: vista.ricerca, id: 'cat', attributo: 'aria-current', ordini: true, alScegli: (b) => apri(b.id) });
     metti(cornice,
       elenco && h('aside.cat-colonna', { 'aria-label': 'Catalogo dei bandi' }, elenco.nodo),
       colonna);
     disegnaDettaglio(aperto);
     metti(svuota(zona),
-      prova(() => pannelloAggiornamenti(async () => { await caricaBandi(); ridisegna(); })),
+      scatolaAggiornamenti(prova(() => pannelloAggiornamenti(async () => { await caricaBandi(); ridisegna(); }))),
       !unico && h('p.cat-sintesi', { id: 'cat-sintesi' },
         h('span', h('strong.num', String(r.totale)), ' fondi in catalogo'),
         h('span', h('strong.num', String(r.simulabili)), r.simulabili === 1 ? ' simulabile' : ' simulabili'),
