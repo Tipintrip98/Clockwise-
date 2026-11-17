@@ -369,7 +369,7 @@ jobs:
           if (-not (Test-Path (Join-Path $menu 'Chiudi Clockwise.lnk'))) { throw 'Nel menu Start manca «Chiudi Clockwise»' }
           # niente finestra nera: nell'intestazione del file il sottosistema deve essere 2 (finestre), non 3 (console)
           $b = [IO.File]::ReadAllBytes($exe); $pe = [BitConverter]::ToInt32($b, 0x3C); $sotto = [BitConverter]::ToUInt16($b, $pe + 24 + 68)
-          if ($sotto -ne 2) { throw "Clockwise.exe ha sottosistema $sotto: aprirebbe la finestra della console" }
+          if ($sotto -ne 2) { throw "Clockwise.exe ha sottosistema $($sotto): aprirebbe la finestra della console" }
           if ($env:PROFILO_DI_PROVA) {
             $profilo = Join-Path $env:RUNNER_TEMP $env:PROFILO_DI_PROVA
             $env:USERPROFILE = $profilo; $env:APPDATA = "$profilo\AppData\Roaming"
