@@ -7746,7 +7746,7 @@
   {
    "id": "italia-mic-selettivi-2026",
    "revisione": "2026-11-27",
-   "sha256": "3ee39048dad999a3d68e728713519a401aff25e3f175bacb7a5fcfb24071e4f6",
+   "sha256": "3eabd294061bde98bab8af7499da4503aa06c4e1fd37a63818a19b2cda991d6a",
    "bando": {
     "id": "italia-mic-selettivi-2026",
     "fondoId": "mic-selettivi",
@@ -7760,6 +7760,7 @@
     "fonte": "Decreto del Direttore generale Cinema e audiovisivo 15 maggio 2026, rep. n. 1238 — «Bando per la concessione di contributi selettivi per la scrittura, lo sviluppo e la produzione di opere cinematografiche e audiovisive – articolo 26 della legge n. 220 del 2016 – Anno 2026» (63 pagine: articoli 1-28, tabelle 1-6, allegati 1 e 2)",
     "stato": "chiuso",
     "tipoValutazione": "punteggio",
+    "creditoImpostaComeCopertura": true,
     "descrizione": "Bando annuale della DGCA per imprese di produzione indipendenti italiane (e, per la sola scrittura, per autori persone fisiche). Finanzia a fondo perduto scrittura di sceneggiature, sviluppo e produzione di opere prime e seconde, opere di giovani autori, documentari, cortometraggi, animazione e film di particolare qualità artistica o sull’identità culturale italiana. La Commissione degli esperti nominata dal Ministro assegna un punteggio per ogni criterio e sotto criterio delle tabelle allegate al bando, stila una graduatoria per linea e determina l’entità del contributo; due sessioni l’anno sulla piattaforma DGCOL.",
     "paginaUfficiale": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
     "fontiUrl": [
@@ -8750,7 +8751,7 @@
   {
    "id": "italia-mic-selettivi-qualita-2026",
    "revisione": "2026-11-27",
-   "sha256": "acd9d497ea05ed84fc0d31d6692f6aa760e5fc298ea5a48e2eaae8f8f924ab23",
+   "sha256": "4a63edd51cb6fed6497d1f9e2c7f6806756325624d49ee5faeb7c189665401b3",
    "bando": {
     "id": "italia-mic-selettivi-qualita-2026",
     "fondoId": "mic-selettivi",
@@ -8764,6 +8765,7 @@
     "fonte": "Decreto del Direttore generale Cinema e audiovisivo 15 maggio 2026, rep. n. 1238 — «Bando per la concessione di contributi selettivi per la scrittura, lo sviluppo e la produzione di opere cinematografiche e audiovisive – articolo 26 della legge n. 220 del 2016 – Anno 2026» (63 pagine: articoli 1-28, tabelle 1-6, allegati 1 e 2)",
     "stato": "chiuso",
     "tipoValutazione": "punteggio",
+    "creditoImpostaComeCopertura": true,
     "descrizione": "Bando annuale della DGCA per imprese di produzione indipendenti italiane (e, per la sola scrittura, per autori persone fisiche). Finanzia a fondo perduto scrittura di sceneggiature, sviluppo e produzione di opere prime e seconde, opere di giovani autori, documentari, cortometraggi, animazione e film di particolare qualità artistica o sull’identità culturale italiana. La Commissione degli esperti nominata dal Ministro assegna un punteggio per ogni criterio e sotto criterio delle tabelle allegate al bando, stila una graduatoria per linea e determina l’entità del contributo; due sessioni l’anno sulla piattaforma DGCOL.",
     "paginaUfficiale": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
     "fontiUrl": [
@@ -10962,7 +10964,7 @@
   {
    "id": "lazio-next-generation-2026",
    "revisione": "2026-11-27",
-   "sha256": "1acd44b0058678dada28c2038def49564fe133a512d11a08ce3be14dd2f4a0ac",
+   "sha256": "97a1fe9828e59b214fb2812afc6c33f452785a32db55a648178e554024f5c3eb",
    "bando": {
     "id": "lazio-next-generation-2026",
     "fondoId": "lazio-next-generation",
@@ -10976,6 +10978,7 @@
     "fonte": "Determinazione n. G13701 del 07/10/2026, Allegato A «Avviso Lazio Next Generation 2026»; modulistica e chiarimenti approvati con determinazione n. G13879 del 12/10/2026",
     "stato": "chiuso",
     "tipoValutazione": "punteggio",
+    "creditoImpostaComeCopertura": true,
     "descrizione": "Contributo a fondo perduto per opere cinematografiche e audiovisive low budget (costo complessivo fino a 2,5 milioni): finzione, documentari, animazione e cortometraggi non ancora completati. Dotazione 3 milioni. Procedura a graduatoria in due fasi: Fase A automatica (max 50, minimo 20 per accedere alla Fase B) e Fase B qualitativa di una Commissione di tre membri (max 50, minimo 30). Idonei con almeno 60 punti su 100. Contributo pari al 20% (finzione) o al 25% (opere prime e seconde, documentari, animazione, corti) dei costi ammissibili territoriali più il 7% forfettario, con premialità fino al 30%.",
     "paginaUfficiale": "https://regione.lazio.it/documenti/91029",
     "fontiUrl": [

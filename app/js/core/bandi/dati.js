@@ -7715,6 +7715,7 @@ export const BANDI_DATI = [
   "fonte": "Decreto del Direttore generale Cinema e audiovisivo 15 maggio 2026, rep. n. 1238 — «Bando per la concessione di contributi selettivi per la scrittura, lo sviluppo e la produzione di opere cinematografiche e audiovisive – articolo 26 della legge n. 220 del 2016 – Anno 2026» (63 pagine: articoli 1-28, tabelle 1-6, allegati 1 e 2)",
   "stato": "chiuso",
   "tipoValutazione": "punteggio",
+  "creditoImpostaComeCopertura": true,
   "descrizione": "Bando annuale della DGCA per imprese di produzione indipendenti italiane (e, per la sola scrittura, per autori persone fisiche). Finanzia a fondo perduto scrittura di sceneggiature, sviluppo e produzione di opere prime e seconde, opere di giovani autori, documentari, cortometraggi, animazione e film di particolare qualità artistica o sull’identità culturale italiana. La Commissione degli esperti nominata dal Ministro assegna un punteggio per ogni criterio e sotto criterio delle tabelle allegate al bando, stila una graduatoria per linea e determina l’entità del contributo; due sessioni l’anno sulla piattaforma DGCOL.",
   "paginaUfficiale": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
   "fontiUrl": [
@@ -8714,6 +8715,7 @@ export const BANDI_DATI = [
   "fonte": "Decreto del Direttore generale Cinema e audiovisivo 15 maggio 2026, rep. n. 1238 — «Bando per la concessione di contributi selettivi per la scrittura, lo sviluppo e la produzione di opere cinematografiche e audiovisive – articolo 26 della legge n. 220 del 2016 – Anno 2026» (63 pagine: articoli 1-28, tabelle 1-6, allegati 1 e 2)",
   "stato": "chiuso",
   "tipoValutazione": "punteggio",
+  "creditoImpostaComeCopertura": true,
   "descrizione": "Bando annuale della DGCA per imprese di produzione indipendenti italiane (e, per la sola scrittura, per autori persone fisiche). Finanzia a fondo perduto scrittura di sceneggiature, sviluppo e produzione di opere prime e seconde, opere di giovani autori, documentari, cortometraggi, animazione e film di particolare qualità artistica o sull’identità culturale italiana. La Commissione degli esperti nominata dal Ministro assegna un punteggio per ogni criterio e sotto criterio delle tabelle allegate al bando, stila una graduatoria per linea e determina l’entità del contributo; due sessioni l’anno sulla piattaforma DGCOL.",
   "paginaUfficiale": "https://cinema.cultura.gov.it/comunicazione/avvisi/avvisi-contributi-selettivi/",
   "fontiUrl": [
@@ -10916,6 +10918,7 @@ export const BANDI_DATI = [
   "fonte": "Determinazione n. G13701 del 07/10/2026, Allegato A «Avviso Lazio Next Generation 2026»; modulistica e chiarimenti approvati con determinazione n. G13879 del 12/10/2026",
   "stato": "chiuso",
   "tipoValutazione": "punteggio",
+  "creditoImpostaComeCopertura": true,
   "descrizione": "Contributo a fondo perduto per opere cinematografiche e audiovisive low budget (costo complessivo fino a 2,5 milioni): finzione, documentari, animazione e cortometraggi non ancora completati. Dotazione 3 milioni. Procedura a graduatoria in due fasi: Fase A automatica (max 50, minimo 20 per accedere alla Fase B) e Fase B qualitativa di una Commissione di tre membri (max 50, minimo 30). Idonei con almeno 60 punti su 100. Contributo pari al 20% (finzione) o al 25% (opere prime e seconde, documentari, animazione, corti) dei costi ammissibili territoriali più il 7% forfettario, con premialità fino al 30%.",
   "paginaUfficiale": "https://regione.lazio.it/documenti/91029",
   "fontiUrl": [

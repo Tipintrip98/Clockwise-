@@ -211,3 +211,14 @@ test('MiC: quanti punti servono per essere finanziati, dalla dotazione della ses
   // mai sotto la soglia del bando
   assert.equal(concorrenzaStimata({ punteggioMassimo: 150, sogliaTotale: 80 }, { dotazione: { 2026: 100000000 } }, [storico], 85).punti.min, 105);
 });
+
+test('copertura del piano: il credito d’imposta conta dove il bando lo prevede', async () => {
+  const { righePiano } = await import('../app/js/core/ragionamento.js');
+  const dati = { piano: [{ voce: '1.2', etichetta: 'Tax credit produzione', denominazione: 'Ministero', importo: 300000, documento: 'nessuno' }] };
+  const domanda = { nome: 'domanda.pdf', tipo: 'finanziamenti', testo: 'Richiesta di idoneità al credito d’imposta per le imprese di produzione (art. 15). '.repeat(5) };
+  assert.equal(righePiano(dati, [domanda])[0].attesa, false, 'senza opzione resta com’era');
+  const [r] = righePiano(dati, [domanda], { creditoImposta: true });
+  assert.equal(r.attesa, true); assert.equal(r.rigorosa, true);
+  const [s] = righePiano(dati, [], { creditoImposta: true });
+  assert.equal(s.attesa, true); assert.equal(s.rigorosa, false);
+});

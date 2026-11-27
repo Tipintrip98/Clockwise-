@@ -116,11 +116,25 @@ function difettiRigorosi(doc, tipo, docs) {
 }
 
 /** Righe del piano finanziario con la loro lettura: dichiarata, attesa (allegato presente), rigorosa (allegato firmato e completo). */
-export function righePiano(dati, docs) {
+const CREDITO_IMPOSTA = /tax\s*credit|credito d.?\s*imposta/i;
+
+/**
+ * Le fonti del piano con la copertura riconosciuta in lettura attesa e rigorosa.
+ * @param opzioni.creditoImposta  vero dove la Commissione conta il credito d'imposta richiesto come copertura (MiC, Lazio):
+ *   è un diritto dell'opera che ha i requisiti, non un contributo discrezionale. In lettura rigorosa conta solo se nel
+ *   dossier c'è la richiesta di idoneità o il riconoscimento.
+ */
+export function righePiano(dati, docs, opzioni = {}) {
   const righe = [];
   for (const r of dati?.piano || []) {
     const importo = num(r.importo);
     if (!importo || importo <= 0 || RICHIESTA(r)) continue;
+    if (opzioni.creditoImposta && CREDITO_IMPOSTA.test(`${r.etichetta || ''} ${r.denominazione || ''}`)) {
+      const atto = docs.find((d) => testoUtile(d) && CREDITO_IMPOSTA.test(d.testo) && /idoneit|riconosciment|IDTC|art\.?\s*15/i.test(d.testo));
+      righe.push({ voce: r.voce || '', etichetta: r.etichetta || '', denominazione: r.denominazione || '', importo, documento: r.documento || 'nessuno', tipi: [], dichiarata: true, attesa: true, rigorosa: !!atto, allegati: atto ? [atto.nome] : [],
+        motivo: atto ? '' : 'credito d’imposta: conta come copertura, ma nel dossier manca la richiesta di idoneità' });
+      continue;
+    }
     const tipi = allegatiPerRiga(r);
     const dichiarata = DOC_VALIDI.includes(r.documento);
     let candidati = docs.filter((d) => tipi.includes(d.tipo) && testoUtile(d));
@@ -304,11 +318,11 @@ export function fattiDossier(bando, progetto) {
   const cop = coperturaPiano(dati);
   const costo = num(dati.economici?.costoProduzione), richiesto = num(dati.economici?.contributoRichiesto) || 0;
   const fabbisogno = costo != null && costo - richiesto > 0 ? costo - richiesto : null;
-  const righe = righePiano(dati, docs);
+  const righe = righePiano(dati, docs, { creditoImposta: !!bando?.creditoImpostaComeCopertura });
   const somma = (k) => righe.filter((r) => r[k]).reduce((a, r) => a + r.importo, 0);
   const fr = (x) => (fabbisogno ? arrot(x / fabbisogno, 3) : null);
   metti('copertura_dichiarata', cop.sulFabbisogno == null ? null : arrot(cop.sulFabbisogno / 100, 3), cop.sulFabbisogno == null ? 'costo o piano finanziario non compilati' : `${pctTesto(cop.sulFabbisogno / 100)} del costo al netto del contributo richiesto, secondo le etichette del piano`);
-  metti('copertura_attesa', fr(somma('attesa')), fabbisogno ? `${pctTesto(fr(somma('attesa')))}: fonti con documento indicato nel piano e allegato della controparte` : 'costo o contributo richiesto non compilati');
+  metti('copertura_attesa', fr(somma('attesa')), fabbisogno ? `${pctTesto(fr(somma('attesa')))}: fonti con documento indicato nel piano e allegato della controparte${bando?.creditoImpostaComeCopertura ? ', più il credito d’imposta richiesto (un diritto dell’opera, contato come copertura)' : ''}` : 'costo o contributo richiesto non compilati');
   metti('copertura_rigorosa', fr(somma('rigorosa')), fabbisogno ? `${pctTesto(fr(somma('rigorosa')))}: solo fonti con documento firmato da tutte le parti, importo e controparte qualificata` : 'costo o contributo richiesto non compilati');
   const critPiano = griglia.sezioni.flatMap((s) => s.criteri).find((c) => c.famiglia === 'piano_finanziario');
   const fa = fasceCopertura(critPiano, v.copertura_attesa), frg = fasceCopertura(critPiano, v.copertura_rigorosa);

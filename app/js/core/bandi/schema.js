@@ -105,6 +105,7 @@ export function sanificaBando(g) {
     nome: testo(b.nome, 300), nomeBreve: testo(b.nomeBreve || b.nome, 80), ente: testo(b.ente, 400), regione: testo(b.regione, 60),
     territorio: testo(b.territorio || b.regione, 60), gentilizio: testo(b.gentilizio, 40), fonte: testo(b.fonte, 500),
     stato: STATI[b.stato] ? b.stato : 'chiuso', tipoValutazione: TIPI_VALUTAZIONE[b.tipoValutazione] ? b.tipoValutazione : 'punteggio',
+    ...(b.creditoImpostaComeCopertura === true ? { creditoImpostaComeCopertura: true } : {}),
     descrizione: testo(b.descrizione, 1500), paginaUfficiale: urlSicuro(b.paginaUfficiale),
     fontiUrl: elenco(b.fontiUrl, 30).map((f) => ({ titolo: testo(f?.titolo, 300), url: urlSicuro(f?.url), tipo: testo(f?.tipo, 24), consultato: data(f?.consultato) || '' })).filter((f) => f.url),
     storicoEdizioni: elenco(b.storicoEdizioni, 20).map((e) => ({ anno: numero(e?.anno), pubblicato: data(e?.pubblicato), scadenza: data(e?.scadenza), nota: testo(e?.nota, 300) })).filter((e) => e.anno),
