@@ -105,6 +105,11 @@ export function classificaErrore({ testo = '', stato = null, codiceUscita = null
   if (stato === 401 || stato === 403 || /not logged in|log ?in|\/login|authenticat|unauthori[sz]ed|oauth|credential|invalid api key/i.test(t)) {
     return { codice: 'login', messaggio: 'Claude Code non è collegato a un account: apri «Collegamento» e premi «Accedi».' };
   }
+  // limite di un solo modello (es. «You've hit your Fable limit … Switch to another model to continue»): gli altri modelli
+  // dell'abbonamento restano utilizzabili, quindi si scende di un gradino invece di fermare la valutazione
+  if (/hit your [\w .-]{1,30} limit|switch to another model|limit for this model/i.test(t)) {
+    return { codice: 'limite_modello', messaggio: `Limite di utilizzo raggiunto per il modello scelto: Clockwise passa al modello successivo. ${breve.slice(0, 200)}`.trim() };
+  }
   if (stato === 429 || /rate.?limit|usage limit|limit reached|quota|too many requests/i.test(t)) {
     return { codice: 'limite', messaggio: `Limite di utilizzo dell'abbonamento Claude raggiunto: riprova più tardi. ${breve.slice(0, 200)}`.trim() };
   }
@@ -117,7 +122,8 @@ export function classificaErrore({ testo = '', stato = null, codiceUscita = null
   return { codice: 'claude_code', messaggio: `Claude Code ha restituito un errore${codiceUscita != null ? ` (codice ${codiceUscita})` : ''}: ${breve || 'nessun dettaglio'}` };
 }
 
-// Dal modello più capace al più leggero: se quello scelto non è disponibile per l'account si scende di un gradino.
+// Dal modello più capace al più leggero: se quello scelto non è disponibile per l'account, o ne ha esaurito il limite
+// di utilizzo, si scende di un gradino.
 export const SCALA_MODELLI = ['claude-fable-5-2', 'claude-opus-5-5', 'claude-sonnet-5-5', 'claude-haiku-5-5'];
 export function modelliDaProvare(modello) {
   const i = SCALA_MODELLI.indexOf(modello);
@@ -137,10 +143,11 @@ export async function chiamaClaudeCode(parametri, { chiama = unaChiamata } = {})
       const r = await chiama({ ...parametri, modello });
       return modello === parametri.modello ? r : { ...r, ripiego: { richiesto: parametri.modello, usato: r.modello || modello, scartati: provati } };
     } catch (e) {
-      if (e?.codice !== 'modello' || parametri.signal?.aborted) throw e;
+      if (!['modello', 'limite_modello'].includes(e?.codice) || parametri.signal?.aborted) throw e;
       provati.push(modello); ultimo = e;
     }
   }
+  if (ultimo?.codice === 'limite_modello') throw Object.assign(new Error(`Limite di utilizzo dell'abbonamento Claude raggiunto per tutti i modelli: riprova più tardi. ${String(ultimo.message || '').slice(0, 200)}`), { codice: 'limite' });
   throw Object.assign(new Error('Nessun modello di Claude è disponibile per questo account con Claude Code. Controlla l’abbonamento (serve almeno Claude Pro) oppure usa una chiave API.'), { codice: 'modello', causa: ultimo?.message });
 }
 

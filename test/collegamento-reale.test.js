@@ -74,3 +74,16 @@ test('installatore di Claude Code: non eredita il PSModulePath di PowerShell 7 (
   const env = ambienteInstallatore({ Path: 'C:\\Windows', PSModulePath: 'C:\\Program Files\\PowerShell\\7\\Modules', psmodulepath: 'x', USERPROFILE: 'C:\\Users\\a' });
   assert.deepEqual(Object.keys(env).sort(), ['Path', 'USERPROFILE']);
 });
+
+test('limite di un solo modello (caso reale «You’ve hit your Fable limit»): si passa al modello successivo', async () => {
+  // testo reale restituito da Claude Code il 27/11/2026
+  const reale = "You've hit your Fable limit · resets Dec 1, 3am (UTC). Switch to another model to continue.";
+  assert.equal(classificaErrore({ testo: reale }).codice, 'limite_modello');
+  assert.equal(classificaErrore({ testo: 'Claude usage limit reached. Your limit will reset at 3pm.' }).codice, 'limite', 'il limite generale dell’abbonamento resta un limite');
+  const chiesti = [];
+  const r = await chiamaClaudeCode({ modello: 'claude-fable-5-2' }, { chiama: async (p) => { chiesti.push(p.modello); if (p.modello === 'claude-fable-5-2') throw errore('limite_modello', reale); return { testo: 'OK', modello: p.modello }; } });
+  assert.deepEqual(chiesti, ['claude-fable-5-2', 'claude-opus-5-5']);
+  assert.equal(r.ripiego.usato, 'claude-opus-5-5');
+  // tutti i modelli al limite: errore di limite, non «modello non disponibile»
+  await assert.rejects(chiamaClaudeCode({ modello: 'claude-fable-5-2' }, { chiama: async () => { throw errore('limite_modello', reale); } }), (e) => e.codice === 'limite' && /tutti i modelli/.test(e.message));
+});
