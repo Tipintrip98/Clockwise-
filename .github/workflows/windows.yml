@@ -70,8 +70,12 @@ jobs:
           if ((Get-Command makensis -ErrorAction SilentlyContinue) -or (Test-Path $standard)) {
             Write-Host 'NSIS già installato'
           } else {
-            choco install nsis -y --no-progress
-            if ($LASTEXITCODE -ne 0) { throw 'Installazione di NSIS non riuscita' }
+            # il registro di Chocolatey a volte risponde 504: si riprova, e si controlla che makensis ci sia davvero
+            for ($i = 1; $i -le 4 -and -not (Test-Path $standard); $i++) {
+              choco install nsis -y --no-progress
+              if (-not (Test-Path $standard)) { Write-Host "NSIS non installato (tentativo $i), riprovo tra $(15 * $i) secondi"; Start-Sleep -Seconds (15 * $i) }
+            }
+            if (-not (Test-Path $standard)) { throw 'Installazione di NSIS non riuscita dopo 4 tentativi' }
           }
 
       # Firma digitale: attiva solo se nei segreti del repository c'è il certificato
