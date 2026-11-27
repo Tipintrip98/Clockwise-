@@ -1,6 +1,6 @@
 ---
 name: valutazione-bando-cinema
-description: Stima il punteggio che la Commissione darebbe a un dossier di candidatura a un bando regionale per il cinema (Avviso Sicilia 2025-2027 incluso nel repository) e indica che cosa correggere prima dell'invio. Da usare quando si chiede di valutare, simulare o controllare un dossier, un Modulo III, una sceneggiatura o un piano finanziario rispetto alla griglia del bando.
+description: Stima il punteggio che la Commissione darebbe a un dossier di candidatura a un bando regionale per il cinema (Avviso Sicilia 2025-2027 e gli altri bandi del catalogo in bandi/dati) e indica che cosa correggere prima dell'invio. Da usare quando si chiede di valutare, simulare o controllare un dossier, un Modulo III, una sceneggiatura o un piano finanziario rispetto alla griglia del bando.
 ---
 
 # Valutare un dossier come farebbe la Commissione
@@ -27,6 +27,8 @@ La conoscenza del bando è nel repository e va letta, non ricordata:
 - Problemi bloccanti, poi gli interventi ordinati per punti recuperabili.
 - Posizione rispetto all'ultimo finanziato (film: 80,6 nel 2024, 83,1 nel 2025, 77,1 nel 2026).
 - Se serve un documento da consegnare: `creaReportPdf` in `app/js/core/report-pdf.js` produce il report completo in PDF.
+
+Per i selettivi MiC usa anche la skill `valutazione-mic-selettivi`, per Lazio Next Generation `valutazione-lazio-next-generation`; per leggere i documenti segui sempre `lettura-dossier-bando`.
 
 I documenti scansionati non hanno testo: vanno prima letti come immagini (`app/js/core/scansioni.js`), altrimenti contratti e curriculum non entrano nella valutazione.
 - La frase: è una stima per il controllo qualità, non anticipa il giudizio della Commissione.
