@@ -10904,6 +10904,732 @@ export const BANDI_DATI = [
   }
  },
  {
+  "id": "lazio-next-generation-2026",
+  "fondoId": "lazio-next-generation",
+  "revisione": "2026-11-27",
+  "nome": "Lazio — Lazio Next Generation 2026: opere cinematografiche e audiovisive low budget",
+  "nomeBreve": "Lazio · Next Generation 2026 (low budget)",
+  "ente": "Regione Lazio — Direzione Affari della Presidenza, Turismo, Cinema, Audiovisivo e Sport, Area Cinema e Audiovisivo",
+  "regione": "Lazio",
+  "territorio": "Lazio",
+  "gentilizio": "laziale",
+  "fonte": "Determinazione n. G13701 del 07/10/2026, Allegato A «Avviso Lazio Next Generation 2026»; modulistica e chiarimenti approvati con determinazione n. G13879 del 12/10/2026",
+  "stato": "chiuso",
+  "tipoValutazione": "punteggio",
+  "descrizione": "Contributo a fondo perduto per opere cinematografiche e audiovisive low budget (costo complessivo fino a 2,5 milioni): finzione, documentari, animazione e cortometraggi non ancora completati. Dotazione 3 milioni. Procedura a graduatoria in due fasi: Fase A automatica (max 50, minimo 20 per accedere alla Fase B) e Fase B qualitativa di una Commissione di tre membri (max 50, minimo 30). Idonei con almeno 60 punti su 100. Contributo pari al 20% (finzione) o al 25% (opere prime e seconde, documentari, animazione, corti) dei costi ammissibili territoriali più il 7% forfettario, con premialità fino al 30%.",
+  "paginaUfficiale": "https://regione.lazio.it/documenti/91029",
+  "fontiUrl": [
+   {
+    "titolo": "Allegato A — Avviso Lazio Next Generation 2026 (PDF, 18 pagine)",
+    "url": "https://regione.lazio.it/sites/default/files/documentazione/2026/DD-G13701-07-10-2026-AllegatoA-avviso-lazio-next-generation-2026.pdf",
+    "tipo": "avviso",
+    "consultato": "2026-11-27"
+   },
+   {
+    "titolo": "Determinazione n. G13701 del 07/10/2026 — approvazione dell’avviso",
+    "url": "https://regione.lazio.it/sites/default/files/documentazione/2026/DD-G13701-07-10-2026.pdf",
+    "tipo": "atto",
+    "consultato": "2026-11-27"
+   },
+   {
+    "titolo": "Allegato F — Chiarimenti applicativi (determinazione G13879 del 12/10/2026)",
+    "url": "https://regione.lazio.it/sites/default/files/documentazione/2026/DD-G13879-12-10-2026-AllegatoF-chiarimenti.pdf",
+    "tipo": "faq",
+    "consultato": "2026-11-27"
+   },
+   {
+    "titolo": "Modulistica (Allegati A–F, determinazione G13879 del 12/10/2026)",
+    "url": "https://regione.lazio.it/documenti/91031",
+    "tipo": "pagina",
+    "consultato": "2026-11-27"
+   },
+   {
+    "titolo": "Regione Lazio — notizia sul bando",
+    "url": "https://regione.lazio.it/notizie/lazio-next-generation",
+    "tipo": "pagina",
+    "consultato": "2026-11-27"
+   }
+  ],
+  "storicoEdizioni": [
+   {
+    "anno": 2026,
+    "pubblicato": "2026-10-13",
+    "scadenza": "2026-11-04",
+    "nota": "Prima edizione. Domande via PEC dalle 12:00 del 15/10 alle 17:00 del 4/11/2026."
+   }
+  ],
+  "finestre": [
+   {
+    "anno": 2026,
+    "dal": "2026-10-15",
+    "al": "2026-11-04",
+    "nota": "Invio via PEC a cinemaaudiovisivo@pec.regione.lazio.it dalle 12:00 del 15/10 alle 17:00 del 4/11 (art. 16)"
+   }
+  ],
+  "prossimaEdizione": {
+   "anno": 2027,
+   "periodoAtteso": "non annunciata",
+   "base": "La Regione può riaprire i termini o rifinanziare la misura (art. 2, comma 3)."
+  },
+  "sogliaTotale": 60,
+  "punteggioMassimo": 100,
+  "sogliaSuSezioni": [],
+  "soglieCombinate": [
+   {
+    "etichetta": "Fase A almeno 20 su 50 (accesso alla Fase B, art. 12)",
+    "minimo": 20,
+    "criteri": [],
+    "sezioni": [
+     "FA-A",
+     "FA-B",
+     "FA-C",
+     "FA-D"
+    ]
+   },
+   {
+    "etichetta": "Fase B almeno 30 su 50 (idoneità, art. 15)",
+    "minimo": 30,
+    "criteri": [],
+    "sezioni": [
+     "FB-A",
+     "FB-B",
+     "FB-C",
+     "FB-D"
+    ]
+   }
+  ],
+  "penalita": [],
+  "spesaTerritorioMinPct": 0,
+  "spesaTerritorioMinSuCostoPct": 0,
+  "producerFeeMaxPct": null,
+  "consuntivoMinPct": null,
+  "quotaProponenteMinPct": null,
+  "regolaContributo": "pieno",
+  "commissione": {
+   "componenti": 3,
+   "descrizione": "La Fase A è automatica (istruttoria della Direzione). La Fase B è svolta da una Commissione di tre membri nominata dal Direttore Regionale, con criteri sintetici e motivazione semplificata (art. 14)."
+  },
+  "invio": {
+   "canale": "PEC",
+   "indirizzo": "cinemaaudiovisivo@pec.regione.lazio.it",
+   "oggetto": "Lazio Next Generation 2026",
+   "regole": [
+    "Domanda firmata digitalmente dal legale rappresentante (art. 16, comma 1).",
+    "Una sola domanda per Impresa Unica, per una sola opera: più domande rendono inammissibili tutte (art. 4, comma 3)."
+   ]
+  },
+  "categorie": [
+   {
+    "id": "finzione",
+    "nome": "Opere di finzione (cinema, TV, web) diverse da opere prime e seconde",
+    "griglia": "NG",
+    "soglie": {},
+    "contributo": {
+     "percentuale": 20,
+     "massimali": {
+      "2026": 500000
+     },
+     "nota": "Intensità sui costi ammissibili (spese nel Lazio + 7% forfettario), premialità fino al 30% (art. 7). Massimale per costo complessivo: 50.000 € fino a 300.000; 200.000 € fino a 1 milione; 500.000 € fino a 2,5 milioni (art. 9). Si riduce se gli aiuti superano il cumulo dell’art. 8."
+    },
+    "dotazione": {},
+    "durataMin": null,
+    "durataMaxEsclusa": null,
+    "greenFilm": false,
+    "testoQualita": "sceneggiatura"
+   },
+   {
+    "id": "prime-seconde",
+    "nome": "Opere prime e seconde di finzione",
+    "griglia": "NG",
+    "soglie": {},
+    "contributo": {
+     "percentuale": 25,
+     "massimali": {
+      "2026": 500000
+     },
+     "nota": "Intensità sui costi ammissibili (spese nel Lazio + 7% forfettario), premialità fino al 30% (art. 7). Massimale per costo complessivo: 50.000 € fino a 300.000; 200.000 € fino a 1 milione; 500.000 € fino a 2,5 milioni (art. 9). Si riduce se gli aiuti superano il cumulo dell’art. 8."
+    },
+    "dotazione": {},
+    "durataMin": null,
+    "durataMaxEsclusa": null,
+    "greenFilm": false,
+    "testoQualita": "sceneggiatura"
+   },
+   {
+    "id": "documentari-animazione-corti",
+    "nome": "Documentari, opere di animazione e cortometraggi",
+    "griglia": "NG",
+    "soglie": {},
+    "contributo": {
+     "percentuale": 25,
+     "massimali": {
+      "2026": 500000
+     },
+     "nota": "Intensità sui costi ammissibili (spese nel Lazio + 7% forfettario), premialità fino al 30% (art. 7). Massimale per costo complessivo: 50.000 € fino a 300.000; 200.000 € fino a 1 milione; 500.000 € fino a 2,5 milioni (art. 9). Si riduce se gli aiuti superano il cumulo dell’art. 8."
+    },
+    "dotazione": {},
+    "durataMin": null,
+    "durataMaxEsclusa": null,
+    "greenFilm": false,
+    "testoQualita": "trattamento"
+   }
+  ],
+  "griglie": {
+   "NG": {
+    "id": "NG",
+    "nome": "Tabella A (Fase A) e Tabella B (Fase B)",
+    "sezioni": [
+     {
+      "id": "FA-A",
+      "nome": "Fase A · A. Impatto territoriale",
+      "max": 20,
+      "criteri": [
+       {
+        "id": "A.1",
+        "nome": "Giornate di ripresa/lavorazione nel Lazio (% sul totale delle giornate dell’opera)",
+        "max": 7,
+        "tipo": "discreto",
+        "famiglia": "ricaduta_spesa",
+        "descrizione": "Percentuale delle giornate di ripresa (o lavorazione per l’animazione) nel Lazio sul totale delle giornate dell’opera.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: piano di lavorazione con giornate totali e nel Lazio.",
+        "valori": [
+         {
+          "punti": 7,
+          "etichetta": "almeno 90%"
+         },
+         {
+          "punti": 6,
+          "etichetta": "almeno 70%"
+         },
+         {
+          "punti": 4,
+          "etichetta": "almeno 50%"
+         },
+         {
+          "punti": 2,
+          "etichetta": "almeno 30%"
+         },
+         {
+          "punti": 0,
+          "etichetta": "meno del 30%"
+         }
+        ],
+        "documenti": [
+         "piano_lavorazione"
+        ]
+       },
+       {
+        "id": "A.2",
+        "nome": "Spesa sostenuta nel Lazio (% del Costo Complessivo di Produzione)",
+        "max": 8,
+        "tipo": "discreto",
+        "famiglia": "ricaduta_spesa",
+        "descrizione": "Spesa territoriale ammissibile sul costo complessivo di produzione (Chiarimenti 1.4).",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: preventivo (Tabella C) con distinta evidenza delle spese territoriali; piano finanziario.",
+        "valori": [
+         {
+          "punti": 8,
+          "etichetta": "almeno 50%"
+         },
+         {
+          "punti": 6,
+          "etichetta": "almeno 40%"
+         },
+         {
+          "punti": 4,
+          "etichetta": "almeno 30%"
+         },
+         {
+          "punti": 2,
+          "etichetta": "almeno 20%"
+         },
+         {
+          "punti": 0,
+          "etichetta": "meno del 20%"
+         }
+        ],
+        "documenti": [
+         "modulo3",
+         "finanziamenti"
+        ]
+       },
+       {
+        "id": "A.3",
+        "nome": "Riprese nei Comuni del Lazio diversi da Roma Capitale (% delle giornate nel Lazio)",
+        "max": 5,
+        "tipo": "discreto",
+        "famiglia": "ricaduta_spesa",
+        "descrizione": "Quota delle giornate nel Lazio girate in Comuni diversi da Roma Capitale.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: piano di lavorazione con i Comuni di ripresa.",
+        "valori": [
+         {
+          "punti": 5,
+          "etichetta": "almeno 70%"
+         },
+         {
+          "punti": 3,
+          "etichetta": "almeno 50%"
+         },
+         {
+          "punti": 2,
+          "etichetta": "almeno 30%"
+         },
+         {
+          "punti": 0,
+          "etichetta": "meno del 30%"
+         }
+        ],
+        "documenti": [
+         "piano_lavorazione"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "FA-B",
+      "nome": "Fase A · B. Valorizzazione culturale del territorio",
+      "max": 8,
+      "criteri": [
+       {
+        "id": "B.1",
+        "nome": "Ambientazione narrativa nel Lazio (scene ambientate nel Lazio da sceneggiatura/piano)",
+        "max": 4,
+        "tipo": "discreto",
+        "famiglia": "territorio_contenuto",
+        "descrizione": "Quota delle scene ambientate nel Lazio secondo sceneggiatura o trattamento.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: sceneggiatura o trattamento con indicazione delle scene ambientate nel Lazio.",
+        "valori": [
+         {
+          "punti": 4,
+          "etichetta": "prevalente (≥ 60% delle scene)"
+         },
+         {
+          "punti": 2,
+          "etichetta": "parziale (≥ 30% delle scene)"
+         },
+         {
+          "punti": 0,
+          "etichetta": "meno del 30% delle scene"
+         }
+        ],
+        "documenti": [
+         "sceneggiatura",
+         "piano_lavorazione"
+        ]
+       },
+       {
+        "id": "B.2",
+        "nome": "Valorizzazione di beni culturali, paesaggistici o luoghi identitari del Lazio",
+        "max": 4,
+        "tipo": "discreto",
+        "famiglia": "territorio_contenuto",
+        "descrizione": "Presenza nel racconto di beni culturali, paesaggistici o luoghi identitari del Lazio.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: sceneggiatura o trattamento.",
+        "valori": [
+         {
+          "punti": 4,
+          "etichetta": "elemento centrale della narrazione"
+         },
+         {
+          "punti": 2,
+          "etichetta": "presenza documentata"
+         },
+         {
+          "punti": 0,
+          "etichetta": "assente"
+         }
+        ],
+        "documenti": [
+         "sceneggiatura",
+         "piano_lavorazione"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "FA-C",
+      "nome": "Fase A · C. Next Generation e crescita dei talenti",
+      "max": 16,
+      "criteri": [
+       {
+        "id": "C.1",
+        "nome": "Configurazione impresa/regista (una sola, alternative; solo opere cinematografiche)",
+        "max": 9,
+        "tipo": "discreto",
+        "famiglia": "formazione",
+        "descrizione": "Combinazione tra anzianità dell’impresa (data di costituzione) e qualifica del regista (opera prima o seconda: al massimo un lungometraggio distribuito in sala).",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: visura camerale e curriculum/filmografia del regista.",
+        "valori": [
+         {
+          "punti": 9,
+          "etichetta": "impresa emergente (< 5 anni) + regista di Opera prima (doppio esordio)"
+         },
+         {
+          "punti": 6,
+          "etichetta": "impresa strutturata (≥ 5 anni) + regista di Opera prima, oppure impresa emergente (< 5 anni) + regista di Opera seconda"
+         },
+         {
+          "punti": 3,
+          "etichetta": "impresa strutturata (≥ 5 anni) + regista di Opera seconda"
+         },
+         {
+          "punti": 0,
+          "etichetta": "regista né di opera prima né di opera seconda"
+         }
+        ],
+        "documenti": [
+         "cv_regista",
+         "cv_societa",
+         "altro"
+        ]
+       },
+       {
+        "id": "C.2",
+        "nome": "Giovane autore: regista under 35",
+        "max": 3,
+        "tipo": "discreto",
+        "famiglia": "formazione",
+        "descrizione": "Regista che alla Data della Domanda non ha compiuto 35 anni.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: copia del documento d’identità del regista.",
+        "valori": [
+         {
+          "punti": 3,
+          "etichetta": "regista under 35 alla Data della Domanda"
+         },
+         {
+          "punti": 0,
+          "etichetta": "regista di 35 anni o più"
+         }
+        ],
+        "documenti": [
+         "cv_regista"
+        ]
+       },
+       {
+        "id": "C.3",
+        "nome": "Ponte formativo con l’ecosistema regionale (cumulabile, max 4)",
+        "max": 4,
+        "tipo": "discreto",
+        "famiglia": "formazione",
+        "descrizione": "Impegni (2 punti ciascuno, fino a 4): tirocinio/stage per giovani da percorsi formativi dell’ecosistema audiovisivo regionale; convenzione/partnership con un percorso o soggetto formativo riconosciuto o promosso dalla Regione; affiancamento formativo sul set di giovani del territorio nei reparti.",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: impegno formale in domanda ed eventuale lettera di adesione/convenzione; il mancato rispetto comporta revoca parziale.",
+        "valori": [
+         {
+          "punti": 4,
+          "etichetta": "due o tre impegni tra tirocinio/stage, convenzione con soggetto formativo, affiancamento sul set di giovani del territorio"
+         },
+         {
+          "punti": 2,
+          "etichetta": "un impegno"
+         },
+         {
+          "punti": 0,
+          "etichetta": "nessun impegno"
+         }
+        ],
+        "documenti": [
+         "modulo1",
+         "modulo2",
+         "altro"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "FA-D",
+      "nome": "Fase A · D. Distribuzione e diffusione",
+      "max": 6,
+      "criteri": [
+       {
+        "id": "D.1",
+        "nome": "Accordi e strategia distributiva",
+        "max": 6,
+        "tipo": "discreto",
+        "famiglia": "distribuzione",
+        "descrizione": "Accordi distributivi documentati. Per le opere web contano solo accordi con un fornitore di servizi di media audiovisivi a richiesta con corrispettivo determinato o minimo garantito (Chiarimenti 1.6).",
+        "principio": "Fase A: punteggio automatico (art. 12 e Tabella A), attribuito d’ufficio sulla base dei documenti indicati nell’Appendice; all’interno del criterio le fasce non si cumulano, vale la più alta raggiunta. Documento: lettera di interesse, deal memo o strategia distributiva documentata; contratto di distribuzione sottoscritto.",
+        "valori": [
+         {
+          "punti": 6,
+          "etichetta": "contratto di distribuzione sottoscritto"
+         },
+         {
+          "punti": 3,
+          "etichetta": "lettera di interesse, deal memo o strategia distributiva documentata"
+         },
+         {
+          "punti": 0,
+          "etichetta": "nessun accordo né strategia documentata"
+         }
+        ],
+        "documenti": [
+         "distribuzione"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "FB-A",
+      "nome": "Fase B · A. Qualità artistica e originalità dell’opera",
+      "max": 20,
+      "criteri": [
+       {
+        "id": "FB.A",
+        "nome": "Originalità del soggetto, qualità della scrittura, forza narrativa, innovazione del linguaggio audiovisivo e coerenza della proposta artistica",
+        "max": 20,
+        "tipo": "qualitativo",
+        "famiglia": "scrittura",
+        "descrizione": "Originalità del soggetto (idea, tema, punto di vista, distinzione da opere analoghe); qualità della scrittura (struttura, personaggi, dialoghi, ritmo); forza narrativa; innovazione del linguaggio audiovisivo; coerenza tra soggetto, scrittura e scelte formali (Chiarimenti 1.3).",
+        "principio": "Fase B (art. 13 e Tabella B): la Commissione di tre membri attribuisce il punteggio con criteri sintetici e motivazione semplificata. Gli elementi già premiati in Fase A non si rivalutano per il mero possesso (Chiarimenti, Fase B, 1.2). Documentazione: sinossi o trattamento e, ove disponibile, sceneggiatura."
+       }
+      ]
+     },
+     {
+      "id": "FB-B",
+      "nome": "Fase B · B. Visione autoriale e qualità della regia",
+      "max": 14,
+      "criteri": [
+       {
+        "id": "FB.B",
+        "nome": "Chiarezza della proposta registica, coerenza tra linguaggio visivo e racconto, capacità espressiva del progetto",
+        "max": 14,
+        "tipo": "qualitativo",
+        "famiglia": "visione",
+        "descrizione": "Intenzioni di regia, approccio alla messa in scena e lavoro con gli interpreti; corrispondenza tra scelte visive e sonore e contenuto; riconoscibilità dello sguardo. Per opere prime e seconde conta il progetto più della filmografia. Possono rilevare strategie di sostenibilità ambientale, parità di genere e inclusione (Chiarimenti 1.4).",
+        "principio": "Fase B (art. 13 e Tabella B): la Commissione di tre membri attribuisce il punteggio con criteri sintetici e motivazione semplificata. Gli elementi già premiati in Fase A non si rivalutano per il mero possesso (Chiarimenti, Fase B, 1.2). Documentazione: sinossi o trattamento; curriculum e filmografia del regista; strategie di sostenibilità e inclusione."
+       }
+      ]
+     },
+     {
+      "id": "FB-C",
+      "nome": "Fase B · C. Coerenza e sostenibilità del progetto produttivo",
+      "max": 8,
+      "criteri": [
+       {
+        "id": "FB.C",
+        "nome": "Congruità tra obiettivi artistici, piano produttivo, cronoprogramma e budget; plausibilità e sostenibilità del piano finanziario e della copertura; adeguatezza delle risorse",
+        "max": 8,
+        "tipo": "qualitativo",
+        "famiglia": "piano_finanziario",
+        "descrizione": "Proporzione tra ambizione artistica e risorse, realismo dei tempi rispetto ai termini dell’Avviso; solidità e credibilità delle fonti, coerenza con gli aiuti pubblici dichiarati e con i limiti di cumulo dell’art. 8; adeguatezza delle risorse tecniche e professionali rispetto al piano dei costi (Chiarimenti 1.5).",
+        "principio": "Fase B (art. 13 e Tabella B): la Commissione di tre membri attribuisce il punteggio con criteri sintetici e motivazione semplificata. Gli elementi già premiati in Fase A non si rivalutano per il mero possesso (Chiarimenti, Fase B, 1.2). Documentazione: piano finanziario, piano dei costi (Tabella C), piano di lavorazione."
+       }
+      ]
+     },
+     {
+      "id": "FB-D",
+      "nome": "Fase B · D. Potenziale di diffusione e valorizzazione culturale",
+      "max": 8,
+      "criteri": [
+       {
+        "id": "FB.D",
+        "nome": "Potenziale di distribuzione, partecipazione a festival, capacità di raggiungere pubblici nazionali e internazionali, contributo alla promozione culturale del territorio regionale",
+        "max": 8,
+        "tipo": "qualitativo",
+        "famiglia": "distribuzione",
+        "descrizione": "Credibilità della strategia distributiva e dei canali (sala, TV, web) coerenti con la destinazione; strategia festival e mercati; pubblici di riferimento; valorizzazione del patrimonio e della filiera del Lazio oltre i parametri della Fase A (Chiarimenti 1.6).",
+        "principio": "Fase B (art. 13 e Tabella B): la Commissione di tre membri attribuisce il punteggio con criteri sintetici e motivazione semplificata. Gli elementi già premiati in Fase A non si rivalutano per il mero possesso (Chiarimenti, Fase B, 1.2). Documentazione: strategia distributiva, lettere di interesse, deal memo o contratti; sinossi o trattamento per il legame con il territorio."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "allegati": [
+   {
+    "tipo": "modulo1",
+    "nome": "Allegato A — Domanda di contributo, firmata digitalmente dal legale rappresentante",
+    "obbligo": "sempre"
+   },
+   {
+    "tipo": "modulo2",
+    "nome": "Allegato B — Dichiarazioni sostitutive sui requisiti (art. 4) e sugli aiuti pubblici (art. 8, comma 4)",
+    "obbligo": "sempre"
+   },
+   {
+    "tipo": "modulo3",
+    "nome": "Allegato C — Piano dei costi (Tabella C) con spese territoriali, forfait 7% e costo complessivo",
+    "obbligo": "sempre"
+   },
+   {
+    "tipo": "finanziamenti",
+    "nome": "Allegato D — Piano finanziario con tutte le coperture e tutti gli aiuti pubblici richiesti od ottenuti",
+    "obbligo": "sempre"
+   },
+   {
+    "tipo": "piano_lavorazione",
+    "nome": "Allegato E — Piano di lavorazione: giornate totali e nel Lazio, Comuni interessati (e giornate già effettuate per le opere avviate)",
+    "obbligo": "sempre",
+    "criteri": [
+     "A.1",
+     "A.3"
+    ]
+   },
+   {
+    "tipo": "sceneggiatura",
+    "nome": "Sinossi o trattamento e, ove disponibile, sceneggiatura con indicazione delle scene ambientate nel Lazio",
+    "obbligo": "sempre",
+    "criteri": [
+     "B.1",
+     "B.2"
+    ]
+   },
+   {
+    "tipo": "cv_regista",
+    "nome": "Curriculum e filmografia del regista, con la documentazione degli elementi di punteggio della Fase A",
+    "obbligo": "sempre",
+    "criteri": [
+     "C.1"
+    ]
+   },
+   {
+    "tipo": "cv_societa",
+    "nome": "Visura camerale aggiornata",
+    "obbligo": "sempre",
+    "criteri": [
+     "C.1"
+    ]
+   },
+   {
+    "tipo": "finanziamenti",
+    "nome": "Copia della richiesta di idoneità al credito d’imposta (o dell’istanza preventiva) e della richiesta di nazionalità italiana, anche provvisoria",
+    "obbligo": "sempre"
+   },
+   {
+    "tipo": "identita",
+    "nome": "Documento d’identità del regista (solo per il punteggio C.2, regista under 35)",
+    "obbligo": "punteggio",
+    "criteri": [
+     "C.2"
+    ]
+   },
+   {
+    "tipo": "distribuzione",
+    "nome": "Lettera di interesse, deal memo, strategia distributiva o contratto di distribuzione (criterio D.1)",
+    "obbligo": "punteggio",
+    "criteri": [
+     "D.1"
+    ]
+   }
+  ],
+  "requisiti": [
+   {
+    "id": "pmi-indipendente",
+    "testo": "PMI o produttore indipendente titolare dei diritti di sfruttamento dell’opera almeno per l’Italia (art. 4, comma 1)"
+   },
+   {
+    "id": "registro-ateco",
+    "testo": "Iscrizione al Registro delle imprese con codice ATECO 59.11 (e 59.12 ove pertinente); DURC e regolarità fiscale; non impresa in difficoltà; nessun ordine di recupero pendente (art. 4, comma 2)"
+   },
+   {
+    "id": "sede-lazio",
+    "testo": "Almeno una sede operativa attiva nel Lazio alla Data della Domanda, da mantenere fino al saldo (art. 4, comma 2, lett. f)"
+   },
+   {
+    "id": "una-domanda",
+    "testo": "Una sola domanda per Impresa Unica (società collegate comprese), per una sola opera: più domande rendono inammissibili tutte (art. 4, comma 3)"
+   },
+   {
+    "id": "costo-max",
+    "testo": "Costo complessivo di produzione non superiore a 2.500.000 euro; opera non completata alla Data della Domanda (art. 5, comma 2)"
+   },
+   {
+    "id": "riprese",
+    "testo": "Riprese iniziate nel 2026 oppure da iniziare entro 30 giorni dalla pubblicazione della graduatoria (artt. 5 e 19)"
+   },
+   {
+    "id": "idoneita-nazionalita",
+    "testo": "Richiesta di idoneità al credito d’imposta e richiesta di nazionalità italiana (anche provvisoria) già presentate al MiC alla Data della Domanda (art. 5, comma 3)"
+   },
+   {
+    "id": "radicamento",
+    "testo": "Almeno due requisiti territoriali, di cui uno qualificante: riprese nel Lazio ≥ 30% (qualificante); scene ambientate nel Lazio ≥ 30%; maestranze residenti nel Lazio ≥ 20% (qualificante); fornitori tecnici del Lazio; una fase completa di post-produzione nel Lazio (qualificante) (art. 6)"
+   },
+   {
+    "id": "cumulo",
+    "testo": "Aiuti pubblici complessivi entro il 50% del costo complessivo (60% transfrontaliere, 80% opere difficili, 100% coproduzioni con Paesi DAC); oltre, il contributo si riduce (art. 8)"
+   },
+   {
+    "id": "parti-correlate",
+    "testo": "Spese verso parti correlate non ammissibili; nessuna compensazione o pagamento non monetario (art. 10, comma 5)"
+   }
+  ],
+  "scadenze": [
+   {
+    "id": "impegno",
+    "etichetta": "Atto di impegno firmato digitalmente",
+    "mesi": 1,
+    "nota": "Entro 30 giorni dalla Data di Concessione, pena la decadenza (art. 18)."
+   },
+   {
+    "id": "completamento",
+    "etichetta": "Consegna della copia campione al MiC",
+    "mesi": 18,
+    "nota": "Entro 18 mesi dalla Data di Concessione; una proroga di massimo 6 mesi (art. 19)."
+   },
+   {
+    "id": "rendiconto",
+    "etichetta": "Rendiconto con certificazione del revisore",
+    "mesi": 20,
+    "nota": "Entro 60 giorni dalla consegna della copia campione (art. 20)."
+   }
+  ],
+  "scadenzeNote": [
+   "Riprese delle opere non ancora avviate entro 30 giorni dalla pubblicazione della graduatoria, pena la revoca (artt. 19 e 23)."
+  ],
+  "obblighi": [],
+  "erogazione": [
+   {
+    "quota": "Anticipazione",
+    "percentuale": 40,
+    "condizione": "Con fideiussione di pari importo, dopo l’idoneità al credito d’imposta e la nazionalità provvisoria (art. 21)."
+   },
+   {
+    "quota": "Saldo",
+    "percentuale": 60,
+    "condizione": "Dopo la copia campione, il rendiconto certificato da un revisore legale e la nazionalità definitiva (artt. 20 e 21)."
+   }
+  ],
+  "note": [
+   "Premialità cumulabili (art. 7, comma 3): +3% con almeno il 40% delle giornate nei Comuni del Lazio diversi da Roma Capitale; +3% con almeno il 50% della spesa territoriale presso imprese, professionisti o fornitori con sede operativa nel Lazio; +2% con protocolli o misure di sostenibilità ambientale. Intensità massima complessiva 30%.",
+   "Accedono alla Fase B solo i progetti con almeno 20 punti nella Fase A; idonei con almeno 30 nella Fase B e 60 in totale (artt. 12 e 15).",
+   "Parità: prevale il maggior punteggio della Fase B, poi della macroarea Qualità artistica, poi opera prima e seconda, poi il minor costo (art. 15, comma 4).",
+   "Gli impegni della macroarea C confluiscono nell’atto di impegno: il mancato rispetto comporta revoca parziale proporzionata ai punti (art. 22)."
+  ],
+  "altriBandi": [],
+  "esitiPubblici": [],
+  "affidabilita": {
+   "griglia": "testo_ufficiale",
+   "citazioni": [
+    {
+     "riferimento": "Art. 12, commi 2-3",
+     "testo": "Il punteggio massimo attribuibile nella Fase A è pari a 50 punti. Accedono alla Fase B esclusivamente i progetti che raggiungono almeno 20 punti nella Fase A."
+    },
+    {
+     "riferimento": "Art. 15, comma 2",
+     "testo": "Sono considerati idonei i progetti che, superata la soglia di accesso alla Fase B di cui all’articolo 12, conseguono un punteggio non inferiore a 30 punti nella Fase B e un punteggio finale complessivo non inferiore a 60 punti."
+    },
+    {
+     "riferimento": "Tabella B",
+     "testo": "A. Qualità artistica e originalità dell’opera 20 · B. Visione autoriale e qualità della regia 14 · C. Coerenza e sostenibilità del progetto produttivo 8 · D. Potenziale di diffusione e valorizzazione culturale 8"
+    },
+    {
+     "riferimento": "Tabella A",
+     "testo": "A. Impatto territoriale (max 20) · B. Valorizzazione culturale del territorio (max 8) · C. Next Generation e crescita dei talenti (max 16) · D. Distribuzione e diffusione (max 6)"
+    }
+   ],
+   "dubbi": [
+    "C.3: le tre voci valgono 2 punti ciascuna con tetto 4; nella griglia sono rappresentate come 0, 2 o 4 punti."
+   ]
+  },
+  "verifica": {
+   "esito": "confermata",
+   "data": "2026-11-27",
+   "correzioni": [],
+   "dubbi": []
+  }
+ },
+ {
   "id": "liguria-attrazione-produzioni-audiovisive-2026",
   "fondoId": "liguria",
   "revisione": "2026-11-14",
