@@ -4,6 +4,12 @@ import { blocchiDocumenti, tipoPerId, famiglieSezione } from './docs.js';
 import { FAMIGLIE, METRICHE, sanificaBando } from './bandi/schema.js';
 import { MINIMO_GREEN, RIDUZIONE_EMAS, EDIZIONE_PRECEDENTE } from './greenfilm.js';
 
+// Regole di lettura comuni a commissari e istruttore: evitano conclusioni che i documenti non sostengono.
+export const REGOLE_LETTURA = `- Moduli compilati: i valori scritti nei riquadri e le caselle spuntate compaiono nel blocco «[Campi compilati del modulo]» della pagina; un modulo con quel blocco è compilato, non in bianco.
+- Collegamenti tra società (parti correlate, controllo, compagine in comune): affermali solo se un documento lo prova, cioè soci, amministratori o partecipazioni in comune risultanti da visure o dichiarazioni. Il codice destinatario per la fatturazione elettronica, la carta intestata, il modello o i metadati del file, lo stesso consulente o lo stesso studio sono elementi generici e condivisi da molte imprese: non sono prove e non vanno usati per ipotizzare legami.
+- Firme: segnala una firma mancante solo sui documenti che il bando o il modulo chiedono di firmare (domanda, dichiarazioni, contratti, lettere d'impegno). I prospetti tecnici come il piano di lavorazione non si firmano; i file estratti da una busta .p7m sono firmati digitalmente nella busta.`;
+
+
 const { fmt, euro } = formati;
 
 export const PROFILI = [
@@ -94,6 +100,9 @@ Questa è una simulazione per un controllo qualità prima dell'invio dell'istanz
 Le due letture
 - «punteggio» (per i criteri a fasce «valore»): il punteggio ATTESO, cioè quello che la Commissione reale assegnerebbe secondo il metro e la prassi riportati più sotto. È la previsione, e deve stare sulla scala dei punteggi reali.
 - «rigoroso»: i punti che resterebbero applicando alla lettera i principi di attribuzione del bando, contando solo ciò che è provato da un documento idoneo e firmato. Non può superare il punteggio atteso. Le firme autografe, i timbri e le sigle inseriti come immagini non compaiono nel testo dei PDF: se una pagina riporta una «Nota di lettura» sulle immagini nello spazio delle firme, il documento va considerato firmato (al più da verificare a vista), non privo di firma. La differenza tra le due letture misura il rischio: i punti che il dossier perderebbe davanti a una Commissione più severa.
+
+Come leggere i documenti
+${REGOLE_LETTURA}
 
 Come lavora la Commissione
 - ${bando.commissione?.descrizione || 'Ogni componente attribuisce un punteggio per ogni voce della griglia; il punteggio finale è la media.'}
@@ -209,6 +218,7 @@ Regole di riferimento
 - Categoria: «${cat.nome}». Contributo massimo: ${cat.contributo.percentuale}% del costo di produzione${cat.contributo.massimali?.[anno] ? `, fino a ${euro(cat.contributo.massimali[anno])}` : ''}. ${bando.spesaTerritorioMinPct ? `Spesa ammissibile sul territorio: almeno ${bando.spesaTerritorioMinPct}% del contributo richiesto.` : ''}${cat.durataMin ? ` Durata minima ${cat.durataMin} minuti.` : ''}${cat.durataMaxEsclusa ? ` Durata inferiore a ${cat.durataMaxEsclusa} minuti.` : ''}
 ${finestreAnno.length ? `- ${finestreAnno.length > 1 ? 'Finestre' : 'Finestra'} di presentazione ${anno}: ${finestreAnno.map((f) => `dal ${f.dal} al ${f.al}${f.nota ? ` (${f.nota})` : ''}`).join('; ')}. Oggi è il ${oggi}. Se i documenti indicano che l'istanza è già stata presentata in una di queste finestre (per esempio la sessione nominata nelle lettere, o istanze collegate datate entro la scadenza), non segnalarla come fuori termine: scrivi di verificare la data di invio.` : ''}
 ${bando.invio ? `- Invio: ${bando.invio.canale} a ${bando.invio.indirizzo}, in un unico invio.` : ''}
+${REGOLE_LETTURA}
 - Allegati previsti dal bando:
 ${(bando.allegati || []).map((a) => `  · ${a.nome} [${a.obbligo === 'sempre' ? 'obbligatorio' : a.obbligo === 'green' ? 'obbligatorio per film e serie TV non in animazione' : a.obbligo === 'se_dichiarato' ? 'obbligatorio se l’accordo o la fonte è dichiarata' : 'non obbligatorio ma incide sul punteggio'}]`).join('\n')}
 - Requisiti dichiarativi:
