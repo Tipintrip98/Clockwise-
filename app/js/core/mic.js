@@ -72,5 +72,42 @@ export function stimaMic(progetto, bandi, lineaId, scelte = {}) {
     base: { nome: base.bando.nomeBreve || base.bando.nome, totale: base.risultato.totale, massimo: base.risultato.massimo, completo: base.risultato.completo },
     // graduatorie reali della stessa linea: la griglia 2025 era diversa, quindi il confronto si fa sulla quota del massimo
     confronti: esitiStorici(bando).filter((e) => e.categoriaId === lineaId).map((e) => ({ atto: e.atto, statistiche: statisticheStoriche(e.dati), collocazione: collocazionePerQuota(e.dati, quota) })),
+    concorrenza: concorrenzaStimata(bando, categoria, esitiStorici(bando).filter((e) => e.categoriaId === lineaId).map((e) => e.dati), totale),
+  };
+}
+
+const mediana = (v) => { const a = [...v].sort((x, y) => x - y); return a.length ? (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 1] + a[a.length / 2]) / 2) : null; };
+
+/**
+ * Quanti progetti può finanziare una sessione e quale punteggio serve, stimati dalle graduatorie reali.
+ * La soglia del bando (es. 80) dice chi è ammissibile; chi viene finanziato dipende dalla dotazione della sessione:
+ * finanziabili ≈ dotazione della sessione / contributo mediano assegnato nelle graduatorie reali, e il punteggio che
+ * serve è la quota del massimo ottenuta dall'ennesimo finanziato di allora, riportata sul massimo del bando attuale.
+ * È un ordine di grandezza (griglie diverse, richieste diverse), non una previsione della graduatoria.
+ */
+export function concorrenzaStimata(bando, categoria, storici = [], totale = null) {
+  const anni = Object.keys(categoria?.dotazione || {}).sort();
+  const anno = anni[anni.length - 1];
+  const dotazione = anno ? categoria.dotazione[anno] : null;
+  const sessioni = bando?.sessioniAnno || 2;
+  const validi = storici.filter((d) => d?.righe?.some((r) => r.stato === 'F'));
+  if (!dotazione || !validi.length || !bando?.punteggioMassimo) return null;
+  const perSessione = dotazione / sessioni;
+  const assegnati = validi.flatMap((d) => d.righe.filter((r) => r.stato === 'F').map((r) => r.assegnato).filter((v) => v != null));
+  const assegnatoMediano = mediana(assegnati);
+  if (!assegnatoMediano) return null;
+  const finanziabili = Math.max(1, Math.round(perSessione / assegnatoMediano));
+  const quote = validi.map((d) => {
+    const tot = d.righe.filter((r) => r.stato === 'F').map((r) => r.totale).sort((a, b) => b - a);
+    const t = tot[Math.min(finanziabili, tot.length) - 1];
+    return { punti: t, massimo: d.massimoTotale, quota: r1((t / d.massimoTotale) * 100), finanziatiAllora: tot.length, dotazioneAllora: d.dotazione };
+  });
+  const sulMassimo = (q) => Math.max(bando.sogliaTotale || 0, r1((q / 100) * bando.punteggioMassimo));
+  const qMin = Math.min(...quote.map((q) => q.quota)), qMax = Math.max(...quote.map((q) => q.quota));
+  const qMedia = r1(quote.reduce((a, q) => a + q.quota, 0) / quote.length);
+  return {
+    anno: Number(anno), dotazione, sessioni, perSessione, assegnatoMediano, finanziabili, quote,
+    punti: { min: sulMassimo(qMin), medio: sulMassimo(qMedia), max: sulMassimo(qMax) },
+    esito: totale == null ? null : totale >= sulMassimo(qMax) ? 'dentro' : totale >= sulMassimo(qMin) ? 'al_limite' : 'fuori',
   };
 }

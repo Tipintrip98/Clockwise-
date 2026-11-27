@@ -1,7 +1,7 @@
 // Dossier › «Bandi MiC»: lo stesso progetto sulle griglie dei contributi selettivi del Ministero (bando 2026), con i
 // punteggi in una sezione a parte rispetto alla valutazione sul bando del dossier, e il confronto con le graduatorie
 // reali 2025. Le scelte restano nel dossier (p.mic).
-import { h, metti, svuota, fmt } from './dom.js';
+import { h, metti, svuota, fmt, euro } from './dom.js';
 import { S, salvaPresto } from './app.js';
 import { lineeMic, lineaPredefinita, stimaMic } from '../core/mic.js';
 import { NOMI_FAMIGLIA } from '../core/confronto.js';
@@ -73,7 +73,11 @@ export function schedaMic(corpo, p, bando, mostra) {
           h('td', h('a', { href: atto.url, target: '_blank', rel: 'noopener' }, atto.sessione)), h('td.r.num', x.presentati), h('td.r.num', x.finanziati),
           h('td.r.num', `${fmt(x.ultimoFinanziato)} su ${fmt(c.massimo)} (${fmt(x.quotaUltimo)}%)`), h('td.r.num', `${fmt(c.punti)} su ${fmt(c.massimo)}`), h('td.r.num', `${c.posizione}° su ${c.su}`),
           h('td', h(`span.tag.${c.finanziabile ? 'ok' : 'bad'}`, c.finanziabile ? 'in zona finanziamento' : 'sotto l’ultimo finanziato'))))))),
-      h('p.small.muted', { style: { maxWidth: '84ch' } }, 'È un ordine di grandezza: i criteri e i massimi del 2025 non sono quelli del 2026, e la stima non legge i documenti con gli occhi della Commissione ministeriale. I punteggi reali completi sono nella pagina Bandi, scheda del bando, sezione «Punteggi reali».')) : null;
+      st.concorrenza ? h('div.stack', { id: 'mic-concorrenza' },
+        h('h3', 'Quanti punti servono per essere finanziati'),
+        h('p.small', { style: { maxWidth: '84ch' } }, `La soglia di ${fmt(st.sogliaTotale)} punti rende il progetto ammissibile, non finanziato. Nel ${st.concorrenza.anno} la linea ha ${euro(st.concorrenza.perSessione)} per sessione; con il contributo mediano assegnato nelle graduatorie reali (${euro(st.concorrenza.assegnatoMediano)}) si finanziano circa ${st.concorrenza.finanziabili} progetti a sessione. Allora l'${st.concorrenza.finanziabili}° finanziato aveva ${st.concorrenza.quote.map((q) => `${fmt(q.punti)}/${fmt(q.massimo)} (${fmt(q.quota)}%)`).join(' e ')}: sulla griglia attuale vuol dire circa ${fmt(st.concorrenza.punti.min)}–${fmt(st.concorrenza.punti.max)} punti su ${fmt(st.massimo)}.`),
+        h('p', h(`span.tag.${st.concorrenza.esito === 'dentro' ? 'ok' : st.concorrenza.esito === 'al_limite' ? 'warn' : 'bad'}`, st.concorrenza.esito === 'dentro' ? 'La stima è sopra questa soglia' : st.concorrenza.esito === 'al_limite' ? 'La stima è al limite di questa soglia' : 'La stima è sotto questa soglia'), ` ${fmt(st.totale)} su ${fmt(st.massimo)}.`)) : null,
+      h('p.small.muted', { style: { maxWidth: '84ch' } }, 'È un ordine di grandezza: i criteri e i massimi del 2025 non sono quelli del 2026, le richieste cambiano da sessione a sessione e la stima non legge i documenti con gli occhi della Commissione ministeriale. I punteggi reali completi sono nella pagina Bandi, scheda del bando, sezione «Punteggi reali».')) : null;
 
     metti(svuota(area), testa, dichiarazioni, tabella, reali);
     if (fuoco) document.getElementById(fuoco)?.focus();

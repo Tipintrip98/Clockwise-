@@ -196,3 +196,18 @@ test('moduli PDF compilati: i valori dei riquadri e le caselle spuntate entrano 
   assert.ok(righe.some((r) => /^- riga: Luogo = Città A \| .*L \| Giornate = 5$/.test(r)), righe.join('\n'));
   assert.deepEqual(righeCampi([{ tipo: 'testo', valore: '', rect: [0, 0, 1, 1] }], []), []);
 });
+
+test('MiC: quanti punti servono per essere finanziati, dalla dotazione della sessione', async () => {
+  const { concorrenzaStimata } = await import('../app/js/core/mic.js');
+  const riga = (totale, assegnato) => ({ sezioni: {}, totale, stato: 'F', assegnato });
+  const storico = { massimoTotale: 100, dotazione: 5000000, righe: [riga(90, 500000), riga(85, 500000), riga(80, 500000), riga(70, 500000)] };
+  const c = concorrenzaStimata({ punteggioMassimo: 150, sogliaTotale: 80 }, { dotazione: { 2026: 2000000 } }, [storico], 120);
+  assert.equal(c.perSessione, 1000000);
+  assert.equal(c.finanziabili, 2);
+  assert.equal(c.quote[0].punti, 85);
+  assert.equal(c.punti.medio, 127.5);
+  assert.equal(c.esito, 'fuori');
+  assert.equal(concorrenzaStimata({ punteggioMassimo: 150 }, { dotazione: {} }, [storico]), null);
+  // mai sotto la soglia del bando
+  assert.equal(concorrenzaStimata({ punteggioMassimo: 150, sogliaTotale: 80 }, { dotazione: { 2026: 100000000 } }, [storico], 85).punti.min, 105);
+});
