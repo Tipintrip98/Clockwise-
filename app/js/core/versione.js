@@ -2,8 +2,8 @@
 export const APP = {
   nome: 'Clockwise',
   sottotitolo: 'Bandi Cinema',
-  versione: '2.0.6',
-  rilascio: '2026-11-17',
+  versione: '2.0.7',
+  rilascio: '2026-11-27',
   autore: 'Davide Tipaldi',
   ruoloAutore: 'Ideazione, direzione del progetto e sviluppo',
   sito: 'https://www.davidetipaldi.it',
@@ -12,6 +12,14 @@ export const APP = {
 };
 
 export const NOVITA = [
+  { versione: '2.0.7', data: '2026-11-27', voci: [
+    'Moduli PDF compilati letti per intero: i valori scritti nei riquadri e le caselle spuntate (domanda, piano di lavorazione, piano finanziario) entrano nel testo del documento. Prima un modulo compilato al computer poteva sembrare in bianco.',
+    'Valutazione più fedele ai documenti: un collegamento tra società si segnala solo se una visura o una dichiarazione lo prova (codice destinatario, carta intestata e metadati dei file non sono prove); la firma mancante si segnala solo dove il bando la chiede (il piano di lavorazione non si firma); le firme inserite come immagini non vengono più scambiate per assenti.',
+    'Bandi MiC: la scheda dice anche quanti punti servono per essere finanziati, non solo ammessi. Dalla dotazione della sessione e dai contributi assegnati nelle graduatorie reali: per i film di qualità 2026 (3,75 milioni a sessione, circa 6 film) servono circa 101–116 punti su 147, ben sopra la soglia di 80.',
+    'Catalogo: nuovo bando Regione Lazio «Lazio Next Generation 2026» (opere a basso costo) con la griglia ufficiale, le premialità e il cumulo.',
+    'Se il limite d’uso dell’abbonamento Claude è raggiunto per il modello scelto, Clockwise passa da solo al modello successivo invece di fermarsi.',
+    'Verifica dell’istruttore: considera tutte le sessioni dell’anno (il MiC ne ha due); il cast tecnico conta per la sezione su regia e cast.',
+  ] },
   { versione: '2.0.6', data: '2026-11-17', voci: [
     'Tutto resta sul computer: dossier, impostazioni, bandi aggiunti e i file originali che carichi vengono salvati nella cartella dei dati del programma, non solo nel browser. Li ritrovi anche dopo aver svuotato o cambiato browser; dai Documenti apri l’originale con un tocco e le scansioni non vanno più ricaricate.',
     'La sessione si salva da sola: Clockwise ricorda dossier aperto, scheda e sezione e alla riapertura riparte da lì. Ciò che stavi scrivendo viene salvato anche se chiudi la scheda all’improvviso; il pulsante «Esci» › «Salva ed esci» chiude il programma dopo aver controllato che tutto sia su disco.',
