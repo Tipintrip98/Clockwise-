@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "revisione": "2026-11-17",
+ "revisione": "2026-11-27",
  "bandi": [
   {
    "id": "abruzzo-produzione-audiovisiva-2026",
@@ -7745,12 +7745,12 @@
   },
   {
    "id": "italia-mic-selettivi-2026",
-   "revisione": "2026-11-14",
-   "sha256": "cb075839f91435c51deeea41b6bbfa3212159e3f249554fdb2719e1848cef8f4",
+   "revisione": "2026-11-27",
+   "sha256": "3ee39048dad999a3d68e728713519a401aff25e3f175bacb7a5fcfb24071e4f6",
    "bando": {
     "id": "italia-mic-selettivi-2026",
     "fondoId": "mic-selettivi",
-    "revisione": "2026-11-14",
+    "revisione": "2026-11-27",
     "nome": "Italia — Contributi selettivi MiC-DGCA 2026: opere prime e seconde, giovani autori, cortometraggi",
     "nomeBreve": "MiC · Selettivi 2026 — opere prime, giovani autori, corti",
     "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
@@ -7968,7 +7968,7 @@
       },
       "durataMin": 52,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
      },
      {
@@ -7990,7 +7990,7 @@
       },
       "durataMin": 52,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
      },
      {
@@ -8012,7 +8012,7 @@
       },
       "durataMin": null,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
      }
     ],
@@ -8749,12 +8749,12 @@
   },
   {
    "id": "italia-mic-selettivi-qualita-2026",
-   "revisione": "2026-11-14",
-   "sha256": "44812bdf461c15499170cb4191e49e082c0894a1f6981f23ca2cc8cf728859c1",
+   "revisione": "2026-11-27",
+   "sha256": "acd9d497ea05ed84fc0d31d6692f6aa760e5fc298ea5a48e2eaae8f8f924ab23",
    "bando": {
     "id": "italia-mic-selettivi-qualita-2026",
     "fondoId": "mic-selettivi",
-    "revisione": "2026-11-14",
+    "revisione": "2026-11-27",
     "nome": "Italia — Contributi selettivi MiC-DGCA 2026: film di qualità e identità culturale, documentari, animazione",
     "nomeBreve": "MiC · Selettivi 2026 — qualità, documentari, animazione",
     "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
@@ -8974,7 +8974,7 @@
       },
       "durataMin": null,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
      },
      {
@@ -8996,7 +8996,7 @@
       },
       "durataMin": 20,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "trattamento"
      },
      {
@@ -9020,7 +9020,7 @@
       },
       "durataMin": 20,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
      }
     ],

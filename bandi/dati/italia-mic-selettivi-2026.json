@@ -1,7 +1,7 @@
 {
   "id": "italia-mic-selettivi-2026",
   "fondoId": "mic-selettivi",
-  "revisione": "2026-11-14",
+  "revisione": "2026-11-27",
   "nome": "Italia — Contributi selettivi MiC-DGCA 2026: opere prime e seconde, giovani autori, cortometraggi",
   "nomeBreve": "MiC · Selettivi 2026 — opere prime, giovani autori, corti",
   "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
@@ -218,7 +218,7 @@
       },
       "durataMin": 52,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
     },
     {
@@ -240,7 +240,7 @@
       },
       "durataMin": 52,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
     },
     {
@@ -262,7 +262,7 @@
       },
       "durataMin": null,
       "durataMaxEsclusa": null,
-      "greenFilm": true,
+      "greenFilm": false,
       "testoQualita": "sceneggiatura"
     }
   ],

@@ -1,5 +1,5 @@
 // FILE GENERATO da scripts/genera-bandi.mjs a partire da bandi/dati/*.json — non modificare a mano.
-export const REVISIONE_DATI = "2026-11-17";
+export const REVISIONE_DATI = "2026-11-27";
 export const BANDI_DATI = [
  {
   "id": "abruzzo-produzione-audiovisiva-2026",
@@ -7705,7 +7705,7 @@ export const BANDI_DATI = [
  {
   "id": "italia-mic-selettivi-2026",
   "fondoId": "mic-selettivi",
-  "revisione": "2026-11-14",
+  "revisione": "2026-11-27",
   "nome": "Italia — Contributi selettivi MiC-DGCA 2026: opere prime e seconde, giovani autori, cortometraggi",
   "nomeBreve": "MiC · Selettivi 2026 — opere prime, giovani autori, corti",
   "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
@@ -7923,7 +7923,7 @@ export const BANDI_DATI = [
     },
     "durataMin": 52,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "sceneggiatura"
    },
    {
@@ -7945,7 +7945,7 @@ export const BANDI_DATI = [
     },
     "durataMin": 52,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "sceneggiatura"
    },
    {
@@ -7967,7 +7967,7 @@ export const BANDI_DATI = [
     },
     "durataMin": null,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "sceneggiatura"
    }
   ],
@@ -8704,7 +8704,7 @@ export const BANDI_DATI = [
  {
   "id": "italia-mic-selettivi-qualita-2026",
   "fondoId": "mic-selettivi",
-  "revisione": "2026-11-14",
+  "revisione": "2026-11-27",
   "nome": "Italia — Contributi selettivi MiC-DGCA 2026: film di qualità e identità culturale, documentari, animazione",
   "nomeBreve": "MiC · Selettivi 2026 — qualità, documentari, animazione",
   "ente": "Ministero della cultura — Dipartimento per le attività culturali, Direzione generale Cinema e audiovisivo (DGCA), Servizio II; per alcune attività amministrative la DGCA può avvalersi di Cinecittà S.p.A.",
@@ -8924,7 +8924,7 @@ export const BANDI_DATI = [
     },
     "durataMin": null,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "sceneggiatura"
    },
    {
@@ -8946,7 +8946,7 @@ export const BANDI_DATI = [
     },
     "durataMin": 20,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "trattamento"
    },
    {
@@ -8970,7 +8970,7 @@ export const BANDI_DATI = [
     },
     "durataMin": 20,
     "durataMaxEsclusa": null,
-    "greenFilm": true,
+    "greenFilm": false,
     "testoQualita": "sceneggiatura"
    }
   ],

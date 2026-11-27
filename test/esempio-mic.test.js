@@ -151,3 +151,26 @@ test('dossier sulle griglie MiC: qualità dalla valutazione, punteggi fissi solo
   assert.equal(stimaMic(p, BANDI_PREDEFINITI, 'inesistente', {}), null);
   assert.equal(stimaMic(p, BANDI_PREDEFINITI.filter((b) => !/mic/.test(b.id)), 'giovani-autori', {}), null);
 });
+
+test('caso reale su un dossier MiC: firme come immagini, cast tecnico, certificazione, due sessioni', async () => {
+  const { noteImmagini, documentiPerSezione } = await import('../app/js/core/docs.js');
+  // logo su ogni pagina (1 immagine), firme sull'ultima (3 in più): solo l'ultima pagina è segnalata, come foglio delle firme
+  const note = noteImmagini([1, 1, 4], ['Art. 1 Oggetto', 'Art. 5 Corrispettivo', 'Per la società licenziataria (Licenziatario)']);
+  assert.deepEqual(note.slice(0, 2), ['', '']);
+  assert.match(note[2], /3 immagini oltre alla carta intestata/);
+  assert.match(note[2], /non si deve concludere che il documento non è firmato/);
+  assert.match(noteImmagini([0, 2], ['testo', 'una fotografia del set'])[1], /2 immagini che il testo non mostra/);
+  assert.deepEqual(noteImmagini([2, 2], ['a', 'b']), ['', ''], 'immagini uguali su tutte le pagine (carta intestata): nessuna nota');
+  // il file del cast tecnico arriva anche ai criteri sulla componente artistica (MiC B.2 «cast artistico e tecnico», F.1 capi reparto)
+  const qualita = BANDI_PREDEFINITI.find((b) => b.id === 'italia-mic-selettivi-qualita-2026');
+  const sezF = qualita.griglie.T5.sezioni.find((s) => s.id === 'F');
+  const docs = [{ nome: 'Cast tecnico.pdf', tipo: 'cv_tecnico', testo: 'Direttrice della fotografia: nome e cognome' }];
+  assert.equal(documentiPerSezione(docs, sezF).length, 1);
+  // nel bando MiC la certificazione ambientale è il criterio H (punti), non un requisito di ammissibilità
+  for (const b of BANDI_PREDEFINITI.filter((x) => /^italia-mic-selettivi/.test(x.id))) assert.ok(b.categorie.every((c) => c.greenFilm === false), b.id);
+  // il controllo dell'istruttore vede entrambe le sessioni dell'anno
+  const { promptVerifica } = await import('../app/js/core/prompts.js');
+  const pv = promptVerifica({ bando: qualita, categoriaId: 'film-qualita-identita', anno: 2026, documenti: [], tutti: [], dati: datiVuoti() });
+  assert.match(pv.system, /dal 2026-06-03 al 2026-06-17[^;]*; dal 2026-10-01 al 2026-10-15/);
+  assert.doesNotMatch(pv.system, /requisito di ammissibilità per questa categoria/);
+});

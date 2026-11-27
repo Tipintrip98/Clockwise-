@@ -10,7 +10,7 @@ export const TIPI = [
   { id: 'cv_regista', nome: 'CV regista', sezioni: ['B'], famiglie: ['artistica'] },
   { id: 'cv_autori', nome: 'CV sceneggiatore / autore / consulente', sezioni: ['B'], famiglie: ['artistica'] },
   { id: 'cv_artistico', nome: 'CV componente artistica (fotografia, musiche, interpreti)', sezioni: ['B'], famiglie: ['artistica'] },
-  { id: 'cv_tecnico', nome: 'CV cast tecnico', sezioni: ['B'], famiglie: ['tecnica'] },
+  { id: 'cv_tecnico', nome: 'CV cast tecnico', sezioni: ['B'], famiglie: ['tecnica', 'artistica'] },
   { id: 'accordi_cast', nome: 'Contratti / lettere di intento con artisti e tecnici', sezioni: ['B'], famiglie: ['artistica', 'tecnica'] },
   { id: 'coproduzione', nome: 'Coproduzione: CV, deal memo, contratti', sezioni: ['D'], famiglie: ['piano_finanziario', 'internazionale'] },
   { id: 'distribuzione', nome: 'Distribuzione: deal memo, contratti', sezioni: ['D'], famiglie: ['piano_finanziario', 'distribuzione', 'internazionale'] },
@@ -88,13 +88,34 @@ export async function assicura(globale) {
 
 const estensione = (n) => (/\.([a-z0-9]+)$/i.exec(n)?.[1] || '').toLowerCase();
 
+/**
+ * Note sulle immagini delle pagine di un PDF con testo. Le immagini presenti su ogni pagina (logo, carta intestata) non
+ * contano; quelle in più su una pagina che contiene parole di firma sono segnalate, perché firme autografe, timbri e sigle
+ * inserite come immagini non compaiono nel testo estratto e Claude non deve concludere che il documento non è firmato.
+ */
+export function noteImmagini(conteggi, testi = []) {
+  if (!conteggi.length) return [];
+  const base = conteggi.length > 1 ? Math.min(...conteggi) : 0;
+  return conteggi.map((c, i) => {
+    const extra = c - base;
+    if (extra <= 0) return '';
+    const firma = /firm|sottoscritt|legale rappresentante|il produttore|per la societ|per lo sponsor|timbro|letto,? confermato/i.test(testi[i] || '');
+    return firma
+      ? `[Nota di lettura: su questa pagina ci sono ${extra === 1 ? 'un’immagine' : `${extra} immagini`} oltre alla carta intestata, nello stesso foglio delle firme. Firme autografe, timbri e sigle inseriti come immagini non compaiono nel testo: la firma va verificata a vista e non si deve concludere che il documento non è firmato.]`
+      : `[Nota di lettura: su questa pagina ci sono ${extra === 1 ? 'un’immagine' : `${extra} immagini`} che il testo non mostra.]`;
+  });
+}
+
 async function testoPdf(buffer) {
   const lib = globalThis.pdfjsLib;
   if (!lib) throw new Error('Lettore PDF non disponibile.');
   const pdf = await lib.getDocument({ data: new Uint8Array(buffer), isEvalSupported: false }).promise;
-  const pagine = [];
+  const pagine = [], immagini = [];
+  const DIPINGE = lib.OPS ? [lib.OPS.paintImageXObject, lib.OPS.paintInlineImageXObject, lib.OPS.paintJpegXObject, lib.OPS.paintImageXObjectRepeat].filter((x) => x != null) : [];
   for (let n = 1; n <= pdf.numPages; n++) {
     const pagina = await pdf.getPage(n);
+    // quante immagini ci sono sulla pagina: firme autografe, timbri e sigle sono immagini e il testo non li mostra
+    try { const ops = DIPINGE.length ? await pagina.getOperatorList() : null; immagini.push(ops ? ops.fnArray.filter((f) => DIPINGE.includes(f)).length : 0); } catch { immagini.push(0); }
     const contenuto = await pagina.getTextContent();
     let riga = '', ultimaY = null; const righe = [];
     for (const it of contenuto.items) {
@@ -109,7 +130,8 @@ async function testoPdf(buffer) {
   }
   const numPagine = pdf.numPages;
   try { await pdf.destroy(); } catch { /* niente da liberare */ }
-  return { testo: pagine.map((p, i) => `[pagina ${i + 1}]\n${p}`).join('\n\n'), pagine: numPagine };
+  const note = noteImmagini(immagini, pagine);
+  return { testo: pagine.map((p, i) => `[pagina ${i + 1}]\n${p}${note[i] ? `\n${note[i]}` : ''}`).join('\n\n'), pagine: numPagine };
 }
 
 function testoFoglio(wb) {

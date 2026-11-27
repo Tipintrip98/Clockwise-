@@ -93,7 +93,7 @@ Questa è una simulazione per un controllo qualità prima dell'invio dell'istanz
 
 Le due letture
 - «punteggio» (per i criteri a fasce «valore»): il punteggio ATTESO, cioè quello che la Commissione reale assegnerebbe secondo il metro e la prassi riportati più sotto. È la previsione, e deve stare sulla scala dei punteggi reali.
-- «rigoroso»: i punti che resterebbero applicando alla lettera i principi di attribuzione del bando, contando solo ciò che è provato da un documento idoneo e firmato. Non può superare il punteggio atteso. La differenza tra le due letture misura il rischio: i punti che il dossier perderebbe davanti a una Commissione più severa.
+- «rigoroso»: i punti che resterebbero applicando alla lettera i principi di attribuzione del bando, contando solo ciò che è provato da un documento idoneo e firmato. Non può superare il punteggio atteso. Le firme autografe, i timbri e le sigle inseriti come immagini non compaiono nel testo dei PDF: se una pagina riporta una «Nota di lettura» sulle immagini nello spazio delle firme, il documento va considerato firmato (al più da verificare a vista), non privo di firma. La differenza tra le due letture misura il rischio: i punti che il dossier perderebbe davanti a una Commissione più severa.
 
 Come lavora la Commissione
 - ${bando.commissione?.descrizione || 'Ogni componente attribuisce un punteggio per ogni voce della griglia; il punteggio finale è la media.'}
@@ -196,7 +196,9 @@ export const SCHEMA_VERIFICA = {
 
 export function promptVerifica({ bando, categoriaId, anno, documenti, tutti, dati }) {
   const cat = getCategoria(bando, categoriaId);
-  const finestra = (bando.finestre || []).find((f) => f.anno === anno);
+  // tutte le finestre dell'anno (il MiC ne ha due sessioni): l'istanza può essere già stata presentata in una di esse
+  const oggi = new Date().toISOString().slice(0, 10);
+  const finestreAnno = (bando.finestre || []).filter((f) => f.anno === anno);
   const inventario = tutti.map((d) => `- ${d.nome} — classificato come: ${tipoPerId(d.tipo).nome}${d.pagine ? ` — ${d.pagine} pagine` : ''}${d.testo ? '' : ' — contenuto non leggibile'}`).join('\n');
   return {
     system: `Sei il funzionario istruttore che verifica ricevibilità e ammissibilità delle istanze dell'avviso «${bando.nome}» (${bando.ente}) prima che passino alla Commissione.
@@ -205,7 +207,7 @@ Questa è una verifica preventiva chiesta dal produttore: vuole trovare adesso, 
 
 Regole di riferimento
 - Categoria: «${cat.nome}». Contributo massimo: ${cat.contributo.percentuale}% del costo di produzione${cat.contributo.massimali?.[anno] ? `, fino a ${euro(cat.contributo.massimali[anno])}` : ''}. ${bando.spesaTerritorioMinPct ? `Spesa ammissibile sul territorio: almeno ${bando.spesaTerritorioMinPct}% del contributo richiesto.` : ''}${cat.durataMin ? ` Durata minima ${cat.durataMin} minuti.` : ''}${cat.durataMaxEsclusa ? ` Durata inferiore a ${cat.durataMaxEsclusa} minuti.` : ''}
-${finestra ? `- Finestra di presentazione ${anno}: dal ${finestra.dal} al ${finestra.al}.` : ''}
+${finestreAnno.length ? `- ${finestreAnno.length > 1 ? 'Finestre' : 'Finestra'} di presentazione ${anno}: ${finestreAnno.map((f) => `dal ${f.dal} al ${f.al}${f.nota ? ` (${f.nota})` : ''}`).join('; ')}. Oggi è il ${oggi}. Se i documenti indicano che l'istanza è già stata presentata in una di queste finestre (per esempio la sessione nominata nelle lettere, o istanze collegate datate entro la scadenza), non segnalarla come fuori termine: scrivi di verificare la data di invio.` : ''}
 ${bando.invio ? `- Invio: ${bando.invio.canale} a ${bando.invio.indirizzo}, in un unico invio.` : ''}
 - Allegati previsti dal bando:
 ${(bando.allegati || []).map((a) => `  · ${a.nome} [${a.obbligo === 'sempre' ? 'obbligatorio' : a.obbligo === 'green' ? 'obbligatorio per film e serie TV non in animazione' : a.obbligo === 'se_dichiarato' ? 'obbligatorio se l’accordo o la fonte è dichiarata' : 'non obbligatorio ma incide sul punteggio'}]`).join('\n')}
