@@ -174,3 +174,25 @@ test('caso reale su un dossier MiC: firme come immagini, cast tecnico, certifica
   assert.match(pv.system, /dal 2026-06-03 al 2026-06-17[^;]*; dal 2026-10-01 al 2026-10-15/);
   assert.doesNotMatch(pv.system, /requisito di ammissibilità per questa categoria/);
 });
+
+test('moduli PDF compilati: i valori dei riquadri e le caselle spuntate entrano nel testo', async () => {
+  const { righeCampi } = await import('../app/js/core/docs.js');
+  const testi = [
+    { x: 50, y: 700, str: 'Titolo dell’opera:' },
+    { x: 80, y: 650, str: 'opera di finzione' }, { x: 80, y: 630, str: 'documentario' },
+    { x: 50, y: 600, str: 'Luogo' }, { x: 200, y: 600, str: 'Giornate' },
+  ];
+  const righe = righeCampi([
+    { tipo: 'testo', valore: 'Il film', rect: [160, 695, 400, 710], nome: 'Casella 1' },
+    { tipo: 'casella', valore: true, rect: [60, 646, 68, 654] },
+    { tipo: 'casella', valore: false, rect: [60, 626, 68, 634] },
+    { tipo: 'testo', valore: 'Città A', rect: [50, 570, 150, 585] }, { tipo: 'testo', valore: 'L', rect: [155, 570, 190, 585] }, { tipo: 'testo', valore: '5', rect: [200, 570, 240, 585] },
+    { tipo: 'testo', valore: '', rect: [50, 540, 150, 555] },
+  ], testi);
+  assert.match(righe[0], /Campi compilati del modulo/);
+  assert.ok(righe.includes('- Titolo dell’opera: Il film'));
+  assert.ok(righe.includes('- [X] opera di finzione'));
+  assert.ok(!righe.some((r) => /documentario/.test(r)), 'la casella non spuntata non compare');
+  assert.ok(righe.some((r) => /^- riga: Luogo = Città A \| .*L \| Giornate = 5$/.test(r)), righe.join('\n'));
+  assert.deepEqual(righeCampi([{ tipo: 'testo', valore: '', rect: [0, 0, 1, 1] }], []), []);
+});

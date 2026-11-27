@@ -106,6 +106,78 @@ export function noteImmagini(conteggi, testi = []) {
   });
 }
 
+/**
+ * I campi compilati di un modulo PDF (AcroForm): i valori scritti nei riquadri e le caselle spuntate non fanno parte
+ * del testo della pagina, quindi senza questa lettura un modulo compilato sembra in bianco.
+ * @param campi  [{ tipo: 'testo'|'casella'|'scelta', valore, rect: [x1, y1, x2, y2], nome }]
+ * @param testi  [{ x, y, str }] le parole della pagina con la loro posizione, per dare a ogni campo la sua etichetta
+ * @returns le righe da aggiungere al testo della pagina (vuoto se il modulo non ha campi compilati)
+ */
+export function righeCampi(campi = [], testi = []) {
+  const pulisci = (t) => String(t || '').replace(/\s+/g, ' ').trim();
+  const parole = testi.filter((t) => pulisci(t.str));
+  const etichetta = (c) => {
+    const [x1, y1, x2, y2] = c.rect || [0, 0, 0, 0];
+    const yc = (y1 + y2) / 2;
+    const stessaRiga = parole.filter((t) => Math.abs(t.y - yc) <= Math.max(6, (y2 - y1) / 2 + 2));
+    let scelte = c.tipo === 'casella'
+      ? stessaRiga.filter((t) => t.x >= x2 - 1).sort((a, b) => a.x - b.x)
+      : stessaRiga.filter((t) => t.x <= x1 + 1).sort((a, b) => a.x - b.x);
+    if (!scelte.length) { // l'etichetta sta nella riga sopra il riquadro
+      const sopra = parole.filter((t) => t.y > yc && t.y - yc <= 24 && t.x <= x2).sort((a, b) => a.y - b.y || a.x - b.x);
+      const y = sopra[0]?.y; scelte = sopra.filter((t) => Math.abs(t.y - y) <= 2).sort((a, b) => a.x - b.x);
+    }
+    let e = pulisci(scelte.map((t) => t.str).join(' ').replace(/_{2,}/g, ' ')).replace(/[\s:(]+$/, '');
+    if (c.tipo !== 'casella' && e.length > 70) e = '…' + e.slice(-70);
+    if (c.tipo === 'casella' && e.length > 90) e = e.slice(0, 90) + '…';
+    return e || pulisci(c.nome) || 'campo';
+  };
+  // intestazione di colonna: la riga di testo più vicina sopra il riquadro che ne copre l'ampiezza
+  const colonna = (c) => {
+    const [x1, , x2, y2] = c.rect;
+    const sopra = parole.filter((t) => t.y > y2 - 1 && t.y - y2 <= 260 && t.x >= x1 - 8 && t.x <= x2 + 2).sort((a, b) => a.y - b.y);
+    if (!sopra.length) return '';
+    const y = sopra[0].y;
+    return pulisci(sopra.filter((t) => Math.abs(t.y - y) <= 2).sort((a, b) => a.x - b.x).map((t) => t.str).join(' ')).slice(0, 40);
+  };
+  const centro = (c) => (c.rect[1] + c.rect[3]) / 2;
+  const ordinati = campi.filter((c) => c && c.rect).filter((c) => c.tipo === 'casella' ? c.valore === true : pulisci(c.valore))
+    .sort((a, b) => centro(b) - centro(a) || a.rect[0] - b.rect[0]);
+  if (!ordinati.length) return [];
+  // i riquadri sulla stessa riga (righe di una tabella) si scrivono insieme, con l'intestazione della loro colonna
+  const righe = [];
+  for (const c of ordinati) {
+    const r = righe[righe.length - 1];
+    if (r && Math.abs(centro(r[0]) - centro(c)) <= 3) r.push(c); else righe.push([c]);
+  }
+  const fuori = [];
+  for (const r of righe) {
+    const testiR = r.filter((c) => c.tipo !== 'casella').sort((a, b) => a.rect[0] - b.rect[0]);
+    if (testiR.length >= 3) {
+      fuori.push(`- riga: ${testiR.map((c) => { const h = colonna(c); return h ? `${h} = ${pulisci(c.valore)}` : pulisci(c.valore); }).join(' | ')}`);
+      for (const c of r.filter((x) => x.tipo === 'casella')) fuori.push(`- [X] ${etichetta(c)}`);
+    } else {
+      for (const c of r) fuori.push(c.tipo === 'casella' ? `- [X] ${etichetta(c)}` : `- ${etichetta(c)}: ${pulisci(c.valore)}`);
+    }
+  }
+  return ['[Campi compilati del modulo: valori scritti nei riquadri e caselle spuntate, che il testo stampato della pagina non mostra]', ...fuori];
+}
+
+async function campiPagina(pagina) {
+  let annotazioni = [];
+  try { annotazioni = await pagina.getAnnotations({ intent: 'display' }); } catch { return []; }
+  return annotazioni.filter((a) => a.subtype === 'Widget' && a.fieldType).map((a) => {
+    if (a.fieldType === 'Btn') {
+      if (a.pushButton) return null;
+      const v = a.fieldValue, esporta = a.exportValue ?? a.buttonValue;
+      const spuntata = a.radioButton ? v != null && v !== 'Off' && String(v) === String(esporta) : v != null && v !== 'Off' && v !== false && v !== '';
+      return { tipo: 'casella', valore: spuntata, rect: a.rect, nome: a.fieldName };
+    }
+    const v = Array.isArray(a.fieldValue) ? a.fieldValue.join(', ') : a.fieldValue;
+    return { tipo: a.fieldType === 'Ch' ? 'scelta' : 'testo', valore: v, rect: a.rect, nome: a.fieldName };
+  }).filter(Boolean);
+}
+
 async function testoPdf(buffer) {
   const lib = globalThis.pdfjsLib;
   if (!lib) throw new Error('Lettore PDF non disponibile.');
@@ -117,15 +189,17 @@ async function testoPdf(buffer) {
     // quante immagini ci sono sulla pagina: firme autografe, timbri e sigle sono immagini e il testo non li mostra
     try { const ops = DIPINGE.length ? await pagina.getOperatorList() : null; immagini.push(ops ? ops.fnArray.filter((f) => DIPINGE.includes(f)).length : 0); } catch { immagini.push(0); }
     const contenuto = await pagina.getTextContent();
-    let riga = '', ultimaY = null; const righe = [];
+    let riga = '', ultimaY = null; const righe = [], posizioni = [];
     for (const it of contenuto.items) {
       if (!('str' in it)) continue;
+      if (it.transform) posizioni.push({ x: it.transform[4], y: it.transform[5], str: it.str });
       const y = it.transform ? Math.round(it.transform[5]) : null;
       if (ultimaY != null && y != null && Math.abs(y - ultimaY) > 2) { righe.push(riga.trimEnd()); riga = ''; }
       riga += it.str;
       if (it.hasEOL) { righe.push(riga.trimEnd()); riga = ''; ultimaY = null; } else { ultimaY = y; }
     }
     if (riga.trim()) righe.push(riga.trimEnd());
+    righe.push(...righeCampi(await campiPagina(pagina), posizioni));
     pagine.push(righe.join('\n'));
   }
   const numPagine = pdf.numPages;
